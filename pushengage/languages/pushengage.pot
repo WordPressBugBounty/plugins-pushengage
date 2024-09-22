@@ -1,0 +1,5277 @@
+# Copyright (C) 2024 PushEngage
+# This file is distributed under the GPLv2 or later..
+msgid ""
+msgstr ""
+"Project-Id-Version: PushEngage 4.0.8.1\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/pushengage-wordpress-plugin\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2024-03-07T07:49:28+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.7.1\n"
+"X-Domain: pushengage\n"
+
+#: src/components/ErrorBoundary.tsx:58
+msgid "Looks like something went wrong!"
+msgstr ""
+
+#: src/components/ErrorBoundary.tsx:63
+msgid "Sorry, it looks like there was a problem displaying the page you requested. To try again, please reload the page. If the problem persists, please let us know so we can investigate and fix it."
+msgstr ""
+
+#: src/components/ErrorBoundary.tsx:79
+msgid "Report Issue"
+msgstr ""
+
+#: src/components/ErrorBoundary.tsx:88
+msgid "Reload Page"
+msgstr ""
+
+#: src/components/FlyoutButton.tsx:105
+msgid "Support & Docs"
+msgstr ""
+
+#: src/components/FlyoutButton.tsx:110
+msgid "See Quick Links"
+msgstr ""
+
+#. 1 - The Plan name
+#: src/components/FlyoutButton.tsx:39
+msgid "Upgrade to %1s Plan"
+msgstr ""
+
+#: src/components/FlyoutButton.tsx:62
+msgid "Monetize Web Push"
+msgstr ""
+
+#: src/components/FlyoutButton.tsx:71
+msgid "Suggest a Feature"
+msgstr ""
+
+#: src/components/ServerErrorModal.tsx:67
+#: src/components/campaign/pushBroadcast/PushTableSorter.tsx:34
+msgid "Okay"
+msgstr ""
+
+#: src/components/ServerErrorModal.tsx:78
+msgid "Your PushEngage site's API key has been changed. Please use the setup wizard to reconnect your site."
+msgstr ""
+
+#: src/components/analytics/AnalyticsReportCard.tsx:133
+msgid "First Impression / HTML Opt-in"
+msgstr ""
+
+#: src/components/analytics/AnalyticsReportCard.tsx:149
+msgid "Second impression / Native Opt-in"
+msgstr ""
+
+#: src/components/analytics/AnalyticsReportCard.tsx:166
+#: src/components/analytics/OptinSettings.tsx:15
+#: src/components/analytics/analyticsHelper.tsx:15
+msgid "Native Opt-in"
+msgstr ""
+
+#: src/components/analytics/AnalyticsReportCard.tsx:58
+#: src/components/analytics/OptinSettings.tsx:14
+#: src/components/analytics/analyticsHelper.tsx:20
+msgid "HTML Opt-in"
+msgstr ""
+
+#: src/components/analytics/AnalyticsReportCard.tsx:66
+#: src/components/analytics/OptinSettings.tsx:16
+#: src/components/audience/SegmentTable.tsx:59
+msgid "Subscribers"
+msgstr ""
+
+#: src/components/analytics/AnalyticsReportCard.tsx:93
+#: src/components/analytics/OptinAnalyticsStackedBarGraph.tsx:64
+#: src/components/campaign/CampaignGoalStats.tsx:18
+#: src/components/campaign/drip/NotificationGenerator.tsx:443
+msgid "Count"
+msgstr ""
+
+#: src/components/analytics/AnalyticsReportCard.tsx:94
+#: src/components/analytics/OptinAnalyticsStackedBarGraph.tsx:65
+msgid "Allow"
+msgstr ""
+
+#: src/components/analytics/AnalyticsReportCard.tsx:95
+#: src/components/analytics/OptinAnalyticsStackedBarGraph.tsx:66
+msgid "Block"
+msgstr ""
+
+#: src/components/analytics/AnalyticsReportCard.tsx:96
+#: src/components/analytics/OptinAnalyticsStackedBarGraph.tsx:67
+msgid "Close(X)"
+msgstr ""
+
+#: src/components/analytics/AnalyticsReportCard.tsx:97
+#: src/components/analytics/OptinAnalyticsStackedBarGraph.tsx:68
+#: src/components/analytics/OptinSettings.tsx:136
+#: src/helper/index.ts:296
+msgid "Subscription Rate"
+msgstr ""
+
+#: src/components/analytics/AnalyticsStatsColumn.tsx:23
+#: src/components/campaign/CampaignStats.tsx:11
+#: src/components/campaign/automation/AutomationAnalytics.tsx:29
+#: src/components/campaign/details/NotificationDetailSections.tsx:216
+#: src/components/campaign/drip/NotificationGenerator.tsx:400
+#: src/components/campaign/pushBroadcast/PushTable.tsx:562
+#: src/components/dashboardWidget/RecentNotifications.tsx:50
+#: src/pages/dashboard/RecentNotifications.tsx:140
+#: src/pages/pushBroadcast/helpers.ts:61
+msgid "Sent"
+msgstr ""
+
+#: src/components/analytics/AnalyticsStatsColumn.tsx:27
+#: src/components/campaign/CampaignStats.tsx:15
+#: src/components/campaign/automation/AutomationAnalytics.tsx:36
+#: src/components/campaign/details/NotificationDetailSections.tsx:220
+#: src/components/campaign/drip/NotificationGenerator.tsx:406
+#: src/components/campaign/pushBroadcast/PushTable.tsx:566
+#: src/components/dashboardWidget/RecentNotifications.tsx:56
+#: src/pages/dashboard/RecentNotifications.tsx:146
+msgid "Seen"
+msgstr ""
+
+#: src/components/analytics/AnalyticsStatsColumn.tsx:31
+#: src/components/campaign/CampaignStats.tsx:19
+#: src/components/campaign/automation/AutomationAnalytics.tsx:43
+#: src/components/campaign/details/NotificationDetailSections.tsx:225
+#: src/components/campaign/drip/NotificationGenerator.tsx:412
+#: src/components/campaign/pushBroadcast/PushTable.tsx:570
+#: src/components/dashboardWidget/RecentNotifications.tsx:62
+#: src/pages/dashboard/RecentNotifications.tsx:152
+msgid "Clicked"
+msgstr ""
+
+#: src/components/analytics/AnalyticsStatsColumn.tsx:37
+#: src/components/campaign/CampaignStats.tsx:25
+#: src/components/campaign/automation/AutomationAnalytics.tsx:50
+#: src/components/campaign/details/NotificationDetailSections.tsx:354
+#: src/components/campaign/drip/NotificationGenerator.tsx:418
+#: src/components/campaign/pushBroadcast/PushTable.tsx:574
+#: src/components/dashboardWidget/RecentNotifications.tsx:74
+#: src/pages/dashboard/RecentNotifications.tsx:164
+msgid "CTR"
+msgstr ""
+
+#: src/components/analytics/AnalyticsSummaryLineGraph.tsx:148
+#: src/helper/index.ts:334
+#: src/pages/analytics/Overview.tsx:180
+msgid "New Subscribers"
+msgstr ""
+
+#: src/components/analytics/AnalyticsSummaryLineGraph.tsx:158
+#: src/helper/index.ts:341
+msgid "Unsubscribers"
+msgstr ""
+
+#: src/components/analytics/AnalyticsSummaryLineGraph.tsx:167
+#: src/helper/index.ts:119
+msgid "Notifications Sent"
+msgstr ""
+
+#: src/components/analytics/AnalyticsSummaryLineGraph.tsx:176
+msgid "Net Subscribers Sent"
+msgstr ""
+
+#: src/components/analytics/AnalyticsSummaryLineGraph.tsx:185
+#: src/helper/index.ts:126
+msgid "Views"
+msgstr ""
+
+#: src/components/analytics/AnalyticsSummaryLineGraph.tsx:194
+#: src/helper/index.ts:133
+msgid "Clicks"
+msgstr ""
+
+#: src/components/analytics/Code.tsx:41
+#: src/components/common/IntegrationCode.tsx:40
+msgid "Copied to clipboard"
+msgstr ""
+
+#: src/components/analytics/Code.tsx:48
+#: src/components/common/IntegrationCode.tsx:47
+msgid "Copy"
+msgstr ""
+
+#: src/components/analytics/OptinAnalyticsStackedBarGraph.tsx:165
+msgid "No Data Found"
+msgstr ""
+
+#: src/components/analytics/OptinAnalyticsStackedBarGraph.tsx:166
+msgid "Try adjusting date range"
+msgstr ""
+
+#: src/components/analytics/OptinAnalyticsStackedBarGraph.tsx:56
+msgid "Native opt-in"
+msgstr ""
+
+#: src/components/analytics/OptinSettings.tsx:104
+msgid "Analyze your subscription through funnel chart"
+msgstr ""
+
+#: src/components/analytics/OptinSettings.tsx:107
+msgid "You can try out different subscription pop-up and check what suits best for you."
+msgstr ""
+
+#: src/components/analytics/OptinSettings.tsx:126
+msgid "Enable Single Step Optin Monitoring"
+msgstr ""
+
+#: src/components/analytics/OptinSettings.tsx:147
+msgid "Subscription rate can not be less than 1"
+msgstr ""
+
+#: src/components/analytics/OptinSettings.tsx:152
+msgid "Subscription rate can not be greater than 99"
+msgstr ""
+
+#: src/components/analytics/OptinSettings.tsx:158
+msgid "Please enter subscription rate value"
+msgstr ""
+
+#: src/components/analytics/OptinSettings.tsx:178
+msgid "Note: This enables PushEngage to email you, whenever the subscription rate falls below the provided percentage limit. Applicable only when Single Step Optin is enabled."
+msgstr ""
+
+#: src/components/analytics/OptinSettings.tsx:203
+#: src/components/audience/CleanupSubscriberList.tsx:463
+#: src/components/campaign/preview/Windows11Chrome.tsx:88
+#: src/components/challenge/JoyrideCustomTooltip.tsx:44
+#: src/components/headers/siteAlert/ServiceWorkerIssueAlert.tsx:518
+msgid "Close"
+msgstr ""
+
+#: src/components/analytics/OptinSettings.tsx:78
+msgid "You don't have permission to update optin analytics. Please contact to your admin."
+msgstr ""
+
+#: src/components/analytics/analyticsHelper.tsx:10
+msgid "Get Notification Widget"
+msgstr ""
+
+#: src/components/audience/AdvanceAudienceFilterForm.tsx:198
+msgid "UTC"
+msgstr ""
+
+#: src/components/audience/AdvanceAudienceFilterForm.tsx:217
+msgid "Refer to the date and time that is before the current time minus the selected duration."
+msgstr ""
+
+#: src/components/audience/AdvanceAudienceFilterForm.tsx:222
+#: src/components/campaign/details/CustomAudienceDetails.tsx:99
+msgid "ago"
+msgstr ""
+
+#: src/components/audience/AdvanceAudienceFilterForm.tsx:227
+msgid "Refer to the date and time that is after the current time minus the selected duration."
+msgstr ""
+
+#: src/components/audience/AdvanceAudienceFilterForm.tsx:268
+msgid "Value is required"
+msgstr ""
+
+#: src/components/audience/AdvanceAudienceFilterForm.tsx:272
+msgid "Please select date"
+msgstr ""
+
+#: src/components/audience/AdvanceAudienceFilterForm.tsx:354
+msgid "Value"
+msgstr ""
+
+#: src/components/audience/AdvanceAudienceFilterForm.tsx:357
+msgid "Enter multiple values separated by commas"
+msgstr ""
+
+#: src/components/audience/AdvanceAudienceFilterForm.tsx:451
+msgid "Or"
+msgstr ""
+
+#: src/components/audience/AdvanceAudienceFilterForm.tsx:469
+msgid "Attribute name is required"
+msgstr ""
+
+#: src/components/audience/AdvanceAudienceFilterForm.tsx:473
+msgid "cannot be longer than 255 characters"
+msgstr ""
+
+#: src/components/audience/AdvanceAudienceFilterForm.tsx:477
+msgid "only alphabets, numbers,(-) and (_) allowed"
+msgstr ""
+
+#: src/components/audience/AdvanceAudienceFilterForm.tsx:481
+msgid "attribute name"
+msgstr ""
+
+#: src/components/audience/AdvanceAudienceFilterForm.tsx:522
+msgid "Remove this group rule"
+msgstr ""
+
+#: src/components/audience/AdvanceAudienceFilterForm.tsx:535
+#: src/components/campaign/drip/CustomSegmentSelection.tsx:150
+msgid "all"
+msgstr ""
+
+#: src/components/audience/AdvanceAudienceFilterForm.tsx:619
+msgid "Condition is required"
+msgstr ""
+
+#: src/components/audience/AdvanceAudienceFilterForm.tsx:63
+msgid "Select subscribers matching"
+msgstr ""
+
+#: src/components/audience/AdvanceAudienceFilterForm.tsx:64
+msgid "of the following rule"
+msgstr ""
+
+#: src/components/audience/AdvanceAudienceFilterForm.tsx:674
+msgid "Click here to add a new 'AND' rule in the current group"
+msgstr ""
+
+#: src/components/audience/AdvanceAudienceFilterForm.tsx:692
+msgid "Add filter rule"
+msgstr ""
+
+#: src/components/audience/AdvanceAudienceFilterForm.tsx:715
+msgid "Add group rule"
+msgstr ""
+
+#: src/components/audience/AdvanceAudienceFilterForm.tsx:72
+msgid "Remove this filter rule"
+msgstr ""
+
+#: src/components/audience/AdvancedAudienceTimeElapsed.tsx:57
+msgid "Minutes"
+msgstr ""
+
+#: src/components/audience/AdvancedAudienceTimeElapsed.tsx:58
+msgid "Hours"
+msgstr ""
+
+#: src/components/audience/AdvancedAudienceTimeElapsed.tsx:59
+#: src/components/campaign/automation/AutomationDetails.tsx:307
+msgid "Days"
+msgstr ""
+
+#: src/components/audience/AudienceGroupSubscriberCount.tsx:40
+#: src/components/audience/CleanupSubscriberList.tsx:41
+#: src/components/campaign/details/NotificationDetailSections.tsx:346
+#: src/components/headers/AlertNotificationDrawer.tsx:188
+msgid "View"
+msgstr ""
+
+#: src/components/audience/AudienceGroupTable.tsx:104
+msgid "No audience group was found."
+msgstr ""
+
+#: src/components/audience/AudienceGroupTable.tsx:33
+msgid "Group Name"
+msgstr ""
+
+#: src/components/audience/AudienceGroupTable.tsx:55
+msgid "Subscriber Count"
+msgstr ""
+
+#: src/components/audience/AudienceGroupTable.tsx:69
+#: src/components/audience/SegmentTable.tsx:115
+msgid "Action"
+msgstr ""
+
+#: src/components/audience/AudienceGroupTable.tsx:75
+#: src/components/audience/SegmentTable.tsx:121
+#: src/components/campaign/drip/DripTable.tsx:222
+#: src/components/campaign/pushBroadcast/PushTable.tsx:238
+#: src/components/campaign/trigger/TriggerTable.tsx:228
+#: src/components/common/NotificationActionDropdownMenu.tsx:42
+#: src/pages/settings/Billing/index.tsx:151
+msgid "Edit"
+msgstr ""
+
+#: src/components/audience/AudienceGroupTable.tsx:84
+#: src/components/audience/SegmentTable.tsx:130
+#: src/components/campaign/pushBroadcast/PushTable.tsx:289
+#: src/components/common/NotificationActionDropdownMenu.tsx:73
+#: src/pages/audience/AudienceGroups.tsx:117
+#: src/pages/audience/Segments.tsx:166
+#: src/pages/drip/List.tsx:216
+#: src/pages/pushBroadcast/List.tsx:225
+msgid "Delete"
+msgstr ""
+
+#: src/components/audience/CleanupSubscriberList.tsx:178
+#: src/components/audience/CreateOrEditAudienceGroupForm.tsx:80
+#: src/pages/drip/CreateOrEdit.tsx:276
+msgid "Please fix the validation error"
+msgstr ""
+
+#: src/components/audience/CleanupSubscriberList.tsx:255
+msgid "General Filters"
+msgstr ""
+
+#: src/components/audience/CleanupSubscriberList.tsx:258
+msgid "Subscribers who did not"
+msgstr ""
+
+#: src/components/audience/CleanupSubscriberList.tsx:268
+msgid "notification"
+msgstr ""
+
+#: src/components/audience/CleanupSubscriberList.tsx:273
+msgid "in last"
+msgstr ""
+
+#: src/components/audience/CleanupSubscriberList.tsx:280
+msgid "Days is required"
+msgstr ""
+
+#: src/components/audience/CleanupSubscriberList.tsx:284
+msgid "Days can not be less than 1 day"
+msgstr ""
+
+#: src/components/audience/CleanupSubscriberList.tsx:289
+msgid "Days can not be greater than 5 years"
+msgstr ""
+
+#: src/components/audience/CleanupSubscriberList.tsx:326
+msgid "Filter Subscribers"
+msgstr ""
+
+#: src/components/audience/CleanupSubscriberList.tsx:334
+#: src/components/campaign/DeviceSelectionWidget.tsx:43
+#: src/components/campaign/GeoLocationWidget.tsx:56
+msgid "Reset"
+msgstr ""
+
+#: src/components/audience/CleanupSubscriberList.tsx:354
+msgid "Use filter options to select a group of subscribers to delete"
+msgstr ""
+
+#: src/components/audience/CleanupSubscriberList.tsx:387
+msgid "No subscriber matched for cleanup"
+msgstr ""
+
+#: src/components/audience/CleanupSubscriberList.tsx:393
+msgid "Inactive Subscribers"
+msgstr ""
+
+#: src/components/audience/CleanupSubscriberList.tsx:394
+#: src/components/audience/CreateOrEditAudienceGroupForm.tsx:194
+#: src/pages/pushBroadcast/CreateOrEdit.tsx:1233
+msgid "Selected Subscribers"
+msgstr ""
+
+#: src/components/audience/CleanupSubscriberList.tsx:398
+msgid "View your inactive subscriber count to see who hasn’t engaged with your campaigns. Our expert-recommended timeframe is reflected here, but feel free to experiment with other options and performs cleanup as needed."
+msgstr ""
+
+#: src/components/audience/CleanupSubscriberList.tsx:40
+#: src/components/campaign/details/NotificationDetailSections.tsx:350
+msgid "Click"
+msgstr ""
+
+#: src/components/audience/CleanupSubscriberList.tsx:415
+msgid "Delete inactive subscribers"
+msgstr ""
+
+#: src/components/audience/CleanupSubscriberList.tsx:416
+msgid "Delete subscribers"
+msgstr ""
+
+#: src/components/audience/CleanupSubscriberList.tsx:42
+msgid "Receive"
+msgstr ""
+
+#: src/components/audience/CleanupSubscriberList.tsx:470
+msgid "Are you sure you want to delete"
+msgstr ""
+
+#: src/components/audience/CleanupSubscriberList.tsx:471
+msgid "subscribers?"
+msgstr ""
+
+#: src/components/audience/CleanupSubscriberList.tsx:474
+msgid "Deleting subscribers also deletes all data associated in your analytics. Is that what you want to do?"
+msgstr ""
+
+#: src/components/audience/CleanupSubscriberList.tsx:479
+msgid "(can’t be undone)"
+msgstr ""
+
+#: src/components/audience/CleanupSubscriberList.tsx:491
+msgid "Type DELETE to confirm"
+msgstr ""
+
+#: src/components/audience/CleanupSubscriberList.tsx:501
+msgid "Please enter the confirmation text"
+msgstr ""
+
+#: src/components/audience/CleanupSubscriberList.tsx:505
+msgid "Confirmation text does not match"
+msgstr ""
+
+#: src/components/audience/CleanupSubscriberList.tsx:520
+msgid "Delete Subscribers"
+msgstr ""
+
+#: src/components/audience/CleanupSubscriberList.tsx:527
+#: src/components/audience/CreateOrEditSegmentForm.tsx:377
+#: src/components/audience/TagCategoryForm.tsx:136
+#: src/components/common/DateRangeDropdownButton.tsx:152
+#: src/pages/audience/AudienceGroups.tsx:119
+#: src/pages/audience/Segments.tsx:169
+#: src/pages/drip/List.tsx:217
+#: src/pages/pushBroadcast/List.tsx:226
+msgid "Cancel"
+msgstr ""
+
+#: src/components/audience/CreateOrEditAudienceGroupForm.tsx:101
+msgid "Audience group updated successfully"
+msgstr ""
+
+#: src/components/audience/CreateOrEditAudienceGroupForm.tsx:102
+msgid "Audience group created successfully"
+msgstr ""
+
+#: src/components/audience/CreateOrEditAudienceGroupForm.tsx:135
+msgid "<a>Audience Groups</a> can help you send more personalized and targeted push notifications to increase your conversions."
+msgstr ""
+
+#: src/components/audience/CreateOrEditAudienceGroupForm.tsx:154
+#: src/components/campaign/PushBroadcastAudienceDetailsForm.tsx:48
+msgid "Name"
+msgstr ""
+
+#: src/components/audience/CreateOrEditAudienceGroupForm.tsx:167
+#: src/components/campaign/PushBroadcastAudienceDetailsForm.tsx:62
+msgid "Description"
+msgstr ""
+
+#: src/components/audience/CreateOrEditAudienceGroupForm.tsx:177
+msgid "Select Your Criteria"
+msgstr ""
+
+#: src/components/audience/CreateOrEditAudienceGroupForm.tsx:209
+#: src/pages/pushBroadcast/CreateOrEdit.tsx:1248
+msgid "Refresh count"
+msgstr ""
+
+#: src/components/audience/CreateOrEditAudienceGroupForm.tsx:221
+msgid "Save Audience Group"
+msgstr ""
+
+#: src/components/audience/CreateOrEditSegmentForm.tsx:103
+msgid "Please enter rule value"
+msgstr ""
+
+#: src/components/audience/CreateOrEditSegmentForm.tsx:133
+msgid "More Patterns"
+msgstr ""
+
+#: src/components/audience/CreateOrEditSegmentForm.tsx:213
+msgid "Segment updated successfully"
+msgstr ""
+
+#: src/components/audience/CreateOrEditSegmentForm.tsx:214
+msgid "Segment created successfully"
+msgstr ""
+
+#: src/components/audience/CreateOrEditSegmentForm.tsx:219
+msgid "Failed to update segment"
+msgstr ""
+
+#: src/components/audience/CreateOrEditSegmentForm.tsx:220
+msgid "Failed to create segment"
+msgstr ""
+
+#: src/components/audience/CreateOrEditSegmentForm.tsx:261
+msgid "Segments help you send targeted campaigns that get more conversions. Check out our <a>guide for creating segments</a> if you need some inspiration."
+msgstr ""
+
+#: src/components/audience/CreateOrEditSegmentForm.tsx:277
+msgid "Segment name is required"
+msgstr ""
+
+#: src/components/audience/CreateOrEditSegmentForm.tsx:281
+#: src/components/audience/SegmentTable.tsx:53
+msgid "Segment Name"
+msgstr ""
+
+#: src/components/audience/CreateOrEditSegmentForm.tsx:287
+msgid "Specify Your Segment Addition URL Pattern"
+msgstr ""
+
+#: src/components/audience/CreateOrEditSegmentForm.tsx:293
+#: src/components/audience/SegmentTable.tsx:69
+msgid "Include Patterns"
+msgstr ""
+
+#: src/components/audience/CreateOrEditSegmentForm.tsx:304
+#: src/components/audience/SegmentTable.tsx:77
+msgid "Exclude Patterns"
+msgstr ""
+
+#: src/components/audience/CreateOrEditSegmentForm.tsx:325
+msgid "By default, subscribers who subscribed through URLs matching the defined pattern will be added to the Segment. Turn on the option to evaluate the segment criteria on every page visit."
+msgstr ""
+
+#: src/components/audience/CreateOrEditSegmentForm.tsx:341
+#: src/components/audience/TagCategoryForm.tsx:101
+msgid "Category Segment Name"
+msgstr ""
+
+#: src/components/audience/CreateOrEditSegmentForm.tsx:347
+#: src/components/audience/TagCategoryForm.tsx:107
+msgid "Add users to this segment if they visit a post or page with the selected categories."
+msgstr ""
+
+#: src/components/audience/CreateOrEditSegmentForm.tsx:358
+#: src/components/audience/TagCategoryForm.tsx:119
+msgid "Name of the category segments"
+msgstr ""
+
+#: src/components/audience/CreateOrEditSegmentForm.tsx:366
+#: src/pages/audience/AudienceGroups.tsx:232
+#: src/pages/audience/Segments.tsx:250
+#: src/pages/dashboard/CampaignDropdownMenuBtn.tsx:44
+msgid "Create"
+msgstr ""
+
+#: src/components/audience/CreateOrEditSegmentForm.tsx:366
+msgid "Update"
+msgstr ""
+
+#: src/components/audience/CreateOrEditSegmentForm.tsx:37
+msgid "Starts With"
+msgstr ""
+
+#: src/components/audience/CreateOrEditSegmentForm.tsx:41
+msgid "Contains"
+msgstr ""
+
+#: src/components/audience/CreateOrEditSegmentForm.tsx:45
+msgid "Exact Match"
+msgstr ""
+
+#: src/components/audience/CreateOrEditSegmentForm.tsx:81
+msgid "Please select rule name"
+msgstr ""
+
+#: src/components/audience/DemographicOverview.tsx:125
+msgid "You have 0 active subscribers"
+msgstr ""
+
+#: src/components/audience/DemographicOverview.tsx:128
+msgid "Please make sure you have integrated PushEngage code on your site correctly."
+msgstr ""
+
+#: src/components/audience/IncludeExcludePatterns.tsx:18
+msgid "URL starts with"
+msgstr ""
+
+#: src/components/audience/IncludeExcludePatterns.tsx:19
+msgid "URL matches exactly"
+msgstr ""
+
+#: src/components/audience/IncludeExcludePatterns.tsx:20
+msgid "URL contains"
+msgstr ""
+
+#: src/components/audience/IncludeExcludePatterns.tsx:44
+msgid "show less..."
+msgstr ""
+
+#: src/components/audience/IncludeExcludePatterns.tsx:58
+msgid "show more..."
+msgstr ""
+
+#: src/components/audience/SearchFromTable.tsx:41
+msgid "Search"
+msgstr ""
+
+#: src/components/audience/SegmentTable.tsx:150
+msgid "No segment was found."
+msgstr ""
+
+#: src/components/audience/SegmentTable.tsx:85
+msgid "Category Segment"
+msgstr ""
+
+#: src/components/audience/TagCategoryForm.tsx:126
+msgid "Save"
+msgstr ""
+
+#: src/components/audience/TagCategoryForm.tsx:70
+msgid "Category tagged with segment"
+msgstr ""
+
+#: src/components/audience/TagCategoryForm.tsx:72
+msgid "Failed to tag category with segment"
+msgstr ""
+
+#: src/components/audience/audienceHelper.ts:103
+msgid "Attribute"
+msgstr ""
+
+#: src/components/audience/audienceHelper.ts:105
+msgid "Select the audience based on the attributes you have added to a user."
+msgstr ""
+
+#: src/components/audience/audienceHelper.ts:111
+msgid "Segment"
+msgstr ""
+
+#: src/components/audience/audienceHelper.ts:113
+msgid "Select the audience based on the segment the user belongs to."
+msgstr ""
+
+#: src/components/audience/audienceHelper.ts:116
+#: src/components/campaign/DeviceSelectionWidget.tsx:81
+msgid "Browser"
+msgstr ""
+
+#: src/components/audience/audienceHelper.ts:118
+msgid "Select the audience based on the user's browser/platform."
+msgstr ""
+
+#: src/components/audience/audienceHelper.ts:121
+#: src/components/campaign/DeviceSelectionWidget.tsx:55
+msgid "Device"
+msgstr ""
+
+#: src/components/audience/audienceHelper.ts:123
+msgid "Select the audience based on the user's device type."
+msgstr ""
+
+#: src/components/audience/audienceHelper.ts:127
+#: src/pages/design/TargetingRule.tsx:328
+msgid "Country"
+msgstr ""
+
+#: src/components/audience/audienceHelper.ts:129
+msgid "Select the audience based on the user's country"
+msgstr ""
+
+#: src/components/audience/audienceHelper.ts:132
+msgid "State"
+msgstr ""
+
+#: src/components/audience/audienceHelper.ts:137
+msgid "City"
+msgstr ""
+
+#: src/components/audience/audienceHelper.ts:139
+msgid "Select the audience based on the user's city."
+msgstr ""
+
+#: src/components/audience/audienceHelper.ts:143
+msgid "Subscription date"
+msgstr ""
+
+#: src/components/audience/audienceHelper.ts:145
+msgid "Select the audience based on their subscription date/time."
+msgstr ""
+
+#: src/components/audience/audienceHelper.ts:148
+msgid "Last sent date"
+msgstr ""
+
+#: src/components/audience/audienceHelper.ts:150
+msgid "Most recent date/time a notification was sent to the user."
+msgstr ""
+
+#: src/components/audience/audienceHelper.ts:153
+msgid "Last click date"
+msgstr ""
+
+#: src/components/audience/audienceHelper.ts:155
+msgid "Most recent date/time the user clicked on a notification."
+msgstr ""
+
+#: src/components/audience/audienceHelper.ts:158
+msgid "Last view date"
+msgstr ""
+
+#: src/components/audience/audienceHelper.ts:160
+msgid "Most recent date/time the user viewed a notification."
+msgstr ""
+
+#: src/components/audience/audienceHelper.ts:164
+msgid "Total sent count"
+msgstr ""
+
+#: src/components/audience/audienceHelper.ts:166
+msgid "Total number of notifications sent to a user."
+msgstr ""
+
+#: src/components/audience/audienceHelper.ts:169
+msgid "Total view count"
+msgstr ""
+
+#: src/components/audience/audienceHelper.ts:171
+msgid "Total number of notifications viewed by a user."
+msgstr ""
+
+#: src/components/audience/audienceHelper.ts:174
+msgid "Total click count"
+msgstr ""
+
+#: src/components/audience/audienceHelper.ts:176
+msgid "Total number of times a user has clicked on notifications."
+msgstr ""
+
+#: src/components/audience/audienceHelper.ts:179
+msgid "Profile Id"
+msgstr ""
+
+#: src/components/audience/audienceHelper.ts:181
+msgid "Select the audience based on the profile id or user id you have assigned to a user."
+msgstr ""
+
+#: src/components/audience/audienceHelper.ts:187
+msgid "Subscriber Hash"
+msgstr ""
+
+#: src/components/audience/audienceHelper.ts:189
+msgid "Select the audience based on user id (subscriber hash or device token hash) assigned by PushEngage to a user."
+msgstr ""
+
+#: src/components/audience/audienceHelper.ts:197
+msgid "Chrome"
+msgstr ""
+
+#: src/components/audience/audienceHelper.ts:198
+msgid "Opera"
+msgstr ""
+
+#: src/components/audience/audienceHelper.ts:199
+msgid "Firefox"
+msgstr ""
+
+#: src/components/audience/audienceHelper.ts:200
+msgid "Safari"
+msgstr ""
+
+#: src/components/audience/audienceHelper.ts:201
+msgid "Edge"
+msgstr ""
+
+#: src/components/audience/audienceHelper.ts:202
+msgid "UC Browser"
+msgstr ""
+
+#: src/components/audience/audienceHelper.ts:203
+msgid "Native android app"
+msgstr ""
+
+#: src/components/audience/audienceHelper.ts:204
+msgid "Native iOS app"
+msgstr ""
+
+#: src/components/audience/audienceHelper.ts:209
+#: src/components/design/PopUpModalCard.tsx:128
+msgid "Mobile"
+msgstr ""
+
+#: src/components/audience/audienceHelper.ts:210
+msgid "Tablet"
+msgstr ""
+
+#: src/components/audience/audienceHelper.ts:211
+#: src/components/design/PopUpModalCard.tsx:114
+msgid "Desktop"
+msgstr ""
+
+#: src/components/audience/audienceHelper.ts:212
+msgid "Unknown"
+msgstr ""
+
+#: src/components/audience/audienceHelper.ts:268
+msgid "is all of the following"
+msgstr ""
+
+#: src/components/audience/audienceHelper.ts:297
+msgid "before"
+msgstr ""
+
+#: src/components/audience/audienceHelper.ts:298
+msgid "after"
+msgstr ""
+
+#: src/components/audience/audienceHelper.ts:300
+msgid "in the last"
+msgstr ""
+
+#: src/components/audience/audienceHelper.ts:318
+msgid "equal to"
+msgstr ""
+
+#: src/components/audience/audienceHelper.ts:319
+msgid "not equal to"
+msgstr ""
+
+#: src/components/audience/audienceHelper.ts:320
+msgid "greater than"
+msgstr ""
+
+#: src/components/audience/audienceHelper.ts:322
+msgid "greater than or equal to"
+msgstr ""
+
+#: src/components/audience/audienceHelper.ts:325
+msgid "less than"
+msgstr ""
+
+#: src/components/audience/audienceHelper.ts:327
+msgid "less than or equal to"
+msgstr ""
+
+#: src/components/audience/audienceHelper.ts:331
+msgid "is any of the following"
+msgstr ""
+
+#: src/components/audience/audienceHelper.ts:335
+msgid "is none of the following"
+msgstr ""
+
+#: src/components/audience/audienceHelper.ts:338
+msgid "is set"
+msgstr ""
+
+#: src/components/audience/audienceHelper.ts:339
+msgid "is not set"
+msgstr ""
+
+#: src/components/campaign/AudienceGroupDropdown.tsx:35
+msgid "---Choose audience group---"
+msgstr ""
+
+#: src/components/campaign/AudienceGroupDropdown.tsx:55
+msgid "No Audience Group Found!"
+msgstr ""
+
+#: src/components/campaign/AudienceGroupDropdown.tsx:59
+msgid "Please use send to custom audience option or create new audience group."
+msgstr ""
+
+#: src/components/campaign/AudienceGroupDropdown.tsx:71
+#: src/pages/audience/AudienceGroups.tsx:196
+msgid "Create New Audience Group"
+msgstr ""
+
+#: src/components/campaign/BreadcrumbNavbar.tsx:46
+#: src/components/campaign/pushBroadcast/PageBreadcrumb.tsx:40
+msgid "Content"
+msgstr ""
+
+#: src/components/campaign/BreadcrumbNavbar.tsx:58
+#: src/pages/drip/CreateOrEdit.tsx:430
+msgid "Drip Settings"
+msgstr ""
+
+#: src/components/campaign/BreadcrumbNavbar.tsx:63
+#: src/pages/settings/integrations/woocommerce/EditTrigger.tsx:156
+#: src/pages/triggeredCampaign/Create.tsx:362
+#: src/pages/triggeredCampaign/Edit.tsx:362
+msgid "Trigger Settings"
+msgstr ""
+
+#: src/components/campaign/DeviceSelectionWidget.tsx:31
+msgid "Devices"
+msgstr ""
+
+#: src/components/campaign/DeviceSelectionWidget.tsx:48
+msgid "Send targeted campaigns by selecting subscribers based on their device type."
+msgstr ""
+
+#: src/components/campaign/GeoLocationWidget.tsx:100
+msgid "Select country"
+msgstr ""
+
+#: src/components/campaign/GeoLocationWidget.tsx:117
+msgid "Include State"
+msgstr ""
+
+#: src/components/campaign/GeoLocationWidget.tsx:122
+msgid "Select state"
+msgstr ""
+
+#: src/components/campaign/GeoLocationWidget.tsx:141
+msgid "Include City"
+msgstr ""
+
+#: src/components/campaign/GeoLocationWidget.tsx:147
+msgid "Select city"
+msgstr ""
+
+#: src/components/campaign/GeoLocationWidget.tsx:44
+msgid "Geo Location"
+msgstr ""
+
+#: src/components/campaign/GeoLocationWidget.tsx:61
+msgid "Send targeted campaigns by selecting subscribers based on their geo location while subscription."
+msgstr ""
+
+#: src/components/campaign/GeoLocationWidget.tsx:69
+msgid "Include Country"
+msgstr ""
+
+#: src/components/campaign/GeoLocationWidget.tsx:93
+msgid "Exclude Country"
+msgstr ""
+
+#: src/components/campaign/NotificationContent.tsx:115
+#: src/components/campaign/notification/MultiAction.tsx:87
+#: src/components/postEditor/PostEditorMetabox.tsx:709
+msgid "Multi Action Notification"
+msgstr ""
+
+#: src/components/campaign/NotificationContent.tsx:129
+#: src/components/campaign/notification/MultiAction.tsx:101
+#: src/components/postEditor/PostEditorMetabox.tsx:720
+msgid "Get more clicks with multiple call-to-action buttons."
+msgstr ""
+
+#: src/components/campaign/NotificationContent.tsx:147
+#: src/components/campaign/drip/NotificationGenerator.tsx:574
+#: src/components/campaign/trigger/NotificationGenerator.tsx:563
+msgid "Notification Duration"
+msgstr ""
+
+#: src/components/campaign/NotificationContent.tsx:164
+#: src/components/campaign/drip/NotificationGenerator.tsx:592
+#: src/components/campaign/trigger/NotificationGenerator.tsx:581
+msgid "Maximize your reach with custom notification durations (this feature is available for chrome 47 and above versions only)."
+msgstr ""
+
+#: src/components/campaign/NotificationContent.tsx:194
+#: src/components/campaign/details/SentNotificationDetails.tsx:139
+#: src/components/campaign/drip/AutomationUtmParams.tsx:30
+#: src/components/postEditor/PostEditorMetabox.tsx:873
+#: src/pages/settings/defaultSettings/index.tsx:270
+msgid "UTM Parameters"
+msgstr ""
+
+#: src/components/campaign/NotificationContent.tsx:205
+#: src/components/campaign/drip/AutomationUtmParams.tsx:42
+#: src/components/postEditor/PostEditorMetabox.tsx:892
+msgid "Improve your analytics with custom link attribution."
+msgstr ""
+
+#: src/components/campaign/NotificationContent.tsx:53
+#: src/components/campaign/drip/NotificationGenerator.tsx:506
+msgid "Notification Look and Design"
+msgstr ""
+
+#: src/components/campaign/NotificationContent.tsx:66
+#: src/components/campaign/templates/Card.tsx:192
+msgid "Use Template"
+msgstr ""
+
+#: src/components/campaign/NotificationContent.tsx:83
+#: src/components/campaign/drip/NotificationGenerator.tsx:532
+msgid "Show Large Image"
+msgstr ""
+
+#: src/components/campaign/NotificationContent.tsx:97
+#: src/components/postEditor/PostEditorMetabox.tsx:686
+msgid "Make your notifications stand out with larger images."
+msgstr ""
+
+#: src/components/campaign/PushAudience.tsx:122
+#: src/components/campaign/details/CustomAudienceDetails.tsx:196
+#: src/components/campaign/details/NotificationDetailSections.tsx:306
+#: src/components/campaign/drip/DripAudience.tsx:229
+#: src/components/postEditor/PostEditorMetabox.tsx:774
+msgid "Send to All Subscribers"
+msgstr ""
+
+#: src/components/campaign/PushAudience.tsx:125
+#: src/components/postEditor/PostEditorMetabox.tsx:777
+msgid "This broadcast message will go to all subscribers."
+msgstr ""
+
+#: src/components/campaign/PushAudience.tsx:155
+#: src/components/campaign/details/CustomAudienceDetails.tsx:178
+#: src/components/postEditor/PostEditorMetabox.tsx:814
+msgid "Send to Audience Group"
+msgstr ""
+
+#: src/components/campaign/PushAudience.tsx:161
+#: src/components/postEditor/PostEditorMetabox.tsx:817
+msgid "Personalize your notification based on predefined audience group."
+msgstr ""
+
+#: src/components/campaign/PushAudience.tsx:203
+#: src/components/campaign/details/CustomAudienceDetails.tsx:140
+#: src/components/campaign/drip/DripAudience.tsx:257
+msgid "Send to Custom Audience"
+msgstr ""
+
+#: src/components/campaign/PushAudience.tsx:209
+msgid "Personalize your notification based on segments, user&apos;s geolocation, device, and more."
+msgstr ""
+
+#: src/components/campaign/PushMultiAction.tsx:118
+#: src/components/campaign/notification/MultiAction.tsx:155
+msgid "Show Second Button"
+msgstr ""
+
+#: src/components/campaign/PushMultiAction.tsx:123
+#: src/components/campaign/notification/MultiAction.tsx:163
+msgid "Second Button Title"
+msgstr ""
+
+#: src/components/campaign/PushMultiAction.tsx:148
+#: src/components/campaign/notification/MultiAction.tsx:172
+msgid "Second Button URL"
+msgstr ""
+
+#: src/components/campaign/PushMultiAction.tsx:162
+#: src/components/campaign/PushNotification.tsx:56
+#: src/components/campaign/notification/MultiAction.tsx:176
+#: src/pages/settings/defaultSettings/index.tsx:466
+msgid "Example Notification URL : https://www.pushengage.com"
+msgstr ""
+
+#: src/components/campaign/PushMultiAction.tsx:178
+#: src/components/campaign/notification/MultiAction.tsx:182
+msgid "Second Button Image"
+msgstr ""
+
+#: src/components/campaign/PushMultiAction.tsx:44
+#: src/components/campaign/notification/MultiAction.tsx:110
+msgid "First Button Title"
+msgstr ""
+
+#: src/components/campaign/PushMultiAction.tsx:69
+#: src/components/campaign/notification/MultiAction.tsx:119
+msgid "First Button URL"
+msgstr ""
+
+#: src/components/campaign/PushMultiAction.tsx:95
+#: src/components/campaign/notification/MultiAction.tsx:128
+msgid "First Button Image"
+msgstr ""
+
+#: src/components/campaign/PushNotification.tsx:29
+#: src/components/postEditor/PostEditorMetabox.tsx:625
+#: src/pages/settings/defaultSettings/index.tsx:420
+msgid "Notification Title"
+msgstr ""
+
+#: src/components/campaign/PushNotification.tsx:40
+#: src/components/postEditor/PostEditorMetabox.tsx:644
+#: src/pages/settings/defaultSettings/index.tsx:435
+msgid "Notification Message"
+msgstr ""
+
+#: src/components/campaign/PushNotification.tsx:52
+#: src/pages/settings/defaultSettings/index.tsx:450
+msgid "Notification URL"
+msgstr ""
+
+#: src/components/campaign/PushNotification.tsx:64
+msgid "Notification Icon Image"
+msgstr ""
+
+#: src/components/campaign/PushNotificationDuration.tsx:25
+msgid "Keep notification open until interaction"
+msgstr ""
+
+#: src/components/campaign/PushNotificationDuration.tsx:31
+#: src/pages/settings/defaultSettings/index.tsx:536
+msgid "Expires in"
+msgstr ""
+
+#: src/components/campaign/PushNotificationDuration.tsx:52
+#: src/pages/settings/defaultSettings/index.tsx:527
+msgid "This is the expiry time for a notification. If a user is not available online with browser running, then the notification will be retried until expiration time. The maximum value is 28 days."
+msgstr ""
+
+#: src/components/campaign/PushNotificationPreview.tsx:82
+#: src/components/campaign/drip/NotificationGenerator.tsx:634
+#: src/components/campaign/trigger/NotificationGenerator.tsx:619
+#: src/pages/pushBroadcast/CreateOrEdit.tsx:1346
+#: src/pages/settings/defaultSettings/index.tsx:412
+msgid "Test Notification"
+msgstr ""
+
+#: src/components/campaign/PushSend.tsx:110
+msgid "Upgrade Your Plan."
+msgstr ""
+
+#: src/components/campaign/PushSend.tsx:123
+msgid "Timezone Settings."
+msgstr ""
+
+#: src/components/campaign/PushSend.tsx:132
+msgid "When"
+msgstr ""
+
+#: src/components/campaign/PushSend.tsx:133
+msgid "Send Notifications in Subscribers timezone"
+msgstr ""
+
+#: src/components/campaign/PushSend.tsx:134
+msgid "is enabled, multiple scheduled notifications will be created, each in different timezone of subscribers. If scheduled time is elapsed in a timezone, then notifications will be sent immediately to those subscribers."
+msgstr ""
+
+#: src/components/campaign/PushSend.tsx:140
+msgid "Your notification will be scheduled in the timezone"
+msgstr ""
+
+#: src/components/campaign/PushSend.tsx:142
+msgid "which you have configured in your"
+msgstr ""
+
+#: src/components/campaign/PushSend.tsx:144
+msgid "Timezone Settings"
+msgstr ""
+
+#: src/components/campaign/PushSend.tsx:179
+msgid "Begin sending immediately"
+msgstr ""
+
+#: src/components/campaign/PushSend.tsx:203
+msgid "Begin sending at a particular day and time"
+msgstr ""
+
+#: src/components/campaign/PushSend.tsx:277
+msgid "AB Campaign can’t be scheduled in subscribers’ timezone"
+msgstr ""
+
+#: src/components/campaign/PushSend.tsx:293
+msgid "Send broadcasts in your subscribers’ timezone"
+msgstr ""
+
+#: src/components/campaign/PushSend.tsx:334
+msgid "Set up a recurring notification"
+msgstr ""
+
+#: src/components/campaign/PushSend.tsx:343
+#: src/components/campaign/details/NotificationDetailSections.tsx:316
+msgid "Schedule between"
+msgstr ""
+
+#: src/components/campaign/PushSend.tsx:407
+msgid "Send on following days"
+msgstr ""
+
+#: src/components/campaign/PushSend.tsx:442
+#: src/components/campaign/details/NotificationDetailSections.tsx:332
+#: src/components/campaign/notification/NotificationScheduleInfo.tsx:112
+msgid "Send each day at"
+msgstr ""
+
+#: src/components/campaign/PushSend.tsx:496
+msgid "Add Schedule Time"
+msgstr ""
+
+#: src/components/campaign/PushSend.tsx:516
+#: src/components/campaign/details/SentNotificationDetails.tsx:122
+msgid "Intelligent AB Test"
+msgstr ""
+
+#: src/components/campaign/PushSend.tsx:532
+msgid "Intelligent AB test allows you to test the performance of A and B campaigns for a sample size of subscribers for the specified duration. Please define the sample size and test duration. The notification which performs better (CTR) will be sent to remaining subscribers."
+msgstr ""
+
+#: src/components/campaign/PushSend.tsx:543
+#: src/components/campaign/details/NotificationDetailSections.tsx:389
+msgid "Sample Size"
+msgstr ""
+
+#: src/components/campaign/PushSend.tsx:547
+msgid "Send your AB notification to a percentage of your selected audience (minimum 1000 subscribers). After the delay duration, the rest of your subscribers will be sent the winning notification."
+msgstr ""
+
+#: src/components/campaign/PushSend.tsx:587
+msgid "The delay is the amount of time to wait before deciding the winner notification and sending it to remaining subscribers. Should be between 30 minute and 7 days."
+msgstr ""
+
+#: src/components/campaign/PushSend.tsx:94
+msgid "Your current plan doesn't support the Subscribers Timezone feature."
+msgstr ""
+
+#: src/components/campaign/automation/AutomationAnalytics.tsx:103
+msgid "Revenue"
+msgstr ""
+
+#: src/components/campaign/automation/AutomationAnalytics.tsx:57
+#: src/components/campaign/details/NotificationDetailSections.tsx:241
+#: src/helper/index.ts:154
+msgid "Unsubscribed"
+msgstr ""
+
+#: src/components/campaign/automation/AutomationAnalytics.tsx:70
+msgid "Goal count"
+msgstr ""
+
+#: src/components/campaign/automation/AutomationAnalytics.tsx:83
+msgid "Goal value"
+msgstr ""
+
+#: src/components/campaign/automation/AutomationAnalytics.tsx:94
+msgid "Conversion"
+msgstr ""
+
+#: src/components/campaign/automation/AutomationDetails.tsx:123
+msgid "Created at"
+msgstr ""
+
+#: src/components/campaign/automation/AutomationDetails.tsx:129
+msgid "Updated at"
+msgstr ""
+
+#: src/components/campaign/automation/AutomationDetails.tsx:150
+#: src/components/campaign/drip/DripTable.tsx:254
+#: src/components/campaign/trigger/TriggerTable.tsx:260
+msgid "Start"
+msgstr ""
+
+#: src/components/campaign/automation/AutomationDetails.tsx:157
+msgid "this Campaign"
+msgstr ""
+
+#: src/components/campaign/automation/AutomationDetails.tsx:157
+msgid "Stop"
+msgstr ""
+
+#: src/components/campaign/automation/AutomationDetails.tsx:158
+msgid "If"
+msgstr ""
+
+#: src/components/campaign/automation/AutomationDetails.tsx:175
+msgid "No Goal name was set"
+msgstr ""
+
+#: src/components/campaign/automation/AutomationDetails.tsx:184
+#: src/components/campaign/details/SentNotificationDetails.tsx:105
+#: src/components/campaign/pushBroadcast/PageBreadcrumb.tsx:51
+#: src/components/postEditor/PostEditorMetabox.tsx:759
+#: app/Utils/AdminNavMenuItems.php:62
+msgid "Audience"
+msgstr ""
+
+#: src/components/campaign/automation/AutomationDetails.tsx:190
+msgid "Send To All"
+msgstr ""
+
+#: src/components/campaign/automation/AutomationDetails.tsx:195
+msgid "Matching all of the following segments"
+msgstr ""
+
+#: src/components/campaign/automation/AutomationDetails.tsx:202
+msgid "Matching any of the following segments"
+msgstr ""
+
+#: src/components/campaign/automation/AutomationDetails.tsx:209
+msgid "Matching none of the following segments"
+msgstr ""
+
+#: src/components/campaign/automation/AutomationDetails.tsx:216
+msgid "Include Countries"
+msgstr ""
+
+#: src/components/campaign/automation/AutomationDetails.tsx:223
+msgid "Exclude Countries"
+msgstr ""
+
+#: src/components/campaign/automation/AutomationDetails.tsx:230
+msgid "Include States"
+msgstr ""
+
+#: src/components/campaign/automation/AutomationDetails.tsx:237
+msgid "Include Cities"
+msgstr ""
+
+#: src/components/campaign/automation/AutomationDetails.tsx:244
+msgid "Include Devices"
+msgstr ""
+
+#: src/components/campaign/automation/AutomationDetails.tsx:251
+msgid "Include Browsers"
+msgstr ""
+
+#: src/components/campaign/automation/AutomationDetails.tsx:261
+#: src/pages/analytics/GoalTracking.tsx:178
+#: src/pages/dashboard/Strategies.tsx:61
+msgid "Goal Tracking"
+msgstr ""
+
+#: src/components/campaign/automation/AutomationDetails.tsx:266
+msgid "Goal name"
+msgstr ""
+
+#: src/components/campaign/automation/AutomationDetails.tsx:272
+msgid "Sending Condition"
+msgstr ""
+
+#: src/components/campaign/automation/AutomationDetails.tsx:278
+msgid "Subscription"
+msgstr ""
+
+#: src/components/campaign/automation/AutomationDetails.tsx:281
+msgid "This is always subscription(not editable)"
+msgstr ""
+
+#: src/components/campaign/automation/AutomationDetails.tsx:294
+msgid "Price Drop/Inventory Criteria"
+msgstr ""
+
+#: src/components/campaign/automation/AutomationDetails.tsx:301
+msgid "Expiry"
+msgstr ""
+
+#: src/components/campaign/automation/AutomationDetails.tsx:306
+msgid "Day"
+msgstr ""
+
+#: src/components/campaign/automation/AutomationDetails.tsx:313
+msgid "Campaign Type"
+msgstr ""
+
+#: src/components/campaign/automation/AutomationDetails.tsx:317
+#: src/pages/triggeredCampaign/Selection.tsx:214
+msgid "Price Drop"
+msgstr ""
+
+#: src/components/campaign/automation/AutomationDetails.tsx:318
+msgid "Inventory"
+msgstr ""
+
+#: src/components/campaign/automation/AutomationDetails.tsx:325
+msgid "Price Drop Threshold"
+msgstr ""
+
+#: src/components/campaign/automation/AutomationDetails.tsx:331
+msgid "(absolute)"
+msgstr ""
+
+#: src/components/campaign/automation/AutomationDetails.tsx:341
+msgid "Trigger Limits"
+msgstr ""
+
+#: src/components/campaign/automation/AutomationDetails.tsx:348
+msgid "Daily Limit"
+msgstr ""
+
+#: src/components/campaign/automation/AutomationDetails.tsx:356
+msgid "Weekly Limit"
+msgstr ""
+
+#: src/components/campaign/automation/AutomationDetails.tsx:360
+msgid "No Limit Set"
+msgstr ""
+
+#: src/components/campaign/automation/AutomationDetails.tsx:371
+#: app/Utils/AdminNavMenuItems.php:67
+msgid "Analytics"
+msgstr ""
+
+#: src/components/campaign/automation/AutomationDetails.tsx:381
+#: src/components/campaign/drip/DripTable.tsx:230
+#: src/components/campaign/drip/DripTableHeader.tsx:45
+#: src/components/campaign/pushBroadcast/PushTable.tsx:257
+#: src/components/campaign/pushBroadcast/PushTableHeader.tsx:85
+#: src/components/campaign/trigger/TriggerTable.tsx:236
+#: src/components/campaign/trigger/TriggerTableHeader.tsx:51
+#: src/pages/analytics/OptinAnalytics.tsx:275
+#: src/pages/analytics/Overview.tsx:288
+msgid "Export"
+msgstr ""
+
+#: src/components/campaign/automation/AutomationDetails.tsx:435
+msgid "Push"
+msgstr ""
+
+#: src/components/campaign/automation/AutomationDetails.tsx:438
+msgid " Right"
+msgstr ""
+
+#: src/components/campaign/automation/AutomationDetails.tsx:457
+msgid " after user subscribes or is added to the list"
+msgstr ""
+
+#: src/components/campaign/automation/AutomationDetails.tsx:458
+msgid " after sending the previous message"
+msgstr ""
+
+#: src/components/campaign/automation/AutomationDetails.tsx:487
+#: src/components/campaign/details/NotificationDetailSections.tsx:179
+msgid "URL"
+msgstr ""
+
+#: src/components/campaign/automation/AutomationDetails.tsx:530
+msgid "Deleted notifications"
+msgstr ""
+
+#: src/components/campaign/automation/AutomationDetails.tsx:541
+msgid "The following notifications in this campaign have been deleted and are no longer being sent to your subscribers."
+msgstr ""
+
+#: src/components/campaign/automation/AutomationDetails.tsx:66
+msgid "You can only view analytics of maximum 3 months at a time."
+msgstr ""
+
+#: src/components/campaign/automation/AutomationDetails.tsx:89
+msgid "You can only export analytics of maximum 3 months at a time."
+msgstr ""
+
+#: src/components/campaign/details/CustomAudienceDetails.tsx:128
+#: src/pages/design/TargetingRule.tsx:373
+msgid "AND"
+msgstr ""
+
+#: src/components/campaign/details/CustomAudienceDetails.tsx:153
+msgid "OR"
+msgstr ""
+
+#: src/components/campaign/details/CustomAudienceDetails.tsx:59
+#: src/components/campaign/details/NotificationDetailSections.tsx:92
+#: src/components/campaign/drip/NotificationGenerator.tsx:301
+#: src/components/campaign/trigger/NotificationGenerator.tsx:292
+#: src/pages/settings/defaultSettings/index.tsx:555
+msgid "days"
+msgstr ""
+
+#: src/components/campaign/details/CustomAudienceDetails.tsx:62
+#: src/components/campaign/details/NotificationDetailSections.tsx:95
+#: src/pages/settings/defaultSettings/index.tsx:574
+msgid "hours"
+msgstr ""
+
+#: src/components/campaign/details/CustomAudienceDetails.tsx:64
+#: src/components/campaign/details/NotificationDetailSections.tsx:98
+#: src/pages/settings/defaultSettings/index.tsx:593
+msgid "minutes"
+msgstr ""
+
+#: src/components/campaign/details/NotificationDetailSections.tsx:107
+msgid "Info"
+msgstr ""
+
+#: src/components/campaign/details/NotificationDetailSections.tsx:111
+#: src/components/campaign/pushBroadcast/PushNotificationTimestamp.tsx:75
+msgid "Created At"
+msgstr ""
+
+#: src/components/campaign/details/NotificationDetailSections.tsx:120
+msgid "Scheduled Between"
+msgstr ""
+
+#: src/components/campaign/details/NotificationDetailSections.tsx:131
+msgid "Scheduled on"
+msgstr ""
+
+#: src/components/campaign/details/NotificationDetailSections.tsx:145
+msgid "The sending of the timezone notification was initiated at"
+msgstr ""
+
+#: src/components/campaign/details/NotificationDetailSections.tsx:148
+msgid "to meet the scheduled delivery time of"
+msgstr ""
+
+#: src/components/campaign/details/NotificationDetailSections.tsx:151
+msgid "for all subscribers."
+msgstr ""
+
+#: src/components/campaign/details/NotificationDetailSections.tsx:158
+msgid "Sending initiated At"
+msgstr ""
+
+#: src/components/campaign/details/NotificationDetailSections.tsx:162
+#: src/components/campaign/pushBroadcast/PushNotificationTimestamp.tsx:24
+msgid "Sent At"
+msgstr ""
+
+#: src/components/campaign/details/NotificationDetailSections.tsx:173
+msgid "Expires In"
+msgstr ""
+
+#: src/components/campaign/details/NotificationDetailSections.tsx:189
+msgid "Button 1 URL"
+msgstr ""
+
+#: src/components/campaign/details/NotificationDetailSections.tsx:199
+msgid "Button 2 URL"
+msgstr ""
+
+#: src/components/campaign/details/NotificationDetailSections.tsx:318
+#: src/components/campaign/drip/CustomSegmentSelection.tsx:187
+#: src/components/campaign/notification/NotificationScheduleInfo.tsx:77
+#: src/components/campaign/pushBroadcast/PushNotificationTimestamp.tsx:61
+msgid "and"
+msgstr ""
+
+#: src/components/campaign/details/NotificationDetailSections.tsx:325
+msgid "Send on Every"
+msgstr ""
+
+#: src/components/campaign/details/NotificationDetailSections.tsx:342
+#: src/components/campaign/drip/DripTable.tsx:152
+#: src/components/campaign/trigger/TriggerTable.tsx:158
+#: src/pages/pushBroadcast/CreateOrEdit.tsx:951
+msgid "Notification"
+msgstr ""
+
+#: src/components/campaign/details/NotificationDetailSections.tsx:375
+msgid "Analytics at the time of deciding the winner"
+msgstr ""
+
+#: src/components/campaign/details/NotificationDetailSections.tsx:395
+msgid "Delay"
+msgstr ""
+
+#: src/components/campaign/details/NotificationDetailSections.tsx:402
+#: src/components/campaign/details/WinnerNotificationDetails.tsx:98
+msgid "Winner"
+msgstr ""
+
+#: src/components/campaign/details/NotificationDetailSections.tsx:405
+msgid "Waiting for the winner"
+msgstr ""
+
+#: src/components/campaign/details/NotificationDetailSections.tsx:407
+msgid "YES"
+msgstr ""
+
+#: src/components/campaign/details/NotificationDetailSections.tsx:408
+msgid "NO"
+msgstr ""
+
+#: src/components/campaign/details/SentNotificationDetails.tsx:115
+msgid "Recipient Limit"
+msgstr ""
+
+#: src/components/campaign/details/SentNotificationDetails.tsx:142
+#: src/components/campaign/drip/AutomationUtmParams.tsx:78
+#: src/components/campaign/notification/UtmParams.tsx:48
+#: src/components/postEditor/PostEditorUtmParams.tsx:46
+#: src/pages/settings/defaultSettings/index.tsx:315
+msgid "UTM Campaign"
+msgstr ""
+
+#: src/components/campaign/details/SentNotificationDetails.tsx:146
+#: src/components/campaign/drip/AutomationUtmParams.tsx:63
+#: src/components/campaign/notification/UtmParams.tsx:33
+#: src/components/postEditor/PostEditorUtmParams.tsx:32
+#: src/pages/settings/defaultSettings/index.tsx:300
+msgid "UTM Medium"
+msgstr ""
+
+#: src/components/campaign/details/SentNotificationDetails.tsx:150
+#: src/components/campaign/drip/AutomationUtmParams.tsx:48
+#: src/components/campaign/notification/UtmParams.tsx:18
+#: src/components/postEditor/PostEditorUtmParams.tsx:18
+#: src/pages/settings/defaultSettings/index.tsx:285
+msgid "UTM Source"
+msgstr ""
+
+#: src/components/campaign/details/SentNotificationDetails.tsx:154
+#: src/components/campaign/drip/AutomationUtmParams.tsx:93
+#: src/components/campaign/notification/UtmParams.tsx:63
+#: src/components/postEditor/PostEditorUtmParams.tsx:60
+msgid "UTM Term"
+msgstr ""
+
+#: src/components/campaign/details/SentNotificationDetails.tsx:158
+#: src/components/campaign/drip/AutomationUtmParams.tsx:108
+#: src/components/campaign/notification/UtmParams.tsx:78
+#: src/components/postEditor/PostEditorUtmParams.tsx:74
+msgid "UTM Content"
+msgstr ""
+
+#: src/components/campaign/details/SentNotificationDetails.tsx:75
+#: src/components/campaign/drip/DripTable.tsx:173
+#: src/components/campaign/pushBroadcast/PushTable.tsx:323
+#: src/components/campaign/trigger/TriggerTable.tsx:179
+#: src/pages/analytics/Overview.tsx:163
+msgid "Stats"
+msgstr ""
+
+#: src/components/campaign/details/SentNotificationDetails.tsx:84
+msgid "Multi Actions"
+msgstr ""
+
+#: src/components/campaign/details/SentNotificationDetails.tsx:95
+#: src/components/campaign/drip/DripTable.tsx:188
+#: src/components/campaign/pushBroadcast/PushTable.tsx:332
+#: src/components/campaign/trigger/TriggerTable.tsx:194
+msgid "Goal"
+msgstr ""
+
+#: src/components/campaign/details/WinnerNotificationDetails.tsx:76
+#: src/pages/pushBroadcast/CreateOrEdit.tsx:1139
+msgid "Notification A"
+msgstr ""
+
+#: src/components/campaign/details/WinnerNotificationDetails.tsx:96
+#: src/pages/pushBroadcast/CreateOrEdit.tsx:1160
+msgid "Notification B"
+msgstr ""
+
+#: src/components/campaign/drip/AutomationGoalTracking.tsx:100
+msgid "Analytics > Goal Tracking"
+msgstr ""
+
+#: src/components/campaign/drip/AutomationGoalTracking.tsx:102
+msgid "to use goal name."
+msgstr ""
+
+#: src/components/campaign/drip/AutomationGoalTracking.tsx:48
+msgid "Goal Tracking will help you assign conversion goals & value to your notification campaigns. You can set up a default goal"
+msgstr ""
+
+#: src/components/campaign/drip/AutomationGoalTracking.tsx:55
+msgid "and have it integrated for all your campaigns."
+msgstr ""
+
+#: src/components/campaign/drip/AutomationGoalTracking.tsx:61
+#: src/pages/analytics/GoalTracking.tsx:256
+msgid "Goal Name"
+msgstr ""
+
+#: src/components/campaign/drip/AutomationGoalTracking.tsx:77
+msgid "Changing the goal name will reset the existing goal metrics in this campaign."
+msgstr ""
+
+#: src/components/campaign/drip/AutomationGoalTracking.tsx:94
+msgid "Goal Tracking is not enabled in your account. Please enable goal tracking from"
+msgstr ""
+
+#: src/components/campaign/drip/CustomSegmentSelection.tsx:132
+#: src/pages/design/TargetingRule.tsx:379
+msgid "Matching"
+msgstr ""
+
+#: src/components/campaign/drip/CustomSegmentSelection.tsx:147
+msgid "any"
+msgstr ""
+
+#: src/components/campaign/drip/CustomSegmentSelection.tsx:153
+msgid "none"
+msgstr ""
+
+#: src/components/campaign/drip/CustomSegmentSelection.tsx:156
+#: src/pages/design/TargetingRule.tsx:394
+msgid "of the following"
+msgstr ""
+
+#: src/components/campaign/drip/CustomSegmentSelection.tsx:163
+msgid "---Choose segments---"
+msgstr ""
+
+#: src/components/campaign/drip/CustomSegmentSelection.tsx:201
+msgid "Add Segment Group"
+msgstr ""
+
+#: src/components/campaign/drip/CustomSegmentSelection.tsx:209
+msgid "You don't have permission to access segments"
+msgstr ""
+
+#: src/components/campaign/drip/CustomSegmentSelection.tsx:96
+msgid "Custom Segments"
+msgstr ""
+
+#: src/components/campaign/drip/CustomSegmentSelection.tsx:99
+msgid "Send targeted campaigns by selecting your audience based on their behaviour."
+msgstr ""
+
+#: src/components/campaign/drip/DripAudience.tsx:232
+msgid "This drip autoresponder messages will go to all subscribers."
+msgstr ""
+
+#: src/components/campaign/drip/DripAudience.tsx:263
+msgid "Personalize your notification based on custom segments, user’s geolocation, device, and more.."
+msgstr ""
+
+#: src/components/campaign/drip/DripAudience.tsx:329
+msgid "Activate Autoresponder"
+msgstr ""
+
+#: src/components/campaign/drip/DripAudience.tsx:340
+msgid "Save Draft"
+msgstr ""
+
+#: src/components/campaign/drip/DripStatus.tsx:10
+#: src/pages/drip/helper.ts:48
+#: src/pages/triggeredCampaign/helper.ts:67
+msgid "Active"
+msgstr ""
+
+#: src/components/campaign/drip/DripStatus.tsx:12
+#: src/pages/drip/helper.ts:53
+#: src/pages/pushBroadcast/helpers.ts:66
+#: src/pages/triggeredCampaign/helper.ts:72
+msgid "Draft"
+msgstr ""
+
+#: src/components/campaign/drip/DripStatus.tsx:13
+#: src/components/campaign/drip/DripTable.tsx:252
+#: src/components/campaign/trigger/TriggerTable.tsx:258
+msgid "Pause"
+msgstr ""
+
+#: src/components/campaign/drip/DripTable.tsx:201
+#: src/components/campaign/pushBroadcast/PushTable.tsx:377
+#: src/components/campaign/trigger/TriggerTable.tsx:207
+msgid "Status"
+msgstr ""
+
+#: src/components/campaign/drip/DripTable.tsx:212
+#: src/components/campaign/preview/NotificationPreviewSelector.tsx:8
+#: src/components/campaign/pushBroadcast/PushTable.tsx:226
+#: src/components/campaign/templates/Card.tsx:202
+#: src/components/campaign/trigger/TriggerTable.tsx:218
+#: src/components/design/PopUpModalCard.tsx:142
+msgid "Preview"
+msgstr ""
+
+#: src/components/campaign/drip/DripTable.tsx:240
+#: src/components/campaign/pushBroadcast/PushTable.tsx:267
+#: src/components/campaign/trigger/TriggerTable.tsx:246
+#: src/components/common/NotificationActionDropdownMenu.tsx:63
+msgid "Duplicate"
+msgstr ""
+
+#: src/components/campaign/drip/DripTable.tsx:255
+#: src/components/campaign/trigger/TriggerTable.tsx:261
+msgid "Resume"
+msgstr ""
+
+#: src/components/campaign/drip/DripTable.tsx:289
+msgid "No drip autoresponders found."
+msgstr ""
+
+#: src/components/campaign/drip/NotificationBuilder.tsx:171
+msgid "Your plan doesn't support adding more notifications in welcome drip."
+msgstr ""
+
+#: src/components/campaign/drip/NotificationBuilder.tsx:294
+msgid "Add New Notification"
+msgstr ""
+
+#: src/components/campaign/drip/NotificationGenerator.tsx:195
+#: src/components/campaign/trigger/NotificationGenerator.tsx:189
+msgid "Send notification"
+msgstr ""
+
+#: src/components/campaign/drip/NotificationGenerator.tsx:208
+#: src/components/campaign/trigger/NotificationGenerator.tsx:202
+msgid "Immediately"
+msgstr ""
+
+#: src/components/campaign/drip/NotificationGenerator.tsx:212
+msgid "After"
+msgstr ""
+
+#: src/components/campaign/drip/NotificationGenerator.tsx:213
+#: src/components/campaign/trigger/NotificationGenerator.tsx:207
+msgid "Next"
+msgstr ""
+
+#: src/components/campaign/drip/NotificationGenerator.tsx:258
+msgid "hr"
+msgstr ""
+
+#: src/components/campaign/drip/NotificationGenerator.tsx:285
+msgid "min"
+msgstr ""
+
+#: src/components/campaign/drip/NotificationGenerator.tsx:302
+#: src/components/campaign/trigger/NotificationGenerator.tsx:293
+msgid "hr/min"
+msgstr ""
+
+#: src/components/campaign/drip/NotificationGenerator.tsx:319
+#: src/components/campaign/trigger/NotificationGenerator.tsx:309
+msgid "Sunday"
+msgstr ""
+
+#: src/components/campaign/drip/NotificationGenerator.tsx:320
+#: src/components/campaign/trigger/NotificationGenerator.tsx:310
+msgid "Monday"
+msgstr ""
+
+#: src/components/campaign/drip/NotificationGenerator.tsx:321
+#: src/components/campaign/trigger/NotificationGenerator.tsx:311
+msgid "Tuesday"
+msgstr ""
+
+#: src/components/campaign/drip/NotificationGenerator.tsx:322
+#: src/components/campaign/trigger/NotificationGenerator.tsx:312
+msgid "Wednesday"
+msgstr ""
+
+#: src/components/campaign/drip/NotificationGenerator.tsx:323
+#: src/components/campaign/trigger/NotificationGenerator.tsx:313
+msgid "Thursday"
+msgstr ""
+
+#: src/components/campaign/drip/NotificationGenerator.tsx:324
+#: src/components/campaign/trigger/NotificationGenerator.tsx:314
+msgid "Friday"
+msgstr ""
+
+#: src/components/campaign/drip/NotificationGenerator.tsx:325
+#: src/components/campaign/trigger/NotificationGenerator.tsx:315
+msgid "Saturday"
+msgstr ""
+
+#: src/components/campaign/drip/NotificationGenerator.tsx:331
+#: src/components/campaign/pushBroadcast/PushNotificationTimestamp.tsx:64
+msgid "at"
+msgstr ""
+
+#: src/components/campaign/drip/NotificationGenerator.tsx:431
+msgid "Goal tracking not used"
+msgstr ""
+
+#: src/components/campaign/drip/NotificationGenerator.tsx:553
+msgid "Notification Big Image"
+msgstr ""
+
+#: src/components/campaign/notification/ButtonImage.tsx:36
+msgid "Update Button Image"
+msgstr ""
+
+#: src/components/campaign/notification/ButtonImage.tsx:41
+msgid "Recommended size: 16px x 16px (JPG, PNG up to 1 MB)"
+msgstr ""
+
+#: src/components/campaign/notification/Image.tsx:42
+msgid "Insert Notification Image"
+msgstr ""
+
+#: src/components/campaign/notification/Image.tsx:46
+#: src/pages/settings/siteDetails/index.tsx:474
+msgid "Recommended size: 192px x 192px (JPG, PNG up to 1 MB)"
+msgstr ""
+
+#: src/components/campaign/notification/LargeImage.tsx:48
+msgid "Update Notification Large Image"
+msgstr ""
+
+#: src/components/campaign/notification/LargeImage.tsx:52
+msgid "Chrome 56+ supports displaying a large image in your campaign. The recommended size of the image is 360*180px. The appearance may vary based on the user’s browser and device."
+msgstr ""
+
+#: src/components/campaign/notification/MultiAction.tsx:55
+msgid "Multi action is a pro feature"
+msgstr ""
+
+#: src/components/campaign/notification/NotificationScheduleInfo.tsx:36
+msgid "Push Immediately"
+msgstr ""
+
+#: src/components/campaign/notification/NotificationScheduleInfo.tsx:68
+#: src/components/campaign/pushBroadcast/PushNotificationTimestamp.tsx:61
+msgid "Push between"
+msgstr ""
+
+#: src/components/campaign/notification/NotificationScheduleInfo.tsx:94
+msgid "On every"
+msgstr ""
+
+#: src/components/campaign/preview/NotificationPreview.tsx:45
+#: src/components/campaign/preview/NotificationPreviewSelector.tsx:21
+msgid "Windows 11 - Chrome"
+msgstr ""
+
+#: src/components/campaign/preview/NotificationPreview.tsx:51
+#: src/components/campaign/preview/NotificationPreviewSelector.tsx:24
+msgid "Windows 10 - Chrome"
+msgstr ""
+
+#: src/components/campaign/preview/NotificationPreview.tsx:57
+#: src/components/campaign/preview/NotificationPreviewSelector.tsx:27
+msgid "Windows 10 - Firefox"
+msgstr ""
+
+#: src/components/campaign/preview/NotificationPreview.tsx:63
+msgid "macOS - Chrome"
+msgstr ""
+
+#: src/components/campaign/preview/NotificationPreview.tsx:69
+#: src/components/campaign/preview/NotificationPreviewSelector.tsx:31
+msgid "Android - Chrome"
+msgstr ""
+
+#: src/components/campaign/preview/NotificationPreview.tsx:75
+#: src/components/campaign/preview/NotificationPreviewSelector.tsx:33
+msgid "iOS - Web"
+msgstr ""
+
+#: src/components/campaign/preview/NotificationPreviewSelector.tsx:19
+#: src/pages/drip/helper.ts:43
+#: src/pages/pushBroadcast/helpers.ts:56
+#: src/pages/triggeredCampaign/helper.ts:62
+msgid "All"
+msgstr ""
+
+#: src/components/campaign/preview/NotificationPreviewSelector.tsx:29
+msgid "MacOS - Chrome"
+msgstr ""
+
+#: src/components/campaign/preview/Windows11Chrome.tsx:33
+msgid "Google Chrome"
+msgstr ""
+
+#: src/components/campaign/pushBroadcast/PageBreadcrumb.tsx:61
+#: src/pages/pushBroadcast/CreateOrEdit.tsx:1394
+msgid "Send / Schedule"
+msgstr ""
+
+#: src/components/campaign/pushBroadcast/PushAdvancedFilterDropdown.tsx:118
+msgid "Source"
+msgstr ""
+
+#: src/components/campaign/pushBroadcast/PushAdvancedFilterDropdown.tsx:124
+msgid "API"
+msgstr ""
+
+#: src/components/campaign/pushBroadcast/PushAdvancedFilterDropdown.tsx:125
+#: src/pages/dashboard/Dashboard.tsx:131
+#: app/Utils/AdminNavMenuItems.php:24
+msgid "Dashboard"
+msgstr ""
+
+#: src/components/campaign/pushBroadcast/PushAdvancedFilterDropdown.tsx:126
+msgid "RSS Feed"
+msgstr ""
+
+#: src/components/campaign/pushBroadcast/PushAdvancedFilterDropdown.tsx:128
+msgid "Repeat Schedule"
+msgstr ""
+
+#: src/components/campaign/pushBroadcast/PushAdvancedFilterDropdown.tsx:143
+#: src/components/common/DateRangeDropdownButton.tsx:142
+msgid "Apply"
+msgstr ""
+
+#: src/components/campaign/pushBroadcast/PushAdvancedFilterDropdown.tsx:146
+msgid "Clear"
+msgstr ""
+
+#: src/components/campaign/pushBroadcast/PushAdvancedFilterDropdown.tsx:167
+msgid "Filter"
+msgstr ""
+
+#: src/components/campaign/pushBroadcast/PushAdvancedFilterDropdown.tsx:84
+msgid "Sent Between"
+msgstr ""
+
+#: src/components/campaign/pushBroadcast/PushNotificationTimestamp.tsx:19
+msgid "Scheduled At"
+msgstr ""
+
+#: src/components/campaign/pushBroadcast/PushNotificationTimestamp.tsx:64
+msgid "on every"
+msgstr ""
+
+#: src/components/campaign/pushBroadcast/PushTable.tsx:248
+#: src/components/common/NotificationActionDropdownMenu.tsx:50
+msgid "Resend"
+msgstr ""
+
+#: src/components/campaign/pushBroadcast/PushTable.tsx:276
+msgid "Timezones"
+msgstr ""
+
+#: src/components/campaign/pushBroadcast/PushTable.tsx:304
+msgid "Notifications"
+msgstr ""
+
+#: src/components/campaign/pushBroadcast/PushTable.tsx:341
+msgid "A/B Test"
+msgstr ""
+
+#: src/components/campaign/pushBroadcast/PushTable.tsx:354
+msgid "Create Test"
+msgstr ""
+
+#: src/components/campaign/pushBroadcast/PushTable.tsx:371
+msgid "Test Results"
+msgstr ""
+
+#: src/components/campaign/pushBroadcast/PushTable.tsx:386
+msgid "Expired"
+msgstr ""
+
+#: src/components/campaign/pushBroadcast/PushTable.tsx:408
+msgid "No notifications found."
+msgstr ""
+
+#: src/components/campaign/pushBroadcast/PushTable.tsx:466
+msgid "Click to close A/B tests"
+msgstr ""
+
+#: src/components/campaign/pushBroadcast/PushTable.tsx:485
+msgid "Smart A/B"
+msgstr ""
+
+#: src/components/campaign/pushBroadcast/PushTable.tsx:486
+msgid "A/B"
+msgstr ""
+
+#: src/components/campaign/pushBroadcast/PushTable.tsx:537
+msgid "Timezone Notifications"
+msgstr ""
+
+#: src/components/campaign/pushBroadcast/PushTable.tsx:584
+msgid "Timezone details will be available after notification is sent."
+msgstr ""
+
+#: src/components/campaign/pushBroadcast/PushTable.tsx:588
+msgid "No timezone found."
+msgstr ""
+
+#: src/components/campaign/pushBroadcast/PushTable.tsx:623
+msgid "Notification Details"
+msgstr ""
+
+#: src/components/campaign/pushBroadcast/PushTableHeader.tsx:70
+msgid "We cannot export more than %d entries at a time."
+msgstr ""
+
+#: src/components/campaign/pushBroadcast/PushTableSorter.tsx:111
+msgid " %d items"
+msgstr ""
+
+#. 1 - The applied sort order. - 2 - The maximum limit for sorting
+#: src/components/campaign/pushBroadcast/PushTableSorter.tsx:94
+msgid "The sorting for %1$s option is limited upto %2$d entries. Please use the date range filter to reduce the number of entries."
+msgstr ""
+
+#: src/components/campaign/templates/Card.tsx:208
+msgid "PRO"
+msgstr ""
+
+#: src/components/campaign/templates/Card.tsx:249
+msgid "Use This Template"
+msgstr ""
+
+#: src/components/campaign/templates/Card.tsx:280
+msgid "Template previews are intended to give you an idea of how your broadcasts might look and can vary slightly depending on the device and browsers."
+msgstr ""
+
+#: src/components/campaign/templates/Modal.tsx:31
+#: src/pages/pushBroadcast/Templates.tsx:14
+msgid "Push Broadcast Templates"
+msgstr ""
+
+#: src/components/campaign/templates/Modal.tsx:33
+msgid "Get started with our expertly crafted push broadcast templates. These pre designed message formats offer popular styles carefully curated by our experts. With custom UTM parameters for each style, you can track the performance and effectiveness of your push broadcasts. Effortlessly engage your audience and gain valuable insights into your communication strategy. It's never been easier to create impactful messages and measure their impact!"
+msgstr ""
+
+#: src/components/campaign/templates/PageAndModelContent.tsx:155
+msgid "Failed to add template to favorite list. Please try again."
+msgstr ""
+
+#: src/components/campaign/templates/PageAndModelContent.tsx:207
+msgid "Please select category"
+msgstr ""
+
+#: src/components/campaign/templates/PageAndModelContent.tsx:217
+msgid "Search templates"
+msgstr ""
+
+#: src/components/campaign/templates/PageAndModelContent.tsx:248
+msgid "Use Blank Template"
+msgstr ""
+
+#: src/components/campaign/templates/PageAndModelContent.tsx:262
+msgid "Please check the spelling or try searching for something else"
+msgstr ""
+
+#. 1 - The search keyword
+#: src/components/campaign/templates/PageAndModelContent.tsx:275
+msgid "Results for %s"
+msgstr ""
+
+#: src/components/campaign/templates/PageAndModelContent.tsx:290
+msgid "Your Favorite Templates"
+msgstr ""
+
+#: src/components/campaign/templates/PageAndModelContent.tsx:341
+msgid "Sorry, no results found!"
+msgstr ""
+
+#: src/components/campaign/templates/TemplateList.tsx:65
+msgid "Create Stunning Rich Push Broadcasts with Pro Templates"
+msgstr ""
+
+#: src/components/campaign/templates/TemplateList.tsx:68
+msgid "Elevate your push broadcasts by upgrading to Pro and gaining access to our library of Pro Templates with large images and multi-action buttons for more impactful messaging."
+msgstr ""
+
+#: src/components/campaign/templates/TemplateList.tsx:88
+msgid "Get Pro Templates"
+msgstr ""
+
+#: src/components/campaign/trigger/TriggerTable.tsx:293
+msgid "No Triggered Campaigns found."
+msgstr ""
+
+#: src/components/challenge/ChallengePanel.tsx:41
+msgid "Finish the challenge and see what else you can do with PushEngage"
+msgstr ""
+
+#: src/components/challenge/ChallengePanel.tsx:47
+#: src/pages/dashboard/RecentNotifications.tsx:200
+msgid "Don’t miss out on leveraging the power of web push notifications."
+msgstr ""
+
+#: src/components/challenge/ChallengePanel.tsx:62
+msgid "Setup Auto Sending"
+msgstr ""
+
+#: src/components/challenge/ChallengePanel.tsx:67
+msgid "Configure Subscription Popup"
+msgstr ""
+
+#: src/components/challenge/ChallengePanel.tsx:72
+msgid "Set Up a Welcome Drip Campaign"
+msgstr ""
+
+#: src/components/challenge/ChallengePanel.tsx:77
+msgid "Create Your First Campaign"
+msgstr ""
+
+#: src/components/challenge/ChallengePanel.tsx:92
+msgid "Start Challenge"
+msgstr ""
+
+#: src/components/challenge/ChallengePanel.tsx:97
+msgid "Check Out Our Ultimate Guide to Getting Started"
+msgstr ""
+
+#: src/components/challenge/JoyrideCustomTooltip.tsx:34
+msgid "step %1$d of %2$d"
+msgstr ""
+
+#: src/components/challenge/JoyrideCustomTooltip.tsx:44
+msgid "Next Step"
+msgstr ""
+
+#: src/components/challenge/helper.ts:48
+msgid "Setup Auto Push"
+msgstr ""
+
+#: src/components/challenge/helper.ts:54
+#: src/pages/settings/autoPush/index.tsx:225
+msgid "Automatically send a push notification to your subscribers every time you publish a new post."
+msgstr ""
+
+#: src/components/challenge/helper.ts:61
+msgid "Configure subscription popup modals"
+msgstr ""
+
+#: src/components/challenge/helper.ts:67
+msgid "Configure permission popup modals for your website visitors to join your push subscribers list."
+msgstr ""
+
+#: src/components/challenge/helper.ts:74
+msgid "Set up a welcome drip campaign."
+msgstr ""
+
+#: src/components/challenge/helper.ts:80
+msgid "Send a welcome campaign to all new subscribers."
+msgstr ""
+
+#: src/components/challenge/helper.ts:84
+msgid "Create your first campaign"
+msgstr ""
+
+#: src/components/challenge/helper.ts:90
+msgid "Send a push broadcast any time and engage with your subscribers as soon as they are online."
+msgstr ""
+
+#: src/components/common/EmptyListDataMsg.tsx:27
+msgid "Hi there!"
+msgstr ""
+
+#: src/components/common/NotConnectedTooltip.tsx:21
+msgid "You haven’t finished setting up your site. Please connect your site."
+msgstr ""
+
+#: src/components/common/NotificationActionDropdownMenu.tsx:56
+msgid "Export Data"
+msgstr ""
+
+#. 1 - The feature description. - 2 - The Plan name
+#: src/components/common/ProModal.tsx:98
+msgid "%1$s Avail these benefits with %2$s Plan:"
+msgstr ""
+
+#: src/components/common/ReviewAlertCard.tsx:54
+#: views/review-notice.php:13
+msgid "Ok, you deserve it"
+msgstr ""
+
+#: src/components/common/ReviewAlertCard.tsx:63
+#: views/review-notice.php:16
+msgid "Nope, maybe later"
+msgstr ""
+
+#: src/components/common/ReviewAlertCard.tsx:73
+#: views/review-notice.php:19
+msgid "I already did"
+msgstr ""
+
+#: src/components/common/tables/DataTable.tsx:34
+msgid "No item found"
+msgstr ""
+
+#: src/components/dashboardWidget/DashboardWidget.tsx:111
+msgid "Overview"
+msgstr ""
+
+#: src/components/dashboardWidget/DashboardWidget.tsx:115
+#: src/pages/audience/Subscribers.tsx:177
+#: src/pages/dashboard/Dashboard.tsx:149
+msgid "Quick Stats"
+msgstr ""
+
+#: src/components/dashboardWidget/DashboardWidget.tsx:118
+#: src/pages/dashboard/Dashboard.tsx:152
+msgid "An overview of the analytics to understand your web push subscribers."
+msgstr ""
+
+#: src/components/dashboardWidget/DashboardWidget.tsx:151
+#: src/pages/dashboard/RecentNotifications.tsx:100
+msgid "Recent Notifications"
+msgstr ""
+
+#: src/components/dashboardWidget/DashboardWidget.tsx:162
+msgid "Looks like you haven‘t created any broadcasts yet."
+msgstr ""
+
+#: src/components/dashboardWidget/DashboardWidget.tsx:175
+msgid "Webpush is a great way to bring in repeat traffic and re-engage with your customers. Once you send a broadcast, it will appear here. <a>Check Out Our Ultimate Guide to Getting Started</a>."
+msgstr ""
+
+#: src/components/dashboardWidget/DashboardWidget.tsx:189
+msgid "Create a Broadcast"
+msgstr ""
+
+#: src/components/dashboardWidget/DashboardWidget.tsx:200
+msgid "Please Setup Your Website to Start Increasing Your Re-engagement"
+msgstr ""
+
+#: src/components/dashboardWidget/DashboardWidget.tsx:203
+#: views/site-not-connected.php:7
+msgid "You are losing subscribers, leads and sales! Click on the button below to get started with PushEngage."
+msgstr ""
+
+#: src/components/dashboardWidget/DashboardWidget.tsx:216
+msgid "Connect Your Site"
+msgstr ""
+
+#: src/components/dashboardWidget/RecentNotifications.tsx:27
+#: src/pages/dashboard/RecentNotifications.tsx:115
+msgid "See All Notifications"
+msgstr ""
+
+#: src/components/design/PopUpModalCard.tsx:100
+msgid "Please select the preview type"
+msgstr ""
+
+#: src/components/design/PopUpModalCard.tsx:87
+msgid "Edit Popup"
+msgstr ""
+
+#: src/components/headers/AlertNotificationDrawer.tsx:131
+msgid "All caught up!"
+msgstr ""
+
+#: src/components/headers/AlertNotificationDrawer.tsx:154
+msgid "Dismiss All"
+msgstr ""
+
+#: src/components/headers/AlertNotificationDrawer.tsx:200
+msgid "Dismiss"
+msgstr ""
+
+#: src/components/headers/siteAlert/EmailVerificationAlert.tsx:25
+#: src/components/onboarding/FinalStep.tsx:142
+msgid "Please verify your email address."
+msgstr ""
+
+#. 1 - The campaign limit count. - 2 - Upgrade plan CTA
+#: src/components/headers/siteAlert/NotificationLimitExceededAlert.tsx:51
+msgid "Attention: You’ve hit the %1$d-campaign lifetime limit and your account is blocked. %2$s for unlimited campaigns and resume sending."
+msgstr ""
+
+#. 1 - The sent campaign count. - 2 - The campaign limit count. - 3 - Upgrade plan CTA
+#: src/components/headers/siteAlert/NotificationLimitExceededAlert.tsx:74
+msgid "Attention: You’ve sent %1$d campaigns and are nearing the %2$d campaign lifetime limit. %3$s to enjoy unlimited campaigns and avoid disruptions"
+msgstr ""
+
+#: src/components/headers/siteAlert/NotificationLimitExceededAlert.tsx:80
+msgid "Upgrade now"
+msgstr ""
+
+#: src/components/headers/siteAlert/OnFreePlanAlert.tsx:52
+msgid "You’re using the free version of PushEngage. <a>Upgrade</a> now for unlimited campaigns, rich push broadcasts, personalized campaigns, and analytics."
+msgstr ""
+
+#. 1 - The plan name. - 2 - Upgrade plan CTA link tag
+#: src/components/headers/siteAlert/OnTrialAlert.tsx:61
+msgid "Your %1$s trial has expired. Please %2$s to continue using the service."
+msgstr ""
+
+#: src/components/headers/siteAlert/OnTrialAlert.tsx:66
+msgid "upgrade"
+msgstr ""
+
+#. 1 - The number of trial days left
+#: src/components/headers/siteAlert/OnTrialAlert.tsx:70
+msgid "%1$s days trial left."
+msgstr ""
+
+#: src/components/headers/siteAlert/ServiceWorkerIssueAlert.tsx:244
+msgid "1. Please review the file's location and check firewall settings for the file path. If necessary, consult your hosting service provider. After resolving, click \"Resolved\"."
+msgstr ""
+
+#: src/components/headers/siteAlert/ServiceWorkerIssueAlert.tsx:250
+msgid "2. To use a different service worker location, update the publicly accessible URL of the service worker."
+msgstr ""
+
+#: src/components/headers/siteAlert/ServiceWorkerIssueAlert.tsx:278
+msgid "Sorry, We still could not access the service worker file at location"
+msgstr ""
+
+#: src/components/headers/siteAlert/ServiceWorkerIssueAlert.tsx:307
+msgid "Continue Using PushEngage Subdomain"
+msgstr ""
+
+#: src/components/headers/siteAlert/ServiceWorkerIssueAlert.tsx:338
+msgid "Service worker path"
+msgstr ""
+
+#: src/components/headers/siteAlert/ServiceWorkerIssueAlert.tsx:390
+msgid "Contact PushEngage Support"
+msgstr ""
+
+#: src/components/headers/siteAlert/ServiceWorkerIssueAlert.tsx:397
+msgid " Continue Using PushEngage Subdomain"
+msgstr ""
+
+#: src/components/headers/siteAlert/ServiceWorkerIssueAlert.tsx:411
+msgid " Update"
+msgstr ""
+
+#: src/components/headers/siteAlert/ServiceWorkerIssueAlert.tsx:422
+msgid " Cancel"
+msgstr ""
+
+#: src/components/headers/siteAlert/ServiceWorkerIssueAlert.tsx:435
+msgid "We could not access the service worker file at location"
+msgstr ""
+
+#: src/components/headers/siteAlert/ServiceWorkerIssueAlert.tsx:442
+msgid "In order to collect push subscribers on your domain, the service worker file must be publicly accessible. You can try the following to fix the issue:"
+msgstr ""
+
+#: src/components/headers/siteAlert/ServiceWorkerIssueAlert.tsx:455
+msgid "Please remember, you are still collecting subscribers on a PushEngage subdomain that has been reserved for your site. If you need assistance, please Contact"
+msgstr ""
+
+#: src/components/headers/siteAlert/ServiceWorkerIssueAlert.tsx:469
+msgid "PushEngage Support"
+msgstr ""
+
+#: src/components/headers/siteAlert/ServiceWorkerIssueAlert.tsx:481
+msgid "Resolved"
+msgstr ""
+
+#: src/components/headers/siteAlert/ServiceWorkerIssueAlert.tsx:492
+msgid "Update Location"
+msgstr ""
+
+#: src/components/headers/siteAlert/ServiceWorkerIssueAlert.tsx:508
+msgid "Learn More"
+msgstr ""
+
+#: src/components/headers/siteAlert/ServiceWorkerIssueAlert.tsx:520
+msgid "Do not show again"
+msgstr ""
+
+#: src/components/onboarding/FinalStep.tsx:103
+msgid "Verifying Plugin Installation"
+msgstr ""
+
+#: src/components/onboarding/FinalStep.tsx:120
+msgid "Congratulations!"
+msgstr ""
+
+#: src/components/onboarding/FinalStep.tsx:121
+msgid "Your Site is Ready for Better Conversions"
+msgstr ""
+
+#: src/components/onboarding/FinalStep.tsx:131
+msgid "Your site is currently using a caching plugin. To ensure that the push notification permission prompt is displayed correctly to visitors on existing posts and pages of your site, please clear the cache."
+msgstr ""
+
+#: src/components/onboarding/FinalStep.tsx:145
+msgid "Activate your account by verifying your email address. Please click the link in the verification email we have sent you."
+msgstr ""
+
+#: src/components/onboarding/FinalStep.tsx:169
+msgid "Create a Campaign"
+msgstr ""
+
+#: src/components/onboarding/FinalStep.tsx:180
+#: src/pages/settings/autoPush/index.tsx:197
+msgid "Auto Push Settings"
+msgstr ""
+
+#: src/components/onboarding/FinalStep.tsx:191
+msgid "PushEngage Dashboard"
+msgstr ""
+
+#: src/components/onboarding/FinalStep.tsx:94
+msgid "Installing Recommended Features"
+msgstr ""
+
+#: src/components/onboarding/FinalStep.tsx:97
+msgid "The following plugins are being installed"
+msgstr ""
+
+#: src/components/onboarding/UpgradeAccount.tsx:102
+msgid "Upgrade Now & Save 50%"
+msgstr ""
+
+#: src/components/onboarding/UpgradeAccount.tsx:108
+msgid "Skip this Step and Continue with PushEngage"
+msgstr ""
+
+#: src/components/onboarding/UpgradeAccount.tsx:119
+msgid "Go back"
+msgstr ""
+
+#: src/components/onboarding/UpgradeAccount.tsx:126
+msgid "Close and Exit Wizard without Saving"
+msgstr ""
+
+#: src/components/onboarding/UpgradeAccount.tsx:15
+msgid "Unlimited Campaigns"
+msgstr ""
+
+#: src/components/onboarding/UpgradeAccount.tsx:16
+msgid "Track your marketing goals"
+msgstr ""
+
+#: src/components/onboarding/UpgradeAccount.tsx:17
+msgid "Schedule all your campaigns"
+msgstr ""
+
+#: src/components/onboarding/UpgradeAccount.tsx:18
+msgid "Automate your campaigns easily"
+msgstr ""
+
+#: src/components/onboarding/UpgradeAccount.tsx:19
+msgid "Send super targeted campaigns"
+msgstr ""
+
+#: src/components/onboarding/UpgradeAccount.tsx:48
+msgid "PushEngage helps you grow your business much faster. Unlock unlimited campaigns, the best converting templates, and a host of advanced features for just $41 per year. Start growing and automating your campaigns more quickly by upgrading to the Business Plan"
+msgstr ""
+
+#: src/components/onboarding/UpgradeAccount.tsx:55
+msgid "PushEngage has a free forever plan for WordPress users"
+msgstr ""
+
+#: src/components/onboarding/UpgradeAccount.tsx:58
+msgid "PushEngage customers with a paid plan typically grow their business 80% faster."
+msgstr ""
+
+#: src/components/onboarding/UpgradeAccount.tsx:80
+msgid "Upgrade to a paid plan right now and get upto %1$s (automatically applied to your cart)."
+msgstr ""
+
+#: src/components/onboarding/UpgradeAccount.tsx:84
+msgid "45% discount"
+msgstr ""
+
+#: src/components/onboarding/Welcome.tsx:159
+msgid "An error was encountered while connecting your account, please try again."
+msgstr ""
+
+#. 1 - The error code
+#: src/components/onboarding/Welcome.tsx:166
+msgid "Error code: %1s"
+msgstr ""
+
+#: src/components/onboarding/Welcome.tsx:227
+msgid "Welcome to PushEngage Setup Wizard!"
+msgstr ""
+
+#: src/components/onboarding/Welcome.tsx:230
+msgid "Let’s get you set up."
+msgstr ""
+
+#: src/components/onboarding/Welcome.tsx:243
+#: src/pages/settings/siteDetails/index.tsx:390
+msgid "Claim Your Free Account"
+msgstr ""
+
+#: src/components/onboarding/Welcome.tsx:253
+#: src/pages/settings/siteDetails/index.tsx:401
+msgid "Connect Your Existing Account"
+msgstr ""
+
+#: src/components/onboarding/Welcome.tsx:261
+msgid "Go back to the dashboard"
+msgstr ""
+
+#: src/components/postEditor/PostEditorMetabox.tsx:326
+msgid "Your account does not contain any audience groups."
+msgstr ""
+
+#: src/components/postEditor/PostEditorMetabox.tsx:331
+msgid "Audience group is a pro feature, not available on the Free Plan."
+msgstr ""
+
+#: src/components/postEditor/PostEditorMetabox.tsx:429
+msgid "Send Push Notification on Update"
+msgstr ""
+
+#: src/components/postEditor/PostEditorMetabox.tsx:430
+msgid "Send Push Notification"
+msgstr ""
+
+#: src/components/postEditor/PostEditorMetabox.tsx:485
+msgid "Your account's notification sending feature is currently disabled. To enable it, please upgrade your plan"
+msgstr ""
+
+#: src/components/postEditor/PostEditorMetabox.tsx:501
+#: src/pages/settings/Billing/index.tsx:193
+msgid "Update Plan"
+msgstr ""
+
+#: src/components/postEditor/PostEditorMetabox.tsx:527
+msgid "Please verify your email address to begin sending push notifications. Please click the link in the verification email we have sent you."
+msgstr ""
+
+#: src/components/postEditor/PostEditorMetabox.tsx:538
+msgid "Send Notification"
+msgstr ""
+
+#: src/components/postEditor/PostEditorMetabox.tsx:566
+msgid "You have active RSS auto push campaign for this site. Please ensure that you really want to send this post in Push Notification."
+msgstr ""
+
+#: src/components/postEditor/PostEditorMetabox.tsx:581
+msgid "Note: You have 0 active subscriber."
+msgstr ""
+
+#: src/components/postEditor/PostEditorMetabox.tsx:587
+msgid "Need help"
+msgstr ""
+
+#: src/components/postEditor/PostEditorMetabox.tsx:600
+#: src/pages/settings/defaultSettings/index.tsx:378
+msgid "Notification Preview"
+msgstr ""
+
+#: src/components/postEditor/PostEditorMetabox.tsx:634
+msgid "By default, the post title is used as the notification title. However, you have the option to provide a custom notification title in this field."
+msgstr ""
+
+#: src/components/postEditor/PostEditorMetabox.tsx:654
+msgid "By default, the post excerpt/content is used as the notification message. However, you have the option to provide a custom notification message in this field."
+msgstr ""
+
+#: src/components/postEditor/PostEditorMetabox.tsx:668
+msgid "Large Image"
+msgstr ""
+
+#: src/components/postEditor/PostEditorMetabox.tsx:682
+msgid "The featured image will be used as the large image, but if you have a better image available, you can update it here and use it in the campaign."
+msgstr ""
+
+#: src/components/postEditor/PostEditorMetabox.tsx:731
+msgid "The notification button URL ensures that subscribers land on the designated page. By default, it will be set to the post URL. If you prefer to redirect them to a custom landing page, please update this field."
+msgstr ""
+
+#: src/components/postEditor/PostEditorMetabox.tsx:858
+msgid "Upgrade to Business Plan"
+msgstr ""
+
+#: src/constants/confirmationModal.ts:11
+msgid "Are you sure to resend this notification?"
+msgstr ""
+
+#: src/constants/confirmationModal.ts:12
+msgid "It will send out the same content to the selected audience. Please ensure that you really want them to be targeted with the same content."
+msgstr ""
+
+#: src/constants/confirmationModal.ts:21
+msgid "All data associated with this notification will be lost. Please ensure that you really want to delete the notification."
+msgstr ""
+
+#: src/constants/confirmationModal.ts:30
+msgid "All data associated with this drip autoresponder will be lost. Please ensure that you really want to delete the drip autoresponder."
+msgstr ""
+
+#: src/constants/confirmationModal.ts:39
+msgid "All data associated with this audience group will be lost. Please ensure that you really want to delete the audience group."
+msgstr ""
+
+#: src/constants/confirmationModal.ts:47
+msgid "Are you sure you want to delete?"
+msgstr ""
+
+#: src/constants/confirmationModal.ts:48
+msgid "All statistics associated with the deleted segments will be lost. Please ensure that you really want to delete the segment."
+msgstr ""
+
+#: src/constants/confirmationModal.ts:57
+msgid "The current API key will be deactivated. Are you sure you want to generate a new API key?"
+msgstr ""
+
+#: src/constants/confirmationModal.ts:61
+msgid "Yes, Regenerate"
+msgstr ""
+
+#: src/constants/confirmationModal.ts:67
+msgid "Are you sure?"
+msgstr ""
+
+#: src/constants/confirmationModal.ts:68
+msgid "Do you want to disconnect your site?"
+msgstr ""
+
+#: src/constants/confirmationModal.ts:69
+msgid "Yes, Disconnect"
+msgstr ""
+
+#: src/constants/confirmationModal.ts:70
+#: src/pages/pushBroadcast/List.tsx:312
+msgid "No"
+msgstr ""
+
+#: src/constants/planFeatures.ts:106
+msgid "Upgrade to PushEngage Business and Select an Audience Group for Your Push Notifications"
+msgstr ""
+
+#: src/constants/planFeatures.ts:11
+msgid "Track engagement and performance"
+msgstr ""
+
+#: src/constants/planFeatures.ts:12
+msgid "Create custom popup modals"
+msgstr ""
+
+#: src/constants/planFeatures.ts:122
+msgid "Upgrade to PushEngage Business and Create a Custom Audience for Your Push Notifications"
+msgstr ""
+
+#: src/constants/planFeatures.ts:128
+msgid "<a>Create an Audience Group</a> and personalize your notification based on segments, user’s geolocation, device and more. Upgrade to the Business plan now and you can also:"
+msgstr ""
+
+#: src/constants/planFeatures.ts:13
+msgid "Segment users based on their actions"
+msgstr ""
+
+#: src/constants/planFeatures.ts:138
+msgid "Upgrade to PushEngage Business and Send Notifications with Multiple Call-to-Action Buttons"
+msgstr ""
+
+#: src/constants/planFeatures.ts:14
+msgid "Create Audience Groups for retargeting"
+msgstr ""
+
+#: src/constants/planFeatures.ts:144
+msgid "Link up to 3 landing pages in a single rich notification and get higher clicks from <a>multi-action notifications</a>. Upgrade to the Business plan now and you can also:"
+msgstr ""
+
+#: src/constants/planFeatures.ts:15
+msgid "Schedule campaigns in advance"
+msgstr ""
+
+#: src/constants/planFeatures.ts:155
+msgid "Upgrade to PushEngage Business and Send Notifications with Large Image"
+msgstr ""
+
+#: src/constants/planFeatures.ts:16
+msgid "Send campaigns in subscriber timezones"
+msgstr ""
+
+#: src/constants/planFeatures.ts:161
+msgid "Make your campaign more appealing and get higher clicks from <a>large image notifications</a>. Upgrade to the Business plan now and you can also:"
+msgstr ""
+
+#: src/constants/planFeatures.ts:17
+msgid "Create personalized campaigns"
+msgstr ""
+
+#: src/constants/planFeatures.ts:172
+msgid "Upgrade to PushEngage Business and Schedule Your Notifications"
+msgstr ""
+
+#: src/constants/planFeatures.ts:175
+msgid "<a>Schedule your push notifications</a> along with the rest of your content calendar. Simply set a date and time and your notifications will get delivered automatically. Upgrade to the Business plan now and you can also:"
+msgstr ""
+
+#: src/constants/planFeatures.ts:18
+msgid "Send rich push for better engagement"
+msgstr ""
+
+#: src/constants/planFeatures.ts:184
+msgid "Triggered Campaign is a Pro Feature"
+msgstr ""
+
+#: src/constants/planFeatures.ts:197
+msgid "Upgrade to PushEngage Business and Send Recurring Notifications"
+msgstr ""
+
+#: src/constants/planFeatures.ts:200
+msgid "<a>Send recurring notifications</a> to boost weekly sales. Create multiple traffic streams for your sales and promos. Upgrade to the Business plan now and you can also:"
+msgstr ""
+
+#: src/constants/planFeatures.ts:211
+msgid "Remove PushEngage Branding is a Pro feature."
+msgstr ""
+
+#: src/constants/planFeatures.ts:212
+msgid "Remove the PushEngage branding from the subscription Opt-in"
+msgstr ""
+
+#: src/constants/planFeatures.ts:218
+msgid "Upgrade to PushEngage Business and Collect Push Notification Subscribers in a Custom Subdomain"
+msgstr ""
+
+#: src/constants/planFeatures.ts:222
+msgid "Collect subscribers for your website through a custom URL for your better branding. Your subscriber list should be portable. Upgrade to the Business plan now and you can also:"
+msgstr ""
+
+#: src/constants/planFeatures.ts:231
+msgid "Multi Site Sending is a Pro Feature"
+msgstr ""
+
+#: src/constants/planFeatures.ts:237
+msgid "Sending notification in subscriber timezone is a Pro Feature."
+msgstr ""
+
+#: src/constants/planFeatures.ts:238
+msgid "Optimize your notifications by user timezone and improve user engagement."
+msgstr ""
+
+#: src/constants/planFeatures.ts:247
+msgid "Upgrade to PushEngage Premium and A/B Test Your Push Broadcasts"
+msgstr ""
+
+#: src/constants/planFeatures.ts:250
+msgid "A/B test any element in your push notifications. Use our Intelligent <a>A/B testing</a> and get better clicks and more revenue. Upgrade to the Premium plan now and you can also:"
+msgstr ""
+
+#: src/constants/planFeatures.ts:260
+msgid "Upgrade and Unlock Multiple User Support."
+msgstr ""
+
+#: src/constants/planFeatures.ts:261
+msgid "Manage multiple users with access control under a single account with a single billing."
+msgstr ""
+
+#: src/constants/planFeatures.ts:270
+msgid "Upgrade and Manage Multiple Sites."
+msgstr ""
+
+#: src/constants/planFeatures.ts:271
+msgid "Add and manage multiple websites under a single account with a single billing."
+msgstr ""
+
+#: src/constants/planFeatures.ts:280
+msgid "Upgrade to PushEngage Premium and Send Drip Autoresponder Push Notifications"
+msgstr ""
+
+#: src/constants/planFeatures.ts:286
+msgid "<a>Schedule a drip campaign</a> with multiple notifications for re-engagement, cross-selling, upselling and much more. Personalize your campaigns using Segments, Audience Groups, and Attributes. Upgrade to the Premium plan now and you can also:"
+msgstr ""
+
+#: src/constants/planFeatures.ts:294
+msgid "Multiple Notification in Drip Autoresponders is a Pro Feature."
+msgstr ""
+
+#: src/constants/planFeatures.ts:295
+msgid "Schedule a drip campaign with multiple notifications to re-engage, Cross-sell, Lead Capture and many more advanced ones based on audience segments, location or device type."
+msgstr ""
+
+#: src/constants/planFeatures.ts:304
+msgid "Upgrade to PushEngage Premium to Enable Goal Tracking"
+msgstr ""
+
+#: src/constants/planFeatures.ts:307
+msgid "Track how your <a>push notifications are performing</a>. Create custom goals and stay on track with your marketing strategy. Upgrade to the Premium plan now and you can also:"
+msgstr ""
+
+#: src/constants/planFeatures.ts:31
+msgid "Send personalized automated campaigns"
+msgstr ""
+
+#: src/constants/planFeatures.ts:32
+msgid "Send price drop and back-in-stock alerts"
+msgstr ""
+
+#: src/constants/planFeatures.ts:33
+msgid "Boost revenue with abandoned cart recovery"
+msgstr ""
+
+#: src/constants/planFeatures.ts:34
+msgid "Use attributes tags for personalized campaigns"
+msgstr ""
+
+#: src/constants/planFeatures.ts:35
+msgid "Create a dynamic campaign for cross-sell, up-sell & review"
+msgstr ""
+
+#: src/constants/planFeatures.ts:36
+msgid "Get VIP assistance from support team"
+msgstr ""
+
+#: src/constants/planFeatures.ts:43
+msgid "Upgrade to PushEngage Business to Segment Your Subscribers"
+msgstr ""
+
+#: src/constants/planFeatures.ts:46
+msgid "Send more targeted and <a>personalized push notifications</a> using segments. Upgrade to the Business plan now and you can also:"
+msgstr ""
+
+#: src/constants/planFeatures.ts:56
+msgid "Upgrade to PushEngage Business and Create Audience Groups for Your Push Notifications"
+msgstr ""
+
+#: src/constants/planFeatures.ts:73
+msgid "Upgrade to PushEngage Premium and Get Detailed Optin Analytics"
+msgstr ""
+
+#: src/constants/planFeatures.ts:76
+msgid "Track campaign performance"
+msgstr ""
+
+#: src/constants/planFeatures.ts:77
+msgid "Send automated drip campaigns"
+msgstr ""
+
+#: src/constants/planFeatures.ts:78
+msgid "A/B test your broadcasts"
+msgstr ""
+
+#: src/constants/planFeatures.ts:79
+msgid "Send campaigns in subscribers’ timezone"
+msgstr ""
+
+#: src/constants/planFeatures.ts:80
+msgid "Get detailed opt-in analytics"
+msgstr ""
+
+#: src/constants/planFeatures.ts:81
+msgid "Manage multiple users for your account"
+msgstr ""
+
+#: src/constants/planFeatures.ts:82
+msgid "Add multiple sites to a single account"
+msgstr ""
+
+#: src/constants/planFeatures.ts:83
+msgid "Get priority support and assistance"
+msgstr ""
+
+#: src/constants/planFeatures.ts:85
+msgid "Style your <a>push notification optins</a> based on detailed analytics. Grow your subscriber list faster using data. Upgrade to the Premium plan now and you can also:"
+msgstr ""
+
+#: src/constants/planFeatures.ts:95
+msgid "RSS Autopush is a Pro Feature."
+msgstr ""
+
+#: src/constants/planFeatures.ts:96
+msgid "Point to your RSS feed and Send automatic campaigns to the user for every new post published."
+msgstr ""
+
+#: src/errors/APIError.ts:30
+msgid "There was an error connecting to the PushEngage server. Please try again."
+msgstr ""
+
+#: src/errors/APIError.ts:35
+msgid "There was an error connecting to the PushEngage server. Please Check your internet connection and try again."
+msgstr ""
+
+#: src/errors/APIError.ts:56
+msgid "An error occurred at the PushEngage servers. Please try again after some time."
+msgstr ""
+
+#: src/helper/displayPushNotification.tsx:113
+msgid "Incompatible Browser for Web Push Notifications"
+msgstr ""
+
+#: src/helper/displayPushNotification.tsx:114
+msgid "Push Notification Preview Unavailable"
+msgstr ""
+
+#: src/helper/displayPushNotification.tsx:120
+msgid "Your current browser version does not support web push notification. Please update your browser to the latest version or use a different browser that is compatible."
+msgstr ""
+
+#: src/helper/displayPushNotification.tsx:124
+msgid "We're sorry, but we are unable to provide the push notification preview at this time. This feature requires a secure HTTPS URL to function correctly, and it appears that the website URL you are attempting to use is not secured with HTTPS."
+msgstr ""
+
+#: src/helper/displayPushNotification.tsx:156
+msgid "You have denied push notification permission"
+msgstr ""
+
+#: src/helper/displayPushNotification.tsx:157
+msgid "You did not allow push notification permission"
+msgstr ""
+
+#: src/helper/displayPushNotification.tsx:161
+msgid "You need to grant access to send notifications from this website. Please grant Allow access to send notification to your browser."
+msgstr ""
+
+#: src/helper/displayPushNotification.tsx:176
+msgid "How to allow a website to send notifications?"
+msgstr ""
+
+#: src/helper/displayPushNotification.tsx:228
+msgid "An error occurred while displaying push notification."
+msgstr ""
+
+#: src/helper/displayPushNotification.tsx:232
+msgid "Error"
+msgstr ""
+
+#: src/helper/displayPushNotification.tsx:234
+msgid "Please try again."
+msgstr ""
+
+#: src/helper/displayPushNotification.tsx:58
+msgid "An active service worker registration not found"
+msgstr ""
+
+#: src/helper/displayPushNotification.tsx:71
+msgid "There may be an issue with the click event for test notifications. It appears that there is a different service worker registered on this WordPress dashboard, which could be causing the issue. Please check the service worker configuration to ensure that test notifications are functioning properly."
+msgstr ""
+
+#: src/helper/index.ts:147
+msgid "Goal Conversion"
+msgstr ""
+
+#: src/helper/index.ts:18
+msgid "Select or Upload Media Of Your Chosen Persuasion"
+msgstr ""
+
+#: src/helper/index.ts:20
+msgid "Use this media"
+msgstr ""
+
+#: src/helper/index.ts:264
+msgid "Total Counted"
+msgstr ""
+
+#: src/helper/index.ts:272
+msgid "Allowed"
+msgstr ""
+
+#: src/helper/index.ts:280
+msgid "Blocked"
+msgstr ""
+
+#: src/helper/index.ts:288
+msgid "Closed"
+msgstr ""
+
+#: src/helper/index.ts:327
+msgid "Total Active Subscribers"
+msgstr ""
+
+#: src/helper/validateNotification.ts:112
+msgid "UTM Source cannot be blank"
+msgstr ""
+
+#: src/helper/validateNotification.ts:113
+msgid "UTM Medium cannot be blank"
+msgstr ""
+
+#: src/helper/validateNotification.ts:114
+msgid "UTM Campaign cannot be blank"
+msgstr ""
+
+#: src/helper/validateNotification.ts:115
+msgid "UTM Term cannot be blank"
+msgstr ""
+
+#: src/helper/validateNotification.ts:116
+msgid "UTM Content cannot be blank"
+msgstr ""
+
+#: src/helper/validateNotification.ts:117
+msgid "UTM Source cannot be longer than 80 characters"
+msgstr ""
+
+#: src/helper/validateNotification.ts:118
+msgid "UTM Medium cannot be longer than 80 characters"
+msgstr ""
+
+#: src/helper/validateNotification.ts:119
+msgid "UTM Campaign cannot be longer than 80 characters"
+msgstr ""
+
+#: src/helper/validateNotification.ts:120
+msgid "UTM Term cannot be longer than 80 characters"
+msgstr ""
+
+#: src/helper/validateNotification.ts:121
+msgid "UTM Content cannot be longer than 120 characters"
+msgstr ""
+
+#: src/helper/validateNotification.ts:124
+#: src/pages/settings/validateSettings.ts:41
+msgid "Expiry can be maximum of 28 days"
+msgstr ""
+
+#: src/helper/validateNotification.ts:125
+msgid "Expiry must be minimum of 1 minute"
+msgstr ""
+
+#: src/helper/validateNotification.ts:128
+msgid "Goal name must be a minimum of 1 and maximum of 64 characters"
+msgstr ""
+
+#: src/helper/validateNotification.ts:129
+msgid "Result name can contain only alphabets, numbers, hyphen(-) and underscore(_)"
+msgstr ""
+
+#: src/helper/validateNotification.ts:13
+msgid "Add a catchy broadcast title. Let’s get your broadcast noticed."
+msgstr ""
+
+#: src/helper/validateNotification.ts:17
+msgid "Add a message. Give your subscribers a reason to click."
+msgstr ""
+
+#: src/helper/validateNotification.ts:21
+msgid "Add a URL to your landing page. Get more conversions right away."
+msgstr ""
+
+#: src/helper/validateNotification.ts:25
+#: src/pages/settings/validateSettings.ts:24
+msgid "Notification title cannot be longer than 85 characters"
+msgstr ""
+
+#: src/helper/validateNotification.ts:29
+#: src/pages/settings/validateSettings.ts:29
+msgid "Notification message cannot be longer than 135 characters"
+msgstr ""
+
+#: src/helper/validateNotification.ts:33
+msgid "Notification URL cannot be longer than 1600 characters"
+msgstr ""
+
+#: src/helper/validateNotification.ts:35
+msgid "Notification large image cannot be blank if enabled"
+msgstr ""
+
+#: src/helper/validateNotification.ts:379
+msgid "Choose schedule start & end date for repeat schedule"
+msgstr ""
+
+#: src/helper/validateNotification.ts:39
+msgid "Choose At least one day in week to repeat schedule"
+msgstr ""
+
+#: src/helper/validateNotification.ts:393
+msgid "Scheduled start & end date can not be less than current date."
+msgstr ""
+
+#: src/helper/validateNotification.ts:406
+msgid "Repeat schedule start date must be less or equal to end date"
+msgstr ""
+
+#: src/helper/validateNotification.ts:418
+msgid "Scheduled date and time can not be less than current date and time"
+msgstr ""
+
+#: src/helper/validateNotification.ts:42
+#: src/pages/settings/validateSettings.ts:23
+msgid "Notification title cannot be blank"
+msgstr ""
+
+#: src/helper/validateNotification.ts:427
+msgid "Cannot create a notification for 0 subscribers"
+msgstr ""
+
+#: src/helper/validateNotification.ts:43
+#: src/pages/settings/validateSettings.ts:28
+msgid "Notification message cannot be blank"
+msgstr ""
+
+#. 1 - The duration in minutes
+#: src/helper/validateNotification.ts:439
+msgid "Minimum delay must be %1d minutes or above."
+msgstr ""
+
+#: src/helper/validateNotification.ts:44
+msgid "Notification URL cannot be blank"
+msgstr ""
+
+#: src/helper/validateNotification.ts:445
+msgid "Maximum delay can be of 7 days."
+msgstr ""
+
+#: src/helper/validateNotification.ts:45
+msgid "Notification title cannot be longer than 200 characters"
+msgstr ""
+
+#. 1 - The minimum sample size, 2 - The actual sample size
+#: src/helper/validateNotification.ts:455
+msgid "Cannot create Intelligent AB Test notification for a sample size less than %1$d subscribers. Only %2$d subscribers matched."
+msgstr ""
+
+#: src/helper/validateNotification.ts:46
+msgid "Notification message cannot be longer than 200 characters"
+msgstr ""
+
+#: src/helper/validateNotification.ts:470
+msgid "Recipient count should be greater than 0"
+msgstr ""
+
+#. 1 - The selected subscriber count
+#: src/helper/validateNotification.ts:475
+msgid "Recipient count should be less than selected subscribers count %1d"
+msgstr ""
+
+#: src/helper/validateNotification.ts:50
+msgid "Notification URL cannot be longer than 300 characters"
+msgstr ""
+
+#: src/helper/validateNotification.ts:51
+msgid "Invalid notification URL"
+msgstr ""
+
+#: src/helper/validateNotification.ts:52
+msgid "Notification image cannot be longer than 300 characters"
+msgstr ""
+
+#: src/helper/validateNotification.ts:53
+msgid "Notification big image cannot be longer than 300 characters"
+msgstr ""
+
+#: src/helper/validateNotification.ts:57
+msgid "Event name can not be empty"
+msgstr ""
+
+#: src/helper/validateNotification.ts:58
+msgid "Campaign name can not be empty"
+msgstr ""
+
+#: src/helper/validateNotification.ts:63
+msgid "Action label cannot be longer than 200 characters"
+msgstr ""
+
+#: src/helper/validateNotification.ts:64
+msgid "Action URL cannot be longer than 300 characters"
+msgstr ""
+
+#: src/helper/validateNotification.ts:67
+msgid "Campaign name can not be Empty"
+msgstr ""
+
+#: src/helper/validateNotification.ts:68
+msgid "Campaign name length can not be greater than 150 characters"
+msgstr ""
+
+#: src/helper/validateNotification.ts:74
+msgid "Action label cannot be blank"
+msgstr ""
+
+#: src/helper/validateNotification.ts:75
+msgid "Action URL cannot be blank"
+msgstr ""
+
+#: src/helper/validateNotification.ts:76
+msgid "Action label cannot be longer than 12 characters"
+msgstr ""
+
+#: src/helper/validateNotification.ts:77
+msgid "Action URL cannot be longer than 256 characters"
+msgstr ""
+
+#: src/helper/validateNotification.ts:78
+msgid "Invalid action URL"
+msgstr ""
+
+#: src/pages/NotFound.tsx:20
+msgid "Unfortunately, the page you are looking for has been moved or deleted."
+msgstr ""
+
+#: src/pages/NotFound.tsx:27
+msgid "Go To Dashboard"
+msgstr ""
+
+#: src/pages/aboutUs/AboutUs.tsx:100
+msgid "So, we created a push notification software that anyone can afford and use to grow their business. Today, 10,000+ businesses use PushEngage to send 15+ Billion targeted push notifications each month."
+msgstr ""
+
+#: src/pages/aboutUs/AboutUs.tsx:120
+msgid "But don’t take our word for it! You should check out our <a>case studies</a> on how we’ve helped real businesses grow using push notifications. We’ve won the G2Crowd High Performer Award for more than 3 years straight. We also have a 4.9 star rating on Capterra and a 5 star rating on GetApp."
+msgstr ""
+
+#: src/pages/aboutUs/AboutUs.tsx:127
+msgid "Our Customer Success team has an Average Time to First Response of under an hour with an average Happiness Rating of over 90%. Our Customer Success Specialists even help build a personalized campaign FOR FREE with each purchase of PushEngage to get our customers started with a big win."
+msgstr ""
+
+#: src/pages/aboutUs/AboutUs.tsx:133
+msgid "Thank you for putting your trust and confidence in PushEngage. That’s exactly what’s helped us grow into the best push notification service in the world."
+msgstr ""
+
+#: src/pages/aboutUs/AboutUs.tsx:168
+msgid "Status:"
+msgstr ""
+
+#: src/pages/aboutUs/AboutUs.tsx:88
+msgid "Welcome to PushEngage, the #1 web push software in the world. We help businesses get repeat traffic, engagement, and sales using automated campaigns."
+msgstr ""
+
+#: src/pages/aboutUs/AboutUs.tsx:94
+msgid "Push notifications can be an amazing marketing tool to grow your site's repeat traffic, engagement, and sales. But when we started, most services were built only for large businesses with a development team. Not to mention how costly they were."
+msgstr ""
+
+#: src/pages/aboutUs/GettingStarted.tsx:100
+msgid "Rich Media: Allows you to add images, videos, and other media to your notifications to make them more engaging"
+msgstr ""
+
+#: src/pages/aboutUs/GettingStarted.tsx:104
+msgid "Multiple Platforms: Supports push notifications on web, mobile, and desktop platforms"
+msgstr ""
+
+#: src/pages/aboutUs/GettingStarted.tsx:108
+msgid "Real-Time Analytics: Provides real-time data and insights on the performance of your campaigns"
+msgstr ""
+
+#: src/pages/aboutUs/GettingStarted.tsx:112
+msgid "Advanced Triggers: Allows you to set up campaigns based on advanced triggers such as cart abandonment or form submission"
+msgstr ""
+
+#: src/pages/aboutUs/GettingStarted.tsx:116
+msgid "Integrations: Integrates with a variety of tools and platforms such as Google Analytics, Zapier, and WooCommerce"
+msgstr ""
+
+#: src/pages/aboutUs/GettingStarted.tsx:155
+msgid "Creating Your First Campaign"
+msgstr ""
+
+#: src/pages/aboutUs/GettingStarted.tsx:158
+msgid "Let's turn your website visitors into loyal superfans. The first step is to create your own push notification campaigns."
+msgstr ""
+
+#: src/pages/aboutUs/GettingStarted.tsx:174
+msgid "Get started with your first push campaign in WordPress"
+msgstr ""
+
+#: src/pages/aboutUs/GettingStarted.tsx:179
+msgid "On average, you can build a push notification subscriber list 3-4x faster than an email list. We've put together some push notification campaigns that are low-effort but high-impact."
+msgstr ""
+
+#: src/pages/aboutUs/GettingStarted.tsx:185
+msgid "Here are some excellent resources to get you started in 5 minutes or less:"
+msgstr ""
+
+#: src/pages/aboutUs/GettingStarted.tsx:202
+msgid "75 Epic Push Notification Examples You Can Steal Right Now"
+msgstr ""
+
+#: src/pages/aboutUs/GettingStarted.tsx:215
+msgid "7 Push Notification Best Practices to Get Instant Traffic"
+msgstr ""
+
+#: src/pages/aboutUs/GettingStarted.tsx:229
+msgid "How to Use Your WordPress Blog Categories to Create Subscriber Segments"
+msgstr ""
+
+#: src/pages/aboutUs/GettingStarted.tsx:252
+msgid "Get PushEngage And Unlock All The Powerful Features"
+msgstr ""
+
+#: src/pages/aboutUs/GettingStarted.tsx:256
+msgid "As a valued PushEngage Lite user, we wanted to thank you for your loyalty and let you know about all the great benefits you can get by upgrading to PushEngage Pro. The premium version offers an array of powerful features that have made PushEngage the top-rated WordPress Web Push Notification service provider."
+msgstr ""
+
+#: src/pages/aboutUs/GettingStarted.tsx:262
+msgid "Experience the full potential of PushEngage and see why it's trusted by over 50,000 websites. Upgrade today and take your push notifications to the next level!"
+msgstr ""
+
+#: src/pages/aboutUs/GettingStarted.tsx:28
+msgid "How to Start Collecting Web Push Subscribers in WordPress?"
+msgstr ""
+
+#: src/pages/aboutUs/GettingStarted.tsx:282
+msgid "Get PushEngage Today and Unlock all the Powerful Features"
+msgstr ""
+
+#: src/pages/aboutUs/GettingStarted.tsx:285
+msgid "Bonus: PushEngage free users get"
+msgstr ""
+
+#: src/pages/aboutUs/GettingStarted.tsx:29
+msgid "Before you can send campaigns, you need to start collecting subscribers using a popup modal. Check out how you can get started in 10 minutes or less."
+msgstr ""
+
+#: src/pages/aboutUs/GettingStarted.tsx:297
+msgid "50% off regular price"
+msgstr ""
+
+#: src/pages/aboutUs/GettingStarted.tsx:299
+msgid ", automatically applied at checkout."
+msgstr ""
+
+#: src/pages/aboutUs/GettingStarted.tsx:39
+msgid "How to Send Automated Push Broadcasts Whenever You Publish a WordPress Post?"
+msgstr ""
+
+#: src/pages/aboutUs/GettingStarted.tsx:43
+msgid "Creating content is a challenge in itself. Let’s get you set up with automated push campaigns that promote your posts whenever you publish a new one."
+msgstr ""
+
+#: src/pages/aboutUs/GettingStarted.tsx:53
+msgid "How to Create an Automated Drip Campaign That Makes Money While You Sleep?"
+msgstr ""
+
+#: src/pages/aboutUs/GettingStarted.tsx:57
+msgid "The same automated campaigns can keep making you more money as your subscriber list grows. Here’s how you can set up an automated campaign quickly."
+msgstr ""
+
+#: src/pages/aboutUs/GettingStarted.tsx:67
+msgid "How to Create Custom Retargeting Campaigns (No Code)?"
+msgstr ""
+
+#: src/pages/aboutUs/GettingStarted.tsx:68
+msgid "You can create simple, powerful campaigns that grow your traffic and engagement. It’s not even difficult to create retargeting campaigns. Get started now!"
+msgstr ""
+
+#: src/pages/aboutUs/GettingStarted.tsx:73
+msgid "Read Documentation"
+msgstr ""
+
+#: src/pages/aboutUs/GettingStarted.tsx:80
+msgid "Segmentation: Allows you to create targeted campaigns for specific audience groups based on criteria such as location, device type, and website activity"
+msgstr ""
+
+#: src/pages/aboutUs/GettingStarted.tsx:84
+msgid "A/B Testing: Allows you to test different versions of your campaigns to see which performs best"
+msgstr ""
+
+#: src/pages/aboutUs/GettingStarted.tsx:88
+msgid "Automation: Allows you to set up automated campaigns based on triggers such as user actions or time intervals"
+msgstr ""
+
+#: src/pages/aboutUs/GettingStarted.tsx:92
+msgid "Advanced Targeting: Allows you to target users based on factors such as their browser, language, and time zone"
+msgstr ""
+
+#: src/pages/aboutUs/GettingStarted.tsx:96
+msgid "Custom Templates: Allows you to create custom templates for your notifications with your own branding and design"
+msgstr ""
+
+#: src/pages/analytics/GoalTracking.tsx:139
+msgid "Goal tracking setting saved."
+msgstr ""
+
+#: src/pages/analytics/GoalTracking.tsx:157
+msgid "You don't have permission to update goal analytics. Please contact to your admin."
+msgstr ""
+
+#: src/pages/analytics/GoalTracking.tsx:181
+msgid "Assign conversion goals & value to your notification campaigns. You can set up a default goal and have it integrated for all your campaigns."
+msgstr ""
+
+#: src/pages/analytics/GoalTracking.tsx:198
+msgid "Goal Tracking will help you assign conversion goals & value to your notification campaigns. The given code snippet needs integration on goal conversion events. You can set up a default goal and have it integrated for all your campaigns."
+msgstr ""
+
+#: src/pages/analytics/GoalTracking.tsx:223
+msgid "Enable goal tracking for all your notification campaigns."
+msgstr ""
+
+#: src/pages/analytics/GoalTracking.tsx:238
+msgid "Tracking Method"
+msgstr ""
+
+#: src/pages/analytics/GoalTracking.tsx:249
+msgid "Tracking Duration"
+msgstr ""
+
+#: src/pages/analytics/GoalTracking.tsx:263
+msgid "Currency"
+msgstr ""
+
+#: src/pages/analytics/GoalTracking.tsx:305
+msgid "Learn how to add this code in WordPress"
+msgstr ""
+
+#: src/pages/analytics/GoalTracking.tsx:314
+msgid "See Detailed Instructions"
+msgstr ""
+
+#: src/pages/analytics/OptinAnalytics.tsx:181
+#: src/pages/analytics/Overview.tsx:123
+#: src/pages/audience/Subscribers.tsx:131
+#: src/pages/dashboard/Dashboard.tsx:116
+msgid "You can only view analytics of maximum 12 months at a time."
+msgstr ""
+
+#: src/pages/analytics/OptinAnalytics.tsx:192
+msgid "You do not permission to update the setting"
+msgstr ""
+
+#: src/pages/analytics/OptinAnalytics.tsx:233
+msgid "Failed to download report. Try again."
+msgstr ""
+
+#: src/pages/analytics/OptinAnalytics.tsx:259
+msgid "Optin Analytics"
+msgstr ""
+
+#: src/pages/analytics/OptinAnalytics.tsx:288
+#: app/Utils/AdminNavMenuItems.php:72
+msgid "Settings"
+msgstr ""
+
+#: src/pages/analytics/OptinAnalytics.tsx:365
+msgid "There is only one type of optin running."
+msgstr ""
+
+#: src/pages/analytics/OptinAnalytics.tsx:368
+msgid "Enable more types"
+msgstr ""
+
+#: src/pages/analytics/OptinAnalytics.tsx:371
+msgid "to maximize your conversion rates."
+msgstr ""
+
+#: src/pages/analytics/OptinAnalytics.tsx:392
+#: src/pages/analytics/Overview.tsx:344
+msgid "Please try changing date range filter. Need help? "
+msgstr ""
+
+#: src/pages/analytics/OptinAnalytics.tsx:406
+#: src/pages/analytics/Overview.tsx:353
+msgid "Create a support ticket."
+msgstr ""
+
+#: src/pages/analytics/Overview.tsx:150
+msgid "Date"
+msgstr ""
+
+#: src/pages/analytics/Overview.tsx:209
+msgid "Unsubscribes"
+msgstr ""
+
+#: src/pages/analytics/Overview.tsx:218
+msgid "total"
+msgstr ""
+
+#: src/pages/analytics/Overview.tsx:269
+msgid "Analytics Overview"
+msgstr ""
+
+#: src/pages/analytics/Overview.tsx:272
+msgid "A complete overview of your web push notification database and campaign performance."
+msgstr ""
+
+#: src/pages/analytics/Overview.tsx:341
+msgid "No records found!"
+msgstr ""
+
+#: src/pages/audience/AudienceGroups.tsx:138
+msgid "Audience group removed successfully"
+msgstr ""
+
+#: src/pages/audience/AudienceGroups.tsx:174
+#: src/pages/audience/Segments.tsx:290
+msgid "You don't have permission to create/modify segment. Please contact to your admin."
+msgstr ""
+
+#: src/pages/audience/AudienceGroups.tsx:190
+msgid "Looks like you haven’t created any Audience Groups yet."
+msgstr ""
+
+#: src/pages/audience/AudienceGroups.tsx:191
+msgid "You can use Audience Groups to combine multiple segments and behavioral patterns to retarget specific parts of your subscriber list."
+msgstr ""
+
+#: src/pages/audience/AudienceGroups.tsx:200
+#: src/pages/audience/Subscribers.tsx:159
+#: src/pages/pushBroadcast/List.tsx:404
+msgid "Need some help? Check out this tutorial on"
+msgstr ""
+
+#: src/pages/audience/AudienceGroups.tsx:209
+msgid "how to create Audience Groups"
+msgstr ""
+
+#: src/pages/audience/AudienceGroups.tsx:263
+msgid "Edit Audience Group"
+msgstr ""
+
+#: src/pages/audience/AudienceGroups.tsx:264
+msgid "Create an Audience Group"
+msgstr ""
+
+#: src/pages/audience/Segments.tsx:182
+msgid "Segment deleted successfully!"
+msgstr ""
+
+#: src/pages/audience/Segments.tsx:209
+msgid "Looks like you haven’t created any segments yet."
+msgstr ""
+
+#: src/pages/audience/Segments.tsx:210
+msgid "You can use segmentation to send targeted push campaigns that get more views and clicks. Use your WordPress blog categories to create segments."
+msgstr ""
+
+#: src/pages/audience/Segments.tsx:219
+msgid "Need some help? Check out this tutorial on how to"
+msgstr ""
+
+#: src/pages/audience/Segments.tsx:228
+msgid "create segments"
+msgstr ""
+
+#: src/pages/audience/Segments.tsx:281
+msgid "You have reached the maximum number of segment allowed for your account. Please upgrade your plan to add more segment."
+msgstr ""
+
+#: src/pages/audience/Segments.tsx:317
+msgid "Edit Segment"
+msgstr ""
+
+#: src/pages/audience/Segments.tsx:318
+msgid "Create a New Segment"
+msgstr ""
+
+#: src/pages/audience/Segments.tsx:350
+msgid "Tag Category"
+msgstr ""
+
+#: src/pages/audience/Subscribers.tsx:148
+msgid "Looks like you haven’t started collecting subscribers yet."
+msgstr ""
+
+#: src/pages/audience/Subscribers.tsx:152
+msgid "You need a subscriber list to start sending push campaigns."
+msgstr ""
+
+#: src/pages/audience/Subscribers.tsx:165
+msgid "how to start collecting web push subscribers"
+msgstr ""
+
+#: src/pages/audience/Subscribers.tsx:180
+msgid "Understanding different categories based on action on the website and other default segmentation."
+msgstr ""
+
+#: src/pages/audience/Subscribers.tsx:199
+msgid "Clean up the List"
+msgstr ""
+
+#: src/pages/audience/Subscribers.tsx:246
+msgid "Clean up Subscribers List"
+msgstr ""
+
+#: src/pages/dashboard/CampaignDropdownMenuBtn.tsx:25
+#: src/pages/pushBroadcast/List.tsx:359
+#: app/Utils/AdminNavMenuItems.php:29
+msgid "Push Broadcasts"
+msgstr ""
+
+#: src/pages/dashboard/CampaignDropdownMenuBtn.tsx:31
+msgid "Drip Automations"
+msgstr ""
+
+#: src/pages/dashboard/CampaignDropdownMenuBtn.tsx:37
+#: src/pages/triggeredCampaign/Edit.tsx:263
+#: src/pages/triggeredCampaign/List.tsx:261
+#: app/Utils/AdminNavMenuItems.php:45
+msgid "Triggered Campaigns"
+msgstr ""
+
+#: src/pages/dashboard/Dashboard.tsx:215
+msgid "Read PushEngage Guide"
+msgstr ""
+
+#: src/pages/dashboard/Dashboard.tsx:227
+msgid "Access our premium support today"
+msgstr ""
+
+#: src/pages/dashboard/Dashboard.tsx:235
+msgid "View the changelog"
+msgstr ""
+
+#: src/pages/dashboard/Dashboard.tsx:248
+msgid "Getting started? Read the beginners guide"
+msgstr ""
+
+#: src/pages/dashboard/RecentNotifications.tsx:197
+msgid "You haven‘t created any broadcasts yet."
+msgstr ""
+
+#: src/pages/dashboard/RecentNotifications.tsx:213
+msgid "Create a Notification"
+msgstr ""
+
+#: src/pages/dashboard/Strategies.tsx:62
+msgid "Goal Tracking will help you assign conversion goals & value to your notification campaigns."
+msgstr ""
+
+#: src/pages/dashboard/Strategies.tsx:69
+msgid "Enable this Tracking"
+msgstr ""
+
+#: src/pages/dashboard/Strategies.tsx:76
+msgid "Category Segmentation"
+msgstr ""
+
+#: src/pages/dashboard/Strategies.tsx:77
+msgid "Automatically map your categories to segment using category segmentation to send out more targeted push campaigns."
+msgstr ""
+
+#: src/pages/dashboard/Strategies.tsx:84
+msgid "Add this Segment"
+msgstr ""
+
+#: src/pages/dashboard/Strategies.tsx:91
+msgid "Opt-in Analytics"
+msgstr ""
+
+#: src/pages/dashboard/Strategies.tsx:92
+msgid "Analyze your subscription rate and understand which style of Subscription Opt-in works best."
+msgstr ""
+
+#: src/pages/dashboard/Strategies.tsx:99
+msgid "Enable this Analytics"
+msgstr ""
+
+#: src/pages/dashboard/WelcomePanel.tsx:38
+msgid "Welcome to PushEngage"
+msgstr ""
+
+#: src/pages/dashboard/WelcomePanel.tsx:41
+msgid "You can grow sales, increase repeat visitors & engage with your subscribers even when they are not on your website."
+msgstr ""
+
+#: src/pages/dashboard/WelcomePanel.tsx:56
+msgid "Launch the Setup Wizard"
+msgstr ""
+
+#: src/pages/dashboard/WelcomePanel.tsx:68
+msgid "Read the Getting Started Guide"
+msgstr ""
+
+#: src/pages/design/PopUpModals.tsx:180
+msgid "Push Single Step opt-in can not be enabled for HTTP site"
+msgstr ""
+
+#: src/pages/design/PopUpModals.tsx:189
+msgid "Push Single Step opt-in can not be enabled. Because, service worker file is not accessible."
+msgstr ""
+
+#: src/pages/design/PopUpModals.tsx:282
+msgid "Subscription dialogbox setting updated"
+msgstr ""
+
+#: src/pages/design/PopUpModals.tsx:288
+msgid "Subscription dialogbox setting update failed"
+msgstr ""
+
+#: src/pages/design/PopUpModals.tsx:300
+msgid "You don't have permission to create/modify subscription dialogbox. Please contact to your admin."
+msgstr ""
+
+#: src/pages/design/PopUpModals.tsx:317
+msgid "Popup modals will prompt your website visitors to subscribe to your push campaigns. Set up multiple popups to target different audience groups. Select a template to get started or check out our tutorial on"
+msgstr ""
+
+#: src/pages/design/PopUpModals.tsx:327
+msgid "creating popup modals"
+msgstr ""
+
+#: src/pages/design/TargetingRule.tsx:213
+msgid "Please enter at least one targeting rule"
+msgstr ""
+
+#: src/pages/design/TargetingRule.tsx:229
+msgid "Targeting rule setting updated"
+msgstr ""
+
+#: src/pages/design/TargetingRule.tsx:244
+msgid "You don't have permission to create/modify subscription rules. Please contact to your admin."
+msgstr ""
+
+#: src/pages/design/TargetingRule.tsx:257
+msgid "Enable Opt-in Subscription Rules"
+msgstr ""
+
+#: src/pages/design/TargetingRule.tsx:261
+msgid "By default, the subscription opt-in will be shown across all pages. Setup the global targeting rule for your opt-ins here. The global targeting rules will have a higher preference over the individual opt-in subscription rule."
+msgstr ""
+
+#: src/pages/design/TargetingRule.tsx:269
+msgid "Enable Rules"
+msgstr ""
+
+#: src/pages/design/TargetingRule.tsx:271
+msgid "Enable the global targeting rule for your opt-in."
+msgstr ""
+
+#: src/pages/design/TargetingRule.tsx:369
+msgid "Add Country Rule"
+msgstr ""
+
+#: src/pages/design/TargetingRule.tsx:390
+msgid "Any"
+msgstr ""
+
+#: src/pages/design/TargetingRule.tsx:391
+msgid "None"
+msgstr ""
+
+#: src/pages/design/TargetingRule.tsx:424
+msgid "Site URL start with"
+msgstr ""
+
+#: src/pages/design/TargetingRule.tsx:427
+msgid "Site URL contains"
+msgstr ""
+
+#: src/pages/design/TargetingRule.tsx:430
+msgid "Site URL exact match"
+msgstr ""
+
+#: src/pages/design/TargetingRule.tsx:469
+msgid "Add Site URL Rules"
+msgstr ""
+
+#: src/pages/design/TargetingRule.tsx:482
+#: src/pages/settings/advancedSettings/index.tsx:594
+#: src/pages/settings/autoPush/index.tsx:312
+#: src/pages/settings/defaultSettings/index.tsx:610
+#: src/pages/settings/integrations/woocommerce/index.tsx:373
+#: src/pages/settings/misc/index.tsx:142
+#: src/pages/settings/siteDetails/index.tsx:590
+msgid "Save Changes"
+msgstr ""
+
+#: src/pages/design/Widgets.tsx:101
+msgid "A bell widget that can be repositioned and customized to provide a second chance to subscribe for push notification permission."
+msgstr ""
+
+#: src/pages/design/Widgets.tsx:111
+msgid "Button Widget"
+msgstr ""
+
+#: src/pages/design/Widgets.tsx:114
+msgid "A sticky button that can be repositioned and customized to provide an easy unsubscription option."
+msgstr ""
+
+#: src/pages/design/Widgets.tsx:121
+msgid "Bell Widget"
+msgstr ""
+
+#: src/pages/design/Widgets.tsx:124
+msgid "A bell widget that can be repositioned and customized to provide an easy unsubscription option."
+msgstr ""
+
+#: src/pages/design/Widgets.tsx:187
+msgid "Recovery widget setting updated"
+msgstr ""
+
+#: src/pages/design/Widgets.tsx:193
+msgid "Recovery widget setting update failed"
+msgstr ""
+
+#: src/pages/design/Widgets.tsx:237
+msgid "Unsubscribe widget setting updated"
+msgstr ""
+
+#: src/pages/design/Widgets.tsx:243
+msgid "Unsubscribe widget setting update failed"
+msgstr ""
+
+#: src/pages/design/Widgets.tsx:276
+msgid "Subscription management widget setting updated"
+msgstr ""
+
+#: src/pages/design/Widgets.tsx:282
+msgid "Subscription management setting update failed"
+msgstr ""
+
+#: src/pages/design/Widgets.tsx:294
+msgid "You don't have permission to create/modify widgets. Please contact to your admin."
+msgstr ""
+
+#: src/pages/design/Widgets.tsx:306
+msgid "Subscription Management Widgets"
+msgstr ""
+
+#: src/pages/design/Widgets.tsx:352
+msgid "Subscriber Recovery Widgets"
+msgstr ""
+
+#: src/pages/design/Widgets.tsx:357
+msgid "Give your visitors another chance to subscribe to your push notifications even if they block your popup modal. Learn more about"
+msgstr ""
+
+#: src/pages/design/Widgets.tsx:367
+msgid "recovery widgets"
+msgstr ""
+
+#: src/pages/design/Widgets.tsx:432
+msgid "Unsubscription Widgets"
+msgstr ""
+
+#: src/pages/design/Widgets.tsx:437
+msgid "Give your subscribers an easy way to"
+msgstr ""
+
+#: src/pages/design/Widgets.tsx:444
+msgid "unsubscribe from your push notifications"
+msgstr ""
+
+#: src/pages/design/Widgets.tsx:447
+msgid "Sending notifications only to subscribers who are genuinely interested will improve your clicks and conversions"
+msgstr ""
+
+#: src/pages/design/Widgets.tsx:78
+msgid "This widget provides an easy option for your users to manage push permissions. They can also opt in and opt out of the segments. It might take up to 2 minutes to reflect the changes on your site."
+msgstr ""
+
+#: src/pages/design/Widgets.tsx:91
+msgid "A sticky button that can be repositioned and customized to provide a second chance to subscribe for push notification permission."
+msgstr ""
+
+#: src/pages/design/constant.ts:16
+msgid "Safari Style Box"
+msgstr ""
+
+#: src/pages/design/constant.ts:19
+msgid "This sleek safari style Popup helps you customize the look, text and color. It is a two step popup modal."
+msgstr ""
+
+#: src/pages/design/constant.ts:26
+msgid "Bell Placed Bar"
+msgstr ""
+
+#: src/pages/design/constant.ts:29
+msgid "An optimized bell that helps you collect subscribers with minimal interruption in the user experience."
+msgstr ""
+
+#: src/pages/design/constant.ts:36
+msgid "Floating Bar"
+msgstr ""
+
+#: src/pages/design/constant.ts:39
+msgid "This sticky floating bar Popup helps you customize the look, text and color. It is a two step popup modal."
+msgstr ""
+
+#: src/pages/design/constant.ts:46
+msgid "Push Single Step Opt-in"
+msgstr ""
+
+#: src/pages/design/constant.ts:49
+msgid "A single step browser native style for your visitors to opt-in to campaigns."
+msgstr ""
+
+#: src/pages/design/constant.ts:56
+msgid "Large Safari Style Box"
+msgstr ""
+
+#: src/pages/design/constant.ts:59
+msgid "This is a large rectangular style Popup that helps you customize the look, text and color. It is a two step popup modal."
+msgstr ""
+
+#: src/pages/design/constant.ts:6
+msgid "Sleek Opt-in Box"
+msgstr ""
+
+#: src/pages/design/constant.ts:66
+msgid "Large Safari Style with Segment"
+msgstr ""
+
+#: src/pages/design/constant.ts:69
+msgid "This is a large rectangular style Popup that helps you customize the look, text and color. It is a two step popup modal. Along with two segments that can be selected from here."
+msgstr ""
+
+#: src/pages/design/constant.ts:9
+msgid "With a single button click option, you can now make opt-ins a breeze for your users. Customize its look, text, and colors to align perfectly with your brand. Engage your audience and boost conversions with this modern and user-friendly two step popup for higher conversions."
+msgstr ""
+
+#: src/pages/drip/CreateOrEdit.tsx:115
+msgid "Can't create drip in free & business plan"
+msgstr ""
+
+#: src/pages/drip/CreateOrEdit.tsx:138
+msgid "Can't edit drip in free & business plan"
+msgstr ""
+
+#: src/pages/drip/CreateOrEdit.tsx:145
+msgid "Sorry, we could not find the drip."
+msgstr ""
+
+#: src/pages/drip/CreateOrEdit.tsx:162
+#: src/pages/drip/List.tsx:125
+#: src/pages/triggeredCampaign/Edit.tsx:163
+#: src/pages/triggeredCampaign/List.tsx:69
+msgid "Site not connected!"
+msgstr ""
+
+#: src/pages/drip/CreateOrEdit.tsx:163
+msgid "Please connect your site first to create a drip autoresponders"
+msgstr ""
+
+#: src/pages/drip/CreateOrEdit.tsx:234
+#: src/pages/settings/integrations/woocommerce/EditTrigger.tsx:55
+#: src/pages/triggeredCampaign/Edit.tsx:199
+msgid "Notification %d has following errors."
+msgstr ""
+
+#: src/pages/drip/CreateOrEdit.tsx:290
+msgid "Drip autoresponder updated"
+msgstr ""
+
+#: src/pages/drip/CreateOrEdit.tsx:291
+msgid "Drip autoresponder created"
+msgstr ""
+
+#: src/pages/drip/CreateOrEdit.tsx:304
+#: src/pages/drip/List.tsx:286
+msgid "Drip Autoresponders"
+msgstr ""
+
+#: src/pages/drip/CreateOrEdit.tsx:368
+msgid "Edit series name"
+msgstr ""
+
+#: src/pages/drip/List.tsx:126
+msgid "Please connect your site first to create a drip autoresponder"
+msgstr ""
+
+#: src/pages/drip/List.tsx:201
+msgid "Drip autoresponder status updated"
+msgstr ""
+
+#: src/pages/drip/List.tsx:242
+msgid "Drip autoresponder deleted"
+msgstr ""
+
+#: src/pages/drip/List.tsx:287
+#: src/pages/pushBroadcast/List.tsx:360
+#: src/pages/triggeredCampaign/List.tsx:262
+msgid "Add New"
+msgstr ""
+
+#: src/pages/drip/List.tsx:301
+msgid "You don't have permission to create/modify drip autoresponder. Please contact to your admin."
+msgstr ""
+
+#: src/pages/drip/helper.ts:470
+msgid "Notification delay should be greater than to 0"
+msgstr ""
+
+#: src/pages/drip/helper.ts:482
+msgid "Notification delay should be less than 1826 days"
+msgstr ""
+
+#: src/pages/drip/helper.ts:58
+#: src/pages/triggeredCampaign/helper.ts:77
+msgid "Paused"
+msgstr ""
+
+#: src/pages/pushBroadcast/CreateOrEdit.tsx:1019
+msgid "Create New Push Broadcast"
+msgstr ""
+
+#: src/pages/pushBroadcast/CreateOrEdit.tsx:1066
+msgid "You don't have write permission to perform this action. Please contact to your admin."
+msgstr ""
+
+#: src/pages/pushBroadcast/CreateOrEdit.tsx:1079
+msgid "Edit Push Broadcast"
+msgstr ""
+
+#: src/pages/pushBroadcast/CreateOrEdit.tsx:1080
+msgid "New Push Broadcast"
+msgstr ""
+
+#: src/pages/pushBroadcast/CreateOrEdit.tsx:1097
+msgid "Remove A/B Testing"
+msgstr ""
+
+#: src/pages/pushBroadcast/CreateOrEdit.tsx:1104
+msgid "Add A/B Testing"
+msgstr ""
+
+#: src/pages/pushBroadcast/CreateOrEdit.tsx:1306
+msgid "Send to a sample"
+msgstr ""
+
+#: src/pages/pushBroadcast/CreateOrEdit.tsx:1312
+msgid "Recipient Count"
+msgstr ""
+
+#: src/pages/pushBroadcast/CreateOrEdit.tsx:1364
+msgid "Send Notification Now"
+msgstr ""
+
+#: src/pages/pushBroadcast/CreateOrEdit.tsx:1365
+msgid "Schedule Notification"
+msgstr ""
+
+#: src/pages/pushBroadcast/CreateOrEdit.tsx:1376
+msgid "Save as Draft"
+msgstr ""
+
+#: src/pages/pushBroadcast/CreateOrEdit.tsx:1393
+msgid "Save & Select Audience"
+msgstr ""
+
+#: src/pages/pushBroadcast/CreateOrEdit.tsx:348
+msgid "Selected Audience group used in this campaign no longer exists. Please verify the selected audience before sending the campaign."
+msgstr ""
+
+#: src/pages/pushBroadcast/CreateOrEdit.tsx:380
+msgid "Custom audience filter in this campaign has been updated because used segments no longer exists. Please verify the selected audience before sending the campaign."
+msgstr ""
+
+#: src/pages/pushBroadcast/CreateOrEdit.tsx:445
+#: src/pages/pushBroadcast/formatter.ts:130
+msgid "Please select audience group"
+msgstr ""
+
+#: src/pages/pushBroadcast/CreateOrEdit.tsx:454
+msgid "Selected audience group no longer exists. Please select another audience group"
+msgstr ""
+
+#: src/pages/pushBroadcast/CreateOrEdit.tsx:486
+msgid "An error has occurred!"
+msgstr ""
+
+#: src/pages/pushBroadcast/CreateOrEdit.tsx:588
+msgid "Please fix the following issues:"
+msgstr ""
+
+#: src/pages/pushBroadcast/CreateOrEdit.tsx:610
+msgid "Notification A has following errors."
+msgstr ""
+
+#: src/pages/pushBroadcast/CreateOrEdit.tsx:616
+msgid "Notification B has following errors."
+msgstr ""
+
+#: src/pages/pushBroadcast/CreateOrEdit.tsx:697
+msgid "Please fix the error in custom audience selection."
+msgstr ""
+
+#: src/pages/pushBroadcast/CreateOrEdit.tsx:705
+msgid "Please select an audience group"
+msgstr ""
+
+#: src/pages/pushBroadcast/CreateOrEdit.tsx:737
+msgid "Cannot create Intelligent AB Test notification for a sample size less than"
+msgstr ""
+
+#: src/pages/pushBroadcast/CreateOrEdit.tsx:740
+msgid "subscribers"
+msgstr ""
+
+#: src/pages/pushBroadcast/CreateOrEdit.tsx:743
+msgid "only"
+msgstr ""
+
+#: src/pages/pushBroadcast/CreateOrEdit.tsx:743
+msgid "subscribers matched"
+msgstr ""
+
+#: src/pages/pushBroadcast/CreateOrEdit.tsx:953
+msgid "saved"
+msgstr ""
+
+#: src/pages/pushBroadcast/CreateOrEdit.tsx:955
+msgid "sent"
+msgstr ""
+
+#: src/pages/pushBroadcast/CreateOrEdit.tsx:956
+msgid "scheduled"
+msgstr ""
+
+#: src/pages/pushBroadcast/CreateOrEdit.tsx:963
+msgid "An error occurred!"
+msgstr ""
+
+#: src/pages/pushBroadcast/List.tsx:251
+msgid "Notification removed successfully!"
+msgstr ""
+
+#: src/pages/pushBroadcast/List.tsx:311
+msgid "Yes"
+msgstr ""
+
+#: src/pages/pushBroadcast/List.tsx:329
+msgid "Notification resent successfully!"
+msgstr ""
+
+#: src/pages/pushBroadcast/List.tsx:368
+msgid "Choose From Templates"
+msgstr ""
+
+#: src/pages/pushBroadcast/List.tsx:383
+msgid "You don't have permission to create/modify notifications. Please contact to your admin."
+msgstr ""
+
+#: src/pages/pushBroadcast/List.tsx:394
+msgid "Looks like you haven’t created any campaigns yet."
+msgstr ""
+
+#: src/pages/pushBroadcast/List.tsx:395
+msgid "You can create campaigns to get repeat traffic, engagement and sales!"
+msgstr ""
+
+#: src/pages/pushBroadcast/List.tsx:400
+msgid "Create New Campaign"
+msgstr ""
+
+#: src/pages/pushBroadcast/List.tsx:410
+msgid "creating your first campaign"
+msgstr ""
+
+#: src/pages/pushBroadcast/Templates.tsx:16
+msgid "Get started with our expertly crafted push broadcast templates. These predesigned message formats offer popular styles carefully curated by our experts. With custom UTM parameters for each style, you can track the performance and effectiveness of your push broadcasts. Effortlessly engage your audience and gain valuable insights into your communication strategy. It's never been easier to create impactful messages and measure their impact!"
+msgstr ""
+
+#: src/pages/pushBroadcast/formatter.ts:143
+msgid "Please select audience"
+msgstr ""
+
+#: src/pages/pushBroadcast/helpers.ts:451
+msgid "Latest Created"
+msgstr ""
+
+#: src/pages/pushBroadcast/helpers.ts:455
+msgid "Oldest Created"
+msgstr ""
+
+#: src/pages/pushBroadcast/helpers.ts:463
+msgid "Latest Sent"
+msgstr ""
+
+#: src/pages/pushBroadcast/helpers.ts:467
+msgid "Oldest Sent"
+msgstr ""
+
+#: src/pages/pushBroadcast/helpers.ts:471
+msgid "Highest Sent"
+msgstr ""
+
+#: src/pages/pushBroadcast/helpers.ts:475
+msgid "Lowest Sent"
+msgstr ""
+
+#: src/pages/pushBroadcast/helpers.ts:479
+msgid "Highest Viewed"
+msgstr ""
+
+#: src/pages/pushBroadcast/helpers.ts:483
+msgid "Lowest Viewed"
+msgstr ""
+
+#: src/pages/pushBroadcast/helpers.ts:487
+msgid "Most Clicked"
+msgstr ""
+
+#: src/pages/pushBroadcast/helpers.ts:491
+msgid "Least Clicked"
+msgstr ""
+
+#: src/pages/pushBroadcast/helpers.ts:500
+msgid "Schedule Date"
+msgstr ""
+
+#: src/pages/pushBroadcast/helpers.ts:71
+msgid "Scheduled"
+msgstr ""
+
+#: src/pages/settings/Billing/index.tsx:113
+msgid "Subscription Details"
+msgstr ""
+
+#: src/pages/settings/Billing/index.tsx:117
+msgid "Plan Name"
+msgstr ""
+
+#: src/pages/settings/Billing/index.tsx:123
+msgid "Billing Info"
+msgstr ""
+
+#: src/pages/settings/Billing/index.tsx:173
+msgid "Add Payment Method"
+msgstr ""
+
+#: src/pages/settings/Billing/index.tsx:200
+msgid "Active Subscribers"
+msgstr ""
+
+#: src/pages/settings/Billing/index.tsx:239
+msgid "Total Subscribers"
+msgstr ""
+
+#: src/pages/settings/Billing/index.tsx:251
+msgid "Remaining Subscribers"
+msgstr ""
+
+#: src/pages/settings/Billing/index.tsx:308
+msgid "Usage"
+msgstr ""
+
+#: src/pages/settings/Billing/index.tsx:320
+msgid "Limit Usage"
+msgstr ""
+
+#: src/pages/settings/Billing/index.tsx:332
+msgid "Monthly Sending Limit"
+msgstr ""
+
+#: src/pages/settings/advancedSettings/index.tsx:226
+msgid "Advanced settings updated successfully"
+msgstr ""
+
+#: src/pages/settings/advancedSettings/index.tsx:248
+msgid ".p12 file uploaded successfully"
+msgstr ""
+
+#: src/pages/settings/advancedSettings/index.tsx:274
+msgid "You don't have permission to create/modify advanced settings. Please contact to your admin."
+msgstr ""
+
+#: src/pages/settings/advancedSettings/index.tsx:296
+msgid "Service Worker Settings"
+msgstr ""
+
+#: src/pages/settings/advancedSettings/index.tsx:302
+msgid "The service worker is a key file in sending and collecting subscriptions. If you have a service-worker already you can disable our service-worker registration. If you do not have access to the root folder of the website so you can specify the path to sub-folder as well."
+msgstr ""
+
+#: src/pages/settings/advancedSettings/index.tsx:310
+msgid "Service Worker Registration"
+msgstr ""
+
+#: src/pages/settings/advancedSettings/index.tsx:322
+msgid "Enable the service worker registration from PushEngage"
+msgstr ""
+
+#: src/pages/settings/advancedSettings/index.tsx:327
+msgid "Add Service worker in sub-folder"
+msgstr ""
+
+#: src/pages/settings/advancedSettings/index.tsx:335
+msgid "Enable addition of service worker in another sub-folder"
+msgstr ""
+
+#: src/pages/settings/advancedSettings/index.tsx:342
+msgid "Path for service worker file"
+msgstr ""
+
+#: src/pages/settings/advancedSettings/index.tsx:362
+msgid "Custom Sub Domain"
+msgstr ""
+
+#: src/pages/settings/advancedSettings/index.tsx:369
+msgid "This should be a HTTPS URL. If you decide to host your own sub-domain with HTTPS version on your website, or want us to collect subscribers for your website through a custom URL, you can mention it here. This will be where your subscription will happen and this will be visible URL in each of the push notification."
+msgstr ""
+
+#: src/pages/settings/advancedSettings/index.tsx:375
+msgid "This setting is often needed if you have most of your site in HTTP, and a sub-domain in HTTPS for push notifications. When the user clicks on the Accept button in subscription popup, they are redirected to this URL for push subscription."
+msgstr ""
+
+#: src/pages/settings/advancedSettings/index.tsx:381
+msgid "For HTTP sites, we recommend using your own HTTPS custom subdomain, for full portability of subscribers."
+msgstr ""
+
+#: src/pages/settings/advancedSettings/index.tsx:394
+msgid "Read this post for more details."
+msgstr ""
+
+#: src/pages/settings/advancedSettings/index.tsx:403
+msgid "Enable Custom Sub Domain"
+msgstr ""
+
+#: src/pages/settings/advancedSettings/index.tsx:430
+msgid "Custom sub-domain URL"
+msgstr ""
+
+#: src/pages/settings/advancedSettings/index.tsx:448
+msgid "The Webpage should be opened in"
+msgstr ""
+
+#: src/pages/settings/advancedSettings/index.tsx:480
+msgid "You can now get push notifications from web apps on your iPhone or iPad if you have iOS/iPadOS 16.4 or a newer version. Push notifications are supported by Home Screen web apps in iOS. If your website is already a Progressive Web App (PWA), you don’t need to do anything extra to use web push notifications on iOS/iPadOS. Just follow the easy <a>instructions to enable web push notifications on your iPhone or iPad.</a>"
+msgstr ""
+
+#: src/pages/settings/advancedSettings/index.tsx:498
+msgid "Before you can <a>collect web push subscribers on Safari browsers</a> you’ll need to set up a P12 certificate. If you’re on a Premium plan or higher, create a support ticket and our team will set up the P12 certificate for you. You don’t need a P12 certificate if your audience only uses Safari 16 or beyond."
+msgstr ""
+
+#: src/pages/settings/advancedSettings/index.tsx:508
+msgid "Website Push Id"
+msgstr ""
+
+#: src/pages/settings/advancedSettings/index.tsx:523
+msgid "Certificate (.p12)"
+msgstr ""
+
+#: src/pages/settings/advancedSettings/index.tsx:552
+msgid "upload"
+msgstr ""
+
+#: src/pages/settings/advancedSettings/index.tsx:572
+msgid "Private Key Password"
+msgstr ""
+
+#: src/pages/settings/autoPush/index.tsx:144
+msgid "Auto push settings updated successfully"
+msgstr ""
+
+#: src/pages/settings/autoPush/index.tsx:150
+msgid "Failed to update auto push settings."
+msgstr ""
+
+#: src/pages/settings/autoPush/index.tsx:176
+msgid "You don't have permission to create/modify auto push settings. Please contact to your admin."
+msgstr ""
+
+#: src/pages/settings/autoPush/index.tsx:201
+msgid "Auto Push helps you send push notifications when you publish or edit a post."
+msgstr ""
+
+#: src/pages/settings/autoPush/index.tsx:210
+msgid "You have active RSS auto push campaign for this site. Please ensure that you really want to send your posts in Push Notification."
+msgstr ""
+
+#: src/pages/settings/autoPush/index.tsx:220
+msgid "Auto Push"
+msgstr ""
+
+#: src/pages/settings/autoPush/index.tsx:244
+msgid "Use featured image from post as notification large image"
+msgstr ""
+
+#: src/pages/settings/autoPush/index.tsx:261
+msgid "Enable Multi-action buttons"
+msgstr ""
+
+#: src/pages/settings/autoPush/index.tsx:266
+msgid "Post Types"
+msgstr ""
+
+#: src/pages/settings/autoPush/index.tsx:273
+msgid "Select Post Types"
+msgstr ""
+
+#: src/pages/settings/autoPush/index.tsx:280
+msgid "Choose post types for automatic push notifications. Whenever a post is published with one of the selected post types, a push notification will be sent to the specified users."
+msgstr ""
+
+#: src/pages/settings/autoPush/index.tsx:289
+msgid "Notification Icon Image "
+msgstr ""
+
+#: src/pages/settings/autoPush/index.tsx:293
+msgid "Use featured image from post"
+msgstr ""
+
+#: src/pages/settings/autoPush/index.tsx:297
+msgid "Use site icon"
+msgstr ""
+
+#: src/pages/settings/defaultSettings/index.tsx:234
+msgid "Default settings updated successfully"
+msgstr ""
+
+#: src/pages/settings/defaultSettings/index.tsx:249
+msgid "You don't have permission to create/modify default settings. Please contact to your admin."
+msgstr ""
+
+#: src/pages/settings/defaultSettings/index.tsx:276
+msgid "It is a reliable way to track the traffic that comes to your website through web push campaigns. By adding default parameters you can avoid campaigns going out without any UTM parameters."
+msgstr ""
+
+#: src/pages/settings/defaultSettings/index.tsx:331
+msgid "UTM Term (optional)"
+msgstr ""
+
+#: src/pages/settings/defaultSettings/index.tsx:348
+msgid "UTM Content (optional)"
+msgstr ""
+
+#: src/pages/settings/defaultSettings/index.tsx:364
+msgid "Fallback Notification"
+msgstr ""
+
+#: src/pages/settings/defaultSettings/index.tsx:370
+msgid "This notification will be used as a fallback in case the browser is not able to fetch the sent notification in rare scenarios."
+msgstr ""
+
+#: src/pages/settings/defaultSettings/index.tsx:473
+msgid "Fallback Attributes"
+msgstr ""
+
+#: src/pages/settings/defaultSettings/index.tsx:479
+msgid "These attributes will be used as a fallback in the rare cases where the browser is unable to fetch the subscriber's country & city."
+msgstr ""
+
+#: src/pages/settings/defaultSettings/index.tsx:488
+msgid "Custom City"
+msgstr ""
+
+#: src/pages/settings/defaultSettings/index.tsx:504
+msgid "Custom Country"
+msgstr ""
+
+#: src/pages/settings/defaultSettings/index.tsx:521
+msgid "Default Expiry for notifications"
+msgstr ""
+
+#: src/pages/settings/integrations/index.tsx:26
+msgid "WooCommerce"
+msgstr ""
+
+#: src/pages/settings/integrations/index.tsx:27
+msgid "Integrate WooCommerce with PushEngage."
+msgstr ""
+
+#: src/pages/settings/integrations/index.tsx:42
+msgid "Integrations"
+msgstr ""
+
+#: src/pages/settings/integrations/index.tsx:44
+msgid "Manage PushEngage integrations with third-party apps and services."
+msgstr ""
+
+#: src/pages/settings/integrations/index.tsx:72
+msgid "No integration items available"
+msgstr ""
+
+#: src/pages/settings/integrations/woocommerce/index.tsx:186
+msgid "WooCommerce integration settings updated successfully"
+msgstr ""
+
+#: src/pages/settings/integrations/woocommerce/index.tsx:192
+msgid "Failed to update WooCommerce integration settings."
+msgstr ""
+
+#: src/pages/settings/integrations/woocommerce/index.tsx:243
+#: src/pages/triggeredCampaign/Selection.tsx:183
+msgid "Cart Abandonment"
+msgstr ""
+
+#: src/pages/settings/integrations/woocommerce/index.tsx:244
+msgid "Manage cart abandonment trigger settings for WooCommerce"
+msgstr ""
+
+#: src/pages/settings/integrations/woocommerce/index.tsx:246
+msgid "Enable Cart Abandonment"
+msgstr ""
+
+#: src/pages/settings/integrations/woocommerce/index.tsx:286
+msgid "Cart Abandonment Trigger Name"
+msgstr ""
+
+#: src/pages/settings/integrations/woocommerce/index.tsx:293
+msgid "Select Triggered Campaign to attach with WooCommerce cart abandonment."
+msgstr ""
+
+#: src/pages/settings/integrations/woocommerce/index.tsx:307
+#: src/pages/triggeredCampaign/Selection.tsx:152
+msgid "Browse Abandonment"
+msgstr ""
+
+#: src/pages/settings/integrations/woocommerce/index.tsx:308
+msgid "Manage browse abandonment trigger settings for WooCommerce"
+msgstr ""
+
+#: src/pages/settings/integrations/woocommerce/index.tsx:310
+msgid "Enable Browse Abandonment"
+msgstr ""
+
+#: src/pages/settings/integrations/woocommerce/index.tsx:345
+msgid "Select Trigger"
+msgstr ""
+
+#: src/pages/settings/integrations/woocommerce/index.tsx:351
+msgid "Browse Abandonment Trigger Name"
+msgstr ""
+
+#: src/pages/settings/integrations/woocommerce/index.tsx:358
+msgid "Select Triggered Campaign to attach with WooCommerce browse abandonment."
+msgstr ""
+
+#. 1 - Random ID string.
+#: src/pages/settings/integrations/woocommerce/index.tsx:50
+msgid "WooCommerce Browse Abandonment-%1$s"
+msgstr ""
+
+#. 1 Random ID string.
+#: src/pages/settings/integrations/woocommerce/index.tsx:56
+msgid "WooCommerce Cart Abandonment-%1$s"
+msgstr ""
+
+#: src/pages/settings/misc/index.tsx:116
+msgid "Misc Settings"
+msgstr ""
+
+#: src/pages/settings/misc/index.tsx:117
+msgid "Hide Admin Bar Menu"
+msgstr ""
+
+#: src/pages/settings/misc/index.tsx:122
+msgid "Check this option to hide the PushEngage admin bar menu."
+msgstr ""
+
+#: src/pages/settings/misc/index.tsx:125
+msgid "Hide PushEngage Dashboard widget"
+msgstr ""
+
+#: src/pages/settings/misc/index.tsx:130
+msgid "Check this option to hide the PushEngage dashboard widget."
+msgstr ""
+
+#: src/pages/settings/misc/index.tsx:58
+msgid "Failed to fetch misc data"
+msgstr ""
+
+#: src/pages/settings/misc/index.tsx:79
+msgid "Misc settings updated successfully"
+msgstr ""
+
+#: src/pages/settings/misc/index.tsx:83
+msgid "Failed to update misc settings."
+msgstr ""
+
+#: src/pages/settings/misc/index.tsx:98
+msgid "You don't have permission to create/modify misc settings. Please contact to your admin."
+msgstr ""
+
+#: src/pages/settings/siteDetails/index.tsx:232
+msgid "Site details updated successfully"
+msgstr ""
+
+#: src/pages/settings/siteDetails/index.tsx:271
+msgid "Api key generated successfully"
+msgstr ""
+
+#: src/pages/settings/siteDetails/index.tsx:329
+msgid "You don't have permission to create/modify settings. Please contact to your admin."
+msgstr ""
+
+#: src/pages/settings/siteDetails/index.tsx:351
+msgid "Site Details"
+msgstr ""
+
+#: src/pages/settings/siteDetails/index.tsx:355
+msgid "We make it effortless for you to implement web push notifications and send push notifications, right inside the WordPress dashboard."
+msgstr ""
+
+#: src/pages/settings/siteDetails/index.tsx:362
+msgid "License"
+msgstr ""
+
+#: src/pages/settings/siteDetails/index.tsx:379
+msgid "Disconnect"
+msgstr ""
+
+#: src/pages/settings/siteDetails/index.tsx:393
+msgid "or"
+msgstr ""
+
+#: src/pages/settings/siteDetails/index.tsx:408
+msgid "Site Name"
+msgstr ""
+
+#: src/pages/settings/siteDetails/index.tsx:423
+msgid "Site URL"
+msgstr ""
+
+#: src/pages/settings/siteDetails/index.tsx:436
+msgid "Upload Your Site icon"
+msgstr ""
+
+#: src/pages/settings/siteDetails/index.tsx:453
+msgid "Change Image"
+msgstr ""
+
+#: src/pages/settings/siteDetails/index.tsx:468
+msgid "Upload Image"
+msgstr ""
+
+#: src/pages/settings/siteDetails/index.tsx:478
+msgid "API Key"
+msgstr ""
+
+#: src/pages/settings/siteDetails/index.tsx:490
+msgid "Hide"
+msgstr ""
+
+#: src/pages/settings/siteDetails/index.tsx:490
+msgid "Show"
+msgstr ""
+
+#: src/pages/settings/siteDetails/index.tsx:502
+msgid "Regenerate API Key"
+msgstr ""
+
+#: src/pages/settings/siteDetails/index.tsx:506
+msgid "Website Time Zone"
+msgstr ""
+
+#: src/pages/settings/siteDetails/index.tsx:515
+msgid "Geolocation"
+msgstr ""
+
+#: src/pages/settings/siteDetails/index.tsx:521
+msgid "This helps you personalize your website notifications based on user’s location & timezones."
+msgstr ""
+
+#: src/pages/settings/siteDetails/index.tsx:527
+msgid "PushEngage branding"
+msgstr ""
+
+#: src/pages/settings/siteDetails/index.tsx:541
+msgid "Remove \"Powered By PushEngage\""
+msgstr ""
+
+#: src/pages/settings/siteDetails/index.tsx:547
+msgid "Toggle the switch to enable/disable the \"Powered by PushEngage\" label. The changes may take up to 2 minutes to reflect on your site."
+msgstr ""
+
+#: src/pages/settings/siteDetails/index.tsx:573
+msgid "The \"Powered by PushEngage\" label cannot be removed on the free plan. <a>Upgrade to PushEngage Pro</a> to remove it."
+msgstr ""
+
+#: src/pages/settings/validateSettings.ts:10
+msgid "A Valid URL should be of the format \"http[s]://yoursite.com\""
+msgstr ""
+
+#: src/pages/settings/validateSettings.ts:11
+msgid "Site url cannot be empty"
+msgstr ""
+
+#: src/pages/settings/validateSettings.ts:12
+msgid "Site url cannot be more than 400 characters."
+msgstr ""
+
+#: src/pages/settings/validateSettings.ts:15
+msgid "Utm source cannot be empty"
+msgstr ""
+
+#: src/pages/settings/validateSettings.ts:16
+msgid "Utm source limited to 80 characters"
+msgstr ""
+
+#: src/pages/settings/validateSettings.ts:17
+msgid "Utm medium cannot be empty"
+msgstr ""
+
+#: src/pages/settings/validateSettings.ts:18
+msgid "Utm medium limited to 80 characters"
+msgstr ""
+
+#: src/pages/settings/validateSettings.ts:19
+msgid "Utm campaign cannot be empty"
+msgstr ""
+
+#: src/pages/settings/validateSettings.ts:20
+msgid "Utm campaign limited to 80 characters"
+msgstr ""
+
+#: src/pages/settings/validateSettings.ts:21
+msgid "Utm term limited to 80 characters"
+msgstr ""
+
+#: src/pages/settings/validateSettings.ts:22
+msgid "Utm content limited to 120 characters"
+msgstr ""
+
+#: src/pages/settings/validateSettings.ts:33
+msgid "Notification url cannot be blank"
+msgstr ""
+
+#: src/pages/settings/validateSettings.ts:38
+msgid "Notification url cannot be longer than 1600 characters"
+msgstr ""
+
+#: src/pages/settings/validateSettings.ts:39
+msgid "City cannot be longer than 120 characters"
+msgstr ""
+
+#: src/pages/settings/validateSettings.ts:40
+msgid "Country cannot be longer than 120 characters"
+msgstr ""
+
+#: src/pages/settings/validateSettings.ts:44
+msgid "Service worker path cannot be empty"
+msgstr ""
+
+#: src/pages/settings/validateSettings.ts:45
+msgid "Service worker cannot be longer than 500 characters"
+msgstr ""
+
+#: src/pages/settings/validateSettings.ts:46
+msgid "Custom subdomain url cannot be empty"
+msgstr ""
+
+#: src/pages/settings/validateSettings.ts:47
+msgid "Custom url cannot be longer than 300 characters"
+msgstr ""
+
+#: src/pages/settings/validateSettings.ts:48
+msgid "A valid url should be of the format \"http[s]://yoursite.com\""
+msgstr ""
+
+#: src/pages/settings/validateSettings.ts:49
+msgid "Website push id cannot be blank"
+msgstr ""
+
+#: src/pages/settings/validateSettings.ts:50
+msgid "Website push id cannot be longer than 80 characters"
+msgstr ""
+
+#: src/pages/settings/validateSettings.ts:51
+msgid "P12 file cannot be blank"
+msgstr ""
+
+#: src/pages/settings/validateSettings.ts:52
+msgid "P12 file password cannot be blank"
+msgstr ""
+
+#: src/pages/settings/validateSettings.ts:53
+msgid "p12 file password cannot be longer than 80 characters"
+msgstr ""
+
+#: src/pages/settings/validateSettings.ts:6
+msgid "Minimum 3 and maximum 80 characters, must start and end with a letter or number"
+msgstr ""
+
+#: src/pages/triggeredCampaign/Create.tsx:135
+#: src/pages/triggeredCampaign/Selection.tsx:51
+msgid "You don't have permission to create triggered campaign."
+msgstr ""
+
+#: src/pages/triggeredCampaign/Create.tsx:166
+#: src/pages/triggeredCampaign/Edit.tsx:241
+msgid "There is an validation error."
+msgstr ""
+
+#: src/pages/triggeredCampaign/Create.tsx:210
+msgid "Multi action is a pro feature."
+msgstr ""
+
+#: src/pages/triggeredCampaign/Create.tsx:248
+msgid "New triggered campaign created"
+msgstr ""
+
+#: src/pages/triggeredCampaign/Create.tsx:272
+msgid "Campaign name already exist in your campaign list."
+msgstr ""
+
+#: src/pages/triggeredCampaign/Create.tsx:295
+#: src/pages/triggeredCampaign/List.tsx:276
+#: src/pages/triggeredCampaign/Selection.tsx:86
+msgid "You don't have permission to create/modify triggered campaigns. Please contact to your admin."
+msgstr ""
+
+#: src/pages/triggeredCampaign/DynamicCode.tsx:334
+msgid "Note: If you are using outdated installation code, please update the installation code to use the Promise-based interface."
+msgstr ""
+
+#: src/pages/triggeredCampaign/DynamicCode.tsx:425
+msgid "If you are using dynamic variables in notifications, you should pass the value of the dynamic variable for variable replacement to work as expected."
+msgstr ""
+
+#: src/pages/triggeredCampaign/DynamicCode.tsx:519
+msgid "Enter Campaign Name"
+msgstr ""
+
+#: src/pages/triggeredCampaign/Edit.tsx:120
+msgid "Can't create triggered campaign in free & business plan"
+msgstr ""
+
+#: src/pages/triggeredCampaign/Edit.tsx:138
+msgid "Can't edit triggers in free & business plan"
+msgstr ""
+
+#: src/pages/triggeredCampaign/Edit.tsx:147
+msgid "Sorry, we could not find the trigger."
+msgstr ""
+
+#: src/pages/triggeredCampaign/Edit.tsx:164
+#: src/pages/triggeredCampaign/List.tsx:70
+msgid "Please connect your site first to create a triggered campaigns"
+msgstr ""
+
+#: src/pages/triggeredCampaign/Edit.tsx:251
+msgid "Triggered campaign updated."
+msgstr ""
+
+#: src/pages/triggeredCampaign/Selection.tsx:120
+msgid "Custom Trigger Campaign"
+msgstr ""
+
+#: src/pages/triggeredCampaign/Selection.tsx:122
+msgid ""
+"Detect your visitor’s behavior to send automated push notifications to the right\n"
+"                    person at the right time"
+msgstr ""
+
+#: src/pages/triggeredCampaign/Selection.tsx:154
+msgid "Send targeted messages to convert visitors who viewed certain pages, such as product pages or feature pages."
+msgstr ""
+
+#: src/pages/triggeredCampaign/Selection.tsx:185
+msgid "Recover lost sales and quickly boost revenue with automatically triggered abandon cart push notifications."
+msgstr ""
+
+#: src/pages/triggeredCampaign/Selection.tsx:216
+msgid "Re-engage your customers and increase conversion using Price Drop Alert Campaigns using the web push"
+msgstr ""
+
+#: src/pages/triggeredCampaign/Selection.tsx:245
+msgid "Back in Stock Alert"
+msgstr ""
+
+#: src/pages/triggeredCampaign/Selection.tsx:247
+msgid "Re-engage your customers and increase conversion using Inventory Alert Campaigns using the web push"
+msgstr ""
+
+#: src/pages/triggeredCampaign/Selection.tsx:256
+msgid "Create New"
+msgstr ""
+
+#: src/pages/triggeredCampaign/Selection.tsx:64
+msgid "Not implemented yet!"
+msgstr ""
+
+#: src/pages/triggeredCampaign/Selection.tsx:68
+msgid "Pre-made strategy feature has not been implemented. Will be implemented in future release."
+msgstr ""
+
+#: src/pages/triggeredCampaign/Selection.tsx:95
+msgid "New Triggered Campaign"
+msgstr ""
+
+#: src/utils/index.ts:84
+msgid "Copied to Clipboard!"
+msgstr ""
+
+#: node_modules/@wordpress/i18n/build-module/create-i18n.js:428
+msgctxt "text direction"
+msgid "ltr"
+msgstr ""
+
+#. Plugin Name of the plugin
+#. Author of the plugin
+#: app/AdminBarMenu.php:55
+#: app/DashboardWidget.php:53
+#: app/NavMenu.php:80
+#: app/NavMenu.php:87
+msgid "PushEngage"
+msgstr ""
+
+#. Plugin URI of the plugin
+msgid "https://www.pushengage.com/?utm_source=WordPress&utm_campaign=Plugin&utm_medium=pluginHeader&utm_content=plugin-uri-link"
+msgstr ""
+
+#. Description of the plugin
+msgid "This plugin will push notifications for Chrome, Firefox, Opera, Microsoft Edge, Safari, UC Browser and Samsung Internet browsers."
+msgstr ""
+
+#. Author URI of the plugin
+msgid "https://www.pushengage.com/?utm_source=WordPress&utm_campaign=Plugin&utm_medium=pluginHeader&utm_content=author-uri-link"
+msgstr ""
+
+#: app/AdminBarMenu.php:88
+#: app/NavMenu.php:113
+#: app/NavMenu.php:114
+msgid "Upgrade to Pro"
+msgstr ""
+
+#: app/Ajax.php:98
+msgid "Permission denied. Please make sure you have required permission to perform this action."
+msgstr ""
+
+#: app/Ajax.php:156
+msgid "An error was encountered while connecting your account, please try again"
+msgstr ""
+
+#. Translators: 1 - Post Type. - 2 - Post Title
+#: app/Core.php:414
+msgid "A notification already sent within 5 minutes for the %1$s %2$s"
+msgstr ""
+
+#. Translators: 1 - Post Type. - 2 - Post Title
+#: app/Core.php:442
+msgid "There was a problem sending your notification for %1$s %2$s"
+msgstr ""
+
+#. Translators: 1 - Post Type. - 2 - Post Title.
+#: app/Core.php:478
+msgid "There was a an error sending your notification for %1$s %2$s"
+msgstr ""
+
+#: app/Core.php:608
+msgid "PushEngage Push Notification Settings"
+msgstr ""
+
+#: app/EnqueueAssets.php:208
+msgid "Give us a 5-star rating!"
+msgstr ""
+
+#. Translators: 1 - The plugin name ("PushEngage"), - 2 - This placeholder will be replaced with star icons, - 3 - "WordPress.org" - 4 - The plugin name ("PushEngage").
+#: app/EnqueueAssets.php:223
+msgid "Please rate %1$s %2$s on %3$s to help us spread the word. Thank you from the PushEngage team!"
+msgstr ""
+
+#. Translators: 1 - WordPress Version, - 2 - The plugin version
+#: app/EnqueueAssets.php:238
+msgid "WordPress %1$s | PushEngage %2$s"
+msgstr ""
+
+#: app/ReviewNotice.php:197
+msgid "Are you enjoying PushEngage?"
+msgstr ""
+
+#: app/ReviewNotice.php:198
+msgid "Hey, I noticed you have been using PushEngage for some time - that’s awesome! Could you please do me a BIG favor and give it a 5-star rating on WordPress to help us spread the word and boost our motivation?"
+msgstr ""
+
+#: app/Utils/AdminNavMenuItems.php:40
+msgid "Drip"
+msgstr ""
+
+#: app/Utils/AdminNavMenuItems.php:50
+msgid "Design"
+msgstr ""
+
+#: app/Utils/AdminNavMenuItems.php:81
+msgid "About Us"
+msgstr ""
+
+#: app/Utils/NonceChecker.php:18
+msgid "Invalid security token sent."
+msgstr ""
+
+#: app/Utils/RecommendedPlugins.php:165
+msgid "OptinMonster"
+msgstr ""
+
+#: app/Utils/RecommendedPlugins.php:166
+msgid "Instantly get more subscribers, leads, and sales with the #1 conversion optimization toolkit. Create high converting popups, announcement bars, spin a wheel, and more with smart targeting and personalization."
+msgstr ""
+
+#: app/Utils/RecommendedPlugins.php:182
+msgid "MonsterInsights Pro"
+msgstr ""
+
+#: app/Utils/RecommendedPlugins.php:182
+msgid "MonsterInsights"
+msgstr ""
+
+#: app/Utils/RecommendedPlugins.php:183
+msgid "MonsterInsights makes it effortless to properly connect your WordPress site with Google Analytics, so you can start making data-driven decisions to grow your business."
+msgstr ""
+
+#: app/Utils/RecommendedPlugins.php:199
+msgid "WPForms Pro"
+msgstr ""
+
+#: app/Utils/RecommendedPlugins.php:199
+msgid "WPForms"
+msgstr ""
+
+#: app/Utils/RecommendedPlugins.php:200
+msgid "The best drag & drop WordPress form builder. Easily create beautiful contact forms, surveys, payment forms, and more with our 150+ form templates. Trusted by over 5 million websites as the best forms plugin."
+msgstr ""
+
+#: app/Utils/RecommendedPlugins.php:215
+msgid "AIOSEO Pro"
+msgstr ""
+
+#: app/Utils/RecommendedPlugins.php:215
+msgid "AIOSEO"
+msgstr ""
+
+#: app/Utils/RecommendedPlugins.php:216
+msgid "The original WordPress SEO plugin and toolkit that improves your website’s search rankings. Comes with all the SEO features like Local SEO, WooCommerce SEO, sitemaps, SEO optimizer, schema, and more."
+msgstr ""
+
+#: app/Utils/RecommendedPlugins.php:231
+msgid "SeedProd Pro"
+msgstr ""
+
+#: app/Utils/RecommendedPlugins.php:231
+msgid "SeedProd"
+msgstr ""
+
+#: app/Utils/RecommendedPlugins.php:232
+msgid "The fastest drag & drop landing page builder for WordPress. Create custom landing pages without writing code, connect them with your CRM, collect subscribers, and grow your audience. Trusted by 1 million sites."
+msgstr ""
+
+#: app/Utils/RecommendedPlugins.php:247
+msgid "WP Mail SMTP Pro"
+msgstr ""
+
+#: app/Utils/RecommendedPlugins.php:247
+msgid "WP Mail SMTP"
+msgstr ""
+
+#: app/Utils/RecommendedPlugins.php:248
+msgid "Improve your WordPress email deliverability and make sure that your website emails reach user’s inbox with the #1 SMTP plugin for WordPress. Over 2 million websites use it to fix WordPress email issues."
+msgstr ""
+
+#: app/Utils/RecommendedPlugins.php:263
+msgid "RafflePress Pro"
+msgstr ""
+
+#: app/Utils/RecommendedPlugins.php:263
+msgid "RafflePress"
+msgstr ""
+
+#: app/Utils/RecommendedPlugins.php:264
+msgid "Turn your website visitors into brand ambassadors! Easily grow your email list, website traffic, and social media followers with the most powerful giveaways & contests plugin for WordPress."
+msgstr ""
+
+#: app/Utils/RecommendedPlugins.php:275
+msgid "AffiliateWP"
+msgstr ""
+
+#: app/Utils/RecommendedPlugins.php:276
+msgid "The #1 affiliate management plugin for WordPress. Easily create an affiliate program for your eCommerce store or membership site within minutes and start growing your sales with the power of referral marketing."
+msgstr ""
+
+#: app/Utils/RecommendedPlugins.php:292
+msgid "Easy Digital Downloads Pro"
+msgstr ""
+
+#: app/Utils/RecommendedPlugins.php:292
+msgid "Easy Digital Downloads"
+msgstr ""
+
+#: app/Utils/RecommendedPlugins.php:293
+msgid "The best WordPress eCommerce plugin for selling digital downloads. Start selling eBooks, software, music, digital art, and more within minutes. Accept payments, manage subscriptions, advanced access control, and more."
+msgstr ""
+
+#: app/Utils/RecommendedPlugins.php:312
+msgid "WP Code Pro"
+msgstr ""
+
+#: app/Utils/RecommendedPlugins.php:312
+msgid "WP Code"
+msgstr ""
+
+#: app/Utils/RecommendedPlugins.php:313
+msgid "Future proof your WordPress customizations with the most popular code snippet management plugin for WordPress. Trusted by over 1,500,000+ websites for easily adding code to WordPress right from the admin area."
+msgstr ""
+
+#: app/Utils/RecommendedPlugins.php:332
+msgid "WP Simple Pay Pro"
+msgstr ""
+
+#: app/Utils/RecommendedPlugins.php:332
+msgid "WP Simple Pay"
+msgstr ""
+
+#: app/Utils/RecommendedPlugins.php:333
+msgid "The #1 Stripe payments plugin for WordPress. Start accepting one-time and recurring payments on your WordPress site without setting up a shopping cart. No code required."
+msgstr ""
+
+#: app/Utils/RecommendedPlugins.php:352
+msgid "Smash Balloon Instagram Feeds Pro"
+msgstr ""
+
+#: app/Utils/RecommendedPlugins.php:352
+msgid "Smash Balloon Instagram Feeds"
+msgstr ""
+
+#: app/Utils/RecommendedPlugins.php:353
+msgid "Easily display Instagram content on your WordPress site without writing any code. Comes with multiple templates, ability to show content from multiple accounts, hashtags, and more. Trusted by 1 million websites."
+msgstr ""
+
+#: app/Utils/RecommendedPlugins.php:372
+msgid "Smash Balloon Facebook Feeds Pro"
+msgstr ""
+
+#: app/Utils/RecommendedPlugins.php:372
+msgid "Smash Balloon Facebook Feeds"
+msgstr ""
+
+#: app/Utils/RecommendedPlugins.php:373
+msgid "Easily display Facebook content on your WordPress site without writing any code. Comes with multiple templates, ability to embed albums, group content, reviews, live videos, comments, and reactions."
+msgstr ""
+
+#: app/Utils/RecommendedPlugins.php:392
+msgid "Smash Balloon Twitter Feeds Pro"
+msgstr ""
+
+#: app/Utils/RecommendedPlugins.php:392
+msgid "Smash Balloon Twitter Feeds"
+msgstr ""
+
+#: app/Utils/RecommendedPlugins.php:393
+msgid "Easily display Twitter content in WordPress without writing any code. Comes with multiple layouts, ability to combine multiple Twitter feeds, Twitter card support, tweet moderation, and more."
+msgstr ""
+
+#: app/Utils/RecommendedPlugins.php:412
+msgid "Smash Balloon YouTube Feeds Pro"
+msgstr ""
+
+#: app/Utils/RecommendedPlugins.php:412
+msgid "Smash Balloon YouTube Feeds"
+msgstr ""
+
+#: app/Utils/RecommendedPlugins.php:413
+msgid "Easily display YouTube videos on your WordPress site without writing any code. Comes with multiple layouts, ability to embed live streams, video filtering, ability to combine multiple channel videos, and more."
+msgstr ""
+
+#. Translators: 1 - The plugin name ("PushEngage").
+#: views/review-notice.php:6
+msgid "Hey, I noticed you have been using %1$s for some time - that’s awesome! Could you please do me a BIG favor and give it a 5-star rating on WordPress to help us spread the word and boost our motivation?"
+msgstr ""
+
+#: views/review-notice.php:24
+msgid "Dismiss this notice."
+msgstr ""
+
+#. translators: %s: Service Worker URL
+#: views/service-worker-error.php:6
+msgid "We could not access the service worker file at location %s."
+msgstr ""
+
+#: views/service-worker-error.php:19
+msgid "Fix Now"
+msgstr ""
+
+#: views/site-not-connected.php:3
+msgid "You haven’t finished setting up your site."
+msgstr ""
+
+#: views/site-not-connected.php:15
+msgid "Connect your site now!"
+msgstr ""
