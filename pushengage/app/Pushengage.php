@@ -6,6 +6,8 @@ use Pushengage\Core;
 use Pushengage\NavMenu;
 use Pushengage\EnqueueAssets;
 use Pushengage\Integrations\Ajax as IntegrationsAjax;
+use Pushengage\Includes\SubscriberSync;
+use Pushengage\Utils\Options;
 
 // Exit if accessed directly.
 if ( ! defined( 'ABSPATH' ) ) {
@@ -105,6 +107,14 @@ final class Pushengage {
 	public $review_notice;
 
 	/**
+	 * What's new screen
+	 *
+	 * @since 4.0.10
+	 * @var WhatsNew
+	 */
+	public $whats_new;
+
+	/**
 	 * Initializes the Pushengage class
 	 *
 	 * @since 4.0.0
@@ -199,6 +209,12 @@ final class Pushengage {
 		$this->core             = new Core();
 		$this->dashboard_widget = new DashboardWidget();
 		$this->review_notice    = new ReviewNotice();
+		$this->whats_new        = new WhatsNew();
+
+		// Load the frontend components
+		if ( is_user_logged_in() && Options::has_credentials() ) {
+			new SubscriberSync();
+		}
 	}
 
 	/**

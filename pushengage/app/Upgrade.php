@@ -59,7 +59,7 @@ class Upgrade {
 
 			$category_segmentation = self::update_category_segmentation_structure( $pushengage_settings );
 			if ( ! empty( $category_segmentation ) ) {
-				$pushengage_settings['category_segmentation'] = json_encode( $category_segmentation );
+				$pushengage_settings['category_segmentation'] = wp_json_encode( $category_segmentation );
 			}
 
 			$site_info = HttpClient::get_site_info( $api_key );
@@ -81,6 +81,8 @@ class Upgrade {
 		}
 
 		$pushengage_settings['version'] = PUSHENGAGE_VERSION;
+		// Reset the 'dismissed_whats_new_notice' key to false
+		$pushengage_settings['dismissed_whats_new_notice'] = false;
 
 		Options::update_site_settings( $pushengage_settings );
 	}

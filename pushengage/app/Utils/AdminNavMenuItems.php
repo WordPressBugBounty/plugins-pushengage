@@ -42,7 +42,7 @@ class AdminNavMenuItems {
 					),
 					array(
 						'id'    => 'triggered_campaign',
-						'label' => esc_html__( 'Triggers', 'pushengage' ) . '<span style="padding-left: 2px;color: #f18200; vertical-align: super; font-size: 9px;"> NEW!</span>',
+						'label' => esc_html__( 'Triggers', 'pushengage' ),
 						'url'   => 'campaigns/triggers',
 					),
 					array(
@@ -71,6 +71,11 @@ class AdminNavMenuItems {
 					'id'    => 'settings',
 					'label' => esc_html__( 'Settings', 'pushengage' ),
 					'url'   => 'settings/site-details',
+				),
+				array(
+					'id'    => 'integrations',
+					'label' => esc_html__( 'Integrations', 'pushengage' ) . '<span style="padding-left: 2px;color: #f18200; vertical-align: super; font-size: 9px;"> NEW!</span>',
+					'url'   => 'settings/integrations',
 				),
 			)
 		);

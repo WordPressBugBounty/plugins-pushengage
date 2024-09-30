@@ -6,7 +6,7 @@
  * Author: PushEngage
  * Author URI: https://www.pushengage.com/?utm_source=WordPress&utm_campaign=Plugin&utm_medium=pluginHeader&utm_content=author-uri-link
  *
- * Version: 4.0.9
+ * Version: 4.0.10
  * Requires at least: 4.5.0
  * Requires PHP: 5.6
  *
@@ -35,7 +35,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 if ( ! defined( 'PUSHENGAGE_VERSION' ) ) {
-	define( 'PUSHENGAGE_VERSION', '4.0.9' );
+	define( 'PUSHENGAGE_VERSION', '4.0.10' );
 }
 
 if ( ! defined( 'PUSHENGAGE_FILE' ) ) {
@@ -64,6 +64,13 @@ if ( ! defined( 'PUSHENGAGE_API_URL' ) ) {
 	 */
 	define( 'PUSHENGAGE_API_URL', 'https://a.pusheapi.com/d/v1/' );
 }
+// define remote url if not defined
+if ( ! defined( 'PUSHENGAGE_REST_API_URL' ) ) {
+	/**
+	 * PushEngage REST API base URL with trailing slash.
+	 */
+	define( 'PUSHENGAGE_REST_API_URL', 'https://api.pushengage.com/apiv1/' );
+}
 // define client js url if not defined
 if ( ! defined( 'PUSHENGAGE_CLIENT_JS_URL' ) ) {
 	/**
@@ -88,5 +95,20 @@ if ( ! defined( 'PUSHENGAGE_APP_DASHBOARD_URL' ) ) {
 class_exists( 'Pushengage\Pushengage' ) || require_once __DIR__ . '/vendor/autoload.php';
 
 use Pushengage\Pushengage;
+use Pushengage\Includes\Api\PushengageAPI;
 
 Pushengage::instance();
+
+/**
+ * Get the main instance of PushEngage API.
+ * This is used as an interface to let addons and other plugins to access
+ * pushengage api.
+ *
+ * @since 4.0.10
+ * @return PushEngageAPI
+ */
+function pushengage() {
+	return PushengageAPI::instance();
+}
+
+do_action( 'pushengage_loaded' );

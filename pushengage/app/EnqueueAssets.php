@@ -129,6 +129,33 @@ class EnqueueAssets {
 	}
 
 	/**
+	 * Add block editor assets.
+	 *
+	 * @since 4.0.10
+	 * @return void
+	 */
+	public static function enqueue_pre_publish_checklist_scripts() {
+		$script_handle = 'prePostPublish';
+		$assets_path   = 'assets/dist/';
+		$script_data   = include_once plugin_dir_path( PUSHENGAGE_FILE ) . $assets_path . $script_handle . '.asset.php';
+
+		wp_enqueue_script(
+			'pushengage-' . $script_handle,
+			PUSHENGAGE_PLUGIN_URL . $assets_path . $script_handle . '.js',
+			$script_data['dependencies'],
+			$script_data['version'],
+			true
+		);
+
+		wp_enqueue_style(
+			'pushengage-' . $script_handle,
+			PUSHENGAGE_PLUGIN_URL . $assets_path . $script_handle . '.css',
+			array(),
+			$script_data['version']
+		);
+	}
+
+	/**
 	 * Localize pushengage variable to browser & window object
 	 *
 	 * @param [number] $post_id (Optional) ID of the post

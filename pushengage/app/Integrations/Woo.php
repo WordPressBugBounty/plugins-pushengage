@@ -11,6 +11,18 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 class Woo {
+
+	/**
+	 * Initialize WooCommerce integration additional hooks.
+	 *
+	 * @since 4.0.10
+	 * @return void
+	 */
+	public static function init_hooks() {
+		// Admin Ajax Calls
+		add_action( 'wp_ajax_pe_dismiss_woo_notice', array( __CLASS__, 'dismiss_woo_notice' ) );
+		add_action( 'wp_ajax_pe_get_woo_notice', array( __CLASS__, 'get_woo_notice' ) );
+	}
 	/**
 	 * Integrate browse abandonment trigger for WooCommerce.
 	 *
@@ -152,11 +164,11 @@ class Woo {
 	 */
 	public static function enqueue_wc_browse_abandonment_script( $campaign_name = '' ) {
 		if (
-			! class_exists( 'woocommerce' ) ||
-			! function_exists( 'is_product' ) ||
-			! is_product() ||
-			isset( $_REQUEST['add-to-cart'] ) ||
-			empty( $campaign_name )
+		! class_exists( 'woocommerce' ) ||
+		! function_exists( 'is_product' ) ||
+		! is_product() ||
+		isset( $_REQUEST['add-to-cart'] ) ||
+		empty( $campaign_name )
 		) {
 			return;
 		}
@@ -171,9 +183,9 @@ class Woo {
 		$customer_details = Helpers::get_wc_customer_details();
 
 		if (
-			empty( $product_details['product_name'] ) ||
-			empty( $product_details['product_price'] ) ||
-			empty( $product_details['product_url'] )
+		empty( $product_details['product_name'] ) ||
+		empty( $product_details['product_price'] ) ||
+		empty( $product_details['product_url'] )
 		) {
 			return;
 		}
@@ -221,9 +233,9 @@ class Woo {
 	 */
 	public static function enqueue_wc_cart_abandonment_script( $product_id, $browse_campaign_name = '', $cart_campaign_name = '' ) {
 		if ( ! class_exists( 'woocommerce' ) ||
-			! function_exists( 'wc_get_product' ) ||
-			! function_exists( 'wc_get_cart_url' ) ||
-			empty( $product_id )
+		! function_exists( 'wc_get_product' ) ||
+		! function_exists( 'wc_get_cart_url' ) ||
+		empty( $product_id )
 		) {
 			return;
 		}
@@ -237,9 +249,9 @@ class Woo {
 		$customer_details = Helpers::get_wc_customer_details();
 
 		if (
-			empty( $product_details['product_name'] ) ||
-			empty( $product_details['product_price'] ) ||
-			empty( $product_details['product_cart_url'] )
+		empty( $product_details['product_name'] ) ||
+		empty( $product_details['product_price'] ) ||
+		empty( $product_details['product_cart_url'] )
 		) {
 			return;
 		}
@@ -339,10 +351,10 @@ class Woo {
 	 */
 	public static function enqueue_wc_checkout_script( $order_id, $campaign_name = '' ) {
 		if (
-			! class_exists( 'woocommerce' ) ||
-			! function_exists( 'wc_get_order' ) ||
-			empty( $order_id ) ||
-			empty( $campaign_name )
+		! class_exists( 'woocommerce' ) ||
+		! function_exists( 'wc_get_order' ) ||
+		empty( $order_id ) ||
+		empty( $campaign_name )
 		) {
 			return;
 		}
@@ -354,8 +366,8 @@ class Woo {
 		}
 
 		$revenue = ! empty( $order->get_total() ) ?
-			number_format( intval( $order->get_total() ), 2 ) :
-			0;
+		number_format( intval( $order->get_total() ), 2 ) :
+		0;
 
 		wp_enqueue_script(
 			'pushengage-wc-checkout',
@@ -374,5 +386,115 @@ class Woo {
 				'orderId'      => esc_html( $order_id ),
 			)
 		);
+	}
+
+	/**
+	 * Should render WooCommerce notice.
+	 *
+	 * @since 4.0.10
+	 * @return bool
+	 */
+	public static function should_render_woo_notice() {
+		// Show notice only if current user can manage_options.
+		if ( ! current_user_can( 'manage_options' ) ) {
+			return false;
+		}
+
+		$settings     = self::get_notice_settings();
+		$click_counts = ArrayHelper::get( $settings, 'click_counts', 0 );
+
+		if ( $click_counts >= 3 ) {
+			return false;
+		}
+
+		// If notice is dismissed show after 30 days.
+		$clicked_action = $settings['clicked_action'];
+		if ( 'dismissed' === $clicked_action ) {
+			$clicked_at = $settings['action_clicked_at'];
+			return strtotime( '+30 days', $clicked_at ) < strtotime( 'now' );
+		}
+
+		if ( 'later' === $clicked_action ) {
+			$clicked_at = $settings['action_clicked_at'];
+			return strtotime( '+7 days', $clicked_at ) < strtotime( 'now' );
+		}
+
+		return true;
+	}
+
+	/**
+	 * Get WooCommerce notice settings
+	 *
+	 * @since 4.0.10
+	 * @return array
+	 */
+	public static function get_notice_settings() {
+		$settings = get_user_meta( get_current_user_id(), 'pushengage_woo_notice', true );
+
+		if ( empty( $settings ) ) {
+			return array(
+				'clicked_action'    => '',
+				'action_clicked_at' => 0,
+			);
+		}
+
+		return $settings;
+	}
+
+	/**
+	 * Get WooCommerce notice data
+	 *
+	 * @since 4.0.10
+	 * @return void
+	 */
+	public static function get_woo_notice() {
+		NonceChecker::check();
+
+		$notice_data = array(
+			'should_render' => self::should_render_woo_notice(),
+		);
+
+		wp_send_json_success( $notice_data );
+	}
+
+	/**
+	 * Update Woo notice settings
+	 *
+	 * @param array $data
+	 * @since 4.0.10
+	 * @return void
+	 */
+	public static function update_notice_info( $data = array() ) {
+		$settings     = self::get_notice_settings();
+		$click_counts = ArrayHelper::get( $settings, 'click_counts', 0 );
+
+		if ( isset( $data['clicked_action'] ) ) {
+			$settings['clicked_action']    = $data['clicked_action'];
+			$settings['action_clicked_at'] = time();
+
+			// increment click counts and save.
+			$click_counts++;
+			$settings['click_counts'] = $click_counts;
+		}
+
+		update_user_meta( get_current_user_id(), 'pushengage_woo_notice', $settings );
+	}
+
+	/**
+	 * Dismiss WooCommerce notice.
+	 *
+	 * @since 4.0.10
+	 * @return void
+	 */
+	public static function dismiss_woo_notice() {
+		NonceChecker::check();
+
+		if ( ! empty( $_POST['clicked_action'] ) ) {
+			$data = array();
+			$data['clicked_action'] = sanitize_text_field( $_POST['clicked_action'] );
+			self::update_notice_info( $data );
+		}
+
+		wp_send_json_success();
 	}
 }

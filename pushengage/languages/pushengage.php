@@ -13,20 +13,23 @@ $generated_i18n_strings = array(
 	// Reference: src/components/ErrorBoundary.tsx:88
 	__( 'Reload Page', 'pushengage' ),
 
-	// Reference: src/components/FlyoutButton.tsx:105
+	// Reference: src/components/FlyoutButton.tsx:106
 	__( 'Support & Docs', 'pushengage' ),
 
-	// Reference: src/components/FlyoutButton.tsx:110
+	// Reference: src/components/FlyoutButton.tsx:117
+	__( 'Video Library', 'pushengage' ),
+
+	// Reference: src/components/FlyoutButton.tsx:122
 	__( 'See Quick Links', 'pushengage' ),
 
-	// Reference: src/components/FlyoutButton.tsx:39
+	// Reference: src/components/FlyoutButton.tsx:40
 	/* translators: 1 - The Plan name */
 	__( 'Upgrade to %1s Plan', 'pushengage' ),
 
-	// Reference: src/components/FlyoutButton.tsx:62
+	// Reference: src/components/FlyoutButton.tsx:63
 	__( 'Monetize Web Push', 'pushengage' ),
 
-	// Reference: src/components/FlyoutButton.tsx:71
+	// Reference: src/components/FlyoutButton.tsx:72
 	__( 'Suggest a Feature', 'pushengage' ),
 
 	// Reference: src/components/ServerErrorModal.tsx:67
@@ -60,7 +63,7 @@ $generated_i18n_strings = array(
 	// Reference: src/components/analytics/AnalyticsReportCard.tsx:93
 	// Reference: src/components/analytics/OptinAnalyticsStackedBarGraph.tsx:64
 	// Reference: src/components/campaign/CampaignGoalStats.tsx:18
-	// Reference: src/components/campaign/drip/NotificationGenerator.tsx:443
+	// Reference: src/components/campaign/drip/NotificationGenerator.tsx:444
 	__( 'Count', 'pushengage' ),
 
 	// Reference: src/components/analytics/AnalyticsReportCard.tsx:94
@@ -85,7 +88,7 @@ $generated_i18n_strings = array(
 	// Reference: src/components/campaign/CampaignStats.tsx:11
 	// Reference: src/components/campaign/automation/AutomationAnalytics.tsx:29
 	// Reference: src/components/campaign/details/NotificationDetailSections.tsx:216
-	// Reference: src/components/campaign/drip/NotificationGenerator.tsx:400
+	// Reference: src/components/campaign/drip/NotificationGenerator.tsx:401
 	// Reference: src/components/campaign/pushBroadcast/PushTable.tsx:562
 	// Reference: src/components/dashboardWidget/RecentNotifications.tsx:50
 	// Reference: src/pages/dashboard/RecentNotifications.tsx:140
@@ -96,7 +99,7 @@ $generated_i18n_strings = array(
 	// Reference: src/components/campaign/CampaignStats.tsx:15
 	// Reference: src/components/campaign/automation/AutomationAnalytics.tsx:36
 	// Reference: src/components/campaign/details/NotificationDetailSections.tsx:220
-	// Reference: src/components/campaign/drip/NotificationGenerator.tsx:406
+	// Reference: src/components/campaign/drip/NotificationGenerator.tsx:407
 	// Reference: src/components/campaign/pushBroadcast/PushTable.tsx:566
 	// Reference: src/components/dashboardWidget/RecentNotifications.tsx:56
 	// Reference: src/pages/dashboard/RecentNotifications.tsx:146
@@ -106,7 +109,7 @@ $generated_i18n_strings = array(
 	// Reference: src/components/campaign/CampaignStats.tsx:19
 	// Reference: src/components/campaign/automation/AutomationAnalytics.tsx:43
 	// Reference: src/components/campaign/details/NotificationDetailSections.tsx:225
-	// Reference: src/components/campaign/drip/NotificationGenerator.tsx:412
+	// Reference: src/components/campaign/drip/NotificationGenerator.tsx:413
 	// Reference: src/components/campaign/pushBroadcast/PushTable.tsx:570
 	// Reference: src/components/dashboardWidget/RecentNotifications.tsx:62
 	// Reference: src/pages/dashboard/RecentNotifications.tsx:152
@@ -116,8 +119,9 @@ $generated_i18n_strings = array(
 	// Reference: src/components/campaign/CampaignStats.tsx:25
 	// Reference: src/components/campaign/automation/AutomationAnalytics.tsx:50
 	// Reference: src/components/campaign/details/NotificationDetailSections.tsx:354
-	// Reference: src/components/campaign/drip/NotificationGenerator.tsx:418
+	// Reference: src/components/campaign/drip/NotificationGenerator.tsx:419
 	// Reference: src/components/campaign/pushBroadcast/PushTable.tsx:574
+	// Reference: src/components/campaign/trigger/NotificationGenerator.tsx:404
 	// Reference: src/components/dashboardWidget/RecentNotifications.tsx:74
 	// Reference: src/pages/dashboard/RecentNotifications.tsx:164
 	__( 'CTR', 'pushengage' ),
@@ -145,14 +149,6 @@ $generated_i18n_strings = array(
 	// Reference: src/components/analytics/AnalyticsSummaryLineGraph.tsx:194
 	// Reference: src/helper/index.ts:133
 	__( 'Clicks', 'pushengage' ),
-
-	// Reference: src/components/analytics/Code.tsx:41
-	// Reference: src/components/common/IntegrationCode.tsx:40
-	__( 'Copied to clipboard', 'pushengage' ),
-
-	// Reference: src/components/analytics/Code.tsx:48
-	// Reference: src/components/common/IntegrationCode.tsx:47
-	__( 'Copy', 'pushengage' ),
 
 	// Reference: src/components/analytics/OptinAnalyticsStackedBarGraph.tsx:165
 	__( 'No Data Found', 'pushengage' ),
@@ -298,7 +294,7 @@ $generated_i18n_strings = array(
 	// Reference: src/components/audience/SegmentTable.tsx:121
 	// Reference: src/components/campaign/drip/DripTable.tsx:222
 	// Reference: src/components/campaign/pushBroadcast/PushTable.tsx:238
-	// Reference: src/components/campaign/trigger/TriggerTable.tsx:228
+	// Reference: src/components/campaign/trigger/TriggerTable.tsx:239
 	// Reference: src/components/common/NotificationActionDropdownMenu.tsx:42
 	// Reference: src/pages/settings/Billing/index.tsx:151
 	__( 'Edit', 'pushengage' ),
@@ -741,6 +737,73 @@ $generated_i18n_strings = array(
 	// Reference: src/pages/audience/AudienceGroups.tsx:196
 	__( 'Create New Audience Group', 'pushengage' ),
 
+	// Reference: src/components/campaign/AutomationGoalTracking.tsx:100
+	__( 'Analytics > Goal Tracking', 'pushengage' ),
+
+	// Reference: src/components/campaign/AutomationGoalTracking.tsx:102
+	__( 'to use goal name.', 'pushengage' ),
+
+	// Reference: src/components/campaign/AutomationGoalTracking.tsx:48
+	__( 'Goal Tracking will help you assign conversion goals & value to your notification campaigns. You can set up a default goal', 'pushengage' ),
+
+	// Reference: src/components/campaign/AutomationGoalTracking.tsx:55
+	__( 'and have it integrated for all your campaigns.', 'pushengage' ),
+
+	// Reference: src/components/campaign/AutomationGoalTracking.tsx:61
+	// Reference: src/pages/analytics/GoalTracking.tsx:256
+	__( 'Goal Name', 'pushengage' ),
+
+	// Reference: src/components/campaign/AutomationGoalTracking.tsx:77
+	__( 'Changing the goal name will reset the existing goal metrics in this campaign.', 'pushengage' ),
+
+	// Reference: src/components/campaign/AutomationGoalTracking.tsx:94
+	__( 'Goal Tracking is not enabled in your account. Please enable goal tracking from', 'pushengage' ),
+
+	// Reference: src/components/campaign/AutomationUtmParams.tsx:108
+	// Reference: src/components/campaign/details/SentNotificationDetails.tsx:158
+	// Reference: src/components/campaign/notification/UtmParams.tsx:78
+	// Reference: src/components/postEditor/PostEditorUtmParams.tsx:74
+	__( 'UTM Content', 'pushengage' ),
+
+	// Reference: src/components/campaign/AutomationUtmParams.tsx:30
+	// Reference: src/components/campaign/NotificationContent.tsx:192
+	// Reference: src/components/campaign/details/SentNotificationDetails.tsx:139
+	// Reference: src/components/postEditor/PostEditorMetabox.tsx:917
+	// Reference: src/pages/settings/defaultSettings/index.tsx:270
+	__( 'UTM Parameters', 'pushengage' ),
+
+	// Reference: src/components/campaign/AutomationUtmParams.tsx:42
+	// Reference: src/components/campaign/NotificationContent.tsx:203
+	// Reference: src/components/postEditor/PostEditorMetabox.tsx:936
+	__( 'Improve your analytics with custom link attribution.', 'pushengage' ),
+
+	// Reference: src/components/campaign/AutomationUtmParams.tsx:48
+	// Reference: src/components/campaign/details/SentNotificationDetails.tsx:150
+	// Reference: src/components/campaign/notification/UtmParams.tsx:18
+	// Reference: src/components/postEditor/PostEditorUtmParams.tsx:18
+	// Reference: src/pages/settings/defaultSettings/index.tsx:285
+	__( 'UTM Source', 'pushengage' ),
+
+	// Reference: src/components/campaign/AutomationUtmParams.tsx:63
+	// Reference: src/components/campaign/details/SentNotificationDetails.tsx:146
+	// Reference: src/components/campaign/notification/UtmParams.tsx:33
+	// Reference: src/components/postEditor/PostEditorUtmParams.tsx:32
+	// Reference: src/pages/settings/defaultSettings/index.tsx:300
+	__( 'UTM Medium', 'pushengage' ),
+
+	// Reference: src/components/campaign/AutomationUtmParams.tsx:78
+	// Reference: src/components/campaign/details/SentNotificationDetails.tsx:142
+	// Reference: src/components/campaign/notification/UtmParams.tsx:48
+	// Reference: src/components/postEditor/PostEditorUtmParams.tsx:46
+	// Reference: src/pages/settings/defaultSettings/index.tsx:315
+	__( 'UTM Campaign', 'pushengage' ),
+
+	// Reference: src/components/campaign/AutomationUtmParams.tsx:93
+	// Reference: src/components/campaign/details/SentNotificationDetails.tsx:154
+	// Reference: src/components/campaign/notification/UtmParams.tsx:63
+	// Reference: src/components/postEditor/PostEditorUtmParams.tsx:60
+	__( 'UTM Term', 'pushengage' ),
+
 	// Reference: src/components/campaign/BreadcrumbNavbar.tsx:46
 	// Reference: src/components/campaign/pushBroadcast/PageBreadcrumb.tsx:40
 	__( 'Content', 'pushengage' ),
@@ -750,9 +813,9 @@ $generated_i18n_strings = array(
 	__( 'Drip Settings', 'pushengage' ),
 
 	// Reference: src/components/campaign/BreadcrumbNavbar.tsx:63
-	// Reference: src/pages/settings/integrations/woocommerce/EditTrigger.tsx:156
-	// Reference: src/pages/triggeredCampaign/Create.tsx:362
-	// Reference: src/pages/triggeredCampaign/Edit.tsx:362
+	// Reference: src/components/campaign/trigger/TriggeredTypeSettings.tsx:50
+	// Reference: src/pages/settings/integrations/woocommerce/EditTrigger.tsx:216
+	// Reference: src/pages/triggeredCampaign/CreateOrEdit.tsx:413
 	__( 'Trigger Settings', 'pushengage' ),
 
 	// Reference: src/components/campaign/DeviceSelectionWidget.tsx:31
@@ -788,72 +851,60 @@ $generated_i18n_strings = array(
 	// Reference: src/components/campaign/GeoLocationWidget.tsx:93
 	__( 'Exclude Country', 'pushengage' ),
 
-	// Reference: src/components/campaign/NotificationContent.tsx:115
+	// Reference: src/components/campaign/NotificationContent.tsx:113
 	// Reference: src/components/campaign/notification/MultiAction.tsx:87
-	// Reference: src/components/postEditor/PostEditorMetabox.tsx:709
+	// Reference: src/components/postEditor/PostEditorMetabox.tsx:753
 	__( 'Multi Action Notification', 'pushengage' ),
 
-	// Reference: src/components/campaign/NotificationContent.tsx:129
+	// Reference: src/components/campaign/NotificationContent.tsx:127
 	// Reference: src/components/campaign/notification/MultiAction.tsx:101
-	// Reference: src/components/postEditor/PostEditorMetabox.tsx:720
+	// Reference: src/components/postEditor/PostEditorMetabox.tsx:764
 	__( 'Get more clicks with multiple call-to-action buttons.', 'pushengage' ),
 
-	// Reference: src/components/campaign/NotificationContent.tsx:147
+	// Reference: src/components/campaign/NotificationContent.tsx:145
 	// Reference: src/components/campaign/drip/NotificationGenerator.tsx:574
-	// Reference: src/components/campaign/trigger/NotificationGenerator.tsx:563
+	// Reference: src/components/campaign/trigger/NotificationGenerator.tsx:528
 	__( 'Notification Duration', 'pushengage' ),
 
-	// Reference: src/components/campaign/NotificationContent.tsx:164
+	// Reference: src/components/campaign/NotificationContent.tsx:162
 	// Reference: src/components/campaign/drip/NotificationGenerator.tsx:592
-	// Reference: src/components/campaign/trigger/NotificationGenerator.tsx:581
+	// Reference: src/components/campaign/trigger/NotificationGenerator.tsx:546
 	__( 'Maximize your reach with custom notification durations (this feature is available for chrome 47 and above versions only).', 'pushengage' ),
 
-	// Reference: src/components/campaign/NotificationContent.tsx:194
-	// Reference: src/components/campaign/details/SentNotificationDetails.tsx:139
-	// Reference: src/components/campaign/drip/AutomationUtmParams.tsx:30
-	// Reference: src/components/postEditor/PostEditorMetabox.tsx:873
-	// Reference: src/pages/settings/defaultSettings/index.tsx:270
-	__( 'UTM Parameters', 'pushengage' ),
-
-	// Reference: src/components/campaign/NotificationContent.tsx:205
-	// Reference: src/components/campaign/drip/AutomationUtmParams.tsx:42
-	// Reference: src/components/postEditor/PostEditorMetabox.tsx:892
-	__( 'Improve your analytics with custom link attribution.', 'pushengage' ),
-
-	// Reference: src/components/campaign/NotificationContent.tsx:53
-	// Reference: src/components/campaign/drip/NotificationGenerator.tsx:506
+	// Reference: src/components/campaign/NotificationContent.tsx:52
+	// Reference: src/components/campaign/drip/NotificationGenerator.tsx:507
 	__( 'Notification Look and Design', 'pushengage' ),
 
-	// Reference: src/components/campaign/NotificationContent.tsx:66
+	// Reference: src/components/campaign/NotificationContent.tsx:65
 	// Reference: src/components/campaign/templates/Card.tsx:192
 	__( 'Use Template', 'pushengage' ),
 
-	// Reference: src/components/campaign/NotificationContent.tsx:83
-	// Reference: src/components/campaign/drip/NotificationGenerator.tsx:532
+	// Reference: src/components/campaign/NotificationContent.tsx:82
+	// Reference: src/components/campaign/drip/NotificationGenerator.tsx:533
 	__( 'Show Large Image', 'pushengage' ),
 
-	// Reference: src/components/campaign/NotificationContent.tsx:97
-	// Reference: src/components/postEditor/PostEditorMetabox.tsx:686
+	// Reference: src/components/campaign/NotificationContent.tsx:96
+	// Reference: src/components/postEditor/PostEditorMetabox.tsx:731
 	__( 'Make your notifications stand out with larger images.', 'pushengage' ),
 
 	// Reference: src/components/campaign/PushAudience.tsx:122
 	// Reference: src/components/campaign/details/CustomAudienceDetails.tsx:196
 	// Reference: src/components/campaign/details/NotificationDetailSections.tsx:306
 	// Reference: src/components/campaign/drip/DripAudience.tsx:229
-	// Reference: src/components/postEditor/PostEditorMetabox.tsx:774
+	// Reference: src/components/postEditor/PostEditorMetabox.tsx:818
 	__( 'Send to All Subscribers', 'pushengage' ),
 
 	// Reference: src/components/campaign/PushAudience.tsx:125
-	// Reference: src/components/postEditor/PostEditorMetabox.tsx:777
+	// Reference: src/components/postEditor/PostEditorMetabox.tsx:821
 	__( 'This broadcast message will go to all subscribers.', 'pushengage' ),
 
 	// Reference: src/components/campaign/PushAudience.tsx:155
 	// Reference: src/components/campaign/details/CustomAudienceDetails.tsx:178
-	// Reference: src/components/postEditor/PostEditorMetabox.tsx:814
+	// Reference: src/components/postEditor/PostEditorMetabox.tsx:858
 	__( 'Send to Audience Group', 'pushengage' ),
 
 	// Reference: src/components/campaign/PushAudience.tsx:161
-	// Reference: src/components/postEditor/PostEditorMetabox.tsx:817
+	// Reference: src/components/postEditor/PostEditorMetabox.tsx:861
 	__( 'Personalize your notification based on predefined audience group.', 'pushengage' ),
 
 	// Reference: src/components/campaign/PushAudience.tsx:203
@@ -877,7 +928,7 @@ $generated_i18n_strings = array(
 	__( 'Second Button URL', 'pushengage' ),
 
 	// Reference: src/components/campaign/PushMultiAction.tsx:162
-	// Reference: src/components/campaign/PushNotification.tsx:56
+	// Reference: src/components/campaign/PushNotification.tsx:57
 	// Reference: src/components/campaign/notification/MultiAction.tsx:176
 	// Reference: src/pages/settings/defaultSettings/index.tsx:466
 	__( 'Example Notification URL : https://www.pushengage.com', 'pushengage' ),
@@ -898,22 +949,25 @@ $generated_i18n_strings = array(
 	// Reference: src/components/campaign/notification/MultiAction.tsx:128
 	__( 'First Button Image', 'pushengage' ),
 
-	// Reference: src/components/campaign/PushNotification.tsx:29
-	// Reference: src/components/postEditor/PostEditorMetabox.tsx:625
+	// Reference: src/components/campaign/PushNotification.tsx:30
+	// Reference: src/components/postEditor/PostEditorMetabox.tsx:670
 	// Reference: src/pages/settings/defaultSettings/index.tsx:420
 	__( 'Notification Title', 'pushengage' ),
 
-	// Reference: src/components/campaign/PushNotification.tsx:40
-	// Reference: src/components/postEditor/PostEditorMetabox.tsx:644
+	// Reference: src/components/campaign/PushNotification.tsx:41
+	// Reference: src/components/postEditor/PostEditorMetabox.tsx:689
 	// Reference: src/pages/settings/defaultSettings/index.tsx:435
 	__( 'Notification Message', 'pushengage' ),
 
-	// Reference: src/components/campaign/PushNotification.tsx:52
+	// Reference: src/components/campaign/PushNotification.tsx:53
 	// Reference: src/pages/settings/defaultSettings/index.tsx:450
 	__( 'Notification URL', 'pushengage' ),
 
-	// Reference: src/components/campaign/PushNotification.tsx:64
+	// Reference: src/components/campaign/PushNotification.tsx:66
 	__( 'Notification Icon Image', 'pushengage' ),
+
+	// Reference: src/components/campaign/PushNotification.tsx:78
+	__( 'Notification Image', 'pushengage' ),
 
 	// Reference: src/components/campaign/PushNotificationDuration.tsx:25
 	__( 'Keep notification open until interaction', 'pushengage' ),
@@ -928,7 +982,7 @@ $generated_i18n_strings = array(
 
 	// Reference: src/components/campaign/PushNotificationPreview.tsx:82
 	// Reference: src/components/campaign/drip/NotificationGenerator.tsx:634
-	// Reference: src/components/campaign/trigger/NotificationGenerator.tsx:619
+	// Reference: src/components/campaign/trigger/NotificationGenerator.tsx:582
 	// Reference: src/pages/pushBroadcast/CreateOrEdit.tsx:1346
 	// Reference: src/pages/settings/defaultSettings/index.tsx:412
 	__( 'Test Notification', 'pushengage' ),
@@ -1001,7 +1055,7 @@ $generated_i18n_strings = array(
 	// Reference: src/components/campaign/PushSend.tsx:547
 	__( 'Send your AB notification to a percentage of your selected audience (minimum 1000 subscribers). After the delay duration, the rest of your subscribers will be sent the winning notification.', 'pushengage' ),
 
-	// Reference: src/components/campaign/PushSend.tsx:587
+	// Reference: src/components/campaign/PushSend.tsx:589
 	__( 'The delay is the amount of time to wait before deciding the winner notification and sending it to remaining subscribers. Should be between 30 minute and 7 days.', 'pushengage' ),
 
 	// Reference: src/components/campaign/PushSend.tsx:94
@@ -1032,7 +1086,7 @@ $generated_i18n_strings = array(
 
 	// Reference: src/components/campaign/automation/AutomationDetails.tsx:150
 	// Reference: src/components/campaign/drip/DripTable.tsx:254
-	// Reference: src/components/campaign/trigger/TriggerTable.tsx:260
+	// Reference: src/components/campaign/trigger/TriggerTable.tsx:271
 	__( 'Start', 'pushengage' ),
 
 	// Reference: src/components/campaign/automation/AutomationDetails.tsx:157
@@ -1050,7 +1104,7 @@ $generated_i18n_strings = array(
 	// Reference: src/components/campaign/automation/AutomationDetails.tsx:184
 	// Reference: src/components/campaign/details/SentNotificationDetails.tsx:105
 	// Reference: src/components/campaign/pushBroadcast/PageBreadcrumb.tsx:51
-	// Reference: src/components/postEditor/PostEditorMetabox.tsx:759
+	// Reference: src/components/postEditor/PostEditorMetabox.tsx:803
 	__( 'Audience', 'pushengage' ),
 
 	// Reference: src/components/campaign/automation/AutomationDetails.tsx:190
@@ -1085,7 +1139,6 @@ $generated_i18n_strings = array(
 
 	// Reference: src/components/campaign/automation/AutomationDetails.tsx:261
 	// Reference: src/pages/analytics/GoalTracking.tsx:178
-	// Reference: src/pages/dashboard/Strategies.tsx:61
 	__( 'Goal Tracking', 'pushengage' ),
 
 	// Reference: src/components/campaign/automation/AutomationDetails.tsx:266
@@ -1110,10 +1163,11 @@ $generated_i18n_strings = array(
 	__( 'Day', 'pushengage' ),
 
 	// Reference: src/components/campaign/automation/AutomationDetails.tsx:313
+	// Reference: src/components/campaign/trigger/TriggeredTypeSettings.tsx:59
 	__( 'Campaign Type', 'pushengage' ),
 
 	// Reference: src/components/campaign/automation/AutomationDetails.tsx:317
-	// Reference: src/pages/triggeredCampaign/Selection.tsx:214
+	// Reference: src/pages/triggeredCampaign/Selection.tsx:221
 	__( 'Price Drop', 'pushengage' ),
 
 	// Reference: src/components/campaign/automation/AutomationDetails.tsx:318
@@ -1145,7 +1199,7 @@ $generated_i18n_strings = array(
 	// Reference: src/components/campaign/drip/DripTableHeader.tsx:45
 	// Reference: src/components/campaign/pushBroadcast/PushTable.tsx:257
 	// Reference: src/components/campaign/pushBroadcast/PushTableHeader.tsx:85
-	// Reference: src/components/campaign/trigger/TriggerTable.tsx:236
+	// Reference: src/components/campaign/trigger/TriggerTable.tsx:247
 	// Reference: src/components/campaign/trigger/TriggerTableHeader.tsx:51
 	// Reference: src/pages/analytics/OptinAnalytics.tsx:275
 	// Reference: src/pages/analytics/Overview.tsx:288
@@ -1188,8 +1242,8 @@ $generated_i18n_strings = array(
 
 	// Reference: src/components/campaign/details/CustomAudienceDetails.tsx:59
 	// Reference: src/components/campaign/details/NotificationDetailSections.tsx:92
-	// Reference: src/components/campaign/drip/NotificationGenerator.tsx:301
-	// Reference: src/components/campaign/trigger/NotificationGenerator.tsx:292
+	// Reference: src/components/campaign/drip/NotificationGenerator.tsx:302
+	// Reference: src/components/campaign/trigger/NotificationGenerator.tsx:281
 	// Reference: src/pages/settings/defaultSettings/index.tsx:555
 	__( 'days', 'pushengage' ),
 
@@ -1252,7 +1306,7 @@ $generated_i18n_strings = array(
 
 	// Reference: src/components/campaign/details/NotificationDetailSections.tsx:342
 	// Reference: src/components/campaign/drip/DripTable.tsx:152
-	// Reference: src/components/campaign/trigger/TriggerTable.tsx:158
+	// Reference: src/components/campaign/trigger/TriggerTable.tsx:160
 	// Reference: src/pages/pushBroadcast/CreateOrEdit.tsx:951
 	__( 'Notification', 'pushengage' ),
 
@@ -1278,43 +1332,10 @@ $generated_i18n_strings = array(
 	// Reference: src/components/campaign/details/SentNotificationDetails.tsx:115
 	__( 'Recipient Limit', 'pushengage' ),
 
-	// Reference: src/components/campaign/details/SentNotificationDetails.tsx:142
-	// Reference: src/components/campaign/drip/AutomationUtmParams.tsx:78
-	// Reference: src/components/campaign/notification/UtmParams.tsx:48
-	// Reference: src/components/postEditor/PostEditorUtmParams.tsx:46
-	// Reference: src/pages/settings/defaultSettings/index.tsx:315
-	__( 'UTM Campaign', 'pushengage' ),
-
-	// Reference: src/components/campaign/details/SentNotificationDetails.tsx:146
-	// Reference: src/components/campaign/drip/AutomationUtmParams.tsx:63
-	// Reference: src/components/campaign/notification/UtmParams.tsx:33
-	// Reference: src/components/postEditor/PostEditorUtmParams.tsx:32
-	// Reference: src/pages/settings/defaultSettings/index.tsx:300
-	__( 'UTM Medium', 'pushengage' ),
-
-	// Reference: src/components/campaign/details/SentNotificationDetails.tsx:150
-	// Reference: src/components/campaign/drip/AutomationUtmParams.tsx:48
-	// Reference: src/components/campaign/notification/UtmParams.tsx:18
-	// Reference: src/components/postEditor/PostEditorUtmParams.tsx:18
-	// Reference: src/pages/settings/defaultSettings/index.tsx:285
-	__( 'UTM Source', 'pushengage' ),
-
-	// Reference: src/components/campaign/details/SentNotificationDetails.tsx:154
-	// Reference: src/components/campaign/drip/AutomationUtmParams.tsx:93
-	// Reference: src/components/campaign/notification/UtmParams.tsx:63
-	// Reference: src/components/postEditor/PostEditorUtmParams.tsx:60
-	__( 'UTM Term', 'pushengage' ),
-
-	// Reference: src/components/campaign/details/SentNotificationDetails.tsx:158
-	// Reference: src/components/campaign/drip/AutomationUtmParams.tsx:108
-	// Reference: src/components/campaign/notification/UtmParams.tsx:78
-	// Reference: src/components/postEditor/PostEditorUtmParams.tsx:74
-	__( 'UTM Content', 'pushengage' ),
-
 	// Reference: src/components/campaign/details/SentNotificationDetails.tsx:75
 	// Reference: src/components/campaign/drip/DripTable.tsx:173
 	// Reference: src/components/campaign/pushBroadcast/PushTable.tsx:323
-	// Reference: src/components/campaign/trigger/TriggerTable.tsx:179
+	// Reference: src/components/campaign/trigger/TriggerTable.tsx:190
 	// Reference: src/pages/analytics/Overview.tsx:163
 	__( 'Stats', 'pushengage' ),
 
@@ -1324,7 +1345,7 @@ $generated_i18n_strings = array(
 	// Reference: src/components/campaign/details/SentNotificationDetails.tsx:95
 	// Reference: src/components/campaign/drip/DripTable.tsx:188
 	// Reference: src/components/campaign/pushBroadcast/PushTable.tsx:332
-	// Reference: src/components/campaign/trigger/TriggerTable.tsx:194
+	// Reference: src/components/campaign/trigger/TriggerTable.tsx:205
 	__( 'Goal', 'pushengage' ),
 
 	// Reference: src/components/campaign/details/WinnerNotificationDetails.tsx:76
@@ -1334,28 +1355,6 @@ $generated_i18n_strings = array(
 	// Reference: src/components/campaign/details/WinnerNotificationDetails.tsx:96
 	// Reference: src/pages/pushBroadcast/CreateOrEdit.tsx:1160
 	__( 'Notification B', 'pushengage' ),
-
-	// Reference: src/components/campaign/drip/AutomationGoalTracking.tsx:100
-	__( 'Analytics > Goal Tracking', 'pushengage' ),
-
-	// Reference: src/components/campaign/drip/AutomationGoalTracking.tsx:102
-	__( 'to use goal name.', 'pushengage' ),
-
-	// Reference: src/components/campaign/drip/AutomationGoalTracking.tsx:48
-	__( 'Goal Tracking will help you assign conversion goals & value to your notification campaigns. You can set up a default goal', 'pushengage' ),
-
-	// Reference: src/components/campaign/drip/AutomationGoalTracking.tsx:55
-	__( 'and have it integrated for all your campaigns.', 'pushengage' ),
-
-	// Reference: src/components/campaign/drip/AutomationGoalTracking.tsx:61
-	// Reference: src/pages/analytics/GoalTracking.tsx:256
-	__( 'Goal Name', 'pushengage' ),
-
-	// Reference: src/components/campaign/drip/AutomationGoalTracking.tsx:77
-	__( 'Changing the goal name will reset the existing goal metrics in this campaign.', 'pushengage' ),
-
-	// Reference: src/components/campaign/drip/AutomationGoalTracking.tsx:94
-	__( 'Goal Tracking is not enabled in your account. Please enable goal tracking from', 'pushengage' ),
 
 	// Reference: src/components/campaign/drip/CustomSegmentSelection.tsx:132
 	// Reference: src/pages/design/TargetingRule.tsx:379
@@ -1396,14 +1395,17 @@ $generated_i18n_strings = array(
 	__( 'Activate Autoresponder', 'pushengage' ),
 
 	// Reference: src/components/campaign/drip/DripAudience.tsx:340
+	// Reference: src/components/campaign/trigger/TriggeredTypeSettings.tsx:306
 	__( 'Save Draft', 'pushengage' ),
 
 	// Reference: src/components/campaign/drip/DripStatus.tsx:10
+	// Reference: src/components/campaign/trigger/TriggerStatus.tsx:10
 	// Reference: src/pages/drip/helper.ts:48
 	// Reference: src/pages/triggeredCampaign/helper.ts:67
 	__( 'Active', 'pushengage' ),
 
 	// Reference: src/components/campaign/drip/DripStatus.tsx:12
+	// Reference: src/components/campaign/trigger/TriggerStatus.tsx:12
 	// Reference: src/pages/drip/helper.ts:53
 	// Reference: src/pages/pushBroadcast/helpers.ts:66
 	// Reference: src/pages/triggeredCampaign/helper.ts:72
@@ -1411,30 +1413,30 @@ $generated_i18n_strings = array(
 
 	// Reference: src/components/campaign/drip/DripStatus.tsx:13
 	// Reference: src/components/campaign/drip/DripTable.tsx:252
-	// Reference: src/components/campaign/trigger/TriggerTable.tsx:258
+	// Reference: src/components/campaign/trigger/TriggerTable.tsx:269
 	__( 'Pause', 'pushengage' ),
 
 	// Reference: src/components/campaign/drip/DripTable.tsx:201
 	// Reference: src/components/campaign/pushBroadcast/PushTable.tsx:377
-	// Reference: src/components/campaign/trigger/TriggerTable.tsx:207
+	// Reference: src/components/campaign/trigger/TriggerTable.tsx:218
 	__( 'Status', 'pushengage' ),
 
 	// Reference: src/components/campaign/drip/DripTable.tsx:212
 	// Reference: src/components/campaign/preview/NotificationPreviewSelector.tsx:8
 	// Reference: src/components/campaign/pushBroadcast/PushTable.tsx:226
 	// Reference: src/components/campaign/templates/Card.tsx:202
-	// Reference: src/components/campaign/trigger/TriggerTable.tsx:218
+	// Reference: src/components/campaign/trigger/TriggerTable.tsx:229
 	// Reference: src/components/design/PopUpModalCard.tsx:142
 	__( 'Preview', 'pushengage' ),
 
 	// Reference: src/components/campaign/drip/DripTable.tsx:240
 	// Reference: src/components/campaign/pushBroadcast/PushTable.tsx:267
-	// Reference: src/components/campaign/trigger/TriggerTable.tsx:246
+	// Reference: src/components/campaign/trigger/TriggerTable.tsx:257
 	// Reference: src/components/common/NotificationActionDropdownMenu.tsx:63
 	__( 'Duplicate', 'pushengage' ),
 
 	// Reference: src/components/campaign/drip/DripTable.tsx:255
-	// Reference: src/components/campaign/trigger/TriggerTable.tsx:261
+	// Reference: src/components/campaign/trigger/TriggerTable.tsx:272
 	__( 'Resume', 'pushengage' ),
 
 	// Reference: src/components/campaign/drip/DripTable.tsx:289
@@ -1446,64 +1448,65 @@ $generated_i18n_strings = array(
 	// Reference: src/components/campaign/drip/NotificationBuilder.tsx:294
 	__( 'Add New Notification', 'pushengage' ),
 
-	// Reference: src/components/campaign/drip/NotificationGenerator.tsx:195
-	// Reference: src/components/campaign/trigger/NotificationGenerator.tsx:189
+	// Reference: src/components/campaign/drip/NotificationGenerator.tsx:196
+	// Reference: src/components/campaign/trigger/NotificationGenerator.tsx:179
 	__( 'Send notification', 'pushengage' ),
 
-	// Reference: src/components/campaign/drip/NotificationGenerator.tsx:208
-	// Reference: src/components/campaign/trigger/NotificationGenerator.tsx:202
+	// Reference: src/components/campaign/drip/NotificationGenerator.tsx:209
+	// Reference: src/components/campaign/trigger/NotificationGenerator.tsx:192
 	__( 'Immediately', 'pushengage' ),
 
-	// Reference: src/components/campaign/drip/NotificationGenerator.tsx:212
+	// Reference: src/components/campaign/drip/NotificationGenerator.tsx:213
+	// Reference: src/components/campaign/trigger/NotificationGenerator.tsx:196
 	__( 'After', 'pushengage' ),
 
-	// Reference: src/components/campaign/drip/NotificationGenerator.tsx:213
-	// Reference: src/components/campaign/trigger/NotificationGenerator.tsx:207
+	// Reference: src/components/campaign/drip/NotificationGenerator.tsx:214
 	__( 'Next', 'pushengage' ),
 
-	// Reference: src/components/campaign/drip/NotificationGenerator.tsx:258
+	// Reference: src/components/campaign/drip/NotificationGenerator.tsx:259
 	__( 'hr', 'pushengage' ),
 
-	// Reference: src/components/campaign/drip/NotificationGenerator.tsx:285
+	// Reference: src/components/campaign/drip/NotificationGenerator.tsx:286
 	__( 'min', 'pushengage' ),
 
-	// Reference: src/components/campaign/drip/NotificationGenerator.tsx:302
-	// Reference: src/components/campaign/trigger/NotificationGenerator.tsx:293
+	// Reference: src/components/campaign/drip/NotificationGenerator.tsx:303
+	// Reference: src/components/campaign/trigger/NotificationGenerator.tsx:282
 	__( 'hr/min', 'pushengage' ),
 
-	// Reference: src/components/campaign/drip/NotificationGenerator.tsx:319
-	// Reference: src/components/campaign/trigger/NotificationGenerator.tsx:309
+	// Reference: src/components/campaign/drip/NotificationGenerator.tsx:320
+	// Reference: src/components/campaign/trigger/NotificationGenerator.tsx:298
 	__( 'Sunday', 'pushengage' ),
 
-	// Reference: src/components/campaign/drip/NotificationGenerator.tsx:320
-	// Reference: src/components/campaign/trigger/NotificationGenerator.tsx:310
+	// Reference: src/components/campaign/drip/NotificationGenerator.tsx:321
+	// Reference: src/components/campaign/trigger/NotificationGenerator.tsx:299
 	__( 'Monday', 'pushengage' ),
 
-	// Reference: src/components/campaign/drip/NotificationGenerator.tsx:321
-	// Reference: src/components/campaign/trigger/NotificationGenerator.tsx:311
+	// Reference: src/components/campaign/drip/NotificationGenerator.tsx:322
+	// Reference: src/components/campaign/trigger/NotificationGenerator.tsx:300
 	__( 'Tuesday', 'pushengage' ),
 
-	// Reference: src/components/campaign/drip/NotificationGenerator.tsx:322
-	// Reference: src/components/campaign/trigger/NotificationGenerator.tsx:312
+	// Reference: src/components/campaign/drip/NotificationGenerator.tsx:323
+	// Reference: src/components/campaign/trigger/NotificationGenerator.tsx:301
 	__( 'Wednesday', 'pushengage' ),
 
-	// Reference: src/components/campaign/drip/NotificationGenerator.tsx:323
-	// Reference: src/components/campaign/trigger/NotificationGenerator.tsx:313
+	// Reference: src/components/campaign/drip/NotificationGenerator.tsx:324
+	// Reference: src/components/campaign/trigger/NotificationGenerator.tsx:302
 	__( 'Thursday', 'pushengage' ),
 
-	// Reference: src/components/campaign/drip/NotificationGenerator.tsx:324
-	// Reference: src/components/campaign/trigger/NotificationGenerator.tsx:314
+	// Reference: src/components/campaign/drip/NotificationGenerator.tsx:325
+	// Reference: src/components/campaign/trigger/NotificationGenerator.tsx:303
 	__( 'Friday', 'pushengage' ),
 
-	// Reference: src/components/campaign/drip/NotificationGenerator.tsx:325
-	// Reference: src/components/campaign/trigger/NotificationGenerator.tsx:315
+	// Reference: src/components/campaign/drip/NotificationGenerator.tsx:326
+	// Reference: src/components/campaign/trigger/NotificationGenerator.tsx:304
 	__( 'Saturday', 'pushengage' ),
 
-	// Reference: src/components/campaign/drip/NotificationGenerator.tsx:331
+	// Reference: src/components/campaign/drip/NotificationGenerator.tsx:332
 	// Reference: src/components/campaign/pushBroadcast/PushNotificationTimestamp.tsx:64
+	// Reference: src/components/campaign/trigger/NotificationGenerator.tsx:310
 	__( 'at', 'pushengage' ),
 
-	// Reference: src/components/campaign/drip/NotificationGenerator.tsx:431
+	// Reference: src/components/campaign/drip/NotificationGenerator.tsx:432
 	__( 'Goal tracking not used', 'pushengage' ),
 
 	// Reference: src/components/campaign/drip/NotificationGenerator.tsx:553
@@ -1519,13 +1522,13 @@ $generated_i18n_strings = array(
 	__( 'Insert Notification Image', 'pushengage' ),
 
 	// Reference: src/components/campaign/notification/Image.tsx:46
-	// Reference: src/pages/settings/siteDetails/index.tsx:474
+	// Reference: src/pages/settings/siteDetails/index.tsx:483
 	__( 'Recommended size: 192px x 192px (JPG, PNG up to 1 MB)', 'pushengage' ),
 
-	// Reference: src/components/campaign/notification/LargeImage.tsx:48
+	// Reference: src/components/campaign/notification/LargeImage.tsx:47
 	__( 'Update Notification Large Image', 'pushengage' ),
 
-	// Reference: src/components/campaign/notification/LargeImage.tsx:52
+	// Reference: src/components/campaign/notification/LargeImage.tsx:51
 	__( 'Chrome 56+ supports displaying a large image in your campaign. The recommended size of the image is 360*180px. The appearance may vary based on the user’s browser and device.', 'pushengage' ),
 
 	// Reference: src/components/campaign/notification/MultiAction.tsx:55
@@ -1541,26 +1544,26 @@ $generated_i18n_strings = array(
 	// Reference: src/components/campaign/notification/NotificationScheduleInfo.tsx:94
 	__( 'On every', 'pushengage' ),
 
-	// Reference: src/components/campaign/preview/NotificationPreview.tsx:45
+	// Reference: src/components/campaign/preview/NotificationPreview.tsx:60
 	// Reference: src/components/campaign/preview/NotificationPreviewSelector.tsx:21
 	__( 'Windows 11 - Chrome', 'pushengage' ),
 
-	// Reference: src/components/campaign/preview/NotificationPreview.tsx:51
+	// Reference: src/components/campaign/preview/NotificationPreview.tsx:64
 	// Reference: src/components/campaign/preview/NotificationPreviewSelector.tsx:24
 	__( 'Windows 10 - Chrome', 'pushengage' ),
 
-	// Reference: src/components/campaign/preview/NotificationPreview.tsx:57
+	// Reference: src/components/campaign/preview/NotificationPreview.tsx:68
 	// Reference: src/components/campaign/preview/NotificationPreviewSelector.tsx:27
 	__( 'Windows 10 - Firefox', 'pushengage' ),
 
-	// Reference: src/components/campaign/preview/NotificationPreview.tsx:63
+	// Reference: src/components/campaign/preview/NotificationPreview.tsx:72
 	__( 'macOS - Chrome', 'pushengage' ),
 
-	// Reference: src/components/campaign/preview/NotificationPreview.tsx:69
+	// Reference: src/components/campaign/preview/NotificationPreview.tsx:76
 	// Reference: src/components/campaign/preview/NotificationPreviewSelector.tsx:31
 	__( 'Android - Chrome', 'pushengage' ),
 
-	// Reference: src/components/campaign/preview/NotificationPreview.tsx:75
+	// Reference: src/components/campaign/preview/NotificationPreview.tsx:81
 	// Reference: src/components/campaign/preview/NotificationPreviewSelector.tsx:33
 	__( 'iOS - Web', 'pushengage' ),
 
@@ -1587,7 +1590,7 @@ $generated_i18n_strings = array(
 	__( 'API', 'pushengage' ),
 
 	// Reference: src/components/campaign/pushBroadcast/PushAdvancedFilterDropdown.tsx:125
-	// Reference: src/pages/dashboard/Dashboard.tsx:131
+	// Reference: src/pages/dashboard/Dashboard.tsx:132
 	__( 'Dashboard', 'pushengage' ),
 
 	// Reference: src/components/campaign/pushBroadcast/PushAdvancedFilterDropdown.tsx:126
@@ -1721,8 +1724,43 @@ $generated_i18n_strings = array(
 	// Reference: src/components/campaign/templates/TemplateList.tsx:88
 	__( 'Get Pro Templates', 'pushengage' ),
 
-	// Reference: src/components/campaign/trigger/TriggerTable.tsx:293
+	// Reference: src/components/campaign/trigger/NotificationGenerator.tsx:367
+	__( 'Name of campaign', 'pushengage' ),
+
+	// Reference: src/components/campaign/trigger/TriggerStatus.tsx:13
+	// Reference: src/pages/drip/helper.ts:58
+	// Reference: src/pages/triggeredCampaign/helper.ts:77
+	__( 'Paused', 'pushengage' ),
+
+	// Reference: src/components/campaign/trigger/TriggerTable.tsx:304
 	__( 'No Triggered Campaigns found.', 'pushengage' ),
+
+	// Reference: src/components/campaign/trigger/TriggeredTypeSettings.tsx:101
+	__( 'Send Notification If Price Falls By', 'pushengage' ),
+
+	// Reference: src/components/campaign/trigger/TriggeredTypeSettings.tsx:225
+	__( 'Frequency Capping', 'pushengage' ),
+
+	// Reference: src/components/campaign/trigger/TriggeredTypeSettings.tsx:230
+	__( 'Daily Notification Limit (Times/Subscriber/Day)', 'pushengage' ),
+
+	// Reference: src/components/campaign/trigger/TriggeredTypeSettings.tsx:252
+	__( 'Weekly Notification Limit (Times/Subscriber/Week)', 'pushengage' ),
+
+	// Reference: src/components/campaign/trigger/TriggeredTypeSettings.tsx:295
+	__( 'Activate Triggered Campaign', 'pushengage' ),
+
+	// Reference: src/components/campaign/trigger/TriggeredTypeSettings.tsx:310
+	__( 'Integration Code', 'pushengage' ),
+
+	// Reference: src/components/campaign/trigger/TriggeredTypeSettings.tsx:67
+	__( 'Price Drop Alert', 'pushengage' ),
+
+	// Reference: src/components/campaign/trigger/TriggeredTypeSettings.tsx:68
+	__( 'Back In Stock Alert', 'pushengage' ),
+
+	// Reference: src/components/campaign/trigger/TriggeredTypeSettings.tsx:78
+	__( 'Select Campaign Expiry (Days)', 'pushengage' ),
 
 	// Reference: src/components/challenge/ChallengePanel.tsx:41
 	__( 'Finish the challenge and see what else you can do with PushEngage', 'pushengage' ),
@@ -1759,7 +1797,7 @@ $generated_i18n_strings = array(
 	__( 'Setup Auto Push', 'pushengage' ),
 
 	// Reference: src/components/challenge/helper.ts:54
-	// Reference: src/pages/settings/autoPush/index.tsx:225
+	// Reference: src/pages/settings/autoPush/index.tsx:236
 	__( 'Automatically send a push notification to your subscribers every time you publish a new post.', 'pushengage' ),
 
 	// Reference: src/components/challenge/helper.ts:61
@@ -1780,8 +1818,16 @@ $generated_i18n_strings = array(
 	// Reference: src/components/challenge/helper.ts:90
 	__( 'Send a push broadcast any time and engage with your subscribers as soon as they are online.', 'pushengage' ),
 
-	// Reference: src/components/common/EmptyListDataMsg.tsx:27
+	// Reference: src/components/common/EmptyListDataMsg.tsx:29
 	__( 'Hi there!', 'pushengage' ),
+
+	// Reference: src/components/common/IntegrationCode.tsx:41
+	// Reference: src/pages/settings/siteDetails/index.tsx:497
+	__( 'Copied to clipboard', 'pushengage' ),
+
+	// Reference: src/components/common/IntegrationCode.tsx:48
+	// Reference: src/pages/settings/siteDetails/index.tsx:500
+	__( 'Copy', 'pushengage' ),
 
 	// Reference: src/components/common/NotConnectedTooltip.tsx:21
 	__( 'You haven’t finished setting up your site. Please connect your site.', 'pushengage' ),
@@ -1810,11 +1856,11 @@ $generated_i18n_strings = array(
 
 	// Reference: src/components/dashboardWidget/DashboardWidget.tsx:115
 	// Reference: src/pages/audience/Subscribers.tsx:177
-	// Reference: src/pages/dashboard/Dashboard.tsx:149
+	// Reference: src/pages/dashboard/Dashboard.tsx:151
 	__( 'Quick Stats', 'pushengage' ),
 
 	// Reference: src/components/dashboardWidget/DashboardWidget.tsx:118
-	// Reference: src/pages/dashboard/Dashboard.tsx:152
+	// Reference: src/pages/dashboard/Dashboard.tsx:154
 	__( 'An overview of the analytics to understand your web push subscribers.', 'pushengage' ),
 
 	// Reference: src/components/dashboardWidget/DashboardWidget.tsx:151
@@ -1858,8 +1904,11 @@ $generated_i18n_strings = array(
 	// Reference: src/components/headers/AlertNotificationDrawer.tsx:200
 	__( 'Dismiss', 'pushengage' ),
 
+	// Reference: src/components/headers/PageNavigationHeader.tsx:97
+	__( 'New!', 'pushengage' ),
+
 	// Reference: src/components/headers/siteAlert/EmailVerificationAlert.tsx:25
-	// Reference: src/components/onboarding/FinalStep.tsx:142
+	// Reference: src/components/onboarding/FinalStep.tsx:156
 	__( 'Please verify your email address.', 'pushengage' ),
 
 	// Reference: src/components/headers/siteAlert/NotificationLimitExceededAlert.tsx:51
@@ -1933,40 +1982,54 @@ $generated_i18n_strings = array(
 	__( 'Update Location', 'pushengage' ),
 
 	// Reference: src/components/headers/siteAlert/ServiceWorkerIssueAlert.tsx:508
+	// Reference: src/components/whatsnew/helper.ts:63
 	__( 'Learn More', 'pushengage' ),
 
 	// Reference: src/components/headers/siteAlert/ServiceWorkerIssueAlert.tsx:520
 	__( 'Do not show again', 'pushengage' ),
 
-	// Reference: src/components/onboarding/FinalStep.tsx:103
+	// Reference: src/components/onboarding/FinalStep.tsx:105
 	__( 'Verifying Plugin Installation', 'pushengage' ),
 
-	// Reference: src/components/onboarding/FinalStep.tsx:120
+	// Reference: src/components/onboarding/FinalStep.tsx:123
+	__( 'Congratulations! Your setup is done.', 'pushengage' ),
+
+	// Reference: src/components/onboarding/FinalStep.tsx:124
 	__( 'Congratulations!', 'pushengage' ),
 
-	// Reference: src/components/onboarding/FinalStep.tsx:121
+	// Reference: src/components/onboarding/FinalStep.tsx:127
 	__( 'Your Site is Ready for Better Conversions', 'pushengage' ),
 
 	// Reference: src/components/onboarding/FinalStep.tsx:131
-	__( 'Your site is currently using a caching plugin. To ensure that the push notification permission prompt is displayed correctly to visitors on existing posts and pages of your site, please clear the cache.', 'pushengage' ),
+	__( 'Connect your WooCommerce store to enable cart and browse abandonment campaigns, and start boosting your sales effortlessly.', 'pushengage' ),
 
 	// Reference: src/components/onboarding/FinalStep.tsx:145
+	__( 'Your site is currently using a caching plugin. To ensure that the push notification permission prompt is displayed correctly to visitors on existing posts and pages of your site, please clear the cache.', 'pushengage' ),
+
+	// Reference: src/components/onboarding/FinalStep.tsx:159
 	__( 'Activate your account by verifying your email address. Please click the link in the verification email we have sent you.', 'pushengage' ),
 
-	// Reference: src/components/onboarding/FinalStep.tsx:169
+	// Reference: src/components/onboarding/FinalStep.tsx:188
+	// Reference: src/pages/settings/integrations/woocommerce/DashboardNotice.tsx:52
+	__( 'Connect Store', 'pushengage' ),
+
+	// Reference: src/components/onboarding/FinalStep.tsx:203
 	__( 'Create a Campaign', 'pushengage' ),
 
-	// Reference: src/components/onboarding/FinalStep.tsx:180
-	// Reference: src/pages/settings/autoPush/index.tsx:197
+	// Reference: src/components/onboarding/FinalStep.tsx:214
+	// Reference: src/pages/settings/autoPush/index.tsx:198
 	__( 'Auto Push Settings', 'pushengage' ),
 
-	// Reference: src/components/onboarding/FinalStep.tsx:191
+	// Reference: src/components/onboarding/FinalStep.tsx:225
 	__( 'PushEngage Dashboard', 'pushengage' ),
 
-	// Reference: src/components/onboarding/FinalStep.tsx:94
+	// Reference: src/components/onboarding/FinalStep.tsx:235
+	__( 'Skip to Dashboard', 'pushengage' ),
+
+	// Reference: src/components/onboarding/FinalStep.tsx:96
 	__( 'Installing Recommended Features', 'pushengage' ),
 
-	// Reference: src/components/onboarding/FinalStep.tsx:97
+	// Reference: src/components/onboarding/FinalStep.tsx:99
 	__( 'The following plugins are being installed', 'pushengage' ),
 
 	// Reference: src/components/onboarding/UpgradeAccount.tsx:102
@@ -2025,11 +2088,11 @@ $generated_i18n_strings = array(
 	__( 'Let’s get you set up.', 'pushengage' ),
 
 	// Reference: src/components/onboarding/Welcome.tsx:243
-	// Reference: src/pages/settings/siteDetails/index.tsx:390
+	// Reference: src/pages/settings/siteDetails/index.tsx:399
 	__( 'Claim Your Free Account', 'pushengage' ),
 
 	// Reference: src/components/onboarding/Welcome.tsx:253
-	// Reference: src/pages/settings/siteDetails/index.tsx:401
+	// Reference: src/pages/settings/siteDetails/index.tsx:410
 	__( 'Connect Your Existing Account', 'pushengage' ),
 
 	// Reference: src/components/onboarding/Welcome.tsx:261
@@ -2047,49 +2110,76 @@ $generated_i18n_strings = array(
 	// Reference: src/components/postEditor/PostEditorMetabox.tsx:430
 	__( 'Send Push Notification', 'pushengage' ),
 
-	// Reference: src/components/postEditor/PostEditorMetabox.tsx:485
+	// Reference: src/components/postEditor/PostEditorMetabox.tsx:530
 	__( 'Your account\'s notification sending feature is currently disabled. To enable it, please upgrade your plan', 'pushengage' ),
 
-	// Reference: src/components/postEditor/PostEditorMetabox.tsx:501
+	// Reference: src/components/postEditor/PostEditorMetabox.tsx:546
 	// Reference: src/pages/settings/Billing/index.tsx:193
 	__( 'Update Plan', 'pushengage' ),
 
-	// Reference: src/components/postEditor/PostEditorMetabox.tsx:527
+	// Reference: src/components/postEditor/PostEditorMetabox.tsx:572
 	__( 'Please verify your email address to begin sending push notifications. Please click the link in the verification email we have sent you.', 'pushengage' ),
 
-	// Reference: src/components/postEditor/PostEditorMetabox.tsx:538
+	// Reference: src/components/postEditor/PostEditorMetabox.tsx:583
 	__( 'Send Notification', 'pushengage' ),
 
-	// Reference: src/components/postEditor/PostEditorMetabox.tsx:566
+	// Reference: src/components/postEditor/PostEditorMetabox.tsx:611
 	__( 'You have active RSS auto push campaign for this site. Please ensure that you really want to send this post in Push Notification.', 'pushengage' ),
 
-	// Reference: src/components/postEditor/PostEditorMetabox.tsx:581
+	// Reference: src/components/postEditor/PostEditorMetabox.tsx:626
 	__( 'Note: You have 0 active subscriber.', 'pushengage' ),
 
-	// Reference: src/components/postEditor/PostEditorMetabox.tsx:587
+	// Reference: src/components/postEditor/PostEditorMetabox.tsx:632
 	__( 'Need help', 'pushengage' ),
 
-	// Reference: src/components/postEditor/PostEditorMetabox.tsx:600
+	// Reference: src/components/postEditor/PostEditorMetabox.tsx:645
 	// Reference: src/pages/settings/defaultSettings/index.tsx:378
 	__( 'Notification Preview', 'pushengage' ),
 
-	// Reference: src/components/postEditor/PostEditorMetabox.tsx:634
+	// Reference: src/components/postEditor/PostEditorMetabox.tsx:679
 	__( 'By default, the post title is used as the notification title. However, you have the option to provide a custom notification title in this field.', 'pushengage' ),
 
-	// Reference: src/components/postEditor/PostEditorMetabox.tsx:654
+	// Reference: src/components/postEditor/PostEditorMetabox.tsx:699
 	__( 'By default, the post excerpt/content is used as the notification message. However, you have the option to provide a custom notification message in this field.', 'pushengage' ),
 
-	// Reference: src/components/postEditor/PostEditorMetabox.tsx:668
+	// Reference: src/components/postEditor/PostEditorMetabox.tsx:713
 	__( 'Large Image', 'pushengage' ),
 
-	// Reference: src/components/postEditor/PostEditorMetabox.tsx:682
+	// Reference: src/components/postEditor/PostEditorMetabox.tsx:727
 	__( 'The featured image will be used as the large image, but if you have a better image available, you can update it here and use it in the campaign.', 'pushengage' ),
 
-	// Reference: src/components/postEditor/PostEditorMetabox.tsx:731
+	// Reference: src/components/postEditor/PostEditorMetabox.tsx:775
 	__( 'The notification button URL ensures that subscribers land on the designated page. By default, it will be set to the post URL. If you prefer to redirect them to a custom landing page, please update this field.', 'pushengage' ),
 
-	// Reference: src/components/postEditor/PostEditorMetabox.tsx:858
+	// Reference: src/components/postEditor/PostEditorMetabox.tsx:902
 	__( 'Upgrade to Business Plan', 'pushengage' ),
+
+	// Reference: src/components/whatsnew/banner/index.tsx:42
+	__( 'Close banner', 'pushengage' ),
+
+	// Reference: src/components/whatsnew/helper.ts:42
+	__( '🚀 PushEngage Update: New Features to Supercharge Your Campaigns!', 'pushengage' ),
+
+	// Reference: src/components/whatsnew/helper.ts:48
+	__( '🌟 Automatic WooCommerce Integration', 'pushengage' ),
+
+	// Reference: src/components/whatsnew/helper.ts:49
+	__( 'No more manual setup! PushEngage now automatically integrates with WooCommerce. Simply create your eCommerce campaigns, and you’re ready to launch them effortlessly.', 'pushengage' ),
+
+	// Reference: src/components/whatsnew/helper.ts:56
+	__( '✨ Pre-Publish Checklist for Blog Posts', 'pushengage' ),
+
+	// Reference: src/components/whatsnew/helper.ts:57
+	__( 'Streamline your content promotion. When publishing a post, you’ll now receive a pre-publish checklist, allowing you to confirm push notification settings to promote your content right when it goes live.', 'pushengage' ),
+
+	// Reference: src/components/whatsnew/helper.ts:75
+	__( '🚀 Improved Onboarding Experience', 'pushengage' ),
+
+	// Reference: src/components/whatsnew/helper.ts:76
+	__( 'Getting started just got easier! The PushEngage dashboard will now suggest campaigns tailored to your goals, helping you launch faster with pre-built campaign templates that drive results.', 'pushengage' ),
+
+	// Reference: src/components/whatsnew/helper.ts:85
+	__( '<strong>Get Started Today!</strong> With these new updates, growing your audience and driving engagement has never been simpler. Log in now to explore the new features and start creating high-impact campaigns in minutes!', 'pushengage' ),
 
 	// Reference: src/constants/confirmationModal.ts:11
 	__( 'Are you sure to resend this notification?', 'pushengage' ),
@@ -2131,134 +2221,179 @@ $generated_i18n_strings = array(
 	// Reference: src/pages/pushBroadcast/List.tsx:312
 	__( 'No', 'pushengage' ),
 
+	// Reference: src/constants/planFeatures.ts:102
+	__( 'Track campaign performance', 'pushengage' ),
+
+	// Reference: src/constants/planFeatures.ts:103
+	__( 'Send automated drip campaigns', 'pushengage' ),
+
+	// Reference: src/constants/planFeatures.ts:104
+	__( 'A/B test your broadcasts', 'pushengage' ),
+
+	// Reference: src/constants/planFeatures.ts:105
+	__( 'Send campaigns in subscribers’ timezone', 'pushengage' ),
+
 	// Reference: src/constants/planFeatures.ts:106
-	__( 'Upgrade to PushEngage Business and Select an Audience Group for Your Push Notifications', 'pushengage' ),
+	__( 'Get detailed opt-in analytics', 'pushengage' ),
+
+	// Reference: src/constants/planFeatures.ts:107
+	__( 'Manage multiple users for your account', 'pushengage' ),
+
+	// Reference: src/constants/planFeatures.ts:108
+	__( 'Add multiple sites to a single account', 'pushengage' ),
+
+	// Reference: src/constants/planFeatures.ts:109
+	__( 'Get priority support and assistance', 'pushengage' ),
 
 	// Reference: src/constants/planFeatures.ts:11
 	__( 'Track engagement and performance', 'pushengage' ),
 
+	// Reference: src/constants/planFeatures.ts:111
+	__( 'Style your <a>push notification optins</a> based on detailed analytics. Grow your subscriber list faster using data. Upgrade to the Premium plan now and you can also:', 'pushengage' ),
+
 	// Reference: src/constants/planFeatures.ts:12
 	__( 'Create custom popup modals', 'pushengage' ),
 
-	// Reference: src/constants/planFeatures.ts:122
-	__( 'Upgrade to PushEngage Business and Create a Custom Audience for Your Push Notifications', 'pushengage' ),
+	// Reference: src/constants/planFeatures.ts:121
+	__( 'RSS Autopush is a Pro Feature.', 'pushengage' ),
 
-	// Reference: src/constants/planFeatures.ts:128
-	__( '<a>Create an Audience Group</a> and personalize your notification based on segments, user’s geolocation, device and more. Upgrade to the Business plan now and you can also:', 'pushengage' ),
+	// Reference: src/constants/planFeatures.ts:122
+	__( 'Point to your RSS feed and Send automatic campaigns to the user for every new post published.', 'pushengage' ),
 
 	// Reference: src/constants/planFeatures.ts:13
 	__( 'Segment users based on their actions', 'pushengage' ),
 
-	// Reference: src/constants/planFeatures.ts:138
-	__( 'Upgrade to PushEngage Business and Send Notifications with Multiple Call-to-Action Buttons', 'pushengage' ),
+	// Reference: src/constants/planFeatures.ts:132
+	__( 'Upgrade to PushEngage Business and Select an Audience Group for Your Push Notifications', 'pushengage' ),
 
 	// Reference: src/constants/planFeatures.ts:14
 	__( 'Create Audience Groups for retargeting', 'pushengage' ),
 
-	// Reference: src/constants/planFeatures.ts:144
-	__( 'Link up to 3 landing pages in a single rich notification and get higher clicks from <a>multi-action notifications</a>. Upgrade to the Business plan now and you can also:', 'pushengage' ),
+	// Reference: src/constants/planFeatures.ts:148
+	__( 'Upgrade to PushEngage Business and Create a Custom Audience for Your Push Notifications', 'pushengage' ),
 
 	// Reference: src/constants/planFeatures.ts:15
 	__( 'Schedule campaigns in advance', 'pushengage' ),
 
-	// Reference: src/constants/planFeatures.ts:155
-	__( 'Upgrade to PushEngage Business and Send Notifications with Large Image', 'pushengage' ),
+	// Reference: src/constants/planFeatures.ts:154
+	__( '<a>Create an Audience Group</a> and personalize your notification based on segments, user’s geolocation, device and more. Upgrade to the Business plan now and you can also:', 'pushengage' ),
 
 	// Reference: src/constants/planFeatures.ts:16
 	__( 'Send campaigns in subscriber timezones', 'pushengage' ),
 
-	// Reference: src/constants/planFeatures.ts:161
-	__( 'Make your campaign more appealing and get higher clicks from <a>large image notifications</a>. Upgrade to the Business plan now and you can also:', 'pushengage' ),
+	// Reference: src/constants/planFeatures.ts:164
+	__( 'Upgrade to PushEngage Business and Send Notifications with Multiple Call-to-Action Buttons', 'pushengage' ),
 
 	// Reference: src/constants/planFeatures.ts:17
 	__( 'Create personalized campaigns', 'pushengage' ),
 
-	// Reference: src/constants/planFeatures.ts:172
-	__( 'Upgrade to PushEngage Business and Schedule Your Notifications', 'pushengage' ),
-
-	// Reference: src/constants/planFeatures.ts:175
-	__( '<a>Schedule your push notifications</a> along with the rest of your content calendar. Simply set a date and time and your notifications will get delivered automatically. Upgrade to the Business plan now and you can also:', 'pushengage' ),
+	// Reference: src/constants/planFeatures.ts:170
+	__( 'Link up to 3 landing pages in a single rich notification and get higher clicks from <a>multi-action notifications</a>. Upgrade to the Business plan now and you can also:', 'pushengage' ),
 
 	// Reference: src/constants/planFeatures.ts:18
 	__( 'Send rich push for better engagement', 'pushengage' ),
 
-	// Reference: src/constants/planFeatures.ts:184
+	// Reference: src/constants/planFeatures.ts:181
+	__( 'Upgrade to PushEngage Business and Send Notifications with Large Image', 'pushengage' ),
+
+	// Reference: src/constants/planFeatures.ts:187
+	__( 'Make your campaign more appealing and get higher clicks from <a>large image notifications</a>. Upgrade to the Business plan now and you can also:', 'pushengage' ),
+
+	// Reference: src/constants/planFeatures.ts:198
+	__( 'Upgrade to PushEngage Business and Schedule Your Notifications', 'pushengage' ),
+
+	// Reference: src/constants/planFeatures.ts:201
+	__( '<a>Schedule your push notifications</a> along with the rest of your content calendar. Simply set a date and time and your notifications will get delivered automatically. Upgrade to the Business plan now and you can also:', 'pushengage' ),
+
+	// Reference: src/constants/planFeatures.ts:209
 	__( 'Triggered Campaign is a Pro Feature', 'pushengage' ),
 
-	// Reference: src/constants/planFeatures.ts:197
-	__( 'Upgrade to PushEngage Business and Send Recurring Notifications', 'pushengage' ),
-
-	// Reference: src/constants/planFeatures.ts:200
-	__( '<a>Send recurring notifications</a> to boost weekly sales. Create multiple traffic streams for your sales and promos. Upgrade to the Business plan now and you can also:', 'pushengage' ),
-
-	// Reference: src/constants/planFeatures.ts:211
-	__( 'Remove PushEngage Branding is a Pro feature.', 'pushengage' ),
-
-	// Reference: src/constants/planFeatures.ts:212
-	__( 'Remove the PushEngage branding from the subscription Opt-in', 'pushengage' ),
+	// Reference: src/constants/planFeatures.ts:216
+	__( 'WooCommerce Integration is a Pro Feature', 'pushengage' ),
 
 	// Reference: src/constants/planFeatures.ts:218
-	__( 'Upgrade to PushEngage Business and Collect Push Notification Subscribers in a Custom Subdomain', 'pushengage' ),
+	__( 'PushEngage integrates seamlessly with WooCommerce, enabling automated campaign setup and personalization. Customizable templates and pre-built playbooks simplify targeted notifications, like cart abandonment alerts, requiring minimal developer input. This integration optimizes marketing efforts, driving sales and enhancing customer engagement effortlessly.', 'pushengage' ),
 
-	// Reference: src/constants/planFeatures.ts:222
-	__( 'Collect subscribers for your website through a custom URL for your better branding. Your subscriber list should be portable. Upgrade to the Business plan now and you can also:', 'pushengage' ),
+	// Reference: src/constants/planFeatures.ts:225
+	__( 'Multiple Notification in Triggered Campaign is a Pro Feature.', 'pushengage' ),
 
-	// Reference: src/constants/planFeatures.ts:231
-	__( 'Multi Site Sending is a Pro Feature', 'pushengage' ),
+	// Reference: src/constants/planFeatures.ts:226
+	__( 'Schedule a triggered campaign with multiple notifications to re-engage, Cross-sell, Lead Capture and many more advanced ones based on audience segments, location or device type.', 'pushengage' ),
 
-	// Reference: src/constants/planFeatures.ts:237
-	__( 'Sending notification in subscriber timezone is a Pro Feature.', 'pushengage' ),
+	// Reference: src/constants/planFeatures.ts:235
+	__( 'Upgrade to PushEngage Business and Send Recurring Notifications', 'pushengage' ),
 
 	// Reference: src/constants/planFeatures.ts:238
-	__( 'Optimize your notifications by user timezone and improve user engagement.', 'pushengage' ),
+	__( '<a>Send recurring notifications</a> to boost weekly sales. Create multiple traffic streams for your sales and promos. Upgrade to the Business plan now and you can also:', 'pushengage' ),
 
-	// Reference: src/constants/planFeatures.ts:247
-	__( 'Upgrade to PushEngage Premium and A/B Test Your Push Broadcasts', 'pushengage' ),
+	// Reference: src/constants/planFeatures.ts:249
+	__( 'Remove PushEngage Branding is a Pro feature.', 'pushengage' ),
 
 	// Reference: src/constants/planFeatures.ts:250
-	__( 'A/B test any element in your push notifications. Use our Intelligent <a>A/B testing</a> and get better clicks and more revenue. Upgrade to the Premium plan now and you can also:', 'pushengage' ),
+	__( 'Remove the PushEngage branding from the subscription Opt-in', 'pushengage' ),
+
+	// Reference: src/constants/planFeatures.ts:256
+	__( 'Upgrade to PushEngage Business and Collect Push Notification Subscribers in a Custom Subdomain', 'pushengage' ),
 
 	// Reference: src/constants/planFeatures.ts:260
+	__( 'Collect subscribers for your website through a custom URL for your better branding. Your subscriber list should be portable. Upgrade to the Business plan now and you can also:', 'pushengage' ),
+
+	// Reference: src/constants/planFeatures.ts:269
+	__( 'Multi Site Sending is a Pro Feature', 'pushengage' ),
+
+	// Reference: src/constants/planFeatures.ts:275
+	__( 'Sending notification in subscriber timezone is a Pro Feature.', 'pushengage' ),
+
+	// Reference: src/constants/planFeatures.ts:276
+	__( 'Optimize your notifications by user timezone and improve user engagement.', 'pushengage' ),
+
+	// Reference: src/constants/planFeatures.ts:285
+	__( 'Upgrade to PushEngage Premium and A/B Test Your Push Broadcasts', 'pushengage' ),
+
+	// Reference: src/constants/planFeatures.ts:288
+	__( 'A/B test any element in your push notifications. Use our Intelligent <a>A/B testing</a> and get better clicks and more revenue. Upgrade to the Premium plan now and you can also:', 'pushengage' ),
+
+	// Reference: src/constants/planFeatures.ts:298
 	__( 'Upgrade and Unlock Multiple User Support.', 'pushengage' ),
 
-	// Reference: src/constants/planFeatures.ts:261
+	// Reference: src/constants/planFeatures.ts:299
 	__( 'Manage multiple users with access control under a single account with a single billing.', 'pushengage' ),
 
-	// Reference: src/constants/planFeatures.ts:270
+	// Reference: src/constants/planFeatures.ts:308
 	__( 'Upgrade and Manage Multiple Sites.', 'pushengage' ),
 
-	// Reference: src/constants/planFeatures.ts:271
+	// Reference: src/constants/planFeatures.ts:309
 	__( 'Add and manage multiple websites under a single account with a single billing.', 'pushengage' ),
-
-	// Reference: src/constants/planFeatures.ts:280
-	__( 'Upgrade to PushEngage Premium and Send Drip Autoresponder Push Notifications', 'pushengage' ),
-
-	// Reference: src/constants/planFeatures.ts:286
-	__( '<a>Schedule a drip campaign</a> with multiple notifications for re-engagement, cross-selling, upselling and much more. Personalize your campaigns using Segments, Audience Groups, and Attributes. Upgrade to the Premium plan now and you can also:', 'pushengage' ),
-
-	// Reference: src/constants/planFeatures.ts:294
-	__( 'Multiple Notification in Drip Autoresponders is a Pro Feature.', 'pushengage' ),
-
-	// Reference: src/constants/planFeatures.ts:295
-	__( 'Schedule a drip campaign with multiple notifications to re-engage, Cross-sell, Lead Capture and many more advanced ones based on audience segments, location or device type.', 'pushengage' ),
-
-	// Reference: src/constants/planFeatures.ts:304
-	__( 'Upgrade to PushEngage Premium to Enable Goal Tracking', 'pushengage' ),
-
-	// Reference: src/constants/planFeatures.ts:307
-	__( 'Track how your <a>push notifications are performing</a>. Create custom goals and stay on track with your marketing strategy. Upgrade to the Premium plan now and you can also:', 'pushengage' ),
 
 	// Reference: src/constants/planFeatures.ts:31
 	__( 'Send personalized automated campaigns', 'pushengage' ),
 
+	// Reference: src/constants/planFeatures.ts:318
+	__( 'Upgrade to PushEngage Premium and Send Drip Autoresponder Push Notifications', 'pushengage' ),
+
 	// Reference: src/constants/planFeatures.ts:32
 	__( 'Send price drop and back-in-stock alerts', 'pushengage' ),
+
+	// Reference: src/constants/planFeatures.ts:324
+	__( '<a>Schedule a drip campaign</a> with multiple notifications for re-engagement, cross-selling, upselling and much more. Personalize your campaigns using Segments, Audience Groups, and Attributes. Upgrade to the Premium plan now and you can also:', 'pushengage' ),
 
 	// Reference: src/constants/planFeatures.ts:33
 	__( 'Boost revenue with abandoned cart recovery', 'pushengage' ),
 
+	// Reference: src/constants/planFeatures.ts:332
+	__( 'Multiple Notification in Drip Autoresponders is a Pro Feature.', 'pushengage' ),
+
+	// Reference: src/constants/planFeatures.ts:333
+	__( 'Schedule a drip campaign with multiple notifications to re-engage, Cross-sell, Lead Capture and many more advanced ones based on audience segments, location or device type.', 'pushengage' ),
+
 	// Reference: src/constants/planFeatures.ts:34
 	__( 'Use attributes tags for personalized campaigns', 'pushengage' ),
+
+	// Reference: src/constants/planFeatures.ts:342
+	__( 'Upgrade to PushEngage Premium to Enable Goal Tracking', 'pushengage' ),
+
+	// Reference: src/constants/planFeatures.ts:345
+	__( 'Track how your <a>push notifications are performing</a>. Create custom goals and stay on track with your marketing strategy. Upgrade to the Premium plan now and you can also:', 'pushengage' ),
 
 	// Reference: src/constants/planFeatures.ts:35
 	__( 'Create a dynamic campaign for cross-sell, up-sell & review', 'pushengage' ),
@@ -2266,50 +2401,35 @@ $generated_i18n_strings = array(
 	// Reference: src/constants/planFeatures.ts:36
 	__( 'Get VIP assistance from support team', 'pushengage' ),
 
+	// Reference: src/constants/planFeatures.ts:39
+	__( 'Drive higher engagement and conversions with personalized trigger campaigns tailored to individual customer actions.', 'pushengage' ),
+
 	// Reference: src/constants/planFeatures.ts:43
+	__( 'Capitalize on timely opportunities such as cart abandonment or price drops to re-engage customers and boost sales.', 'pushengage' ),
+
+	// Reference: src/constants/planFeatures.ts:47
+	__( 'Automate marketing responses for streamlined efficiency and consistent customer communication.', 'pushengage' ),
+
+	// Reference: src/constants/planFeatures.ts:51
+	__( 'Enhance the customer experience by delivering relevant messages that address specific needs and preferences.', 'pushengage' ),
+
+	// Reference: src/constants/planFeatures.ts:55
+	__( 'Increase revenue through targeted upsell, cross-sell, and inventory alert campaigns.', 'pushengage' ),
+
+	// Reference: src/constants/planFeatures.ts:59
+	__( 'Gain a competitive edge by leveraging trigger campaigns to stay ahead in the market.', 'pushengage' ),
+
+	// Reference: src/constants/planFeatures.ts:69
 	__( 'Upgrade to PushEngage Business to Segment Your Subscribers', 'pushengage' ),
 
-	// Reference: src/constants/planFeatures.ts:46
+	// Reference: src/constants/planFeatures.ts:72
 	__( 'Send more targeted and <a>personalized push notifications</a> using segments. Upgrade to the Business plan now and you can also:', 'pushengage' ),
 
-	// Reference: src/constants/planFeatures.ts:56
+	// Reference: src/constants/planFeatures.ts:82
 	__( 'Upgrade to PushEngage Business and Create Audience Groups for Your Push Notifications', 'pushengage' ),
 
-	// Reference: src/constants/planFeatures.ts:73
+	// Reference: src/constants/planFeatures.ts:99
 	__( 'Upgrade to PushEngage Premium and Get Detailed Optin Analytics', 'pushengage' ),
-
-	// Reference: src/constants/planFeatures.ts:76
-	__( 'Track campaign performance', 'pushengage' ),
-
-	// Reference: src/constants/planFeatures.ts:77
-	__( 'Send automated drip campaigns', 'pushengage' ),
-
-	// Reference: src/constants/planFeatures.ts:78
-	__( 'A/B test your broadcasts', 'pushengage' ),
-
-	// Reference: src/constants/planFeatures.ts:79
-	__( 'Send campaigns in subscribers’ timezone', 'pushengage' ),
-
-	// Reference: src/constants/planFeatures.ts:80
-	__( 'Get detailed opt-in analytics', 'pushengage' ),
-
-	// Reference: src/constants/planFeatures.ts:81
-	__( 'Manage multiple users for your account', 'pushengage' ),
-
-	// Reference: src/constants/planFeatures.ts:82
-	__( 'Add multiple sites to a single account', 'pushengage' ),
-
-	// Reference: src/constants/planFeatures.ts:83
-	__( 'Get priority support and assistance', 'pushengage' ),
-
-	// Reference: src/constants/planFeatures.ts:85
-	__( 'Style your <a>push notification optins</a> based on detailed analytics. Grow your subscriber list faster using data. Upgrade to the Premium plan now and you can also:', 'pushengage' ),
-
-	// Reference: src/constants/planFeatures.ts:95
-	__( 'RSS Autopush is a Pro Feature.', 'pushengage' ),
-
-	// Reference: src/constants/planFeatures.ts:96
-	__( 'Point to your RSS feed and Send automatic campaigns to the user for every new post published.', 'pushengage' ),
 
 	// Reference: src/errors/APIError.ts:30
 	__( 'There was an error connecting to the PushEngage server. Please try again.', 'pushengage' ),
@@ -2553,25 +2673,25 @@ $generated_i18n_strings = array(
 	// Reference: src/pages/NotFound.tsx:27
 	__( 'Go To Dashboard', 'pushengage' ),
 
-	// Reference: src/pages/aboutUs/AboutUs.tsx:100
+	// Reference: src/pages/aboutUs/AboutUs.tsx:103
 	__( 'So, we created a push notification software that anyone can afford and use to grow their business. Today, 10,000+ businesses use PushEngage to send 15+ Billion targeted push notifications each month.', 'pushengage' ),
 
-	// Reference: src/pages/aboutUs/AboutUs.tsx:120
+	// Reference: src/pages/aboutUs/AboutUs.tsx:123
 	__( 'But don’t take our word for it! You should check out our <a>case studies</a> on how we’ve helped real businesses grow using push notifications. We’ve won the G2Crowd High Performer Award for more than 3 years straight. We also have a 4.9 star rating on Capterra and a 5 star rating on GetApp.', 'pushengage' ),
 
-	// Reference: src/pages/aboutUs/AboutUs.tsx:127
+	// Reference: src/pages/aboutUs/AboutUs.tsx:130
 	__( 'Our Customer Success team has an Average Time to First Response of under an hour with an average Happiness Rating of over 90%. Our Customer Success Specialists even help build a personalized campaign FOR FREE with each purchase of PushEngage to get our customers started with a big win.', 'pushengage' ),
 
-	// Reference: src/pages/aboutUs/AboutUs.tsx:133
+	// Reference: src/pages/aboutUs/AboutUs.tsx:136
 	__( 'Thank you for putting your trust and confidence in PushEngage. That’s exactly what’s helped us grow into the best push notification service in the world.', 'pushengage' ),
 
-	// Reference: src/pages/aboutUs/AboutUs.tsx:168
+	// Reference: src/pages/aboutUs/AboutUs.tsx:172
 	__( 'Status:', 'pushengage' ),
 
-	// Reference: src/pages/aboutUs/AboutUs.tsx:88
+	// Reference: src/pages/aboutUs/AboutUs.tsx:91
 	__( 'Welcome to PushEngage, the #1 web push software in the world. We help businesses get repeat traffic, engagement, and sales using automated campaigns.', 'pushengage' ),
 
-	// Reference: src/pages/aboutUs/AboutUs.tsx:94
+	// Reference: src/pages/aboutUs/AboutUs.tsx:97
 	__( 'Push notifications can be an amazing marketing tool to grow your site\'s repeat traffic, engagement, and sales. But when we started, most services were built only for large businesses with a development team. Not to mention how costly they were.', 'pushengage' ),
 
 	// Reference: src/pages/aboutUs/GettingStarted.tsx:100
@@ -2590,54 +2710,66 @@ $generated_i18n_strings = array(
 	__( 'Integrations: Integrates with a variety of tools and platforms such as Google Analytics, Zapier, and WooCommerce', 'pushengage' ),
 
 	// Reference: src/pages/aboutUs/GettingStarted.tsx:155
-	__( 'Creating Your First Campaign', 'pushengage' ),
+	__( 'Boost Repeat Traffic & Expand Reach', 'pushengage' ),
 
 	// Reference: src/pages/aboutUs/GettingStarted.tsx:158
-	__( 'Let\'s turn your website visitors into loyal superfans. The first step is to create your own push notification campaigns.', 'pushengage' ),
+	__( 'To get started with your WordPress push notification plugin, follow these straightforward steps to effectively convert visitors into subscribers and engage them with timely updates. This guide will walk you through the process of setting up pop-ups to capture subscribers and how to notify them with push campaigns when new posts are published.', 'pushengage' ),
 
-	// Reference: src/pages/aboutUs/GettingStarted.tsx:174
-	__( 'Get started with your first push campaign in WordPress', 'pushengage' ),
+	// Reference: src/pages/aboutUs/GettingStarted.tsx:164
+	__( 'Step 1: Convert Visitors to Subscribers by Styling the Right Popup', 'pushengage' ),
 
-	// Reference: src/pages/aboutUs/GettingStarted.tsx:179
-	__( 'On average, you can build a push notification subscriber list 3-4x faster than an email list. We\'ve put together some push notification campaigns that are low-effort but high-impact.', 'pushengage' ),
+	// Reference: src/pages/aboutUs/GettingStarted.tsx:170
+	__( 'The first step in using the push notification plugin is to attract and convert visitors into subscribers. This is achieved by designing an eye-catching popup that appears on your site.', 'pushengage' ),
 
-	// Reference: src/pages/aboutUs/GettingStarted.tsx:185
-	__( 'Here are some excellent resources to get you started in 5 minutes or less:', 'pushengage' ),
+	// Reference: src/pages/aboutUs/GettingStarted.tsx:176
+	__( 'Step 2: Notify Subscribers through Push Campaign While Adding Posts', 'pushengage' ),
 
-	// Reference: src/pages/aboutUs/GettingStarted.tsx:202
-	__( '75 Epic Push Notification Examples You Can Steal Right Now', 'pushengage' ),
+	// Reference: src/pages/aboutUs/GettingStarted.tsx:182
+	__( 'Once you have subscribers, the next step is to keep them engaged by sending notifications about new content or updates to their devices.', 'pushengage' ),
 
-	// Reference: src/pages/aboutUs/GettingStarted.tsx:215
-	__( '7 Push Notification Best Practices to Get Instant Traffic', 'pushengage' ),
+	// Reference: src/pages/aboutUs/GettingStarted.tsx:188
+	__( 'You can watch step-by-step video tutorials on setting up and utilizing your WordPress push notification plugin and optimizing your strategy.', 'pushengage' ),
+
+	// Reference: src/pages/aboutUs/GettingStarted.tsx:205
+	__( 'Quick Start Video Guide', 'pushengage' ),
+
+	// Reference: src/pages/aboutUs/GettingStarted.tsx:213
+	__( 'Designing Popup Modals for WordPress Site', 'pushengage' ),
+
+	// Reference: src/pages/aboutUs/GettingStarted.tsx:221
+	__( 'Enable & Send Push Notifications from Post Editor', 'pushengage' ),
 
 	// Reference: src/pages/aboutUs/GettingStarted.tsx:229
-	__( 'How to Use Your WordPress Blog Categories to Create Subscriber Segments', 'pushengage' ),
+	__( 'Map Existing Categories with PushEngage Segments', 'pushengage' ),
 
-	// Reference: src/pages/aboutUs/GettingStarted.tsx:252
+	// Reference: src/pages/aboutUs/GettingStarted.tsx:237
+	__( 'Create and Send Push Broadcasts', 'pushengage' ),
+
+	// Reference: src/pages/aboutUs/GettingStarted.tsx:246
 	__( 'Get PushEngage And Unlock All The Powerful Features', 'pushengage' ),
 
-	// Reference: src/pages/aboutUs/GettingStarted.tsx:256
+	// Reference: src/pages/aboutUs/GettingStarted.tsx:250
 	__( 'As a valued PushEngage Lite user, we wanted to thank you for your loyalty and let you know about all the great benefits you can get by upgrading to PushEngage Pro. The premium version offers an array of powerful features that have made PushEngage the top-rated WordPress Web Push Notification service provider.', 'pushengage' ),
 
-	// Reference: src/pages/aboutUs/GettingStarted.tsx:262
+	// Reference: src/pages/aboutUs/GettingStarted.tsx:256
 	__( 'Experience the full potential of PushEngage and see why it\'s trusted by over 50,000 websites. Upgrade today and take your push notifications to the next level!', 'pushengage' ),
+
+	// Reference: src/pages/aboutUs/GettingStarted.tsx:276
+	__( 'Get PushEngage Today and Unlock all the Powerful Features', 'pushengage' ),
+
+	// Reference: src/pages/aboutUs/GettingStarted.tsx:279
+	__( 'Bonus: PushEngage free users get', 'pushengage' ),
 
 	// Reference: src/pages/aboutUs/GettingStarted.tsx:28
 	__( 'How to Start Collecting Web Push Subscribers in WordPress?', 'pushengage' ),
 
-	// Reference: src/pages/aboutUs/GettingStarted.tsx:282
-	__( 'Get PushEngage Today and Unlock all the Powerful Features', 'pushengage' ),
-
-	// Reference: src/pages/aboutUs/GettingStarted.tsx:285
-	__( 'Bonus: PushEngage free users get', 'pushengage' ),
-
 	// Reference: src/pages/aboutUs/GettingStarted.tsx:29
 	__( 'Before you can send campaigns, you need to start collecting subscribers using a popup modal. Check out how you can get started in 10 minutes or less.', 'pushengage' ),
 
-	// Reference: src/pages/aboutUs/GettingStarted.tsx:297
+	// Reference: src/pages/aboutUs/GettingStarted.tsx:291
 	__( '50% off regular price', 'pushengage' ),
 
-	// Reference: src/pages/aboutUs/GettingStarted.tsx:299
+	// Reference: src/pages/aboutUs/GettingStarted.tsx:293
 	__( ', automatically applied at checkout.', 'pushengage' ),
 
 	// Reference: src/pages/aboutUs/GettingStarted.tsx:39
@@ -2709,7 +2841,7 @@ $generated_i18n_strings = array(
 	// Reference: src/pages/analytics/OptinAnalytics.tsx:181
 	// Reference: src/pages/analytics/Overview.tsx:123
 	// Reference: src/pages/audience/Subscribers.tsx:131
-	// Reference: src/pages/dashboard/Dashboard.tsx:116
+	// Reference: src/pages/dashboard/Dashboard.tsx:117
 	__( 'You can only view analytics of maximum 12 months at a time.', 'pushengage' ),
 
 	// Reference: src/pages/analytics/OptinAnalytics.tsx:192
@@ -2796,6 +2928,7 @@ $generated_i18n_strings = array(
 	__( 'You can use segmentation to send targeted push campaigns that get more views and clicks. Use your WordPress blog categories to create segments.', 'pushengage' ),
 
 	// Reference: src/pages/audience/Segments.tsx:219
+	// Reference: src/pages/triggeredCampaign/List.tsx:287
 	__( 'Need some help? Check out this tutorial on how to', 'pushengage' ),
 
 	// Reference: src/pages/audience/Segments.tsx:228
@@ -2839,20 +2972,20 @@ $generated_i18n_strings = array(
 	__( 'Drip Automations', 'pushengage' ),
 
 	// Reference: src/pages/dashboard/CampaignDropdownMenuBtn.tsx:37
-	// Reference: src/pages/triggeredCampaign/Edit.tsx:263
-	// Reference: src/pages/triggeredCampaign/List.tsx:261
+	// Reference: src/pages/triggeredCampaign/CreateOrEdit.tsx:306
+	// Reference: src/pages/triggeredCampaign/List.tsx:304
 	__( 'Triggered Campaigns', 'pushengage' ),
 
-	// Reference: src/pages/dashboard/Dashboard.tsx:215
+	// Reference: src/pages/dashboard/Dashboard.tsx:217
 	__( 'Read PushEngage Guide', 'pushengage' ),
 
-	// Reference: src/pages/dashboard/Dashboard.tsx:227
+	// Reference: src/pages/dashboard/Dashboard.tsx:229
 	__( 'Access our premium support today', 'pushengage' ),
 
-	// Reference: src/pages/dashboard/Dashboard.tsx:235
+	// Reference: src/pages/dashboard/Dashboard.tsx:237
 	__( 'View the changelog', 'pushengage' ),
 
-	// Reference: src/pages/dashboard/Dashboard.tsx:248
+	// Reference: src/pages/dashboard/Dashboard.tsx:250
 	__( 'Getting started? Read the beginners guide', 'pushengage' ),
 
 	// Reference: src/pages/dashboard/RecentNotifications.tsx:197
@@ -2861,29 +2994,50 @@ $generated_i18n_strings = array(
 	// Reference: src/pages/dashboard/RecentNotifications.tsx:213
 	__( 'Create a Notification', 'pushengage' ),
 
-	// Reference: src/pages/dashboard/Strategies.tsx:62
-	__( 'Goal Tracking will help you assign conversion goals & value to your notification campaigns.', 'pushengage' ),
+	// Reference: src/pages/dashboard/Strategies.tsx:102
+	__( 'Increase engagement by sending targeted push campaigns. Automatically map your categories to segments using category segmentation for effective targeting.', 'pushengage' ),
 
-	// Reference: src/pages/dashboard/Strategies.tsx:69
-	__( 'Enable this Tracking', 'pushengage' ),
+	// Reference: src/pages/dashboard/Strategies.tsx:110
+	__( 'Add Segments', 'pushengage' ),
 
-	// Reference: src/pages/dashboard/Strategies.tsx:76
-	__( 'Category Segmentation', 'pushengage' ),
+	// Reference: src/pages/dashboard/Strategies.tsx:111
+	__( 'Create Segments', 'pushengage' ),
 
-	// Reference: src/pages/dashboard/Strategies.tsx:77
-	__( 'Automatically map your categories to segment using category segmentation to send out more targeted push campaigns.', 'pushengage' ),
+	// Reference: src/pages/dashboard/Strategies.tsx:118
+	__( 'Boost Productivity With Auto Push', 'pushengage' ),
 
-	// Reference: src/pages/dashboard/Strategies.tsx:84
-	__( 'Add this Segment', 'pushengage' ),
+	// Reference: src/pages/dashboard/Strategies.tsx:119
+	__( 'Easily streamline your workflow by setting up auto push notifications while drafting your posts in the Post Editor. Reach your audience effortlessly and save valuable time for other tasks.', 'pushengage' ),
 
-	// Reference: src/pages/dashboard/Strategies.tsx:91
-	__( 'Opt-in Analytics', 'pushengage' ),
+	// Reference: src/pages/dashboard/Strategies.tsx:126
+	__( 'Enable Now', 'pushengage' ),
 
-	// Reference: src/pages/dashboard/Strategies.tsx:92
-	__( 'Analyze your subscription rate and understand which style of Subscription Opt-in works best.', 'pushengage' ),
+	// Reference: src/pages/dashboard/Strategies.tsx:64
+	__( 'Recover Lost Sales and Boost Conversions', 'pushengage' ),
 
-	// Reference: src/pages/dashboard/Strategies.tsx:99
-	__( 'Enable this Analytics', 'pushengage' ),
+	// Reference: src/pages/dashboard/Strategies.tsx:65
+	__( 'Enable our ready-made cart and browse abandonment features to win back customers and drive sales. Customize with dynamic product details or use our pre-designed playbooks for ease and efficiency.', 'pushengage' ),
+
+	// Reference: src/pages/dashboard/Strategies.tsx:72
+	__( 'Enable Trigger Campaigns', 'pushengage' ),
+
+	// Reference: src/pages/dashboard/Strategies.tsx:79
+	__( 'Track Your ROI', 'pushengage' ),
+
+	// Reference: src/pages/dashboard/Strategies.tsx:80
+	__( 'Goal Tracking lets you set goals and see how well your notification campaigns are doing. Understand how much each campaign helps your business grow.', 'pushengage' ),
+
+	// Reference: src/pages/dashboard/Strategies.tsx:87
+	__( 'Enable Goal Tracking', 'pushengage' ),
+
+	// Reference: src/pages/dashboard/Strategies.tsx:95
+	__( 'Segmenting Your Audience', 'pushengage' ),
+
+	// Reference: src/pages/dashboard/Strategies.tsx:96
+	__( 'Map Categories to Segments', 'pushengage' ),
+
+	// Reference: src/pages/dashboard/Strategies.tsx:98
+	__( 'Organize your audience into groups based on categories or activities. Send targeted campaigns to boost click-through rates, drive more traffic, and achieve higher sales conversions.', 'pushengage' ),
 
 	// Reference: src/pages/dashboard/WelcomePanel.tsx:38
 	__( 'Welcome to PushEngage', 'pushengage' ),
@@ -2962,11 +3116,11 @@ $generated_i18n_strings = array(
 
 	// Reference: src/pages/design/TargetingRule.tsx:482
 	// Reference: src/pages/settings/advancedSettings/index.tsx:594
-	// Reference: src/pages/settings/autoPush/index.tsx:312
+	// Reference: src/pages/settings/autoPush/index.tsx:323
 	// Reference: src/pages/settings/defaultSettings/index.tsx:610
-	// Reference: src/pages/settings/integrations/woocommerce/index.tsx:373
+	// Reference: src/pages/settings/integrations/woocommerce/index.tsx:582
 	// Reference: src/pages/settings/misc/index.tsx:142
-	// Reference: src/pages/settings/siteDetails/index.tsx:590
+	// Reference: src/pages/settings/siteDetails/index.tsx:600
 	__( 'Save Changes', 'pushengage' ),
 
 	// Reference: src/pages/design/Widgets.tsx:101
@@ -3088,16 +3242,16 @@ $generated_i18n_strings = array(
 
 	// Reference: src/pages/drip/CreateOrEdit.tsx:162
 	// Reference: src/pages/drip/List.tsx:125
-	// Reference: src/pages/triggeredCampaign/Edit.tsx:163
-	// Reference: src/pages/triggeredCampaign/List.tsx:69
+	// Reference: src/pages/triggeredCampaign/CreateOrEdit.tsx:174
+	// Reference: src/pages/triggeredCampaign/List.tsx:74
 	__( 'Site not connected!', 'pushengage' ),
 
 	// Reference: src/pages/drip/CreateOrEdit.tsx:163
 	__( 'Please connect your site first to create a drip autoresponders', 'pushengage' ),
 
 	// Reference: src/pages/drip/CreateOrEdit.tsx:234
-	// Reference: src/pages/settings/integrations/woocommerce/EditTrigger.tsx:55
-	// Reference: src/pages/triggeredCampaign/Edit.tsx:199
+	// Reference: src/pages/settings/integrations/woocommerce/EditTrigger.tsx:74
+	// Reference: src/pages/triggeredCampaign/CreateOrEdit.tsx:226
 	__( 'Notification %d has following errors.', 'pushengage' ),
 
 	// Reference: src/pages/drip/CreateOrEdit.tsx:290
@@ -3124,7 +3278,7 @@ $generated_i18n_strings = array(
 
 	// Reference: src/pages/drip/List.tsx:287
 	// Reference: src/pages/pushBroadcast/List.tsx:360
-	// Reference: src/pages/triggeredCampaign/List.tsx:262
+	// Reference: src/pages/triggeredCampaign/List.tsx:305
 	__( 'Add New', 'pushengage' ),
 
 	// Reference: src/pages/drip/List.tsx:301
@@ -3135,10 +3289,6 @@ $generated_i18n_strings = array(
 
 	// Reference: src/pages/drip/helper.ts:482
 	__( 'Notification delay should be less than 1826 days', 'pushengage' ),
-
-	// Reference: src/pages/drip/helper.ts:58
-	// Reference: src/pages/triggeredCampaign/helper.ts:77
-	__( 'Paused', 'pushengage' ),
 
 	// Reference: src/pages/pushBroadcast/CreateOrEdit.tsx:1019
 	__( 'Create New Push Broadcast', 'pushengage' ),
@@ -3402,46 +3552,51 @@ $generated_i18n_strings = array(
 	// Reference: src/pages/settings/advancedSettings/index.tsx:572
 	__( 'Private Key Password', 'pushengage' ),
 
-	// Reference: src/pages/settings/autoPush/index.tsx:144
+	// Reference: src/pages/settings/autoPush/index.tsx:145
 	__( 'Auto push settings updated successfully', 'pushengage' ),
 
-	// Reference: src/pages/settings/autoPush/index.tsx:150
+	// Reference: src/pages/settings/autoPush/index.tsx:151
 	__( 'Failed to update auto push settings.', 'pushengage' ),
 
-	// Reference: src/pages/settings/autoPush/index.tsx:176
+	// Reference: src/pages/settings/autoPush/index.tsx:177
 	__( 'You don\'t have permission to create/modify auto push settings. Please contact to your admin.', 'pushengage' ),
 
-	// Reference: src/pages/settings/autoPush/index.tsx:201
-	__( 'Auto Push helps you send push notifications when you publish or edit a post.', 'pushengage' ),
+	// Reference: src/pages/settings/autoPush/index.tsx:203
+	__( 'Auto Push is a convenient feature designed to streamline your workflow by automatically sending push notifications whenever you publish or edit a post. With Auto Push, you can ensure that your audience is promptly notified of any updates or new content you create.', 'pushengage' ),
 
-	// Reference: src/pages/settings/autoPush/index.tsx:210
+	// Reference: src/pages/settings/autoPush/index.tsx:214
+	// Reference: src/pages/settings/integrations/components/IntegrationModal.tsx:49
+	// Reference: src/pages/settings/integrations/woocommerce/index.tsx:341
+	__( 'Watch How to Get Started', 'pushengage' ),
+
+	// Reference: src/pages/settings/autoPush/index.tsx:221
 	__( 'You have active RSS auto push campaign for this site. Please ensure that you really want to send your posts in Push Notification.', 'pushengage' ),
 
-	// Reference: src/pages/settings/autoPush/index.tsx:220
+	// Reference: src/pages/settings/autoPush/index.tsx:231
 	__( 'Auto Push', 'pushengage' ),
 
-	// Reference: src/pages/settings/autoPush/index.tsx:244
+	// Reference: src/pages/settings/autoPush/index.tsx:255
 	__( 'Use featured image from post as notification large image', 'pushengage' ),
 
-	// Reference: src/pages/settings/autoPush/index.tsx:261
+	// Reference: src/pages/settings/autoPush/index.tsx:272
 	__( 'Enable Multi-action buttons', 'pushengage' ),
 
-	// Reference: src/pages/settings/autoPush/index.tsx:266
+	// Reference: src/pages/settings/autoPush/index.tsx:277
 	__( 'Post Types', 'pushengage' ),
 
-	// Reference: src/pages/settings/autoPush/index.tsx:273
+	// Reference: src/pages/settings/autoPush/index.tsx:284
 	__( 'Select Post Types', 'pushengage' ),
 
-	// Reference: src/pages/settings/autoPush/index.tsx:280
+	// Reference: src/pages/settings/autoPush/index.tsx:291
 	__( 'Choose post types for automatic push notifications. Whenever a post is published with one of the selected post types, a push notification will be sent to the specified users.', 'pushengage' ),
 
-	// Reference: src/pages/settings/autoPush/index.tsx:289
+	// Reference: src/pages/settings/autoPush/index.tsx:300
 	__( 'Notification Icon Image ', 'pushengage' ),
 
-	// Reference: src/pages/settings/autoPush/index.tsx:293
+	// Reference: src/pages/settings/autoPush/index.tsx:304
 	__( 'Use featured image from post', 'pushengage' ),
 
-	// Reference: src/pages/settings/autoPush/index.tsx:297
+	// Reference: src/pages/settings/autoPush/index.tsx:308
 	__( 'Use site icon', 'pushengage' ),
 
 	// Reference: src/pages/settings/defaultSettings/index.tsx:234
@@ -3480,69 +3635,108 @@ $generated_i18n_strings = array(
 	// Reference: src/pages/settings/defaultSettings/index.tsx:521
 	__( 'Default Expiry for notifications', 'pushengage' ),
 
-	// Reference: src/pages/settings/integrations/index.tsx:26
+	// Reference: src/pages/settings/integrations/components/IntegrationModal.tsx:40
+	__( 'Show Plugin Details', 'pushengage' ),
+
+	// Reference: src/pages/settings/integrations/index.tsx:118
+	__( 'Connected', 'pushengage' ),
+
+	// Reference: src/pages/settings/integrations/index.tsx:180
+	__( 'WooCommerce PushEngage Integration', 'pushengage' ),
+
+	// Reference: src/pages/settings/integrations/index.tsx:181
+	__( 'Integrate WooCommerce with PushEngage to send automatic push notifications for browse and cart abandonment and more.You will need to install and activate the WooCommerce plugin to connect with PushEngage. Click below to get more details on the plugin.', 'pushengage' ),
+
+	// Reference: src/pages/settings/integrations/index.tsx:190
+	__( 'Connect Integration', 'pushengage' ),
+
+	// Reference: src/pages/settings/integrations/index.tsx:59
 	__( 'WooCommerce', 'pushengage' ),
 
-	// Reference: src/pages/settings/integrations/index.tsx:27
+	// Reference: src/pages/settings/integrations/index.tsx:60
 	__( 'Integrate WooCommerce with PushEngage.', 'pushengage' ),
 
-	// Reference: src/pages/settings/integrations/index.tsx:42
+	// Reference: src/pages/settings/integrations/index.tsx:90
 	__( 'Integrations', 'pushengage' ),
 
-	// Reference: src/pages/settings/integrations/index.tsx:44
+	// Reference: src/pages/settings/integrations/index.tsx:94
 	__( 'Manage PushEngage integrations with third-party apps and services.', 'pushengage' ),
 
-	// Reference: src/pages/settings/integrations/index.tsx:72
-	__( 'No integration items available', 'pushengage' ),
+	// Reference: src/pages/settings/integrations/woocommerce/DashboardNotice.tsx:43
+	__( 'Connect Your WooCommerce Store to PushEngage Today!', 'pushengage' ),
 
-	// Reference: src/pages/settings/integrations/woocommerce/index.tsx:186
-	__( 'WooCommerce integration settings updated successfully', 'pushengage' ),
+	// Reference: src/pages/settings/integrations/woocommerce/DashboardNotice.tsx:44
+	__( 'Enable automated cart and browse abandonment push notifications to boost conversions and effortlessly recover lost sales.', 'pushengage' ),
 
-	// Reference: src/pages/settings/integrations/woocommerce/index.tsx:192
-	__( 'Failed to update WooCommerce integration settings.', 'pushengage' ),
+	// Reference: src/pages/settings/integrations/woocommerce/DashboardNotice.tsx:57
+	__( 'Remind me Later', 'pushengage' ),
 
-	// Reference: src/pages/settings/integrations/woocommerce/index.tsx:243
-	// Reference: src/pages/triggeredCampaign/Selection.tsx:183
-	__( 'Cart Abandonment', 'pushengage' ),
-
-	// Reference: src/pages/settings/integrations/woocommerce/index.tsx:244
-	__( 'Manage cart abandonment trigger settings for WooCommerce', 'pushengage' ),
-
-	// Reference: src/pages/settings/integrations/woocommerce/index.tsx:246
-	__( 'Enable Cart Abandonment', 'pushengage' ),
-
-	// Reference: src/pages/settings/integrations/woocommerce/index.tsx:286
-	__( 'Cart Abandonment Trigger Name', 'pushengage' ),
-
-	// Reference: src/pages/settings/integrations/woocommerce/index.tsx:293
-	__( 'Select Triggered Campaign to attach with WooCommerce cart abandonment.', 'pushengage' ),
-
-	// Reference: src/pages/settings/integrations/woocommerce/index.tsx:307
-	// Reference: src/pages/triggeredCampaign/Selection.tsx:152
-	__( 'Browse Abandonment', 'pushengage' ),
-
-	// Reference: src/pages/settings/integrations/woocommerce/index.tsx:308
-	__( 'Manage browse abandonment trigger settings for WooCommerce', 'pushengage' ),
-
-	// Reference: src/pages/settings/integrations/woocommerce/index.tsx:310
-	__( 'Enable Browse Abandonment', 'pushengage' ),
-
-	// Reference: src/pages/settings/integrations/woocommerce/index.tsx:345
-	__( 'Select Trigger', 'pushengage' ),
-
-	// Reference: src/pages/settings/integrations/woocommerce/index.tsx:351
-	__( 'Browse Abandonment Trigger Name', 'pushengage' ),
-
-	// Reference: src/pages/settings/integrations/woocommerce/index.tsx:358
-	__( 'Select Triggered Campaign to attach with WooCommerce browse abandonment.', 'pushengage' ),
-
-	// Reference: src/pages/settings/integrations/woocommerce/index.tsx:50
+	// Reference: src/pages/settings/integrations/woocommerce/index.tsx:110
 	/* translators: 1 - Random ID string. */
 	__( 'WooCommerce Browse Abandonment-%1$s', 'pushengage' ),
 
-	// Reference: src/pages/settings/integrations/woocommerce/index.tsx:56
+	// Reference: src/pages/settings/integrations/woocommerce/index.tsx:116
 	/* translators: 1 Random ID string. */
 	__( 'WooCommerce Cart Abandonment-%1$s', 'pushengage' ),
+
+	// Reference: src/pages/settings/integrations/woocommerce/index.tsx:259
+	__( 'WooCommerce integration settings updated successfully', 'pushengage' ),
+
+	// Reference: src/pages/settings/integrations/woocommerce/index.tsx:265
+	__( 'Failed to update WooCommerce integration settings.', 'pushengage' ),
+
+	// Reference: src/pages/settings/integrations/woocommerce/index.tsx:313
+	__( 'You don\'t have permission to create/modify WooCommerce Integration settings. Please contact to your admin.', 'pushengage' ),
+
+	// Reference: src/pages/settings/integrations/woocommerce/index.tsx:330
+	// Reference: src/pages/triggeredCampaign/Selection.tsx:188
+	__( 'Cart Abandonment', 'pushengage' ),
+
+	// Reference: src/pages/settings/integrations/woocommerce/index.tsx:333
+	__( 'Manage cart abandonment trigger settings for WooCommerce', 'pushengage' ),
+
+	// Reference: src/pages/settings/integrations/woocommerce/index.tsx:348
+	__( 'Enable Cart Abandonment', 'pushengage' ),
+
+	// Reference: src/pages/settings/integrations/woocommerce/index.tsx:351
+	__( 'Enable Cart Abandonment ', 'pushengage' ),
+
+	// Reference: src/pages/settings/integrations/woocommerce/index.tsx:385
+	__( 'Enable WooCommerce cart abandonment to send automatic push notifications for abandoned carts.', 'pushengage' ),
+
+	// Reference: src/pages/settings/integrations/woocommerce/index.tsx:438
+	__( 'Cart Abandonment Trigger ID', 'pushengage' ),
+
+	// Reference: src/pages/settings/integrations/woocommerce/index.tsx:445
+	__( 'Select Triggered Campaign to attach with WooCommerce cart abandonment.', 'pushengage' ),
+
+	// Reference: src/pages/settings/integrations/woocommerce/index.tsx:459
+	// Reference: src/pages/triggeredCampaign/Selection.tsx:155
+	__( 'Browse Abandonment', 'pushengage' ),
+
+	// Reference: src/pages/settings/integrations/woocommerce/index.tsx:461
+	__( 'Manage browse abandonment trigger settings for WooCommerce', 'pushengage' ),
+
+	// Reference: src/pages/settings/integrations/woocommerce/index.tsx:467
+	__( 'Enable Browse Abandonment', 'pushengage' ),
+
+	// Reference: src/pages/settings/integrations/woocommerce/index.tsx:470
+	__( 'Enable Browse Abandonment ', 'pushengage' ),
+
+	// Reference: src/pages/settings/integrations/woocommerce/index.tsx:472
+	__( 'Growth +', 'pushengage' ),
+
+	// Reference: src/pages/settings/integrations/woocommerce/index.tsx:504
+	__( 'Enable WooCommerce browse abandonment to send automatic push notifications for abandoned products.', 'pushengage' ),
+
+	// Reference: src/pages/settings/integrations/woocommerce/index.tsx:551
+	__( 'Select Trigger', 'pushengage' ),
+
+	// Reference: src/pages/settings/integrations/woocommerce/index.tsx:560
+	__( 'Browse Abandonment Trigger Name', 'pushengage' ),
+
+	// Reference: src/pages/settings/integrations/woocommerce/index.tsx:567
+	__( 'Select Triggered Campaign to attach with WooCommerce browse abandonment.', 'pushengage' ),
 
 	// Reference: src/pages/settings/misc/index.tsx:116
 	__( 'Misc Settings', 'pushengage' ),
@@ -3571,76 +3765,70 @@ $generated_i18n_strings = array(
 	// Reference: src/pages/settings/misc/index.tsx:98
 	__( 'You don\'t have permission to create/modify misc settings. Please contact to your admin.', 'pushengage' ),
 
-	// Reference: src/pages/settings/siteDetails/index.tsx:232
+	// Reference: src/pages/settings/siteDetails/index.tsx:241
 	__( 'Site details updated successfully', 'pushengage' ),
 
-	// Reference: src/pages/settings/siteDetails/index.tsx:271
+	// Reference: src/pages/settings/siteDetails/index.tsx:280
 	__( 'Api key generated successfully', 'pushengage' ),
 
-	// Reference: src/pages/settings/siteDetails/index.tsx:329
+	// Reference: src/pages/settings/siteDetails/index.tsx:338
 	__( 'You don\'t have permission to create/modify settings. Please contact to your admin.', 'pushengage' ),
 
-	// Reference: src/pages/settings/siteDetails/index.tsx:351
+	// Reference: src/pages/settings/siteDetails/index.tsx:360
 	__( 'Site Details', 'pushengage' ),
 
-	// Reference: src/pages/settings/siteDetails/index.tsx:355
+	// Reference: src/pages/settings/siteDetails/index.tsx:364
 	__( 'We make it effortless for you to implement web push notifications and send push notifications, right inside the WordPress dashboard.', 'pushengage' ),
 
-	// Reference: src/pages/settings/siteDetails/index.tsx:362
+	// Reference: src/pages/settings/siteDetails/index.tsx:371
 	__( 'License', 'pushengage' ),
 
-	// Reference: src/pages/settings/siteDetails/index.tsx:379
+	// Reference: src/pages/settings/siteDetails/index.tsx:388
 	__( 'Disconnect', 'pushengage' ),
 
-	// Reference: src/pages/settings/siteDetails/index.tsx:393
+	// Reference: src/pages/settings/siteDetails/index.tsx:402
 	__( 'or', 'pushengage' ),
 
-	// Reference: src/pages/settings/siteDetails/index.tsx:408
+	// Reference: src/pages/settings/siteDetails/index.tsx:417
 	__( 'Site Name', 'pushengage' ),
 
-	// Reference: src/pages/settings/siteDetails/index.tsx:423
+	// Reference: src/pages/settings/siteDetails/index.tsx:432
 	__( 'Site URL', 'pushengage' ),
 
-	// Reference: src/pages/settings/siteDetails/index.tsx:436
+	// Reference: src/pages/settings/siteDetails/index.tsx:445
 	__( 'Upload Your Site icon', 'pushengage' ),
 
-	// Reference: src/pages/settings/siteDetails/index.tsx:453
+	// Reference: src/pages/settings/siteDetails/index.tsx:462
 	__( 'Change Image', 'pushengage' ),
 
-	// Reference: src/pages/settings/siteDetails/index.tsx:468
+	// Reference: src/pages/settings/siteDetails/index.tsx:477
 	__( 'Upload Image', 'pushengage' ),
 
-	// Reference: src/pages/settings/siteDetails/index.tsx:478
+	// Reference: src/pages/settings/siteDetails/index.tsx:487
 	__( 'API Key', 'pushengage' ),
 
-	// Reference: src/pages/settings/siteDetails/index.tsx:490
-	__( 'Hide', 'pushengage' ),
-
-	// Reference: src/pages/settings/siteDetails/index.tsx:490
-	__( 'Show', 'pushengage' ),
-
-	// Reference: src/pages/settings/siteDetails/index.tsx:502
+	// Reference: src/pages/settings/siteDetails/index.tsx:512
 	__( 'Regenerate API Key', 'pushengage' ),
 
-	// Reference: src/pages/settings/siteDetails/index.tsx:506
+	// Reference: src/pages/settings/siteDetails/index.tsx:516
 	__( 'Website Time Zone', 'pushengage' ),
 
-	// Reference: src/pages/settings/siteDetails/index.tsx:515
+	// Reference: src/pages/settings/siteDetails/index.tsx:525
 	__( 'Geolocation', 'pushengage' ),
 
-	// Reference: src/pages/settings/siteDetails/index.tsx:521
+	// Reference: src/pages/settings/siteDetails/index.tsx:531
 	__( 'This helps you personalize your website notifications based on user’s location & timezones.', 'pushengage' ),
 
-	// Reference: src/pages/settings/siteDetails/index.tsx:527
+	// Reference: src/pages/settings/siteDetails/index.tsx:537
 	__( 'PushEngage branding', 'pushengage' ),
 
-	// Reference: src/pages/settings/siteDetails/index.tsx:541
+	// Reference: src/pages/settings/siteDetails/index.tsx:551
 	__( 'Remove "Powered By PushEngage"', 'pushengage' ),
 
-	// Reference: src/pages/settings/siteDetails/index.tsx:547
+	// Reference: src/pages/settings/siteDetails/index.tsx:557
 	__( 'Toggle the switch to enable/disable the "Powered by PushEngage" label. The changes may take up to 2 minutes to reflect on your site.', 'pushengage' ),
 
-	// Reference: src/pages/settings/siteDetails/index.tsx:573
+	// Reference: src/pages/settings/siteDetails/index.tsx:583
 	__( 'The "Powered by PushEngage" label cannot be removed on the free plan. <a>Upgrade to PushEngage Pro</a> to remove it.', 'pushengage' ),
 
 	// Reference: src/pages/settings/validateSettings.ts:10
@@ -3685,8 +3873,14 @@ $generated_i18n_strings = array(
 	// Reference: src/pages/settings/validateSettings.ts:39
 	__( 'City cannot be longer than 120 characters', 'pushengage' ),
 
+	// Reference: src/pages/settings/validateSettings.ts:396
+	__( 'Please select a trigger for Cart Abandonment.', 'pushengage' ),
+
 	// Reference: src/pages/settings/validateSettings.ts:40
 	__( 'Country cannot be longer than 120 characters', 'pushengage' ),
+
+	// Reference: src/pages/settings/validateSettings.ts:405
+	__( 'Please select a trigger for Browse Abandonment.', 'pushengage' ),
 
 	// Reference: src/pages/settings/validateSettings.ts:44
 	__( 'Service worker path cannot be empty', 'pushengage' ),
@@ -3721,77 +3915,89 @@ $generated_i18n_strings = array(
 	// Reference: src/pages/settings/validateSettings.ts:6
 	__( 'Minimum 3 and maximum 80 characters, must start and end with a letter or number', 'pushengage' ),
 
-	// Reference: src/pages/triggeredCampaign/Create.tsx:135
-	// Reference: src/pages/triggeredCampaign/Selection.tsx:51
-	__( 'You don\'t have permission to create triggered campaign.', 'pushengage' ),
+	// Reference: src/pages/triggeredCampaign/CreateOrEdit.tsx:134
+	__( 'Can\'t edit triggers in free & business plan', 'pushengage' ),
 
-	// Reference: src/pages/triggeredCampaign/Create.tsx:166
-	// Reference: src/pages/triggeredCampaign/Edit.tsx:241
+	// Reference: src/pages/triggeredCampaign/CreateOrEdit.tsx:143
+	__( 'Sorry, we could not find the trigger.', 'pushengage' ),
+
+	// Reference: src/pages/triggeredCampaign/CreateOrEdit.tsx:175
+	// Reference: src/pages/triggeredCampaign/List.tsx:75
+	__( 'Please connect your site first to create a triggered campaigns', 'pushengage' ),
+
+	// Reference: src/pages/triggeredCampaign/CreateOrEdit.tsx:268
 	__( 'There is an validation error.', 'pushengage' ),
 
-	// Reference: src/pages/triggeredCampaign/Create.tsx:210
-	__( 'Multi action is a pro feature.', 'pushengage' ),
+	// Reference: src/pages/triggeredCampaign/CreateOrEdit.tsx:278
+	__( 'Triggered campaign updated.', 'pushengage' ),
 
-	// Reference: src/pages/triggeredCampaign/Create.tsx:248
-	__( 'New triggered campaign created', 'pushengage' ),
+	// Reference: src/pages/triggeredCampaign/CreateOrEdit.tsx:281
+	__( 'New triggered campaign created.', 'pushengage' ),
 
-	// Reference: src/pages/triggeredCampaign/Create.tsx:272
+	// Reference: src/pages/triggeredCampaign/CreateOrEdit.tsx:296
 	__( 'Campaign name already exist in your campaign list.', 'pushengage' ),
 
-	// Reference: src/pages/triggeredCampaign/Create.tsx:295
-	// Reference: src/pages/triggeredCampaign/List.tsx:276
+	// Reference: src/pages/triggeredCampaign/DynamicCode.tsx:363
+	__( 'Including variable tags like', 'pushengage' ),
+
+	// Reference: src/pages/triggeredCampaign/DynamicCode.tsx:364
+	__( 'in your notifications adds a personal touch. To get this right, include the value of these variable tags in your campaign setup. Missed it? No problem! We automatically use the subscriber’s available attributes to fill in any missing pieces. For perfectly personalized messages, ensure these details are provided in the setup or are available in your{\' \'}', 'pushengage' ),
+
+	// Reference: src/pages/triggeredCampaign/DynamicCode.tsx:369
+	__( 'subscriber’s attributes.', 'pushengage' ),
+
+	// Reference: src/pages/triggeredCampaign/DynamicCode.tsx:382
+	__( 'Add Price Drop Alert', 'pushengage' ),
+
+	// Reference: src/pages/triggeredCampaign/DynamicCode.tsx:383
+	__( 'Add Inventory Alert', 'pushengage' ),
+
+	// Reference: src/pages/triggeredCampaign/DynamicCode.tsx:482
+	__( 'Enter Campaign Name', 'pushengage' ),
+
+	// Reference: src/pages/triggeredCampaign/List.tsx:277
+	__( 'Looks like you haven’t created any triggers yet.', 'pushengage' ),
+
+	// Reference: src/pages/triggeredCampaign/List.tsx:278
+	__( 'PushEngage offers a wide range of smart triggers to personalize push notifications based on user actions.', 'pushengage' ),
+
+	// Reference: src/pages/triggeredCampaign/List.tsx:283
+	__( 'Create a New Trigger', 'pushengage' ),
+
+	// Reference: src/pages/triggeredCampaign/List.tsx:290
+	__( 'create triggers', 'pushengage' ),
+
+	// Reference: src/pages/triggeredCampaign/List.tsx:310
 	// Reference: src/pages/triggeredCampaign/Selection.tsx:86
 	__( 'You don\'t have permission to create/modify triggered campaigns. Please contact to your admin.', 'pushengage' ),
 
-	// Reference: src/pages/triggeredCampaign/DynamicCode.tsx:334
-	__( 'Note: If you are using outdated installation code, please update the installation code to use the Promise-based interface.', 'pushengage' ),
-
-	// Reference: src/pages/triggeredCampaign/DynamicCode.tsx:425
-	__( 'If you are using dynamic variables in notifications, you should pass the value of the dynamic variable for variable replacement to work as expected.', 'pushengage' ),
-
-	// Reference: src/pages/triggeredCampaign/DynamicCode.tsx:519
-	__( 'Enter Campaign Name', 'pushengage' ),
-
-	// Reference: src/pages/triggeredCampaign/Edit.tsx:120
-	__( 'Can\'t create triggered campaign in free & business plan', 'pushengage' ),
-
-	// Reference: src/pages/triggeredCampaign/Edit.tsx:138
-	__( 'Can\'t edit triggers in free & business plan', 'pushengage' ),
-
-	// Reference: src/pages/triggeredCampaign/Edit.tsx:147
-	__( 'Sorry, we could not find the trigger.', 'pushengage' ),
-
-	// Reference: src/pages/triggeredCampaign/Edit.tsx:164
-	// Reference: src/pages/triggeredCampaign/List.tsx:70
-	__( 'Please connect your site first to create a triggered campaigns', 'pushengage' ),
-
-	// Reference: src/pages/triggeredCampaign/Edit.tsx:251
-	__( 'Triggered campaign updated.', 'pushengage' ),
-
-	// Reference: src/pages/triggeredCampaign/Selection.tsx:120
+	// Reference: src/pages/triggeredCampaign/Selection.tsx:121
 	__( 'Custom Trigger Campaign', 'pushengage' ),
 
-	// Reference: src/pages/triggeredCampaign/Selection.tsx:122
+	// Reference: src/pages/triggeredCampaign/Selection.tsx:124
 	__( 'Detect your visitor’s behavior to send automated push notifications to the right
                     person at the right time', 'pushengage' ),
 
-	// Reference: src/pages/triggeredCampaign/Selection.tsx:154
+	// Reference: src/pages/triggeredCampaign/Selection.tsx:158
 	__( 'Send targeted messages to convert visitors who viewed certain pages, such as product pages or feature pages.', 'pushengage' ),
 
-	// Reference: src/pages/triggeredCampaign/Selection.tsx:185
+	// Reference: src/pages/triggeredCampaign/Selection.tsx:191
 	__( 'Recover lost sales and quickly boost revenue with automatically triggered abandon cart push notifications.', 'pushengage' ),
 
-	// Reference: src/pages/triggeredCampaign/Selection.tsx:216
+	// Reference: src/pages/triggeredCampaign/Selection.tsx:224
 	__( 'Re-engage your customers and increase conversion using Price Drop Alert Campaigns using the web push', 'pushengage' ),
 
-	// Reference: src/pages/triggeredCampaign/Selection.tsx:245
+	// Reference: src/pages/triggeredCampaign/Selection.tsx:254
 	__( 'Back in Stock Alert', 'pushengage' ),
 
-	// Reference: src/pages/triggeredCampaign/Selection.tsx:247
+	// Reference: src/pages/triggeredCampaign/Selection.tsx:257
 	__( 'Re-engage your customers and increase conversion using Inventory Alert Campaigns using the web push', 'pushengage' ),
 
-	// Reference: src/pages/triggeredCampaign/Selection.tsx:256
+	// Reference: src/pages/triggeredCampaign/Selection.tsx:266
 	__( 'Create New', 'pushengage' ),
+
+	// Reference: src/pages/triggeredCampaign/Selection.tsx:51
+	__( 'You don\'t have permission to create triggered campaign.', 'pushengage' ),
 
 	// Reference: src/pages/triggeredCampaign/Selection.tsx:64
 	__( 'Not implemented yet!', 'pushengage' ),

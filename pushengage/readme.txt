@@ -2,9 +2,9 @@
 Contributors: PushEngage, smub
 Tags: push notifications, web push notifications, cart abandonment push notifications, browse abandonment push notifications, WooCommerce push notifications
 Requires at least: 4.5.0
-Tested up to: 6.5
+Tested up to: 6.6
 Requires PHP: 5.6
-Stable tag: 4.0.9
+Stable tag: 4.0.10
 License: GNU General Public License v2.0 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -121,7 +121,7 @@ Even with <a href="https://www.pushengage.com/automated-push-notifications/?utm_
 
 All PushEngage popup modals come with advanced page targeting and behavior based personalization.
 
-This means you can <a href="https://www.pushengage.com/how-to-add-a-push-notification-subscription-button-to-popups/?utm_source=orgplugin&utm_medium=link&utm_campaign=wpreadme" rel="friend">show a custom popup</a> for:
+This means you can <a hre="https://www.pushengage.com/how-to-add-a-push-notification-subscription-button-to-popups/?utm_source=orgplugin&utm_medium=link&utm_campaign=wpreadme" rel="friend">show a custom popup</a> for:
 
 * A specific page or set of pages of your site
 * Different website visitors based on their geolocation
@@ -262,6 +262,13 @@ Syed Balkhi
 == Changelog ==
 
 **Most Recent Changes:**
+
+= 4.0.10 =
+* Added PushEngage settings in pre-publish checklist.
+* Improved onboarding flow.
+* Masked the API key on the settings page.
+* Fixed an issue where notifications for scheduled posts were not sent when published by third-party plugins.
+* Fixed Integrations menu item active state style.
 
 = 4.0.9 =
 * Added new "Trigger" menu to create and manage Triggered Campaigns from plugin.

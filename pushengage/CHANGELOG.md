@@ -2,6 +2,14 @@
 
 All notable changes to the PushEngage plugin will be documented in this file.
 
+### 4.0.10
+
+* Added PushEngage settings in pre-publish checklist.
+* Improved onboarding flow.
+* Masked the API key on the settings page.
+* Fixed an issue where notifications for scheduled posts were not sent when published by third-party plugins.
+* Fixed Integrations menu item active state style.
+
 ### 4.0.9
 
 * Added new "Trigger" menu to create and manage Triggered Campaigns from plugin.

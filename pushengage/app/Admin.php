@@ -4,6 +4,7 @@ namespace Pushengage;
 use Pushengage\Utils\ArrayHelper;
 use Pushengage\Utils\Helpers;
 use Pushengage\Utils\Options;
+use Pushengage\Integrations\Woo;
 
 // Exit if accessed directly.
 if ( ! defined( 'ABSPATH' ) ) {
@@ -21,6 +22,9 @@ class Admin {
 			add_action( 'admin_init', array( $this, 'pushengage_plugin_redirect' ), 9999 );
 			add_action( 'admin_enqueue_scripts', array( $this, 'pushengage_hide_admin_notices' ) );
 			add_action( 'admin_notices', array( $this, 'pushengage_display_admin_notices' ) );
+
+			// WooCommerce integration hooks.
+			Woo::init_hooks();
 		}
 	}
 

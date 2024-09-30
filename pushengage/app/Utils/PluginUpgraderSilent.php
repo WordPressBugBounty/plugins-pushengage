@@ -374,7 +374,7 @@ class PluginUpgraderSilent extends \Plugin_Upgrader {
 
 		// Once extracted, delete the package if required.
 		if ( $delete_package ) {
-			unlink( $package );
+			wp_delete_file( $package );
 		}
 
 		if ( is_wp_error( $result ) ) {
@@ -590,8 +590,8 @@ class PluginUpgraderSilent extends \Plugin_Upgrader {
 		} elseif ( count( $source_files ) === 0 ) {
 			throw new WP_Error(
 				'incompatible_archive_empty',
-				$this->strings['incompatible_archive'],
-				$this->strings['no_files']
+				esc_html( $this->strings['incompatible_archive'] ),
+				esc_html( $this->strings['no_files'] )
 			);
 		} else {
 			return trailingslashit( $args['source'] );
@@ -608,7 +608,7 @@ class PluginUpgraderSilent extends \Plugin_Upgrader {
 	 */
 	public function check_source_and_destination_error( $source, $destination ) {
 		if ( empty( $source ) || empty( $destination ) ) {
-			throw new WP_Error( 'bad_request', $this->strings['bad_request'] );
+			throw new WP_Error( 'bad_request', esc_html( $this->strings['bad_request'] ) );
 		}
 	}
 
@@ -660,7 +660,7 @@ class PluginUpgraderSilent extends \Plugin_Upgrader {
 			if ( ! empty( $_files ) ) {
 				$wp_filesystem->delete( $remote_source, true );
 
-				throw new WP_Error( 'folder_exists', $this->strings['folder_exists'], $remote_destination );
+				throw new WP_Error( 'folder_exists', esc_html( $this->strings['folder_exists'] ), esc_html( $remote_destination ) );
 			}
 		}
 	}

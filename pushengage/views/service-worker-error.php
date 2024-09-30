@@ -7,7 +7,7 @@
 				'We could not access the service worker file at location %s.',
 				'pushengage'
 			),
-			'<a target="_blank" href="' . $data['sw_url'] . '">' . $data['sw_url'] . '</a>'
+			'<a target="_blank" href="' . esc_url( $data['sw_url'] ) . '">' . esc_url( $data['sw_url'] ) . '</a>'
 		);
 		?>
 	</p>

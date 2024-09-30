@@ -169,7 +169,7 @@ class HttpClient {
 	 *
 	 * @return mixed The response from the api server as an array
 	 */
-	public static function send_push_notification( $api_key, $site_id, $data, $metadata ) {
+	public static function send_push_notification( $api_key, $site_id, $data, $metadata = array() ) {
 		$action_url = self::SITES_ACTION_PREFIX . $site_id .
 			'/notifications?action=sent&' . http_build_query( $metadata, '', '&', PHP_QUERY_RFC3986 );
 

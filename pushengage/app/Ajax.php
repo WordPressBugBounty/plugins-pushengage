@@ -218,7 +218,7 @@ class Ajax {
 		$filtered_plugins                = array_filter(
 			$plugins,
 			function ( $k ) {
-				$allowed = array( 'aioseo', 'optinmonster', 'monsterinsights', 'wpcode' );
+				$allowed = array( 'aioseo', 'optinmonster', 'monsterinsights', 'wpcode', 'wp-marketing-automations' );
 				return in_array( $k, $allowed, true );
 			},
 			ARRAY_FILTER_USE_KEY
@@ -284,7 +284,7 @@ class Ajax {
 			}
 		);
 
-		$pushengage_settings['allowed_post_types'] = json_encode( $post_types );
+		$pushengage_settings['allowed_post_types'] = wp_json_encode( $post_types );
 
 		Options::update_site_settings( $pushengage_settings );
 		wp_send_json_success();

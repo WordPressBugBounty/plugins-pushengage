@@ -12,7 +12,6 @@ use Pushengage\Utils\PostMetaFormatter;
 use Pushengage\Utils\StringUtils;
 use Pushengage\Integrations\Woo;
 use Pushengage\Integrations\Edd;
-use Pushengage\Libraries\AMFB\InitFauxBlock;
 
 // Exit if accessed directly.
 if ( ! defined( 'ABSPATH' ) ) {
@@ -38,7 +37,6 @@ class Core {
 	 */
 	public function __construct() {
 		$this->register_hooks();
-		InitFauxBlock::load();
 	}
 
 	/**
@@ -77,6 +75,14 @@ class Core {
 		if ( is_admin() ) {
 			add_action( 'init', array( $this, 'init_admin_options' ) );
 			add_action( 'admin_notices', array( $this, 'maybe_display_transient_admin_notice' ) );
+
+			global $wp_version;
+
+			$is_wp_version_greater_than_5_8 = version_compare( $wp_version, '5.8', '>=' );
+			// Load Pre Post Publish script for block editor only if WP version is 5.8 or higher.
+			if ( $is_wp_version_greater_than_5_8 ) {
+				add_action( 'enqueue_block_editor_assets', array( $this, 'load_block_editor_scripts' ) );
+			}
 		}
 	}
 
@@ -212,12 +218,12 @@ class Core {
 		// app id is same as site key
 		$app_id = $pushengage_settings['site_key'];
 
-		if ( array_key_exists( 'domain', $_GET ) && ! empty( $_GET['domain'] ) ) {
-			$subdomain = urlencode( $_GET['domain'] );
+		if ( array_key_exists( 'appId', $_GET ) && ! empty( $_GET['appId'] ) ) {
+			$app_id = filter_var( wp_unslash( $_GET['appId'], FILTER_SANITIZE_STRING ) );
 		}
 
-		if ( array_key_exists( 'appId', $_GET ) && ! empty( $_GET['appId'] ) ) {
-			$app_id = sanitize_key( $_GET['appId'] );
+		if ( array_key_exists( 'domain', $_GET ) && ! empty( $_GET['domain'] ) ) {
+			$subdomain = filter_var( wp_unslash( $_GET['domain'], FILTER_SANITIZE_STRING ) );
 		}
 
 		header_remove( 'x-powered-by' );
@@ -226,12 +232,12 @@ class Core {
 
 		// If app id is present then use the app id to generate the service
 		// worker file else use the subdomain
-		if ( ! empty( $app_id ) ) {
+		if ( ! empty( $app_id ) && preg_match( '/^[a-zA-Z0-9-_]+$/', $subdomain ) ) {
 			$pushengage_sw_url = PUSHENGAGE_CLIENT_JS_URL . 'sdks/service-worker.js';
-			echo "var PUSHENGAGE_APP_ID = '" . $app_id . "';";
-			echo "importScripts('" . $pushengage_sw_url . "');";
-		} elseif ( ! empty( $subdomain ) ) {
-			echo "importScripts('https://" . $subdomain . ".pushengage.com/service-worker.js?ver=2.3.0');";
+			echo "var PUSHENGAGE_APP_ID = '" . esc_html( $app_id ) . "';";
+			echo "importScripts('" . esc_url( $pushengage_sw_url ) . "');";
+		} elseif ( ! empty( $subdomain ) && preg_match( '/^[a-zA-Z0-9-]+$/', $subdomain ) ) {
+			echo "importScripts('https://" . esc_html( $subdomain ) . ".pushengage.com/service-worker.js');";
 		} else {
 			echo "console.error('You haven't finished setting up your site with PushEngage. Please connect your account!!')";
 		}
@@ -580,7 +586,7 @@ class Core {
 	public function is_sending_scheduled_post( $new_status, $old_status, $post, $push_options ) {
 		$send_notification = false;
 
-		if ( 'publish' === $new_status && 'future' === $old_status && defined( 'DOING_CRON' ) && DOING_CRON ) {
+		if ( 'publish' === $new_status && 'future' === $old_status ) {
 			/*
 			* Backward compatibility
 			* plugin version less than version 4.0.0 were using the keys '_pe_override'
@@ -671,6 +677,23 @@ class Core {
 		EnqueueAssets::enqueue_pushengage_scripts();
 		EnqueueAssets::localize_script( $post->ID, true );
 		Pushengage::output_view( 'post-editor-metabox.php' );
+	}
+
+	/**
+	 * Enqueue Pre Publish Checklist scripts for block editor
+	 *
+	 * @since 4.0.10
+	 *
+	 * @return void
+	 */
+	public function load_block_editor_scripts() {
+		$screen = get_current_screen();
+		if ( ! $screen || ! in_array( $screen->post_type, Options::get_allowed_post_types_for_auto_push(), true ) ) {
+			return;
+		}
+
+		// Enqueue Pre Publish Checklist scripts.
+		EnqueueAssets::enqueue_pre_publish_checklist_scripts();
 	}
 
 	/**

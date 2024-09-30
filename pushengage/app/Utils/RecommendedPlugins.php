@@ -123,6 +123,29 @@ class RecommendedPlugins {
 	const SMASH_BALLOON_YOUTUBE_FEEDS_PRO_URL = 'youtube-feed-pro/youtube-feed.php';
 
 	/**
+	 * FunnelKit Automation Plugin Base URL
+	 *
+	 * @since 4.0.10
+	 */
+	const FUNNELKIT_AUTOMATION_URL = 'wp-marketing-automations/wp-marketing-automations.php';
+	const FUNNELKIT_AUTOMATION_PRO_URL = 'wp-marketing-automations-pro/wp-marketing-automations-pro.php';
+
+	/**
+	 * WP Charitable Plugin Base URL.
+	 *
+	 * @since 4.0.10
+	 */
+	const WP_CHARITABLE_URL = 'charitable/charitable.php';
+
+	/**
+	 * Duplicator Plugin Base URL.
+	 *
+	 * @since 4.0.10
+	 */
+	const DUPLICATOR_URL = 'duplicator/duplicator.php';
+	const DUPLICATOR_PRO_URL = 'duplicator-pro/duplicator-pro.php';
+
+	/**
 	 * An array of links to install the plugins from.
 	 *
 	 * @since 4.0.0
@@ -145,6 +168,9 @@ class RecommendedPlugins {
 		'smash-balloon-facebook-feeds'  => 'https://downloads.wordpress.org/plugin/custom-facebook-feed.zip',
 		'smash-balloon-twitter-feeds'   => 'https://downloads.wordpress.org/plugin/custom-twitter-feeds.zip',
 		'smash-balloon-youtube-feeds'   => 'https://downloads.wordpress.org/plugin/feeds-for-youtube.zip',
+		'wp-marketing-automations'      => 'https://downloads.wordpress.org/plugin/wp-marketing-automations.zip',
+		'charitable'                    => 'https://downloads.wordpress.org/plugin/charitable.zip',
+		'duplicator'                    => 'https://downloads.wordpress.org/plugin/duplicator.zip',
 	);
 
 	/**
@@ -168,6 +194,49 @@ class RecommendedPlugins {
 			'basename'  => self::OPTIN_MONSTER_URL,
 			'slug'      => 'optinmonster',
 			'settings'  => admin_url( 'admin.php?page=optin-monster-dashboard' ),
+		);
+
+		/**
+		 * FunnelKit Automation Plugin
+		 *
+		 * @since 4.0.10
+		 */
+		$is_funnelkit_automation_pro_installed = false;
+		if ( array_key_exists( self::FUNNELKIT_AUTOMATION_PRO_URL, $installed_plugins ) ) {
+			$is_funnelkit_automation_pro_installed = true;
+		}
+		$parsed_addons['wp-marketing-automations'] = array(
+			'active'    => $is_funnelkit_automation_pro_installed ? is_plugin_active( self::FUNNELKIT_AUTOMATION_PRO_URL ) : is_plugin_active( self::FUNNELKIT_AUTOMATION_URL ),
+			'icon'      => PUSHENGAGE_PLUGIN_URL . '/assets/img/plugin-funnelkit.svg',
+			'title'     => $is_funnelkit_automation_pro_installed ? __( 'FunnelKit Automations Pro', 'pushengage' ) : __( 'FunnelKit Automations', 'pushengage' ),
+			'excerpt'   => __(
+				'Elevate your WooCommerce store with FunnelKit Automations.This versatile WordPress plugin enables automated customer journeys, from abandoned cart recovery to targeted email sequences.',
+				'pushengage'
+			),
+			'installed' => $is_funnelkit_automation_pro_installed ? true : array_key_exists( self::FUNNELKIT_AUTOMATION_URL, $installed_plugins ),
+			'basename'  => $is_funnelkit_automation_pro_installed ? self::FUNNELKIT_AUTOMATION_PRO_URL : self::FUNNELKIT_AUTOMATION_URL,
+			'slug'      => 'wp-marketing-automations',
+			'settings'  => admin_url( 'admin.php?page=autonami' ),
+		);
+
+		/**
+		 * WP Code
+		 *
+		 * @since 4.0.8
+		 */
+		$is_wp_code_pro_installed = false;
+		if ( array_key_exists( self::WP_CODE_PRO_URL, $installed_plugins ) ) {
+			$is_wp_code_pro_installed = true;
+		}
+		$parsed_addons['wpcode'] = array(
+			'active'    => $is_wp_code_pro_installed ? is_plugin_active( self::WP_CODE_PRO_URL ) : is_plugin_active( self::WP_CODE_URL ),
+			'icon'      => PUSHENGAGE_PLUGIN_URL . '/assets/img/plugin-wpcode.svg',
+			'title'     => $is_wp_code_pro_installed ? __( 'WP Code Pro', 'pushengage' ) : __( 'WP Code', 'pushengage' ),
+			'excerpt'   => __( 'Future proof your WordPress customizations with the most popular code snippet management plugin for WordPress. Trusted by over 1,500,000+ websites for easily adding code to WordPress right from the admin area.', 'pushengage' ),
+			'installed' => $is_wp_code_pro_installed ? true : array_key_exists( self::WP_CODE_URL, $installed_plugins ),
+			'basename'  => $is_wp_code_pro_installed ? self::WP_CODE_PRO_URL : self::WP_CODE_URL,
+			'slug'      => 'wpcode',
+			'settings'  => admin_url( 'admin.php?page=wpcode' ),
 		);
 
 		// MonsterInsight
@@ -298,26 +367,6 @@ class RecommendedPlugins {
 		);
 
 		/**
-		 * WP Code
-		 *
-		 * @since 4.0.8
-		 */
-		$is_wp_code_pro_installed = false;
-		if ( array_key_exists( self::WP_CODE_PRO_URL, $installed_plugins ) ) {
-			$is_wp_code_pro_installed = true;
-		}
-		$parsed_addons['wpcode'] = array(
-			'active'    => $is_wp_code_pro_installed ? is_plugin_active( self::WP_CODE_PRO_URL ) : is_plugin_active( self::WP_CODE_URL ),
-			'icon'      => PUSHENGAGE_PLUGIN_URL . '/assets/img/plugin-wpcode.svg',
-			'title'     => $is_wp_code_pro_installed ? __( 'WP Code Pro', 'pushengage' ) : __( 'WP Code', 'pushengage' ),
-			'excerpt'   => __( 'Future proof your WordPress customizations with the most popular code snippet management plugin for WordPress. Trusted by over 1,500,000+ websites for easily adding code to WordPress right from the admin area.', 'pushengage' ),
-			'installed' => $is_wp_code_pro_installed ? true : array_key_exists( self::WP_CODE_URL, $installed_plugins ),
-			'basename'  => $is_wp_code_pro_installed ? self::WP_CODE_PRO_URL : self::WP_CODE_URL,
-			'slug'      => 'wpcode',
-			'settings'  => admin_url( 'admin.php?page=wpcode' ),
-		);
-
-		/**
 		 * WP Simple Pay
 		 *
 		 * @since 4.0.8
@@ -415,6 +464,42 @@ class RecommendedPlugins {
 			'basename'  => $is_youtube_feed_pro_installed ? self::SMASH_BALLOON_YOUTUBE_FEEDS_PRO_URL : self::SMASH_BALLOON_YOUTUBE_FEEDS_URL,
 			'slug'      => 'smash-balloon-youtube-feeds',
 			'settings'  => admin_url( 'admin.php?page=youtube-feed' ),
+		);
+
+		/**
+		 * WP Charitable Plugin
+		 *
+		 * @since 4.0.10
+		 */
+		$parsed_addons['charitable'] = array(
+			'active'    => is_plugin_active( self::WP_CHARITABLE_URL ),
+			'icon'      => PUSHENGAGE_PLUGIN_URL . '/assets/img/plugin-charitable.svg',
+			'title'     => __( 'Charitable', 'pushengage' ),
+			'excerpt'   => __( 'Charitable is the best WordPress donation plugin for non-profits, charities, and fundraising organizations. Easily accept donations, create fundraising campaigns, and manage donors with the most powerful donation plugin for WordPress.', 'pushengage' ),
+			'installed' => array_key_exists( self::WP_CHARITABLE_URL, $installed_plugins ),
+			'basename'  => self::WP_CHARITABLE_URL,
+			'slug'      => 'charitable',
+			'settings'  => admin_url( 'admin.php?page=charitable-settings' ),
+		);
+
+		/**
+		 * Duplicator Plugin
+		 *
+		 * @since 4.0.10
+		 */
+		$is_duplicator_pro_installed = false;
+		if ( array_key_exists( self::DUPLICATOR_PRO_URL, $installed_plugins ) ) {
+			$is_duplicator_pro_installed = true;
+		}
+		$parsed_addons['duplicator'] = array(
+			'active'    => $is_duplicator_pro_installed ? is_plugin_active( self::DUPLICATOR_PRO_URL ) : is_plugin_active( self::DUPLICATOR_URL ),
+			'icon'      => PUSHENGAGE_PLUGIN_URL . '/assets/img/plugin-duplicator.svg',
+			'title'     => $is_duplicator_pro_installed ? __( 'Duplicator Pro', 'pushengage' ) : __( 'Duplicator', 'pushengage' ),
+			'excerpt'   => __( 'The most popular WordPress migration plugin for backing up, restoring, and moving your WordPress site to a new host or domain. Trusted by over 1 million websites for easy WordPress backups and migrations.', 'pushengage' ),
+			'installed' => $is_duplicator_pro_installed ? true : array_key_exists( self::DUPLICATOR_URL, $installed_plugins ),
+			'basename'  => $is_duplicator_pro_installed ? self::DUPLICATOR_PRO_URL : self::DUPLICATOR_URL,
+			'slug'      => 'duplicator',
+			'settings'  => admin_url( 'admin.php?page=duplicator' ),
 		);
 
 		return $parsed_addons;

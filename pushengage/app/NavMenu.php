@@ -103,6 +103,8 @@ class NavMenu {
 			);
 		}
 
+		global $submenu;
+
 		// Show 'Upgrade To Pro sub menu at sub menu array position '9' if user in on free plan
 		if ( AdminNavMenuItems::should_display_upgrade_submenu( $api_key ) ) {
 			$upgrade_url = 'https://app.pushengage.com/account/billing?drawer=true' .
@@ -116,12 +118,15 @@ class NavMenu {
 				$upgrade_url
 			);
 
-			global $submenu;
-
 			// Add a custom class and css to the 'Upgrade To Pro' menu
-			if ( isset( $submenu['pushengage'][9] ) ) {
-				$submenu['pushengage'][9][4] = 'pe-upgrade-to-pro-submenu';
+			if ( isset( $submenu['pushengage'][11] ) ) {
+				$submenu['pushengage'][11][4] = 'pe-upgrade-to-pro-submenu';
 			}
+		}
+
+		// Add custom class to integrations submenu.
+		if ( isset( $submenu['pushengage'][9] ) ) {
+			$submenu['pushengage'][9][4] = 'pe-menu-integrations';
 		}
 
 		remove_submenu_page( 'pushengage', 'pushengage' );
