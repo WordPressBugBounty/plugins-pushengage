@@ -2,6 +2,12 @@
 
 All notable changes to the PushEngage plugin will be documented in this file.
 
+### 4.0.11
+
+* Updated PushEngage WP Admin menu position for better access.
+* Updated Integration submenu to enhance WooCommerce Integration.
+* Fixed minor UI bugs in the PushEngage Settings Page.
+
 ### 4.0.10
 
 * Added PushEngage settings in pre-publish checklist.

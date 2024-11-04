@@ -2,6 +2,7 @@
 
 namespace Pushengage;
 
+use Pushengage\Utils\Helpers;
 use Pushengage\Utils\Options;
 use Pushengage\Utils\AdminNavMenuItems;
 
@@ -33,7 +34,7 @@ class NavMenu {
 	 */
 	public function register_nav_menu() {
 		if ( is_admin() && current_user_can( 'manage_options' ) ) {
-			add_action( 'admin_menu', array( $this, 'render_admin_menu' ) );
+			add_action( 'admin_menu', array( $this, 'render_admin_menu' ), 60 );
 			add_action( 'admin_footer', array( $this, 'add_upgrade_to_pro_custom_script' ) );
 		}
 	}
@@ -89,7 +90,8 @@ class NavMenu {
 			'manage_options',
 			'pushengage',
 			array( $this, 'render_admin_menu_view' ),
-			$this->icon_svg()
+			$this->icon_svg(),
+			apply_filters( 'pushengage_menu_position', '58.9' )
 		);
 
 		foreach ( $sub_menu_list as $sub_menu ) {
@@ -102,6 +104,17 @@ class NavMenu {
 				array( $this, 'render_admin_menu_view' )
 			);
 		}
+
+		$woo_push_notifications_page = Helpers::is_woocommerce_integrated() ? 'pushengage#/campaigns/triggers' : 'pushengage#/settings/integrations';
+
+		add_submenu_page(
+			'woocommerce',
+			esc_html__( 'Push Notifications', 'pushengage' ),
+			esc_html__( 'Push Notifications', 'pushengage' ),
+			'manage_options',
+			$woo_push_notifications_page,
+			array( $this, 'render_admin_menu_view' )
+		);
 
 		global $submenu;
 
@@ -125,8 +138,13 @@ class NavMenu {
 		}
 
 		// Add custom class to integrations submenu.
+		if ( isset( $submenu['pushengage'][5] ) ) {
+			$submenu['pushengage'][5][4] = 'pe-menu-integrations';
+		}
+
+		// Add custom class for triggers submenu.
 		if ( isset( $submenu['pushengage'][9] ) ) {
-			$submenu['pushengage'][9][4] = 'pe-menu-integrations';
+			$submenu['pushengage'][4][4] = 'pe-menu-triggers';
 		}
 
 		remove_submenu_page( 'pushengage', 'pushengage' );

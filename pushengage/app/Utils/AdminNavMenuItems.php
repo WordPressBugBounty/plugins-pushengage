@@ -46,6 +46,11 @@ class AdminNavMenuItems {
 						'url'   => 'campaigns/triggers',
 					),
 					array(
+						'id'    => 'integrations',
+						'label' => '<span style="color:#f18500">' . esc_html__( 'WooCommerce', 'pushengage' ) . '</span>' . '<span style="padding-left: 2px;color: #f18200; vertical-align: super; font-size: 9px;"> NEW!</span>',
+						'url'   => 'settings/integrations',
+					),
+					array(
 						'id'    => 'design',
 						'label' => esc_html__( 'Design', 'pushengage' ),
 						'url'   => 'design',
@@ -71,11 +76,6 @@ class AdminNavMenuItems {
 					'id'    => 'settings',
 					'label' => esc_html__( 'Settings', 'pushengage' ),
 					'url'   => 'settings/site-details',
-				),
-				array(
-					'id'    => 'integrations',
-					'label' => esc_html__( 'Integrations', 'pushengage' ) . '<span style="padding-left: 2px;color: #f18200; vertical-align: super; font-size: 9px;"> NEW!</span>',
-					'url'   => 'settings/integrations',
 				),
 			)
 		);

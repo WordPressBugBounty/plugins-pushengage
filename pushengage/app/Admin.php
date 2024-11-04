@@ -22,6 +22,7 @@ class Admin {
 			add_action( 'admin_init', array( $this, 'pushengage_plugin_redirect' ), 9999 );
 			add_action( 'admin_enqueue_scripts', array( $this, 'pushengage_hide_admin_notices' ) );
 			add_action( 'admin_notices', array( $this, 'pushengage_display_admin_notices' ) );
+			add_action( 'admin_notices', array( $this, 'maybe_display_woo_integration_admin_notice' ) );
 
 			// WooCommerce integration hooks.
 			Woo::init_hooks();
@@ -108,6 +109,33 @@ class Admin {
 
 			$this->maybe_display_sw_error_notice( $settings['site_id'], $service_worker_error );
 		}
+	}
+
+	/**
+	 * Display WooCommerce integration admin notice
+	 *
+	 * @since 4.0.11
+	 *
+	 * @return void
+	 */
+	public function maybe_display_woo_integration_admin_notice() {
+		$screen = get_current_screen();
+
+		$allowed_screens = apply_filters(
+			'pushengage_woo_integration_notice_allowed_screens',
+			array(
+				'woocommerce_page_wc-settings',
+			)
+		);
+
+		if ( ! in_array( $screen->id, $allowed_screens, true ) ||
+			! Options::has_credentials() ||
+			! Helpers::is_plugin_active( 'woocommerce/woocommerce.php' ) ||
+			Helpers::is_woocommerce_integrated() ) {
+			return;
+		}
+
+		Pushengage::output_view( 'woocommerce-not-connected.php' );
 	}
 
 	/**

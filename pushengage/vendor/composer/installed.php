@@ -1,22 +1,22 @@
 <?php return array(
     'root' => array(
+        'name' => 'awesomemotive/pushengage',
         'pretty_version' => 'dev-master',
         'version' => 'dev-master',
+        'reference' => '171d1969fdf87b9ce9fb7703ef10512618553593',
         'type' => 'wordpress-plugin',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => '72ce970a5fee362afbff36139de2698fb0342b23',
-        'name' => 'awesomemotive/pushengage',
         'dev' => false,
     ),
     'versions' => array(
         'awesomemotive/pushengage' => array(
             'pretty_version' => 'dev-master',
             'version' => 'dev-master',
+            'reference' => '171d1969fdf87b9ce9fb7703ef10512618553593',
             'type' => 'wordpress-plugin',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-            'reference' => '72ce970a5fee362afbff36139de2698fb0342b23',
             'dev_requirement' => false,
         ),
     ),

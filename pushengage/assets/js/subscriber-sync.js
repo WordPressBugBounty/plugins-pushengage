@@ -34,6 +34,10 @@ PushEngageWPPluginApp.SubscriberSync =
         var localSynchedId = localStorage.getItem("pe_wp_synched_sid");
         var synched_subscriber_ids =
           pushengageSubscriberSync.subscriber_ids || [];
+        // if synched_subscriber_ids is an object, convert it to an array.
+        if (typeof synched_subscriber_ids === "object") {
+          synched_subscriber_ids = Object.values(synched_subscriber_ids);
+        }
         var remove_id = null;
         var add_id = null;
 

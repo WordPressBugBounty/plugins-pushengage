@@ -2,7 +2,6 @@
   "files": {
     "main.css": "/static/css/main.css",
     "main.js": "/static/js/main.js",
-    "vendor-core-js.js": "/static/js/vendor-core-js.js",
     "vendor-antd.css": "/static/css/vendor-antd.css",
     "vendor-antd.js": "/static/js/vendor-antd.js",
     "vendor-common.js": "/static/js/vendor-common.js",
@@ -13,7 +12,6 @@
     "index.html": "/index.html",
     "main.css.map": "/static/css/main.css.map",
     "main.js.map": "/static/js/main.js.map",
-    "vendor-core-js.js.map": "/static/js/vendor-core-js.js.map",
     "vendor-antd.css.map": "/static/css/vendor-antd.css.map",
     "vendor-antd.js.map": "/static/js/vendor-antd.js.map",
     "vendor-common.js.map": "/static/js/vendor-common.js.map",
@@ -23,7 +21,6 @@
     "vendor-emoji-picker.js.map": "/static/js/vendor-emoji-picker.js.map"
   },
   "entrypoints": [
-    "static/js/vendor-core-js.js",
     "static/css/vendor-antd.css",
     "static/js/vendor-antd.js",
     "static/js/vendor-common.js",

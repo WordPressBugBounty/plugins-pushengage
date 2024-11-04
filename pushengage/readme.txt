@@ -1,10 +1,10 @@
 === Web & App Push Notifications by PushEngage: WordPress & WooCommerce Alerts to Supercharge Engagement ===
 Contributors: PushEngage, smub
-Tags: push notifications, web push notifications, cart abandonment push notifications, browse abandonment push notifications, WooCommerce push notifications
+Tags: push notifications, web push notifications, cart abandonment notifications, woocommerce push notifications, mobile push notifications
 Requires at least: 4.5.0
 Tested up to: 6.6
 Requires PHP: 5.6
-Stable tag: 4.0.10
+Stable tag: 4.0.11
 License: GNU General Public License v2.0 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -14,19 +14,30 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 ===  ===
 
-<a href="https://www.pushengage.com/?utm_source=orgplugin&utm_medium=link&utm_campaign=wpreadme" rel="friend">PushEngage</a> is the #1 push notification plugin in the world. It’s a marketing plugin that helps you get more web push notification subscribers, increase sales, and grow your business.
+Boost engagement, drive repeat traffic, and increase sales with personalized push notifications that reach users directly on web and mobile.<a href="https://www.pushengage.com/?utm_source=orgplugin&utm_medium=link&utm_campaign=wpreadme" rel="friend">PushEngage</a> is the #1 push notification plugin, designed to help you turn casual visitors into loyal customers.
 
 With PushEngage’s web push notifications, you can turn your website visitors into regular readers, loyal fans, and repeat customers. The coolest part is that it only takes your subscribers two clicks or less to get subscribed to your notifications.
 
-PushEngage gives you a simple, easy-to-use dashboard that helps you create optins, launch web push campaigns, grow your subscriber base, track your revenue goals, and manage your audience using advanced segmentation and audience targeting rules.
+Here’s why 25K + smart business owners, designers, and developers use PushEngage to send <strong>15+ billion web push campaigns every month</strong>, and you will too!
 
-You can also send WooCommerce push notifications with a simple integration that requires zero coding. All it takes is a few clicks to launch powerful eCommerce campaigns and send eCommerce push notifications that increase your revenue even when you sleep.
+[youtube https://www.youtube.com/watch?v=eBhtAZgoNbE]
+
+PushEngage is a powerful tool for building and retaining your audience with web push notifications. With our plugin, your visitors can subscribe to alerts in just two clicks, enabling you to deliver messages that keep them coming back.
+
+Our plugin is packed with features to help you:
+* Grow your subscriber base with engaging opt-ins.
+* Launch push notification campaigns that drive conversions.
+* Track performance with advanced analytics and revenue insights.
+
+With PushEngage, setting up <strong>WooCommerce push notifications</strong> is effortless, empowering you to automatically send cart and browse abandonment notifications, price drop alerts, and more—all designed to boost sales.
+
+PushEngage gives you a simple, easy-to-use dashboard that helps you create opt-ins, launch web push campaigns, grow your subscriber base, track your revenue goals, and manage your audience using advanced segmentation and audience targeting rules.
 
 You even get advanced analytics to track your performance metrics with or without using third-party tools such as Google Analytics.
 
 Along with the absolute best web push notification software in the market, you also get a top-tier Customer Success team to help you get more success from your push notifications more often.
 
-<strong>PushEngage Web Push Notifications</strong><br />
+<strong>About PushEngage Web Push Notifications</strong><br />
 PushEngage is a SaaS service to send browser and web app push notifications including:
 
 * Chrome push notifications
@@ -49,13 +60,15 @@ It’s super easy to create highly targeted and personalized push messages with 
 
 If you’re looking for advanced automation, you can use the push API to serve use cases that your competitors aren’t even thinking of!
 
-The best part is the PushEngage plugin connects directly with the web app and installs the service worker on your site automatically unlike any other push notification service. Just in case you’re not a developer, the service worker is a JSON file that allows you to collect push notification subscribers. With other push notification software, you need to manually download and place the file into your server. But our plugin automatically does it for you.
+The best part is the PushEngage plugin connects directly with the web app and installs the service worker on your site automatically unlike any other push notification service.
 
-Not just that, but our WooCommerce integration makes it super easy to launch eCommerce campaigns. WooCommerce stores can quickly launch cart abandonment push notifications, browse abandonment push notifications, price drop alerts, and inventory alerts as triggered campaigns. All the triggers are predefined and you only have to create a campaign and enable it from a drop-down in the PushEngage plugin. What’s even cooler is that PushEngage also comes with automatic revenue tracking so that you can see how your campaigns are contributing to your business.
+Just in case you’re not a developer, the service worker is a JSON file that allows you to collect push notification subscribers. With other push notification software, you need to manually download and place the file into your server. But our plugin automatically does it for you.
 
-Here’s why 25K + smart business owners, designers, and developers use PushEngage to send <strong>15+ billion web push campaigns every month</strong>, and you will too!
+[youtube https://www.youtube.com/watch?v=wZiVN7AX5ho]
 
-https://www.youtube.com/watch?v=eBhtAZgoNbE
+Not just that, but our WooCommerce integration makes it super easy to launch eCommerce campaigns. WooCommerce stores can quickly launch cart abandonment push notifications, browse abandonment push notifications, price drop alerts, and inventory alerts as triggered campaigns.
+
+All the triggers are predefined and you only have to create a campaign and enable it from a drop-down in the PushEngage plugin. What’s even cooler is that PushEngage also comes with automatic revenue tracking so that you can see how your campaigns are contributing to your business.
 
 === Send Web, Mobile, and Web App Push Notifications to Increase Repeat Traffic & Conversions ===
 
@@ -63,7 +76,11 @@ Whether you're running a blog, a news site, a travel site, a SaaS site, or an eC
 
 The best part about PushEngage's web push campaigns is that you can modify it to suit any type of business.
 
+[youtube https://www.youtube.com/watch?v=5cIN1509t3w]
+
 If you're running an eCommerce site, you can send transactional push notifications to increase your revenue. And if you're running a blog site or a media outlet, then you can create powerful automated campaigns to get repeat readers, more ad revenue, higher views on your social media content, and so much more.
+
+[youtube https://www.youtube.com/watch?v=dtc2FYksVSs]
 
 You can even increase paid subscriptions to your premium content, merchandise sales, conversions on your affiliate offers, and more.
 
@@ -79,15 +96,23 @@ Here's a quick look at some of the most advanced features you should know about:
 
 And if you’re super busy with marketing activities and you just want to use push notifications to promote your new content, you can send <a href="https://www.pushengage.com/rss-push-notifications/?utm_source=orgplugin&utm_medium=link&utm_campaign=wpreadme" rel="friend">RSS push notifications</a> as well. Unlike other push notification services, you don’t even need to use a notifications API. You can do it straight from the plugin.
 
+[youtube https://www.youtube.com/watch?v=4y43IBRV-QU]
+
 Even better, the PushEngage plugin can automatically turn your WordPress blog categories into segments that you can use to send retargeting push messages.
+
+[youtube https://www.youtube.com/watch?v=C2cHIviRnUQ]
+
+You can refine your targeting even further with Audience Groups.
+
+[youtube https://www.youtube.com/watch?v=ivTWRnS9RtI]
 
 The coolest part is that we help you succeed with your campaigns. You can always talk to our top-tier Customer Success team to set up, track, and optimize your campaigns. And we also give you push notification templates that are proven to work so that you don't have to build anything from scratch. It’s super user-friendly.
 
-What’s more is that you can use our Javascript API to create custom campaigns and send notifications synced to a CRM software.
-
-=== The PushEngage Dashboard Makes it Easy ===
+=== The PushEngage Dashboard Makes Marketing Manageable ===
 
 We were tired of the push notification software that in the market that are too difficult to use and are built for developers instead of business owners. That’s why we built PushEngage to help you create powerful marketing workflows and custom web push notification campaigns even without a developer.
+
+[youtube https://www.youtube.com/watch?v=dsAhQ3kty1A]
 
 With PushEngage, you can create powerful marketing campaigns from a simple dashboard in a matter of minutes even if:
 
@@ -104,18 +129,18 @@ But don’t just take our word for it. Here’s what Amanda had to say:
 
 === Time-Tested Push Notification Campaign Templates ===
 
-Don’t know what push notification campaigns you need and how to get started?
-
-No worries. We built campaign templates into our dashboard that you can use to get started.
+Don’t know what push notification campaigns you need and how to get started? No worries. We built campaign templates into our dashboard that you can use to get started.
 
 The technical stuff is all taken care of. All you have to do is:
 
 * Select a campaign type
-* Create your push notifications
+* Create your web push notifications
 * Select an audience to send to
 * Send/Schedule your campaign
 
 Even with <a href="https://www.pushengage.com/automated-push-notifications/?utm_source=orgplugin&utm_medium=link&utm_campaign=wpreadme" rel="friend">advanced trigger campaigns</a>, you can start with a template that comes with pre-built triggers so that you don’t have to configure them yourself. All you have to do is focus on growing your business.
+
+You can even target different devices and send desktop and mobile push notifications from the PushEngage dashboard.
 
 === Smart Page Targeting and Behavior Based Personalization ===
 
@@ -128,6 +153,8 @@ This means you can <a hre="https://www.pushengage.com/how-to-add-a-push-notifica
 * Users who click a specific link
 
 And more!
+
+[youtube https://www.youtube.com/watch?v=4YI4EmlcW4A]
 
 You can even segment your subscribers automatically when they visit your site. PushEngage allows you to create <a href="https://www.pushengage.com/how-to-do-segmentation-in-push-notifications/?utm_source=orgplugin&utm_medium=link&utm_campaign=wpreadme" rel="friend">custom segmentation rules</a>. And if you want your visitors to click a button on your site to subscribe to your push notifications, you can create <a href="https://www.pushengage.com/how-to-collect-web-push-subscribers-using-button-or-link-click/?utm_source=orgplugin&utm_medium=link&utm_campaign=wpreadme" rel="friend">click to subscribe buttons</a> as well.
 
@@ -142,20 +169,39 @@ This allows you to send targeted web push notifications that fetch you more subs
 
 Unlike other WordPress push notification plugins, PushEngage comes with reliable A/B split testing and accurate analytics without slowing down your site. Most other plugins face significant issues with caching that can skew your web push campaign analytics and A/B tests.
 
+[youtube https://www.youtube.com/watch?v=7fIDAbJmkhs]
+
 But PushEngage offers far better infrastructure for more accurate results. You get detailed analytics on all your campaigns and optins right from your dashboard.
 
 What’s more is that you can create Intelligent A/B tests to improve an ongoing campaign.
 
-With Intelligent A/B testing, you can select a small audience to split test your browser push notifications and then send the winning notification to the rest of your audience.
-
-<a href="https://www.pushengage.com/brandsmart-usa-case-study/?utm_source=orgplugin&utm_medium=link&utm_campaign=wpreadme" rel="friend">BrandsMart USA Got a Whopping 2.9 Million Views from Push Notifications</a> by using A/B testing. If you’re new to push notification analytics and split testing, you should check out our guides on:
-
-* <a href="https://www.pushengage.com/push-notification-a-b-testing/?utm_source=orgplugin&utm_medium=link&utm_campaign=wpreadme" rel="friend">How to do Push Notification A/B Testing (Best Practices)</a>
-* <a href="https://www.pushengage.com/how-to-track-push-notifications/?utm_source=orgplugin&utm_medium=link&utm_campaign=wpreadme" rel="friend">How to Track Push Notifications with Google Analytics</a>
+With Intelligent A/B testing, you can select a small audience to split test your browser notifications and then send the winning notification to the rest of your audience.
 
 <strong>NOTE:</strong> You can only get access to advanced analytics and A/B testing if you're on a paid plan. The free plan only helps you get started with push notifications.
 
-=== Powerful Integrations ===
+= Credits =
+
+This WordPress web push notifications plugin was created by <a href="https://syedbalkhi.com/" rel="friend">Syed Balkhi</a>.
+
+=== What's Next ===
+To get the most value out of your growing browser push notification subscriber list, see our <a href="https://www.pushengage.com/best-practices-web-push-notifications/?utm_source=orgplugin&utm_medium=link&utm_campaign=wpreadme" rel="friend">push notification best practices</a> and our article on <a href="https://www.pushengage.com/push-notification-examples/?utm_source=orgplugin&utm_medium=link&utm_campaign=wpreadme" rel="friend">75 Epic Push Notification Examples You Can Steal Right Now</a>.
+
+If you like this WordPress web push notifications plugin, then consider checking out our other integrations:
+
+* **[WooCommerce](https://www.pushengage.com/woocommerce-push-notification-plugin/?utm_source=orgplugin&utm_medium=link&utm_campaign=wpreadme)**
+* **[Web SDK](https://www.pushengage.com/api/web-sdk/?utm_source=orgplugin&utm_medium=link&utm_campaign=wpreadme)**
+* **[Android SDK](https://www.pushengage.com/api/mobile-sdk/android-sdk/?utm_source=orgplugin&utm_medium=link&utm_campaign=wpreadme)**
+* **[iOS SDK](https://www.pushengage.com/api/mobile-sdk/iOS-sdk/?utm_source=orgplugin&utm_medium=link&utm_campaign=wpreadme)**
+* **[Shopify](https://www.pushengage.com/push-notification-app-for-shopify/?utm_source=orgplugin&utm_medium=link&utm_campaign=wpreadme)**
+* **[Shopify Plus](https://www.pushengage.com/shopify-plus-app/?utm_source=orgplugin&utm_medium=link&utm_campaign=wpreadme)**
+* **[Easy Digital Downloads](https://www.pushengage.com/easy-digital-downloads-integration/?utm_source=orgplugin&utm_medium=link&utm_campaign=wpreadme)**
+* **[MemberPress](https://www.pushengage.com/memberpress-integration/?utm_source=orgplugin&utm_medium=link&utm_campaign=wpreadme)**
+* **[OptinMonster](https://www.pushengage.com/optinmonster-integration/?utm_source=orgplugin&utm_medium=link&utm_campaign=wpreadme)**
+* **[WPCode](https://www.pushengage.com/wpcode-integration/?utm_source=orgplugin&utm_medium=link&utm_campaign=wpreadme)**
+* **[Hubspot](https://www.pushengage.com/hubspot-integration/?utm_source=orgplugin&utm_medium=link&utm_campaign=wpreadme)**
+* **[ClickFunnels](https://www.pushengage.com/clickfunnels-integration/?utm_source=orgplugin&utm_medium=link&utm_campaign=wpreadme)**
+* **[Salesforce](https://www.pushengage.com/salesforce-integration/?utm_source=orgplugin&utm_medium=link&utm_campaign=wpreadme)**
+* **[Zapier](https://www.pushengage.com/zapier-integration/?utm_source=orgplugin&utm_medium=link&utm_campaign=wpreadme)**
 
 PushEngage just works no matter what device or browser your visitors are using including:
 
@@ -171,58 +217,37 @@ This means that you can also send mobile push notifications such as Android web 
 
 It also works out of the box with all major website builders and eCommerce platforms and solutions. Check out our installation guides:
 
-* <a href="https://www.pushengage.com/how-to-install-web-push-notifications-plugin-on-wordpress-website/?utm_source=orgplugin&utm_medium=link&utm_campaign=wpreadme" rel="friend">Install push notifications on WordPress</a>
-* <a href="https://www.pushengage.com/how-to-use-push-notification-on-wordpress-without-plugin/?utm_source=orgplugin&utm_medium=link&utm_campaign=wpreadme" rel="friend">Install push notifications on WordPress (without a plugin)</a>
-* <a href="https://www.pushengage.com/how-to-go-live-with-web-push-notifications-on-a-woocommerce-site/?utm_source=orgplugin&utm_medium=link&utm_campaign=wpreadme" rel="friend">Install push notifications on WooCommerce</a>
-
-And it integrates seamlessly with marketing tools such as:
-
-* <a href="https://www.pushengage.com/how-to-track-push-notifications/?utm_source=orgplugin&utm_medium=link&utm_campaign=wpreadme" rel="friend">Google Analytics</a>
-* <a href="https://www.pushengage.com/install-pushengage-through-gtm/?utm_source=orgplugin&utm_medium=link&utm_campaign=wpreadme" rel="friend">Google Tag Manager</a>
-* <a href="https://www.pushengage.com/how-to-integrate-web-push-notification-on-instapage-landingpages/?utm_source=orgplugin&utm_medium=link&utm_campaign=wpreadme" rel="friend">Instapage</a>
-* <a href="https://www.pushengage.com/how-integrate-web-push-notification-clickfunnels/?utm_source=orgplugin&utm_medium=link&utm_campaign=wpreadme" rel="friend">ClickFunnels</a>
-
 <a href="https://www.pushengage.com/pricing/?utm_source=orgplugin&utm_medium=link&utm_campaign=wpreadme" rel="friend">Get started with PushEngage today!</a>
 
-= Credits =
+== Frequently Asked Questions ==
 
-This WordPress web push notifications plugin was created by <a href="https://syedbalkhi.com/" rel="friend">Syed Balkhi</a>.
+= Is there a free plan, and what’s included? =
 
-= Branding Guidelines =
+PushEngage offers a free plan, which includes basic push notification features to help you get started. Paid plans unlock advanced features such as A/B testing, analytics, audience segmentation, and additional customization options to drive higher engagement.
 
-When writing about the browser push notification plugin by PushEngage, please make sure to uppercase the letter P and E.
+= How do push notifications compare to email for engagement? =
 
-* PushEngage (correct)
-* Push Engage (incorrect)
-* pushengage (incorrect)
-* push engage (incorrect)
+Push notifications are like the YouTube Shorts of the messaging world. It’s a different format and you often achieve higher engagement rates than email because they deliver messages instantly to users’ devices. With PushEngage, you can even automate campaigns and segment audiences, making it easy to maintain engagement without needing constant manual input.
 
-See our <a href="https://www.pushengage.com/press/?utm_source=orgplugin&utm_medium=link&utm_campaign=wpreadme" rel="friend">Press & Brand Assets page</a> for more details.
+= Can PushEngage send notifications to both desktop and mobile users? =
 
-= What’s Next =
+Yes, PushEngage supports notifications across multiple platforms, including desktop browsers (Chrome, Firefox, Safari, Edge) and mobile browsers on Android and iOS. This ensures you can reach your audience on any device. You can even send mobile push notifications without a mobile app.
 
-To get the most value out of your growing browser push notification subscriber list, see our <a href="https://www.pushengage.com/best-practices-web-push-notifications/?utm_source=orgplugin&utm_medium=link&utm_campaign=wpreadme" rel="friend">push notification best practices</a> and our article on <a href="https://www.pushengage.com/push-notification-examples/?utm_source=orgplugin&utm_medium=link&utm_campaign=wpreadme" rel="friend">75 Epic Push Notification Examples You Can Steal Right Now</a>.
+= Does PushEngage offer support for eCommerce campaigns like cart abandonment? =.
 
-If you like this WordPress web push notifications plugin, then consider checking out our other projects:
+Absolutely! PushEngage has powerful eCommerce features specifically designed for WooCommerce and other platforms. You can send automated notifications for cart abandonment, price drops, inventory alerts, and browse abandonment to recover potential lost sales.
 
-* <a href="https://optinmonster.com/" rel="friend">OptinMonster</a> – Get more email subscribers with the most popular conversion optimization plugin for WordPress.
-* <a href="https://wpforms.com/" rel="friend">WPForms</a> – #1 drag & drop online form builder for WordPress (trusted by 5 million sites).
-* <a href="https://aioseo.com/" rel="friend">AIOSEO</a> - The original WordPress SEO plugin to help you rank higher in search results (trusted by over 3 million sites).
-* <a href="https://www.monsterinsights.com/" rel="friend">MonsterInsights</a> – See the stats that matter and grow your business with confidence. Best Google Analytics plugin for WordPress.
-* <a href="https://www.seedprod.com/" rel="friend">SeedProd</a> – Create beautiful landing pages with our powerful drag & drop landing page builder.
-* <a href="https://wpmailsmtp.com/" rel="friend">WP Mail SMTP</a> – Improve email deliverability for your contact form with the most popular SMTP plugin for WordPress.
-* <a href="https://smashballoon.com/" rel="friend">Smash Balloon</a> - #1 social feeds plugin for WordPress - display social media content in WordPress without code.
-* <a href="https://wpcode.com/" rel="friend">WPCode</a> - must have WordPress code snippet management plugin to help you future-proof website customization (trusted by 1.5 million sites).
-* <a href="https://duplicator.com/" rel="friend">Duplicator</a> – popular WordPress backup and migration plugin used by over 1 million websites.
-* <a href="https://wpsimplepay.com/" rel="friend">WP Simple Pay</a> –  #1 Stripe payments plugin for WordPress. Start accepting one-time or recurring payments without a shopping cart.
-* <a href="https://rafflepress.com/" rel="friend">RafflePress</a> – Best WordPress giveaway and contest plugin to grow traffic and social followers.
-* <a href="https://trustpulse.com/" rel="friend">TrustPulse</a> - Add real-time social proof notifications to boost your store conversions by up to 15%.
-* <a href="https://searchwp.com/" rel="friend">SearchWP</a> -  The most advanced custom WordPress search plugin to improve WordPress search quality.
-* <a href="https://affiliatewp.com/" rel="friend">AffiliateWP</a> - #1 affiliate management plugin for WordPress. Add a referral program to your online store.
-* <a href="https://easydigitaldownloads.com/" rel="friend">Easy Digital Downloads</a> - The best WordPress eCommerce plugin to sell digital products (eBooks, software, music, and more).
-* <a href="https://www.wpcharitable.com/" rel="friend">WPCharitable</a> - Top-rated WordPress donation and fundraising plugin for WordPress.
+= How does PushEngage handle analytics and tracking? = 
 
-Visit <a href="https://www.wpbeginner.com/" rel="friend">WPBeginner</a> to learn from our <a href="https://www.wpbeginner.com/category/wp-tutorials/" rel="friend">WordPress Tutorials</a> and about the <a href="https://www.wpbeginner.com/category/plugins/" rel="friend">best WordPress plugins</a>.
+PushEngage includes built-in analytics to help you monitor your campaign performance. You can track metrics such as click-through rates, conversions, and revenue directly from your dashboard, and even integrate with Google Analytics for deeper insights.
+
+= Can I use PushEngage with other marketing tools? =
+
+Yes, PushEngage integrates smoothly with many popular marketing tools, including Google Tag Manager, Instapage, ClickFunnels, and CRM systems. This allows you to create seamless marketing workflows across platforms.
+
+= Is customer support available if I need help? =
+
+PushEngage offers a dedicated Customer Success team to assist with setup, troubleshooting, and campaign optimization. With a paid plan, you also get access to priority support to ensure you’re getting the most from your push notification strategy.
 
 == Installation ==
 
@@ -262,6 +287,11 @@ Syed Balkhi
 == Changelog ==
 
 **Most Recent Changes:**
+
+= 4.0.11 =
+* Updated PushEngage WP Admin menu position for better access.
+* Updated Integration submenu to enhance WooCommerce Integration.
+* Fixed minor UI bugs in the PushEngage Settings Page.
 
 = 4.0.10 =
 * Added PushEngage settings in pre-publish checklist.
