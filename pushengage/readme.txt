@@ -2,9 +2,9 @@
 Contributors: PushEngage, smub
 Tags: push notifications, web push notifications, cart abandonment notifications, woocommerce push notifications, mobile push notifications
 Requires at least: 4.5.0
-Tested up to: 6.6
+Tested up to: 6.7
 Requires PHP: 5.6
-Stable tag: 4.0.11
+Stable tag: 4.0.12
 License: GNU General Public License v2.0 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -233,7 +233,7 @@ Push notifications are like the YouTube Shorts of the messaging world. It’s a 
 
 Yes, PushEngage supports notifications across multiple platforms, including desktop browsers (Chrome, Firefox, Safari, Edge) and mobile browsers on Android and iOS. This ensures you can reach your audience on any device. You can even send mobile push notifications without a mobile app.
 
-= Does PushEngage offer support for eCommerce campaigns like cart abandonment? =.
+= Does PushEngage offer support for eCommerce campaigns like cart abandonment? =
 
 Absolutely! PushEngage has powerful eCommerce features specifically designed for WooCommerce and other platforms. You can send automated notifications for cart abandonment, price drops, inventory alerts, and browse abandonment to recover potential lost sales.
 
@@ -287,6 +287,11 @@ Syed Balkhi
 == Changelog ==
 
 **Most Recent Changes:**
+
+= 4.0.12 =
+* Updated PushEngage Dashboard screen layout when site is not connected.
+* Added conditional load for performance optimization.
+* Updated use of PushEngage version constant for admin scripts.
 
 = 4.0.11 =
 * Updated PushEngage WP Admin menu position for better access.

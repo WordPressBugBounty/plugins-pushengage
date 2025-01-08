@@ -12,15 +12,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 class EnqueueAssets {
 	/**
-	 * Holds the $version param value for enqueue scripts/styles
-	 *
-	 * @since 4.0.0
-	 *
-	 * @var string
-	 */
-	public $version;
-
-	/**
 	 * Class constructor
 	 *
 	 * @since 4.0.0
@@ -28,7 +19,6 @@ class EnqueueAssets {
 	 * @return void
 	 */
 	public function __construct() {
-		$this->version = PUSHENGAGE_VERSION;
 		$this->enqueue_admin_scripts();
 	}
 
@@ -68,7 +58,6 @@ class EnqueueAssets {
 	 * @return void
 	 */
 	public static function enqueue_pushengage_scripts() {
-		$self      = new static();
 		$dep_array = array();
 		global $wp_version;
 		$is_version_more_than_five = version_compare( $wp_version, '5.0.0', '>=' );
@@ -80,7 +69,7 @@ class EnqueueAssets {
 			'pushengage-font',
 			PUSHENGAGE_PLUGIN_URL . 'assets/fonts/fonts.css',
 			array(),
-			$self->version
+			PUSHENGAGE_VERSION
 		);
 
 		$assets_base_url = PUSHENGAGE_PLUGIN_URL . 'dist/';
@@ -109,7 +98,7 @@ class EnqueueAssets {
 					$handle,
 					$assets_base_url . $asset,
 					array(),
-					$self->version
+					PUSHENGAGE_VERSION
 				);
 			}
 			if ( 'js' === $extension ) {
@@ -117,7 +106,7 @@ class EnqueueAssets {
 					$handle,
 					$assets_base_url . $asset,
 					$dep_array,
-					$self->version,
+					PUSHENGAGE_VERSION,
 					true
 				);
 			}

@@ -312,6 +312,41 @@ class PushengageAPI {
 	}
 
 	/**
+	 * Get all the audience groups.
+	 *
+	 * @param array $params {
+	 *      Array of request parameters to filter the audience groups.
+	 *      @type int       $limit Optional.    Specifies the maximum number of audience groups to display in the results.
+	 *                                          The maximum value is 100. Default is 10.
+	 *
+	 *      @type int       $page Optional.     Specifies the page number to display in the results. Default is 1.
+	 *
+	 *      @type string    $name_like  Optional. Retrieves audience groups that contain the specified string in their name.
+	 *
+	 * }
+	 * @since 4.0.12
+	 * @return array|WP_Error The response data or WP_Error on failure.
+	 *
+	 * * @example
+	 * Example of a successful return value:
+	 * [
+	 *      'status' => 200,
+	 *      'data'   => [...], // Audience Groups data
+	 *      'user'   => [...]  // User data
+	 * ]
+	 */
+	public function get_audience_groups( $params = array() ) {
+		$settings = Options::get_site_settings();
+		$path     = 'sites/' . $settings['site_id'] . '/audience-groups';
+
+		if ( ! empty( $params ) ) {
+			$path .= '?' . http_build_query( $params );
+		}
+
+		return HttpAPI::send_private_api_request( $path );
+	}
+
+	/**
 	 * Create a new segment.
 	 *
 	 * @since 4.0.10

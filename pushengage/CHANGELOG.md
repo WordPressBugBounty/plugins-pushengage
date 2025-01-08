@@ -2,6 +2,12 @@
 
 All notable changes to the PushEngage plugin will be documented in this file.
 
+### 4.0.12
+
+* Updated PushEngage Dashboard screen layout when site is not connected.
+* Added conditional load for performance optimization.
+* Updated use of PushEngage version constant for admin scripts.
+
 ### 4.0.11
 
 * Updated PushEngage WP Admin menu position for better access.
