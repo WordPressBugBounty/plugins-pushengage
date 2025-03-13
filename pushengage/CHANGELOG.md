@@ -2,6 +2,14 @@
 
 All notable changes to the PushEngage plugin will be documented in this file.
 
+### 4.1.0
+
+* Added new onboarding wizard for new sites that enhances PushEngage setup experience.
+* Added WooCommerce Integration to send order updates Push Notifications.
+* Enabled Goal tracking feature for free plan users.
+* Added Goal tracking support for WooCommerce order update Push Notifications.
+* Added Auto push setting in pre-publish checklist of products.
+
 ### 4.0.12
 
 * Updated PushEngage Dashboard screen layout when site is not connected.

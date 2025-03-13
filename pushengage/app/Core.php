@@ -4,14 +4,17 @@ namespace Pushengage;
 use Pushengage\HttpClient;
 use Pushengage\EnqueueAssets;
 use Pushengage\Utils\Options;
+use Pushengage\Utils\PublicPostTypes;
 use Pushengage\Utils\ArrayHelper;
 use Pushengage\Utils\Constants;
 use Pushengage\Utils\Helpers;
 use Pushengage\Integrations\Helpers as IntegrationHelpers;
 use Pushengage\Utils\PostMetaFormatter;
 use Pushengage\Utils\StringUtils;
-use Pushengage\Integrations\Woo;
+use Pushengage\Integrations\WooCommerce\Woo;
 use Pushengage\Integrations\Edd;
+use Pushengage\Integrations\WooCommerce\NotificationHandler;
+use Pushengage\Integrations\WooCommerce\NotificationTemplates;
 
 // Exit if accessed directly.
 if ( ! defined( 'ABSPATH' ) ) {
@@ -84,6 +87,10 @@ class Core {
 				add_action( 'enqueue_block_editor_assets', array( $this, 'load_block_editor_scripts' ) );
 			}
 		}
+		if ( IntegrationHelpers::is_woocommerce_active() ) {
+			NotificationTemplates::init();
+			NotificationHandler::init();
+		}
 	}
 
 	/**
@@ -100,10 +107,10 @@ class Core {
 		 * @since 4.0.8
 		 *
 		 */
-		add_action( 'pe_wpcode_wc_browse_script', array( 'Pushengage\Integrations\Woo', 'enqueue_wc_browse_abandonment_script' ), 10, 1 );
-		add_action( 'pe_wpcode_wc_cart_script', array( 'Pushengage\Integrations\Woo', 'enqueue_wc_cart_abandonment_script' ), 10, 3 );
-		add_action( 'pe_wpcode_wc_cart_ajax_script', array( 'Pushengage\Integrations\Woo', 'enqueue_wc_cart_abandonment_ajax_script' ), 10, 2 );
-		add_action( 'pe_wpcode_wc_checkout_script', array( 'Pushengage\Integrations\Woo', 'enqueue_wc_checkout_script' ), 10, 2 );
+		add_action( 'pe_wpcode_wc_browse_script', array( 'Pushengage\Integrations\WooCommerce\Woo', 'enqueue_wc_browse_abandonment_script' ), 10, 1 );
+		add_action( 'pe_wpcode_wc_cart_script', array( 'Pushengage\Integrations\WooCommerce\Woo', 'enqueue_wc_cart_abandonment_script' ), 10, 3 );
+		add_action( 'pe_wpcode_wc_cart_ajax_script', array( 'Pushengage\Integrations\WooCommerce\Woo', 'enqueue_wc_cart_abandonment_ajax_script' ), 10, 2 );
+		add_action( 'pe_wpcode_wc_checkout_script', array( 'Pushengage\Integrations\WooCommerce\Woo', 'enqueue_wc_checkout_script' ), 10, 2 );
 
 		/**
 		 * EDD automation integration via WPCode.
@@ -124,19 +131,21 @@ class Core {
 		$cart_abandonment_enable = ArrayHelper::get( $pushengage_settings, 'woo_integration.cart_abandonment.enable', false );
 
 		if ( $enable_browse_abandonment ) {
-			add_action( 'woocommerce_after_single_product', array( 'Pushengage\Integrations\Woo', 'browse_abandonment_trigger' ) );
+			add_action( 'woocommerce_after_single_product', array( 'Pushengage\Integrations\WooCommerce\Woo', 'browse_abandonment_trigger' ) );
 		}
 
 		// Cart abandonment trigger requires both browse and cart abandonment as we need to terminate browse abandonment before cart abandonment.
 		if ( $cart_abandonment_enable || $enable_browse_abandonment ) {
-			add_action( 'wp_head', array( 'Pushengage\Integrations\Woo', 'cart_abandonment_trigger_ajax' ) );
-			add_action( 'woocommerce_add_to_cart', array( 'Pushengage\Integrations\Woo', 'cart_abandonment_trigger' ), 10, 6 );
+			add_action( 'wp_head', array( 'Pushengage\Integrations\WooCommerce\Woo', 'cart_abandonment_trigger_ajax' ) );
+			add_action( 'woocommerce_add_to_cart', array( 'Pushengage\Integrations\WooCommerce\Woo', 'cart_abandonment_trigger' ), 10, 6 );
 		}
 
 		// Checkout event for cart abandonment termination.
 		if ( $cart_abandonment_enable ) {
-			add_action( 'woocommerce_thankyou', array( 'Pushengage\Integrations\Woo', 'cart_abandonment_checkout_trigger' ), 10, 1 );
+			add_action( 'woocommerce_thankyou', array( 'Pushengage\Integrations\WooCommerce\Woo', 'cart_abandonment_checkout_trigger' ), 10, 1 );
 		}
+
+		add_action( 'woocommerce_thankyou', array( 'Pushengage\Integrations\WooCommerce\Woo', 'pushengage_sync_segments' ), 10, 1 );
 	}
 
 	/**
@@ -218,12 +227,15 @@ class Core {
 		// app id is same as site key
 		$app_id = $pushengage_settings['site_key'];
 
+		// Keeping optional filter for backward compatibility.
+		$sanitize_filter = defined( 'FILTER_SANITIZE_FULL_SPECIAL_CHARS' ) ? FILTER_SANITIZE_FULL_SPECIAL_CHARS : FILTER_SANITIZE_STRING;
+
 		if ( array_key_exists( 'appId', $_GET ) && ! empty( $_GET['appId'] ) ) {
-			$app_id = filter_var( wp_unslash( $_GET['appId'], FILTER_SANITIZE_STRING ) );
+			$app_id = filter_var( wp_unslash( $_GET['appId'] ), $sanitize_filter );
 		}
 
 		if ( array_key_exists( 'domain', $_GET ) && ! empty( $_GET['domain'] ) ) {
-			$subdomain = filter_var( wp_unslash( $_GET['domain'], FILTER_SANITIZE_STRING ) );
+			$subdomain = filter_var( wp_unslash( $_GET['domain'] ), $sanitize_filter );
 		}
 
 		header_remove( 'x-powered-by' );
@@ -254,6 +266,10 @@ class Core {
 	* @return void
 	*/
 	public function init_admin_options() {
+
+		// Add Meta box when PushEngage site is not connected.
+		add_action( 'add_meta_boxes', array( $this, 'add_pushengage_site_not_connected_metabox' ) );
+
 		if ( ! is_user_logged_in() || false === $this->is_pushengage_active() ) {
 			return;
 		}
@@ -663,6 +679,51 @@ class Core {
 			'normal',
 			apply_filters( 'pushengage_post_settings_metabox_priority', 'high' )
 		);
+	}
+
+	/**
+	 * Add meta box for pushengage site not connected
+	 *
+	 * @since 4.1.0
+	 *
+	 * @return void
+	 */
+	public function add_pushengage_site_not_connected_metabox() {
+		if ( Options::has_credentials() ) {
+			return;
+		}
+
+		$post_types = PublicPostTypes::get_all();
+
+		if ( empty( $post_types ) ) {
+			return;
+		}
+
+		$screens = array_column( $post_types, 'value' );
+
+		if ( empty( $screens ) ) {
+			return;
+		}
+
+		add_meta_box(
+			'pushengage-site-not-connected-metabox',
+			esc_html__( 'PushEngage Push Notification Settings', 'pushengage' ),
+			array( $this, 'render_site_not_connected_metabox' ),
+			$screens,
+			'normal',
+			apply_filters( 'pushengage_site_not_connected_metabox_priority', 'high' )
+		);
+	}
+
+	/**
+	 * Renders the container UI for PushEngage Site Not Connected metabox
+	 *
+	 * @since 4.1.0
+	 *
+	 * @return void
+	 */
+	public function render_site_not_connected_metabox() {
+		Pushengage::output_view( 'site-not-connected-metabox.php' );
 	}
 
 	/**

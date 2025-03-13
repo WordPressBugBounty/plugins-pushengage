@@ -4,7 +4,7 @@ namespace Pushengage;
 use Pushengage\Utils\ArrayHelper;
 use Pushengage\Utils\Helpers;
 use Pushengage\Utils\Options;
-use Pushengage\Integrations\Woo;
+use Pushengage\Integrations\WooCommerce\Woo;
 
 // Exit if accessed directly.
 if ( ! defined( 'ABSPATH' ) ) {

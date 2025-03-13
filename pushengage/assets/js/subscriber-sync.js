@@ -16,6 +16,29 @@ PushEngageWPPluginApp.SubscriberSync =
         w.addEventListener("PushEngage.onSubscriptionChange", function (event) {
           subscriberSync.mayBeSyncSubscriberId(event.detail.subscriber_id);
         });
+
+
+        if ('1' === pushengageSubscriberSync?.enabled_leads_segment) {
+          subscriberSync.getPushEngageSubscriber(function (subscriber) {
+            if (subscriber) {
+              subscriberSync.mayBeSyncSegments(subscriber);
+            }
+          }
+          );
+        }
+
+      },
+
+      getPushEngageSubscriber: function (cb) {
+        PushEngage.push(function () {
+          PushEngage.getSubscriber()
+            .then(function (subscriber) {
+              return cb(subscriber);
+            })
+            .catch(function (error) {
+              console.error(error);
+            });
+        });
       },
 
       getPushEngageSubscriberId: function (cb) {
@@ -28,6 +51,22 @@ PushEngageWPPluginApp.SubscriberSync =
               console.error(error);
             });
         });
+      },
+
+      mayBeSyncSegments: function (subscriber) {
+        if (subscriber) {
+          var segments = subscriber.segments;
+          var alreadySegmented = segments.some(function (segment) {
+            return segment === "Leads" || segment === "Customers";
+          }
+          );
+
+          if (!alreadySegmented) {
+            try {
+              PushEngage.addSegment('Leads');
+            } catch (e) { }
+          }
+        }
       },
 
       mayBeSyncSubscriberId: function (subscriberId) {

@@ -1,0 +1,165 @@
+#pe-notification-templates .wc-email-settings-table-recipients p.form-field {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+}
+
+.pe-woocommerce-switch {
+  display: inline-block;
+}
+
+.pe-woocommerce-switch .switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 25px;
+}
+
+.pe-woocommerce-switch .switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.pe-woocommerce-switch .slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 25px;
+}
+
+.pe-woocommerce-switch .slider::before {
+  position: absolute;
+  content: "";
+  height: 19px;
+  width: 19px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+.pe-woocommerce-switch input:checked + .slider {
+  background-color: var(--wp-admin-theme-color);
+}
+
+.pe-woocommerce-switch input:checked + .slider::before {
+  transform: translateX(25px);
+}
+
+.pushengage .pe-order-actions {
+  display: flex;
+  justify-content: flex-start;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.pushengage .pe-order-actions .pe-order-action {
+  cursor: pointer;
+}
+
+.pushengage .pe-order-actions .pe-order-edit-template {
+  cursor: pointer;
+}
+
+.pushengage .pe-order-actions .pe-greyed-icon {
+  color: #ccc;
+}
+
+/* Define the spin animation */
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Apply the animation when the pre-loading class is present */
+.dashicons.pe-loading {
+  display: inline-block;
+  animation: spin 1s linear infinite;
+  pointer-events: none;
+}
+
+[hover-tooltip] {
+  position: relative;
+  cursor: default;
+}
+[hover-tooltip]:hover::before {
+  content: attr(hover-tooltip);
+  font-size: 14px;
+  text-align: center;
+  position: absolute;
+  display: block;
+  left: 50%;
+  min-width: 150px;
+  max-width: 200px;
+  bottom: calc(100% + 10px);
+  transform: translate(-50%);
+  animation: fade-in 300ms ease;
+  background: #272727;
+  border-radius: 4px;
+  padding: 10px;
+  color: #ffffff;
+  z-index: 1;
+}
+[hover-tooltip]:hover::after {
+  content: "";
+  position: absolute;
+  display: block;
+  left: 50%;
+  width: 0;
+  height: 0;
+  bottom: calc(100% + 6px);
+  margin-left: -3px;
+  border: 1px solid black;
+  border-color: #272727 transparent transparent transparent;
+  border-width: 4px 6px 0;
+  animation: fade-in 300ms ease;
+  z-index: 1;
+}
+[hover-tooltip][tooltip-position="bottom"]:hover::before {
+  bottom: auto;
+  top: calc(100% + 10px);
+}
+[hover-tooltip][tooltip-position="bottom"]:hover::after {
+  bottom: auto;
+  top: calc(100% + 6px);
+  border-color: transparent transparent #272727;
+  border-width: 0 6px 4px;
+}
+
+.pe-notification-settings-title {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+.pe-back-link > span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  color: #2271b1;
+  border: 1px solid #2271b1;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

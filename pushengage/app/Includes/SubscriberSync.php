@@ -2,6 +2,9 @@
 
 namespace Pushengage\Includes;
 
+use Pushengage\Integrations\Helpers as IntegrationHelpers;
+use Pushengage\Utils\Helpers;
+use Pushengage\Utils\ArrayHelper;
 use Pushengage\Utils\Options;
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -48,14 +51,20 @@ class SubscriberSync {
 			$subscriber_ids = array();
 		}
 
+		$site_settings = Options::get_site_settings();
+		$enabled_leads_segment = ArrayHelper::get( $site_settings, 'enabled_leads_segment', false );
+
+		$localized_data = array(
+			'ajaxUrl'               => admin_url( 'admin-ajax.php' ),
+			'nonce'                 => wp_create_nonce( 'pushengage_subscriber_sync_nonce' ),
+			'subscriber_ids'        => $subscriber_ids,
+			'enabled_leads_segment' => $enabled_leads_segment,
+		);
+
 		wp_localize_script(
 			'pushengage-subscriber-sync',
 			'pushengageSubscriberSync',
-			array(
-				'ajaxUrl'        => admin_url( 'admin-ajax.php' ),
-				'nonce'          => wp_create_nonce( 'pushengage_subscriber_sync_nonce' ),
-				'subscriber_ids' => $subscriber_ids,
-			)
+			$localized_data
 		);
 
 		wp_enqueue_script( 'pushengage-subscriber-sync' );

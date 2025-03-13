@@ -245,4 +245,14 @@ class Helpers {
 
 		return $product_categories;
 	}
+
+	/**
+	 * Check if WooCommerce plugin is active.
+	 *
+	 * @since 4.1.0
+	 * @return boolean
+	 */
+	public static function is_woocommerce_active() {
+		return AppHelpers::is_plugin_active( 'woocommerce/woocommerce.php' ) && class_exists( 'woocommerce' );
+	}
 }

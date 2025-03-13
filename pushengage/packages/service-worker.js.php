@@ -10,8 +10,12 @@ header( 'X-Robots-Tag: none' );
 
 
 $pushengage_app_id = '';
+
+// Keeping optional filter for backward compatibility.
+$sanitize_filter = defined( 'FILTER_SANITIZE_FULL_SPECIAL_CHARS' ) ? FILTER_SANITIZE_FULL_SPECIAL_CHARS : FILTER_SANITIZE_STRING;
+
 if ( array_key_exists( 'appId', $_GET ) ) {
-	$pushengage_app_id = filter_var( $_GET['appId'], FILTER_SANITIZE_STRING );
+	$pushengage_app_id = filter_var( $_GET['appId'], $sanitize_filter );
 }
 
 // Validate that the app_id contains only valid characters
@@ -23,7 +27,7 @@ if ( ! empty( $pushengage_app_id ) && preg_match( '/^[a-zA-Z0-9-_]+$/', $pusheng
 
 $subdomain = '';
 if ( array_key_exists( 'domain', $_GET ) ) {
-	$subdomain = filter_var( $_GET['domain'], FILTER_SANITIZE_STRING );
+	$subdomain = filter_var( $_GET['domain'], $sanitize_filter );
 }
 
 // Validate that the subdomain contains only valid characters

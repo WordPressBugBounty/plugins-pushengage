@@ -9,6 +9,7 @@ use Pushengage\Utils\ArrayHelper;
 use Pushengage\Utils\NonceChecker;
 use Pushengage\Utils\PublicPostTypes;
 use Pushengage\Utils\RecommendedPlugins;
+use Pushengage\Includes\Api\HttpAPI;
 
 // Exit if accessed directly.
 if ( ! defined( 'ABSPATH' ) ) {
@@ -36,6 +37,10 @@ class Ajax {
 		'update_onboarding_data',
 		'delete_onboarding_data',
 
+		'update_onboarding_campaign_settings',
+		'update_onboarding_retargeting_settings',
+		'update_onboarding_recover_sales_settings',
+
 		'get_all_plugins_info',
 		'get_recommended_plugins_info',
 		'install_recommended_plugins',
@@ -44,6 +49,7 @@ class Ajax {
 		'update_auto_push_settings',
 
 		'get_all_categories',
+		'get_top_level_categories',
 		'map_segment_with_categories',
 		'get_category_segmentations',
 
@@ -490,6 +496,101 @@ class Ajax {
 	}
 
 	/**
+	 * Get all top level post categories.
+	 *
+	 * @since 4.1.0
+	 *
+	 * @return void
+	 */
+	public function get_top_level_categories() {
+		NonceChecker::check();
+		$this->check_capability( 'edit_posts' );
+
+		$categories = get_categories(
+			array(
+				'parent' => 0,
+			)
+		);
+
+		$cats = array();
+		foreach ( $categories as $category ) {
+			$cats[] = $category->cat_name;
+		}
+
+		wp_send_json_success( $cats );
+	}
+
+	/**
+	 * Transforms WordPress category segments based on provided values and existing segments.
+	 *
+	 * @param array $segment The segment data, containing 'segment_id' and 'segment_name'.
+	 * @param array $values An array of category names to include.
+	 * @param array $category_segments An array of existing category segments.
+	 *
+	 * @return array The transformed category segments.
+	 */
+	public function transform_wp_category_segments( array $segment, array $values, array $category_segments ) {
+		$payload = array();
+		$segment_lists = $category_segments;
+
+		$category_name_list = array_column( $category_segments, 'category_name' );
+
+		foreach ( $values as $value ) {
+			if ( ! in_array( $value, $category_name_list, true ) ) {  // Strict comparison for string values
+				$segment_lists[] = array(
+					'category_name'   => $value,
+					'segment_id'      => array(),
+					'segment_name'    => array(),
+					'segment_mapping' => array(),
+				);
+			}
+		}
+
+		foreach ( $segment_lists as $category_segment ) {
+			$segment_ids     = isset( $category_segment['segment_id'] ) ? $category_segment['segment_id'] : array();
+			$segment_ids     = is_array( $segment_ids ) ? $segment_ids : array( $segment_ids );
+			$segment_names   = isset( $category_segment['segment_name'] ) ? $category_segment['segment_name'] : array();
+			$segment_names   = is_array( $segment_names ) ? $segment_names : array( $segment_names );
+			$segment_mapping = isset( $category_segment['segment_mapping'] ) ? $category_segment['segment_mapping'] : array();
+
+			if ( ! in_array( $category_segment['category_name'], $values, true ) ) { // Strict comparison
+				$segment_ids = array_filter(
+					$segment_ids,
+					function ( $id ) use ( &$segment_mapping, $segment ) {
+						if ( $id === $segment['segment_id'] ) {
+							unset( $segment_mapping[ $id ] );
+						}
+						return $id !== $segment['segment_id'];
+					}
+				);
+
+				$segment_names = array_filter(
+					$segment_names,
+					function ( $name ) use ( $segment ) {
+						return $name !== $segment['segment_name'];
+					}
+				);
+
+			} else {
+				$segment_ids = array_unique( array_merge( $segment_ids, array( $segment['segment_id'] ) ) );
+				$segment_names = array_unique( array_merge( $segment_names, array( $segment['segment_name'] ) ) );
+				$segment_mapping[ $segment['segment_id'] ] = $segment['segment_name'];
+			}
+
+			if ( ! empty( $segment_ids ) && ! empty( $segment_names ) ) {
+				$payload[] = array(
+					'category_name'   => $category_segment['category_name'],
+					'segment_id'      => array_values( $segment_ids ),
+					'segment_name'    => array_values( $segment_names ),
+					'segment_mapping' => $segment_mapping,
+				);
+			}
+		}
+
+		return $payload;
+	}
+
+	/**
 	 * Map segment info for categories
 	 *
 	 * @since 4.0.0
@@ -692,5 +793,244 @@ class Ajax {
 		}
 
 		wp_send_json_success();
+	}
+
+	/**
+	 * Update onboarding campaign settings
+	 *
+	 * @since 4.0.0
+	 *
+	 * @return void
+	 */
+	public function update_onboarding_campaign_settings() {
+		NonceChecker::check();
+		$this->check_capability( 'manage_options' );
+
+		if ( empty( $_POST['campaign_settings'] ) ) {
+			wp_send_json_error( __( 'Invalid request. Campaign Settings data missing.', 'pushengage' ), 400 );
+		}
+
+		$campaign_settings = json_decode( stripslashes_deep( $_POST['campaign_settings'] ), true );
+		$site_settings = Options::get_site_settings();
+
+		$auto_push_post_types = ArrayHelper::get( $site_settings, 'allowed_post_types', PublicPostTypes::get_all() );
+
+		if ( ! is_array( $auto_push_post_types ) ) {
+			$auto_push_post_types = json_decode( $auto_push_post_types, true );
+		}
+
+		$order_updates_settings = get_option( 'pe_notifications_row_setting', array() );
+
+		// For each item in the campaign settings, switch case statement based on id.
+		foreach ( $campaign_settings as $key => $setting ) {
+			switch ( $setting['id'] ) {
+				case 'welcome_drip':
+					$drip_id = ! empty( $setting['dripId'] ) ? $setting['dripId'] : false;
+					$status  = $setting['enabled'] ? 'active' : 'cancelled';
+
+					if ( $drip_id ) {
+						$path = 'sites/' . $site_settings['site_id'] . '/automation/drips/' . $drip_id . '/status';
+
+						$options = array(
+							'method' => 'PATCH',
+							'body'   => array(
+								'status' => $status,
+							),
+						);
+
+						$response = HttpAPI::send_private_api_request( $path, $options );
+
+						if ( is_wp_error( $response ) ) {
+							wp_send_json_error( $response->get_error_message(), 400 );
+						}
+					}
+					break;
+				case 'promote_new_posts':
+					if ( $setting['enabled'] ) {
+						$auto_push_post_types[] = 'post';
+					} else {
+						$auto_push_post_types = array_diff( $auto_push_post_types, array( 'post' ) );
+					}
+					break;
+				case 'notify_new_product_listings':
+					if ( $setting['enabled'] ) {
+						$auto_push_post_types[] = 'product';
+					} else {
+						$auto_push_post_types = array_diff( $auto_push_post_types, array( 'product' ) );
+					}
+					break;
+				case 'send_order_updates':
+					$update_types = isset( $setting['subItems'] ) ? $setting['subItems'] : array();
+
+					if ( ! empty( $update_types ) ) {
+						foreach ( $update_types as $key => $update_type ) {
+							$notification_settings = get_option( 'pe_notification_' . $update_type['id'], array() );
+
+							if ( isset( $update_type['enable_admin'] ) ) {
+								$notification_settings['enable_admin'] = $update_type['enable_admin'] ? 'yes' : 'no';
+							}
+
+							if ( isset( $update_type['enable_customer'] ) ) {
+								$notification_settings['enable_customer'] = $update_type['enable_customer'] ? 'yes' : 'no';
+							}
+
+							if ( ! $setting['enabled'] ) {
+								$order_updates_settings[ 'enable_' . $update_type['id'] ] = 'no';
+							} else {
+								$order_updates_settings[ 'enable_' . $update_type['id'] ] = $update_type['enabled'] ? 'yes' : 'no';
+							}
+
+							update_option( 'pe_notification_' . $update_type['id'], $notification_settings );
+						}
+					}
+					break;
+				case 'review_request':
+						$order_updates_settings['enable_review_request'] = $setting['enabled'] ? 'yes' : 'no';
+					break;
+			}
+			update_option( 'pe_notifications_row_setting', $order_updates_settings );
+
+			$auto_push_post_types = array_unique( $auto_push_post_types );
+			$site_settings['allowed_post_types'] = wp_json_encode( $auto_push_post_types );
+
+			// Add default settings for auto push - enable autopush, featured image, multi action button.
+			$site_settings['auto_push'] = true;
+			$site_settings['featured_large_image'] = true;
+			$site_settings['multi_action_button'] = true;
+
+			Options::update_site_settings( $site_settings );
+		}
+
+		wp_send_json_success();
+	}
+
+	/**
+	 * Update onboarding retargeting settings
+	 *
+	 * @since 4.1.0
+	 *
+	 * @return void
+	 */
+	public function update_onboarding_retargeting_settings() {
+		NonceChecker::check();
+		$this->check_capability( 'manage_options' );
+
+		if ( empty( $_POST['segmentSettings'] ) ) {
+			wp_send_json_error( __( 'Invalid request. Retargeting Settings data missing.', 'pushengage' ), 400 );
+		}
+
+		$segment_settings = json_decode( stripslashes_deep( $_POST['segmentSettings'] ), true );
+		$site_settings    = Options::get_site_settings();
+		$category_segmentations = ArrayHelper::get( $site_settings, 'category_segmentation', array() );
+		$category_segmentation_settings = array();
+
+		if ( ! empty( $category_segmentations ) ) {
+			$category_segmentations = json_decode( $category_segmentations, true );
+			$category_segmentation_settings = ArrayHelper::get( $category_segmentations, 'settings', array() );
+		}
+
+		// For each item in the retargeting settings, switch case statement based on id.
+		foreach ( $segment_settings as $key => $setting ) {
+			switch ( $setting['id'] ) {
+				case 'primary_categories':
+					if ( $setting['enabled'] ) {
+						if ( ! empty( $setting['categories'] ) ) {
+							foreach ( $setting['categories'] as $category ) {
+								$segment = pushengage()->create_segment(
+									array(
+										'segment_name' => $category,
+									)
+								);
+
+								if ( ! is_wp_error( $segment ) ) {
+									$category_segmentation_settings = $this->transform_wp_category_segments(
+										$segment['data'],
+										array( $category ),
+										$category_segmentation_settings
+									);
+									$site_settings['category_segmentation'] = wp_json_encode( array( 'settings' => $category_segmentation_settings ) );
+								}
+							}
+						}
+						Options::update_site_settings( $site_settings );
+					}
+					break;
+				case 'customers':
+					if ( $setting['enabled'] ) {
+						$site_settings['enabled_customers_segment'] = true;
+						pushengage()->create_segment(
+							array(
+								'segment_name' => 'Customers',
+							)
+						);
+					}
+					break;
+				case 'leads':
+					if ( $setting['enabled'] ) {
+						$site_settings['enabled_leads_segment'] = true;
+						pushengage()->create_segment(
+							array(
+								'segment_name' => 'Leads',
+							)
+						);
+					}
+					break;
+			}
+		}
+
+		Options::update_site_settings( $site_settings );
+
+		wp_send_json_success();
+	}
+
+	/**
+	 * Update onboarding recover sales settings
+	 *
+	 * @since 4.1.0
+	 *
+	 * @return void
+	 */
+	public function update_onboarding_recover_sales_settings() {
+		NonceChecker::check();
+		$this->check_capability( 'manage_options' );
+
+		if ( empty( $_POST['recoverSalesSettings'] ) ) {
+			wp_send_json_error( __( 'Invalid request. Recover Sales Settings data missing.', 'pushengage' ), 400 );
+		}
+
+		$recover_sales_settings = json_decode( stripslashes_deep( $_POST['recoverSalesSettings'] ), true );
+		$site_settings          = Options::get_site_settings();
+
+		// For each item in the recover sales settings, switch case statement based on id.
+		foreach ( $recover_sales_settings as $key => $setting ) {
+			switch ( $setting['id'] ) {
+				case 'cart_abandonment':
+					if ( $setting['enabled'] ) {
+						$site_settings['woo_integration']['cart_abandonment']['enable'] = true;
+						$site_settings['woo_integration']['cart_abandonment']['name'] = $setting['triggerName'];
+						$site_settings['woo_integration']['cart_abandonment']['id'] = $setting['triggerId'];
+					} else {
+						$site_settings['woo_integration']['cart_abandonment']['enable'] = false;
+					}
+					break;
+				case 'browse_abandonment':
+					if ( $setting['enabled'] ) {
+						$site_settings['woo_integration']['browse_abandonment']['enable'] = true;
+						$site_settings['woo_integration']['browse_abandonment']['name'] = $setting['triggerName'];
+						$site_settings['woo_integration']['browse_abandonment']['id'] = $setting['triggerId'];
+					} else {
+						$site_settings['woo_integration']['browse_abandonment']['enable'] = false;
+					}
+					break;
+			}
+		}
+
+		Options::update_site_settings( $site_settings );
+		wp_send_json_success(
+			array(
+				'browse_enabled' => $site_settings['woo_integration']['browse_abandonment']['enable'],
+				'cart_enabled'   => $site_settings['woo_integration']['cart_abandonment']['enable'],
+			)
+		);
 	}
 }

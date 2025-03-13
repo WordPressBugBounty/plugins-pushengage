@@ -77,7 +77,6 @@ class EnqueueAssets {
 			$assets_base_url = PUSHENGAGE_SCRIPT_URL;
 		}
 		$assets = array(
-			'static/js/vendor-core-js.js',
 			'static/css/vendor-antd.css',
 			'static/js/vendor-antd.js',
 			'static/js/vendor-recharts.js',
@@ -198,6 +197,7 @@ class EnqueueAssets {
 		$is_woo_active = is_plugin_active( 'woocommerce/woocommerce.php' ) && class_exists( 'woocommerce' );
 		if ( $is_woo_active ) {
 			$pushengage['wooCommerceActive'] = $is_woo_active;
+			$pushengage['wooCommerceCurrency'] = get_woocommerce_currency();
 		}
 		$is_woocommerce_integrated = Helpers::is_woocommerce_integrated();
 		if ( $is_woocommerce_integrated ) {

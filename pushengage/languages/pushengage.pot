@@ -1,15 +1,15 @@
-# Copyright (C) 2024 PushEngage
+# Copyright (C) 2025 PushEngage
 # This file is distributed under the GPLv2 or later..
 msgid ""
 msgstr ""
-"Project-Id-Version: PushEngage 4.0.10\n"
+"Project-Id-Version: PushEngage 4.1.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/pushengage-wordpress-plugin\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2024-09-25T14:20:31+00:00\n"
+"POT-Creation-Date: 2025-03-13T05:05:56+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.7.1\n"
 "X-Domain: pushengage\n"
@@ -92,7 +92,8 @@ msgstr ""
 
 #: src/components/analytics/AnalyticsReportCard.tsx:93
 #: src/components/analytics/OptinAnalyticsStackedBarGraph.tsx:64
-#: src/components/campaign/CampaignGoalStats.tsx:18
+#: src/components/campaign/CampaignGoalStats.tsx:19
+#: src/components/campaign/details/NotificationDetailSections.tsx:283
 #: src/components/campaign/drip/NotificationGenerator.tsx:444
 msgid "Count"
 msgstr ""
@@ -115,7 +116,7 @@ msgstr ""
 #: src/components/analytics/AnalyticsReportCard.tsx:97
 #: src/components/analytics/OptinAnalyticsStackedBarGraph.tsx:68
 #: src/components/analytics/OptinSettings.tsx:136
-#: src/helper/index.ts:296
+#: src/helper/index.ts:295
 msgid "Subscription Rate"
 msgstr ""
 
@@ -156,7 +157,7 @@ msgstr ""
 #: src/components/analytics/AnalyticsStatsColumn.tsx:37
 #: src/components/campaign/CampaignStats.tsx:25
 #: src/components/campaign/automation/AutomationAnalytics.tsx:50
-#: src/components/campaign/details/NotificationDetailSections.tsx:354
+#: src/components/campaign/details/NotificationDetailSections.tsx:348
 #: src/components/campaign/drip/NotificationGenerator.tsx:419
 #: src/components/campaign/pushBroadcast/PushTable.tsx:574
 #: src/components/campaign/trigger/NotificationGenerator.tsx:404
@@ -166,18 +167,18 @@ msgid "CTR"
 msgstr ""
 
 #: src/components/analytics/AnalyticsSummaryLineGraph.tsx:148
-#: src/helper/index.ts:334
+#: src/helper/index.ts:333
 #: src/pages/analytics/Overview.tsx:180
 msgid "New Subscribers"
 msgstr ""
 
 #: src/components/analytics/AnalyticsSummaryLineGraph.tsx:158
-#: src/helper/index.ts:341
+#: src/helper/index.ts:340
 msgid "Unsubscribers"
 msgstr ""
 
 #: src/components/analytics/AnalyticsSummaryLineGraph.tsx:167
-#: src/helper/index.ts:119
+#: src/helper/index.ts:118
 msgid "Notifications Sent"
 msgstr ""
 
@@ -186,12 +187,12 @@ msgid "Net Subscribers Sent"
 msgstr ""
 
 #: src/components/analytics/AnalyticsSummaryLineGraph.tsx:185
-#: src/helper/index.ts:126
+#: src/helper/index.ts:125
 msgid "Views"
 msgstr ""
 
 #: src/components/analytics/AnalyticsSummaryLineGraph.tsx:194
-#: src/helper/index.ts:133
+#: src/helper/index.ts:132
 msgid "Clicks"
 msgstr ""
 
@@ -277,6 +278,8 @@ msgid "Please select date"
 msgstr ""
 
 #: src/components/audience/AdvanceAudienceFilterForm.tsx:354
+#: src/components/campaign/CampaignGoalStats.tsx:31
+#: src/components/campaign/details/NotificationDetailSections.tsx:287
 msgid "Value"
 msgstr ""
 
@@ -350,14 +353,15 @@ msgid "Hours"
 msgstr ""
 
 #: src/components/audience/AdvancedAudienceTimeElapsed.tsx:59
-#: src/components/campaign/automation/AutomationDetails.tsx:307
+#: src/components/campaign/automation/AutomationDetails.tsx:310
 msgid "Days"
 msgstr ""
 
 #: src/components/audience/AudienceGroupSubscriberCount.tsx:40
 #: src/components/audience/CleanupSubscriberList.tsx:41
-#: src/components/campaign/details/NotificationDetailSections.tsx:346
+#: src/components/campaign/details/NotificationDetailSections.tsx:340
 #: src/components/headers/AlertNotificationDrawer.tsx:188
+#: src/components/onboarding/setup/EditWelcomeNotification.tsx:144
 msgid "View"
 msgstr ""
 
@@ -380,10 +384,11 @@ msgstr ""
 
 #: src/components/audience/AudienceGroupTable.tsx:75
 #: src/components/audience/SegmentTable.tsx:121
-#: src/components/campaign/drip/DripTable.tsx:222
+#: src/components/campaign/drip/DripTable.tsx:221
 #: src/components/campaign/pushBroadcast/PushTable.tsx:238
-#: src/components/campaign/trigger/TriggerTable.tsx:239
+#: src/components/campaign/trigger/TriggerTable.tsx:238
 #: src/components/common/NotificationActionDropdownMenu.tsx:42
+#: src/components/onboarding/setup/AddCampaigns.tsx:536
 #: src/pages/settings/Billing/index.tsx:151
 msgid "Edit"
 msgstr ""
@@ -457,7 +462,7 @@ msgstr ""
 
 #: src/components/audience/CleanupSubscriberList.tsx:394
 #: src/components/audience/CreateOrEditAudienceGroupForm.tsx:194
-#: src/pages/pushBroadcast/CreateOrEdit.tsx:1233
+#: src/pages/pushBroadcast/CreateOrEdit.tsx:1245
 msgid "Selected Subscribers"
 msgstr ""
 
@@ -466,7 +471,7 @@ msgid "View your inactive subscriber count to see who hasn’t engaged with your
 msgstr ""
 
 #: src/components/audience/CleanupSubscriberList.tsx:40
-#: src/components/campaign/details/NotificationDetailSections.tsx:350
+#: src/components/campaign/details/NotificationDetailSections.tsx:344
 msgid "Click"
 msgstr ""
 
@@ -544,6 +549,7 @@ msgstr ""
 
 #: src/components/audience/CreateOrEditAudienceGroupForm.tsx:167
 #: src/components/campaign/PushBroadcastAudienceDetailsForm.tsx:62
+#: app/Integrations/WooCommerce/NotificationSettings.php:374
 msgid "Description"
 msgstr ""
 
@@ -552,7 +558,7 @@ msgid "Select Your Criteria"
 msgstr ""
 
 #: src/components/audience/CreateOrEditAudienceGroupForm.tsx:209
-#: src/pages/pushBroadcast/CreateOrEdit.tsx:1248
+#: src/pages/pushBroadcast/CreateOrEdit.tsx:1260
 msgid "Refresh count"
 msgstr ""
 
@@ -638,6 +644,7 @@ msgid "Create"
 msgstr ""
 
 #: src/components/audience/CreateOrEditSegmentForm.tsx:366
+#: app/Integrations/WooCommerce/Woo.php:56
 msgid "Update"
 msgstr ""
 
@@ -870,6 +877,7 @@ msgstr ""
 
 #: src/components/audience/audienceHelper.ts:209
 #: src/components/design/PopUpModalCard.tsx:128
+#: src/components/onboarding/setup/EditSubscriptionDialog.tsx:250
 msgid "Mobile"
 msgstr ""
 
@@ -879,6 +887,7 @@ msgstr ""
 
 #: src/components/audience/audienceHelper.ts:211
 #: src/components/design/PopUpModalCard.tsx:114
+#: src/components/onboarding/setup/EditSubscriptionDialog.tsx:231
 msgid "Desktop"
 msgstr ""
 
@@ -989,7 +998,7 @@ msgid "Goal Tracking is not enabled in your account. Please enable goal tracking
 msgstr ""
 
 #: src/components/campaign/AutomationUtmParams.tsx:108
-#: src/components/campaign/details/SentNotificationDetails.tsx:158
+#: src/components/campaign/details/SentNotificationDetails.tsx:155
 #: src/components/campaign/notification/UtmParams.tsx:78
 #: src/components/postEditor/PostEditorUtmParams.tsx:74
 msgid "UTM Content"
@@ -997,20 +1006,20 @@ msgstr ""
 
 #: src/components/campaign/AutomationUtmParams.tsx:30
 #: src/components/campaign/NotificationContent.tsx:192
-#: src/components/campaign/details/SentNotificationDetails.tsx:139
-#: src/components/postEditor/PostEditorMetabox.tsx:917
+#: src/components/campaign/details/SentNotificationDetails.tsx:136
+#: src/components/postEditor/PostEditorMetabox.tsx:943
 #: src/pages/settings/defaultSettings/index.tsx:270
 msgid "UTM Parameters"
 msgstr ""
 
 #: src/components/campaign/AutomationUtmParams.tsx:42
 #: src/components/campaign/NotificationContent.tsx:203
-#: src/components/postEditor/PostEditorMetabox.tsx:936
+#: src/components/postEditor/PostEditorMetabox.tsx:962
 msgid "Improve your analytics with custom link attribution."
 msgstr ""
 
 #: src/components/campaign/AutomationUtmParams.tsx:48
-#: src/components/campaign/details/SentNotificationDetails.tsx:150
+#: src/components/campaign/details/SentNotificationDetails.tsx:147
 #: src/components/campaign/notification/UtmParams.tsx:18
 #: src/components/postEditor/PostEditorUtmParams.tsx:18
 #: src/pages/settings/defaultSettings/index.tsx:285
@@ -1018,7 +1027,7 @@ msgid "UTM Source"
 msgstr ""
 
 #: src/components/campaign/AutomationUtmParams.tsx:63
-#: src/components/campaign/details/SentNotificationDetails.tsx:146
+#: src/components/campaign/details/SentNotificationDetails.tsx:143
 #: src/components/campaign/notification/UtmParams.tsx:33
 #: src/components/postEditor/PostEditorUtmParams.tsx:32
 #: src/pages/settings/defaultSettings/index.tsx:300
@@ -1026,7 +1035,7 @@ msgid "UTM Medium"
 msgstr ""
 
 #: src/components/campaign/AutomationUtmParams.tsx:78
-#: src/components/campaign/details/SentNotificationDetails.tsx:142
+#: src/components/campaign/details/SentNotificationDetails.tsx:139
 #: src/components/campaign/notification/UtmParams.tsx:48
 #: src/components/postEditor/PostEditorUtmParams.tsx:46
 #: src/pages/settings/defaultSettings/index.tsx:315
@@ -1034,7 +1043,7 @@ msgid "UTM Campaign"
 msgstr ""
 
 #: src/components/campaign/AutomationUtmParams.tsx:93
-#: src/components/campaign/details/SentNotificationDetails.tsx:154
+#: src/components/campaign/details/SentNotificationDetails.tsx:151
 #: src/components/campaign/notification/UtmParams.tsx:63
 #: src/components/postEditor/PostEditorUtmParams.tsx:60
 msgid "UTM Term"
@@ -1103,13 +1112,13 @@ msgstr ""
 
 #: src/components/campaign/NotificationContent.tsx:113
 #: src/components/campaign/notification/MultiAction.tsx:87
-#: src/components/postEditor/PostEditorMetabox.tsx:753
+#: src/components/postEditor/PostEditorMetabox.tsx:773
 msgid "Multi Action Notification"
 msgstr ""
 
 #: src/components/campaign/NotificationContent.tsx:127
 #: src/components/campaign/notification/MultiAction.tsx:101
-#: src/components/postEditor/PostEditorMetabox.tsx:764
+#: src/components/postEditor/PostEditorMetabox.tsx:790
 msgid "Get more clicks with multiple call-to-action buttons."
 msgstr ""
 
@@ -1141,31 +1150,31 @@ msgid "Show Large Image"
 msgstr ""
 
 #: src/components/campaign/NotificationContent.tsx:96
-#: src/components/postEditor/PostEditorMetabox.tsx:731
+#: src/components/postEditor/PostEditorMetabox.tsx:752
 msgid "Make your notifications stand out with larger images."
 msgstr ""
 
 #: src/components/campaign/PushAudience.tsx:122
 #: src/components/campaign/details/CustomAudienceDetails.tsx:196
-#: src/components/campaign/details/NotificationDetailSections.tsx:306
+#: src/components/campaign/details/NotificationDetailSections.tsx:300
 #: src/components/campaign/drip/DripAudience.tsx:229
-#: src/components/postEditor/PostEditorMetabox.tsx:818
+#: src/components/postEditor/PostEditorMetabox.tsx:844
 msgid "Send to All Subscribers"
 msgstr ""
 
 #: src/components/campaign/PushAudience.tsx:125
-#: src/components/postEditor/PostEditorMetabox.tsx:821
+#: src/components/postEditor/PostEditorMetabox.tsx:847
 msgid "This broadcast message will go to all subscribers."
 msgstr ""
 
 #: src/components/campaign/PushAudience.tsx:155
 #: src/components/campaign/details/CustomAudienceDetails.tsx:178
-#: src/components/postEditor/PostEditorMetabox.tsx:858
+#: src/components/postEditor/PostEditorMetabox.tsx:884
 msgid "Send to Audience Group"
 msgstr ""
 
 #: src/components/campaign/PushAudience.tsx:161
-#: src/components/postEditor/PostEditorMetabox.tsx:861
+#: src/components/postEditor/PostEditorMetabox.tsx:887
 msgid "Personalize your notification based on predefined audience group."
 msgstr ""
 
@@ -1197,6 +1206,7 @@ msgstr ""
 #: src/components/campaign/PushMultiAction.tsx:162
 #: src/components/campaign/PushNotification.tsx:57
 #: src/components/campaign/notification/MultiAction.tsx:176
+#: src/components/onboarding/setup/EditWelcomeNotification.tsx:76
 #: src/pages/settings/defaultSettings/index.tsx:466
 msgid "Example Notification URL : https://www.pushengage.com"
 msgstr ""
@@ -1222,19 +1232,28 @@ msgid "First Button Image"
 msgstr ""
 
 #: src/components/campaign/PushNotification.tsx:30
-#: src/components/postEditor/PostEditorMetabox.tsx:670
+#: src/components/onboarding/setup/EditWelcomeNotification.tsx:48
+#: src/components/postEditor/PostEditorMetabox.tsx:688
 #: src/pages/settings/defaultSettings/index.tsx:420
+#: app/Integrations/WooCommerce/NotificationSettings.php:192
+#: app/Integrations/WooCommerce/NotificationSettings.php:482
 msgid "Notification Title"
 msgstr ""
 
 #: src/components/campaign/PushNotification.tsx:41
-#: src/components/postEditor/PostEditorMetabox.tsx:689
+#: src/components/onboarding/setup/EditWelcomeNotification.tsx:59
+#: src/components/postEditor/PostEditorMetabox.tsx:707
 #: src/pages/settings/defaultSettings/index.tsx:435
+#: app/Integrations/WooCommerce/NotificationSettings.php:201
+#: app/Integrations/WooCommerce/NotificationSettings.php:497
 msgid "Notification Message"
 msgstr ""
 
 #: src/components/campaign/PushNotification.tsx:53
+#: src/components/onboarding/setup/EditWelcomeNotification.tsx:72
 #: src/pages/settings/defaultSettings/index.tsx:450
+#: app/Integrations/WooCommerce/NotificationSettings.php:209
+#: app/Integrations/WooCommerce/NotificationSettings.php:513
 msgid "Notification URL"
 msgstr ""
 
@@ -1243,6 +1262,7 @@ msgid "Notification Icon Image"
 msgstr ""
 
 #: src/components/campaign/PushNotification.tsx:78
+#: src/components/onboarding/setup/EditWelcomeNotification.tsx:83
 msgid "Notification Image"
 msgstr ""
 
@@ -1263,7 +1283,7 @@ msgstr ""
 #: src/components/campaign/PushNotificationPreview.tsx:82
 #: src/components/campaign/drip/NotificationGenerator.tsx:634
 #: src/components/campaign/trigger/NotificationGenerator.tsx:582
-#: src/pages/pushBroadcast/CreateOrEdit.tsx:1346
+#: src/pages/pushBroadcast/CreateOrEdit.tsx:1358
 #: src/pages/settings/defaultSettings/index.tsx:412
 msgid "Test Notification"
 msgstr ""
@@ -1321,7 +1341,7 @@ msgid "Set up a recurring notification"
 msgstr ""
 
 #: src/components/campaign/PushSend.tsx:343
-#: src/components/campaign/details/NotificationDetailSections.tsx:316
+#: src/components/campaign/details/NotificationDetailSections.tsx:310
 msgid "Schedule between"
 msgstr ""
 
@@ -1330,7 +1350,7 @@ msgid "Send on following days"
 msgstr ""
 
 #: src/components/campaign/PushSend.tsx:442
-#: src/components/campaign/details/NotificationDetailSections.tsx:332
+#: src/components/campaign/details/NotificationDetailSections.tsx:326
 #: src/components/campaign/notification/NotificationScheduleInfo.tsx:112
 msgid "Send each day at"
 msgstr ""
@@ -1340,7 +1360,7 @@ msgid "Add Schedule Time"
 msgstr ""
 
 #: src/components/campaign/PushSend.tsx:516
-#: src/components/campaign/details/SentNotificationDetails.tsx:122
+#: src/components/campaign/details/SentNotificationDetails.tsx:119
 msgid "Intelligent AB Test"
 msgstr ""
 
@@ -1349,7 +1369,7 @@ msgid "Intelligent AB test allows you to test the performance of A and B campaig
 msgstr ""
 
 #: src/components/campaign/PushSend.tsx:543
-#: src/components/campaign/details/NotificationDetailSections.tsx:389
+#: src/components/campaign/details/NotificationDetailSections.tsx:383
 msgid "Sample Size"
 msgstr ""
 
@@ -1371,7 +1391,7 @@ msgstr ""
 
 #: src/components/campaign/automation/AutomationAnalytics.tsx:57
 #: src/components/campaign/details/NotificationDetailSections.tsx:241
-#: src/helper/index.ts:154
+#: src/helper/index.ts:153
 msgid "Unsubscribed"
 msgstr ""
 
@@ -1396,8 +1416,8 @@ msgid "Updated at"
 msgstr ""
 
 #: src/components/campaign/automation/AutomationDetails.tsx:150
-#: src/components/campaign/drip/DripTable.tsx:254
-#: src/components/campaign/trigger/TriggerTable.tsx:271
+#: src/components/campaign/drip/DripTable.tsx:253
+#: src/components/campaign/trigger/TriggerTable.tsx:270
 msgid "Start"
 msgstr ""
 
@@ -1418,10 +1438,10 @@ msgid "No Goal name was set"
 msgstr ""
 
 #: src/components/campaign/automation/AutomationDetails.tsx:184
-#: src/components/campaign/details/SentNotificationDetails.tsx:105
+#: src/components/campaign/details/SentNotificationDetails.tsx:102
 #: src/components/campaign/pushBroadcast/PageBreadcrumb.tsx:51
-#: src/components/postEditor/PostEditorMetabox.tsx:803
-#: app/Utils/AdminNavMenuItems.php:62
+#: src/components/postEditor/PostEditorMetabox.tsx:829
+#: app/Utils/AdminNavMenuItems.php:67
 msgid "Audience"
 msgstr ""
 
@@ -1483,102 +1503,102 @@ msgid "Subscription"
 msgstr ""
 
 #: src/components/campaign/automation/AutomationDetails.tsx:281
-msgid "This is always subscription(not editable)"
+msgid "After user subscribes or gets added to the segment."
 msgstr ""
 
-#: src/components/campaign/automation/AutomationDetails.tsx:294
+#: src/components/campaign/automation/AutomationDetails.tsx:297
 msgid "Price Drop/Inventory Criteria"
 msgstr ""
 
-#: src/components/campaign/automation/AutomationDetails.tsx:301
+#: src/components/campaign/automation/AutomationDetails.tsx:304
 msgid "Expiry"
 msgstr ""
 
-#: src/components/campaign/automation/AutomationDetails.tsx:306
+#: src/components/campaign/automation/AutomationDetails.tsx:309
 msgid "Day"
 msgstr ""
 
-#: src/components/campaign/automation/AutomationDetails.tsx:313
+#: src/components/campaign/automation/AutomationDetails.tsx:316
 #: src/components/campaign/trigger/TriggeredTypeSettings.tsx:59
 msgid "Campaign Type"
 msgstr ""
 
-#: src/components/campaign/automation/AutomationDetails.tsx:317
+#: src/components/campaign/automation/AutomationDetails.tsx:320
 #: src/pages/triggeredCampaign/Selection.tsx:221
 msgid "Price Drop"
 msgstr ""
 
-#: src/components/campaign/automation/AutomationDetails.tsx:318
+#: src/components/campaign/automation/AutomationDetails.tsx:321
 msgid "Inventory"
 msgstr ""
 
-#: src/components/campaign/automation/AutomationDetails.tsx:325
+#: src/components/campaign/automation/AutomationDetails.tsx:328
 msgid "Price Drop Threshold"
 msgstr ""
 
-#: src/components/campaign/automation/AutomationDetails.tsx:331
+#: src/components/campaign/automation/AutomationDetails.tsx:334
 msgid "(absolute)"
 msgstr ""
 
-#: src/components/campaign/automation/AutomationDetails.tsx:341
+#: src/components/campaign/automation/AutomationDetails.tsx:344
 msgid "Trigger Limits"
 msgstr ""
 
-#: src/components/campaign/automation/AutomationDetails.tsx:348
+#: src/components/campaign/automation/AutomationDetails.tsx:351
 msgid "Daily Limit"
 msgstr ""
 
-#: src/components/campaign/automation/AutomationDetails.tsx:356
+#: src/components/campaign/automation/AutomationDetails.tsx:359
 msgid "Weekly Limit"
 msgstr ""
 
-#: src/components/campaign/automation/AutomationDetails.tsx:360
+#: src/components/campaign/automation/AutomationDetails.tsx:363
 msgid "No Limit Set"
 msgstr ""
 
-#: src/components/campaign/automation/AutomationDetails.tsx:371
-#: app/Utils/AdminNavMenuItems.php:67
+#: src/components/campaign/automation/AutomationDetails.tsx:374
+#: app/Utils/AdminNavMenuItems.php:72
 msgid "Analytics"
 msgstr ""
 
-#: src/components/campaign/automation/AutomationDetails.tsx:381
-#: src/components/campaign/drip/DripTable.tsx:230
+#: src/components/campaign/automation/AutomationDetails.tsx:384
+#: src/components/campaign/drip/DripTable.tsx:229
 #: src/components/campaign/drip/DripTableHeader.tsx:45
 #: src/components/campaign/pushBroadcast/PushTable.tsx:257
 #: src/components/campaign/pushBroadcast/PushTableHeader.tsx:85
-#: src/components/campaign/trigger/TriggerTable.tsx:247
+#: src/components/campaign/trigger/TriggerTable.tsx:246
 #: src/components/campaign/trigger/TriggerTableHeader.tsx:51
 #: src/pages/analytics/OptinAnalytics.tsx:275
 #: src/pages/analytics/Overview.tsx:288
 msgid "Export"
 msgstr ""
 
-#: src/components/campaign/automation/AutomationDetails.tsx:435
+#: src/components/campaign/automation/AutomationDetails.tsx:438
 msgid "Push"
 msgstr ""
 
-#: src/components/campaign/automation/AutomationDetails.tsx:438
+#: src/components/campaign/automation/AutomationDetails.tsx:441
 msgid " Right"
 msgstr ""
 
-#: src/components/campaign/automation/AutomationDetails.tsx:457
+#: src/components/campaign/automation/AutomationDetails.tsx:460
 msgid " after user subscribes or is added to the list"
 msgstr ""
 
-#: src/components/campaign/automation/AutomationDetails.tsx:458
+#: src/components/campaign/automation/AutomationDetails.tsx:461
 msgid " after sending the previous message"
 msgstr ""
 
-#: src/components/campaign/automation/AutomationDetails.tsx:487
+#: src/components/campaign/automation/AutomationDetails.tsx:490
 #: src/components/campaign/details/NotificationDetailSections.tsx:179
 msgid "URL"
 msgstr ""
 
-#: src/components/campaign/automation/AutomationDetails.tsx:530
+#: src/components/campaign/automation/AutomationDetails.tsx:533
 msgid "Deleted notifications"
 msgstr ""
 
-#: src/components/campaign/automation/AutomationDetails.tsx:541
+#: src/components/campaign/automation/AutomationDetails.tsx:544
 msgid "The following notifications in this campaign have been deleted and are no longer being sent to your subscribers."
 msgstr ""
 
@@ -1669,50 +1689,50 @@ msgstr ""
 msgid "Button 2 URL"
 msgstr ""
 
-#: src/components/campaign/details/NotificationDetailSections.tsx:318
+#: src/components/campaign/details/NotificationDetailSections.tsx:312
 #: src/components/campaign/drip/CustomSegmentSelection.tsx:187
 #: src/components/campaign/notification/NotificationScheduleInfo.tsx:77
 #: src/components/campaign/pushBroadcast/PushNotificationTimestamp.tsx:61
 msgid "and"
 msgstr ""
 
-#: src/components/campaign/details/NotificationDetailSections.tsx:325
+#: src/components/campaign/details/NotificationDetailSections.tsx:319
 msgid "Send on Every"
 msgstr ""
 
-#: src/components/campaign/details/NotificationDetailSections.tsx:342
+#: src/components/campaign/details/NotificationDetailSections.tsx:336
 #: src/components/campaign/drip/DripTable.tsx:152
 #: src/components/campaign/trigger/TriggerTable.tsx:160
-#: src/pages/pushBroadcast/CreateOrEdit.tsx:951
+#: src/pages/pushBroadcast/CreateOrEdit.tsx:963
 msgid "Notification"
 msgstr ""
 
-#: src/components/campaign/details/NotificationDetailSections.tsx:375
+#: src/components/campaign/details/NotificationDetailSections.tsx:369
 msgid "Analytics at the time of deciding the winner"
 msgstr ""
 
-#: src/components/campaign/details/NotificationDetailSections.tsx:395
+#: src/components/campaign/details/NotificationDetailSections.tsx:389
 msgid "Delay"
 msgstr ""
 
-#: src/components/campaign/details/NotificationDetailSections.tsx:402
+#: src/components/campaign/details/NotificationDetailSections.tsx:396
 #: src/components/campaign/details/WinnerNotificationDetails.tsx:98
 msgid "Winner"
 msgstr ""
 
-#: src/components/campaign/details/NotificationDetailSections.tsx:405
+#: src/components/campaign/details/NotificationDetailSections.tsx:399
 msgid "Waiting for the winner"
 msgstr ""
 
-#: src/components/campaign/details/NotificationDetailSections.tsx:407
+#: src/components/campaign/details/NotificationDetailSections.tsx:401
 msgid "YES"
 msgstr ""
 
-#: src/components/campaign/details/NotificationDetailSections.tsx:408
+#: src/components/campaign/details/NotificationDetailSections.tsx:402
 msgid "NO"
 msgstr ""
 
-#: src/components/campaign/details/SentNotificationDetails.tsx:115
+#: src/components/campaign/details/SentNotificationDetails.tsx:112
 msgid "Recipient Limit"
 msgstr ""
 
@@ -1728,7 +1748,7 @@ msgstr ""
 msgid "Multi Actions"
 msgstr ""
 
-#: src/components/campaign/details/SentNotificationDetails.tsx:95
+#: src/components/campaign/details/SentNotificationDetails.tsx:94
 #: src/components/campaign/drip/DripTable.tsx:188
 #: src/components/campaign/pushBroadcast/PushTable.tsx:332
 #: src/components/campaign/trigger/TriggerTable.tsx:205
@@ -1736,12 +1756,12 @@ msgid "Goal"
 msgstr ""
 
 #: src/components/campaign/details/WinnerNotificationDetails.tsx:76
-#: src/pages/pushBroadcast/CreateOrEdit.tsx:1139
+#: src/pages/pushBroadcast/CreateOrEdit.tsx:1151
 msgid "Notification A"
 msgstr ""
 
 #: src/components/campaign/details/WinnerNotificationDetails.tsx:96
-#: src/pages/pushBroadcast/CreateOrEdit.tsx:1160
+#: src/pages/pushBroadcast/CreateOrEdit.tsx:1172
 msgid "Notification B"
 msgstr ""
 
@@ -1816,39 +1836,41 @@ msgid "Draft"
 msgstr ""
 
 #: src/components/campaign/drip/DripStatus.tsx:13
-#: src/components/campaign/drip/DripTable.tsx:252
-#: src/components/campaign/trigger/TriggerTable.tsx:269
+#: src/components/campaign/drip/DripTable.tsx:251
+#: src/components/campaign/trigger/TriggerTable.tsx:268
 msgid "Pause"
 msgstr ""
 
-#: src/components/campaign/drip/DripTable.tsx:201
+#: src/components/campaign/drip/DripTable.tsx:200
 #: src/components/campaign/pushBroadcast/PushTable.tsx:377
-#: src/components/campaign/trigger/TriggerTable.tsx:218
+#: src/components/campaign/trigger/TriggerTable.tsx:217
 msgid "Status"
 msgstr ""
 
-#: src/components/campaign/drip/DripTable.tsx:212
+#: src/components/campaign/drip/DripTable.tsx:211
 #: src/components/campaign/preview/NotificationPreviewSelector.tsx:8
 #: src/components/campaign/pushBroadcast/PushTable.tsx:226
 #: src/components/campaign/templates/Card.tsx:202
-#: src/components/campaign/trigger/TriggerTable.tsx:229
+#: src/components/campaign/trigger/TriggerTable.tsx:228
 #: src/components/design/PopUpModalCard.tsx:142
+#: src/components/onboarding/setup/AddCampaigns.tsx:546
+#: src/components/onboarding/setup/PreviewSubscriptionDialog.tsx:24
 msgid "Preview"
 msgstr ""
 
-#: src/components/campaign/drip/DripTable.tsx:240
+#: src/components/campaign/drip/DripTable.tsx:239
 #: src/components/campaign/pushBroadcast/PushTable.tsx:267
-#: src/components/campaign/trigger/TriggerTable.tsx:257
+#: src/components/campaign/trigger/TriggerTable.tsx:256
 #: src/components/common/NotificationActionDropdownMenu.tsx:63
 msgid "Duplicate"
 msgstr ""
 
-#: src/components/campaign/drip/DripTable.tsx:255
-#: src/components/campaign/trigger/TriggerTable.tsx:272
+#: src/components/campaign/drip/DripTable.tsx:254
+#: src/components/campaign/trigger/TriggerTable.tsx:271
 msgid "Resume"
 msgstr ""
 
-#: src/components/campaign/drip/DripTable.tsx:289
+#: src/components/campaign/drip/DripTable.tsx:288
 msgid "No drip autoresponders found."
 msgstr ""
 
@@ -2028,7 +2050,7 @@ msgid "Google Chrome"
 msgstr ""
 
 #: src/components/campaign/pushBroadcast/PageBreadcrumb.tsx:61
-#: src/pages/pushBroadcast/CreateOrEdit.tsx:1394
+#: src/pages/pushBroadcast/CreateOrEdit.tsx:1406
 msgid "Send / Schedule"
 msgstr ""
 
@@ -2081,6 +2103,7 @@ msgstr ""
 
 #: src/components/campaign/pushBroadcast/PushTable.tsx:248
 #: src/components/common/NotificationActionDropdownMenu.tsx:50
+#: src/components/onboarding/setup/VerifyEmailModal.tsx:153
 msgid "Resend"
 msgstr ""
 
@@ -2229,7 +2252,7 @@ msgstr ""
 msgid "Paused"
 msgstr ""
 
-#: src/components/campaign/trigger/TriggerTable.tsx:304
+#: src/components/campaign/trigger/TriggerTable.tsx:303
 msgid "No Triggered Campaigns found."
 msgstr ""
 
@@ -2307,6 +2330,7 @@ msgid "step %1$d of %2$d"
 msgstr ""
 
 #: src/components/challenge/JoyrideCustomTooltip.tsx:44
+#: src/components/onboarding/setup/StepPagination.tsx:47
 msgid "Next Step"
 msgstr ""
 
@@ -2366,7 +2390,7 @@ msgid "Export Data"
 msgstr ""
 
 #. 1 - The feature description. - 2 - The Plan name
-#: src/components/common/ProModal.tsx:98
+#: src/components/common/ProModal.tsx:99
 msgid "%1$s Avail these benefits with %2$s Plan:"
 msgstr ""
 
@@ -2431,6 +2455,7 @@ msgid "You are losing subscribers, leads and sales! Click on the button below to
 msgstr ""
 
 #: src/components/dashboardWidget/DashboardWidget.tsx:216
+#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:31
 msgid "Connect Your Site"
 msgstr ""
 
@@ -2464,7 +2489,8 @@ msgid "New!"
 msgstr ""
 
 #: src/components/headers/siteAlert/EmailVerificationAlert.tsx:25
-#: src/components/onboarding/FinalStep.tsx:156
+#: src/components/onboarding/FinalStep.tsx:155
+#: src/components/onboarding/setup/SetupFinal.tsx:63
 msgid "Please verify your email address."
 msgstr ""
 
@@ -2569,61 +2595,63 @@ msgstr ""
 msgid "Do not show again"
 msgstr ""
 
-#: src/components/onboarding/FinalStep.tsx:105
+#: src/components/onboarding/FinalStep.tsx:104
 msgid "Verifying Plugin Installation"
 msgstr ""
 
-#: src/components/onboarding/FinalStep.tsx:123
+#: src/components/onboarding/FinalStep.tsx:122
 msgid "Congratulations! Your setup is done."
 msgstr ""
 
-#: src/components/onboarding/FinalStep.tsx:124
+#: src/components/onboarding/FinalStep.tsx:123
 msgid "Congratulations!"
 msgstr ""
 
-#: src/components/onboarding/FinalStep.tsx:127
+#: src/components/onboarding/FinalStep.tsx:126
 msgid "Your Site is Ready for Better Conversions"
 msgstr ""
 
-#: src/components/onboarding/FinalStep.tsx:131
+#: src/components/onboarding/FinalStep.tsx:130
 msgid "Connect your WooCommerce store to enable cart and browse abandonment campaigns, and start boosting your sales effortlessly."
 msgstr ""
 
-#: src/components/onboarding/FinalStep.tsx:145
+#: src/components/onboarding/FinalStep.tsx:144
+#: src/components/onboarding/setup/SetupFinal.tsx:52
 msgid "Your site is currently using a caching plugin. To ensure that the push notification permission prompt is displayed correctly to visitors on existing posts and pages of your site, please clear the cache."
 msgstr ""
 
-#: src/components/onboarding/FinalStep.tsx:159
+#: src/components/onboarding/FinalStep.tsx:158
+#: src/components/onboarding/setup/SetupFinal.tsx:66
 msgid "Activate your account by verifying your email address. Please click the link in the verification email we have sent you."
 msgstr ""
 
-#: src/components/onboarding/FinalStep.tsx:188
+#: src/components/onboarding/FinalStep.tsx:187
 #: src/pages/settings/integrations/woocommerce/DashboardNotice.tsx:52
 msgid "Connect Store"
 msgstr ""
 
-#: src/components/onboarding/FinalStep.tsx:203
+#: src/components/onboarding/FinalStep.tsx:202
 msgid "Create a Campaign"
 msgstr ""
 
-#: src/components/onboarding/FinalStep.tsx:214
+#: src/components/onboarding/FinalStep.tsx:213
 #: src/pages/settings/autoPush/index.tsx:198
 msgid "Auto Push Settings"
 msgstr ""
 
-#: src/components/onboarding/FinalStep.tsx:225
+#: src/components/onboarding/FinalStep.tsx:224
 msgid "PushEngage Dashboard"
 msgstr ""
 
-#: src/components/onboarding/FinalStep.tsx:235
+#: src/components/onboarding/FinalStep.tsx:234
 msgid "Skip to Dashboard"
 msgstr ""
 
-#: src/components/onboarding/FinalStep.tsx:96
+#: src/components/onboarding/FinalStep.tsx:95
 msgid "Installing Recommended Features"
 msgstr ""
 
-#: src/components/onboarding/FinalStep.tsx:99
+#: src/components/onboarding/FinalStep.tsx:98
 msgid "The following plugins are being installed"
 msgstr ""
 
@@ -2683,108 +2711,492 @@ msgstr ""
 msgid "45% discount"
 msgstr ""
 
-#: src/components/onboarding/Welcome.tsx:159
+#: src/components/onboarding/Welcome.tsx:191
 msgid "An error was encountered while connecting your account, please try again."
 msgstr ""
 
 #. 1 - The error code
-#: src/components/onboarding/Welcome.tsx:166
+#: src/components/onboarding/Welcome.tsx:198
+#: src/components/onboarding/setup/AddCampaigns.tsx:112
+#: src/components/onboarding/setup/RecoverSales.tsx:252
+#: src/components/onboarding/setup/SetupRetargeting.tsx:230
 msgid "Error code: %1s"
 msgstr ""
 
-#: src/components/onboarding/Welcome.tsx:227
+#: src/components/onboarding/Welcome.tsx:265
 msgid "Welcome to PushEngage Setup Wizard!"
 msgstr ""
 
-#: src/components/onboarding/Welcome.tsx:230
+#: src/components/onboarding/Welcome.tsx:268
 msgid "Let’s get you set up."
 msgstr ""
 
-#: src/components/onboarding/Welcome.tsx:243
+#: src/components/onboarding/Welcome.tsx:281
 #: src/pages/settings/siteDetails/index.tsx:399
 msgid "Claim Your Free Account"
 msgstr ""
 
-#: src/components/onboarding/Welcome.tsx:253
+#: src/components/onboarding/Welcome.tsx:291
 #: src/pages/settings/siteDetails/index.tsx:410
 msgid "Connect Your Existing Account"
 msgstr ""
 
-#: src/components/onboarding/Welcome.tsx:261
+#: src/components/onboarding/Welcome.tsx:299
 msgid "Go back to the dashboard"
 msgstr ""
 
-#: src/components/postEditor/PostEditorMetabox.tsx:326
+#: src/components/onboarding/setup/AddCampaigns.tsx:108
+msgid "Failed to save drip campaign settings."
+msgstr ""
+
+#: src/components/onboarding/setup/AddCampaigns.tsx:115
+msgid "Please make sure you have verified your email address and you have campaign access."
+msgstr ""
+
+#: src/components/onboarding/setup/AddCampaigns.tsx:159
+#: app/Integrations/WooCommerce/NotificationSettings.php:283
+msgid "New Order"
+msgstr ""
+
+#: src/components/onboarding/setup/AddCampaigns.tsx:160
+#: app/Integrations/WooCommerce/NotificationSettings.php:284
+msgid "Receive instant alerts when a customer places a new order. Keep your team updated and send automated confirmation notifications to build trust with your customers."
+msgstr ""
+
+#: src/components/onboarding/setup/AddCampaigns.tsx:167
+#: app/Integrations/WooCommerce/NotificationSettings.php:287
+msgid "Cancelled Order"
+msgstr ""
+
+#: src/components/onboarding/setup/AddCampaigns.tsx:168
+#: app/Integrations/WooCommerce/NotificationSettings.php:288
+msgid "Get real-time alerts when a customer cancels an order. Send an automated push notification to re-engage them and recover potential lost sales with exclusive offers or assistance."
+msgstr ""
+
+#: src/components/onboarding/setup/AddCampaigns.tsx:175
+#: app/Integrations/WooCommerce/NotificationSettings.php:291
+msgid "Failed Order"
+msgstr ""
+
+#: src/components/onboarding/setup/AddCampaigns.tsx:176
+#: app/Integrations/WooCommerce/NotificationSettings.php:292
+msgid "Get notified immediately when a payment fails, so you can troubleshoot issues quickly. Automatically guide customers to retry their purchase and prevent losing a sale."
+msgstr ""
+
+#: src/components/onboarding/setup/AddCampaigns.tsx:183
+#: app/Integrations/WooCommerce/NotificationSettings.php:295
+msgid "Order on Hold"
+msgstr ""
+
+#: src/components/onboarding/setup/AddCampaigns.tsx:184
+#: app/Integrations/WooCommerce/NotificationSettings.php:296
+msgid "Inform your customers when an order is placed on hold. Keep your operations smooth by addressing issues promptly and keeping everyone updated."
+msgstr ""
+
+#: src/components/onboarding/setup/AddCampaigns.tsx:191
+#: app/Integrations/WooCommerce/NotificationSettings.php:299
+msgid "Processing Order"
+msgstr ""
+
+#: src/components/onboarding/setup/AddCampaigns.tsx:192
+#: app/Integrations/WooCommerce/NotificationSettings.php:300
+msgid "Notify customers as their order moves to the next stage. Keep them engaged and informed, ensuring a positive shopping experience while streamlining internal operations."
+msgstr ""
+
+#: src/components/onboarding/setup/AddCampaigns.tsx:199
+#: app/Integrations/WooCommerce/NotificationSettings.php:303
+msgid "Completed Order"
+msgstr ""
+
+#: src/components/onboarding/setup/AddCampaigns.tsx:200
+#: app/Integrations/WooCommerce/NotificationSettings.php:304
+msgid "Celebrate a successful sale by notifying your customers when their order is completed. Encourage repeat purchases with personalized post-sale offers."
+msgstr ""
+
+#: src/components/onboarding/setup/AddCampaigns.tsx:207
+#: app/Integrations/WooCommerce/NotificationSettings.php:307
+msgid "Refunded Order"
+msgstr ""
+
+#: src/components/onboarding/setup/AddCampaigns.tsx:208
+#: app/Integrations/WooCommerce/NotificationSettings.php:308
+msgid "Send instant notifications to inform customers that their refund has been processed. Build trust and improve satisfaction by keeping them in the loop."
+msgstr ""
+
+#: src/components/onboarding/setup/AddCampaigns.tsx:336
+msgid "Email verification is required to save welcome drip campaign settings."
+msgstr ""
+
+#: src/components/onboarding/setup/AddCampaigns.tsx:357
+msgid "Error while saving the welcome drip campaign"
+msgstr ""
+
+#: src/components/onboarding/setup/AddCampaigns.tsx:399
+msgid "Step %s: Add Campaigns"
+msgstr ""
+
+#: src/components/onboarding/setup/AddCampaigns.tsx:578
+#: app/Integrations/WooCommerce/NotificationSettings.php:425
+msgid "Admin"
+msgstr ""
+
+#: src/components/onboarding/setup/AddCampaigns.tsx:588
+#: app/Integrations/WooCommerce/NotificationSettings.php:434
+msgid "Customer"
+msgstr ""
+
+#: src/components/onboarding/setup/AddCampaigns.tsx:636
+#: src/pages/design/TargetingRule.tsx:482
+#: src/pages/settings/advancedSettings/index.tsx:594
+#: src/pages/settings/autoPush/index.tsx:323
+#: src/pages/settings/defaultSettings/index.tsx:610
+#: src/pages/settings/integrations/woocommerce/index.tsx:624
+#: src/pages/settings/misc/index.tsx:144
+#: src/pages/settings/siteDetails/index.tsx:600
+msgid "Save Changes"
+msgstr ""
+
+#: src/components/onboarding/setup/AddCampaigns.tsx:639
+msgid "Edit Welcome Drip Campaign - First Notification"
+msgstr ""
+
+#: src/components/onboarding/setup/BuildSubscribersList.tsx:216
+msgid "You don't have permission to update design settings. Please contact to your admin."
+msgstr ""
+
+#: src/components/onboarding/setup/BuildSubscribersList.tsx:225
+msgid "Step %s: Build Subscriber List"
+msgstr ""
+
+#: src/components/onboarding/setup/EditSubscriptionDialog.tsx:109
+msgid " Desktop"
+msgstr ""
+
+#: src/components/onboarding/setup/EditSubscriptionDialog.tsx:113
+msgid " Mobile"
+msgstr ""
+
+#: src/components/onboarding/setup/EditSubscriptionDialog.tsx:120
+#: src/pages/settings/siteDetails/index.tsx:417
+msgid "Site Name"
+msgstr ""
+
+#: src/components/onboarding/setup/EditSubscriptionDialog.tsx:128
+msgid "Enter Site Name"
+msgstr ""
+
+#: src/components/onboarding/setup/EditSubscriptionDialog.tsx:131
+msgid "Site icon"
+msgstr ""
+
+#: src/components/onboarding/setup/EditSubscriptionDialog.tsx:162
+#: src/components/onboarding/setup/EditWelcomeNotification.tsx:118
+msgid "Upload icon"
+msgstr ""
+
+#: src/components/onboarding/setup/EditSubscriptionDialog.tsx:165
+#: src/components/onboarding/setup/EditWelcomeNotification.tsx:121
+msgid "Recommended size 192x192px (Max 1MB)"
+msgstr ""
+
+#: src/components/onboarding/setup/EditSubscriptionDialog.tsx:170
+msgid "Popup Message"
+msgstr ""
+
+#: src/components/onboarding/setup/EditSubscriptionDialog.tsx:176
+msgid "Enter Popup Message"
+msgstr ""
+
+#: src/components/onboarding/setup/EditSubscriptionDialog.tsx:181
+msgid "Allow Button Text"
+msgstr ""
+
+#: src/components/onboarding/setup/EditSubscriptionDialog.tsx:189
+msgid "Enter Allow Button Text"
+msgstr ""
+
+#: src/components/onboarding/setup/EditSubscriptionDialog.tsx:195
+msgid "Background"
+msgstr ""
+
+#: src/components/onboarding/setup/EditSubscriptionDialog.tsx:205
+msgid "Allow Button"
+msgstr ""
+
+#: src/components/onboarding/setup/EditSubscriptionDialog.tsx:215
+msgid "Close Icon"
+msgstr ""
+
+#: src/components/onboarding/setup/EditSubscriptionDialog.tsx:38
+msgid "Top Left"
+msgstr ""
+
+#: src/components/onboarding/setup/EditSubscriptionDialog.tsx:39
+msgid "Top Center"
+msgstr ""
+
+#: src/components/onboarding/setup/EditSubscriptionDialog.tsx:40
+msgid "Top Right"
+msgstr ""
+
+#: src/components/onboarding/setup/EditSubscriptionDialog.tsx:44
+msgid "Top"
+msgstr ""
+
+#: src/components/onboarding/setup/EditSubscriptionDialog.tsx:45
+msgid "Bottom"
+msgstr ""
+
+#: src/components/onboarding/setup/PreviewSubscriptionDialog.tsx:59
+msgid "example.com"
+msgstr ""
+
+#. 1 - Random ID string.
+#: src/components/onboarding/setup/RecoverSales.tsx:107
+#: src/pages/settings/integrations/woocommerce/index.tsx:112
+msgid "WooCommerce Browse Abandonment-%1$s"
+msgstr ""
+
+#. 1 Random ID string.
+#: src/components/onboarding/setup/RecoverSales.tsx:113
+#: src/pages/settings/integrations/woocommerce/index.tsx:118
+msgid "WooCommerce Cart Abandonment-%1$s"
+msgstr ""
+
+#: src/components/onboarding/setup/RecoverSales.tsx:245
+msgid "An error was encountered while while saving the recover sales settings, please try again."
+msgstr ""
+
+#: src/components/onboarding/setup/RecoverSales.tsx:272
+msgid "Step %s: Recover Sales"
+msgstr ""
+
+#: src/components/onboarding/setup/RecoverSales.tsx:307
+msgid "Growth+"
+msgstr ""
+
+#: src/components/onboarding/setup/RecoverSales.tsx:338
+msgid "Unlock Advanced Recovery Features"
+msgstr ""
+
+#: src/components/onboarding/setup/RecoverSales.tsx:339
+msgid "Get access to powerful sales recovery tools and more"
+msgstr ""
+
+#: src/components/onboarding/setup/RecoverSales.tsx:340
+msgid "Upgrade Now For $99/year"
+msgstr ""
+
+#: src/components/onboarding/setup/RecoverSales.tsx:37
+msgid "Abandoned Cart Recovery"
+msgstr ""
+
+#: src/components/onboarding/setup/RecoverSales.tsx:38
+msgid "Recover lost sales by reminding customers about their abandoned carts"
+msgstr ""
+
+#: src/components/onboarding/setup/RecoverSales.tsx:53
+msgid "Convert your window shoppers"
+msgstr ""
+
+#: src/components/onboarding/setup/RecoverSales.tsx:54
+msgid "Turn browsers into buyers with targeted messaging"
+msgstr ""
+
+#: src/components/onboarding/setup/SetupFinal.tsx:35
+msgid "Congratulations! Your setup is completed."
+msgstr ""
+
+#: src/components/onboarding/setup/SetupFinal.tsx:39
+msgid "You have successfully completed the setup process. You can now start sending push notifications to your subscribers."
+msgstr ""
+
+#: src/components/onboarding/setup/SetupFinal.tsx:86
+msgid "Go to Dashboard"
+msgstr ""
+
+#: src/components/onboarding/setup/SetupRetargeting.tsx:108
+msgid "Primary Categories"
+msgstr ""
+
+#: src/components/onboarding/setup/SetupRetargeting.tsx:121
+msgid "Target users based on their primary category interactions"
+msgstr ""
+
+#: src/components/onboarding/setup/SetupRetargeting.tsx:130
+msgid "Customers"
+msgstr ""
+
+#: src/components/onboarding/setup/SetupRetargeting.tsx:142
+msgid "Reach out to users who have made purchases"
+msgstr ""
+
+#: src/components/onboarding/setup/SetupRetargeting.tsx:146
+msgid "Leads"
+msgstr ""
+
+#: src/components/onboarding/setup/SetupRetargeting.tsx:158
+msgid "Connect with potential customers showing interest"
+msgstr ""
+
+#: src/components/onboarding/setup/SetupRetargeting.tsx:223
+msgid "An error was encountered while while saving the retargeting settings, please try again."
+msgstr ""
+
+#: src/components/onboarding/setup/SetupRetargeting.tsx:260
+msgid "Step %s: Setup Retargeting"
+msgstr ""
+
+#: src/components/onboarding/setup/SetupRetargeting.tsx:265
+msgid "Audience Segments"
+msgstr ""
+
+#: src/components/onboarding/setup/SetupRetargeting.tsx:271
+msgid "Create Custom Segment"
+msgstr ""
+
+#: src/components/onboarding/setup/SetupRetargeting.tsx:309
+msgid "Business+"
+msgstr ""
+
+#: src/components/onboarding/setup/SetupRetargeting.tsx:333
+msgid "View Categories"
+msgstr ""
+
+#: src/components/onboarding/setup/SetupRetargeting.tsx:368
+msgid "Unlock Advanced Retargeting"
+msgstr ""
+
+#: src/components/onboarding/setup/SetupRetargeting.tsx:369
+msgid "Get access to powerful retargeting features and more"
+msgstr ""
+
+#: src/components/onboarding/setup/SetupRetargeting.tsx:370
+msgid "Upgrade Now For $49/year →"
+msgstr ""
+
+#: src/components/onboarding/setup/SetupRetargeting.tsx:392
+#: src/pages/audience/Segments.tsx:318
+msgid "Create a New Segment"
+msgstr ""
+
+#: src/components/onboarding/setup/StepPagination.tsx:33
+msgid "Previous Step"
+msgstr ""
+
+#: src/components/onboarding/setup/StepPagination.tsx:47
+msgid "Complete Setup"
+msgstr ""
+
+#: src/components/onboarding/setup/VerifyEmailModal.tsx:105
+msgid "Verify your email"
+msgstr ""
+
+#: src/components/onboarding/setup/VerifyEmailModal.tsx:107
+msgid "We have sent a verification code to %s"
+msgstr ""
+
+#: src/components/onboarding/setup/VerifyEmailModal.tsx:124
+msgid "Verify Email"
+msgstr ""
+
+#: src/components/onboarding/setup/VerifyEmailModal.tsx:135
+msgid "We have sent an email with OTP to verify your email. The email verification OTP will only be valid for 10 minutes."
+msgstr ""
+
+#: src/components/onboarding/setup/VerifyEmailModal.tsx:144
+msgid "Didn't receive a code?"
+msgstr ""
+
+#: src/components/onboarding/setup/VerifyEmailModal.tsx:158
+msgid "Need help?"
+msgstr ""
+
+#: src/components/onboarding/setup/VerifyEmailModal.tsx:174
+msgid "Contact Customer Care"
+msgstr ""
+
+#: src/components/onboarding/setup/VerifyEmailModal.tsx:82
+msgid "Email Verified"
+msgstr ""
+
+#: src/components/onboarding/setup/VerifyEmailModal.tsx:83
+msgid "You now have full access to PushEngage."
+msgstr ""
+
+#: src/components/postEditor/PostEditorMetabox.tsx:330
 msgid "Your account does not contain any audience groups."
 msgstr ""
 
-#: src/components/postEditor/PostEditorMetabox.tsx:331
+#: src/components/postEditor/PostEditorMetabox.tsx:335
 msgid "Audience group is a pro feature, not available on the Free Plan."
 msgstr ""
 
-#: src/components/postEditor/PostEditorMetabox.tsx:429
+#: src/components/postEditor/PostEditorMetabox.tsx:433
 msgid "Send Push Notification on Update"
 msgstr ""
 
-#: src/components/postEditor/PostEditorMetabox.tsx:430
+#: src/components/postEditor/PostEditorMetabox.tsx:434
+#: app/Integrations/WooCommerce/NotificationSettings.php:181
 msgid "Send Push Notification"
 msgstr ""
 
-#: src/components/postEditor/PostEditorMetabox.tsx:530
+#: src/components/postEditor/PostEditorMetabox.tsx:548
 msgid "Your account's notification sending feature is currently disabled. To enable it, please upgrade your plan"
 msgstr ""
 
-#: src/components/postEditor/PostEditorMetabox.tsx:546
+#: src/components/postEditor/PostEditorMetabox.tsx:564
 #: src/pages/settings/Billing/index.tsx:193
 msgid "Update Plan"
 msgstr ""
 
-#: src/components/postEditor/PostEditorMetabox.tsx:572
+#: src/components/postEditor/PostEditorMetabox.tsx:590
 msgid "Please verify your email address to begin sending push notifications. Please click the link in the verification email we have sent you."
 msgstr ""
 
-#: src/components/postEditor/PostEditorMetabox.tsx:583
+#: src/components/postEditor/PostEditorMetabox.tsx:601
+#: app/Integrations/WooCommerce/NotificationSettings.php:221
 msgid "Send Notification"
 msgstr ""
 
-#: src/components/postEditor/PostEditorMetabox.tsx:611
+#: src/components/postEditor/PostEditorMetabox.tsx:629
 msgid "You have active RSS auto push campaign for this site. Please ensure that you really want to send this post in Push Notification."
 msgstr ""
 
-#: src/components/postEditor/PostEditorMetabox.tsx:626
+#: src/components/postEditor/PostEditorMetabox.tsx:644
 msgid "Note: You have 0 active subscriber."
 msgstr ""
 
-#: src/components/postEditor/PostEditorMetabox.tsx:632
+#: src/components/postEditor/PostEditorMetabox.tsx:650
 msgid "Need help"
 msgstr ""
 
-#: src/components/postEditor/PostEditorMetabox.tsx:645
+#: src/components/postEditor/PostEditorMetabox.tsx:663
 #: src/pages/settings/defaultSettings/index.tsx:378
 msgid "Notification Preview"
 msgstr ""
 
-#: src/components/postEditor/PostEditorMetabox.tsx:679
+#: src/components/postEditor/PostEditorMetabox.tsx:697
 msgid "By default, the post title is used as the notification title. However, you have the option to provide a custom notification title in this field."
 msgstr ""
 
-#: src/components/postEditor/PostEditorMetabox.tsx:699
+#: src/components/postEditor/PostEditorMetabox.tsx:717
 msgid "By default, the post excerpt/content is used as the notification message. However, you have the option to provide a custom notification message in this field."
 msgstr ""
 
-#: src/components/postEditor/PostEditorMetabox.tsx:713
+#: src/components/postEditor/PostEditorMetabox.tsx:730
 msgid "Large Image"
 msgstr ""
 
-#: src/components/postEditor/PostEditorMetabox.tsx:727
+#: src/components/postEditor/PostEditorMetabox.tsx:748
 msgid "The featured image will be used as the large image, but if you have a better image available, you can update it here and use it in the campaign."
 msgstr ""
 
-#: src/components/postEditor/PostEditorMetabox.tsx:775
+#: src/components/postEditor/PostEditorMetabox.tsx:801
 msgid "The notification button URL ensures that subscribers land on the designated page. By default, it will be set to the post URL. If you prefer to redirect them to a custom landing page, please update this field."
 msgstr ""
 
-#: src/components/postEditor/PostEditorMetabox.tsx:902
+#: src/components/postEditor/PostEditorMetabox.tsx:928
 msgid "Upgrade to Business Plan"
 msgstr ""
 
@@ -2994,95 +3406,115 @@ msgid "Triggered Campaign is a Pro Feature"
 msgstr ""
 
 #: src/constants/planFeatures.ts:216
-msgid "WooCommerce Integration is a Pro Feature"
+msgid "Upgrade Now to Send WooCommerce Push Campaigns"
 msgstr ""
 
 #: src/constants/planFeatures.ts:218
-msgid "PushEngage integrates seamlessly with WooCommerce, enabling automated campaign setup and personalization. Customizable templates and pre-built playbooks simplify targeted notifications, like cart abandonment alerts, requiring minimal developer input. This integration optimizes marketing efforts, driving sales and enhancing customer engagement effortlessly."
+msgid "Get access to proven eCommerce campaign templates that work seamlessly with WooCommerce. Turn your WooCommerce store into a money-minting machine with PushEngage. Try out the PushEngage Growth Plan for a full year at only $99!"
+msgstr ""
+
+#: src/constants/planFeatures.ts:222
+msgid "Recover lost sales with automated cart and browse abandonment recovery"
+msgstr ""
+
+#: src/constants/planFeatures.ts:223
+msgid "Engage, retain, and convert your store customers"
+msgstr ""
+
+#: src/constants/planFeatures.ts:224
+msgid "Launch an automated welcome campaign that boost sales"
 msgstr ""
 
 #: src/constants/planFeatures.ts:225
-msgid "Multiple Notification in Triggered Campaign is a Pro Feature."
+msgid "Send targeted and personalized campaigns that actively grow revenue"
 msgstr ""
 
 #: src/constants/planFeatures.ts:226
+msgid "Reduce churn with powerful customer win-back campaigns"
+msgstr ""
+
+#: src/constants/planFeatures.ts:227
+msgid "Increase average order value with cross-sells and upsells"
+msgstr ""
+
+#: src/constants/planFeatures.ts:233
+msgid "Multiple Notification in Triggered Campaign is a Pro Feature."
+msgstr ""
+
+#: src/constants/planFeatures.ts:234
 msgid "Schedule a triggered campaign with multiple notifications to re-engage, Cross-sell, Lead Capture and many more advanced ones based on audience segments, location or device type."
 msgstr ""
 
-#: src/constants/planFeatures.ts:235
+#: src/constants/planFeatures.ts:243
 msgid "Upgrade to PushEngage Business and Send Recurring Notifications"
 msgstr ""
 
-#: src/constants/planFeatures.ts:238
+#: src/constants/planFeatures.ts:246
 msgid "<a>Send recurring notifications</a> to boost weekly sales. Create multiple traffic streams for your sales and promos. Upgrade to the Business plan now and you can also:"
 msgstr ""
 
-#: src/constants/planFeatures.ts:249
+#: src/constants/planFeatures.ts:257
 msgid "Remove PushEngage Branding is a Pro feature."
 msgstr ""
 
-#: src/constants/planFeatures.ts:250
+#: src/constants/planFeatures.ts:258
 msgid "Remove the PushEngage branding from the subscription Opt-in"
 msgstr ""
 
-#: src/constants/planFeatures.ts:256
+#: src/constants/planFeatures.ts:264
 msgid "Upgrade to PushEngage Business and Collect Push Notification Subscribers in a Custom Subdomain"
 msgstr ""
 
-#: src/constants/planFeatures.ts:260
+#: src/constants/planFeatures.ts:268
 msgid "Collect subscribers for your website through a custom URL for your better branding. Your subscriber list should be portable. Upgrade to the Business plan now and you can also:"
 msgstr ""
 
-#: src/constants/planFeatures.ts:269
+#: src/constants/planFeatures.ts:277
 msgid "Multi Site Sending is a Pro Feature"
 msgstr ""
 
-#: src/constants/planFeatures.ts:275
+#: src/constants/planFeatures.ts:283
 msgid "Sending notification in subscriber timezone is a Pro Feature."
 msgstr ""
 
-#: src/constants/planFeatures.ts:276
+#: src/constants/planFeatures.ts:284
 msgid "Optimize your notifications by user timezone and improve user engagement."
 msgstr ""
 
-#: src/constants/planFeatures.ts:285
+#: src/constants/planFeatures.ts:293
 msgid "Upgrade to PushEngage Premium and A/B Test Your Push Broadcasts"
 msgstr ""
 
-#: src/constants/planFeatures.ts:288
+#: src/constants/planFeatures.ts:296
 msgid "A/B test any element in your push notifications. Use our Intelligent <a>A/B testing</a> and get better clicks and more revenue. Upgrade to the Premium plan now and you can also:"
 msgstr ""
 
-#: src/constants/planFeatures.ts:298
+#: src/constants/planFeatures.ts:306
 msgid "Upgrade and Unlock Multiple User Support."
 msgstr ""
 
-#: src/constants/planFeatures.ts:299
+#: src/constants/planFeatures.ts:307
 msgid "Manage multiple users with access control under a single account with a single billing."
-msgstr ""
-
-#: src/constants/planFeatures.ts:308
-msgid "Upgrade and Manage Multiple Sites."
-msgstr ""
-
-#: src/constants/planFeatures.ts:309
-msgid "Add and manage multiple websites under a single account with a single billing."
 msgstr ""
 
 #: src/constants/planFeatures.ts:31
 msgid "Send personalized automated campaigns"
 msgstr ""
 
-#: src/constants/planFeatures.ts:318
-msgid "Upgrade to PushEngage Premium and Send Drip Autoresponder Push Notifications"
+#: src/constants/planFeatures.ts:316
+msgid "Upgrade and Manage Multiple Sites."
+msgstr ""
+
+#: src/constants/planFeatures.ts:317
+msgid "Add and manage multiple websites under a single account with a single billing."
 msgstr ""
 
 #: src/constants/planFeatures.ts:32
 msgid "Send price drop and back-in-stock alerts"
 msgstr ""
 
-#: src/constants/planFeatures.ts:324
-msgid "<a>Schedule a drip campaign</a> with multiple notifications for re-engagement, cross-selling, upselling and much more. Personalize your campaigns using Segments, Audience Groups, and Attributes. Upgrade to the Premium plan now and you can also:"
+#: src/constants/planFeatures.ts:326
+msgid "Upgrade to PushEngage Premium and Send Drip Autoresponder Push Notifications"
 msgstr ""
 
 #: src/constants/planFeatures.ts:33
@@ -3090,27 +3522,31 @@ msgid "Boost revenue with abandoned cart recovery"
 msgstr ""
 
 #: src/constants/planFeatures.ts:332
-msgid "Multiple Notification in Drip Autoresponders is a Pro Feature."
-msgstr ""
-
-#: src/constants/planFeatures.ts:333
-msgid "Schedule a drip campaign with multiple notifications to re-engage, Cross-sell, Lead Capture and many more advanced ones based on audience segments, location or device type."
+msgid "<a>Schedule a drip campaign</a> with multiple notifications for re-engagement, cross-selling, upselling and much more. Personalize your campaigns using Segments, Audience Groups, and Attributes. Upgrade to the Premium plan now and you can also:"
 msgstr ""
 
 #: src/constants/planFeatures.ts:34
 msgid "Use attributes tags for personalized campaigns"
 msgstr ""
 
-#: src/constants/planFeatures.ts:342
-msgid "Upgrade to PushEngage Premium to Enable Goal Tracking"
+#: src/constants/planFeatures.ts:340
+msgid "Multiple Notification in Drip Autoresponders is a Pro Feature."
 msgstr ""
 
-#: src/constants/planFeatures.ts:345
-msgid "Track how your <a>push notifications are performing</a>. Create custom goals and stay on track with your marketing strategy. Upgrade to the Premium plan now and you can also:"
+#: src/constants/planFeatures.ts:341
+msgid "Schedule a drip campaign with multiple notifications to re-engage, Cross-sell, Lead Capture and many more advanced ones based on audience segments, location or device type."
 msgstr ""
 
 #: src/constants/planFeatures.ts:35
 msgid "Create a dynamic campaign for cross-sell, up-sell & review"
+msgstr ""
+
+#: src/constants/planFeatures.ts:350
+msgid "Upgrade to PushEngage Premium to Enable Goal Tracking"
+msgstr ""
+
+#: src/constants/planFeatures.ts:353
+msgid "Track how your <a>push notifications are performing</a>. Create custom goals and stay on track with your marketing strategy. Upgrade to the Premium plan now and you can also:"
 msgstr ""
 
 #: src/constants/planFeatures.ts:36
@@ -3221,35 +3657,35 @@ msgstr ""
 msgid "There may be an issue with the click event for test notifications. It appears that there is a different service worker registered on this WordPress dashboard, which could be causing the issue. Please check the service worker configuration to ensure that test notifications are functioning properly."
 msgstr ""
 
-#: src/helper/index.ts:147
+#: src/helper/index.ts:146
 msgid "Goal Conversion"
 msgstr ""
 
-#: src/helper/index.ts:18
+#: src/helper/index.ts:17
 msgid "Select or Upload Media Of Your Chosen Persuasion"
 msgstr ""
 
-#: src/helper/index.ts:20
+#: src/helper/index.ts:19
 msgid "Use this media"
 msgstr ""
 
-#: src/helper/index.ts:264
+#: src/helper/index.ts:263
 msgid "Total Counted"
 msgstr ""
 
-#: src/helper/index.ts:272
+#: src/helper/index.ts:271
 msgid "Allowed"
 msgstr ""
 
-#: src/helper/index.ts:280
+#: src/helper/index.ts:279
 msgid "Blocked"
 msgstr ""
 
-#: src/helper/index.ts:288
+#: src/helper/index.ts:287
 msgid "Closed"
 msgstr ""
 
-#: src/helper/index.ts:327
+#: src/helper/index.ts:326
 msgid "Total Active Subscribers"
 msgstr ""
 
@@ -3717,7 +4153,7 @@ msgid "Optin Analytics"
 msgstr ""
 
 #: src/pages/analytics/OptinAnalytics.tsx:288
-#: app/Utils/AdminNavMenuItems.php:72
+#: app/Utils/AdminNavMenuItems.php:77
 msgid "Settings"
 msgstr ""
 
@@ -3831,10 +4267,6 @@ msgstr ""
 msgid "Edit Segment"
 msgstr ""
 
-#: src/pages/audience/Segments.tsx:318
-msgid "Create a New Segment"
-msgstr ""
-
 #: src/pages/audience/Segments.tsx:350
 msgid "Tag Category"
 msgstr ""
@@ -3875,7 +4307,7 @@ msgstr ""
 
 #: src/pages/dashboard/CampaignDropdownMenuBtn.tsx:37
 #: src/pages/triggeredCampaign/CreateOrEdit.tsx:306
-#: src/pages/triggeredCampaign/List.tsx:304
+#: src/pages/triggeredCampaign/List.tsx:301
 msgid "Triggered Campaigns"
 msgstr ""
 
@@ -3903,63 +4335,63 @@ msgstr ""
 msgid "Create a Notification"
 msgstr ""
 
-#: src/pages/dashboard/Strategies.tsx:102
+#: src/pages/dashboard/Strategies.tsx:101
 msgid "Increase engagement by sending targeted push campaigns. Automatically map your categories to segments using category segmentation for effective targeting."
 msgstr ""
 
-#: src/pages/dashboard/Strategies.tsx:110
+#: src/pages/dashboard/Strategies.tsx:109
 msgid "Add Segments"
 msgstr ""
 
-#: src/pages/dashboard/Strategies.tsx:111
+#: src/pages/dashboard/Strategies.tsx:110
 msgid "Create Segments"
 msgstr ""
 
-#: src/pages/dashboard/Strategies.tsx:118
+#: src/pages/dashboard/Strategies.tsx:117
 msgid "Boost Productivity With Auto Push"
 msgstr ""
 
-#: src/pages/dashboard/Strategies.tsx:119
+#: src/pages/dashboard/Strategies.tsx:118
 msgid "Easily streamline your workflow by setting up auto push notifications while drafting your posts in the Post Editor. Reach your audience effortlessly and save valuable time for other tasks."
 msgstr ""
 
-#: src/pages/dashboard/Strategies.tsx:126
+#: src/pages/dashboard/Strategies.tsx:125
 msgid "Enable Now"
 msgstr ""
 
-#: src/pages/dashboard/Strategies.tsx:64
+#: src/pages/dashboard/Strategies.tsx:63
 msgid "Recover Lost Sales and Boost Conversions"
 msgstr ""
 
-#: src/pages/dashboard/Strategies.tsx:65
+#: src/pages/dashboard/Strategies.tsx:64
 msgid "Enable our ready-made cart and browse abandonment features to win back customers and drive sales. Customize with dynamic product details or use our pre-designed playbooks for ease and efficiency."
 msgstr ""
 
-#: src/pages/dashboard/Strategies.tsx:72
+#: src/pages/dashboard/Strategies.tsx:71
 msgid "Enable Trigger Campaigns"
 msgstr ""
 
-#: src/pages/dashboard/Strategies.tsx:79
+#: src/pages/dashboard/Strategies.tsx:78
 msgid "Track Your ROI"
 msgstr ""
 
-#: src/pages/dashboard/Strategies.tsx:80
+#: src/pages/dashboard/Strategies.tsx:79
 msgid "Goal Tracking lets you set goals and see how well your notification campaigns are doing. Understand how much each campaign helps your business grow."
 msgstr ""
 
-#: src/pages/dashboard/Strategies.tsx:87
+#: src/pages/dashboard/Strategies.tsx:86
 msgid "Enable Goal Tracking"
 msgstr ""
 
-#: src/pages/dashboard/Strategies.tsx:95
+#: src/pages/dashboard/Strategies.tsx:94
 msgid "Segmenting Your Audience"
 msgstr ""
 
-#: src/pages/dashboard/Strategies.tsx:96
+#: src/pages/dashboard/Strategies.tsx:95
 msgid "Map Categories to Segments"
 msgstr ""
 
-#: src/pages/dashboard/Strategies.tsx:98
+#: src/pages/dashboard/Strategies.tsx:97
 msgid "Organize your audience into groups based on categories or activities. Send targeted campaigns to boost click-through rates, drive more traffic, and achieve higher sales conversions."
 msgstr ""
 
@@ -3977,6 +4409,183 @@ msgstr ""
 
 #: src/pages/dashboard/WelcomePanel.tsx:68
 msgid "Read the Getting Started Guide"
+msgstr ""
+
+#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:100
+#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:85
+msgid "Start Your First Campaign in Minutes"
+msgstr ""
+
+#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:114
+msgid "Push Notifications: Powerful, Personalized, and Perfectly Timed"
+msgstr ""
+
+#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:115
+#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:104
+msgid "PushEngage creates value-driven campaigns your customers will love:"
+msgstr ""
+
+#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:123
+#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:112
+msgid "Opt-in Only"
+msgstr ""
+
+#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:124
+#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:113
+msgid "Notifications are only sent to opted-in users."
+msgstr ""
+
+#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:129
+#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:118
+msgid "Personalized & Timed"
+msgstr ""
+
+#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:130
+#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:119
+msgid "Messages are personalized and perfectly timed."
+msgstr ""
+
+#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:135
+#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:124
+msgid "Automated Campaigns"
+msgstr ""
+
+#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:136
+#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:125
+msgid "Campaigns are automated for minimal effort and maximum results."
+msgstr ""
+
+#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:142
+#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:131
+msgid "Start Your Free Trial Today"
+msgstr ""
+
+#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:149
+#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:138
+msgid "With PushEngage, your customers will thank you, not unsubscribe."
+msgstr ""
+
+#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:19
+msgid "Your Visitors Are Leaving Without Engaging"
+msgstr ""
+
+#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:20
+msgid "Reconnect and Boost Your WordPress Site's Traffic with PushEngage"
+msgstr ""
+
+#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:24
+msgid "Blog readers, subscribers, and website visitors aren't sticking around. Don't let your content go unnoticed. PushEngage helps you re-engage your audience by delivering personalized push notifications that bring them back to your WordPress site—instantly."
+msgstr ""
+
+#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:28
+#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:24
+#: src/pages/dashboard/siteNotConnected/components/HeaderSection.tsx:36
+msgid "Get Started For Free"
+msgstr ""
+
+#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:35
+msgid "Your Audience Is Slipping Away"
+msgstr ""
+
+#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:36
+msgid "Try It for Free"
+msgstr ""
+
+#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:44
+msgid "80% Leave"
+msgstr ""
+
+#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:45
+msgid "80% of visitors leave without exploring more than one page."
+msgstr ""
+
+#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:53
+#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:45
+msgid "Low Open Rates"
+msgstr ""
+
+#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:54
+msgid "Email open rates barely reaches to 20%."
+msgstr ""
+
+#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:59
+#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:51
+msgid "Buried Content"
+msgstr ""
+
+#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:60
+msgid "Social media algorithms bury your content under endless scrolling."
+msgstr ""
+
+#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:69
+msgid "Here’s the truth: Most visitors won’t return unless you remind them why they came. Push notifications from PushEngage are seen instantly, helping you bring readers back and boost engagement by up to 5X."
+msgstr ""
+
+#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:75
+#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:64
+msgid "Push Notifications That Deliver Results"
+msgstr ""
+
+#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:76
+#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:95
+msgid "Whether you’re recovering abandoned carts, sharing exclusive offers, or boosting engagement, PushEngage makes it simple to connect with your audience when it matters most."
+msgstr ""
+
+#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:84
+#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:69
+msgid "High Open Rates"
+msgstr ""
+
+#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:85
+#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:70
+msgid "Increase the open rates of up to 90%."
+msgstr ""
+
+#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:90
+#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:75
+msgid "Improved Click-through"
+msgstr ""
+
+#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:91
+#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:76
+msgid "Click-through rates 5X higher than email."
+msgstr ""
+
+#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:97
+#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:82
+msgid "Automated campaigns that run 24/7."
+msgstr ""
+
+#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:103
+msgid "Think Push Notifications Are Spammy? Think Again."
+msgstr ""
+
+#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:19
+msgid "Your Customers Are Leaving Without Saying Goodbye."
+msgstr ""
+
+#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:20
+msgid "Abandoned carts, ignored emails, and missed opportunities don't have to be the norm. PushEngage turns fleeting visitors into loyal customers with personalized, high-converting push notifications."
+msgstr ""
+
+#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:39
+msgid "70% Leave"
+msgstr ""
+
+#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:40
+msgid "70% of carts are abandoned"
+msgstr ""
+
+#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:46
+msgid "Email open rates hover around 18%"
+msgstr ""
+
+#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:52
+msgid "Social media ads cost you more than they return"
+msgstr ""
+
+#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:58
+msgid "Here’s the truth: The average user makes their buying decision within 30 minutes of abandoning their cart. You can’t afford to wait. Push notifications from PushEngage are seen instantly and convert 5X better than email."
 msgstr ""
 
 #: src/pages/design/PopUpModals.tsx:180
@@ -4061,16 +4670,6 @@ msgstr ""
 
 #: src/pages/design/TargetingRule.tsx:469
 msgid "Add Site URL Rules"
-msgstr ""
-
-#: src/pages/design/TargetingRule.tsx:482
-#: src/pages/settings/advancedSettings/index.tsx:594
-#: src/pages/settings/autoPush/index.tsx:323
-#: src/pages/settings/defaultSettings/index.tsx:610
-#: src/pages/settings/integrations/woocommerce/index.tsx:582
-#: src/pages/settings/misc/index.tsx:142
-#: src/pages/settings/siteDetails/index.tsx:600
-msgid "Save Changes"
 msgstr ""
 
 #: src/pages/design/Widgets.tsx:101
@@ -4277,7 +4876,7 @@ msgstr ""
 
 #: src/pages/drip/List.tsx:287
 #: src/pages/pushBroadcast/List.tsx:360
-#: src/pages/triggeredCampaign/List.tsx:305
+#: src/pages/triggeredCampaign/List.tsx:302
 msgid "Add New"
 msgstr ""
 
@@ -4293,124 +4892,144 @@ msgstr ""
 msgid "Notification delay should be less than 1826 days"
 msgstr ""
 
-#: src/pages/pushBroadcast/CreateOrEdit.tsx:1019
+#: src/pages/onboarding/helpers.ts:12
+msgid "Add Campaigns"
+msgstr ""
+
+#: src/pages/onboarding/helpers.ts:17
+msgid "Setup Retargeting"
+msgstr ""
+
+#: src/pages/onboarding/helpers.ts:22
+msgid "Recover Sales"
+msgstr ""
+
+#: src/pages/onboarding/helpers.ts:27
+msgid "Final Step"
+msgstr ""
+
+#: src/pages/onboarding/helpers.ts:7
+msgid "Build Subscriber List"
+msgstr ""
+
+#: src/pages/pushBroadcast/CreateOrEdit.tsx:1031
 msgid "Create New Push Broadcast"
 msgstr ""
 
-#: src/pages/pushBroadcast/CreateOrEdit.tsx:1066
+#: src/pages/pushBroadcast/CreateOrEdit.tsx:1078
 msgid "You don't have write permission to perform this action. Please contact to your admin."
 msgstr ""
 
-#: src/pages/pushBroadcast/CreateOrEdit.tsx:1079
+#: src/pages/pushBroadcast/CreateOrEdit.tsx:1091
 msgid "Edit Push Broadcast"
 msgstr ""
 
-#: src/pages/pushBroadcast/CreateOrEdit.tsx:1080
+#: src/pages/pushBroadcast/CreateOrEdit.tsx:1092
 msgid "New Push Broadcast"
 msgstr ""
 
-#: src/pages/pushBroadcast/CreateOrEdit.tsx:1097
+#: src/pages/pushBroadcast/CreateOrEdit.tsx:1109
 msgid "Remove A/B Testing"
 msgstr ""
 
-#: src/pages/pushBroadcast/CreateOrEdit.tsx:1104
+#: src/pages/pushBroadcast/CreateOrEdit.tsx:1116
 msgid "Add A/B Testing"
 msgstr ""
 
-#: src/pages/pushBroadcast/CreateOrEdit.tsx:1306
+#: src/pages/pushBroadcast/CreateOrEdit.tsx:1318
 msgid "Send to a sample"
 msgstr ""
 
-#: src/pages/pushBroadcast/CreateOrEdit.tsx:1312
+#: src/pages/pushBroadcast/CreateOrEdit.tsx:1324
 msgid "Recipient Count"
 msgstr ""
 
-#: src/pages/pushBroadcast/CreateOrEdit.tsx:1364
+#: src/pages/pushBroadcast/CreateOrEdit.tsx:1376
 msgid "Send Notification Now"
 msgstr ""
 
-#: src/pages/pushBroadcast/CreateOrEdit.tsx:1365
+#: src/pages/pushBroadcast/CreateOrEdit.tsx:1377
 msgid "Schedule Notification"
 msgstr ""
 
-#: src/pages/pushBroadcast/CreateOrEdit.tsx:1376
+#: src/pages/pushBroadcast/CreateOrEdit.tsx:1388
 msgid "Save as Draft"
 msgstr ""
 
-#: src/pages/pushBroadcast/CreateOrEdit.tsx:1393
+#: src/pages/pushBroadcast/CreateOrEdit.tsx:1405
 msgid "Save & Select Audience"
 msgstr ""
 
-#: src/pages/pushBroadcast/CreateOrEdit.tsx:348
+#: src/pages/pushBroadcast/CreateOrEdit.tsx:357
 msgid "Selected Audience group used in this campaign no longer exists. Please verify the selected audience before sending the campaign."
 msgstr ""
 
-#: src/pages/pushBroadcast/CreateOrEdit.tsx:380
+#: src/pages/pushBroadcast/CreateOrEdit.tsx:389
 msgid "Custom audience filter in this campaign has been updated because used segments no longer exists. Please verify the selected audience before sending the campaign."
 msgstr ""
 
-#: src/pages/pushBroadcast/CreateOrEdit.tsx:445
+#: src/pages/pushBroadcast/CreateOrEdit.tsx:457
 #: src/pages/pushBroadcast/formatter.ts:130
 msgid "Please select audience group"
 msgstr ""
 
-#: src/pages/pushBroadcast/CreateOrEdit.tsx:454
+#: src/pages/pushBroadcast/CreateOrEdit.tsx:466
 msgid "Selected audience group no longer exists. Please select another audience group"
 msgstr ""
 
-#: src/pages/pushBroadcast/CreateOrEdit.tsx:486
+#: src/pages/pushBroadcast/CreateOrEdit.tsx:498
 msgid "An error has occurred!"
 msgstr ""
 
-#: src/pages/pushBroadcast/CreateOrEdit.tsx:588
+#: src/pages/pushBroadcast/CreateOrEdit.tsx:600
 msgid "Please fix the following issues:"
 msgstr ""
 
-#: src/pages/pushBroadcast/CreateOrEdit.tsx:610
+#: src/pages/pushBroadcast/CreateOrEdit.tsx:622
 msgid "Notification A has following errors."
 msgstr ""
 
-#: src/pages/pushBroadcast/CreateOrEdit.tsx:616
+#: src/pages/pushBroadcast/CreateOrEdit.tsx:628
 msgid "Notification B has following errors."
 msgstr ""
 
-#: src/pages/pushBroadcast/CreateOrEdit.tsx:697
+#: src/pages/pushBroadcast/CreateOrEdit.tsx:709
 msgid "Please fix the error in custom audience selection."
 msgstr ""
 
-#: src/pages/pushBroadcast/CreateOrEdit.tsx:705
+#: src/pages/pushBroadcast/CreateOrEdit.tsx:717
 msgid "Please select an audience group"
 msgstr ""
 
-#: src/pages/pushBroadcast/CreateOrEdit.tsx:737
+#: src/pages/pushBroadcast/CreateOrEdit.tsx:749
 msgid "Cannot create Intelligent AB Test notification for a sample size less than"
 msgstr ""
 
-#: src/pages/pushBroadcast/CreateOrEdit.tsx:740
+#: src/pages/pushBroadcast/CreateOrEdit.tsx:752
 msgid "subscribers"
 msgstr ""
 
-#: src/pages/pushBroadcast/CreateOrEdit.tsx:743
+#: src/pages/pushBroadcast/CreateOrEdit.tsx:755
 msgid "only"
 msgstr ""
 
-#: src/pages/pushBroadcast/CreateOrEdit.tsx:743
+#: src/pages/pushBroadcast/CreateOrEdit.tsx:755
 msgid "subscribers matched"
 msgstr ""
 
-#: src/pages/pushBroadcast/CreateOrEdit.tsx:953
+#: src/pages/pushBroadcast/CreateOrEdit.tsx:965
 msgid "saved"
 msgstr ""
 
-#: src/pages/pushBroadcast/CreateOrEdit.tsx:955
+#: src/pages/pushBroadcast/CreateOrEdit.tsx:967
 msgid "sent"
 msgstr ""
 
-#: src/pages/pushBroadcast/CreateOrEdit.tsx:956
+#: src/pages/pushBroadcast/CreateOrEdit.tsx:968
 msgid "scheduled"
 msgstr ""
 
-#: src/pages/pushBroadcast/CreateOrEdit.tsx:963
+#: src/pages/pushBroadcast/CreateOrEdit.tsx:975
 msgid "An error occurred!"
 msgstr ""
 
@@ -4660,7 +5279,7 @@ msgstr ""
 
 #: src/pages/settings/autoPush/index.tsx:214
 #: src/pages/settings/integrations/components/IntegrationModal.tsx:49
-#: src/pages/settings/integrations/woocommerce/index.tsx:341
+#: src/pages/settings/integrations/woocommerce/index.tsx:355
 msgid "Watch How to Get Started"
 msgstr ""
 
@@ -4756,36 +5375,36 @@ msgstr ""
 msgid "Show Plugin Details"
 msgstr ""
 
-#: src/pages/settings/integrations/index.tsx:118
+#: src/pages/settings/integrations/index.tsx:128
 msgid "Connected"
 msgstr ""
 
-#: src/pages/settings/integrations/index.tsx:180
+#: src/pages/settings/integrations/index.tsx:190
 msgid "WooCommerce PushEngage Integration"
 msgstr ""
 
-#: src/pages/settings/integrations/index.tsx:181
+#: src/pages/settings/integrations/index.tsx:191
 msgid "Integrate WooCommerce with PushEngage to send automatic push notifications for browse and cart abandonment and more.You will need to install and activate the WooCommerce plugin to connect with PushEngage. Click below to get more details on the plugin."
 msgstr ""
 
-#: src/pages/settings/integrations/index.tsx:190
+#: src/pages/settings/integrations/index.tsx:200
 msgid "Connect Integration"
 msgstr ""
 
-#: src/pages/settings/integrations/index.tsx:59
+#: src/pages/settings/integrations/index.tsx:64
+#: app/Utils/AdminNavMenuItems.php:50
 msgid "WooCommerce"
 msgstr ""
 
-#: src/pages/settings/integrations/index.tsx:60
+#: src/pages/settings/integrations/index.tsx:65
 msgid "Integrate WooCommerce with PushEngage."
 msgstr ""
 
-#: src/pages/settings/integrations/index.tsx:90
-#: app/Utils/AdminNavMenuItems.php:77
+#: src/pages/settings/integrations/index.tsx:95
 msgid "Integrations"
 msgstr ""
 
-#: src/pages/settings/integrations/index.tsx:94
+#: src/pages/settings/integrations/index.tsx:99
 msgid "Manage PushEngage integrations with third-party apps and services."
 msgstr ""
 
@@ -4801,91 +5420,89 @@ msgstr ""
 msgid "Remind me Later"
 msgstr ""
 
-#. 1 - Random ID string.
-#: src/pages/settings/integrations/woocommerce/index.tsx:110
-msgid "WooCommerce Browse Abandonment-%1$s"
-msgstr ""
-
-#. 1 Random ID string.
-#: src/pages/settings/integrations/woocommerce/index.tsx:116
-msgid "WooCommerce Cart Abandonment-%1$s"
-msgstr ""
-
-#: src/pages/settings/integrations/woocommerce/index.tsx:259
+#: src/pages/settings/integrations/woocommerce/index.tsx:272
 msgid "WooCommerce integration settings updated successfully"
 msgstr ""
 
-#: src/pages/settings/integrations/woocommerce/index.tsx:265
+#: src/pages/settings/integrations/woocommerce/index.tsx:278
 msgid "Failed to update WooCommerce integration settings."
 msgstr ""
 
-#: src/pages/settings/integrations/woocommerce/index.tsx:313
+#: src/pages/settings/integrations/woocommerce/index.tsx:322
+msgid "Get Started At $99/Year!"
+msgstr ""
+
+#: src/pages/settings/integrations/woocommerce/index.tsx:327
 msgid "You don't have permission to create/modify WooCommerce Integration settings. Please contact to your admin."
 msgstr ""
 
-#: src/pages/settings/integrations/woocommerce/index.tsx:330
+#: src/pages/settings/integrations/woocommerce/index.tsx:344
 #: src/pages/triggeredCampaign/Selection.tsx:188
 msgid "Cart Abandonment"
 msgstr ""
 
-#: src/pages/settings/integrations/woocommerce/index.tsx:333
+#: src/pages/settings/integrations/woocommerce/index.tsx:347
 msgid "Manage cart abandonment trigger settings for WooCommerce"
 msgstr ""
 
-#: src/pages/settings/integrations/woocommerce/index.tsx:348
+#: src/pages/settings/integrations/woocommerce/index.tsx:362
 msgid "Enable Cart Abandonment"
 msgstr ""
 
-#: src/pages/settings/integrations/woocommerce/index.tsx:351
+#: src/pages/settings/integrations/woocommerce/index.tsx:365
 msgid "Enable Cart Abandonment "
 msgstr ""
 
-#: src/pages/settings/integrations/woocommerce/index.tsx:385
+#: src/pages/settings/integrations/woocommerce/index.tsx:400
 msgid "Enable WooCommerce cart abandonment to send automatic push notifications for abandoned carts."
 msgstr ""
 
-#: src/pages/settings/integrations/woocommerce/index.tsx:438
+#: src/pages/settings/integrations/woocommerce/index.tsx:466
 msgid "Cart Abandonment Trigger ID"
 msgstr ""
 
-#: src/pages/settings/integrations/woocommerce/index.tsx:445
+#: src/pages/settings/integrations/woocommerce/index.tsx:473
 msgid "Select Triggered Campaign to attach with WooCommerce cart abandonment."
 msgstr ""
 
-#: src/pages/settings/integrations/woocommerce/index.tsx:459
+#: src/pages/settings/integrations/woocommerce/index.tsx:487
 #: src/pages/triggeredCampaign/Selection.tsx:155
 msgid "Browse Abandonment"
 msgstr ""
 
-#: src/pages/settings/integrations/woocommerce/index.tsx:461
+#: src/pages/settings/integrations/woocommerce/index.tsx:489
 msgid "Manage browse abandonment trigger settings for WooCommerce"
 msgstr ""
 
-#: src/pages/settings/integrations/woocommerce/index.tsx:467
+#: src/pages/settings/integrations/woocommerce/index.tsx:495
 msgid "Enable Browse Abandonment"
 msgstr ""
 
-#: src/pages/settings/integrations/woocommerce/index.tsx:470
+#: src/pages/settings/integrations/woocommerce/index.tsx:498
 msgid "Enable Browse Abandonment "
 msgstr ""
 
-#: src/pages/settings/integrations/woocommerce/index.tsx:472
+#: src/pages/settings/integrations/woocommerce/index.tsx:500
 msgid "Growth +"
 msgstr ""
 
-#: src/pages/settings/integrations/woocommerce/index.tsx:504
+#: src/pages/settings/integrations/woocommerce/index.tsx:533
 msgid "Enable WooCommerce browse abandonment to send automatic push notifications for abandoned products."
 msgstr ""
 
-#: src/pages/settings/integrations/woocommerce/index.tsx:551
+#: src/pages/settings/integrations/woocommerce/index.tsx:546
+msgid "Try Now at $99/year"
+msgstr ""
+
+#: src/pages/settings/integrations/woocommerce/index.tsx:593
 msgid "Select Trigger"
 msgstr ""
 
-#: src/pages/settings/integrations/woocommerce/index.tsx:560
+#: src/pages/settings/integrations/woocommerce/index.tsx:602
 msgid "Browse Abandonment Trigger Name"
 msgstr ""
 
-#: src/pages/settings/integrations/woocommerce/index.tsx:567
+#: src/pages/settings/integrations/woocommerce/index.tsx:609
 msgid "Select Triggered Campaign to attach with WooCommerce browse abandonment."
 msgstr ""
 
@@ -4897,11 +5514,11 @@ msgstr ""
 msgid "Hide Admin Bar Menu"
 msgstr ""
 
-#: src/pages/settings/misc/index.tsx:122
+#: src/pages/settings/misc/index.tsx:121
 msgid "Check this option to hide the PushEngage admin bar menu."
 msgstr ""
 
-#: src/pages/settings/misc/index.tsx:125
+#: src/pages/settings/misc/index.tsx:126
 msgid "Hide PushEngage Dashboard widget"
 msgstr ""
 
@@ -4955,10 +5572,6 @@ msgstr ""
 
 #: src/pages/settings/siteDetails/index.tsx:402
 msgid "or"
-msgstr ""
-
-#: src/pages/settings/siteDetails/index.tsx:417
-msgid "Site Name"
 msgstr ""
 
 #: src/pages/settings/siteDetails/index.tsx:432
@@ -5262,8 +5875,8 @@ msgstr ""
 #. Author of the plugin
 #: app/AdminBarMenu.php:55
 #: app/DashboardWidget.php:53
-#: app/NavMenu.php:80
-#: app/NavMenu.php:87
+#: app/NavMenu.php:81
+#: app/NavMenu.php:88
 msgid "PushEngage"
 msgstr ""
 
@@ -5280,50 +5893,65 @@ msgid "https://www.pushengage.com/?utm_source=WordPress&utm_campaign=Plugin&utm_
 msgstr ""
 
 #: app/AdminBarMenu.php:88
-#: app/NavMenu.php:115
-#: app/NavMenu.php:116
+#: app/NavMenu.php:128
+#: app/NavMenu.php:129
 msgid "Upgrade to Pro"
 msgstr ""
 
-#: app/Ajax.php:99
+#: app/Ajax.php:105
+#: app/Integrations/WooCommerce/NotificationActions.php:184
+#: app/Integrations/WooCommerce/NotificationActions.php:242
 #: app/WhatsNew.php:111
 msgid "Permission denied. Please make sure you have required permission to perform this action."
 msgstr ""
 
-#: app/Ajax.php:157
+#: app/Ajax.php:163
 msgid "An error was encountered while connecting your account, please try again"
 msgstr ""
 
+#: app/Ajax.php:810
+msgid "Invalid request. Campaign Settings data missing."
+msgstr ""
+
+#: app/Ajax.php:919
+msgid "Invalid request. Retargeting Settings data missing."
+msgstr ""
+
+#: app/Ajax.php:998
+msgid "Invalid request. Recover Sales Settings data missing."
+msgstr ""
+
 #. Translators: 1 - Post Type. - 2 - Post Title
-#: app/Core.php:466
+#: app/Core.php:482
 msgid "A notification already sent within 5 minutes for the %1$s %2$s"
 msgstr ""
 
 #. Translators: 1 - Post Type. - 2 - Post Title
-#: app/Core.php:494
+#: app/Core.php:510
 msgid "There was a problem sending your notification for %1$s %2$s"
 msgstr ""
 
 #. Translators: 1 - Post Type. - 2 - Post Title.
-#: app/Core.php:530
+#: app/Core.php:546
 msgid "There was a an error sending your notification for %1$s %2$s"
 msgstr ""
 
-#: app/Core.php:660
+#: app/Core.php:676
+#: app/Core.php:710
 msgid "PushEngage Push Notification Settings"
 msgstr ""
 
-#: app/EnqueueAssets.php:239
+#: app/EnqueueAssets.php:229
 msgid "Give us a 5-star rating!"
 msgstr ""
 
 #. Translators: 1 - The plugin name ("PushEngage"), - 2 - This placeholder will be replaced with star icons, - 3 - "WordPress.org" - 4 - The plugin name ("PushEngage").
-#: app/EnqueueAssets.php:254
+#: app/EnqueueAssets.php:244
 msgid "Please rate %1$s %2$s on %3$s to help us spread the word. Thank you from the PushEngage team!"
 msgstr ""
 
 #. Translators: 1 - WordPress Version, - 2 - The plugin version
-#: app/EnqueueAssets.php:269
+#: app/EnqueueAssets.php:259
 msgid "WordPress %1$s | PushEngage %2$s"
 msgstr ""
 
@@ -5357,24 +5985,517 @@ msgstr ""
 msgid "Notification ID is missing."
 msgstr ""
 
-#: app/Includes/Api/PushengageAPI.php:349
+#: app/Includes/Api/PushengageAPI.php:384
 msgid "Segment name is required."
 msgstr ""
 
-#: app/Includes/Api/PushengageAPI.php:384
+#: app/Includes/Api/PushengageAPI.php:419
 msgid "Subscribers ID is required and must be a non-empty array."
 msgstr ""
 
-#: app/Includes/Api/PushengageAPI.php:388
+#: app/Includes/Api/PushengageAPI.php:423
 msgid "Segment ID is required."
 msgstr ""
 
-#: app/Includes/SubscriberSync.php:73
+#: app/Includes/SubscriberSync.php:82
 msgid "Nonce verification failed."
 msgstr ""
 
-#: app/Includes/SubscriberSync.php:78
+#: app/Includes/SubscriberSync.php:87
 msgid "User not logged in."
+msgstr ""
+
+#: app/Integrations/WooCommerce/NotificationActions.php:110
+#: app/Integrations/WooCommerce/NotificationSettings.php:242
+#: app/Integrations/WooCommerce/NotificationSettings.php:359
+#: app/NavMenu.php:112
+#: app/NavMenu.php:113
+msgid "Push Notifications"
+msgstr ""
+
+#: app/Integrations/WooCommerce/NotificationActions.php:141
+msgid "Connect your site now to use the order push notification features."
+msgstr ""
+
+#: app/Integrations/WooCommerce/NotificationActions.php:148
+msgid "Cannot send push notifications to Guest Users"
+msgstr ""
+
+#: app/Integrations/WooCommerce/NotificationActions.php:157
+msgid "Customer is not subscribed for push notifications"
+msgstr ""
+
+#: app/Integrations/WooCommerce/NotificationActions.php:164
+msgid "Send Review Request"
+msgstr ""
+
+#: app/Integrations/WooCommerce/NotificationActions.php:165
+msgid "Send Order Status Update"
+msgstr ""
+
+#: app/Integrations/WooCommerce/NotificationActions.php:168
+msgid "Send Retry Purchase Request"
+msgstr ""
+
+#: app/Integrations/WooCommerce/NotificationActions.php:170
+msgid "Edit Notification Template"
+msgstr ""
+
+#: app/Integrations/WooCommerce/NotificationActions.php:188
+msgid "Invalid Request."
+msgstr ""
+
+#: app/Integrations/WooCommerce/NotificationActions.php:192
+msgid "Order ID is missing from the request."
+msgstr ""
+
+#: app/Integrations/WooCommerce/NotificationActions.php:196
+msgid "Order Status is missing from the request."
+msgstr ""
+
+#: app/Integrations/WooCommerce/NotificationActions.php:200
+msgid "Notification Action is missing from the request."
+msgstr ""
+
+#: app/Integrations/WooCommerce/NotificationActions.php:208
+msgid "Invalid Order ID"
+msgstr ""
+
+#: app/Integrations/WooCommerce/NotificationActions.php:213
+msgid "Status Update Notification sent successfully."
+msgstr ""
+
+#: app/Integrations/WooCommerce/NotificationActions.php:224
+msgid "Review Request Notification sent successfully."
+msgstr ""
+
+#: app/Integrations/WooCommerce/NotificationActions.php:229
+msgid "Retry Purchase Notification sent successfully."
+msgstr ""
+
+#: app/Integrations/WooCommerce/NotificationActions.php:246
+msgid "Invalid Request. Nonce verification failed."
+msgstr ""
+
+#: app/Integrations/WooCommerce/NotificationActions.php:250
+msgid "Data is missing from the request."
+msgstr ""
+
+#: app/Integrations/WooCommerce/NotificationActions.php:261
+msgid "Product Import Notification sent successfully."
+msgstr ""
+
+#: app/Integrations/WooCommerce/NotificationActions.php:272
+msgid "Send order status push notification"
+msgstr ""
+
+#: app/Integrations/WooCommerce/NotificationActions.php:273
+msgid "Send review request push notification"
+msgstr ""
+
+#: app/Integrations/WooCommerce/NotificationActions.php:324
+msgid "Order Status Update Push Notification sent successfully."
+msgstr ""
+
+#: app/Integrations/WooCommerce/NotificationActions.php:332
+msgid "Review Request Push Notification sent successfully."
+msgstr ""
+
+#: app/Integrations/WooCommerce/NotificationActions.php:355
+msgid "Send Order Status Update Push Notification"
+msgstr ""
+
+#: app/Integrations/WooCommerce/NotificationActions.php:356
+msgid "Send Review Request Push Notification"
+msgstr ""
+
+#: app/Integrations/WooCommerce/NotificationActions.php:359
+msgid "Send Retry Purchase Push Notification"
+msgstr ""
+
+#. translators: %s: Order Action Type.
+#: app/Integrations/WooCommerce/NotificationHandler.php:152
+msgid "Notification is disabled for order status - %s."
+msgstr ""
+
+#: app/Integrations/WooCommerce/NotificationHandler.php:195
+msgid "Notification for order status ( %s ) is disabled for both admin and customers"
+msgstr ""
+
+#: app/Integrations/WooCommerce/NotificationHandler.php:229
+msgid "Push Notification sent to customer for order status - %s."
+msgstr ""
+
+#: app/Integrations/WooCommerce/NotificationHandler.php:268
+msgid "Push Notification sent to admin for order status - %s."
+msgstr ""
+
+#: app/Integrations/WooCommerce/NotificationSettings.php:73
+msgid "You are missing out on features."
+msgstr ""
+
+#: app/Integrations/WooCommerce/NotificationSettings.php:77
+msgid "Connect your site to PushEngage to start sending push notifications with WooCommerce and recover lost sales."
+msgstr ""
+
+#: app/Integrations/WooCommerce/NotificationSettings.php:85
+msgid "Connect your store now!"
+msgstr ""
+
+#: app/Integrations/WooCommerce/NotificationSettings.php:196
+msgid "🌟 Just Arrived!"
+msgstr ""
+
+#: app/Integrations/WooCommerce/NotificationSettings.php:196
+msgid "Notification Title cannot be empty."
+msgstr ""
+
+#: app/Integrations/WooCommerce/NotificationSettings.php:204
+msgid "Notification Message cannot be empty."
+msgstr ""
+
+#: app/Integrations/WooCommerce/NotificationSettings.php:204
+msgid "Exciting news! Check out our latest arrivals and find something new to love."
+msgstr ""
+
+#: app/Integrations/WooCommerce/NotificationSettings.php:212
+msgid "Notification URL cannot be empty."
+msgstr ""
+
+#: app/Integrations/WooCommerce/NotificationSettings.php:256
+msgid "Administrator"
+msgstr ""
+
+#: app/Integrations/WooCommerce/NotificationSettings.php:257
+msgid "Editor"
+msgstr ""
+
+#: app/Integrations/WooCommerce/NotificationSettings.php:258
+msgid "Shop Manager"
+msgstr ""
+
+#: app/Integrations/WooCommerce/NotificationSettings.php:311
+msgid "Order Details"
+msgstr ""
+
+#: app/Integrations/WooCommerce/NotificationSettings.php:312
+msgid "Provide updates whenever order details change. Keep customers informed to reduce confusion and support requests, ensuring a seamless experience."
+msgstr ""
+
+#: app/Integrations/WooCommerce/NotificationSettings.php:315
+msgid "Customer Note"
+msgstr ""
+
+#: app/Integrations/WooCommerce/NotificationSettings.php:316
+msgid "Alert customers whenever a note is added to their order. Improve communication and transparency by sending updates of any changes or instructions using personalized notifications."
+msgstr ""
+
+#: app/Integrations/WooCommerce/NotificationSettings.php:319
+msgid "Review Request"
+msgstr ""
+
+#: app/Integrations/WooCommerce/NotificationSettings.php:320
+msgid "Send a push notification to request a review."
+msgstr ""
+
+#: app/Integrations/WooCommerce/NotificationSettings.php:323
+msgid "Retry Purchase Request"
+msgstr ""
+
+#: app/Integrations/WooCommerce/NotificationSettings.php:324
+msgid "Send a push notification to request a retry purchase with additional offers for failed orders."
+msgstr ""
+
+#: app/Integrations/WooCommerce/NotificationSettings.php:343
+msgid "Back to Templates"
+msgstr ""
+
+#. translators: %s: Notification order type.
+#: app/Integrations/WooCommerce/NotificationSettings.php:348
+msgid "Push Notifications for %s"
+msgstr ""
+
+#: app/Integrations/WooCommerce/NotificationSettings.php:360
+msgid "Configure push notifications for various events in your WooCommerce store."
+msgstr ""
+
+#: app/Integrations/WooCommerce/NotificationSettings.php:371
+msgid "Enabled"
+msgstr ""
+
+#: app/Integrations/WooCommerce/NotificationSettings.php:372
+msgid "Notification Type"
+msgstr ""
+
+#: app/Integrations/WooCommerce/NotificationSettings.php:373
+msgid "Recipients"
+msgstr ""
+
+#: app/Integrations/WooCommerce/NotificationSettings.php:444
+msgid "Manage"
+msgstr ""
+
+#: app/Integrations/WooCommerce/NotificationSettings.php:470
+msgid "Customer Notification Settings"
+msgstr ""
+
+#: app/Integrations/WooCommerce/NotificationSettings.php:474
+msgid "Enable Customer Notification"
+msgstr ""
+
+#. translators: %s: Notification order type.
+#: app/Integrations/WooCommerce/NotificationSettings.php:477
+msgid "Send push notification to the customer when the %s action is completed."
+msgstr ""
+
+#: app/Integrations/WooCommerce/NotificationSettings.php:484
+#: app/Integrations/WooCommerce/NotificationSettings.php:500
+#: app/Integrations/WooCommerce/NotificationSettings.php:561
+#: app/Integrations/WooCommerce/NotificationSettings.php:577
+msgid "Available Placeholders: {{customer_name}}, {{order_id}}, {{order_total}}, {{order_date}}, {{order_billing_name}}, {{order_billing_full_name}}, {{checkout_url}}, {{site_url}}, {{shop_url}}, {{dashboard_url}}, {{order_url}}, {{order_admin_url}}"
+msgstr ""
+
+#: app/Integrations/WooCommerce/NotificationSettings.php:515
+#: app/Integrations/WooCommerce/NotificationSettings.php:592
+msgid "Available Placeholders: {{checkout_url}}, {{site_url}}, {{shop_url}}, {{dashboard_url}}, {{order_url}}, {{order_admin_url}}"
+msgstr ""
+
+#: app/Integrations/WooCommerce/NotificationSettings.php:533
+msgid "Admin Notification Settings"
+msgstr ""
+
+#. translators: %s: Notification order type.
+#: app/Integrations/WooCommerce/NotificationSettings.php:538
+msgid "Enable Admin Notification"
+msgstr ""
+
+#. translators: %s: Notification order type.
+#: app/Integrations/WooCommerce/NotificationSettings.php:541
+msgid "Send push notification to admin(s) when the %s action is completed."
+msgstr ""
+
+#: app/Integrations/WooCommerce/NotificationSettings.php:546
+msgid "Admin Roles"
+msgstr ""
+
+#: app/Integrations/WooCommerce/NotificationSettings.php:548
+msgid "Select the user roles to send the admin push notifications."
+msgstr ""
+
+#: app/Integrations/WooCommerce/NotificationSettings.php:559
+msgid "Admin Notification Title"
+msgstr ""
+
+#: app/Integrations/WooCommerce/NotificationSettings.php:574
+msgid "Admin Notification Message"
+msgstr ""
+
+#: app/Integrations/WooCommerce/NotificationSettings.php:590
+msgid "Admin Notification URL"
+msgstr ""
+
+#. translators: %s: Notification field label.
+#: app/Integrations/WooCommerce/NotificationSettings.php:632
+msgid "Error: %s cannot exceed the length of 50 characters."
+msgstr ""
+
+#. translators: %s: Notification field label.
+#: app/Integrations/WooCommerce/NotificationSettings.php:641
+msgid "Error: %s cannot exceed the length of 135 characters."
+msgstr ""
+
+#. translators: %s: Notification field label.
+#: app/Integrations/WooCommerce/NotificationSettings.php:650
+msgid "Error: %s cannot exceed the length of 1500 characters."
+msgstr ""
+
+#: app/Integrations/WooCommerce/NotificationTemplates.php:38
+msgid "🎉 Order Received!"
+msgstr ""
+
+#: app/Integrations/WooCommerce/NotificationTemplates.php:39
+msgid "Hi {{order_billing_full_name || there}}, we’ve received your order (#{{order_id}}) placed on {{order_date}}. It’s being processed now."
+msgstr ""
+
+#: app/Integrations/WooCommerce/NotificationTemplates.php:40
+#: app/Integrations/WooCommerce/NotificationTemplates.php:58
+#: app/Integrations/WooCommerce/NotificationTemplates.php:76
+#: app/Integrations/WooCommerce/NotificationTemplates.php:94
+#: app/Integrations/WooCommerce/NotificationTemplates.php:112
+#: app/Integrations/WooCommerce/NotificationTemplates.php:148
+#: app/Integrations/WooCommerce/NotificationTemplates.php:166
+#: app/Integrations/WooCommerce/NotificationTemplates.php:184
+msgid "{{order_url}}"
+msgstr ""
+
+#: app/Integrations/WooCommerce/NotificationTemplates.php:41
+msgid "🛒 New Order Placed!"
+msgstr ""
+
+#: app/Integrations/WooCommerce/NotificationTemplates.php:42
+msgid "A new order (#{{order_id}}) was placed on {{order_date}}. Check your dashboard for details."
+msgstr ""
+
+#: app/Integrations/WooCommerce/NotificationTemplates.php:46
+#: app/Integrations/WooCommerce/NotificationTemplates.php:64
+#: app/Integrations/WooCommerce/NotificationTemplates.php:82
+#: app/Integrations/WooCommerce/NotificationTemplates.php:100
+#: app/Integrations/WooCommerce/NotificationTemplates.php:118
+#: app/Integrations/WooCommerce/NotificationTemplates.php:136
+#: app/Integrations/WooCommerce/NotificationTemplates.php:154
+#: app/Integrations/WooCommerce/NotificationTemplates.php:172
+#: app/Integrations/WooCommerce/NotificationTemplates.php:190
+#: app/Integrations/WooCommerce/NotificationTemplates.php:223
+msgid "{{order_admin_url}}"
+msgstr ""
+
+#: app/Integrations/WooCommerce/NotificationTemplates.php:56
+#: app/Integrations/WooCommerce/NotificationTemplates.php:59
+msgid "⚠️ Order Cancelled"
+msgstr ""
+
+#: app/Integrations/WooCommerce/NotificationTemplates.php:57
+msgid "Hi {{order_billing_full_name || there}}, your order (#{{order_id}}) has been cancelled. If you need help, contact us anytime."
+msgstr ""
+
+#: app/Integrations/WooCommerce/NotificationTemplates.php:60
+msgid "Order (#{{order_id}}) placed on {{order_date}} has been cancelled. Check your dashboard for details."
+msgstr ""
+
+#: app/Integrations/WooCommerce/NotificationTemplates.php:74
+#: app/Integrations/WooCommerce/NotificationTemplates.php:215
+msgid "🚨 Payment Failed"
+msgstr ""
+
+#: app/Integrations/WooCommerce/NotificationTemplates.php:75
+#: app/Integrations/WooCommerce/NotificationTemplates.php:216
+msgid "Hi {{order_billing_full_name || there}}, we couldn’t process your payment for order (#{{order_id}}). Please try again."
+msgstr ""
+
+#: app/Integrations/WooCommerce/NotificationTemplates.php:77
+#: app/Integrations/WooCommerce/NotificationTemplates.php:218
+msgid "🚨 Order Failed"
+msgstr ""
+
+#: app/Integrations/WooCommerce/NotificationTemplates.php:78
+msgid "Order (#{{order_id}}) placed on {{order_date}} couldn’t be processed. Review the payment details in your dashboard."
+msgstr ""
+
+#: app/Integrations/WooCommerce/NotificationTemplates.php:92
+#: app/Integrations/WooCommerce/NotificationTemplates.php:95
+msgid "🕒 Order On Hold"
+msgstr ""
+
+#: app/Integrations/WooCommerce/NotificationTemplates.php:93
+msgid "Hi {{order_billing_full_name || there}}, your order (#{{order_id}}) is currently on hold. We’ll notify you when it’s back on track."
+msgstr ""
+
+#: app/Integrations/WooCommerce/NotificationTemplates.php:96
+msgid "Order (#{{order_id}}) placed on {{order_date}} is now on hold. Check your dashboard for more details."
+msgstr ""
+
+#: app/Integrations/WooCommerce/NotificationTemplates.php:110
+#: app/Integrations/WooCommerce/NotificationTemplates.php:113
+msgid "🔄 Order Processing"
+msgstr ""
+
+#: app/Integrations/WooCommerce/NotificationTemplates.php:111
+msgid "Hi {{order_billing_full_name || there}}, your order (#{{order_id}}) is being processed. We’ll keep you updated!"
+msgstr ""
+
+#: app/Integrations/WooCommerce/NotificationTemplates.php:114
+msgid "Order (#{{order_id}}) placed on {{order_date}} is now being processed. Keep track of updates in your dashboard."
+msgstr ""
+
+#: app/Integrations/WooCommerce/NotificationTemplates.php:128
+#: app/Integrations/WooCommerce/NotificationTemplates.php:131
+msgid "✅ Order Completed"
+msgstr ""
+
+#: app/Integrations/WooCommerce/NotificationTemplates.php:129
+msgid "Hi {{order_billing_full_name || there}}, your order (#{{order_id}}) is complete! Thanks for shopping with us."
+msgstr ""
+
+#: app/Integrations/WooCommerce/NotificationTemplates.php:130
+#: app/Integrations/WooCommerce/NotificationTemplates.php:217
+msgid "{{shop_url}}"
+msgstr ""
+
+#: app/Integrations/WooCommerce/NotificationTemplates.php:132
+msgid "Order (#{{order_id}}) placed on {{order_date}} has been marked as completed. Review the details in your dashboard."
+msgstr ""
+
+#: app/Integrations/WooCommerce/NotificationTemplates.php:146
+#: app/Integrations/WooCommerce/NotificationTemplates.php:149
+msgid "💸 Refund Processed"
+msgstr ""
+
+#: app/Integrations/WooCommerce/NotificationTemplates.php:147
+msgid "Hi {{order_billing_full_name || there}}, your refund for order (#{{order_id}}) has been processed. Let us know if you need help!"
+msgstr ""
+
+#: app/Integrations/WooCommerce/NotificationTemplates.php:150
+msgid "Refund for order (#{{order_id}}) has been processed. Check your dashboard for details."
+msgstr ""
+
+#: app/Integrations/WooCommerce/NotificationTemplates.php:164
+#: app/Integrations/WooCommerce/NotificationTemplates.php:167
+msgid "📦 Order Update"
+msgstr ""
+
+#: app/Integrations/WooCommerce/NotificationTemplates.php:165
+msgid "Hi {{order_billing_full_name || there}}, here are the latest details for your order (#{{order_id}}). Check your dashboard for more info"
+msgstr ""
+
+#: app/Integrations/WooCommerce/NotificationTemplates.php:168
+msgid "Order (#{{order_id}}) has been updated. Check your dashboard for the latest details."
+msgstr ""
+
+#: app/Integrations/WooCommerce/NotificationTemplates.php:182
+msgid "📝 A Note for You"
+msgstr ""
+
+#: app/Integrations/WooCommerce/NotificationTemplates.php:183
+msgid "Hi {{order_billing_full_name || there}}, there’s a new note about your order (#{{order_id}}): \"{{customer_note || Check your dashboard for details.}}\""
+msgstr ""
+
+#: app/Integrations/WooCommerce/NotificationTemplates.php:185
+msgid "📝 New Customer Note"
+msgstr ""
+
+#: app/Integrations/WooCommerce/NotificationTemplates.php:186
+msgid "A note was added to order (#{{order_id}}). Check it in your dashboard."
+msgstr ""
+
+#: app/Integrations/WooCommerce/NotificationTemplates.php:200
+msgid "⭐ Share Your Thoughts!"
+msgstr ""
+
+#: app/Integrations/WooCommerce/NotificationTemplates.php:201
+#: app/Integrations/WooCommerce/NotificationTemplates.php:204
+msgid "Your order (#{{order_id}}) delivered on {{delivery_date}} is ready for a review! Your feedback helps us improve and serve you better. Leave a review and let us know your thoughts."
+msgstr ""
+
+#: app/Integrations/WooCommerce/NotificationTemplates.php:202
+#: app/Integrations/WooCommerce/NotificationTemplates.php:205
+msgid "{{review_url}}"
+msgstr ""
+
+#: app/Integrations/WooCommerce/NotificationTemplates.php:203
+msgid "⭐ Review Request"
+msgstr ""
+
+#: app/Integrations/WooCommerce/NotificationTemplates.php:219
+msgid "Order (#{{order_id}}) placed on {{order_date}} couldn’t be processed. We’re trying to recover your order. If the campaign is enabled, an automatic retry request will be sent to the customer."
+msgstr ""
+
+#: app/Integrations/WooCommerce/Woo.php:52
+msgid "Publish"
+msgstr ""
+
+#. translators: %s: Dynamic Placeholder for Publish or Update.
+#: app/Integrations/WooCommerce/Woo.php:62
+msgid "Send Push Notification on %s"
 msgstr ""
 
 #: app/ReviewNotice.php:197
@@ -5393,7 +6514,7 @@ msgstr ""
 msgid "Triggers"
 msgstr ""
 
-#: app/Utils/AdminNavMenuItems.php:50
+#: app/Utils/AdminNavMenuItems.php:55
 msgid "Design"
 msgstr ""
 
@@ -5628,10 +6749,33 @@ msgstr ""
 msgid "Fix Now"
 msgstr ""
 
+#. translators: %s: Post type singular name
+#: views/site-not-connected-metabox.php:14
+msgid "Share this %s with your subscribers"
+msgstr ""
+
+#. translators: %s: Post type singular name
+#: views/site-not-connected-metabox.php:23
+msgid "Enable auto push settings to send notifications to your subscribers when you publish a new %s."
+msgstr ""
+
+#: views/site-not-connected-metabox.php:33
+#: views/site-not-connected.php:15
+msgid "Connect your site now!"
+msgstr ""
+
 #: views/site-not-connected.php:3
 msgid "You haven’t finished setting up your site."
 msgstr ""
 
-#: views/site-not-connected.php:15
-msgid "Connect your site now!"
+#: views/woocommerce-not-connected.php:3
+msgid "PushEngage: You haven’t finished setting up your WooCommerce Integration."
+msgstr ""
+
+#: views/woocommerce-not-connected.php:7
+msgid "Integrate WooCommerce with PushEngage to recover abandoned carts, send price drop alerts, and more!"
+msgstr ""
+
+#: views/woocommerce-not-connected.php:15
+msgid "Connect your WooCommerce integration now!"
 msgstr ""
