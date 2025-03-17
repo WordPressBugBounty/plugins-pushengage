@@ -4,7 +4,7 @@ Tags: push notifications, web push notifications, cart abandonment notifications
 Requires at least: 4.5.0
 Tested up to: 6.7
 Requires PHP: 5.6
-Stable tag: 4.1.0
+Stable tag: 4.1.1
 License: GNU General Public License v2.0 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -287,6 +287,10 @@ Syed Balkhi
 == Changelog ==
 
 **Most Recent Changes:**
+
+= 4.1.1 =
+* Added Enhancements for the onboarding wizard to save onboarding progress.
+* Updated WooCommerce order updates to make it compatible with legacy order table.
 
 = 4.1.0 =
 * Added new onboarding wizard for new sites that enhances PushEngage setup experience.

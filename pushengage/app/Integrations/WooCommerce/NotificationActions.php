@@ -116,12 +116,20 @@ class NotificationActions {
 	 *
 	 * @since 4.1.0
 	 * @param string $column Column.
-	 * @param object $order Order Object.
+	 * @param object|int $order Order Object or Order ID.
 	 * @return void
 	 */
 	public static function populate_pushengage_column( $column, $order ) {
 		if ( 'pushengage' !== $column ) {
 			return;
+		}
+
+		if ( ! $order ) {
+			return;
+		}
+
+		if ( is_numeric( $order ) ) {
+			$order = wc_get_order( $order );
 		}
 
 		$customer_id  = $order->get_customer_id();

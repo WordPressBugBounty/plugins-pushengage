@@ -2,6 +2,11 @@
 
 All notable changes to the PushEngage plugin will be documented in this file.
 
+### 4.1.1
+
+* Added Enhancements for the onboarding wizard to save onboarding progress.
+* Updated WooCommerce order updates to make it compatible with legacy order table.
+
 ### 4.1.0
 
 * Added new onboarding wizard for new sites that enhances PushEngage setup experience.

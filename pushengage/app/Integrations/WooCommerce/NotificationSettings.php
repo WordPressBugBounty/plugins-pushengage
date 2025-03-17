@@ -101,6 +101,8 @@ class NotificationSettings {
 		$allowed_screens = array(
 			'woocommerce_page_wc-settings',
 			'woocommerce_page_wc-orders',
+			// Adding support for Legacy shop order page.
+			'edit-shop_order',
 		);
 
 		if ( in_array( $screen->id, $allowed_screens, true ) ) {
