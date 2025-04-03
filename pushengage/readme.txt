@@ -4,7 +4,7 @@ Tags: push notifications, web push notifications, cart abandonment notifications
 Requires at least: 4.5.0
 Tested up to: 6.7
 Requires PHP: 5.6
-Stable tag: 4.1.1
+Stable tag: 4.1.1.1
 License: GNU General Public License v2.0 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -29,11 +29,43 @@ Our plugin is packed with features to help you:
 * Launch push notification campaigns that drive conversions.
 * Track performance with advanced analytics and revenue insights.
 
-With PushEngage, setting up <strong>WooCommerce push notifications</strong> is effortless, empowering you to automatically send cart and browse abandonment notifications, price drop alerts, and more—all designed to boost sales.
+PushEngage integrates directly with WordPress and helps you:
+* Create opt-ins
+* Launch web push campaigns
+* Grow your subscriber base
+* Track your revenue goals
+* Manage your audience using advanced segmentation and audience targeting rules
 
-PushEngage gives you a simple, easy-to-use dashboard that helps you create opt-ins, launch web push campaigns, grow your subscriber base, track your revenue goals, and manage your audience using advanced segmentation and audience targeting rules.
+Straight from your WordPress dashboard. You can even create push notifications from your Gutenberg post editor that automatically fetch and map: 
+* Post Title → Notification Title
+* Meta Description → Notification Text
+* Featured Image → Notification Image
 
-You even get advanced analytics to track your performance metrics with or without using third-party tools such as Google Analytics.
+[youtube https://www.youtube.com/watch?v=xnPC4f3e0Xo]
+
+You can also select a custom audience to send your notification right from the WordPress editor.
+
+<strong>PushEngage for WooCommerce Push Notifications</strong><br />
+With PushEngage, setting up <strong>WooCommerce push notifications</strong> is effortless. You can send cart abandonment push notifications, browse abandonment push notifications, price drop alerts, and inventory alerts as triggered campaigns from <strong>pre-built campaign templates.</strong>
+
+Not just that, but our WooCommerce integration makes it super easy to launch eCommerce campaigns. All you have to do is switch on the toggle button!
+
+PushEngage is a <strong>multichannel notification system</strong> for WordPress and WooCommerce. Engage customers, streamline operations, and automate critical updates with real-time <strong>web push notifications, WooCommerce push notifications, and app push notifications.</strong>
+
+<strong>PushEngage for WooCommerce Store Customers</strong><br />
+* <strong>Instant Order Updates</strong>: Keep customers informed with pre-built notification templates that you can simply turn on with a toggle button.
+* <strong>Multiple Campaign Types</strong>: Send automated WooCommerce push notifications for order confirmations, shipping alerts, product updates, and delivery updates with a single click.
+* <strong>Cart Abandonment Recovery</strong>: Bring back lost shoppers with cart abandonment push notifications, increasing conversions effortlessly.
+* <strong>Personalized Promotions & Re-Engagement</strong>: Send targeted push campaigns to drive repeat visits and sales. You can even send individual notifications for review requests, payment retries, and order updates using pre-built templates.
+* <strong>Seamless Multichannel Messaging</strong>: Customers receive updates via <strong>web push, app push, and PWA push notifications.</strong>
+
+<strong>PushEngage for WooCommerce Store Admins & Teams</strong><br />
+* <strong>Internal Team Alerts</strong>: Automate notifications for new orders, refund requests, and order fulfillment updates.
+* <strong>Faster Decision-Making</strong>: Get real-time alerts for critical order updates. Never lose another sale due to missed internal communications.
+* <strong>Pre-Built WooCommerce Templates</strong>: Save time with ready-made order notifications, and team alerts.
+* <strong>Seamless Multichannel Coordination</strong>: Keep your team in sync with instant internal notifications across multiple devices.
+
+You even get advanced analytics and goal tracking to track your performance metrics with or without using third-party tools such as Google Analytics.
 
 Along with the absolute best web push notification software in the market, you also get a top-tier Customer Success team to help you get more success from your push notifications more often.
 
@@ -65,8 +97,6 @@ The best part is the PushEngage plugin connects directly with the web app and in
 Just in case you’re not a developer, the service worker is a JSON file that allows you to collect push notification subscribers. With other push notification software, you need to manually download and place the file into your server. But our plugin automatically does it for you.
 
 [youtube https://www.youtube.com/watch?v=wZiVN7AX5ho]
-
-Not just that, but our WooCommerce integration makes it super easy to launch eCommerce campaigns. WooCommerce stores can quickly launch cart abandonment push notifications, browse abandonment push notifications, price drop alerts, and inventory alerts as triggered campaigns.
 
 All the triggers are predefined and you only have to create a campaign and enable it from a drop-down in the PushEngage plugin. What’s even cooler is that PushEngage also comes with automatic revenue tracking so that you can see how your campaigns are contributing to your business.
 
@@ -215,8 +245,6 @@ PushEngage just works no matter what device or browser your visitors are using i
 
 This means that you can also send mobile push notifications such as Android web push notifications as well as iOS and iPadOS push notifications.
 
-It also works out of the box with all major website builders and eCommerce platforms and solutions. Check out our installation guides:
-
 <a href="https://www.pushengage.com/pricing/?utm_source=orgplugin&utm_medium=link&utm_campaign=wpreadme" rel="friend">Get started with PushEngage today!</a>
 
 == Frequently Asked Questions ==
@@ -287,6 +315,11 @@ Syed Balkhi
 == Changelog ==
 
 **Most Recent Changes:**
+
+= 4.1.1.1 =
+* Added Onboarding wizard progress tracker in Dashboard.
+* Updated the Dashboard Page to highlight WooCommerce Integration features.
+* Minor bug fixes and improvements.
 
 = 4.1.1 =
 * Added Enhancements for the onboarding wizard to save onboarding progress.

@@ -1,6 +1,7 @@
 <?php
 namespace Pushengage\Integrations\WooCommerce;
-
+use Pushengage\Utils\Constants;
+use Pushengage\Utils\StringUtils;
 // Exit if accessed directly.
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
@@ -243,9 +244,9 @@ class NotificationTemplates {
 	public static function format_notification_data( $notification_data ) {
 		// Define the required keys and their maximum lengths.
 		$required_keys = array(
-			'notification_title'   => 85,
-			'notification_message' => 135,
-			'notification_url'     => 1600,
+			'notification_title'   => Constants::NOTIFICATION_TITLE_MAX_LEN,
+			'notification_message' => Constants::NOTIFICATION_MESSAGE_MAX_LEN,
+			'notification_url'     => Constants::NOTIFICATION_URL_MAX_LEN,
 		);
 
 		// Ensure the notification data has the required keys.
@@ -256,7 +257,7 @@ class NotificationTemplates {
 
 			// Trim the data to the maximum length.
 			if ( mb_strlen( $notification_data[ $key ] ) > $max_length ) {
-				$notification_data[ $key ] = substr( $notification_data[ $key ], 0, $max_length );
+				$notification_data[ $key ] = StringUtils::substr( $notification_data[ $key ], 0, $max_length );
 			}
 		}
 
@@ -322,7 +323,12 @@ class NotificationTemplates {
 		 * Adding Tags.
 		 * Tags will be saved in the notifications. We can use this to filter the notifications and create analytics.
 		 */
-		$notification_data['tags'] = self::$templates[ $event_type ]['tags'];
+		// If recipient is admin, add additional tag "Admin" for tracking purposes.
+		if ( 'admin' === $recipient ) {
+			$notification_data['tags'] = array_merge( self::$templates[ $event_type ]['tags'], array( 'Admin' ) );
+		} else {
+			$notification_data['tags'] = self::$templates[ $event_type ]['tags'];
+		}
 
 		return $notification_data;
 

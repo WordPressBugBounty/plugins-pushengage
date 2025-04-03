@@ -2,6 +2,7 @@
 namespace Pushengage\Integrations\WooCommerce;
 
 use Pushengage\Integrations\WooCommerce\NotificationTemplates;
+use Pushengage\Utils\Helpers;
 
 // Exit if accessed directly.
 if ( ! defined( 'ABSPATH' ) ) {
@@ -103,6 +104,13 @@ class NotificationHandler {
 			return;
 		}
 
+		// Flatten the array to make sure it it does not contains nested array.
+		$subscriber_hashes = Helpers::flatten_array( $subscriber_hashes );
+		// make array unique.
+		$subscriber_hashes = array_unique( $subscriber_hashes );
+		// Ensure array values are reindexed with numeric keys to ensure that it  is encoded as array and not as object.
+		$subscriber_hashes = array_values( $subscriber_hashes );
+
 		$notification_data['notification_criteria'] = array(
 			'filter' => array(
 				'value' => array(
@@ -110,7 +118,7 @@ class NotificationHandler {
 						array(
 							'field' => 'device_token_hash',
 							'op'    => 'in',
-							'value' => array_unique( $subscriber_hashes ),
+							'value' => $subscriber_hashes,
 						),
 					),
 				),
@@ -192,6 +200,7 @@ class NotificationHandler {
 			if ( defined( 'DOING_AJAX' ) && DOING_AJAX ) {
 				wp_send_json_error(
 					array(
+						// translators: %s: Order Action Type.
 						'message' => sprintf( __( 'Notification for order status ( %s ) is disabled for both admin and customers', 'pushengage' ), $action ),
 					)
 				);
@@ -226,6 +235,7 @@ class NotificationHandler {
 				// Add private order note for notification sent.
 				$order->add_order_note(
 					sprintf(
+						// translators: %s: Order Action Type.
 						__( 'Push Notification sent to customer for order status - %s.', 'pushengage' ),
 						$action
 					)
@@ -265,6 +275,7 @@ class NotificationHandler {
 					// Add private order note for notification sent.
 					$order->add_order_note(
 						sprintf(
+							// translators: %s: Order Action Type.
 							__( 'Push Notification sent to admin for order status - %s.', 'pushengage' ),
 							$action
 						)
@@ -338,7 +349,7 @@ class NotificationHandler {
 	 * @return void
 	 */
 	public static function send_order_processing_push_notification( $order_id ) {
-		self::send_order_push_notification( $order_id, 'order_processing' );
+		self::send_order_push_notification( $order_id, 'processing_order' );
 	}
 
 	/**

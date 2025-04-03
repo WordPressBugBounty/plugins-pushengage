@@ -11,8 +11,8 @@ $current_post_type_name = get_post_type_object( get_post_type() )->labels->singu
 		<?php
 			echo sprintf(
 				/* translators: %s: Post type singular name */
-				__( 'Share this %s with your subscribers', 'pushengage' ),
-				$current_post_type_name
+				esc_html__( 'Share this %s with your subscribers', 'pushengage' ),
+				esc_html( $current_post_type_name )
 			);
 			?>
 	</p>
@@ -20,11 +20,11 @@ $current_post_type_name = get_post_type_object( get_post_type() )->labels->singu
 		<?php
 			echo sprintf(
 				/* translators: %s: Post type singular name */
-				__(
+				esc_html__(
 					'Enable auto push settings to send notifications to your subscribers when you publish a new %s.',
 					'pushengage'
 				),
-				$current_post_type_name
+				esc_html( $current_post_type_name )
 			);
 			?>
 	</p>

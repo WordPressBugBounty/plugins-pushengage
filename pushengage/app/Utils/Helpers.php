@@ -282,4 +282,23 @@ class Helpers {
 
 	}
 
+	/**
+	 * Function to recursively flatten an array
+	 *
+	 * @since 4.1.1.1
+	 *
+	 * @param array $array The array to flatten
+	 * @return array The flattened array
+	 */
+	public static function flatten_array( $array ) {
+		$result = array();
+		foreach ( $array as $element ) {
+			if ( is_array( $element ) ) {
+				$result = array_merge( $result, self::flatten_array( $element ) );
+			} else {
+				$result[] = $element;
+			}
+		}
+		return $result;
+	}
 }

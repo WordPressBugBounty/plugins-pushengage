@@ -2,6 +2,12 @@
 
 All notable changes to the PushEngage plugin will be documented in this file.
 
+### 4.1.1.1
+
+* Added Onboarding wizard progress tracker in Dashboard.
+* Updated the Dashboard Page to highlight WooCommerce Integration features.
+* Minor bug fixes and improvements.
+
 ### 4.1.1
 
 * Added Enhancements for the onboarding wizard to save onboarding progress.

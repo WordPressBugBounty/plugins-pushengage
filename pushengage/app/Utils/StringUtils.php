@@ -22,12 +22,9 @@ class StringUtils {
 	 * @param  string $string   The string.
 	 * @param  int    $start    The start index.
 	 * @param  int    $length   The length.
-	 * @param  string $encoding The encoding.
 	 * @return string           The substring.
 	 */
-	public static function substr( $string, $start, $length = null, $encoding = 'UTF-8' ) {
-		return function_exists( 'mb_substr' )
-			? mb_substr( $string, $start, $length, $encoding )
-			: substr( $string, $start, $length );
+	public static function substr( $string, $start, $length = null ) {
+		return substr( $string, $start, $length );
 	}
 }

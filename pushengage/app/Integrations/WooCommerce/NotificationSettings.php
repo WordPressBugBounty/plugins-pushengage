@@ -184,7 +184,7 @@ class NotificationSettings {
 														</label>
 														</th>
 														<td class="forminp forminp-text">
-															<input type="text" name="notification_title" id="pe-woo-product-importer-title" class="regular-text" value="<?php _e( '🌟 Just Arrived!', 'pushengage' ); ?>" required data-error-message="<?php _e( 'Notification Title cannot be empty.', 'pushengage' ); ?>" maxlength="85">
+															<input type="text" name="notification_title" id="pe-woo-product-importer-title" class="regular-text" value="<?php esc_attr_e( '🌟 Just Arrived!', 'pushengage' ); ?>" required data-error-message="<?php esc_attr_e( 'Notification Title cannot be empty.', 'pushengage' ); ?>" maxlength="85">
 														</td>
 													</tr>
 													<tr>
@@ -192,7 +192,7 @@ class NotificationSettings {
 															<label for="pe-woo-product-importer-message"><?php esc_html_e( 'Notification Message', 'pushengage' ); ?></label>
 														</th>
 														<td class="forminp forminp-text">
-															<textarea name="notification_message" id="pe-woo-product-importer-message" class="regular-text" data-error-message="<?php _e( 'Notification Message cannot be empty.', 'pushengage' ); ?>" maxlength="135" required><?php _e( 'Exciting news! Check out our latest arrivals and find something new to love.', 'pushengage' ); ?></textarea>
+															<textarea name="notification_message" id="pe-woo-product-importer-message" class="regular-text" data-error-message="<?php esc_attr_e( 'Notification Message cannot be empty.', 'pushengage' ); ?>" maxlength="135" required><?php esc_attr_e( 'Exciting news! Check out our latest arrivals and find something new to love.', 'pushengage' ); ?></textarea>
 														</td>
 													</tr>
 													<tr>
@@ -200,7 +200,7 @@ class NotificationSettings {
 															<label for="pe-woo-product-importer-url"><?php esc_html_e( 'Notification URL', 'pushengage' ); ?></label>
 														</th>
 														<td class="forminp forminp-text">
-															<input type="url" name="notification_url" id="pe-woo-product-importer-url" maxlength="1600" class="regular-text" data-error-message="<?php _e( 'Notification URL cannot be empty.', 'pushengage' ); ?>" value="<?php echo get_permalink( wc_get_page_id( 'shop' ) ); ?>" required>
+															<input type="url" name="notification_url" id="pe-woo-product-importer-url" maxlength="1600" class="regular-text" data-error-message="<?php esc_attr_e( 'Notification URL cannot be empty.', 'pushengage' ); ?>" value="<?php echo esc_url( get_permalink( wc_get_page_id( 'shop' ) ) ); ?>" required>
 														</td>
 													</tr>
 												</tbody>
@@ -336,10 +336,10 @@ class NotificationSettings {
 					</a>
 				<?php
 					// translators: %s: Notification order type.
-					echo sprintf( esc_html__( 'Push Notifications for %s', 'pushengage' ), $notifications[ $current_section ]['title'] );
+					echo sprintf( esc_html__( 'Push Notifications for %s', 'pushengage' ), esc_html( $notifications[ $current_section ]['title'] ) );
 				?>
 				</h2>
-				<?php echo wpautop( wp_kses_post( $notifications[ $current_section ]['description'] ) ); ?>
+				<?php echo wp_kses_post( wpautop( $notifications[ $current_section ]['description'] ) ); ?>
 				<table class="form-table">
 					<?php
 						woocommerce_admin_fields( self::get_push_notification_section_settings( $current_section ) );
@@ -402,7 +402,7 @@ class NotificationSettings {
 										break;
 									case 'notification':
 											echo '<a style="font-size:14px;font-weight:700;margin-right:8px;" href="' . esc_url( admin_url( 'admin.php?page=wc-settings&tab=pe_notifications&section=' . $notification_id ) ) . '">' . esc_html( $notification['title'] ) . '</a>';
-											echo wc_help_tip( $notification['description'] );
+											echo wc_help_tip( wp_kses_post( $notification['description'] ) );
 										break;
 									case 'recipients':
 										$notification_settings = get_option( 'pe_notification_' . $notification_id );
@@ -432,7 +432,7 @@ class NotificationSettings {
 										echo esc_html( $notification['description'] );
 										break;
 									case 'manage':
-										echo '<a class="button" href="' . esc_url( admin_url( 'admin.php?page=wc-settings&tab=pe_notifications&section=' . $notification_id ) ) . '">' . __( 'Manage', 'pushengage' ) . '</a>';
+										echo '<a class="button" href="' . esc_url( admin_url( 'admin.php?page=wc-settings&tab=pe_notifications&section=' . $notification_id ) ) . '">' . esc_html__( 'Manage', 'pushengage' ) . '</a>';
 										break;
 								}
 									echo '</td>';

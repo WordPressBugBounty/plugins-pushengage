@@ -59,7 +59,7 @@ class Woo {
 		echo '<div class="misc-pub-section">';
 		echo '<label><input type="checkbox" name="pe_wp_send_post_checkbox" value="1">' .
 			// translators: %s: Dynamic Placeholder for Publish or Update.
-			sprintf( esc_html__( 'Send Push Notification on %s', 'pushengage' ), $publish_text ) .
+			sprintf( esc_html__( 'Send Push Notification on %s', 'pushengage' ), esc_html( $publish_text ) ) .
 		'</label>';
 		echo '</div>';
 	}

@@ -147,14 +147,14 @@ class NotificationActions {
 
 		if ( ! $is_site_connected ) {
 			echo '<a href="' . esc_url( 'admin.php?page=pushengage#/onboarding' ) . '"><span hover-tooltip="' . esc_html__( 'Connect your site now to use the order push notification features.', 'pushengage' ) . '" tooltip-position="top" class="pe-order-actions">';
-			echo $greyed_icons;
+			echo wp_kses_post( $greyed_icons );
 			echo '</span></a>';
 			return;
 		}
 
 		if ( ! $customer_id ) {
 			echo '<span hover-tooltip="' . esc_html__( 'Cannot send push notifications to Guest Users', 'pushengage' ) . '" tooltip-position="top" class="pe-order-actions">';
-			echo $greyed_icons;
+			echo wp_kses_post( $greyed_icons );
 			echo '</span>';
 			return;
 		}
@@ -163,7 +163,7 @@ class NotificationActions {
 
 		if ( ! $pushengage_subscriber_id ) {
 			echo '<span hover-tooltip="' . esc_html__( 'Customer is not subscribed for push notifications', 'pushengage' ) . '" tooltip-position="top" class="pe-order-actions">';
-			echo $greyed_icons;
+			echo wp_kses_post( $greyed_icons );
 			echo '</span>';
 			return;
 		}
@@ -258,7 +258,7 @@ class NotificationActions {
 			wp_send_json_error( array( 'message' => __( 'Data is missing from the request.', 'pushengage' ) ) );
 		}
 
-		$notification_data = NotificationTemplates::format_notification_data( $_POST['data'] );
+		$notification_data = NotificationTemplates::format_notification_data( wp_unslash( $_POST['data'] ) );
 
 		$send_notification = pushengage()->send_notification( $notification_data );
 
