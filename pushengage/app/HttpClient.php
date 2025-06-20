@@ -3,6 +3,7 @@ namespace Pushengage;
 
 use Pushengage\Utils\Helpers;
 use Pushengage\Utils\Options;
+use Pushengage\Logger;
 
 // Exit if accessed directly.
 if ( ! defined( 'ABSPATH' ) ) {
@@ -50,7 +51,8 @@ class HttpClient {
 			$body = wp_remote_retrieve_body( $res );
 			return Helpers::json_decode( $body );
 		} catch ( \Exception $e ) {
-			error_log( 'PushEngage: Failed to send request: ' . $e->getMessage() );
+			$logger = Logger::get_instance();
+			$logger->error( 'Failed to send request to endpoint ' . $request_url, $e );
 			return array( 'error' => array( 'message' => $e->getMessage() ) );
 		}
 

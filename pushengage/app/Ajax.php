@@ -11,6 +11,7 @@ use Pushengage\Utils\PublicPostTypes;
 use Pushengage\Utils\RecommendedPlugins;
 use Pushengage\Includes\Api\HttpAPI;
 
+
 // Exit if accessed directly.
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
@@ -67,6 +68,15 @@ class Ajax {
 		'get_woo_integration_settings',
 		'update_woo_integration_settings',
 		'delete_woo_integration_settings',
+
+		'get_whatsapp_settings',
+		'update_whatsapp_settings',
+
+		'get_whatsapp_automation_campaigns',
+		'update_whatsapp_automation_campaign',
+
+		'get_whatsapp_click_to_chat_settings',
+		'update_whatsapp_click_to_chat_settings',
 	);
 
 	/**
@@ -1032,5 +1042,400 @@ class Ajax {
 				'cart_enabled'   => $site_settings['woo_integration']['cart_abandonment']['enable'],
 			)
 		);
+	}
+
+	/**
+	 * Get WhatsApp Settings
+	 *
+	 * @since 4.0.9
+	 *
+	 * @return void
+	 */
+	public function get_whatsapp_settings() {
+		NonceChecker::check();
+		$this->check_capability( 'manage_options' );
+
+		$settings = Options::get_whatsapp_settings();
+
+		// Convert empty arrays to empty objects for JSON response
+		if ( empty( $settings ) || ( is_array( $settings ) && count( $settings ) === 0 ) ) {
+			$settings = new \stdClass();
+		}
+
+		wp_send_json_success( $settings, 200 );
+	}
+
+	/**
+	 * Update WhatsApp Settings
+	 *
+	 * @since 4.0.9
+	 *
+	 * @return void
+	 */
+	public function update_whatsapp_settings() {
+		NonceChecker::check();
+		$this->check_capability( 'manage_options' );
+
+		$data = array();
+
+		// Ensure we sanitize all inputs properly
+		$data['whatsappBusinessId'] = isset( $_POST['whatsappBusinessId'] ) ?
+			sanitize_text_field( $_POST['whatsappBusinessId'] ) : '';
+
+		$data['whatsappPhoneNumber'] = isset( $_POST['whatsappPhoneNumber'] ) ?
+			sanitize_text_field( $_POST['whatsappPhoneNumber'] ) : '';
+
+		$data['phoneNumberId'] = isset( $_POST['phoneNumberId'] ) ?
+			sanitize_text_field( $_POST['phoneNumberId'] ) : '';
+
+		$data['accessToken'] = isset( $_POST['accessToken'] ) ?
+			sanitize_text_field( $_POST['accessToken'] ) : '';
+
+		// Validate phone number (international format without plus sign)
+		if ( ! empty( $data['whatsappPhoneNumber'] ) ) {
+			// Phone number should contain only digits
+			if ( ! preg_match( '/^[0-9]+$/', $data['whatsappPhoneNumber'] ) ) {
+				wp_send_json_error(
+					array(
+						'message' => __( 'Please enter the WhatsApp phone number in international format with country code without + sign (e.g. 919876543210)', 'pushengage' ),
+						'code'    => 'invalid_phone_format',
+					),
+					400
+				);
+			}
+
+			// Phone number should be at least 10 digits and max 15 digits (international standard)
+			$length = strlen( $data['whatsappPhoneNumber'] );
+			if ( $length < 10 || $length > 15 ) {
+				wp_send_json_error(
+					array(
+						'message' => __( 'WhatsApp phone number should be between 10 and 15 digits including country code.', 'pushengage' ),
+						'code'    => 'invalid_phone_length',
+					),
+					400
+				);
+			}
+		}
+
+		// Validate required fields
+		$required_fields = array(
+			'whatsappBusinessId' => __( 'WhatsApp Business ID', 'pushengage' ),
+			'phoneNumberId'      => __( 'Phone Number ID', 'pushengage' ),
+			'accessToken'        => __( 'Access Token', 'pushengage' ),
+			'whatsappPhoneNumber' => __( 'WhatsApp Phone Number', 'pushengage' ),
+		);
+
+		foreach ( $required_fields as $field => $label ) {
+			if ( empty( $data[ $field ] ) ) {
+				wp_send_json_error(
+					array(
+						'message' => sprintf( __( '%s is required.', 'pushengage' ), $label ),
+						'code'    => 'missing_required_field',
+					),
+					400
+				);
+			}
+		}
+
+		// Save settings
+		Options::update_whatsapp_settings( $data );
+		wp_send_json_success( $data, 200 );
+
+	}
+
+	/**
+	 * Get WhatsApp Automation Campaigns
+	 *
+	 * @since 4.0.9
+	 *
+	 * @return void
+	 */
+	public function get_whatsapp_automation_campaigns() {
+		NonceChecker::check();
+		$this->check_capability( 'manage_options' );
+
+		// Get campaigns from Options class
+		$campaigns = Options::get_whatsapp_automation_campaigns();
+
+		wp_send_json_success( array_values( $campaigns ), 200 );
+	}
+
+	/**
+	 * Update WhatsApp Automation Campaign
+	 *
+	 * @since 4.0.9
+	 *
+	 * @return void
+	 */
+	public function update_whatsapp_automation_campaign() {
+		NonceChecker::check();
+		$this->check_capability( 'manage_options' );
+
+		// Validate required parameters
+		if ( empty( $_POST['campaign'] ) ) {
+			wp_send_json_error(
+				array(
+					'message' => __( 'Campaign data is required.', 'pushengage' ),
+					'code'    => 'missing_campaign_data',
+				),
+				400
+			);
+		}
+
+		// Get the campaign data from the request
+		$campaign_data = json_decode( stripslashes_deep( $_POST['campaign'] ), true );
+
+		// Validate campaign ID
+		if ( empty( $campaign_data['id'] ) ) {
+			wp_send_json_error(
+				array(
+					'message' => __( 'Campaign ID is required.', 'pushengage' ),
+					'code'    => 'missing_campaign_id',
+				),
+				400
+			);
+		}
+
+		// Sanitize and validate the campaign data
+		$sanitized_campaign = $this->sanitize_whatsapp_campaign( $campaign_data );
+
+		// Update the campaign using Options class
+		Options::update_whatsapp_automation_campaign( $sanitized_campaign );
+		wp_send_json_success( $sanitized_campaign, 200 );
+	}
+
+	/**
+	 * Sanitize and validate the campaign data
+	 *
+	 * @since 4.0.9
+	 *
+	 * @param array $campaign_data The campaign data to sanitize and validate
+	 *
+	 * @return array The sanitized campaign data
+	 */
+	private function sanitize_whatsapp_campaign( $campaign_data ) {
+		$sanitized_campaign = array(
+			'id'      => isset( $campaign_data['id'] ) ? sanitize_text_field( $campaign_data['id'] ) : '',
+			'enabled' => isset( $campaign_data['enabled'] ) ? (bool) $campaign_data['enabled'] : false,
+		);
+
+		// Process adminConfig if present
+		if ( isset( $campaign_data['adminConfig'] ) ) {
+			$sanitized_campaign['adminConfig'] = array(
+				'enabled'          => isset( $campaign_data['adminConfig']['enabled'] ) ? (bool) $campaign_data['adminConfig']['enabled'] : false,
+				'recipients'       => isset( $campaign_data['adminConfig']['recipients'] ) ? sanitize_text_field( $campaign_data['adminConfig']['recipients'] ) : '',
+				'templateName'     => isset( $campaign_data['adminConfig']['templateName'] ) ? sanitize_text_field( $campaign_data['adminConfig']['templateName'] ) : '',
+				'templateLanguage' => isset( $campaign_data['adminConfig']['templateLanguage'] ) ? sanitize_text_field( $campaign_data['adminConfig']['templateLanguage'] ) : '',
+				'headerVariables'  => array(),
+				'bodyVariables'    => array(),
+			);
+
+			// Process header and body variables for admin config
+			if ( ! empty( $campaign_data['adminConfig']['headerVariables'] ) && is_array( $campaign_data['adminConfig']['headerVariables'] ) ) {
+				foreach ( $campaign_data['adminConfig']['headerVariables'] as $variable ) {
+					if ( isset( $variable['key'] ) && isset( $variable['value'] ) ) {
+						$sanitized_campaign['adminConfig']['headerVariables'][] = array(
+							'key'   => sanitize_text_field( $variable['key'] ),
+							'value' => sanitize_text_field( $variable['value'] ),
+						);
+					}
+				}
+			}
+
+			if ( ! empty( $campaign_data['adminConfig']['bodyVariables'] ) && is_array( $campaign_data['adminConfig']['bodyVariables'] ) ) {
+				foreach ( $campaign_data['adminConfig']['bodyVariables'] as $variable ) {
+					if ( isset( $variable['key'] ) && isset( $variable['value'] ) ) {
+						$sanitized_campaign['adminConfig']['bodyVariables'][] = array(
+							'key'   => sanitize_text_field( $variable['key'] ),
+							'value' => sanitize_text_field( $variable['value'] ),
+						);
+					}
+				}
+			}
+		}
+
+		// Process customerConfig if present
+		if ( isset( $campaign_data['customerConfig'] ) ) {
+			$sanitized_campaign['customerConfig'] = array(
+				'enabled'          => isset( $campaign_data['customerConfig']['enabled'] ) ? (bool) $campaign_data['customerConfig']['enabled'] : false,
+				'recipientType'    => isset( $campaign_data['customerConfig']['recipientType'] ) ? sanitize_text_field( $campaign_data['customerConfig']['recipientType'] ) : 'billing',
+				'templateName'     => isset( $campaign_data['customerConfig']['templateName'] ) ? sanitize_text_field( $campaign_data['customerConfig']['templateName'] ) : '',
+				'templateLanguage' => isset( $campaign_data['customerConfig']['templateLanguage'] ) ? sanitize_text_field( $campaign_data['customerConfig']['templateLanguage'] ) : '',
+				'headerVariables'  => array(),
+				'bodyVariables'    => array(),
+			);
+
+			// Add cartAbandonedCutoffTime if this is a cart_abandoned campaign
+			if ( 'cart_abandoned' === $sanitized_campaign['id'] ) {
+				$sanitized_campaign['customerConfig']['cartAbandonedCutoffTime'] = isset( $campaign_data['customerConfig']['cartAbandonedCutoffTime'] ) ? absint( $campaign_data['customerConfig']['cartAbandonedCutoffTime'] ) : 15;
+			}
+
+			// Process header and body variables for customer config
+			if ( ! empty( $campaign_data['customerConfig']['headerVariables'] ) && is_array( $campaign_data['customerConfig']['headerVariables'] ) ) {
+				foreach ( $campaign_data['customerConfig']['headerVariables'] as $variable ) {
+					if ( isset( $variable['key'] ) && isset( $variable['value'] ) ) {
+						$sanitized_campaign['customerConfig']['headerVariables'][] = array(
+							'key'   => sanitize_text_field( $variable['key'] ),
+							'value' => sanitize_text_field( $variable['value'] ),
+						);
+					}
+				}
+			}
+
+			if ( ! empty( $campaign_data['customerConfig']['bodyVariables'] ) && is_array( $campaign_data['customerConfig']['bodyVariables'] ) ) {
+				foreach ( $campaign_data['customerConfig']['bodyVariables'] as $variable ) {
+					if ( isset( $variable['key'] ) && isset( $variable['value'] ) ) {
+						$sanitized_campaign['customerConfig']['bodyVariables'][] = array(
+							'key'   => sanitize_text_field( $variable['key'] ),
+							'value' => sanitize_text_field( $variable['value'] ),
+						);
+					}
+				}
+			}
+		}
+
+		return $sanitized_campaign;
+	}
+
+	/**
+	 * Get WhatsApp Click to Chat Settings
+	 *
+	 * @since 4.1.0
+	 *
+	 * @return void
+	 */
+	public function get_whatsapp_click_to_chat_settings() {
+		NonceChecker::check();
+		$this->check_capability( 'manage_options' );
+
+		$settings = Options::get_whatsapp_click_to_chat_settings();
+
+		// Convert empty arrays to empty objects for JSON response
+		if ( empty( $settings ) || ( is_array( $settings ) && count( $settings ) === 0 ) ) {
+			$settings = new \stdClass();
+		}
+
+		wp_send_json_success( $settings, 200 );
+	}
+
+	/**
+	 * Update WhatsApp Click to Chat Settings
+	 *
+	 * @since 4.1.0
+	 *
+	 * @return void
+	 */
+	public function update_whatsapp_click_to_chat_settings() {
+		NonceChecker::check();
+		$this->check_capability( 'manage_options' );
+
+		$data = array();
+
+		// Ensure we sanitize all inputs properly
+		$data['enabled'] = isset( $_POST['enabled'] ) ?
+			filter_var( $_POST['enabled'], FILTER_VALIDATE_BOOLEAN ) : false;
+
+		$data['phoneNumber'] = isset( $_POST['phoneNumber'] ) ?
+			sanitize_text_field( $_POST['phoneNumber'] ) : '';
+
+		$data['greetingMessage'] = isset( $_POST['greetingMessage'] ) ?
+			sanitize_text_field( $_POST['greetingMessage'] ) : '';
+
+		$data['buttonStyle'] = isset( $_POST['buttonStyle'] ) ?
+			sanitize_text_field( $_POST['buttonStyle'] ) : 'style1';
+
+		$data['buttonSize'] = isset( $_POST['buttonSize'] ) ?
+			intval( $_POST['buttonSize'] ) : 48;
+
+		$data['buttonPosition'] = isset( $_POST['buttonPosition'] ) ?
+			sanitize_text_field( $_POST['buttonPosition'] ) : 'bottom-right';
+
+		$data['horizontalOffset'] = isset( $_POST['horizontalOffset'] ) ?
+			intval( $_POST['horizontalOffset'] ) : 20;
+
+		$data['verticalOffset'] = isset( $_POST['verticalOffset'] ) ?
+			intval( $_POST['verticalOffset'] ) : 20;
+
+		$data['zIndex'] = isset( $_POST['zIndex'] ) ?
+			intval( $_POST['zIndex'] ) : 9999;
+
+		// Validate phone number (international format without plus sign)
+		if ( ! empty( $data['phoneNumber'] ) ) {
+			// Phone number should contain only digits
+			if ( ! preg_match( '/^[0-9]+$/', $data['phoneNumber'] ) ) {
+				wp_send_json_error(
+					array(
+						'message' => __( 'Please enter the WhatsApp phone number in international format with country code without + sign (e.g. 919876543210)', 'pushengage' ),
+						'code'    => 'invalid_phone_format',
+					),
+					400
+				);
+			}
+
+			// Phone number should be at least 10 digits and max 15 digits (international standard)
+			$length = strlen( $data['phoneNumber'] );
+			if ( $length < 10 || $length > 15 ) {
+				wp_send_json_error(
+					array(
+						'message' => __( 'WhatsApp phone number should be between 10 and 15 digits including country code.', 'pushengage' ),
+						'code'    => 'invalid_phone_length',
+					),
+					400
+				);
+			}
+		}
+
+		// Validate button position
+		$valid_positions = array( 'bottom-right', 'bottom-left', 'left-middle', 'right-middle' );
+		if ( ! in_array( $data['buttonPosition'], $valid_positions, true ) ) {
+			$data['buttonPosition'] = 'bottom-right';
+		}
+
+		// Validate offsets (should be between 0 and 200)
+		if ( $data['horizontalOffset'] < 0 || $data['horizontalOffset'] > 200 ) {
+			wp_send_json_error(
+				array(
+					'message' => __( 'Horizontal offset must be between 0 and 200 pixels.', 'pushengage' ),
+					'code'    => 'invalid_horizontal_offset',
+				),
+				400
+			);
+		}
+
+		if ( $data['verticalOffset'] < 0 || $data['verticalOffset'] > 200 ) {
+			wp_send_json_error(
+				array(
+					'message' => __( 'Vertical offset must be between 0 and 200 pixels.', 'pushengage' ),
+					'code'    => 'invalid_vertical_offset',
+				),
+				400
+			);
+		}
+
+		// Validate z-index (should be between 1 and 999999)
+		if ( $data['zIndex'] < 1 || $data['zIndex'] > 999999 ) {
+			wp_send_json_error(
+				array(
+					'message' => __( 'Z-Index must be between 1 and 999999.', 'pushengage' ),
+					'code'    => 'invalid_z_index',
+				),
+				400
+			);
+		}
+
+		// Validate required fields if enabled
+		if ( $data['enabled'] && empty( $data['phoneNumber'] ) ) {
+			wp_send_json_error(
+				array(
+					'message' => __( 'WhatsApp phone number is required when the feature is enabled.', 'pushengage' ),
+					'code'    => 'missing_required_field',
+				),
+				400
+			);
+		}
+
+		// Save settings
+		Options::update_whatsapp_click_to_chat_settings( $data );
+		wp_send_json_success( $data, 200 );
 	}
 }

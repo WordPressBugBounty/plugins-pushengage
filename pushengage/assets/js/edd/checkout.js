@@ -17,10 +17,11 @@
 
     var storageEddCheckoutOrderIds = [];
     try {
-      storageEddCheckoutOrderIds = JSON.parse(localStorage.getItem('PeEddCheckoutOrderIds')) || [];
+      storageEddCheckoutOrderIds =
+        JSON.parse(localStorage.getItem('PeEddCheckoutOrderIds')) || [];
     } catch (e) {}
 
-    if(
+    if (
       typeof storageEddCheckoutOrderIds == 'object' &&
       storageEddCheckoutOrderIds.length &&
       storageEddCheckoutOrderIds.indexOf(peEddCheckoutEvent.orderId) > -1
@@ -35,27 +36,23 @@
       event_name: 'checkout',
     };
 
-    if(peEddCheckoutEvent.revenue) {
+    if (peEddCheckoutEvent.revenue) {
       trigger.data = {
-        revenue: peEddCheckoutEvent.revenue
+        revenue: peEddCheckoutEvent.revenue,
       };
     }
 
-    PushEngage.push(function() {
+    PushEngage.push(function () {
       PushEngage.sendTriggerEvent(trigger)
-        .then(function(response) {
-          try{
-            // reset cart download ids and update checkout download ids
-            localStorage.setItem('PeEddCheckoutOrderIds', JSON.stringify(storageEddCheckoutOrderIds));
-            localStorage.setItem('PeEddCartDownloadIds', JSON.stringify([]));
-          }catch(e){}
+        .then(function (response) {
+          // reset cart download ids and update checkout download ids
+          localStorage.setItem(
+            'PeEddCheckoutOrderIds',
+            JSON.stringify(storageEddCheckoutOrderIds),
+          );
+          localStorage.setItem('PeEddCartDownloadIds', JSON.stringify([]));
         })
-        .catch(function(error) {
-          console.log(error.message, error.details);
-        });
+        .catch(function () {});
     });
-
-  } catch (e) {
-    console.error(e);
-  }
+  } catch (e) {}
 })();

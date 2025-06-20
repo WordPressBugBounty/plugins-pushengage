@@ -9,16 +9,7 @@
     "vendor-react.js": "/static/js/vendor-react.js",
     "vendor-moment-js.js": "/static/js/vendor-moment-js.js",
     "vendor-emoji-picker.js": "/static/js/vendor-emoji-picker.js",
-    "index.html": "/index.html",
-    "main.css.map": "/static/css/main.css.map",
-    "main.js.map": "/static/js/main.js.map",
-    "vendor-antd.css.map": "/static/css/vendor-antd.css.map",
-    "vendor-antd.js.map": "/static/js/vendor-antd.js.map",
-    "vendor-common.js.map": "/static/js/vendor-common.js.map",
-    "vendor-recharts.js.map": "/static/js/vendor-recharts.js.map",
-    "vendor-react.js.map": "/static/js/vendor-react.js.map",
-    "vendor-moment-js.js.map": "/static/js/vendor-moment-js.js.map",
-    "vendor-emoji-picker.js.map": "/static/js/vendor-emoji-picker.js.map"
+    "index.html": "/index.html"
   },
   "entrypoints": [
     "static/css/vendor-antd.css",

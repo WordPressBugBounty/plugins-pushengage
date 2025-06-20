@@ -31,31 +31,31 @@ jQuery(document).ready(function ($) {
     var storageBrowseProductIds = [];
 
     try {
-      storageBrowseProductIds = JSON.parse(localStorage.getItem('PeWcBrowseProductIds')) || [];
-    } catch (e) { }
+      storageBrowseProductIds =
+        JSON.parse(localStorage.getItem('PeWcBrowseProductIds')) || [];
+    } catch (e) {}
 
     // if 'PeWcBrowseProductIds' is empty, don't need to fire browse abandonment stop event.
     // because, browse abandonment campaign is not running.
-    if (typeof storageBrowseProductIds == 'object' && !storageBrowseProductIds.length) {
+    if (
+      typeof storageBrowseProductIds == 'object' &&
+      !storageBrowseProductIds.length
+    ) {
       return;
     }
 
     var trigger = {
       campaign_name: peWcAjaxCartAbandonment.browseCampaign,
-      event_name: 'add-to-cart'
+      event_name: 'add-to-cart',
     };
 
     PushEngage.push(function () {
       PushEngage.sendTriggerEvent(trigger)
-        .then(function (response) {
-          try {
-            // reset browse product ids
-            localStorage.setItem('PeWcBrowseProductIds', JSON.stringify([]));
-          } catch (e) { }
+        .then(function () {
+          // reset browse product ids
+          localStorage.setItem('PeWcBrowseProductIds', JSON.stringify([]));
         })
-        .catch(function (error) {
-          console.log(error.message, error.details);
-        });
+        .catch(function () {});
     });
   }
 
@@ -82,8 +82,9 @@ jQuery(document).ready(function ($) {
     var storageProductIds = [];
 
     try {
-      storageProductIds = JSON.parse(localStorage.getItem('PeWcCartProductIds')) || [];
-    } catch (e) { }
+      storageProductIds =
+        JSON.parse(localStorage.getItem('PeWcCartProductIds')) || [];
+    } catch (e) {}
 
     if (
       typeof storageProductIds == 'object' &&
@@ -111,28 +112,25 @@ jQuery(document).ready(function ($) {
         notificationurl: productData.product_cart_url,
         imageurl: productData.product_image || '',
         bigimageurl: productData.product_large_image || '',
-        customername: peWcAjaxCartAbandonment?.customerName || '',
-        checkouturl: peWcAjaxCartAbandonment?.checkoutPageUrl || '',
-        siteurl: peWcAjaxCartAbandonment?.siteUrl || ''
-      }
+        customername: peWcAjaxCartAbandonment.customerName || '',
+        checkouturl: peWcAjaxCartAbandonment.checkoutPageUrl || '',
+        siteurl: peWcAjaxCartAbandonment.siteUrl || '',
+      },
     };
 
     // fire cart abandonment start event
     PushEngage.push(function () {
       PushEngage.sendTriggerEvent(trigger)
-        .then(function (response) {
-          try {
-            // update cart product ids.
-            localStorage.setItem('PeWcCartProductIds', JSON.stringify(storageProductIds));
-          } catch (e) { }
+        .then(function () {
+          // update cart product ids.
+          localStorage.setItem(
+            'PeWcCartProductIds',
+            JSON.stringify(storageProductIds),
+          );
         })
-        .catch(function (error) {
-          console.log(error.message, error.details);
-        });
+        .catch(function () {});
     });
   }
-
-
 
   /**
    * If current cart is empty and cart abandonment is running for some products.
@@ -146,8 +144,9 @@ jQuery(document).ready(function ($) {
     var storageProductIds = [];
 
     try {
-      storageProductIds = JSON.parse(localStorage.getItem('PeWcCartProductIds')) || [];
-    } catch (e) { }
+      storageProductIds =
+        JSON.parse(localStorage.getItem('PeWcCartProductIds')) || [];
+    } catch (e) {}
 
     // if 'PeWcCartProductIds' is empty, don't need to terminate cart abandonment.
     if (typeof storageProductIds == 'object' && !storageProductIds.length) {
@@ -162,13 +161,9 @@ jQuery(document).ready(function ($) {
     PushEngage.push(function () {
       PushEngage.sendTriggerEvent(trigger)
         .then(function (response) {
-          try {
-            localStorage.setItem('PeWcCartProductIds', JSON.stringify([]));
-          } catch (e) { }
+          localStorage.setItem('PeWcCartProductIds', JSON.stringify([]));
         })
-        .catch(function (error) {
-          console.log(error.message, error.details);
-        });
+        .catch(function () {});
     });
   }
 
@@ -179,25 +174,28 @@ jQuery(document).ready(function ($) {
    *
    * @returns {void}
    */
-  $('body').on('added_to_cart', function (event, fragments, cart_hash, $button) {
-    var productId = $button.data('product_id');
-    if (!productId) {
-      return;
-    }
-
-    jQuery.ajax({
-      url: peWcAjaxCartAbandonment.adminAjax,
-      type: 'POST',
-      data: {
-        product_id: productId,
-        action: 'pe_get_wc_product_details',
-        _wpnonce: peWcAjaxCartAbandonment._wpnonce
-      },
-      success: function (response) {
-        peFireCartAbandonment(response.data || {});
+  $('body').on(
+    'added_to_cart',
+    function (event, fragments, cart_hash, $button) {
+      var productId = $button.data('product_id');
+      if (!productId) {
+        return;
       }
-    });
-  });
+
+      jQuery.ajax({
+        url: peWcAjaxCartAbandonment.adminAjax,
+        type: 'POST',
+        data: {
+          product_id: productId,
+          action: 'pe_get_wc_product_details',
+          _wpnonce: peWcAjaxCartAbandonment._wpnonce,
+        },
+        success: function (response) {
+          peFireCartAbandonment(response.data || {});
+        },
+      });
+    },
+  );
 
   /**
    * Handled timely sync up of cart abandonment for cart items. It will handle
@@ -226,7 +224,7 @@ jQuery(document).ready(function ($) {
         type: 'POST',
         data: {
           action: 'pe_get_wc_cart_items',
-          _wpnonce: peWcAjaxCartAbandonment._wpnonce
+          _wpnonce: peWcAjaxCartAbandonment._wpnonce,
         },
         success: function (response) {
           var cartItems = response.data || [];
@@ -240,10 +238,13 @@ jQuery(document).ready(function ($) {
           }
 
           // set next sync up time after 3 minutes.
-          localStorage.setItem('PeWcCartSyncUpTime', currentTime + 3 * 60 * 1000);
-        }
+          localStorage.setItem(
+            'PeWcCartSyncUpTime',
+            currentTime + 3 * 60 * 1000,
+          );
+        },
       });
-    } catch (e) { }
+    } catch (e) {}
   }
 
   /**

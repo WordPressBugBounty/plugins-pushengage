@@ -2,6 +2,11 @@
 
 All notable changes to the PushEngage plugin will be documented in this file.
 
+### 4.1.2
+
+* Added WhatsApp Notification support for WooCommerce.
+* Improved onboarding flow
+
 ### 4.1.1.1
 
 * Added Onboarding wizard progress tracker in Dashboard.

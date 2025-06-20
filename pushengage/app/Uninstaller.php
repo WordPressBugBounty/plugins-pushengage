@@ -26,7 +26,12 @@ class Uninstaller {
 				'pe_sent_notifications_count',
 				'pe_active_subscribers_count',
 				'pe_will_display_review_notice',
-				'pe_review_notice_options'
+				'pe_review_notice_options',
+				'pushengage_whatsapp_settings',
+				'pushengage_whatsapp_click_to_chat',
+				'pushengage_wa_automation_campaigns',
+				'pushengage_encryption_key',
+				'pe_notifications_row_setting'
 			)
 		"
 		);
@@ -55,5 +60,21 @@ class Uninstaller {
 				'pushengage_review_notice'
 			)"
 		);
+
+		/**
+		 * Delete pushengage cart abandonment tracker table.
+		 *
+		 * @since 4.1.2
+		 */
+		$wpdb->query(
+			"DROP TABLE IF EXISTS {$wpdb->prefix}pushengage_wc_abandoned_carts"
+		);
+
+		/**
+		 * Clear the scheduled hook for abandoned cart notification.
+		 *
+		 * @since 4.1.2
+		 */
+		wp_clear_scheduled_hook( 'pushengage_check_abandoned_carts' );
 	}
 }

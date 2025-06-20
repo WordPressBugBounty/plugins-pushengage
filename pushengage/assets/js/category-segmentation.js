@@ -1,9 +1,9 @@
 (function () {
   try {
     if (
-      typeof _peq === "undefined" ||
-      typeof pushengageCategorySegment === "undefined" ||
-      typeof pushengageCategorySegment.addSegment !== "object"
+      typeof _peq === 'undefined' ||
+      typeof pushengageCategorySegment === 'undefined' ||
+      typeof pushengageCategorySegment.addSegment !== 'object'
     ) {
       return;
     }
@@ -17,9 +17,7 @@
 
     // update the user segments
     if (newSegments.length) {
-      window._peq.push(["add-to-segment", newSegments]);
+      window._peq.push(['add-to-segment', newSegments]);
     }
-  } catch (e) {
-    console.error(e);
-  }
+  } catch (e) {}
 })();

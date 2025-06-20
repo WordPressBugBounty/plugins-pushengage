@@ -255,4 +255,15 @@ class Helpers {
 	public static function is_woocommerce_active() {
 		return AppHelpers::is_plugin_active( 'woocommerce/woocommerce.php' ) && class_exists( 'woocommerce' );
 	}
+
+	/**
+	 * Checks the current page to see if it contains checkout block.
+	 *
+	 * @param int|null $post_id The current post ID.
+	 * @return bool
+	 * @since 4.1.2
+	 */
+	public static function is_block_checkout( $post_id = null ) {
+		return has_block( 'woocommerce/checkout', $post_id );
+	}
 }

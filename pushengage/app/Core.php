@@ -11,10 +11,9 @@ use Pushengage\Utils\Helpers;
 use Pushengage\Integrations\Helpers as IntegrationHelpers;
 use Pushengage\Utils\PostMetaFormatter;
 use Pushengage\Utils\StringUtils;
-use Pushengage\Integrations\WooCommerce\Woo;
-use Pushengage\Integrations\Edd;
 use Pushengage\Integrations\WooCommerce\NotificationHandler;
 use Pushengage\Integrations\WooCommerce\NotificationTemplates;
+
 
 // Exit if accessed directly.
 if ( ! defined( 'ABSPATH' ) ) {
@@ -87,6 +86,7 @@ class Core {
 				add_action( 'enqueue_block_editor_assets', array( $this, 'load_block_editor_scripts' ) );
 			}
 		}
+
 		if ( IntegrationHelpers::is_woocommerce_active() ) {
 			NotificationTemplates::init();
 			NotificationHandler::init();

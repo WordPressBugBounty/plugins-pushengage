@@ -21,9 +21,11 @@
     var storageBrowseProductIds = [];
     var storageCartProductIds = [];
     try {
-      storageBrowseProductIds = JSON.parse(localStorage.getItem('PeWcBrowseProductIds')) || [];
-      storageCartProductIds = JSON.parse(localStorage.getItem('PeWcCartProductIds')) || [];
-    } catch (e) { }
+      storageBrowseProductIds =
+        JSON.parse(localStorage.getItem('PeWcBrowseProductIds')) || [];
+      storageCartProductIds =
+        JSON.parse(localStorage.getItem('PeWcCartProductIds')) || [];
+    } catch (e) {}
 
     // don't send trigger if product is already added to cart
     if (
@@ -54,24 +56,22 @@
         notificationurl: peWcBrowseAbandonment.productUrl,
         imageurl: peWcBrowseAbandonment.productImage || '',
         bigimageurl: peWcBrowseAbandonment.productLargeImage || '',
-        customername: peWcBrowseAbandonment?.customerName || '',
-        siteurl: peWcBrowseAbandonment?.siteUrl || '',
-      }
+        customername: peWcBrowseAbandonment.customerName || '',
+        siteurl: peWcBrowseAbandonment.siteUrl || '',
+      },
     };
 
     PushEngage.push(function () {
       PushEngage.sendTriggerEvent(trigger)
-        .then(function (response) {
+        .then(function () {
           try {
-            localStorage.setItem('PeWcBrowseProductIds', JSON.stringify(storageBrowseProductIds));
-          } catch (e) { }
+            localStorage.setItem(
+              'PeWcBrowseProductIds',
+              JSON.stringify(storageBrowseProductIds),
+            );
+          } catch (e) {}
         })
-        .catch(function (error) {
-          console.log(error.message, error.details);
-        });
+        .catch(function () {});
     });
-
-  } catch (e) {
-    console.error(e);
-  }
+  } catch (e) {}
 })();

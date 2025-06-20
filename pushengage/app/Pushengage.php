@@ -8,6 +8,8 @@ use Pushengage\EnqueueAssets;
 use Pushengage\Integrations\Ajax as IntegrationsAjax;
 use Pushengage\Includes\SubscriberSync;
 use Pushengage\Utils\Options;
+use Pushengage\Integrations\WooCommerce\Whatsapp\WhatsappNotification;
+use Pushengage\Integrations\WooCommerce\Whatsapp\WhatsappClickToChat;
 
 // Exit if accessed directly.
 if ( ! defined( 'ABSPATH' ) ) {
@@ -115,6 +117,22 @@ final class Pushengage {
 	public $whats_new;
 
 	/**
+	 * WhatsApp Notification for WooCommerce
+	 *
+	 * @since 4.1.0
+	 * @var WhatsappNotification
+	 */
+	public $whatsapp_notification;
+
+	/**
+	 * WhatsApp Click To Chat
+	 *
+	 * @since 4.1.0
+	 * @var WhatsappClickToChat
+	 */
+	public $click_to_chat;
+
+	/**
 	 * Initializes the Pushengage class
 	 *
 	 * @since 4.0.0
@@ -210,6 +228,13 @@ final class Pushengage {
 		$this->dashboard_widget = new DashboardWidget();
 		$this->review_notice    = new ReviewNotice();
 		$this->whats_new        = new WhatsNew();
+
+		// Initialize WhatsApp Click To Chat
+		$this->click_to_chat = WhatsappClickToChat::get_instance();
+		// Initialize WhatsApp Notification if WooCommerce is active
+		if ( class_exists( 'WooCommerce' ) ) {
+			$this->whatsapp_notification = WhatsappNotification::get_instance();
+		}
 
 		// Load the frontend components
 		if ( is_user_logged_in() && Options::has_credentials() ) {

@@ -1,0 +1,41 @@
+.pe-whatsapp-click-to-chat {
+  position: fixed;
+  z-index: 9999;
+  bottom: 20px;
+  right: 20px;
+}
+.pe-whatsapp-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+  transform: scale(1);
+  will-change: transform;
+  background-color: #fff;
+  border-radius: 50%;
+  padding: 0;
+}
+.pe-whatsapp-button:hover {
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+  transform: scale(1.05);
+}
+.pe-whatsapp-icon {
+  display: inline-block;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.pe-whatsapp-style1 .pe-whatsapp-icon {
+  background-image: url("../img/whatsapp/icon-1.svg");
+}
+.pe-whatsapp-style2 .pe-whatsapp-icon {
+  background-image: url("../img/whatsapp/icon-2.svg");
+}
+.pe-whatsapp-style3 .pe-whatsapp-icon {
+  background-image: url("../img/whatsapp/icon-3.svg");
+}
+.pe-whatsapp-style4 .pe-whatsapp-icon {
+  background-image: url("../img/whatsapp/icon-4.svg");
+}

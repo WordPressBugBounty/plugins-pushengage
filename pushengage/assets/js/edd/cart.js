@@ -17,12 +17,12 @@ jQuery(document).ready(function ($) {
   }
 
   /**
-  * Fire browse abandonment stop event
-  *
-  * @since  4.0.8
-  *
-  * @returns {void}
-  */
+   * Fire browse abandonment stop event
+   *
+   * @since  4.0.8
+   *
+   * @returns {void}
+   */
   function peFireBrowseAbandonmentStop() {
     if (!peEddCartAbandonment.browseCampaign) {
       return;
@@ -30,28 +30,31 @@ jQuery(document).ready(function ($) {
     var storageBrowseDownloadIds = [];
 
     try {
-      storageBrowseDownloadIds = JSON.parse(localStorage.getItem('PeEddBrowseDownloadIds')) || [];
-    } catch (e) { }
+      storageBrowseDownloadIds =
+        JSON.parse(localStorage.getItem('PeEddBrowseDownloadIds')) || [];
+    } catch (e) {}
 
     // if 'PeEddBrowseDownloadIds' is empty, don't need to fire browse abandonment stop event.
     // because, browse abandonment campaign is not running.
-    if (typeof storageBrowseDownloadIds == 'object' && !storageBrowseDownloadIds.length) {
+    if (
+      typeof storageBrowseDownloadIds == 'object' &&
+      !storageBrowseDownloadIds.length
+    ) {
       return;
     }
 
     var trigger = {
       campaign_name: peEddCartAbandonment.browseCampaign,
-      event_name: 'add-to-cart'
+      event_name: 'add-to-cart',
     };
 
     PushEngage.push(function () {
-      PushEngage.sendTriggerEvent(trigger)
-        .then(function (response) {
-          try {
-            // reset browse download ids
-            localStorage.setItem('PeEddBrowseDownloadIds', JSON.stringify([]));
-          } catch (e) { }
-        });
+      PushEngage.sendTriggerEvent(trigger).then(function (response) {
+        try {
+          // reset browse download ids
+          localStorage.setItem('PeEddBrowseDownloadIds', JSON.stringify([]));
+        } catch (e) {}
+      });
     });
   }
 
@@ -78,8 +81,9 @@ jQuery(document).ready(function ($) {
     var storageDownloadIds = [];
 
     try {
-      storageDownloadIds = JSON.parse(localStorage.getItem('PeEddCartDownloadIds')) || [];
-    } catch (e) { }
+      storageDownloadIds =
+        JSON.parse(localStorage.getItem('PeEddCartDownloadIds')) || [];
+    } catch (e) {}
 
     if (
       typeof storageDownloadIds == 'object' &&
@@ -106,22 +110,21 @@ jQuery(document).ready(function ($) {
         price: downloadData.download_price,
         notificationurl: downloadData.download_cart_url,
         imageurl: downloadData.download_image || '',
-        bigimageurl: downloadData.download_large_image || ''
-      }
+        bigimageurl: downloadData.download_large_image || '',
+      },
     };
 
     // fire cart abandonment start event
     PushEngage.push(function () {
       PushEngage.sendTriggerEvent(trigger)
-        .then(function (response) {
-          try {
-            // update cart download ids.
-            localStorage.setItem('PeEddCartDownloadIds', JSON.stringify(storageDownloadIds));
-          } catch (e) { }
+        .then(function () {
+          // update cart download ids.
+          localStorage.setItem(
+            'PeEddCartDownloadIds',
+            JSON.stringify(storageDownloadIds),
+          );
         })
-        .catch(function (error) {
-          console.log(error.message, error.details);
-        });
+        .catch(function () {});
     });
   }
 
@@ -137,8 +140,9 @@ jQuery(document).ready(function ($) {
     var storageDownloadIds = [];
 
     try {
-      storageDownloadIds = JSON.parse(localStorage.getItem('PeEddCartDownloadIds')) || [];
-    } catch (e) { }
+      storageDownloadIds =
+        JSON.parse(localStorage.getItem('PeEddCartDownloadIds')) || [];
+    } catch (e) {}
 
     // if 'PeEddCartDownloadIds' is empty, don't need to terminate cart abandonment.
     if (typeof storageDownloadIds == 'object' && !storageDownloadIds.length) {
@@ -152,14 +156,10 @@ jQuery(document).ready(function ($) {
 
     PushEngage.push(function () {
       PushEngage.sendTriggerEvent(trigger)
-        .then(function (response) {
-          try {
-            localStorage.setItem('PeEddCartDownloadIds', JSON.stringify([]));
-          } catch (e) { }
+        .then(function () {
+          localStorage.setItem('PeEddCartDownloadIds', JSON.stringify([]));
         })
-        .catch(function (error) {
-          console.log(error.message, error.details);
-        });
+        .catch(function () {});
     });
   }
 
@@ -189,11 +189,11 @@ jQuery(document).ready(function ($) {
       data: {
         download_id: downloadId,
         action: 'pe_get_edd_download_details',
-        _wpnonce: peEddCartAbandonment._wpnonce
+        _wpnonce: peEddCartAbandonment._wpnonce,
       },
       success: function (response) {
         peFireCartAbandonment(response.data || {});
-      }
+      },
     });
   });
 
@@ -223,7 +223,7 @@ jQuery(document).ready(function ($) {
         type: 'POST',
         data: {
           action: 'pe_get_edd_cart_items',
-          _wpnonce: peEddCartAbandonment._wpnonce
+          _wpnonce: peEddCartAbandonment._wpnonce,
         },
         success: function (response) {
           var cartItems = response.data || [];
@@ -237,10 +237,13 @@ jQuery(document).ready(function ($) {
           }
 
           // set next sync up time after 3 minutes.
-          localStorage.setItem('PeEddCartSyncUpTime', currentTime + 3 * 60 * 1000);
-        }
+          localStorage.setItem(
+            'PeEddCartSyncUpTime',
+            currentTime + 3 * 60 * 1000,
+          );
+        },
       });
-    } catch (e) { }
+    } catch (e) {}
   }
 
   /**
@@ -250,5 +253,3 @@ jQuery(document).ready(function ($) {
    */
   peSyncCartAbandonment();
 });
-
-

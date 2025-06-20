@@ -21,9 +21,11 @@
     var storageBrowseDownloadIds = [];
     var storageCartDownloadIds = [];
     try {
-      storageBrowseDownloadIds = JSON.parse(localStorage.getItem('PeEddBrowseDownloadIds')) || [];
-      storageCartDownloadIds = JSON.parse(localStorage.getItem('PeEddCartDownloadIds')) || [];
-    } catch (e) { }
+      storageBrowseDownloadIds =
+        JSON.parse(localStorage.getItem('PeEddBrowseDownloadIds')) || [];
+      storageCartDownloadIds =
+        JSON.parse(localStorage.getItem('PeEddCartDownloadIds')) || [];
+    } catch (e) {}
 
     // don't send trigger if download is already added to cart
     if (
@@ -53,23 +55,21 @@
         price: peEddBrowseAbandonment.downloadPrice,
         notificationurl: peEddBrowseAbandonment.downloadUrl,
         imageurl: peEddBrowseAbandonment.downloadImage || '',
-        bigimageurl: peEddBrowseAbandonment.downloadLargeImage || ''
-      }
+        bigimageurl: peEddBrowseAbandonment.downloadLargeImage || '',
+      },
     };
 
     PushEngage.push(function () {
       PushEngage.sendTriggerEvent(trigger)
         .then(function (response) {
           try {
-            localStorage.setItem('PeEddBrowseDownloadIds', JSON.stringify(storageBrowseDownloadIds));
-          } catch (e) { }
+            localStorage.setItem(
+              'PeEddBrowseDownloadIds',
+              JSON.stringify(storageBrowseDownloadIds),
+            );
+          } catch (e) {}
         })
-        .catch(function (error) {
-          console.log(error.message, error.details);
-        });
+        .catch(function () {});
     });
-
-  } catch (e) {
-    console.error(e);
-  }
+  } catch (e) {}
 })();

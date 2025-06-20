@@ -2,14 +2,14 @@
 # This file is distributed under the GPLv2 or later..
 msgid ""
 msgstr ""
-"Project-Id-Version: PushEngage 4.1.1.1\n"
+"Project-Id-Version: PushEngage 4.1.2\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/pushengage-wordpress-plugin\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2025-04-01T07:29:30+00:00\n"
+"POT-Creation-Date: 2025-06-19T10:49:14+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.7.1\n"
 "X-Domain: pushengage\n"
@@ -30,15 +30,15 @@ msgstr ""
 msgid "Reload Page"
 msgstr ""
 
-#: src/components/FlyoutButton.tsx:106
+#: src/components/FlyoutButton.tsx:105
 msgid "Support & Docs"
 msgstr ""
 
-#: src/components/FlyoutButton.tsx:117
+#: src/components/FlyoutButton.tsx:116
 msgid "Video Library"
 msgstr ""
 
-#: src/components/FlyoutButton.tsx:122
+#: src/components/FlyoutButton.tsx:121
 msgid "See Quick Links"
 msgstr ""
 
@@ -127,6 +127,7 @@ msgstr ""
 #: src/components/campaign/drip/NotificationGenerator.tsx:401
 #: src/components/campaign/pushBroadcast/PushTable.tsx:562
 #: src/components/dashboardWidget/RecentNotifications.tsx:50
+#: src/components/whatsapp/WhatsappTemplateAnalytics.tsx:164
 #: src/pages/dashboard/RecentNotifications.tsx:140
 #: src/pages/pushBroadcast/helpers.ts:61
 msgid "Sent"
@@ -192,6 +193,7 @@ msgid "Views"
 msgstr ""
 
 #: src/components/analytics/AnalyticsSummaryLineGraph.tsx:194
+#: src/components/whatsapp/WhatsappTemplateAnalytics.tsx:421
 #: src/helper/index.ts:132
 msgid "Clicks"
 msgstr ""
@@ -240,6 +242,7 @@ msgstr ""
 #: src/components/audience/CleanupSubscriberList.tsx:463
 #: src/components/campaign/preview/Windows11Chrome.tsx:88
 #: src/components/headers/siteAlert/ServiceWorkerIssueAlert.tsx:518
+#: src/pages/whatsapp/WhatsappTemplates.tsx:425
 msgid "Close"
 msgstr ""
 
@@ -387,8 +390,9 @@ msgstr ""
 #: src/components/campaign/pushBroadcast/PushTable.tsx:238
 #: src/components/campaign/trigger/TriggerTable.tsx:238
 #: src/components/common/NotificationActionDropdownMenu.tsx:42
-#: src/components/onboarding/setup/AddCampaigns.tsx:536
+#: src/components/onboarding/setup/AddCampaigns.tsx:541
 #: src/pages/settings/Billing/index.tsx:151
+#: src/pages/whatsapp/WhatsappTemplates.tsx:271
 msgid "Edit"
 msgstr ""
 
@@ -522,6 +526,7 @@ msgstr ""
 #: src/components/audience/CreateOrEditSegmentForm.tsx:377
 #: src/components/audience/TagCategoryForm.tsx:136
 #: src/components/common/DateRangeDropdownButton.tsx:152
+#: src/components/whatsapp/WhatsappCampaignModal.tsx:575
 #: src/pages/audience/AudienceGroups.tsx:119
 #: src/pages/audience/Segments.tsx:169
 #: src/pages/drip/List.tsx:217
@@ -704,6 +709,7 @@ msgid "Category Segment"
 msgstr ""
 
 #: src/components/audience/TagCategoryForm.tsx:126
+#: src/components/whatsapp/WhatsappCampaignModal.tsx:578
 msgid "Save"
 msgstr ""
 
@@ -876,7 +882,7 @@ msgstr ""
 
 #: src/components/audience/audienceHelper.ts:209
 #: src/components/design/PopUpModalCard.tsx:128
-#: src/components/onboarding/setup/EditSubscriptionDialog.tsx:250
+#: src/components/onboarding/setup/EditSubscriptionDialog.tsx:266
 msgid "Mobile"
 msgstr ""
 
@@ -886,7 +892,7 @@ msgstr ""
 
 #: src/components/audience/audienceHelper.ts:211
 #: src/components/design/PopUpModalCard.tsx:114
-#: src/components/onboarding/setup/EditSubscriptionDialog.tsx:231
+#: src/components/onboarding/setup/EditSubscriptionDialog.tsx:247
 msgid "Desktop"
 msgstr ""
 
@@ -1556,6 +1562,7 @@ msgid "No Limit Set"
 msgstr ""
 
 #: src/components/campaign/automation/AutomationDetails.tsx:374
+#: src/pages/whatsapp/WhatsappTemplates.tsx:248
 #: app/Utils/AdminNavMenuItems.php:72
 msgid "Analytics"
 msgstr ""
@@ -1634,6 +1641,7 @@ msgstr ""
 
 #: src/components/campaign/details/CustomAudienceDetails.tsx:64
 #: src/components/campaign/details/NotificationDetailSections.tsx:98
+#: src/components/whatsapp/WhatsappCampaignModal.tsx:635
 #: src/pages/settings/defaultSettings/index.tsx:593
 msgid "minutes"
 msgstr ""
@@ -1821,6 +1829,7 @@ msgstr ""
 
 #: src/components/campaign/drip/DripStatus.tsx:10
 #: src/components/campaign/trigger/TriggerStatus.tsx:10
+#: src/components/whatsapp/WhatsappCampaignCard.tsx:124
 #: src/pages/drip/helper.ts:48
 #: src/pages/triggeredCampaign/helper.ts:67
 msgid "Active"
@@ -1843,6 +1852,7 @@ msgstr ""
 #: src/components/campaign/drip/DripTable.tsx:196
 #: src/components/campaign/pushBroadcast/PushTable.tsx:377
 #: src/components/campaign/trigger/TriggerTable.tsx:217
+#: src/pages/whatsapp/WhatsappTemplates.tsx:239
 msgid "Status"
 msgstr ""
 
@@ -1852,8 +1862,9 @@ msgstr ""
 #: src/components/campaign/templates/Card.tsx:202
 #: src/components/campaign/trigger/TriggerTable.tsx:228
 #: src/components/design/PopUpModalCard.tsx:142
-#: src/components/onboarding/setup/AddCampaigns.tsx:546
+#: src/components/onboarding/setup/AddCampaigns.tsx:551
 #: src/components/onboarding/setup/PreviewSubscriptionDialog.tsx:24
+#: src/pages/whatsapp/WhatsappTemplates.tsx:263
 msgid "Preview"
 msgstr ""
 
@@ -2062,7 +2073,7 @@ msgid "API"
 msgstr ""
 
 #: src/components/campaign/pushBroadcast/PushAdvancedFilterDropdown.tsx:125
-#: src/pages/dashboard/Dashboard.tsx:189
+#: src/pages/dashboard/Dashboard.tsx:131
 #: app/Utils/AdminNavMenuItems.php:24
 msgid "Dashboard"
 msgstr ""
@@ -2102,7 +2113,7 @@ msgstr ""
 
 #: src/components/campaign/pushBroadcast/PushTable.tsx:248
 #: src/components/common/NotificationActionDropdownMenu.tsx:50
-#: src/components/onboarding/setup/VerifyEmailModal.tsx:177
+#: src/components/onboarding/setup/VerifyEmailModal.tsx:172
 msgid "Resend"
 msgstr ""
 
@@ -2313,9 +2324,8 @@ msgstr ""
 msgid "Export Data"
 msgstr ""
 
-#. 1 - The feature description. - 2 - The Plan name
-#: src/components/common/ProModal.tsx:99
-msgid "%1$s Avail these benefits with %2$s Plan:"
+#: src/components/common/ProModal.tsx:119
+msgid "Learn more about these features →"
 msgstr ""
 
 #: src/components/common/ReviewAlertCard.tsx:54
@@ -2343,12 +2353,12 @@ msgstr ""
 
 #: src/components/dashboardWidget/DashboardWidget.tsx:115
 #: src/pages/audience/Subscribers.tsx:177
-#: src/pages/dashboard/Dashboard.tsx:222
+#: src/pages/dashboard/Dashboard.tsx:149
 msgid "Quick Stats"
 msgstr ""
 
 #: src/components/dashboardWidget/DashboardWidget.tsx:118
-#: src/pages/dashboard/Dashboard.tsx:225
+#: src/pages/dashboard/Dashboard.tsx:152
 msgid "An overview of the analytics to understand your web push subscribers."
 msgstr ""
 
@@ -2379,7 +2389,7 @@ msgid "You are losing subscribers, leads and sales! Click on the button below to
 msgstr ""
 
 #: src/components/dashboardWidget/DashboardWidget.tsx:216
-#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:42
+#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:73
 msgid "Connect Your Site"
 msgstr ""
 
@@ -2408,13 +2418,13 @@ msgstr ""
 msgid "Dismiss"
 msgstr ""
 
-#: src/components/headers/PageNavigationHeader.tsx:97
+#: src/components/headers/PageNavigationHeader.tsx:103
 msgid "New!"
 msgstr ""
 
 #: src/components/headers/siteAlert/EmailVerificationAlert.tsx:25
 #: src/components/onboarding/FinalStep.tsx:157
-#: src/components/onboarding/setup/SetupFinal.tsx:70
+#: src/components/onboarding/setup/SetupFinal.tsx:81
 msgid "Please verify your email address."
 msgstr ""
 
@@ -2543,17 +2553,16 @@ msgid "Connect your WooCommerce store to enable cart and browse abandonment camp
 msgstr ""
 
 #: src/components/onboarding/FinalStep.tsx:146
-#: src/components/onboarding/setup/SetupFinal.tsx:59
+#: src/components/onboarding/setup/SetupFinal.tsx:70
 msgid "Your site is currently using a caching plugin. To ensure that the push notification permission prompt is displayed correctly to visitors on existing posts and pages of your site, please clear the cache."
 msgstr ""
 
 #: src/components/onboarding/FinalStep.tsx:160
-#: src/components/onboarding/setup/SetupFinal.tsx:73
+#: src/components/onboarding/setup/SetupFinal.tsx:84
 msgid "Activate your account by verifying your email address. Please click the link in the verification email we have sent you."
 msgstr ""
 
 #: src/components/onboarding/FinalStep.tsx:189
-#: src/pages/settings/integrations/woocommerce/DashboardNotice.tsx:52
 msgid "Connect Store"
 msgstr ""
 
@@ -2571,7 +2580,8 @@ msgid "PushEngage Dashboard"
 msgstr ""
 
 #: src/components/onboarding/FinalStep.tsx:236
-#: src/components/onboarding/setup/StepPagination.tsx:44
+#: src/components/onboarding/setup/ChannelSelection.tsx:266
+#: src/components/onboarding/setup/StepPagination.tsx:212
 msgid "Skip to Dashboard"
 msgstr ""
 
@@ -2665,9 +2675,9 @@ msgstr ""
 
 #. 1 - The error code
 #: src/components/onboarding/Welcome.tsx:213
-#: src/components/onboarding/setup/AddCampaigns.tsx:112
-#: src/components/onboarding/setup/RecoverSales.tsx:252
-#: src/components/onboarding/setup/SetupRetargeting.tsx:230
+#: src/components/onboarding/setup/AddCampaigns.tsx:110
+#: src/components/onboarding/setup/RecoverSales.tsx:250
+#: src/components/onboarding/setup/SetupRetargeting.tsx:228
 msgid "Error code: %1s"
 msgstr ""
 
@@ -2693,107 +2703,108 @@ msgstr ""
 msgid "Go back to the dashboard"
 msgstr ""
 
-#: src/components/onboarding/setup/AddCampaigns.tsx:108
+#: src/components/onboarding/setup/AddCampaigns.tsx:106
 msgid "Failed to save drip campaign settings."
 msgstr ""
 
-#: src/components/onboarding/setup/AddCampaigns.tsx:115
+#: src/components/onboarding/setup/AddCampaigns.tsx:113
 msgid "Please make sure you have verified your email address and you have campaign access."
 msgstr ""
 
-#: src/components/onboarding/setup/AddCampaigns.tsx:159
+#: src/components/onboarding/setup/AddCampaigns.tsx:157
+#: src/components/whatsapp/whatsappHelper.ts:290
 #: app/Integrations/WooCommerce/NotificationSettings.php:274
 msgid "New Order"
 msgstr ""
 
-#: src/components/onboarding/setup/AddCampaigns.tsx:160
+#: src/components/onboarding/setup/AddCampaigns.tsx:158
 #: app/Integrations/WooCommerce/NotificationSettings.php:275
 msgid "Receive instant alerts when a customer places a new order. Keep your team updated and send automated confirmation notifications to build trust with your customers."
 msgstr ""
 
-#: src/components/onboarding/setup/AddCampaigns.tsx:167
+#: src/components/onboarding/setup/AddCampaigns.tsx:165
 #: app/Integrations/WooCommerce/NotificationSettings.php:278
 msgid "Cancelled Order"
 msgstr ""
 
-#: src/components/onboarding/setup/AddCampaigns.tsx:168
+#: src/components/onboarding/setup/AddCampaigns.tsx:166
 #: app/Integrations/WooCommerce/NotificationSettings.php:279
 msgid "Get real-time alerts when a customer cancels an order. Send an automated push notification to re-engage them and recover potential lost sales with exclusive offers or assistance."
 msgstr ""
 
-#: src/components/onboarding/setup/AddCampaigns.tsx:175
+#: src/components/onboarding/setup/AddCampaigns.tsx:173
 #: app/Integrations/WooCommerce/NotificationSettings.php:282
 msgid "Failed Order"
 msgstr ""
 
-#: src/components/onboarding/setup/AddCampaigns.tsx:176
+#: src/components/onboarding/setup/AddCampaigns.tsx:174
 #: app/Integrations/WooCommerce/NotificationSettings.php:283
 msgid "Get notified immediately when a payment fails, so you can troubleshoot issues quickly. Automatically guide customers to retry their purchase and prevent losing a sale."
 msgstr ""
 
-#: src/components/onboarding/setup/AddCampaigns.tsx:183
+#: src/components/onboarding/setup/AddCampaigns.tsx:181
 #: app/Integrations/WooCommerce/NotificationSettings.php:286
 msgid "Order on Hold"
 msgstr ""
 
-#: src/components/onboarding/setup/AddCampaigns.tsx:184
+#: src/components/onboarding/setup/AddCampaigns.tsx:182
 #: app/Integrations/WooCommerce/NotificationSettings.php:287
 msgid "Inform your customers when an order is placed on hold. Keep your operations smooth by addressing issues promptly and keeping everyone updated."
 msgstr ""
 
-#: src/components/onboarding/setup/AddCampaigns.tsx:191
+#: src/components/onboarding/setup/AddCampaigns.tsx:189
 #: app/Integrations/WooCommerce/NotificationSettings.php:290
 msgid "Processing Order"
 msgstr ""
 
-#: src/components/onboarding/setup/AddCampaigns.tsx:192
+#: src/components/onboarding/setup/AddCampaigns.tsx:190
 #: app/Integrations/WooCommerce/NotificationSettings.php:291
 msgid "Notify customers as their order moves to the next stage. Keep them engaged and informed, ensuring a positive shopping experience while streamlining internal operations."
 msgstr ""
 
-#: src/components/onboarding/setup/AddCampaigns.tsx:199
+#: src/components/onboarding/setup/AddCampaigns.tsx:197
 #: app/Integrations/WooCommerce/NotificationSettings.php:294
 msgid "Completed Order"
 msgstr ""
 
-#: src/components/onboarding/setup/AddCampaigns.tsx:200
+#: src/components/onboarding/setup/AddCampaigns.tsx:198
 #: app/Integrations/WooCommerce/NotificationSettings.php:295
 msgid "Celebrate a successful sale by notifying your customers when their order is completed. Encourage repeat purchases with personalized post-sale offers."
 msgstr ""
 
-#: src/components/onboarding/setup/AddCampaigns.tsx:207
+#: src/components/onboarding/setup/AddCampaigns.tsx:205
 #: app/Integrations/WooCommerce/NotificationSettings.php:298
 msgid "Refunded Order"
 msgstr ""
 
-#: src/components/onboarding/setup/AddCampaigns.tsx:208
+#: src/components/onboarding/setup/AddCampaigns.tsx:206
 #: app/Integrations/WooCommerce/NotificationSettings.php:299
 msgid "Send instant notifications to inform customers that their refund has been processed. Build trust and improve satisfaction by keeping them in the loop."
 msgstr ""
 
-#: src/components/onboarding/setup/AddCampaigns.tsx:336
+#: src/components/onboarding/setup/AddCampaigns.tsx:334
 msgid "Email verification is required to save welcome drip campaign settings."
 msgstr ""
 
-#: src/components/onboarding/setup/AddCampaigns.tsx:357
+#: src/components/onboarding/setup/AddCampaigns.tsx:355
 msgid "Error while saving the welcome drip campaign"
 msgstr ""
 
-#: src/components/onboarding/setup/AddCampaigns.tsx:399
+#: src/components/onboarding/setup/AddCampaigns.tsx:404
 msgid "Step %s: Add Campaigns"
 msgstr ""
 
-#: src/components/onboarding/setup/AddCampaigns.tsx:578
+#: src/components/onboarding/setup/AddCampaigns.tsx:583
 #: app/Integrations/WooCommerce/NotificationSettings.php:416
 msgid "Admin"
 msgstr ""
 
-#: src/components/onboarding/setup/AddCampaigns.tsx:588
+#: src/components/onboarding/setup/AddCampaigns.tsx:593
 #: app/Integrations/WooCommerce/NotificationSettings.php:425
 msgid "Customer"
 msgstr ""
 
-#: src/components/onboarding/setup/AddCampaigns.tsx:636
+#: src/components/onboarding/setup/AddCampaigns.tsx:637
 #: src/pages/design/TargetingRule.tsx:482
 #: src/pages/settings/advancedSettings/index.tsx:594
 #: src/pages/settings/autoPush/index.tsx:323
@@ -2801,324 +2812,430 @@ msgstr ""
 #: src/pages/settings/integrations/woocommerce/index.tsx:624
 #: src/pages/settings/misc/index.tsx:144
 #: src/pages/settings/siteDetails/index.tsx:600
+#: src/pages/whatsapp/WhatsappSettings.tsx:183
 msgid "Save Changes"
 msgstr ""
 
-#: src/components/onboarding/setup/AddCampaigns.tsx:639
+#: src/components/onboarding/setup/AddCampaigns.tsx:640
 msgid "Edit Welcome Drip Campaign - First Notification"
 msgstr ""
 
-#: src/components/onboarding/setup/BuildSubscribersList.tsx:239
+#: src/components/onboarding/setup/BuildSubscribersList.tsx:228
 msgid "You don't have permission to update design settings. Please contact to your admin."
 msgstr ""
 
-#: src/components/onboarding/setup/BuildSubscribersList.tsx:248
+#: src/components/onboarding/setup/BuildSubscribersList.tsx:237
 msgid "Step %s: Build Subscriber List"
 msgstr ""
 
-#: src/components/onboarding/setup/EditSubscriptionDialog.tsx:109
+#: src/components/onboarding/setup/BuildSubscribersList.tsx:240
+msgid "Welcome! Let's get started by setting up how and when your visitors see the push notification permission box. This is your first and most important step toward growing your subscriber list. It invites users to subscribe so you can reach them with personalized updates, offers, and alerts—even after they leave your site."
+msgstr ""
+
+#: src/components/onboarding/setup/ChannelSelection.tsx:140
+#: src/components/onboarding/tasksList/Card.tsx:115
+#: src/pages/dashboard/WelcomePanel.tsx:38
+msgid "Welcome to PushEngage"
+msgstr ""
+
+#: src/components/onboarding/setup/ChannelSelection.tsx:146
+msgid "Choose the services you would like to activate for your business. You can always add or modify these later."
+msgstr ""
+
+#: src/components/onboarding/setup/ChannelSelection.tsx:161
+msgid "All Selected"
+msgstr ""
+
+#: src/components/onboarding/setup/ChannelSelection.tsx:162
+msgid "Select All Channels"
+msgstr ""
+
+#: src/components/onboarding/setup/ChannelSelection.tsx:253
+msgid "Please select at least one service"
+msgstr ""
+
+#: src/components/onboarding/setup/ChannelSelection.tsx:255
+msgid "Continue with %1$s service"
+msgid_plural "Continue with %1$s services"
+msgstr[0] ""
+msgstr[1] ""
+
+#: src/components/onboarding/setup/ConnectWhatsApp.tsx:60
+#: src/components/onboarding/setup/SetupChatWidget.tsx:62
+#: src/components/onboarding/setup/SetupWhatsappAutomation.tsx:126
+#: src/components/whatsapp/WhatsappTemplateAnalytics.tsx:450
+#: src/helper/displayPushNotification.tsx:232
+#: src/pages/whatsapp/WhatsappAutomation.tsx:134
+#: src/pages/whatsapp/WhatsappSettings.tsx:141
+#: src/pages/whatsapp/WhatsappTemplates.tsx:108
+msgid "Error"
+msgstr ""
+
+#: src/components/onboarding/setup/ConnectWhatsApp.tsx:61
+#: src/components/onboarding/setup/SetupChatWidget.tsx:63
+#: src/pages/whatsapp/WhatsappSettings.tsx:142
+msgid "Failed to update settings. Please try again."
+msgstr ""
+
+#: src/components/onboarding/setup/EditSubscriptionDialog.tsx:110
 msgid " Desktop"
 msgstr ""
 
-#: src/components/onboarding/setup/EditSubscriptionDialog.tsx:113
+#: src/components/onboarding/setup/EditSubscriptionDialog.tsx:114
 msgid " Mobile"
 msgstr ""
 
-#: src/components/onboarding/setup/EditSubscriptionDialog.tsx:120
+#: src/components/onboarding/setup/EditSubscriptionDialog.tsx:121
 #: src/pages/settings/siteDetails/index.tsx:417
 msgid "Site Name"
 msgstr ""
 
-#: src/components/onboarding/setup/EditSubscriptionDialog.tsx:128
+#: src/components/onboarding/setup/EditSubscriptionDialog.tsx:129
 msgid "Enter Site Name"
 msgstr ""
 
-#: src/components/onboarding/setup/EditSubscriptionDialog.tsx:131
+#: src/components/onboarding/setup/EditSubscriptionDialog.tsx:132
 msgid "Site icon"
 msgstr ""
 
-#: src/components/onboarding/setup/EditSubscriptionDialog.tsx:162
+#: src/components/onboarding/setup/EditSubscriptionDialog.tsx:163
 #: src/components/onboarding/setup/EditWelcomeNotification.tsx:118
 msgid "Upload icon"
 msgstr ""
 
-#: src/components/onboarding/setup/EditSubscriptionDialog.tsx:165
+#: src/components/onboarding/setup/EditSubscriptionDialog.tsx:166
 #: src/components/onboarding/setup/EditWelcomeNotification.tsx:121
 msgid "Recommended size 192x192px (Max 1MB)"
 msgstr ""
 
-#: src/components/onboarding/setup/EditSubscriptionDialog.tsx:170
-msgid "Popup Message"
+#: src/components/onboarding/setup/EditSubscriptionDialog.tsx:171
+msgid "Message"
 msgstr ""
 
-#: src/components/onboarding/setup/EditSubscriptionDialog.tsx:176
+#: src/components/onboarding/setup/EditSubscriptionDialog.tsx:177
 msgid "Enter Popup Message"
 msgstr ""
 
-#: src/components/onboarding/setup/EditSubscriptionDialog.tsx:181
+#: src/components/onboarding/setup/EditSubscriptionDialog.tsx:182
 msgid "Allow Button Text"
 msgstr ""
 
-#: src/components/onboarding/setup/EditSubscriptionDialog.tsx:189
+#: src/components/onboarding/setup/EditSubscriptionDialog.tsx:190
 msgid "Enter Allow Button Text"
 msgstr ""
 
 #: src/components/onboarding/setup/EditSubscriptionDialog.tsx:195
+msgid "Customize the colors to match your brand perfectly."
+msgstr ""
+
+#: src/components/onboarding/setup/EditSubscriptionDialog.tsx:201
 msgid "Background"
 msgstr ""
 
-#: src/components/onboarding/setup/EditSubscriptionDialog.tsx:205
+#: src/components/onboarding/setup/EditSubscriptionDialog.tsx:211
 msgid "Allow Button"
 msgstr ""
 
-#: src/components/onboarding/setup/EditSubscriptionDialog.tsx:215
+#: src/components/onboarding/setup/EditSubscriptionDialog.tsx:221
 msgid "Close Icon"
 msgstr ""
 
-#: src/components/onboarding/setup/EditSubscriptionDialog.tsx:38
-msgid "Top Left"
+#: src/components/onboarding/setup/EditSubscriptionDialog.tsx:234
+msgid "Select where the permission box appears on your website. Strategic placement can help increase conversion rate."
+msgstr ""
+
+#: src/components/onboarding/setup/EditSubscriptionDialog.tsx:290
+msgid "Delay (seconds)"
+msgstr ""
+
+#: src/components/onboarding/setup/EditSubscriptionDialog.tsx:293
+msgid "Set the delay time before displaying the popup. This gives visitors a moment to settle in, helping boost opt-in rates without disrupting their experience."
 msgstr ""
 
 #: src/components/onboarding/setup/EditSubscriptionDialog.tsx:39
-msgid "Top Center"
+msgid "Top Left"
 msgstr ""
 
 #: src/components/onboarding/setup/EditSubscriptionDialog.tsx:40
+msgid "Top Center"
+msgstr ""
+
+#: src/components/onboarding/setup/EditSubscriptionDialog.tsx:41
 msgid "Top Right"
 msgstr ""
 
-#: src/components/onboarding/setup/EditSubscriptionDialog.tsx:44
+#: src/components/onboarding/setup/EditSubscriptionDialog.tsx:45
 msgid "Top"
 msgstr ""
 
-#: src/components/onboarding/setup/EditSubscriptionDialog.tsx:45
+#: src/components/onboarding/setup/EditSubscriptionDialog.tsx:46
 msgid "Bottom"
 msgstr ""
 
-#: src/components/onboarding/setup/PreviewSubscriptionDialog.tsx:59
-msgid "example.com"
-msgstr ""
-
 #. 1 - Random ID string.
-#: src/components/onboarding/setup/RecoverSales.tsx:107
+#: src/components/onboarding/setup/RecoverSales.tsx:105
 #: src/pages/settings/integrations/woocommerce/index.tsx:112
 msgid "WooCommerce Browse Abandonment-%1$s"
 msgstr ""
 
 #. 1 Random ID string.
-#: src/components/onboarding/setup/RecoverSales.tsx:113
+#: src/components/onboarding/setup/RecoverSales.tsx:111
 #: src/pages/settings/integrations/woocommerce/index.tsx:118
 msgid "WooCommerce Cart Abandonment-%1$s"
 msgstr ""
 
-#: src/components/onboarding/setup/RecoverSales.tsx:245
+#: src/components/onboarding/setup/RecoverSales.tsx:243
 msgid "An error was encountered while while saving the recover sales settings, please try again."
 msgstr ""
 
-#: src/components/onboarding/setup/RecoverSales.tsx:272
+#: src/components/onboarding/setup/RecoverSales.tsx:277
 msgid "Step %s: Recover Sales"
 msgstr ""
 
-#: src/components/onboarding/setup/RecoverSales.tsx:307
+#: src/components/onboarding/setup/RecoverSales.tsx:312
 msgid "Growth+"
 msgstr ""
 
-#: src/components/onboarding/setup/RecoverSales.tsx:338
+#: src/components/onboarding/setup/RecoverSales.tsx:343
 msgid "Unlock Advanced Recovery Features"
 msgstr ""
 
-#: src/components/onboarding/setup/RecoverSales.tsx:339
+#: src/components/onboarding/setup/RecoverSales.tsx:344
 msgid "Get access to powerful sales recovery tools and more"
 msgstr ""
 
-#: src/components/onboarding/setup/RecoverSales.tsx:340
+#: src/components/onboarding/setup/RecoverSales.tsx:345
 msgid "Upgrade Now For $99/year"
 msgstr ""
 
-#: src/components/onboarding/setup/RecoverSales.tsx:37
+#: src/components/onboarding/setup/RecoverSales.tsx:35
 msgid "Abandoned Cart Recovery"
 msgstr ""
 
-#: src/components/onboarding/setup/RecoverSales.tsx:38
+#: src/components/onboarding/setup/RecoverSales.tsx:36
 msgid "Recover lost sales by reminding customers about their abandoned carts"
 msgstr ""
 
-#: src/components/onboarding/setup/RecoverSales.tsx:53
+#: src/components/onboarding/setup/RecoverSales.tsx:51
 msgid "Convert your window shoppers"
 msgstr ""
 
-#: src/components/onboarding/setup/RecoverSales.tsx:54
+#: src/components/onboarding/setup/RecoverSales.tsx:52
 msgid "Turn browsers into buyers with targeted messaging"
 msgstr ""
 
-#: src/components/onboarding/setup/SetupFinal.tsx:42
-msgid "Congratulations! Your setup is completed."
+#: src/components/onboarding/setup/SetupFinal.tsx:103
+msgid "You are ready to start engaging your audience across channels. From welcome messages to cart recovery and order updates, you now have the tools to reach your customers where they’re most active."
 msgstr ""
 
-#: src/components/onboarding/setup/SetupFinal.tsx:46
-msgid "You have successfully completed the setup process. You can now start sending push notifications to your subscribers."
+#: src/components/onboarding/setup/SetupFinal.tsx:109
+msgid "Next step? Sit back and watch your engagement grow."
 msgstr ""
 
-#: src/components/onboarding/setup/SetupFinal.tsx:93
+#: src/components/onboarding/setup/SetupFinal.tsx:122
 msgid "Go to Dashboard"
 msgstr ""
 
-#: src/components/onboarding/setup/SetupRetargeting.tsx:108
+#: src/components/onboarding/setup/SetupFinal.tsx:136
+msgid "Upgrade for advanced features"
+msgstr ""
+
+#: src/components/onboarding/setup/SetupFinal.tsx:96
+msgid "🎉 You’re All Set!"
+msgstr ""
+
+#: src/components/onboarding/setup/SetupFinal.tsx:99
+msgid "Your PushEngage account is now fully configured."
+msgstr ""
+
+#: src/components/onboarding/setup/SetupRetargeting.tsx:106
 msgid "Primary Categories"
 msgstr ""
 
-#: src/components/onboarding/setup/SetupRetargeting.tsx:121
+#: src/components/onboarding/setup/SetupRetargeting.tsx:119
 msgid "Target users based on their primary category interactions"
 msgstr ""
 
-#: src/components/onboarding/setup/SetupRetargeting.tsx:130
+#: src/components/onboarding/setup/SetupRetargeting.tsx:128
 msgid "Customers"
 msgstr ""
 
-#: src/components/onboarding/setup/SetupRetargeting.tsx:142
+#: src/components/onboarding/setup/SetupRetargeting.tsx:140
 msgid "Reach out to users who have made purchases"
 msgstr ""
 
-#: src/components/onboarding/setup/SetupRetargeting.tsx:146
+#: src/components/onboarding/setup/SetupRetargeting.tsx:144
 msgid "Leads"
 msgstr ""
 
-#: src/components/onboarding/setup/SetupRetargeting.tsx:158
+#: src/components/onboarding/setup/SetupRetargeting.tsx:156
 msgid "Connect with potential customers showing interest"
 msgstr ""
 
-#: src/components/onboarding/setup/SetupRetargeting.tsx:223
+#: src/components/onboarding/setup/SetupRetargeting.tsx:221
 msgid "An error was encountered while while saving the retargeting settings, please try again."
 msgstr ""
 
-#: src/components/onboarding/setup/SetupRetargeting.tsx:260
+#: src/components/onboarding/setup/SetupRetargeting.tsx:265
 msgid "Step %s: Setup Retargeting"
 msgstr ""
 
-#: src/components/onboarding/setup/SetupRetargeting.tsx:265
+#: src/components/onboarding/setup/SetupRetargeting.tsx:270
 msgid "Audience Segments"
 msgstr ""
 
-#: src/components/onboarding/setup/SetupRetargeting.tsx:271
+#: src/components/onboarding/setup/SetupRetargeting.tsx:276
 msgid "Create Custom Segment"
 msgstr ""
 
-#: src/components/onboarding/setup/SetupRetargeting.tsx:309
+#: src/components/onboarding/setup/SetupRetargeting.tsx:314
 msgid "Business+"
 msgstr ""
 
-#: src/components/onboarding/setup/SetupRetargeting.tsx:333
+#: src/components/onboarding/setup/SetupRetargeting.tsx:338
 msgid "View Categories"
 msgstr ""
 
-#: src/components/onboarding/setup/SetupRetargeting.tsx:368
+#: src/components/onboarding/setup/SetupRetargeting.tsx:373
 msgid "Unlock Advanced Retargeting"
 msgstr ""
 
-#: src/components/onboarding/setup/SetupRetargeting.tsx:369
+#: src/components/onboarding/setup/SetupRetargeting.tsx:374
 msgid "Get access to powerful retargeting features and more"
 msgstr ""
 
-#: src/components/onboarding/setup/SetupRetargeting.tsx:370
+#: src/components/onboarding/setup/SetupRetargeting.tsx:375
 msgid "Upgrade Now For $49/year →"
 msgstr ""
 
-#: src/components/onboarding/setup/SetupRetargeting.tsx:392
+#: src/components/onboarding/setup/SetupRetargeting.tsx:393
 #: src/pages/audience/Segments.tsx:318
 msgid "Create a New Segment"
 msgstr ""
 
-#: src/components/onboarding/setup/StepPagination.tsx:37
+#: src/components/onboarding/setup/SetupWhatsappAutomation.tsx:127
+#: src/pages/whatsapp/WhatsappAutomation.tsx:106
+msgid "Failed to load WhatsApp automation campaigns"
+msgstr ""
+
+#: src/components/onboarding/setup/SetupWhatsappAutomation.tsx:146
+#: src/pages/whatsapp/WhatsappAutomation.tsx:160
+msgid "Automation"
+msgstr ""
+
+#: src/components/onboarding/setup/SetupWhatsappAutomation.tsx:148
+#: src/pages/whatsapp/WhatsappAutomation.tsx:162
+msgid "Enable automated transactional and promotional campaigns in a few clicks from proven templates."
+msgstr ""
+
+#: src/components/onboarding/setup/SetupWhatsappAutomation.tsx:64
+#: src/pages/whatsapp/WhatsappAutomation.tsx:66
+msgid "Error fetching whatsapp templates"
+msgstr ""
+
+#: src/components/onboarding/setup/SetupWhatsappAutomation.tsx:93
+#: src/pages/whatsapp/WhatsappAutomation.tsx:135
+msgid "Failed to save campaign settings"
+msgstr ""
+
+#: src/components/onboarding/setup/StepPagination.tsx:181
 msgid "Previous Step"
 msgstr ""
 
-#: src/components/onboarding/setup/StepPagination.tsx:55
+#: src/components/onboarding/setup/StepPagination.tsx:202
+msgid "Channel Selection"
+msgstr ""
+
+#: src/components/onboarding/setup/StepPagination.tsx:211
+msgid "Skip"
+msgstr ""
+
+#: src/components/onboarding/setup/StepPagination.tsx:223
 msgid "Next Step"
 msgstr ""
 
-#: src/components/onboarding/setup/StepPagination.tsx:55
+#: src/components/onboarding/setup/StepPagination.tsx:223
 msgid "Complete Setup"
 msgstr ""
 
-#: src/components/onboarding/setup/VerifyEmailModal.tsx:105
+#: src/components/onboarding/setup/VerifyEmailModal.tsx:101
 msgid "Email Verified"
 msgstr ""
 
-#: src/components/onboarding/setup/VerifyEmailModal.tsx:106
+#: src/components/onboarding/setup/VerifyEmailModal.tsx:102
 msgid "You now have full access to PushEngage."
 msgstr ""
 
-#: src/components/onboarding/setup/VerifyEmailModal.tsx:129
+#: src/components/onboarding/setup/VerifyEmailModal.tsx:124
 msgid "Verify your email"
 msgstr ""
 
-#: src/components/onboarding/setup/VerifyEmailModal.tsx:131
+#: src/components/onboarding/setup/VerifyEmailModal.tsx:126
 msgid "We have sent a verification code to %s"
 msgstr ""
 
-#: src/components/onboarding/setup/VerifyEmailModal.tsx:148
+#: src/components/onboarding/setup/VerifyEmailModal.tsx:143
 msgid "Verify Email"
 msgstr ""
 
-#: src/components/onboarding/setup/VerifyEmailModal.tsx:159
+#: src/components/onboarding/setup/VerifyEmailModal.tsx:154
 msgid "We have sent an email with OTP to verify your email. The email verification OTP will only be valid for 10 minutes."
 msgstr ""
 
-#: src/components/onboarding/setup/VerifyEmailModal.tsx:168
+#: src/components/onboarding/setup/VerifyEmailModal.tsx:163
 msgid "Didn't receive a code?"
 msgstr ""
 
-#: src/components/onboarding/setup/VerifyEmailModal.tsx:182
+#: src/components/onboarding/setup/VerifyEmailModal.tsx:177
 msgid "Need help?"
 msgstr ""
 
-#: src/components/onboarding/setup/VerifyEmailModal.tsx:198
+#: src/components/onboarding/setup/VerifyEmailModal.tsx:193
 msgid "Contact Customer Care"
 msgstr ""
 
-#: src/components/onboarding/tasksList/Banner.tsx:104
+#: src/components/onboarding/tasksList/Banner.tsx:112
 msgid "You're making great progress! %1$s/%2$s steps completed"
 msgstr ""
 
-#: src/components/onboarding/tasksList/Banner.tsx:111
-msgid "Continue with \"%1$s\" to set up your notification settings"
+#: src/components/onboarding/tasksList/Banner.tsx:119
+msgid "Continue with \"%1$s\" to set up your %2$s"
 msgstr ""
 
-#: src/components/onboarding/tasksList/Banner.tsx:112
+#: src/components/onboarding/tasksList/Banner.tsx:122
 msgid "onboarding Wizard"
 msgstr ""
 
-#: src/components/onboarding/tasksList/Banner.tsx:125
+#: src/components/onboarding/tasksList/Banner.tsx:123
+msgid "notification settings"
+msgstr ""
+
+#: src/components/onboarding/tasksList/Banner.tsx:137
 msgid "Continue Setup"
 msgstr ""
 
-#: src/components/onboarding/tasksList/Banner.tsx:82
+#: src/components/onboarding/tasksList/Banner.tsx:89
 msgid "%1$s/%2$s Steps"
 msgstr ""
 
-#: src/components/onboarding/tasksList/Banner.tsx:85
+#: src/components/onboarding/tasksList/Banner.tsx:92
 msgid "%1$s%% Complete"
 msgstr ""
 
-#: src/components/onboarding/tasksList/Card.tsx:55
+#: src/components/onboarding/tasksList/Card.tsx:132
+msgid "Complete the setup for %1$s to start engaging your visitors."
+msgstr ""
+
+#: src/components/onboarding/tasksList/Card.tsx:90
 msgid "Completed"
 msgstr ""
 
-#: src/components/onboarding/tasksList/Card.tsx:56
+#: src/components/onboarding/tasksList/Card.tsx:91
 msgid "In progress"
 msgstr ""
 
-#: src/components/onboarding/tasksList/Card.tsx:57
+#: src/components/onboarding/tasksList/Card.tsx:92
 msgid "Pending"
-msgstr ""
-
-#: src/components/onboarding/tasksList/Card.tsx:80
-#: src/pages/dashboard/WelcomePanel.tsx:38
-msgid "Welcome to PushEngage"
-msgstr ""
-
-#: src/components/onboarding/tasksList/Card.tsx:93
-msgid "Complete the setup to start engaging your visitors. %1$s of %2$s steps completed."
 msgstr ""
 
 #: src/components/postEditor/PostEditorMetabox.tsx:330
@@ -3197,52 +3314,868 @@ msgstr ""
 msgid "Upgrade to Business Plan"
 msgstr ""
 
-#: src/components/whatsnew/banner/index.tsx:42
+#: src/components/whatsapp/WhatsappCampaignCard.tsx:126
+msgid "Inactive"
+msgstr ""
+
+#: src/components/whatsapp/WhatsappCampaignCard.tsx:63
+#: src/pages/settings/integrations/woocommerce/index.tsx:322
+msgid "Get Started At $99/Year!"
+msgstr ""
+
+#: src/components/whatsapp/WhatsappCampaignCard.tsx:64
+msgid "14-day money-back guarantee. Cancel anytime."
+msgstr ""
+
+#: src/components/whatsapp/WhatsappCampaignCard.tsx:70
+msgid "Get Started At $49/Year!"
+msgstr ""
+
+#: src/components/whatsapp/WhatsappCampaignCard.tsx:71
+msgid "14-day money-back guarantee. No questions asked."
+msgstr ""
+
+#: src/components/whatsapp/WhatsappCampaignModal.tsx:157
+msgid "Cart abandoned cutoff time is required and must be greater than 0."
+msgstr ""
+
+#: src/components/whatsapp/WhatsappCampaignModal.tsx:165
+msgid "Customer phone type is required."
+msgstr ""
+
+#: src/components/whatsapp/WhatsappCampaignModal.tsx:174
+msgid "Customer message template is required."
+msgstr ""
+
+#. %s is a list of variables
+#: src/components/whatsapp/WhatsappCampaignModal.tsx:192
+msgid "Customer header variables %s is required."
+msgstr ""
+
+#. %s is a variable key
+#: src/components/whatsapp/WhatsappCampaignModal.tsx:204
+msgid "Customer header variable {{%s}} value cannot have new-line/tab characters or more than 4 consecutive spaces."
+msgstr ""
+
+#. %s is a list of variables
+#: src/components/whatsapp/WhatsappCampaignModal.tsx:229
+msgid "Customer body variables %s  required."
+msgstr ""
+
+#. %s is a variable key
+#: src/components/whatsapp/WhatsappCampaignModal.tsx:239
+msgid "Customer body variable {{%s}} value cannot have new-line/tab characters or more than 4 consecutive spaces."
+msgstr ""
+
+#: src/components/whatsapp/WhatsappCampaignModal.tsx:256
+msgid "Admin phone numbers is required."
+msgstr ""
+
+#: src/components/whatsapp/WhatsappCampaignModal.tsx:268
+msgid "Invalid admin phone number. Numbers must include country code without + sign."
+msgstr ""
+
+#: src/components/whatsapp/WhatsappCampaignModal.tsx:278
+msgid "Admin message template is required."
+msgstr ""
+
+#. %s is a list of variables
+#: src/components/whatsapp/WhatsappCampaignModal.tsx:294
+msgid "Admin header variables %s is required."
+msgstr ""
+
+#. %s is a variable key
+#: src/components/whatsapp/WhatsappCampaignModal.tsx:304
+msgid "Admin header variable {{%s}} value cannot have new-line/tab characters or more than 4 consecutive spaces."
+msgstr ""
+
+#. %s is a list of variables
+#: src/components/whatsapp/WhatsappCampaignModal.tsx:327
+msgid "Admin body variables %s required."
+msgstr ""
+
+#. %s is a variable key
+#: src/components/whatsapp/WhatsappCampaignModal.tsx:338
+msgid "Admin body variable {{%s}} value cannot have new-line/tab characters or more than 4 consecutive spaces."
+msgstr ""
+
+#: src/components/whatsapp/WhatsappCampaignModal.tsx:42
+msgid "(Not Supported)"
+msgstr ""
+
+#: src/components/whatsapp/WhatsappCampaignModal.tsx:596
+msgid "Customer Notification"
+msgstr ""
+
+#: src/components/whatsapp/WhatsappCampaignModal.tsx:602
+msgid "Send notification to customer"
+msgstr ""
+
+#: src/components/whatsapp/WhatsappCampaignModal.tsx:608
+msgid "Customer Phone"
+msgstr ""
+
+#: src/components/whatsapp/WhatsappCampaignModal.tsx:609
+msgid "Select which customer phone number to use for notifications"
+msgstr ""
+
+#: src/components/whatsapp/WhatsappCampaignModal.tsx:612
+msgid "Select phone number type"
+msgstr ""
+
+#: src/components/whatsapp/WhatsappCampaignModal.tsx:617
+#: src/components/whatsapp/whatsappHelper.ts:200
+msgid "Billing Phone"
+msgstr ""
+
+#: src/components/whatsapp/WhatsappCampaignModal.tsx:618
+#: src/components/whatsapp/whatsappHelper.ts:262
+msgid "Shipping Phone"
+msgstr ""
+
+#: src/components/whatsapp/WhatsappCampaignModal.tsx:619
+msgid "Both (Billing and Shipping)"
+msgstr ""
+
+#: src/components/whatsapp/WhatsappCampaignModal.tsx:626
+msgid "Cart Abandoned Cutoff Time"
+msgstr ""
+
+#: src/components/whatsapp/WhatsappCampaignModal.tsx:627
+msgid "Time in minutes after which a cart is considered abandoned"
+msgstr ""
+
+#: src/components/whatsapp/WhatsappCampaignModal.tsx:631
+msgid "Enter cutoff time in minutes"
+msgstr ""
+
+#: src/components/whatsapp/WhatsappCampaignModal.tsx:738
+msgid "Customer Template Preview"
+msgstr ""
+
+#: src/components/whatsapp/WhatsappCampaignModal.tsx:754
+msgid "Admin Notification"
+msgstr ""
+
+#: src/components/whatsapp/WhatsappCampaignModal.tsx:760
+msgid "Send notification to admin"
+msgstr ""
+
+#: src/components/whatsapp/WhatsappCampaignModal.tsx:766
+msgid "Admin Phone Numbers"
+msgstr ""
+
+#: src/components/whatsapp/WhatsappCampaignModal.tsx:767
+msgid "Enter comma-separated phone numbers with country code without + sign e.g. 919876543210,918765432109"
+msgstr ""
+
+#: src/components/whatsapp/WhatsappCampaignModal.tsx:777
+msgid "Message Template"
+msgstr ""
+
+#: src/components/whatsapp/WhatsappCampaignModal.tsx:779
+msgid "Select Template"
+msgstr ""
+
+#: src/components/whatsapp/WhatsappCampaignModal.tsx:806
+msgid "Header Variables"
+msgstr ""
+
+#: src/components/whatsapp/WhatsappCampaignModal.tsx:838
+msgid "Body Variables"
+msgstr ""
+
+#: src/components/whatsapp/WhatsappCampaignModal.tsx:870
+msgid "Admin Template Preview"
+msgstr ""
+
+#: src/components/whatsapp/WhatsappClickToChatForm.tsx:222
+#: src/pages/onboarding/channelConfig.ts:118
+msgid "WhatsApp Click To Chat Settings"
+msgstr ""
+
+#: src/components/whatsapp/WhatsappClickToChatForm.tsx:225
+#: src/pages/onboarding/channelConfig.ts:119
+msgid "Set up WhatsApp Click to Chat and turn confused web browsing into engaged conversations."
+msgstr ""
+
+#: src/components/whatsapp/WhatsappClickToChatForm.tsx:243
+msgid "Enable"
+msgstr ""
+
+#: src/components/whatsapp/WhatsappClickToChatForm.tsx:244
+msgid "Enable WhatsApp Click to Chat"
+msgstr ""
+
+#: src/components/whatsapp/WhatsappClickToChatForm.tsx:251
+msgid "WhatsApp Number"
+msgstr ""
+
+#: src/components/whatsapp/WhatsappClickToChatForm.tsx:257
+msgid "Please enter only digits without the + sign (e.g. 919876543210)."
+msgstr ""
+
+#: src/components/whatsapp/WhatsappClickToChatForm.tsx:265
+msgid "Phone number should be between 10 and 15 digits including country code."
+msgstr ""
+
+#: src/components/whatsapp/WhatsappClickToChatForm.tsx:270
+msgid "Enter your WhatsApp number with country code without + sign (e.g. 919876543210)."
+msgstr ""
+
+#: src/components/whatsapp/WhatsappClickToChatForm.tsx:281
+msgid "Greeting Message"
+msgstr ""
+
+#: src/components/whatsapp/WhatsappClickToChatForm.tsx:284
+msgid "This text will be added to user's WhatsApp chat text field when they click on the button."
+msgstr ""
+
+#: src/components/whatsapp/WhatsappClickToChatForm.tsx:295
+msgid "Button Style"
+msgstr ""
+
+#: src/components/whatsapp/WhatsappClickToChatForm.tsx:298
+msgid "Choose a button style. The selected style will be displayed on your website."
+msgstr ""
+
+#: src/components/whatsapp/WhatsappClickToChatForm.tsx:335
+msgid "Button Size"
+msgstr ""
+
+#: src/components/whatsapp/WhatsappClickToChatForm.tsx:338
+msgid "Set the size of the button in pixels."
+msgstr ""
+
+#: src/components/whatsapp/WhatsappClickToChatForm.tsx:347
+msgid "Button Position"
+msgstr ""
+
+#: src/components/whatsapp/WhatsappClickToChatForm.tsx:350
+msgid "Choose where the button appears on your website."
+msgstr ""
+
+#: src/components/whatsapp/WhatsappClickToChatForm.tsx:354
+msgid "Bottom Right"
+msgstr ""
+
+#: src/components/whatsapp/WhatsappClickToChatForm.tsx:355
+msgid "Bottom Left"
+msgstr ""
+
+#: src/components/whatsapp/WhatsappClickToChatForm.tsx:356
+msgid "Right Middle"
+msgstr ""
+
+#: src/components/whatsapp/WhatsappClickToChatForm.tsx:357
+msgid "Left Middle"
+msgstr ""
+
+#: src/components/whatsapp/WhatsappClickToChatForm.tsx:366
+msgid "Horizontal Offset"
+msgstr ""
+
+#: src/components/whatsapp/WhatsappClickToChatForm.tsx:369
+msgid "Distance from the edge of the screen horizontally."
+msgstr ""
+
+#: src/components/whatsapp/WhatsappClickToChatForm.tsx:390
+msgid "Vertical Offset"
+msgstr ""
+
+#: src/components/whatsapp/WhatsappClickToChatForm.tsx:393
+msgid "Distance from the edge of the screen vertically (applies to bottom positions)."
+msgstr ""
+
+#: src/components/whatsapp/WhatsappClickToChatForm.tsx:407
+msgid "Z-Index"
+msgstr ""
+
+#: src/components/whatsapp/WhatsappClickToChatForm.tsx:410
+msgid "Controls the stacking order of the button. Higher values appear above other elements (recommended: 9999)."
+msgstr ""
+
+#: src/components/whatsapp/WhatsappCloudApiForm.tsx:109
+msgid "WhatsApp Cloud API Settings"
+msgstr ""
+
+#: src/components/whatsapp/WhatsappCloudApiForm.tsx:114
+msgid "Configure your WhatsApp Cloud API settings to enable WhatsApp messaging functionality."
+msgstr ""
+
+#: src/components/whatsapp/WhatsappCloudApiForm.tsx:130
+#: app/Ajax.php:1122
+msgid "WhatsApp Business ID"
+msgstr ""
+
+#: src/components/whatsapp/WhatsappCloudApiForm.tsx:133
+msgid "The unique identifier for your WhatsApp Business account"
+msgstr ""
+
+#: src/components/whatsapp/WhatsappCloudApiForm.tsx:142
+#: app/Ajax.php:1123
+msgid "Phone Number ID"
+msgstr ""
+
+#: src/components/whatsapp/WhatsappCloudApiForm.tsx:145
+msgid "The ID of the phone number associated with your WhatsApp Business account"
+msgstr ""
+
+#: src/components/whatsapp/WhatsappCloudApiForm.tsx:156
+#: app/Ajax.php:1125
+msgid "WhatsApp Phone Number"
+msgstr ""
+
+#: src/components/whatsapp/WhatsappCloudApiForm.tsx:162
+msgid "Please enter only digits without the + sign (e.g. 919876543210)"
+msgstr ""
+
+#: src/components/whatsapp/WhatsappCloudApiForm.tsx:170
+msgid "Phone number should be between 10 and 15 digits including country code"
+msgstr ""
+
+#: src/components/whatsapp/WhatsappCloudApiForm.tsx:175
+msgid "The phone number associated with your WhatsApp Business account in international format with country code without + sign (e.g. 919876543210)"
+msgstr ""
+
+#: src/components/whatsapp/WhatsappCloudApiForm.tsx:186
+#: app/Ajax.php:1124
+msgid "Access Token"
+msgstr ""
+
+#: src/components/whatsapp/WhatsappCloudApiForm.tsx:189
+msgid "The permanent access token for WhatsApp Cloud API."
+msgstr ""
+
+#: src/components/whatsapp/WhatsappCloudApiForm.tsx:213
+msgid "To get your WhatsApp Cloud API credentials, follow these steps:"
+msgstr ""
+
+#: src/components/whatsapp/WhatsappCloudApiForm.tsx:217
+msgid "Create a Meta Developer Account"
+msgstr ""
+
+#: src/components/whatsapp/WhatsappCloudApiForm.tsx:220
+msgid "Sign for facebook developer account and agree to the terms to become a Meta developer."
+msgstr ""
+
+#: src/components/whatsapp/WhatsappCloudApiForm.tsx:226
+msgid "Set up a WhatsApp Business Account"
+msgstr ""
+
+#: src/components/whatsapp/WhatsappCloudApiForm.tsx:229
+msgid "Create and verify a WhatsApp Business Account through Meta Business Manager."
+msgstr ""
+
+#: src/components/whatsapp/WhatsappCloudApiForm.tsx:236
+msgid "Create a Meta App and Configure WhatsApp Integration"
+msgstr ""
+
+#: src/components/whatsapp/WhatsappCloudApiForm.tsx:240
+msgid "Create a new app in your Meta Developer Dashboard, then add the WhatsApp product and complete the required configuration."
+msgstr ""
+
+#: src/components/whatsapp/WhatsappCloudApiForm.tsx:246
+msgid "Retrieve Your API Credentials"
+msgstr ""
+
+#: src/components/whatsapp/WhatsappCloudApiForm.tsx:249
+msgid "Copy your WhatsApp Business ID, Phone Number ID, and Permanent Access Token from the WhatsApp -> API Setup section of your Meta App."
+msgstr ""
+
+#: src/components/whatsapp/WhatsappCloudApiForm.tsx:261
+msgid "See the documentation for detailed instructions."
+msgstr ""
+
+#: src/components/whatsapp/WhatsappCloudApiForm.tsx:67
+msgid "WhatsApp credentials validated successfully!"
+msgstr ""
+
+#: src/components/whatsapp/WhatsappCloudApiForm.tsx:71
+msgid "Invalid WhatsApp credentials"
+msgstr ""
+
+#: src/components/whatsapp/WhatsappCloudApiForm.tsx:75
+msgid "Please fill in all required fields with valid values"
+msgstr ""
+
+#: src/components/whatsapp/WhatsappNotConnectedCard.tsx:17
+msgid "WhatsApp Not Connected"
+msgstr ""
+
+#: src/components/whatsapp/WhatsappNotConnectedCard.tsx:18
+msgid "Connect your WhatsApp Business Account to start sending automated messages to your customers."
+msgstr ""
+
+#: src/components/whatsapp/WhatsappNotConnectedCard.tsx:22
+msgid "Connect Now"
+msgstr ""
+
+#: src/components/whatsapp/WhatsappTemplateAnalytics.tsx:170
+msgid "Delivered"
+msgstr ""
+
+#: src/components/whatsapp/WhatsappTemplateAnalytics.tsx:176
+msgid "Read"
+msgstr ""
+
+#: src/components/whatsapp/WhatsappTemplateAnalytics.tsx:237
+msgid "Start time must be within the last 90 days."
+msgstr ""
+
+#: src/components/whatsapp/WhatsappTemplateAnalytics.tsx:416
+msgid "Button Text"
+msgstr ""
+
+#: src/components/whatsapp/WhatsappTemplateAnalytics.tsx:453
+msgid "No analytics data available for this template in selected date range"
+msgstr ""
+
+#: src/components/whatsapp/WhatsappTemplateAnalytics.tsx:482
+msgid "Daily Stats"
+msgstr ""
+
+#: src/components/whatsapp/WhatsappTemplateAnalytics.tsx:486
+msgid "Button Clicks"
+msgstr ""
+
+#: src/components/whatsapp/WhatsappVariableInput.tsx:88
+msgid "Add Variable"
+msgstr ""
+
+#: src/components/whatsapp/whatsappHelper.ts:102
+msgid "Cart Currency"
+msgstr ""
+
+#: src/components/whatsapp/whatsappHelper.ts:104
+msgid "Currency of the cart"
+msgstr ""
+
+#: src/components/whatsapp/whatsappHelper.ts:110
+msgid "Order ID"
+msgstr ""
+
+#: src/components/whatsapp/whatsappHelper.ts:112
+msgid "The unique ID of the order"
+msgstr ""
+
+#: src/components/whatsapp/whatsappHelper.ts:115
+msgid "Order Total"
+msgstr ""
+
+#: src/components/whatsapp/whatsappHelper.ts:117
+msgid "The total amount of the order"
+msgstr ""
+
+#: src/components/whatsapp/whatsappHelper.ts:120
+msgid "Order Items Count"
+msgstr ""
+
+#: src/components/whatsapp/whatsappHelper.ts:122
+msgid "Number of items in the order"
+msgstr ""
+
+#: src/components/whatsapp/whatsappHelper.ts:125
+msgid "Order Currency"
+msgstr ""
+
+#: src/components/whatsapp/whatsappHelper.ts:127
+msgid "Currency of the order"
+msgstr ""
+
+#: src/components/whatsapp/whatsappHelper.ts:130
+msgid "Order Date"
+msgstr ""
+
+#: src/components/whatsapp/whatsappHelper.ts:132
+msgid "Date when the order was placed"
+msgstr ""
+
+#: src/components/whatsapp/whatsappHelper.ts:135
+msgid "Order URL"
+msgstr ""
+
+#: src/components/whatsapp/whatsappHelper.ts:137
+msgid "URL of the order page"
+msgstr ""
+
+#: src/components/whatsapp/whatsappHelper.ts:140
+msgid "Order Admin URL"
+msgstr ""
+
+#: src/components/whatsapp/whatsappHelper.ts:142
+msgid "URL of the order admin page"
+msgstr ""
+
+#: src/components/whatsapp/whatsappHelper.ts:150
+msgid "Billing First Name"
+msgstr ""
+
+#: src/components/whatsapp/whatsappHelper.ts:152
+msgid "Customer's billing first name"
+msgstr ""
+
+#: src/components/whatsapp/whatsappHelper.ts:155
+msgid "Billing Last Name"
+msgstr ""
+
+#: src/components/whatsapp/whatsappHelper.ts:157
+msgid "Customer's billing last name"
+msgstr ""
+
+#: src/components/whatsapp/whatsappHelper.ts:160
+msgid "Billing Full Name"
+msgstr ""
+
+#: src/components/whatsapp/whatsappHelper.ts:162
+msgid "Customer's full billing name"
+msgstr ""
+
+#: src/components/whatsapp/whatsappHelper.ts:165
+msgid "Billing Company"
+msgstr ""
+
+#: src/components/whatsapp/whatsappHelper.ts:167
+msgid "Customer's billing company"
+msgstr ""
+
+#: src/components/whatsapp/whatsappHelper.ts:170
+msgid "Billing Address 1"
+msgstr ""
+
+#: src/components/whatsapp/whatsappHelper.ts:172
+msgid "Customer's billing address line 1"
+msgstr ""
+
+#: src/components/whatsapp/whatsappHelper.ts:175
+msgid "Billing Address 2"
+msgstr ""
+
+#: src/components/whatsapp/whatsappHelper.ts:177
+msgid "Customer's billing address line 2"
+msgstr ""
+
+#: src/components/whatsapp/whatsappHelper.ts:180
+msgid "Billing City"
+msgstr ""
+
+#: src/components/whatsapp/whatsappHelper.ts:182
+msgid "Customer's billing city"
+msgstr ""
+
+#: src/components/whatsapp/whatsappHelper.ts:185
+msgid "Billing State"
+msgstr ""
+
+#: src/components/whatsapp/whatsappHelper.ts:187
+msgid "Customer's billing state"
+msgstr ""
+
+#: src/components/whatsapp/whatsappHelper.ts:190
+msgid "Billing Postcode"
+msgstr ""
+
+#: src/components/whatsapp/whatsappHelper.ts:192
+msgid "Customer's billing postal code"
+msgstr ""
+
+#: src/components/whatsapp/whatsappHelper.ts:195
+msgid "Billing Country"
+msgstr ""
+
+#: src/components/whatsapp/whatsappHelper.ts:197
+msgid "Customer's billing country"
+msgstr ""
+
+#: src/components/whatsapp/whatsappHelper.ts:202
+msgid "Customer's billing phone number"
+msgstr ""
+
+#: src/components/whatsapp/whatsappHelper.ts:205
+msgid "Billing Email"
+msgstr ""
+
+#: src/components/whatsapp/whatsappHelper.ts:207
+msgid "Customer's billing email address"
+msgstr ""
+
+#: src/components/whatsapp/whatsappHelper.ts:210
+msgid "Billing Address"
+msgstr ""
+
+#: src/components/whatsapp/whatsappHelper.ts:212
+msgid "Customer's formatted billing address"
+msgstr ""
+
+#: src/components/whatsapp/whatsappHelper.ts:217
+msgid "Shipping First Name"
+msgstr ""
+
+#: src/components/whatsapp/whatsappHelper.ts:219
+msgid "Customer's shipping first name"
+msgstr ""
+
+#: src/components/whatsapp/whatsappHelper.ts:222
+msgid "Shipping Last Name"
+msgstr ""
+
+#: src/components/whatsapp/whatsappHelper.ts:224
+msgid "Customer's shipping last name"
+msgstr ""
+
+#: src/components/whatsapp/whatsappHelper.ts:227
+msgid "Shipping Full Name"
+msgstr ""
+
+#: src/components/whatsapp/whatsappHelper.ts:229
+msgid "Customer's full shipping name"
+msgstr ""
+
+#: src/components/whatsapp/whatsappHelper.ts:232
+msgid "Shipping Address 1"
+msgstr ""
+
+#: src/components/whatsapp/whatsappHelper.ts:234
+msgid "Customer's shipping address line 1"
+msgstr ""
+
+#: src/components/whatsapp/whatsappHelper.ts:237
+msgid "Shipping Address 2"
+msgstr ""
+
+#: src/components/whatsapp/whatsappHelper.ts:239
+msgid "Customer's shipping address line 2"
+msgstr ""
+
+#: src/components/whatsapp/whatsappHelper.ts:242
+msgid "Shipping City"
+msgstr ""
+
+#: src/components/whatsapp/whatsappHelper.ts:244
+msgid "Customer's shipping city"
+msgstr ""
+
+#: src/components/whatsapp/whatsappHelper.ts:247
+msgid "Shipping State"
+msgstr ""
+
+#: src/components/whatsapp/whatsappHelper.ts:249
+msgid "Customer's shipping state"
+msgstr ""
+
+#: src/components/whatsapp/whatsappHelper.ts:252
+msgid "Shipping Postcode"
+msgstr ""
+
+#: src/components/whatsapp/whatsappHelper.ts:254
+msgid "Customer's shipping postal code"
+msgstr ""
+
+#: src/components/whatsapp/whatsappHelper.ts:257
+msgid "Shipping Country"
+msgstr ""
+
+#: src/components/whatsapp/whatsappHelper.ts:259
+msgid "Customer's shipping country"
+msgstr ""
+
+#: src/components/whatsapp/whatsappHelper.ts:264
+msgid "Customer's shipping phone number"
+msgstr ""
+
+#: src/components/whatsapp/whatsappHelper.ts:267
+msgid "Shipping Address"
+msgstr ""
+
+#: src/components/whatsapp/whatsappHelper.ts:269
+msgid "Customer's formatted shipping address"
+msgstr ""
+
+#: src/components/whatsapp/whatsappHelper.ts:291
+msgid "Send notification when new order is placed"
+msgstr ""
+
+#: src/components/whatsapp/whatsappHelper.ts:292
+msgid "This notification will be sent when a new order is placed."
+msgstr ""
+
+#: src/components/whatsapp/whatsappHelper.ts:295
+msgid "Order Processing"
+msgstr ""
+
+#: src/components/whatsapp/whatsappHelper.ts:296
+msgid "Send notification when order is processing"
+msgstr ""
+
+#: src/components/whatsapp/whatsappHelper.ts:297
+msgid "This notification will be sent when an order status is changed to Processing."
+msgstr ""
+
+#: src/components/whatsapp/whatsappHelper.ts:303
+msgid "Order On Hold"
+msgstr ""
+
+#: src/components/whatsapp/whatsappHelper.ts:304
+msgid "Send notification when order is on hold"
+msgstr ""
+
+#: src/components/whatsapp/whatsappHelper.ts:305
+msgid "This notification will be sent when an order status is changed to On Hold."
+msgstr ""
+
+#: src/components/whatsapp/whatsappHelper.ts:311
+msgid "Order Completed"
+msgstr ""
+
+#: src/components/whatsapp/whatsappHelper.ts:312
+msgid "Send notification when order is completed"
+msgstr ""
+
+#: src/components/whatsapp/whatsappHelper.ts:313
+msgid "This notification will be sent when an order status is changed to Completed."
+msgstr ""
+
+#: src/components/whatsapp/whatsappHelper.ts:319
+msgid "Order Cancelled"
+msgstr ""
+
+#: src/components/whatsapp/whatsappHelper.ts:320
+msgid "Send notification when order is cancelled"
+msgstr ""
+
+#: src/components/whatsapp/whatsappHelper.ts:321
+msgid "This notification will be sent when an order status is changed to Cancelled."
+msgstr ""
+
+#: src/components/whatsapp/whatsappHelper.ts:327
+msgid "Order Failed"
+msgstr ""
+
+#: src/components/whatsapp/whatsappHelper.ts:328
+msgid "Send notification when order is failed"
+msgstr ""
+
+#: src/components/whatsapp/whatsappHelper.ts:329
+msgid "This notification will be sent when an order status is changed to Failed."
+msgstr ""
+
+#: src/components/whatsapp/whatsappHelper.ts:335
+msgid "Order Refunded"
+msgstr ""
+
+#: src/components/whatsapp/whatsappHelper.ts:336
+msgid "Send notification when order is refunded"
+msgstr ""
+
+#: src/components/whatsapp/whatsappHelper.ts:337
+msgid "This notification will be sent when an order status is changed to Refunded."
+msgstr ""
+
+#: src/components/whatsapp/whatsappHelper.ts:343
+#: src/pages/settings/integrations/woocommerce/index.tsx:344
+#: src/pages/triggeredCampaign/Selection.tsx:188
+msgid "Cart Abandonment"
+msgstr ""
+
+#: src/components/whatsapp/whatsappHelper.ts:344
+msgid "Send notification when cart is abandoned"
+msgstr ""
+
+#: src/components/whatsapp/whatsappHelper.ts:345
+msgid "Remind customers about their abandoned cart."
+msgstr ""
+
+#: src/components/whatsapp/whatsappHelper.ts:54
+msgid "Site Title"
+msgstr ""
+
+#: src/components/whatsapp/whatsappHelper.ts:56
+msgid "Name of the website"
+msgstr ""
+
+#: src/components/whatsapp/whatsappHelper.ts:59
+#: src/pages/settings/siteDetails/index.tsx:432
+msgid "Site URL"
+msgstr ""
+
+#: src/components/whatsapp/whatsappHelper.ts:61
+msgid "URL of the website homepage"
+msgstr ""
+
+#: src/components/whatsapp/whatsappHelper.ts:64
+msgid "Shop URL"
+msgstr ""
+
+#: src/components/whatsapp/whatsappHelper.ts:66
+msgid "URL of the shop page"
+msgstr ""
+
+#: src/components/whatsapp/whatsappHelper.ts:69
+msgid "Checkout URL"
+msgstr ""
+
+#: src/components/whatsapp/whatsappHelper.ts:71
+msgid "URL of the checkout page"
+msgstr ""
+
+#: src/components/whatsapp/whatsappHelper.ts:74
+msgid "Cart URL"
+msgstr ""
+
+#: src/components/whatsapp/whatsappHelper.ts:76
+msgid "URL of the cart page"
+msgstr ""
+
+#: src/components/whatsapp/whatsappHelper.ts:79
+msgid "Account URL"
+msgstr ""
+
+#: src/components/whatsapp/whatsappHelper.ts:81
+msgid "URL of the user account page"
+msgstr ""
+
+#: src/components/whatsapp/whatsappHelper.ts:92
+msgid "Cart Items Count"
+msgstr ""
+
+#: src/components/whatsapp/whatsappHelper.ts:94
+msgid "Number of items in the cart"
+msgstr ""
+
+#: src/components/whatsapp/whatsappHelper.ts:97
+msgid "Cart Total"
+msgstr ""
+
+#: src/components/whatsapp/whatsappHelper.ts:99
+msgid "Total amount of the cart"
+msgstr ""
+
+#: src/components/whatsnew/banner/index.tsx:41
 msgid "Close banner"
 msgstr ""
 
 #: src/components/whatsnew/helper.ts:41
-msgid "✨ New Update: Smarter WooCommerce Notifications!"
+msgid "✨ WooCommerce WhatsApp + Free Chat Widget"
 msgstr ""
 
 #: src/components/whatsnew/helper.ts:42
-msgid "PushEngage just got even better for WooCommerce store owners. Our latest update makes it easier than ever to keep both customers and admins in the loop—reducing confusion, improving order management, and boosting engagement.<br/><br/><h3>What’s New?</h3>"
+msgid "We just took PushEngage to the next level. You can now engage your customers on WhatsApp—the world’s most popular messaging app—alongside web and mobile push. Plus, you get a free WhatsApp Click-to-Chat widget to boost conversations instantly.<br/>"
 msgstr ""
 
 #: src/components/whatsnew/helper.ts:49
-msgid "✅ More Admin Controls"
+msgid "Introducing WhatsApp Messaging + Free Click-to-Chat Widget!"
 msgstr ""
 
 #: src/components/whatsnew/helper.ts:50
-msgid "Get instant alerts for new, failed, or refunded orders so you can act fast."
+msgid "<p>We just took PushEngage to the next level. You can now engage your customers on <strong>WhatsApp</strong>—the world’s most popular messaging app—alongside web and mobile push. Plus, you get a <strong>free WhatsApp Click-to-Chat widget</strong> to boost conversations instantly.</p><p>Whether you’re recovering <strong>carts</strong> or providing instant support, WhatsApp is now built right into your PushEngage workflow.</p><ul><li>Free <strong>Click-to-Chat WhatsApp widget</strong> for all WordPress sites</li><li>Automate <strong>cart recovery</strong> and <strong>order updates</strong> via WhatsApp</li><li>Use pre-approved message templates with <strong>WhatsApp Business API</strong></li><li>Seamless integration with <strong>WooCommerce</strong></li><li>Built-in support for <strong>COD verification, payment reminders</strong>, and more</li></ul>"
 msgstr ""
 
-#: src/components/whatsnew/helper.ts:57
-msgid "✅ Customer Engagement Boost"
-msgstr ""
-
-#: src/components/whatsnew/helper.ts:58
-msgid "Automated review requests and personalized order updates keep customers informed and increase repeat purchases."
-msgstr ""
-
-#: src/components/whatsnew/helper.ts:65
-msgid "✅ Seamless Dashboard Integration"
+#: src/components/whatsnew/helper.ts:59
+msgid "Connect your WhatsApp account or activate the free Click-to-Chat widget to start driving conversions today."
 msgstr ""
 
 #: src/components/whatsnew/helper.ts:66
-msgid "Set up and manage notifications directly within WooCommerce, with zero coding required."
-msgstr ""
-
-#: src/components/whatsnew/helper.ts:73
-msgid "✅ New Product Announcements"
-msgstr ""
-
-#: src/components/whatsnew/helper.ts:74
-msgid "Instantly notify customers about new arrivals straight from your product management dashboard."
-msgstr ""
-
-#: src/components/whatsnew/helper.ts:83
-msgid "This update is designed to <strong>reduce support tickets, speed up operations, and improve customer experience—</strong>all with the power of push notifications.<strong>Try It Now – Enable Smarter Push Notifications for WooCommerce!</strong>"
+msgid "Set Up WhatsApp Now"
 msgstr ""
 
 #: src/constants/confirmationModal.ts:11
@@ -3311,7 +4244,7 @@ msgid "A/B test your broadcasts"
 msgstr ""
 
 #: src/constants/planFeatures.ts:105
-msgid "Send campaigns in subscribers’ timezone"
+msgid "Send campaigns in subscriber's timezone"
 msgstr ""
 
 #: src/constants/planFeatures.ts:106
@@ -3335,7 +4268,7 @@ msgid "Track engagement and performance"
 msgstr ""
 
 #: src/constants/planFeatures.ts:111
-msgid "Style your <a>push notification optins</a> based on detailed analytics. Grow your subscriber list faster using data. Upgrade to the Premium plan now and you can also:"
+msgid "Style your <a>push notification optins</a> based on detailed analytics. Grow your subscriber list faster using data. Upgrade to the Growth plan now and you can also:"
 msgstr ""
 
 #: src/constants/planFeatures.ts:12
@@ -3371,11 +4304,7 @@ msgid "Schedule campaigns in advance"
 msgstr ""
 
 #: src/constants/planFeatures.ts:154
-msgid "<a>Create an Audience Group</a> and personalize your notification based on segments, user’s geolocation, device and more. Upgrade to the Business plan now and you can also:"
-msgstr ""
-
-#: src/constants/planFeatures.ts:16
-msgid "Send campaigns in subscriber timezones"
+msgid "<a>Create an Audience Group</a> and personalize your notification based on segments, user's geolocation, device and more. Upgrade to the Business plan now and you can also:"
 msgstr ""
 
 #: src/constants/planFeatures.ts:164
@@ -3491,11 +4420,11 @@ msgid "Optimize your notifications by user timezone and improve user engagement.
 msgstr ""
 
 #: src/constants/planFeatures.ts:293
-msgid "Upgrade to PushEngage Premium and A/B Test Your Push Broadcasts"
+msgid "Upgrade to PushEngage Growth and A/B Test Your Push Broadcasts"
 msgstr ""
 
 #: src/constants/planFeatures.ts:296
-msgid "A/B test any element in your push notifications. Use our Intelligent <a>A/B testing</a> and get better clicks and more revenue. Upgrade to the Premium plan now and you can also:"
+msgid "A/B test any element in your push notifications. Use our Intelligent <a>A/B testing</a> and get better clicks and more revenue. Upgrade to the Growth plan now and you can also:"
 msgstr ""
 
 #: src/constants/planFeatures.ts:306
@@ -3523,7 +4452,7 @@ msgid "Send price drop and back-in-stock alerts"
 msgstr ""
 
 #: src/constants/planFeatures.ts:326
-msgid "Upgrade to PushEngage Premium and Send Drip Autoresponder Push Notifications"
+msgid "Upgrade to PushEngage Growth and Send Drip Autoresponder Push Notifications"
 msgstr ""
 
 #: src/constants/planFeatures.ts:33
@@ -3531,7 +4460,7 @@ msgid "Boost revenue with abandoned cart recovery"
 msgstr ""
 
 #: src/constants/planFeatures.ts:332
-msgid "<a>Schedule a drip campaign</a> with multiple notifications for re-engagement, cross-selling, upselling and much more. Personalize your campaigns using Segments, Audience Groups, and Attributes. Upgrade to the Premium plan now and you can also:"
+msgid "<a>Schedule a drip campaign</a> with multiple notifications for re-engagement, cross-selling, upselling and much more. Personalize your campaigns using Segments, Audience Groups, and Attributes. Upgrade to the Growth plan now and you can also:"
 msgstr ""
 
 #: src/constants/planFeatures.ts:34
@@ -3551,19 +4480,75 @@ msgid "Create a dynamic campaign for cross-sell, up-sell & review"
 msgstr ""
 
 #: src/constants/planFeatures.ts:350
-msgid "Upgrade to PushEngage Premium to Enable Goal Tracking"
+msgid "Upgrade to PushEngage Growth to Enable Goal Tracking"
 msgstr ""
 
 #: src/constants/planFeatures.ts:353
-msgid "Track how your <a>push notifications are performing</a>. Create custom goals and stay on track with your marketing strategy. Upgrade to the Premium plan now and you can also:"
+msgid "Track how your <a>push notifications are performing</a>. Create custom goals and stay on track with your marketing strategy. Upgrade to the Growth plan now and you can also:"
 msgstr ""
 
 #: src/constants/planFeatures.ts:36
 msgid "Get VIP assistance from support team"
 msgstr ""
 
+#: src/constants/planFeatures.ts:364
+msgid "✅ Send Order Updates on WhatsApp"
+msgstr ""
+
+#: src/constants/planFeatures.ts:365
+msgid "Deliver real-time order updates to your customers where they actually read them-on WhatsApp. This unlocks essential automation tools to keep your customers informed. Starting at just $49/year, it includes unlimited WhatsApp sending and unlimited subscribers."
+msgstr ""
+
+#: src/constants/planFeatures.ts:370
+msgid "Send order updates instantly via WhatsApp."
+msgstr ""
+
+#: src/constants/planFeatures.ts:371
+msgid "Keep customers informed at every step."
+msgstr ""
+
+#: src/constants/planFeatures.ts:372
+msgid "Cut down support tickets and follow-ups."
+msgstr ""
+
+#: src/constants/planFeatures.ts:373
+msgid "Automate it once, let it run on autopilot."
+msgstr ""
+
+#: src/constants/planFeatures.ts:374
+msgid "Scale freely with unlimited sending and subscribers."
+msgstr ""
+
+#: src/constants/planFeatures.ts:380
+msgid "🛒 Recover Abandoned Carts with WhatsApp"
+msgstr ""
+
+#: src/constants/planFeatures.ts:381
+msgid "Bring shoppers back and recover lost sales with automated WhatsApp cart reminders. The Growth Plan starts at just $99/year, and includes unlimited WhatsApp sending and unlimited subscribers - built to scale with your business."
+msgstr ""
+
+#: src/constants/planFeatures.ts:386
+msgid "Send cart recovery messages instantly on WhatsApp."
+msgstr ""
+
+#: src/constants/planFeatures.ts:387
+msgid "Reconnect with high-intent shoppers in real time."
+msgstr ""
+
+#: src/constants/planFeatures.ts:388
+msgid "Boost conversions with personalized nudges."
+msgstr ""
+
+#: src/constants/planFeatures.ts:389
+msgid "Automate once and recover carts on autopilot."
+msgstr ""
+
 #: src/constants/planFeatures.ts:39
 msgid "Drive higher engagement and conversions with personalized trigger campaigns tailored to individual customer actions."
+msgstr ""
+
+#: src/constants/planFeatures.ts:390
+msgid "No caps—enjoy unlimited sending and subscribers."
 msgstr ""
 
 #: src/constants/planFeatures.ts:43
@@ -3599,7 +4584,7 @@ msgid "Upgrade to PushEngage Business and Create Audience Groups for Your Push N
 msgstr ""
 
 #: src/constants/planFeatures.ts:99
-msgid "Upgrade to PushEngage Premium and Get Detailed Optin Analytics"
+msgid "Upgrade to PushEngage Growth and Get Detailed Optin Analytics"
 msgstr ""
 
 #: src/errors/APIError.ts:30
@@ -3648,10 +4633,6 @@ msgstr ""
 
 #: src/helper/displayPushNotification.tsx:228
 msgid "An error occurred while displaying push notification."
-msgstr ""
-
-#: src/helper/displayPushNotification.tsx:232
-msgid "Error"
 msgstr ""
 
 #: src/helper/displayPushNotification.tsx:234
@@ -4145,7 +5126,7 @@ msgstr ""
 #: src/pages/analytics/OptinAnalytics.tsx:181
 #: src/pages/analytics/Overview.tsx:123
 #: src/pages/audience/Subscribers.tsx:131
-#: src/pages/dashboard/Dashboard.tsx:144
+#: src/pages/dashboard/Dashboard.tsx:116
 msgid "You can only view analytics of maximum 12 months at a time."
 msgstr ""
 
@@ -4320,19 +5301,19 @@ msgstr ""
 msgid "Triggered Campaigns"
 msgstr ""
 
-#: src/pages/dashboard/Dashboard.tsx:288
+#: src/pages/dashboard/Dashboard.tsx:215
 msgid "Read PushEngage Guide"
 msgstr ""
 
-#: src/pages/dashboard/Dashboard.tsx:300
+#: src/pages/dashboard/Dashboard.tsx:227
 msgid "Access our premium support today"
 msgstr ""
 
-#: src/pages/dashboard/Dashboard.tsx:308
+#: src/pages/dashboard/Dashboard.tsx:235
 msgid "View the changelog"
 msgstr ""
 
-#: src/pages/dashboard/Dashboard.tsx:321
+#: src/pages/dashboard/Dashboard.tsx:248
 msgid "Getting started? Read the beginners guide"
 msgstr ""
 
@@ -4421,12 +5402,12 @@ msgid "Read the Getting Started Guide"
 msgstr ""
 
 #: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:104
-#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:56
+#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:87
 msgid "Improved Click-through"
 msgstr ""
 
 #: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:105
-#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:57
+#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:88
 msgid "Click-through rates 5X higher than email."
 msgstr ""
 
@@ -4443,47 +5424,47 @@ msgid "Push Notifications: Powerful, Personalized, and Perfectly Timed"
 msgstr ""
 
 #: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:137
-#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:80
+#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:111
 msgid "PushEngage creates value-driven campaigns your customers will love:"
 msgstr ""
 
 #: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:145
-#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:88
+#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:119
 msgid "Opt-in Only"
 msgstr ""
 
 #: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:146
-#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:89
+#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:120
 msgid "Notifications are only sent to the opted-in users."
 msgstr ""
 
 #: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:151
-#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:94
+#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:125
 msgid "Personalized & Timed"
 msgstr ""
 
 #: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:152
-#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:95
+#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:126
 msgid "Messages are personalized and perfectly timed."
 msgstr ""
 
 #: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:157
-#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:100
+#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:131
 msgid "Automated Campaigns"
 msgstr ""
 
 #: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:158
-#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:101
+#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:132
 msgid "Campaigns are automated for minimal effort and maximum results."
 msgstr ""
 
 #: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:164
-#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:108
+#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:139
 msgid "Start Your Free Trial Today"
 msgstr ""
 
 #: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:171
-#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:115
+#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:146
 msgid "With PushEngage, your customers will thank you, not unsubscribe."
 msgstr ""
 
@@ -4542,7 +5523,7 @@ msgid "Here’s the truth: Most visitors won’t return unless you remind them w
 msgstr ""
 
 #: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:89
-#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:41
+#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:72
 msgid "Push Notifications That Deliver Results"
 msgstr ""
 
@@ -4551,7 +5532,7 @@ msgid "Whether you’re recovering abandoned carts, sharing exclusive offers, or
 msgstr ""
 
 #: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:98
-#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:50
+#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:81
 msgid "High Open Rates"
 msgstr ""
 
@@ -4559,7 +5540,11 @@ msgstr ""
 msgid "Increase the open rates of up to 90%."
 msgstr ""
 
-#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:107
+#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:110
+msgid "Think Push Notifications Are Spammy? Think Again."
+msgstr ""
+
+#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:138
 msgid "Try PushEngage for WooCommerce Now →"
 msgstr ""
 
@@ -4571,16 +5556,12 @@ msgstr ""
 msgid "Abandoned carts, ignored emails, and missed opportunities don't have to be the norm. PushEngage turns fleeting visitors into loyal customers with personalized, high-converting push notifications—now with real-time WooCommerce order updates for both customers and admins."
 msgstr ""
 
-#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:51
+#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:82
 msgid "Increase open rates up to 90%."
 msgstr ""
 
-#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:63
+#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:94
 msgid "Set it once, and let PushEngage handle the rest."
-msgstr ""
-
-#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:79
-msgid "Think Push Notifications Are Spammy? Think Again."
 msgstr ""
 
 #: src/pages/dashboard/siteNotConnected/components/BoostSales.tsx:13
@@ -4991,48 +5972,138 @@ msgstr ""
 msgid "Notification delay should be less than 1826 days"
 msgstr ""
 
-#: src/pages/onboarding/helpers.ts:105
+#: src/pages/onboarding/OnboardingSetup.tsx:405
+msgid "Setup"
+msgstr ""
+
+#: src/pages/onboarding/OnboardingSetup.tsx:408
+#: src/pages/onboarding/channelConfig.ts:174
+msgid "Complete"
+msgstr ""
+
+#: src/pages/onboarding/channelConfig.ts:106
+msgid "Click to Chat (WhatsApp)"
+msgstr ""
+
+#: src/pages/onboarding/channelConfig.ts:107
+msgid "Let customers reach you instantly on WhatsApp"
+msgstr ""
+
+#: src/pages/onboarding/channelConfig.ts:125
+msgid "Setup Widget"
+msgstr ""
+
+#: src/pages/onboarding/channelConfig.ts:139
+msgid "WhatsApp Automation"
+msgstr ""
+
+#: src/pages/onboarding/channelConfig.ts:140
+msgid "Automate marketing messages on WhatsApp (WooCommerce only)"
+msgstr ""
+
+#: src/pages/onboarding/channelConfig.ts:151
+msgid "Connect WhatsApp Business"
+msgstr ""
+
+#: src/pages/onboarding/channelConfig.ts:152
+msgid "Connect your WhatsApp Business account to start sending notifications"
+msgstr ""
+
+#: src/pages/onboarding/channelConfig.ts:158
+msgid "Connect WhatsApp"
+msgstr ""
+
+#: src/pages/onboarding/channelConfig.ts:162
+msgid "Setup Automation"
+msgstr ""
+
+#: src/pages/onboarding/channelConfig.ts:163
+msgid "Create and configure your WhatsApp message templates"
+msgstr ""
+
+#: src/pages/onboarding/channelConfig.ts:166
+msgid "Setup Templates"
+msgstr ""
+
+#: src/pages/onboarding/channelConfig.ts:170
+#: src/pages/onboarding/helpers.ts:51
+msgid "Final Step"
+msgstr ""
+
+#: src/pages/onboarding/channelConfig.ts:171
+msgid "Setup completed successfully"
+msgstr ""
+
+#: src/pages/onboarding/channelConfig.ts:187
+msgid "WooCommerce is required for cart recovery features"
+msgstr ""
+
+#: src/pages/onboarding/channelConfig.ts:196
+msgid "WooCommerce is required for WhatsApp integration"
+msgstr ""
+
+#: src/pages/onboarding/channelConfig.ts:42
+#: app/Integrations/WooCommerce/NotificationActions.php:110
+#: app/Integrations/WooCommerce/NotificationSettings.php:233
+#: app/Integrations/WooCommerce/NotificationSettings.php:350
+#: app/NavMenu.php:112
+#: app/NavMenu.php:113
+msgid "Push Notifications"
+msgstr ""
+
+#: src/pages/onboarding/channelConfig.ts:43
+msgid "Convert visitors with real-time browser notifications"
+msgstr ""
+
+#: src/pages/onboarding/channelConfig.ts:55
+msgid "You're all set to grow your audience and maximize engagement."
+msgstr ""
+
+#: src/pages/onboarding/channelConfig.ts:61
+#: src/pages/onboarding/helpers.ts:16
+msgid "Build Subscriber List"
+msgstr ""
+
+#: src/pages/onboarding/channelConfig.ts:66
+#: src/pages/onboarding/helpers.ts:21
+msgid "Grow your audience to boost engagement and conversions"
+msgstr ""
+
+#: src/pages/onboarding/channelConfig.ts:69
+#: src/pages/onboarding/helpers.ts:24
+msgid "Add Campaigns"
+msgstr ""
+
+#: src/pages/onboarding/channelConfig.ts:74
+#: src/pages/onboarding/helpers.ts:29
+msgid "Deliver targeted push notifications that bring users back and increase conversions."
+msgstr ""
+
+#: src/pages/onboarding/channelConfig.ts:80
+#: src/pages/onboarding/helpers.ts:35
+msgid "Setup Retargeting"
+msgstr ""
+
+#: src/pages/onboarding/channelConfig.ts:86
+#: src/pages/onboarding/helpers.ts:41
+msgid "Win back abandoned carts and recover lost revenue with automated campaigns."
+msgstr ""
+
+#: src/pages/onboarding/channelConfig.ts:91
+#: src/pages/onboarding/helpers.ts:46
+msgid "Recover Sales"
+msgstr ""
+
+#: src/pages/onboarding/helpers.ts:104
 msgid "Setup Your Site"
 msgstr ""
 
-#: src/pages/onboarding/helpers.ts:107
+#: src/pages/onboarding/helpers.ts:106
 msgid "Your notification system is ready to start reaching customers."
 msgstr ""
 
 #: src/pages/onboarding/helpers.ts:13
 msgid "You’re all set to grow your audience and maximize engagement."
-msgstr ""
-
-#: src/pages/onboarding/helpers.ts:16
-msgid "Build Subscriber List"
-msgstr ""
-
-#: src/pages/onboarding/helpers.ts:21
-msgid "Grow your audience to boost engagement and conversions"
-msgstr ""
-
-#: src/pages/onboarding/helpers.ts:24
-msgid "Add Campaigns"
-msgstr ""
-
-#: src/pages/onboarding/helpers.ts:29
-msgid "Deliver targeted push notifications that bring users back and increase conversions."
-msgstr ""
-
-#: src/pages/onboarding/helpers.ts:35
-msgid "Setup Retargeting"
-msgstr ""
-
-#: src/pages/onboarding/helpers.ts:41
-msgid "Win back abandoned carts and recover lost revenue with automated campaigns."
-msgstr ""
-
-#: src/pages/onboarding/helpers.ts:46
-msgid "Recover Sales"
-msgstr ""
-
-#: src/pages/onboarding/helpers.ts:51
-msgid "Final Step"
 msgstr ""
 
 #: src/pages/pushBroadcast/CreateOrEdit.tsx:1031
@@ -5535,18 +6606,6 @@ msgstr ""
 msgid "Manage PushEngage integrations with third-party apps and services."
 msgstr ""
 
-#: src/pages/settings/integrations/woocommerce/DashboardNotice.tsx:43
-msgid "Connect Your WooCommerce Store to PushEngage Today!"
-msgstr ""
-
-#: src/pages/settings/integrations/woocommerce/DashboardNotice.tsx:44
-msgid "Enable automated cart and browse abandonment push notifications to boost conversions and effortlessly recover lost sales."
-msgstr ""
-
-#: src/pages/settings/integrations/woocommerce/DashboardNotice.tsx:57
-msgid "Remind me Later"
-msgstr ""
-
 #: src/pages/settings/integrations/woocommerce/index.tsx:272
 msgid "WooCommerce integration settings updated successfully"
 msgstr ""
@@ -5555,17 +6614,8 @@ msgstr ""
 msgid "Failed to update WooCommerce integration settings."
 msgstr ""
 
-#: src/pages/settings/integrations/woocommerce/index.tsx:322
-msgid "Get Started At $99/Year!"
-msgstr ""
-
 #: src/pages/settings/integrations/woocommerce/index.tsx:327
 msgid "You don't have permission to create/modify WooCommerce Integration settings. Please contact to your admin."
-msgstr ""
-
-#: src/pages/settings/integrations/woocommerce/index.tsx:344
-#: src/pages/triggeredCampaign/Selection.tsx:188
-msgid "Cart Abandonment"
 msgstr ""
 
 #: src/pages/settings/integrations/woocommerce/index.tsx:347
@@ -5699,10 +6749,6 @@ msgstr ""
 
 #: src/pages/settings/siteDetails/index.tsx:402
 msgid "or"
-msgstr ""
-
-#: src/pages/settings/siteDetails/index.tsx:432
-msgid "Site URL"
 msgstr ""
 
 #: src/pages/settings/siteDetails/index.tsx:445
@@ -5989,6 +7035,118 @@ msgstr ""
 msgid "New Triggered Campaign"
 msgstr ""
 
+#: src/pages/whatsapp/WhatsappAutomation.tsx:150
+msgid "Connect your WhatsApp Business Account to start setting up automated campaigns."
+msgstr ""
+
+#: src/pages/whatsapp/WhatsappSettings.tsx:136
+msgid "Success"
+msgstr ""
+
+#: src/pages/whatsapp/WhatsappSettings.tsx:137
+msgid "Settings updated successfully!"
+msgstr ""
+
+#: src/pages/whatsapp/WhatsappSettings.tsx:164
+msgid "Click To Chat"
+msgstr ""
+
+#: src/pages/whatsapp/WhatsappSettings.tsx:179
+msgid "WhatsApp Cloud API"
+msgstr ""
+
+#: src/pages/whatsapp/WhatsappSettings.tsx:67
+msgid "Failed to load WhatsApp settings. Please try again."
+msgstr ""
+
+#: src/pages/whatsapp/WhatsappSettings.tsx:84
+msgid "Failed to load WhatsApp Click To Chat settings. Please try again."
+msgstr ""
+
+#: src/pages/whatsapp/WhatsappTemplates.tsx:109
+msgid "Failed to load WhatsApp templates"
+msgstr ""
+
+#: src/pages/whatsapp/WhatsappTemplates.tsx:204
+msgid "Template Name"
+msgstr ""
+
+#: src/pages/whatsapp/WhatsappTemplates.tsx:214
+msgid "Category"
+msgstr ""
+
+#: src/pages/whatsapp/WhatsappTemplates.tsx:234
+msgid "Language"
+msgstr ""
+
+#: src/pages/whatsapp/WhatsappTemplates.tsx:253
+msgid "View Analytics"
+msgstr ""
+
+#: src/pages/whatsapp/WhatsappTemplates.tsx:258
+msgid "Actions"
+msgstr ""
+
+#: src/pages/whatsapp/WhatsappTemplates.tsx:292
+msgid "Message Templates"
+msgstr ""
+
+#: src/pages/whatsapp/WhatsappTemplates.tsx:294
+msgid "Manage your WhatsApp message templates for sending transactional and promotional campaigns. Please note that these templates can be created only in your Meta account, and it must be approved before you use."
+msgstr ""
+
+#: src/pages/whatsapp/WhatsappTemplates.tsx:311
+msgid "Create Template"
+msgstr ""
+
+#: src/pages/whatsapp/WhatsappTemplates.tsx:320
+msgid "Search templates..."
+msgstr ""
+
+#: src/pages/whatsapp/WhatsappTemplates.tsx:329
+msgid "Filter by category"
+msgstr ""
+
+#: src/pages/whatsapp/WhatsappTemplates.tsx:344
+msgid "Filter by status"
+msgstr ""
+
+#: src/pages/whatsapp/WhatsappTemplates.tsx:359
+msgid "Filter by language"
+msgstr ""
+
+#: src/pages/whatsapp/WhatsappTemplates.tsx:375
+msgid "Clear filters"
+msgstr ""
+
+#: src/pages/whatsapp/WhatsappTemplates.tsx:389
+msgid "No templates found."
+msgstr ""
+
+#: src/pages/whatsapp/WhatsappTemplates.tsx:395
+msgid "templates"
+msgstr ""
+
+#: src/pages/whatsapp/WhatsappTemplates.tsx:401
+msgid "No templates found"
+msgstr ""
+
+#: src/pages/whatsapp/WhatsappTemplates.tsx:402
+msgid "You don't have any WhatsApp templates yet. Create your first template to get started."
+msgstr ""
+
+#: src/pages/whatsapp/WhatsappTemplates.tsx:410
+msgid "Connect your WhatsApp Business Account to manage message templates."
+msgstr ""
+
+#: src/pages/whatsapp/WhatsappTemplates.tsx:419
+msgid "Template Preview"
+msgstr ""
+
+#: src/pages/whatsapp/WhatsappTemplates.tsx:86
+msgid "Error fetching WhatsApp templates"
+msgstr ""
+
 #: src/utils/index.ts:84
 msgid "Copied to Clipboard!"
 msgstr ""
@@ -6025,27 +7183,65 @@ msgstr ""
 msgid "Upgrade to Pro"
 msgstr ""
 
-#: app/Ajax.php:105
+#: app/Ajax.php:115
 #: app/Integrations/WooCommerce/NotificationActions.php:192
 #: app/Integrations/WooCommerce/NotificationActions.php:250
 #: app/WhatsNew.php:111
 msgid "Permission denied. Please make sure you have required permission to perform this action."
 msgstr ""
 
-#: app/Ajax.php:163
+#: app/Ajax.php:173
 msgid "An error was encountered while connecting your account, please try again"
 msgstr ""
 
-#: app/Ajax.php:810
+#: app/Ajax.php:820
 msgid "Invalid request. Campaign Settings data missing."
 msgstr ""
 
-#: app/Ajax.php:919
+#: app/Ajax.php:929
 msgid "Invalid request. Retargeting Settings data missing."
 msgstr ""
 
-#: app/Ajax.php:998
+#: app/Ajax.php:1008
 msgid "Invalid request. Recover Sales Settings data missing."
+msgstr ""
+
+#: app/Ajax.php:1100
+#: app/Ajax.php:1368
+msgid "Please enter the WhatsApp phone number in international format with country code without + sign (e.g. 919876543210)"
+msgstr ""
+
+#: app/Ajax.php:1112
+#: app/Ajax.php:1380
+msgid "WhatsApp phone number should be between 10 and 15 digits including country code."
+msgstr ""
+
+#: app/Ajax.php:1132
+msgid "%s is required."
+msgstr ""
+
+#: app/Ajax.php:1178
+msgid "Campaign data is required."
+msgstr ""
+
+#: app/Ajax.php:1192
+msgid "Campaign ID is required."
+msgstr ""
+
+#: app/Ajax.php:1398
+msgid "Horizontal offset must be between 0 and 200 pixels."
+msgstr ""
+
+#: app/Ajax.php:1408
+msgid "Vertical offset must be between 0 and 200 pixels."
+msgstr ""
+
+#: app/Ajax.php:1419
+msgid "Z-Index must be between 1 and 999999."
+msgstr ""
+
+#: app/Ajax.php:1430
+msgid "WhatsApp phone number is required when the feature is enabled."
 msgstr ""
 
 #. Translators: 1 - Post Type. - 2 - Post Title
@@ -6130,14 +7326,6 @@ msgstr ""
 
 #: app/Includes/SubscriberSync.php:87
 msgid "User not logged in."
-msgstr ""
-
-#: app/Integrations/WooCommerce/NotificationActions.php:110
-#: app/Integrations/WooCommerce/NotificationSettings.php:233
-#: app/Integrations/WooCommerce/NotificationSettings.php:350
-#: app/NavMenu.php:112
-#: app/NavMenu.php:113
-msgid "Push Notifications"
 msgstr ""
 
 #: app/Integrations/WooCommerce/NotificationActions.php:149
@@ -6619,6 +7807,14 @@ msgstr ""
 msgid "Order (#{{order_id}}) placed on {{order_date}} couldn’t be processed. We’re trying to recover your order. If the campaign is enabled, an automatic retry request will be sent to the customer."
 msgstr ""
 
+#: app/Integrations/WooCommerce/Whatsapp/CartAbandonment/Tracker.php:601
+msgid "Every 10 Minutes"
+msgstr ""
+
+#: app/Integrations/WooCommerce/Whatsapp/WhatsappCloudApi.php:50
+msgid "WhatsApp credentials are missing"
+msgstr ""
+
 #: app/Integrations/WooCommerce/Woo.php:52
 msgid "Publish"
 msgstr ""
@@ -6649,6 +7845,14 @@ msgid "Design"
 msgstr ""
 
 #: app/Utils/AdminNavMenuItems.php:86
+msgid "WhatsApp"
+msgstr ""
+
+#: app/Utils/AdminNavMenuItems.php:91
+msgid "Click to Chat"
+msgstr ""
+
+#: app/Utils/AdminNavMenuItems.php:96
 msgid "About Us"
 msgstr ""
 

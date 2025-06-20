@@ -1,65 +1,114 @@
-=== Web & App Push Notifications by PushEngage: WordPress & WooCommerce Alerts to Supercharge Engagement ===
+=== Web Push, App Push, & WhatsApp Notifications by PushEngage: WordPress & WooCommerce Alerts to Supercharge Engagement ===
 Contributors: PushEngage, smub
 Tags: push notifications, web push notifications, cart abandonment notifications, woocommerce push notifications, mobile push notifications
 Requires at least: 4.5.0
-Tested up to: 6.7
+Tested up to: 6.8
 Requires PHP: 5.6
-Stable tag: 4.1.1.1
+Stable tag: 4.1.2
 License: GNU General Public License v2.0 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-🤩 Send personalized web and app push notifications that convert. Get 10x repeat traffic and sales with push notification campaigns. 🚀
+🚀 Send order updates, recover carts & boost traffic with multichannel push. Now with WhatsApp automation + free Click-to-Chat for WordPress!
 
 == Description ==
 
 ===  ===
 
-Boost engagement, drive repeat traffic, and increase sales with personalized push notifications that reach users directly on web and mobile.<a href="https://www.pushengage.com/?utm_source=orgplugin&utm_medium=link&utm_campaign=wpreadme" rel="friend">PushEngage</a> is the #1 push notification plugin, designed to help you turn casual visitors into loyal customers.
+<strong>Boost engagement, drive repeat traffic, and increase sales</strong> with multichannel push notifications that reach users directly on the web, mobile apps, and WhatsApp.<a href="https://www.pushengage.com/?utm_source=orgplugin&utm_medium=link&utm_campaign=wpreadme" rel="friend">PushEngage</a>  is the #1 push notification plugin for WordPress and WooCommerce — built to help you turn casual visitors into loyal, high-value customers.
 
-With PushEngage’s web push notifications, you can turn your website visitors into regular readers, loyal fans, and repeat customers. The coolest part is that it only takes your subscribers two clicks or less to get subscribed to your notifications.
+With PushEngage, you can:
+* Send web push notifications using our powerful Gutenberg integration
+* Recover abandoned carts on WooCommerce using web and WhatsApp messages
+* Send mobile app push notifications for Android, iOS, and cross-platform apps like React Native or Flutter
+* Launch price drop alerts, browse abandonment reminders, and transactional updates
 
-Here’s why 25K + smart business owners, designers, and developers use PushEngage to send <strong>15+ billion web push campaigns every month</strong>, and you will too!
+Join 25,000+ smart marketers who use PushEngage to send over <strong>15 billion notifications every month.</strong>
 
 [youtube https://www.youtube.com/watch?v=eBhtAZgoNbE]
 
-PushEngage is a powerful tool for building and retaining your audience with web push notifications. With our plugin, your visitors can subscribe to alerts in just two clicks, enabling you to deliver messages that keep them coming back.
+=== WhatsApp Notifications for WordPress ===
+
+PushEngage now includes <strong>WhatsApp as a core channel</strong> for engagement alongside web and mobile push.
+
+What's included:
+* 🟢 <strong>FREE WhatsApp Click-to-Chat widget</strong> for WordPress (no account needed)
+* 🛒 <strong>Abandoned cart recovery messages</strong> via WhatsApp
+* 📦 <strong>Order confirmation, COD verification & shipping alerts</strong>
+* 🧾 <strong>Payment retry messages, review reminders, and more</strong>
+
+Designed for WordPress. Built for ROI.
+
+=== The Only WordPress Plugin Built for Multichannel Customer Engagement ===
+
+PushEngage is a complete customer engagement platform for WordPress and WooCommerce, offering:
+* <strong>WhatsApp Notifications:</strong> Send personalized messages for cart recovery, order updates, and more. Free Click-to-Chat widget included.
+* <strong>Web Push Notifications:</strong> Convert casual visitors into subscribers with 2-click opt-ins. Send campaigns straight from the WordPress editor.
+* <strong>WooCommerce Push Notifications:</strong> Automate order updates, cart recovery, and price drop alerts.
+* <strong>Mobile App Push Notifications:</strong> Reach users on Android, iOS, and cross-platform apps via React Native and Flutter.
+
+Don’t want all the channels? While we strongly recommend a multichannel approach to marketing, you’re completely free to pick and choose the channels you want.
+
+Just want WhatsApp? No problem. Need web and app push notifications? We got you. Need everything at once? Just get started.
 
 Our plugin is packed with features to help you:
+
 * Grow your subscriber base with engaging opt-ins.
 * Launch push notification campaigns that drive conversions.
 * Track performance with advanced analytics and revenue insights.
 
 PushEngage integrates directly with WordPress and helps you:
+
 * Create opt-ins
 * Launch web push campaigns
 * Grow your subscriber base
 * Track your revenue goals
 * Manage your audience using advanced segmentation and audience targeting rules
 
-Straight from your WordPress dashboard. You can even create push notifications from your Gutenberg post editor that automatically fetch and map: 
+Straight from your WordPress dashboard. You can even create push notifications from your Gutenberg post editor that automatically fetch and map:
+
 * Post Title → Notification Title
 * Meta Description → Notification Text
 * Featured Image → Notification Image
 
 [youtube https://www.youtube.com/watch?v=xnPC4f3e0Xo]
 
-You can also select a custom audience to send your notification right from the WordPress editor.
+Plus, you can select a custom audience right inside the Gutenberg editor.
 
-<strong>PushEngage for WooCommerce Push Notifications</strong><br />
-With PushEngage, setting up <strong>WooCommerce push notifications</strong> is effortless. You can send cart abandonment push notifications, browse abandonment push notifications, price drop alerts, and inventory alerts as triggered campaigns from <strong>pre-built campaign templates.</strong>
+=== WhatsApp Notifications for WooCommerce ===
 
-Not just that, but our WooCommerce integration makes it super easy to launch eCommerce campaigns. All you have to do is switch on the toggle button!
+Recover abandoned carts and send transactional updates directly on WhatsApp.
+
+* Cart reminders via WhatsApp
+* Order confirmations and shipping alerts
+* Works seamlessly with WooCommerce
+
+All from pre-built campaigns! Just connect your WhatsApp Business API and enable the campaigns.
+<strong>NOTE:</strong> You can send unlimited WhatsApp messages with our paid plans. Unlike SMS, which is super expensive and charges you per message, you only pay a flat fee for the PushEngage platform.
+
+=== <strong>PushEngage for WooCommerce Push Notifications</strong> ===
+
+With PushEngage, setting up <strong>WooCommerce push notifications</strong> is effortless.
+Effortlessly send:
+
+* ✅ Cart & browse abandonment reminders
+* ✅ Order confirmations & shipping updates
+* ✅ Price drop alerts & inventory notifications
+* ✅ Payment retry requests and review reminders
+
+Just turn on the pre-built campaign templates. No coding required.
 
 PushEngage is a <strong>multichannel notification system</strong> for WordPress and WooCommerce. Engage customers, streamline operations, and automate critical updates with real-time <strong>web push notifications, WooCommerce push notifications, and app push notifications.</strong>
 
 <strong>PushEngage for WooCommerce Store Customers</strong><br />
+
 * <strong>Instant Order Updates</strong>: Keep customers informed with pre-built notification templates that you can simply turn on with a toggle button.
-* <strong>Multiple Campaign Types</strong>: Send automated WooCommerce push notifications for order confirmations, shipping alerts, product updates, and delivery updates with a single click.
-* <strong>Cart Abandonment Recovery</strong>: Bring back lost shoppers with cart abandonment push notifications, increasing conversions effortlessly.
+* <strong>Multiple Campaign Types</strong>: Send automated WooCommerce push notifications for <strong>order confirmations, shipping alerts, product updates, and delivery updates</strong> with a single click.
+* <strong>Cart Abandonment Recovery</strong>: Bring back lost shoppers with <strong>cart abandonment push notifications</strong>, increasing conversions effortlessly.
 * <strong>Personalized Promotions & Re-Engagement</strong>: Send targeted push campaigns to drive repeat visits and sales. You can even send individual notifications for review requests, payment retries, and order updates using pre-built templates.
 * <strong>Seamless Multichannel Messaging</strong>: Customers receive updates via <strong>web push, app push, and PWA push notifications.</strong>
 
 <strong>PushEngage for WooCommerce Store Admins & Teams</strong><br />
+
 * <strong>Internal Team Alerts</strong>: Automate notifications for new orders, refund requests, and order fulfillment updates.
 * <strong>Faster Decision-Making</strong>: Get real-time alerts for critical order updates. Never lose another sale due to missed internal communications.
 * <strong>Pre-Built WooCommerce Templates</strong>: Save time with ready-made order notifications, and team alerts.
@@ -69,36 +118,35 @@ You even get advanced analytics and goal tracking to track your performance metr
 
 Along with the absolute best web push notification software in the market, you also get a top-tier Customer Success team to help you get more success from your push notifications more often.
 
-<strong>About PushEngage Web Push Notifications</strong><br />
-PushEngage is a SaaS service to send browser and web app push notifications including:
+=== <strong>Mobile App Push Notifications</strong> ===
+PushEngage isn’t just for the web. We also support app push notifications for:
 
-* Chrome push notifications
-* Firefox push notifications
-* Opera push notifications
-* Mobile push notifications
-* iOS and iPadOS web notifications
-* Android web push notifications
-* WooCommerce push notifications
-* Easy Digital Downloads (EDD) push notifications
-* AMP web push notifications
-* PWA web push notifications
-* Mozilla web push notifications
+* Android apps
+* iOS apps
+* React Native
+* Flutter apps
+* AMP sites
+* PWAs and more
 
-And more.
+Build true cross-channel experiences with real-time updates across devices.
+You will need to create a PushEngage account to use our popup builder and to gain web push notification subscribers using PushEngage. We recommend <a href="https://www.pushengage.com/wordpress-pricing/?utm_source=orgplugin&utm_medium=link&utm_campaign=wpreadme">getting started with PushEngage Premium!</a>
 
-You will need to create a PushEngage account to use our popup builder and to gain push notification subscribers using PushEngage. We recommend <a href="https://www.pushengage.com/pricing/?utm_source=orgplugin&utm_medium=link&utm_campaign=wpreadme">getting started with PushEngage Premium!</a>
+<strong>Built for Non-Developers</strong>
+
+PushEngage automatically installs the service worker—no manual upload needed. All your campaigns, opt-ins, and automations can be set up with a few clicks.
+You’ll also get:
+
+* Real-time performance insights
+* Pre-built WooCommerce notification templates
+* Auto-revenue tracking
+* Seamless Google Analytics integration
+* Dedicated customer success support
 
 It’s super easy to create highly targeted and personalized push messages with our easy campaign creator.
 
 If you’re looking for advanced automation, you can use the push API to serve use cases that your competitors aren’t even thinking of!
 
-The best part is the PushEngage plugin connects directly with the web app and installs the service worker on your site automatically unlike any other push notification service.
-
-Just in case you’re not a developer, the service worker is a JSON file that allows you to collect push notification subscribers. With other push notification software, you need to manually download and place the file into your server. But our plugin automatically does it for you.
-
 [youtube https://www.youtube.com/watch?v=wZiVN7AX5ho]
-
-All the triggers are predefined and you only have to create a campaign and enable it from a drop-down in the PushEngage plugin. What’s even cooler is that PushEngage also comes with automatic revenue tracking so that you can see how your campaigns are contributing to your business.
 
 === Send Web, Mobile, and Web App Push Notifications to Increase Repeat Traffic & Conversions ===
 
@@ -216,22 +264,16 @@ This WordPress web push notifications plugin was created by <a href="https://sye
 === What's Next ===
 To get the most value out of your growing browser push notification subscriber list, see our <a href="https://www.pushengage.com/best-practices-web-push-notifications/?utm_source=orgplugin&utm_medium=link&utm_campaign=wpreadme" rel="friend">push notification best practices</a> and our article on <a href="https://www.pushengage.com/push-notification-examples/?utm_source=orgplugin&utm_medium=link&utm_campaign=wpreadme" rel="friend">75 Epic Push Notification Examples You Can Steal Right Now</a>.
 
-If you like this WordPress web push notifications plugin, then consider checking out our other integrations:
+<strong>Supported Channels</strong>
 
-* **[WooCommerce](https://www.pushengage.com/woocommerce-push-notification-plugin/?utm_source=orgplugin&utm_medium=link&utm_campaign=wpreadme)**
-* **[Web SDK](https://www.pushengage.com/api/web-sdk/?utm_source=orgplugin&utm_medium=link&utm_campaign=wpreadme)**
-* **[Android SDK](https://www.pushengage.com/api/mobile-sdk/android-sdk/?utm_source=orgplugin&utm_medium=link&utm_campaign=wpreadme)**
-* **[iOS SDK](https://www.pushengage.com/api/mobile-sdk/iOS-sdk/?utm_source=orgplugin&utm_medium=link&utm_campaign=wpreadme)**
-* **[Shopify](https://www.pushengage.com/push-notification-app-for-shopify/?utm_source=orgplugin&utm_medium=link&utm_campaign=wpreadme)**
-* **[Shopify Plus](https://www.pushengage.com/shopify-plus-app/?utm_source=orgplugin&utm_medium=link&utm_campaign=wpreadme)**
-* **[Easy Digital Downloads](https://www.pushengage.com/easy-digital-downloads-integration/?utm_source=orgplugin&utm_medium=link&utm_campaign=wpreadme)**
-* **[MemberPress](https://www.pushengage.com/memberpress-integration/?utm_source=orgplugin&utm_medium=link&utm_campaign=wpreadme)**
-* **[OptinMonster](https://www.pushengage.com/optinmonster-integration/?utm_source=orgplugin&utm_medium=link&utm_campaign=wpreadme)**
-* **[WPCode](https://www.pushengage.com/wpcode-integration/?utm_source=orgplugin&utm_medium=link&utm_campaign=wpreadme)**
-* **[Hubspot](https://www.pushengage.com/hubspot-integration/?utm_source=orgplugin&utm_medium=link&utm_campaign=wpreadme)**
-* **[ClickFunnels](https://www.pushengage.com/clickfunnels-integration/?utm_source=orgplugin&utm_medium=link&utm_campaign=wpreadme)**
-* **[Salesforce](https://www.pushengage.com/salesforce-integration/?utm_source=orgplugin&utm_medium=link&utm_campaign=wpreadme)**
-* **[Zapier](https://www.pushengage.com/zapier-integration/?utm_source=orgplugin&utm_medium=link&utm_campaign=wpreadme)**
+PushEngage supports:
+
+* Chrome, Firefox, Safari, Opera
+* Android & iOS Web Push
+* AMP & PWA sites
+* WooCommerce & Easy Digital Downloads
+* Mobile apps (native and hybrid)
+* WhatsApp (via WooCommerce integration)
 
 PushEngage just works no matter what device or browser your visitors are using including:
 
@@ -245,17 +287,64 @@ PushEngage just works no matter what device or browser your visitors are using i
 
 This means that you can also send mobile push notifications such as Android web push notifications as well as iOS and iPadOS push notifications.
 
-<a href="https://www.pushengage.com/pricing/?utm_source=orgplugin&utm_medium=link&utm_campaign=wpreadme" rel="friend">Get started with PushEngage today!</a>
+<a href="https://www.pushengage.com/wordpress-pricing/?utm_source=orgplugin&utm_medium=link&utm_campaign=wpreadme" rel="friend">Get started with PushEngage today!</a>
 
 == Frequently Asked Questions ==
 
 = Is there a free plan, and what’s included? =
 
-PushEngage offers a free plan, which includes basic push notification features to help you get started. Paid plans unlock advanced features such as A/B testing, analytics, audience segmentation, and additional customization options to drive higher engagement.
+PushEngage offers a free plan, which includes basic push notification features to help you get started. You also get a WhatsApp click to chat widget that allows website visitors to send your business a message on WhatsApp. Paid plans unlock advanced features such as A/B testing, analytics, audience segmentation, and additional customization options to drive higher engagement.
 
 = How do push notifications compare to email for engagement? =
 
 Push notifications are like the YouTube Shorts of the messaging world. It’s a different format and you often achieve higher engagement rates than email because they deliver messages instantly to users’ devices. With PushEngage, you can even automate campaigns and segment audiences, making it easy to maintain engagement without needing constant manual input.
+
+= Do I need a WhatsApp Business account to send notifications? =
+
+Yes. To send WhatsApp notifications using PushEngage, you need a WhatsApp Business API account connected through a verified phone number.
+
+= What types of messages can I send via WhatsApp? =
+
+You can send transactional and automated messages including:
+
+* Order confirmations
+* Shipping and delivery updates
+* Abandoned cart reminders
+* COD verification messages
+* Payment retry requests
+
+= Can I send promotional messages via WhatsApp? =
+
+You can send promotional messages only within approved template categories allowed by WhatsApp. These typically require prior opt-in and WhatsApp template approval.
+
+= Is WhatsApp messaging available on the free plan? =
+
+WhatsApp business messaging automation is not available on the free plan due to third-party costs. The free plan includes a WhatsApp click to chat widget that allows your website visitors to send a message to your business. But that can’t recover lost sales or improve your customer satisfaction with order status updates.
+
+= Does this work with WooCommerce? =
+
+Yes. Our WhatsApp integration is built specifically for WooCommerce and can be activated with a toggle. You can use pre-built templates or create custom ones.
+
+= How do I set up WhatsApp in PushEngage? =
+
+From your PushEngage dashboard:
+
+* Navigate to Channels » WhatsApp
+* Connect your WhatsApp Business API provider (e.g., 360dialog or Meta)
+* Configure templates and triggers
+* Enable WhatsApp campaigns for WooCommerce events
+
+= Can I personalize WhatsApp messages for each customer? =
+
+Yes. PushEngage supports dynamic variables such as customer name, order ID, product names, and tracking links for hyper-personalized messages.
+
+= What happens if the user doesn’t have WhatsApp? =
+
+Messages will only be delivered to users with WhatsApp. If a user doesn’t have WhatsApp, fallback messaging (like web push) is recommended.
+
+=  Is WhatsApp messaging GDPR-compliant? =
+
+Yes. PushEngage ensures you can collect proper consent via opt-in checkboxes and comply with WhatsApp’s template and opt-in policies.
 
 = Can PushEngage send notifications to both desktop and mobile users? =
 
@@ -265,7 +354,7 @@ Yes, PushEngage supports notifications across multiple platforms, including desk
 
 Absolutely! PushEngage has powerful eCommerce features specifically designed for WooCommerce and other platforms. You can send automated notifications for cart abandonment, price drops, inventory alerts, and browse abandonment to recover potential lost sales.
 
-= How does PushEngage handle analytics and tracking? = 
+= How does PushEngage handle analytics and tracking? =
 
 PushEngage includes built-in analytics to help you monitor your campaign performance. You can track metrics such as click-through rates, conversions, and revenue directly from your dashboard, and even integrate with Google Analytics for deeper insights.
 
@@ -283,7 +372,7 @@ PushEngage offers a dedicated Customer Success team to assist with setup, troubl
 2. Activate the PushEngage plugin from the plugin section.
 3. Navigate to the PushEngage tab in your WordPress admin and connect your PushEngage account to your WordPress site to start displaying subscription popups to build a subscriber base.
 4. Click on the Campaigns tab to configure campaigns or send out automatic posts with every post being published.
-5. Want more push notification features? <a href="https://www.pushengage.com/pricing/?utm_source=orgplugin&utm_medium=link&utm_campaign=wpreadme" rel="friend">Upgrade to PushEngage Business, Premium, or Growth plan</a>.
+5. Want more push notification features? <a href="https://www.pushengage.com/wordpress-pricing/?utm_source=orgplugin&utm_medium=link&utm_campaign=wpreadme" rel="friend">Upgrade to PushEngage Business, Premium, or Growth plan</a>.
 
 == Screenshots ==
 
@@ -315,6 +404,10 @@ Syed Balkhi
 == Changelog ==
 
 **Most Recent Changes:**
+
+= 4.1.2 =
+* Added WhatsApp Notification support for WooCommerce.
+* Improved onboarding flow.
 
 = 4.1.1.1 =
 * Added Onboarding wizard progress tracker in Dashboard.

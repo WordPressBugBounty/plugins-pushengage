@@ -132,8 +132,8 @@ class NavMenu {
 			);
 
 			// Add a custom class and css to the 'Upgrade To Pro' menu
-			if ( isset( $submenu['pushengage'][11] ) ) {
-				$submenu['pushengage'][11][4] = 'pe-upgrade-to-pro-submenu';
+			if ( isset( $submenu['pushengage'][13] ) ) {
+				$submenu['pushengage'][13][4] = 'pe-upgrade-to-pro-submenu';
 			}
 		}
 

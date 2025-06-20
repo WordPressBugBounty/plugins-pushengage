@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 
 var PushEngage = window.PushEngage || [];
 var PushEngageWPPluginApp = window.PushEngageWPPluginApp || {};
@@ -13,20 +13,17 @@ PushEngageWPPluginApp.SubscriberSync =
           subscriberSync.mayBeSyncSubscriberId(subscriberId);
         });
 
-        w.addEventListener("PushEngage.onSubscriptionChange", function (event) {
+        w.addEventListener('PushEngage.onSubscriptionChange', function (event) {
           subscriberSync.mayBeSyncSubscriberId(event.detail.subscriber_id);
         });
 
-
-        if ('1' === pushengageSubscriberSync?.enabled_leads_segment) {
+        if ('1' === pushengageSubscriberSync.enabled_leads_segment) {
           subscriberSync.getPushEngageSubscriber(function (subscriber) {
             if (subscriber) {
               subscriberSync.mayBeSyncSegments(subscriber);
             }
-          }
-          );
+          });
         }
-
       },
 
       getPushEngageSubscriber: function (cb) {
@@ -35,8 +32,8 @@ PushEngageWPPluginApp.SubscriberSync =
             .then(function (subscriber) {
               return cb(subscriber);
             })
-            .catch(function (error) {
-              console.error(error);
+            .catch(function () {
+              cb(null);
             });
         });
       },
@@ -47,34 +44,31 @@ PushEngageWPPluginApp.SubscriberSync =
             .then(function (subscriberId) {
               return cb(subscriberId);
             })
-            .catch(function (error) {
-              console.error(error);
+            .catch(function () {
+              cb(null);
             });
         });
       },
 
       mayBeSyncSegments: function (subscriber) {
         if (subscriber) {
-          var segments = subscriber.segments;
+          var segments = subscriber.segments || [];
           var alreadySegmented = segments.some(function (segment) {
-            return segment === "Leads" || segment === "Customers";
-          }
-          );
+            return segment === 'Leads' || segment === 'Customers';
+          });
 
           if (!alreadySegmented) {
-            try {
-              PushEngage.addSegment('Leads');
-            } catch (e) { }
+            PushEngage.addSegment('Leads').catch(subscriberSync.noop);
           }
         }
       },
 
       mayBeSyncSubscriberId: function (subscriberId) {
-        var localSynchedId = localStorage.getItem("pe_wp_synched_sid");
+        var localSynchedId = localStorage.getItem('pe_wp_synched_sid');
         var synched_subscriber_ids =
           pushengageSubscriberSync.subscriber_ids || [];
         // if synched_subscriber_ids is an object, convert it to an array.
-        if (typeof synched_subscriber_ids === "object") {
+        if (typeof synched_subscriber_ids === 'object') {
           synched_subscriber_ids = Object.values(synched_subscriber_ids);
         }
         var remove_id = null;
@@ -87,20 +81,20 @@ PushEngageWPPluginApp.SubscriberSync =
 
           if (localSynchedId) {
             if (localSynchedId !== subscriberId) {
-              localStorage.setItem("pe_wp_synched_sid", subscriberId);
+              localStorage.setItem('pe_wp_synched_sid', subscriberId);
               if (synched_subscriber_ids.includes(localSynchedId)) {
                 remove_id = localSynchedId;
               }
             }
           } else {
-            localStorage.setItem("pe_wp_synched_sid", subscriberId);
+            localStorage.setItem('pe_wp_synched_sid', subscriberId);
           }
         } else {
           if (localSynchedId) {
             if (synched_subscriber_ids.includes(localSynchedId)) {
               remove_id = localSynchedId;
             }
-            localStorage.removeItem("pe_wp_synched_sid");
+            localStorage.removeItem('pe_wp_synched_sid');
           }
         }
 
@@ -110,21 +104,21 @@ PushEngageWPPluginApp.SubscriberSync =
 
         // send a AJAX request to add or remove subscriber id.
         var formData = new FormData();
-        formData.append("nonce", pushengageSubscriberSync?.nonce);
-        formData.append("action", "pe_subscriber_sync");
+        formData.append('nonce', pushengageSubscriberSync.nonce);
+        formData.append('action', 'pe_subscriber_sync');
         if (add_id) {
-          formData.append("add_id", add_id);
+          formData.append('add_id', add_id);
         }
         if (remove_id) {
-          formData.append("remove_id", remove_id);
+          formData.append('remove_id', remove_id);
         }
 
         var options = {
-          method: "POST",
-          cache: "no-cache",
-          credentials: "same-origin",
+          method: 'POST',
+          cache: 'no-cache',
+          credentials: 'same-origin',
           headers: {
-            "Content-Type": "application/x-www-form-urlencoded",
+            'Content-Type': 'application/x-www-form-urlencoded',
           },
           body: new URLSearchParams(formData),
         };
@@ -135,12 +129,11 @@ PushEngageWPPluginApp.SubscriberSync =
           })
           .then(function (result) {
             if (!result.success) {
-              localStorage.removeItem("pe_wp_synched_sid");
+              localStorage.removeItem('pe_wp_synched_sid');
             }
           })
-          .catch(function (error) {
-            console.error(error);
-            localStorage.removeItem("pe_wp_synched_sid");
+          .catch(function () {
+            localStorage.removeItem('pe_wp_synched_sid');
           });
       },
     };

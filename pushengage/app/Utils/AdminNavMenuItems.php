@@ -47,7 +47,7 @@ class AdminNavMenuItems {
 					),
 					array(
 						'id'    => 'integrations',
-						'label' => '<span style="color:#f18500">' . esc_html__( 'WooCommerce', 'pushengage' ) . '</span>' . '<span style="padding-left: 2px;color: #f18200; vertical-align: super; font-size: 9px;"> NEW!</span>',
+						'label' => esc_html__( 'WooCommerce', 'pushengage' ),
 						'url'   => 'settings/integrations',
 					),
 					array(
@@ -81,6 +81,16 @@ class AdminNavMenuItems {
 		);
 
 		if ( 'adminmenu' === $menu_pos ) {
+			$menu_items[] = array(
+				'id'    => 'whatsapp',
+				'label' => '<span style="color:#f18500">' . esc_html__( 'WhatsApp', 'pushengage' ) . '</span>' . '<span style="padding-left: 2px;color: #f18200; vertical-align: super; font-size: 9px;"> BETA</span>',
+				'url'   => 'whatsapp/automation',
+			);
+			$menu_items[] = array(
+				'id'    => 'click-to-chat',
+				'label' => '<span style="color:#f18500">' . esc_html__( 'Click to Chat', 'pushengage' ) . '</span>' . '<span style="padding-left: 2px;color: #f18200; vertical-align: super; font-size: 9px;"> NEW!</span>',
+				'url'   => 'whatsapp/settings?tab=click-to-chat',
+			);
 			$menu_items[] = array(
 				'id'    => 'about-us',
 				'label' => esc_html__( 'About Us', 'pushengage' ),
