@@ -1,19 +1,16 @@
-=== Web Push, App Push, & WhatsApp Notifications by PushEngage: WordPress & WooCommerce Alerts to Supercharge Engagement ===
+=== PushEngage - Automated Multichannel Customer Engagement Platform ===
 Contributors: PushEngage, smub
 Tags: push notifications, web push notifications, cart abandonment notifications, woocommerce push notifications, mobile push notifications
 Requires at least: 4.5.0
 Tested up to: 6.8
 Requires PHP: 5.6
-Stable tag: 4.1.2
+Stable tag: 4.1.3
 License: GNU General Public License v2.0 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 🚀 Send order updates, recover carts & boost traffic with multichannel push. Now with WhatsApp automation + free Click-to-Chat for WordPress!
 
 == Description ==
-
-===  ===
-
 <strong>Boost engagement, drive repeat traffic, and increase sales</strong> with multichannel push notifications that reach users directly on the web, mobile apps, and WhatsApp.<a href="https://www.pushengage.com/?utm_source=orgplugin&utm_medium=link&utm_campaign=wpreadme" rel="friend">PushEngage</a>  is the #1 push notification plugin for WordPress and WooCommerce — built to help you turn casual visitors into loyal, high-value customers.
 
 With PushEngage, you can:
@@ -24,19 +21,18 @@ With PushEngage, you can:
 
 Join 25,000+ smart marketers who use PushEngage to send over <strong>15 billion notifications every month.</strong>
 
-[youtube https://www.youtube.com/watch?v=eBhtAZgoNbE]
+=== New in PushEngage: WhatsApp Messaging ===
 
-=== WhatsApp Notifications for WordPress ===
-
-PushEngage now includes <strong>WhatsApp as a core channel</strong> for engagement alongside web and mobile push.
+Engage your WooCommerce and WordPress users with direct, high-converting WhatsApp messages.
 
 What's included:
-* 🟢 <strong>FREE WhatsApp Click-to-Chat widget</strong> for WordPress (no account needed)
-* 🛒 <strong>Abandoned cart recovery messages</strong> via WhatsApp
-* 📦 <strong>Order confirmation, COD verification & shipping alerts</strong>
-* 🧾 <strong>Payment retry messages, review reminders, and more</strong>
+* 🛒 Recover abandoned carts
+* 📦 Send order updates and shipping alerts
+* 🧾 Trigger payment retries, COD confirmations, review reminders
+* 💬 Add a free WhatsApp Click-to-Chat widget to any page
 
-Designed for WordPress. Built for ROI.
+<strong>Built for WooCommerce. Works with your WhatsApp Business API.</strong>
+💡 No SMS fees. No phone numbers to collect. Just better engagement.
 
 === The Only WordPress Plugin Built for Multichannel Customer Engagement ===
 
@@ -404,6 +400,10 @@ Syed Balkhi
 == Changelog ==
 
 **Most Recent Changes:**
+
+= 4.1.3 =
+* Improved onboarding process.
+* Improved WooCommerce order notification process.
 
 = 4.1.2 =
 * Added WhatsApp Notification support for WooCommerce.

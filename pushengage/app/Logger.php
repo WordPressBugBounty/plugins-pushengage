@@ -8,6 +8,9 @@
 
 namespace PushEngage;
 
+use Pushengage\Utils\Options;
+use Pushengage\Utils\ArrayHelper;
+
 /**
  * Logger class for handling error messages with different log levels.
  *
@@ -84,6 +87,13 @@ class Logger {
 	private $enable_custom_log = false;
 
 	/**
+	 * Whether deleting log files is in progress
+	 *
+	 * @var bool
+	 */
+	private $is_deleting_log_files = false;
+
+	/**
 	 * Whether custom log files can be written
 	 *
 	 * @var bool
@@ -97,24 +107,23 @@ class Logger {
 	 */
 	private function __construct() {
 
-		// We are checking for WP_PUSHENGAGE_DEBUG_LEVEL to set the minimum
-		// log level.
-		// TODO: Give an option in misc settings UI to set the minimum log level.
-		if ( defined( 'WP_PUSHENGAGE_DEBUG_LEVEL' ) && $this->is_valid_log_level( \WP_PUSHENGAGE_DEBUG_LEVEL ) ) {
-			$this->min_log_level = \WP_PUSHENGAGE_DEBUG_LEVEL;
+		// Get debug settings from site settings.
+		$site_settings = Options::get_site_settings();
+		$debug_enabled = ArrayHelper::get( $site_settings, 'misc.enableDebugMode', false );
+		$debug_level   = ArrayHelper::get( $site_settings, 'misc.debugLevel', self::LOG_LEVEL_DEBUG );
+
+		// Set minimum log level.
+		if ( $this->is_valid_log_level( $debug_level ) ) {
+			$this->min_log_level = $debug_level;
 		}
 
-		// We are checking for WP_PUSHENGAGE_DEBUG to enable custom log file.
-		// TODO: Give an option in misc settings UI to enable/disable custom
-		// log file.
-		if ( defined( 'WP_PUSHENGAGE_DEBUG' ) ) {
-			$this->enable_custom_log = (bool) \WP_PUSHENGAGE_DEBUG;
-		}
+		// Set enable custom log.
+		$this->enable_custom_log = (bool) $debug_enabled;
 
-		// If logging to custom log file is not disabled, then initialize log
+		// If logging to custom log file is enabled, then initialize log
 		// directory and rotate log if needed.
 		if ( $this->enable_custom_log ) {
-			// Initialize log directory first
+			// Initialize log directory.
 			$this->initialize_log_directory();
 
 			// Rotate log if custom logging is available
@@ -369,7 +378,7 @@ class Logger {
 		}
 
 		// only write to custom log file if custom log is enabled.
-		if ( $this->enable_custom_log ) {
+		if ( $this->enable_custom_log && ! $this->is_deleting_log_files ) {
 			$timestamp = current_time( 'Y-m-d H:i:s', true );
 			$log_entry = sprintf( '[%s] [%s] %s', $timestamp, $level, $log_entry );
 			$log_entry .= PHP_EOL;
@@ -407,7 +416,7 @@ class Logger {
 			$created = wp_mkdir_p( $log_dir );
 			if ( ! $created ) {
 				$this->can_write_custom_log = false;
-				return;
+				return false;
 			}
 			$this->create_index_html( $log_dir );
 		}
@@ -417,16 +426,32 @@ class Logger {
 			$bytes_written = file_put_contents( $log_file, '' );
 			if ( false === $bytes_written ) {
 				$this->can_write_custom_log = false;
-				return;
+				return false;
 			}
 		}
 		// Check if log file is writable
 		if ( ! is_writable( $log_file ) ) {
 			$this->can_write_custom_log = false;
-			return;
+			return false;
 		}
 
 		$this->can_write_custom_log = true;
+		return true;
+	}
+
+	/**
+	 * AJAX handler for initializing debug log
+	 *
+	 * @since 4.1.2
+	 * @return void
+	 */
+	public function ajax_initialize_debug_log() {
+		$can_write_custom_log = $this->initialize_log_directory();
+		if ( ! $can_write_custom_log ) {
+			// translators: %s is the log directory path.
+			wp_send_json_error( array( 'message' => sprintf( __( 'Debug log initialization failed. Please check if the log directory is writable. %s', 'pushengage' ), $this->get_log_dir_path() ) ) );
+		}
+		wp_send_json_success( array( 'message' => 'Debug log initialized' ) );
 	}
 
 	/**
@@ -483,6 +508,28 @@ class Logger {
 
 		// Delete old backup files
 		$this->delete_old_backup_files();
+	}
+
+	/**
+	 * Delete all log files
+	 *
+	 * @since 4.1.2
+	 * @return void
+	 */
+	public function delete_all_log_files() {
+		$log_dir   = $this->get_log_dir_path();
+		$log_files = glob( $log_dir . '/*.txt' );
+
+		$this->is_deleting_log_files = true;
+
+		// Delete all log files.
+		foreach ( $log_files as $log_file ) {
+			@unlink( $log_file );
+		}
+
+		$site_settings = Options::get_site_settings();
+		$site_settings['misc']['enableDebugMode'] = false;
+		Options::update_site_settings( $site_settings );
 	}
 
 	/**
@@ -571,5 +618,199 @@ class Logger {
 		}
 
 		return filesize( $log_file );
+	}
+
+	/**
+	 * Is log file writable
+	 *
+	 * @since 4.1.2
+	 * @return bool
+	 */
+	public function is_log_file_writable() {
+		return $this->can_write_custom_log;
+	}
+
+	/**
+	 * Get all log files with their details
+	 *
+	 * @since 4.1.2
+	 * @return array
+	 */
+	public function get_log_files() {
+		$log_dir = $this->get_log_dir_path();
+		$files   = array();
+
+		if ( ! file_exists( $log_dir ) ) {
+			return $files;
+		}
+
+		$log_files = glob( $log_dir . '/*.txt' );
+
+		foreach ( $log_files as $log_file ) {
+			$file_name = basename( $log_file );
+			$file_size = filesize( $log_file );
+			$file_time = filemtime( $log_file );
+
+			$files[] = array(
+				'name'          => $file_name,
+				'size'          => $file_size,
+				'size_human'    => $this->format_file_size( $file_size ),
+				'created'       => $file_time,
+				'created_human' => $this->format_date( $file_time ),
+				'url'           => $this->get_log_file_url( $file_name ),
+			);
+		}
+
+		// Sort files by creation time (newest first)
+		usort(
+			$files,
+			function( $a, $b ) {
+				return $b['created'] - $a['created'];
+			}
+		);
+
+		return $files;
+	}
+
+	/**
+	 * Delete a specific log file
+	 *
+	 * @since 4.1.2
+	 * @param string $file_name The name of the file to delete.
+	 * @return bool
+	 */
+	public function delete_log_file( $file_name ) {
+		$log_dir = $this->get_log_dir_path();
+		$file_path = $log_dir . '/' . $file_name;
+
+		// Validate file name to prevent directory traversal
+		if ( ! $this->is_valid_log_file_name( $file_name ) ) {
+			return false;
+		}
+
+		// Check if file exists and is within the log directory
+		if ( ! file_exists( $file_path ) || ! is_file( $file_path ) ) {
+			return false;
+		}
+
+		// Ensure the file is within the log directory
+		$real_file_path = realpath( $file_path );
+		$real_log_dir = realpath( $log_dir );
+
+		if ( false === $real_file_path || false === $real_log_dir || 0 !== strpos( $real_file_path, $real_log_dir ) ) {
+			return false;
+		}
+
+		return @unlink( $file_path );
+	}
+
+	/**
+	 * Get content of a specific log file
+	 *
+	 * @since 4.1.2
+	 * @param string $file_name The name of the file to read.
+	 * @return array|false
+	 */
+	public function get_log_file_content( $file_name ) {
+		$log_dir = $this->get_log_dir_path();
+		$file_path = $log_dir . '/' . $file_name;
+
+		// Validate file name to prevent directory traversal
+		if ( ! $this->is_valid_log_file_name( $file_name ) ) {
+			return false;
+		}
+
+		// Check if file exists and is within the log directory
+		if ( ! file_exists( $file_path ) || ! is_file( $file_path ) ) {
+			return false;
+		}
+
+		// Ensure the file is within the log directory
+		$real_file_path = realpath( $file_path );
+		$real_log_dir = realpath( $log_dir );
+
+		if ( false === $real_file_path || false === $real_log_dir || 0 !== strpos( $real_file_path, $real_log_dir ) ) {
+			return false;
+		}
+
+		$file_size = filesize( $file_path );
+		$file_time = filemtime( $file_path );
+		$content = file_get_contents( $file_path );
+
+		if ( false === $content ) {
+			return false;
+		}
+
+		return array(
+			'name'     => $file_name,
+			'size'     => $file_size,
+			'size_human' => $this->format_file_size( $file_size ),
+			'created'  => $file_time,
+			'created_human' => $this->format_date( $file_time ),
+			'content'  => $content,
+			'url'      => $this->get_log_file_url( $file_name ),
+		);
+	}
+
+	/**
+	 * Get log file URL for viewing in browser
+	 *
+	 * @since 4.1.2
+	 * @param string $file_name The name of the file.
+	 * @return string
+	 */
+	private function get_log_file_url( $file_name ) {
+		$upload_dir = wp_upload_dir();
+		return $upload_dir['baseurl'] . '/pushengage/logs/' . $file_name;
+	}
+
+	/**
+	 * Format file size in human readable format
+	 *
+	 * @since 4.1.2
+	 * @param int $bytes File size in bytes.
+	 * @return string
+	 */
+	private function format_file_size( $bytes ) {
+		$units = array( 'B', 'KB', 'MB', 'GB', 'TB' );
+		$bytes = max( $bytes, 0 );
+		$pow = floor( ( $bytes ? log( $bytes ) : 0 ) / log( 1024 ) );
+		$pow = min( $pow, count( $units ) - 1 );
+
+		$bytes /= pow( 1024, $pow );
+
+		return round( $bytes, 2 ) . ' ' . $units[ $pow ];
+	}
+
+	/**
+	 * Format date in human readable format
+	 *
+	 * @since 4.1.2
+	 * @param int $timestamp Unix timestamp.
+	 * @return string
+	 */
+	private function format_date( $timestamp ) {
+		return date_i18n( get_option( 'date_format' ) . ' ' . get_option( 'time_format' ), $timestamp );
+	}
+
+	/**
+	 * Validate log file name to prevent directory traversal
+	 *
+	 * @since 4.1.2
+	 * @param string $file_name The file name to validate.
+	 * @return bool
+	 */
+	private function is_valid_log_file_name( $file_name ) {
+		// Check for directory traversal attempts
+		if ( false !== strpos( $file_name, '..' ) || false !== strpos( $file_name, '/' ) || false !== strpos( $file_name, '\\' ) ) {
+			return false;
+		}
+
+		// Check if file name contains only allowed characters
+		if ( ! preg_match( '/^[a-zA-Z0-9\-_\.]+\.txt$/', $file_name ) ) {
+			return false;
+		}
+
+		return true;
 	}
 }

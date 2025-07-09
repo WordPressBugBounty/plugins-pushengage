@@ -196,8 +196,8 @@ class NotificationHandler {
 		$enable_admin          = ! empty( $notification_settings['enable_admin'] ) ? $notification_settings['enable_admin'] : NotificationTemplates::$templates[ $action ]['enable_admin'];
 
 		if ( 'no' === $enable_customer && 'no' === $enable_admin ) {
-			// if called from AJAX, return error message.
-			if ( defined( 'DOING_AJAX' ) && DOING_AJAX ) {
+			// if called from AJAX and action is pe_woocommerce_order_action, return error message.
+			if ( defined( 'DOING_AJAX' ) && DOING_AJAX && isset( $_REQUEST['action'] ) && 'pe_woocommerce_order_action' === $_REQUEST['action'] ) {
 				wp_send_json_error(
 					array(
 						// translators: %s: Order Action Type.

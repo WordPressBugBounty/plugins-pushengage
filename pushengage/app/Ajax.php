@@ -10,7 +10,7 @@ use Pushengage\Utils\NonceChecker;
 use Pushengage\Utils\PublicPostTypes;
 use Pushengage\Utils\RecommendedPlugins;
 use Pushengage\Includes\Api\HttpAPI;
-
+use Pushengage\Logger;
 
 // Exit if accessed directly.
 if ( ! defined( 'ABSPATH' ) ) {
@@ -26,6 +26,15 @@ class Ajax {
 	 * @var string
 	 */
 	private $action_prefix = 'wp_ajax_pe_';
+
+	/**
+	 * Constant for undefined values
+	 *
+	 * @since 4.1.2
+	 *
+	 * @var string
+	 */
+	const NOT_DEFINED = 'Not defined';
 
 	/**
 	 * Admin ajax actions list
@@ -77,6 +86,13 @@ class Ajax {
 
 		'get_whatsapp_click_to_chat_settings',
 		'update_whatsapp_click_to_chat_settings',
+
+		'initialize_debug_log',
+		'delete_debug_log_file',
+		'get_system_info',
+		'get_debug_log_files',
+		'delete_debug_log_file_by_name',
+		'view_debug_log_file',
 	);
 
 	/**
@@ -780,6 +796,14 @@ class Ajax {
 			$pushengage_settings['misc']['hideDashboardWidget'] = filter_var( $_POST['hideDashboardWidget'], FILTER_VALIDATE_BOOLEAN );
 		}
 
+		if ( isset( $_POST['enableDebugMode'] ) ) {
+			$pushengage_settings['misc']['enableDebugMode'] = filter_var( $_POST['enableDebugMode'], FILTER_VALIDATE_BOOLEAN );
+		}
+
+		if ( isset( $_POST['debugLevel'] ) ) {
+			$pushengage_settings['misc']['debugLevel'] = sanitize_text_field( $_POST['debugLevel'] );
+		}
+
 		Options::update_site_settings( $pushengage_settings );
 		wp_send_json_success();
 	}
@@ -1437,5 +1461,300 @@ class Ajax {
 		// Save settings
 		Options::update_whatsapp_click_to_chat_settings( $data );
 		wp_send_json_success( $data, 200 );
+	}
+
+	/**
+	 * Get MySQL version
+	 *
+	 * @since 4.1.2
+	 * @return void
+	 */
+	public function get_mysql_version() {
+		global $wpdb;
+
+		if ( isset( $wpdb->db_version ) ) {
+			return $wpdb->db_version();
+		}
+
+		// Fallback method
+		$result = $wpdb->get_var( 'SELECT VERSION()' );
+		return $result ? $result : 'Unknown';
+	}
+
+	/**
+	 * AJAX handler for initializing debug log
+	 *
+	 * @since 4.1.2
+	 * @return void
+	 */
+	public function initialize_debug_log() {
+		NonceChecker::check();
+		$this->check_capability( 'manage_options' );
+
+		$logger = Logger::get_instance();
+		$logger->ajax_initialize_debug_log();
+		wp_send_json_success( array( 'message' => 'Debug log initialized' ) );
+	}
+
+	/**
+	 * AJAX handler for getting system info
+	 *
+	 * @since 4.1.2
+	 * @return void
+	 */
+	public function get_system_info() {
+		NonceChecker::check();
+		$this->check_capability( 'manage_options' );
+
+		// Check for saved transient for system info.
+		$system_info = get_transient( 'pushengage_debug_system_info' );
+		if ( $system_info ) {
+			wp_send_json_success( $system_info );
+		}
+
+		global $wpdb;
+		$logger = Logger::get_instance();
+
+		$system_info = array(
+			'wordpress'  => array(
+				'version'          => get_bloginfo( 'version' ),
+				'is_multisite'     => is_multisite(),
+				'memory_limit'     => defined( 'WP_MEMORY_LIMIT' ) ? WP_MEMORY_LIMIT : self::NOT_DEFINED,
+				'max_memory_limit' => defined( 'WP_MAX_MEMORY_LIMIT' ) ? WP_MAX_MEMORY_LIMIT : self::NOT_DEFINED,
+				'debug_mode'       => defined( 'WP_DEBUG' ) ? WP_DEBUG : false,
+				'debug_log'        => defined( 'WP_DEBUG_LOG' ) ? WP_DEBUG_LOG : false,
+				'debug_display'    => defined( 'WP_DEBUG_DISPLAY' ) ? WP_DEBUG_DISPLAY : false,
+				'script_debug'     => defined( 'SCRIPT_DEBUG' ) ? SCRIPT_DEBUG : false,
+				'locale'           => get_locale(),
+				'timezone'         => wp_timezone_string(),
+				'home_url'         => home_url(),
+				'site_url'         => site_url(),
+			),
+			'php'        => array(
+				'version'             => phpversion(),
+				'extensions'          => get_loaded_extensions(),
+				'memory_limit'        => ini_get( 'memory_limit' ),
+				'max_execution_time'  => ini_get( 'max_execution_time' ),
+				'max_input_time'      => ini_get( 'max_input_time' ),
+				'post_max_size'       => ini_get( 'post_max_size' ),
+				'upload_max_filesize' => ini_get( 'upload_max_filesize' ),
+				'display_errors'      => ini_get( 'display_errors' ),
+				'log_errors'          => ini_get( 'log_errors' ),
+				'error_log'           => ini_get( 'error_log' ),
+				'date_timezone'       => date_default_timezone_get(),
+			),
+			'server'     => array(
+				'server_software'  => isset( $_SERVER['SERVER_SOFTWARE'] ) ? $_SERVER['SERVER_SOFTWARE'] : 'Unknown',
+				'server_name'      => isset( $_SERVER['SERVER_NAME'] ) ? $_SERVER['SERVER_NAME'] : 'Unknown',
+				'server_protocol'  => isset( $_SERVER['SERVER_PROTOCOL'] ) ? $_SERVER['SERVER_PROTOCOL'] : 'Unknown',
+				'http_host'        => isset( $_SERVER['HTTP_HOST'] ) ? $_SERVER['HTTP_HOST'] : 'Unknown',
+				'user_agent'       => isset( $_SERVER['HTTP_USER_AGENT'] ) ? $_SERVER['HTTP_USER_AGENT'] : 'Unknown',
+				'architecture'     => php_uname( 'm' ),
+				'operating_system' => php_uname( 's' ),
+				'php_sapi'         => php_sapi_name(),
+			),
+			'database'   => array(
+				'mysql_version' => $this->get_mysql_version(),
+				'wp_db_version' => get_option( 'db_version' ),
+				'wp_db_charset' => defined( 'DB_CHARSET' ) ? DB_CHARSET : self::NOT_DEFINED,
+				'wp_db_collate' => defined( 'DB_COLLATE' ) ? DB_COLLATE : self::NOT_DEFINED,
+				'wp_db_prefix'  => $wpdb->prefix,
+			),
+			'pushengage' => array(
+				'plugin_version'    => PUSHENGAGE_VERSION,
+				'log_directory'     => $logger->get_log_dir_path(),
+				'log_file'          => $logger->get_log_file_path(),
+				'log_file_size'     => $logger->get_log_file_size(),
+				'log_file_writable' => $logger->is_log_file_writable(),
+			),
+			'filesystem' => array(
+				'wp_upload_dir_writable' => wp_is_writable( wp_upload_dir()['basedir'] ),
+				'wp_content_writable'    => wp_is_writable( \WP_CONTENT_DIR ),
+				'wp_plugins_writable'    => wp_is_writable( \WP_PLUGIN_DIR ),
+				'wp_themes_writable'     => wp_is_writable( get_template_directory() ),
+			),
+			'cron'       => array(
+				'wp_cron_disabled'  => defined( 'DISABLE_WP_CRON' ) ? DISABLE_WP_CRON : false,
+				'alternate_wp_cron' => defined( 'ALTERNATE_WP_CRON' ) ? ALTERNATE_WP_CRON : false,
+				'cron_interval'     => wp_get_schedule( 'daily' ),
+			),
+			'plugins'    => array(
+				'active_plugins' => $this->get_formatted_active_plugins(),
+			),
+			'theme'      => array(
+				'active_theme' => $this->get_formatted_active_theme(),
+			),
+		);
+
+		// Cache the system info for 1 hour to avoid repeated API / DB requests.
+		set_transient( 'pushengage_debug_system_info', $system_info, HOUR_IN_SECONDS );
+
+		wp_send_json_success( $system_info );
+	}
+
+	/**
+	 * AJAX handler for deleting debug log file
+	 *
+	 * @since 4.1.2
+	 * @return void
+	 */
+	public function delete_debug_log_file() {
+		NonceChecker::check();
+		$this->check_capability( 'manage_options' );
+
+		$logger = Logger::get_instance();
+
+		$logger->delete_all_log_files();
+
+		wp_send_json_success( array( 'message' => 'Debug log file deleted' ) );
+	}
+
+	/**
+	 * AJAX handler for getting debug log files
+	 *
+	 * @since 4.1.2
+	 * @return void
+	 */
+	public function get_debug_log_files() {
+		NonceChecker::check();
+		$this->check_capability( 'manage_options' );
+
+		$logger = Logger::get_instance();
+		$files = $logger->get_log_files();
+
+		wp_send_json_success( $files );
+	}
+
+	/**
+	 * AJAX handler for deleting a specific debug log file
+	 *
+	 * @since 4.1.2
+	 * @return void
+	 */
+	public function delete_debug_log_file_by_name() {
+		NonceChecker::check();
+		$this->check_capability( 'manage_options' );
+
+		$file_name = isset( $_POST['fileName'] ) ? sanitize_text_field( $_POST['fileName'] ) : '';
+
+		if ( empty( $file_name ) ) {
+			wp_send_json_error( array( 'message' => 'File name is required' ), 400 );
+		}
+
+		$logger = Logger::get_instance();
+		$result = $logger->delete_log_file( $file_name );
+
+		if ( $result ) {
+			wp_send_json_success( array( 'message' => 'Debug log file deleted' ) );
+		} else {
+			wp_send_json_error( array( 'message' => 'Failed to delete debug log file' ), 500 );
+		}
+	}
+
+	/**
+	 * AJAX handler for viewing a specific debug log file
+	 *
+	 * @since 4.1.2
+	 * @return void
+	 */
+	public function view_debug_log_file() {
+		NonceChecker::check();
+		$this->check_capability( 'manage_options' );
+
+		$file_name = isset( $_POST['fileName'] ) ? sanitize_text_field( $_POST['fileName'] ) : '';
+
+		if ( empty( $file_name ) ) {
+			wp_send_json_error( array( 'message' => 'File name is required' ), 400 );
+		}
+
+		$logger = Logger::get_instance();
+		$file_content = $logger->get_log_file_content( $file_name );
+
+		if ( $file_content ) {
+			wp_send_json_success( $file_content );
+		} else {
+			wp_send_json_error( array( 'message' => 'Failed to read debug log file' ), 500 );
+		}
+	}
+
+	/**
+	 * Get formatted active plugins list with detailed information
+	 *
+	 * @since 4.1.2
+	 * @return array
+	 */
+	private function get_formatted_active_plugins() {
+		$active_plugins = get_option( 'active_plugins' );
+		$formatted_plugins = array();
+
+		if ( ! function_exists( 'get_plugins' ) ) {
+			require_once ABSPATH . 'wp-admin/includes/plugin.php';
+		}
+
+		$all_plugins = get_plugins();
+		$plugin_updates = get_plugin_updates();
+
+		foreach ( $active_plugins as $plugin ) {
+			if ( isset( $all_plugins[ $plugin ] ) ) {
+				$data = $all_plugins[ $plugin ];
+				$version_latest = $this->get_plugin_latest_version( $plugin, $plugin_updates );
+
+				$formatted_plugins[] = array(
+					'plugin'            => $plugin,
+					'name'              => $data['Name'],
+					'version'           => $data['Version'],
+					'version_latest'    => $version_latest,
+					'url'               => $data['PluginURI'],
+					'author_name'       => $data['AuthorName'],
+					'author_url'        => esc_url_raw( $data['AuthorURI'] ),
+					'network_activated' => $data['Network'],
+				);
+			}
+		}
+
+		return $formatted_plugins;
+	}
+
+	/**
+	 * Get the latest version of a plugin using WordPress core functions
+	 *
+	 * @since 4.1.2
+	 * @param string $plugin Plugin file path
+	 * @param array $plugin_updates Array of plugin updates from get_plugin_updates()
+	 * @return string
+	 */
+	private function get_plugin_latest_version( $plugin, $plugin_updates ) {
+		// Check if plugin has an update available
+		if ( isset( $plugin_updates[ $plugin ] ) ) {
+			$update_data = $plugin_updates[ $plugin ];
+			if ( isset( $update_data->update ) && isset( $update_data->update->new_version ) ) {
+				return $update_data->update->new_version;
+			}
+		}
+
+		// If no update available, return current version
+		$all_plugins = get_plugins();
+		if ( isset( $all_plugins[ $plugin ] ) ) {
+			return $all_plugins[ $plugin ]['Version'];
+		}
+
+		return 'Unknown';
+	}
+
+	/**
+	 * Get formatted active theme with detailed information
+	 *
+	 * @since 4.1.2
+	 * @return array
+	 */
+	private function get_formatted_active_theme() {
+		$active_theme = wp_get_theme();
+		return array(
+			'name'       => $active_theme->get( 'Name' ),
+			'version'    => $active_theme->get( 'Version' ),
+			'author'     => $active_theme->get( 'Author' ),
+			'url'        => $active_theme->get( 'ThemeURI' ),
+			'author_url' => $active_theme->get( 'AuthorURI' ),
+		);
 	}
 }

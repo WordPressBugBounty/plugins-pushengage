@@ -43,6 +43,8 @@ class Options {
 			$defaults = array(
 				'hideAdminBarMenu'    => false,
 				'hideDashboardWidget' => false,
+				'enableDebugMode'     => false,
+				'debugLevel'          => 'debug',
 			);
 
 			foreach ( $defaults as $key => $value ) {

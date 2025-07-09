@@ -108,7 +108,7 @@ class WhatsappCloudApi {
 			//
 			// this is done because the access token is not valid anymore and we need to display the
 			// access token mismatch notice to admin
-			if ( $status_code === 401 ) {
+			if ( 401 === $status_code ) {
 				$this->credentials['accessTokenHash'] = $data['error']['message'];
 				update_option( 'pushengage_whatsapp_settings', $this->credentials );
 			}

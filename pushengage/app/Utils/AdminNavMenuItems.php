@@ -98,6 +98,14 @@ class AdminNavMenuItems {
 			);
 		}
 
+		if ( 'adminmenu' !== $menu_pos ) {
+			$menu_items[] = array(
+				'id'    => 'pe-debug',
+				'label' => esc_html__( 'Debug', 'pushengage' ),
+				'url'   => 'debug',
+			);
+		}
+
 		return $menu_items;
 	}
 
