@@ -6,7 +6,7 @@
  * Author: PushEngage
  * Author URI: https://www.pushengage.com/?utm_source=WordPress&utm_campaign=Plugin&utm_medium=pluginHeader&utm_content=author-uri-link
  *
- * Version: 4.1.3
+ * Version: 4.1.4
  * Requires at least: 4.5.0
  * Requires PHP: 5.6
  *
@@ -35,7 +35,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 if ( ! defined( 'PUSHENGAGE_VERSION' ) ) {
-	define( 'PUSHENGAGE_VERSION', '4.1.3' );
+	define( 'PUSHENGAGE_VERSION', '4.1.4' );
 }
 
 if ( ! defined( 'PUSHENGAGE_FILE' ) ) {

@@ -4,6 +4,7 @@ namespace Pushengage;
 use Pushengage\Utils\Helpers;
 use Pushengage\Utils\NonceChecker;
 use Pushengage\Utils\Options;
+use Pushengage\Utils\ArrayHelper;
 
 // Exit if accessed directly.
 if ( ! defined( 'ABSPATH' ) ) {
@@ -154,8 +155,9 @@ class EnqueueAssets {
 	 * @return void
 	 */
 	public static function localize_script( $post_id = null, $is_create_edit_post_page = false ) {
-		$current_user        = wp_get_current_user();
-		$pushengage_settings = Options::get_site_settings();
+		$current_user                = wp_get_current_user();
+		$pushengage_settings         = Options::get_site_settings();
+
 		$pushengage          = array(
 			'nonce'     => NonceChecker::create_nonce(),
 			'adminAjax' => admin_url( 'admin-ajax.php' ),
@@ -163,6 +165,7 @@ class EnqueueAssets {
 			'wpVersion' => get_bloginfo( 'version' ),
 			'peVersion' => PUSHENGAGE_VERSION,
 			'siteUrl'   => site_url(),
+			'siteHost'  => wp_parse_url( get_site_url(), PHP_URL_HOST ),
 			'siteId'    => isset( $pushengage_settings['site_id'] ) ? $pushengage_settings['site_id'] : null,
 			'ownerId'   => isset( $pushengage_settings['owner_id'] ) ? $pushengage_settings['owner_id'] : null,
 			'apiKey'    => isset( $pushengage_settings['api_key'] ) ? $pushengage_settings['api_key'] : null,

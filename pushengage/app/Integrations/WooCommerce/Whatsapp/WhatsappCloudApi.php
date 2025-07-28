@@ -31,6 +31,34 @@ class WhatsappCloudApi {
 		$this->credentials = Options::get_whatsapp_settings();
 	}
 
+	/**
+	 * Update message tracking transient data.
+	 *
+	 * @since 4.1.4
+	 */
+	private function update_message_tracking_transient() {
+		$transient_key = 'pushengage_wp_metrics_whatsapp_tracking';
+		$tracking_data = get_transient( $transient_key );
+		$current_timestamp = time();
+
+		if ( false === $tracking_data ) {
+			// Initialize tracking data if not already set.
+			$tracking_data = array(
+				'first_message_ts' => $current_timestamp,
+				'last_message_ts'  => $current_timestamp,
+				'message_count'    => 1,
+			);
+
+			set_transient( $transient_key, $tracking_data, 30 * DAY_IN_SECONDS );
+			return;
+		}
+
+		// Update tracking data.
+		$tracking_data['last_message_ts']  = $current_timestamp;
+		$tracking_data['message_count']    = (int) $tracking_data['message_count'] + 1;
+
+		set_transient( $transient_key, $tracking_data, 30 * DAY_IN_SECONDS );
+	}
 
 	/**
 	 * Send WhatsApp message using template
@@ -117,6 +145,8 @@ class WhatsappCloudApi {
 			$data['success'] = false;
 		} else {
 			$data['success'] = true;
+			// Save transient data containing timestamp for wp metrics whatsapp message tracking.
+			$this->update_message_tracking_transient();
 		}
 
 		return $data;

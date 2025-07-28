@@ -3,6 +3,7 @@ namespace Pushengage;
 
 use Pushengage\Upgrade;
 use Pushengage\Utils\Options;
+use Pushengage\Includes\WPMetricsTracker;
 
 // Exit if accessed directly.
 if ( ! defined( 'ABSPATH' ) ) {
@@ -38,6 +39,18 @@ class Installer {
 		}
 
 		Upgrade::plugin_upgrade();
+
+		// Track WP metrics `activated_at` timestamp.
+		$metrics_tracker = WPMetricsTracker::get_instance();
+		$metrics_tracker->send_metrics(
+			array(
+				'status'       => 'active',
+				'activated_at' => gmdate(
+					'Y-m-d\TH:i:s\Z',
+					time()
+				),
+			)
+		);
 
 		set_transient( 'pushengage_activation_redirect', true, 30 );
 	}

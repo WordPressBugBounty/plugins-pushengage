@@ -2,6 +2,13 @@
 
 namespace Pushengage\Integrations\WooCommerce\Whatsapp;
 
+use Pushengage\Utils\Options;
+
+// Exit if accessed directly.
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
+
 /**
  * WhatsApp Helper Class.
  * Contains common helper methods and constants for the WhatsApp module.
@@ -450,5 +457,69 @@ class WhatsappHelper {
 		return $phone_number . '(' . $error_message . ')';
 	}
 
+	/**
+	 * Get the automation campaigns settings
+	 *
+	 * @since 4.1.4
+	 *
+	 * @return array
+	 */
+	public static function get_automation_campaigns_settings() {
+		// Get WhatsApp automation campaigns from db.
+		$campaigns = Options::get_whatsapp_automation_campaigns();
+
+		$campaign_mapping = array(
+			'order_placed'     => 'new_order',
+			'order_processing' => 'order_processing',
+			'order_on_hold'    => 'order_on_hold',
+			'order_completed'  => 'order_completed',
+			'order_cancelled'  => 'order_cancelled',
+			'order_failed'     => 'order_failed',
+			'order_refunded'   => 'order_refunded',
+			'cart_abandoned'   => 'cart_abandonment',
+		);
+
+		$automation_settings = array();
+
+		foreach ( $campaign_mapping as $campaign_id => $format_key ) {
+			if ( isset( $campaigns[ $campaign_id ] ) ) {
+				$campaign = $campaigns[ $campaign_id ];
+
+				$automation_settings[ $format_key ] = array();
+
+				if ( isset( $campaign['adminConfig'] ) && isset( $campaign['adminConfig']['enabled'] ) ) {
+					$automation_settings[ $format_key ]['admin'] = $campaign['adminConfig']['enabled'] ? 1 : 0;
+				} else {
+					$automation_settings[ $format_key ]['admin'] = 0;
+				}
+
+				// Check if customer configuration exists and is enabled.
+				if ( isset( $campaign['customerConfig'] ) && isset( $campaign['customerConfig']['enabled'] ) ) {
+					$automation_settings[ $format_key ]['customer'] = $campaign['customerConfig']['enabled'] ? 1 : 0;
+				} else {
+					$automation_settings[ $format_key ]['customer'] = 0;
+				}
+
+				// Special handling for cart_abandonment (only has customer config).
+				if ( 'cart_abandonment' === $format_key ) {
+					unset( $automation_settings[ $format_key ]['admin'] );
+				}
+			} else {
+				// Set default values for campaigns that don't exist in database
+				if ( 'cart_abandonment' === $format_key ) {
+					$automation_settings[ $format_key ] = array(
+						'customer' => 0,
+					);
+				} else {
+					$automation_settings[ $format_key ] = array(
+						'admin'    => 0,
+						'customer' => 0,
+					);
+				}
+			}
+		}
+
+		return $automation_settings;
+	}
 
 }

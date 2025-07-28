@@ -1,6 +1,8 @@
 <?php
 namespace Pushengage;
 
+use Pushengage\Includes\WPMetricsTracker;
+
 // Exit if accessed directly.
 if ( ! defined( 'ABSPATH' ) && ! defined( 'WP_UNINSTALL_PLUGIN' ) ) {
 	exit;
@@ -76,5 +78,44 @@ class Uninstaller {
 		 * @since 4.1.2
 		 */
 		wp_clear_scheduled_hook( 'pushengage_check_abandoned_carts' );
+
+		// Track WP metrics `removed_at` timestamp.
+		$metrics_tracker = WPMetricsTracker::get_instance();
+		$metrics_tracker->send_metrics(
+			array(
+				'status'     => 'removed',
+				'removed_at' => gmdate(
+					'Y-m-d\TH:i:s\Z',
+					time()
+				),
+			)
+		);
+
+		/**
+		 * Clear the scheduled hook for weekly metrics tracking.
+		 *
+		 * @since 4.1.4
+		 */
+		wp_clear_scheduled_hook( 'pushengage_send_weekly_metrics' );
+	}
+
+	/**
+	 * Trigger immediately after deactivating plugin
+	 *
+	 * @since 4.1.4
+	 *
+	 * @return void
+	 */
+	public static function plugin_deactivate() {
+		// Track WP metrics `deactivated_at` timestamp.
+		$metrics_tracker = WPMetricsTracker::get_instance();
+		$metrics_tracker->send_metrics(
+			array(
+				'status' => 'inactive',
+			)
+		);
+
+		// Clear the scheduled hook for weekly metrics tracking.
+		wp_clear_scheduled_hook( 'pushengage_send_weekly_metrics' );
 	}
 }

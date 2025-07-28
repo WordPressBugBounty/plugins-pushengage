@@ -2,6 +2,11 @@
 
 All notable changes to the PushEngage plugin will be documented in this file.
 
+### 4.1.4
+
+* Added a feature that gives the option to use AI-based text generation for notification title and message.
+* Minor bug fixes and improvements added to enhance performance.
+
 ### 4.1.3
 
 * Improved onboarding process.

@@ -1,10 +1,10 @@
-=== PushEngage - Automated Multichannel Customer Engagement Platform ===
+=== PushEngage Automated Messaging – Web Push Notifications, WhatsApp Alerts & Click to Chat ===
 Contributors: PushEngage, smub
 Tags: push notifications, web push notifications, cart abandonment notifications, woocommerce push notifications, mobile push notifications
 Requires at least: 4.5.0
 Tested up to: 6.8
 Requires PHP: 5.6
-Stable tag: 4.1.3
+Stable tag: 4.1.4
 License: GNU General Public License v2.0 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -400,6 +400,10 @@ Syed Balkhi
 == Changelog ==
 
 **Most Recent Changes:**
+
+= 4.1.4 =
+* Added a feature that gives the option to use AI-based text generation for notification title and message.
+* Minor bug fixes and improvements added to enhance performance.
 
 = 4.1.3 =
 * Improved onboarding process.

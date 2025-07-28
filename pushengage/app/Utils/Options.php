@@ -41,10 +41,11 @@ class Options {
 
 			// Set default values for misc settings if not set
 			$defaults = array(
-				'hideAdminBarMenu'    => false,
-				'hideDashboardWidget' => false,
-				'enableDebugMode'     => false,
-				'debugLevel'          => 'debug',
+				'hideAdminBarMenu'       => false,
+				'hideDashboardWidget'    => false,
+				'enableDebugMode'        => false,
+				'enableWpMetricsTracker' => true,
+				'debugLevel'             => 'debug',
 			);
 
 			foreach ( $defaults as $key => $value ) {
@@ -277,5 +278,71 @@ class Options {
 	 */
 	public static function update_whatsapp_click_to_chat_settings( $data ) {
 		return update_option( 'pushengage_whatsapp_click_to_chat', $data );
+	}
+
+		/**
+	 * Get Push Notification Automation Settings
+	 *
+	 * @since 4.1.4
+	 *
+	 * @return array
+	 */
+	public static function get_push_notification_automation_settings() {
+		// Get site settings.
+		$site_settings = self::get_site_settings();
+
+		// Get push notification events from NotificationSettings
+		$notification_events = \Pushengage\Integrations\WooCommerce\NotificationSettings::get_push_notification_events();
+
+		$push_notification_settings = array();
+
+		$campaigns_mapping = array(
+			'new_order'        => 'new_order',
+			'cancelled_order'  => 'order_cancelled',
+			'failed_order'     => 'order_failed',
+			'order_on_hold'    => 'order_on_hold',
+			'processing_order' => 'order_processing',
+			'completed_order'  => 'order_completed',
+			'refunded_order'   => 'order_refunded',
+			'order_details'    => 'order_details',
+			'customer_note'    => 'customer_note',
+			'review_request'   => 'review_request',
+			'retry_purchase'   => 'retry_purchase_request',
+		);
+
+		// Process each notification event
+		foreach ( $notification_events as $event_id => $event_data ) {
+			// Get individual notification settings for this event
+			$notification_settings = get_option( 'pe_notification_' . $event_id, array() );
+
+			// Get template defaults
+			$template_defaults = isset( \Pushengage\Integrations\WooCommerce\NotificationTemplates::$templates[ $event_id ] )
+				? \Pushengage\Integrations\WooCommerce\NotificationTemplates::$templates[ $event_id ]
+				: array();
+
+			// Check admin notification settings
+			$admin_enabled = isset( $notification_settings['enable_admin'] )
+				? $notification_settings['enable_admin']
+				: ( isset( $template_defaults['enable_admin'] ) ? $template_defaults['enable_admin'] : 'no' );
+
+			// Check customer notification settings
+			$customer_enabled = isset( $notification_settings['enable_customer'] )
+				? $notification_settings['enable_customer']
+				: ( isset( $template_defaults['enable_customer'] ) ? $template_defaults['enable_customer'] : 'no' );
+
+			// Set the settings based on individual admin and customer enabled states
+			$push_notification_settings[ $campaigns_mapping[ $event_id ] ] = array(
+				'admin'    => ( 'yes' === $admin_enabled ) ? 1 : 0,
+				'customer' => ( 'yes' === $customer_enabled ) ? 1 : 0,
+			);
+		}
+
+		// Add cart abandonment campaign settings.
+		$push_notification_settings['cart_abandonment'] = $site_settings['woo_integration']['cart_abandonment']['enable'] ? 1 : 0;
+
+		// Add browse abandonment campaign settings.
+		$push_notification_settings['browse_abandonment'] = $site_settings['woo_integration']['browse_abandonment']['enable'] ? 1 : 0;
+
+		return $push_notification_settings;
 	}
 }

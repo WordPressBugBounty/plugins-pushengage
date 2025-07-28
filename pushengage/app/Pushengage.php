@@ -7,6 +7,7 @@ use Pushengage\NavMenu;
 use Pushengage\EnqueueAssets;
 use Pushengage\Integrations\Ajax as IntegrationsAjax;
 use Pushengage\Includes\SubscriberSync;
+use Pushengage\Includes\WPMetricsCron;
 use Pushengage\Utils\Options;
 use Pushengage\Integrations\WooCommerce\Whatsapp\WhatsappNotification;
 use Pushengage\Integrations\WooCommerce\Whatsapp\WhatsappClickToChat;
@@ -172,6 +173,7 @@ final class Pushengage {
 	public function init_hooks() {
 		add_action( 'init', array( $this, 'init_core_classes' ), 0 );
 		register_activation_hook( PUSHENGAGE_FILE, array( '\Pushengage\Installer', 'plugin_install' ) );
+		register_deactivation_hook( PUSHENGAGE_FILE, array( '\Pushengage\Uninstaller', 'plugin_deactivate' ) );
 		register_uninstall_hook( PUSHENGAGE_FILE, array( '\Pushengage\Uninstaller', 'plugin_uninstall' ) );
 		add_action( 'admin_init', array( '\Pushengage\Upgrade', 'plugin_upgrade' ) );
 	}
@@ -240,6 +242,9 @@ final class Pushengage {
 		if ( is_user_logged_in() && Options::has_credentials() ) {
 			new SubscriberSync();
 		}
+
+		// Initialize WP Metrics Cron for weekly tracking
+		WPMetricsCron::get_instance();
 	}
 
 	/**

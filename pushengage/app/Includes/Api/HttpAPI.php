@@ -204,4 +204,78 @@ class HttpAPI {
 			return new WP_Error( 'api-error', $e->getMessage() );
 		}
 	}
+
+	/**
+	 * Send unauthenticated request to the PushEngage private API.
+	 *
+	 * @param string $path The path to the API endpoint
+	 * @param array $options {
+	 *  Optional. Array of request options
+	 *
+	 *  @type string $method        The HTTP method to use. Default is 'GET'
+	 *  @type array $body           The request body
+	 *  @type string $content_type  The content type of the request body.
+	 *                              Default is 'application/json'
+	 * }
+	 * @since 4.1.4
+	 * @return array|WP_Error The response data or WP_Error on failure
+	 */
+	public static function send_unauthenticated_api_request( $path, $options = array() ) {
+		$url = rtrim( self::$private_api_base_url, '/' ) . '/' . ltrim( $path, '/' );
+		$headers = array(
+			'x-pe-client'         => 'WordPress',
+			'x-pe-client-version' => get_bloginfo( 'version' ),
+			'x-pe-sdk-version'    => PUSHENGAGE_VERSION,
+		);
+		// if api_key is not empty, add it to the headers.
+		if ( ! empty( self::get_api_key() ) ) {
+			$headers['x-pe-api-key'] = self::get_api_key();
+		}
+
+		$args = array(
+			'method'     => ! empty( $options['method'] ) ? $options['method'] : 'GET',
+			'timeout'    => 10,
+			'headers'    => $headers,
+			'user-agent' => self::get_user_agent(),
+		);
+
+		try {
+
+			if ( 'GET' !== $args['method'] ) {
+				if ( ! empty( $options['content_type'] ) ) {
+					$args['headers']['Content-Type'] = $options['content_type'];
+					$args['body'] = $options['body'];
+				} else {
+					$args['headers']['Content-Type'] = 'application/json';
+					$args['body'] = wp_json_encode( $options['body'], JSON_UNESCAPED_UNICODE );
+				}
+			}
+
+			$res = wp_remote_request( esc_url_raw( $url ), $args );
+
+			if ( is_wp_error( $res ) ) {
+				return $res;
+			}
+
+			$body = wp_remote_retrieve_body( $res );
+			if ( is_wp_error( $res ) ) {
+				return $res;
+			}
+
+			$data = Helpers::json_decode( $body );
+			if ( empty( $data ) ) {
+				return new WP_Error( 'invalid-response', __( 'Invalid response from server', 'pushengage' ) );
+			}
+
+			if ( ! empty( $data['error'] ) ) {
+				return new WP_Error( 'api-error', $data['error']['message'], $data );
+			}
+
+			return $data;
+		} catch ( \Exception $e ) {
+			return new WP_Error( 'api-error', $e->getMessage() );
+		}
+
+	}
+
 }

@@ -800,6 +800,10 @@ class Ajax {
 			$pushengage_settings['misc']['enableDebugMode'] = filter_var( $_POST['enableDebugMode'], FILTER_VALIDATE_BOOLEAN );
 		}
 
+		if ( isset( $_POST['enableWpMetricsTracker'] ) ) {
+			$pushengage_settings['misc']['enableWpMetricsTracker'] = filter_var( $_POST['enableWpMetricsTracker'], FILTER_VALIDATE_BOOLEAN );
+		}
+
 		if ( isset( $_POST['debugLevel'] ) ) {
 			$pushengage_settings['misc']['debugLevel'] = sanitize_text_field( $_POST['debugLevel'] );
 		}
@@ -1143,9 +1147,9 @@ class Ajax {
 
 		// Validate required fields
 		$required_fields = array(
-			'whatsappBusinessId' => __( 'WhatsApp Business ID', 'pushengage' ),
-			'phoneNumberId'      => __( 'Phone Number ID', 'pushengage' ),
-			'accessToken'        => __( 'Access Token', 'pushengage' ),
+			'whatsappBusinessId'  => __( 'WhatsApp Business ID', 'pushengage' ),
+			'phoneNumberId'       => __( 'Phone Number ID', 'pushengage' ),
+			'accessToken'         => __( 'Access Token', 'pushengage' ),
 			'whatsappPhoneNumber' => __( 'WhatsApp Phone Number', 'pushengage' ),
 		);
 
@@ -1153,7 +1157,11 @@ class Ajax {
 			if ( empty( $data[ $field ] ) ) {
 				wp_send_json_error(
 					array(
-						'message' => sprintf( __( '%s is required.', 'pushengage' ), $label ),
+						'message' => sprintf(
+							/* translators: %s: field label */
+							__( '%s is required.', 'pushengage' ),
+							$label
+						),
 						'code'    => 'missing_required_field',
 					),
 					400
