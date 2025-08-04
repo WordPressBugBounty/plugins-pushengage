@@ -93,6 +93,7 @@ class Ajax {
 		'get_debug_log_files',
 		'delete_debug_log_file_by_name',
 		'view_debug_log_file',
+		'deactivation_feedback',
 	);
 
 	/**
@@ -1764,5 +1765,67 @@ class Ajax {
 			'url'        => $active_theme->get( 'ThemeURI' ),
 			'author_url' => $active_theme->get( 'AuthorURI' ),
 		);
+	}
+
+	/**
+	 * Handle deactivation feedback submission
+	 *
+	 * @since 4.1.4.1
+	 * @return void
+	 */
+	public function deactivation_feedback() {
+		NonceChecker::check( 'pe_deactivation_feedback_nonce' );
+
+		$cause  = isset( $_POST['cause'] ) ? sanitize_text_field( $_POST['cause'] ) : '';
+		$comment = isset( $_POST['comment'] ) ? sanitize_textarea_field( $_POST['comment'] ) : '';
+
+		// Validate reason
+		$valid_reasons = array(
+			'did_not_work',
+			'better_plugin',
+			'missing_feature',
+			'did_not_work_as_expected',
+			'temporary_deactivation',
+			'other',
+		);
+
+		if ( ! in_array( $cause, $valid_reasons, true ) ) {
+			wp_send_json_error( array( 'message' => 'Invalid reason type' ), 400 );
+		}
+
+		$payload_data = array();
+
+		if ( ! empty( $cause ) ) {
+			$payload_data['cause'] = $cause;
+		}
+
+		if ( ! empty( $comment ) ) {
+			$payload_data['comment'] = $comment;
+		}
+
+		$payload = array(
+			'host'           => wp_parse_url( get_site_url(), PHP_URL_HOST ),
+			'wp_version'     => get_bloginfo( 'version' ),
+			'type'           => 'plugin_deactivate',
+			'data'           => $payload_data,
+			'plugin_version' => PUSHENGAGE_VERSION,
+		);
+
+		$pushengage_settings = Options::get_site_settings();
+		$site_id = ArrayHelper::get( $pushengage_settings, 'site_id', null );
+		if ( $site_id ) {
+			$payload['site_id'] = $site_id;
+		}
+
+		// Send feedback to API.
+		HttpAPI::send_unauthenticated_api_request(
+			'misc/wp-feedback',
+			array(
+				'method' => 'POST',
+				'body'   => $payload,
+			)
+		);
+
+		wp_send_json_success( array( 'message' => 'Feedback submitted successfully' ) );
 	}
 }

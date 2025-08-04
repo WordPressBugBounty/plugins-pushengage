@@ -136,7 +136,7 @@ class Options {
 				}
 				$access_token_hash = hash( 'sha256', $settings['accessToken'] );
 				// add a valid flag to the settings if the decrypted access token hash is valid or not
-				$settings['isDecryptedAccessTokenValid'] = $access_token_hash === $settings['accessTokenHash'];
+				$settings['isDecryptedAccessTokenValid'] = isset( $settings['accessTokenHash'] ) && $access_token_hash === $settings['accessTokenHash'];
 			}
 
 			self::$whatsapp_settings = $settings;

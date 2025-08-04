@@ -5,6 +5,7 @@ use Pushengage\Utils\ArrayHelper;
 use Pushengage\Utils\Helpers;
 use Pushengage\Utils\Options;
 use Pushengage\Integrations\WooCommerce\Woo;
+use Pushengage\Includes\PluginFeedback;
 
 // Exit if accessed directly.
 if ( ! defined( 'ABSPATH' ) ) {
@@ -26,6 +27,9 @@ class Admin {
 
 			// WooCommerce integration hooks.
 			Woo::init_hooks();
+
+			// Plugin feedback hooks.
+			PluginFeedback::get_instance();
 		}
 	}
 

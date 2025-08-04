@@ -37,7 +37,7 @@ class HttpAPI {
 	 */
 	private static function get_api_key() {
 		$settings = Options::get_site_settings();
-		return $settings['api_key'];
+		return isset( $settings['api_key'] ) ? $settings['api_key'] : '';
 	}
 
 	/**

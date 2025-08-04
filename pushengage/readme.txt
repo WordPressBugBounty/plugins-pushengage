@@ -1,17 +1,17 @@
-=== PushEngage Automated Messaging – Web Push Notifications, WhatsApp Alerts & Click to Chat ===
+=== PushEngage Automated Messaging – Web Push Notifications, WA Alerts & Free Click to Chat ===
 Contributors: PushEngage, smub
-Tags: push notifications, web push notifications, cart abandonment notifications, woocommerce push notifications, mobile push notifications
+Tags: push notifications, web push notifications, cart abandonment, woocommerce push notifications, whatsapp
 Requires at least: 4.5.0
 Tested up to: 6.8
 Requires PHP: 5.6
-Stable tag: 4.1.4
+Stable tag: 4.1.4.1
 License: GNU General Public License v2.0 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-🚀 Send order updates, recover carts & boost traffic with multichannel push. Now with WhatsApp automation + free Click-to-Chat for WordPress!
+🚀 Recover carts, send order updates & re-engage users with Web, App & WhatsApp Push. Free Click-to-Chat widget for instant customer connect.
 
 == Description ==
-<strong>Boost engagement, drive repeat traffic, and increase sales</strong> with multichannel push notifications that reach users directly on the web, mobile apps, and WhatsApp.<a href="https://www.pushengage.com/?utm_source=orgplugin&utm_medium=link&utm_campaign=wpreadme" rel="friend">PushEngage</a>  is the #1 push notification plugin for WordPress and WooCommerce — built to help you turn casual visitors into loyal, high-value customers.
+<strong>Boost engagement, drive repeat traffic, and increase sales</strong> with multichannel push notifications that reach users directly on the web, mobile apps, and WhatsApp. <a href="https://www.pushengage.com/?utm_source=orgplugin&utm_medium=link&utm_campaign=wpreadme" rel="friend">PushEngage</a>  is the #1 push notification plugin for WordPress and WooCommerce — built to help you turn casual visitors into loyal, high-value customers.
 
 With PushEngage, you can:
 * Send web push notifications using our powerful Gutenberg integration
@@ -400,6 +400,8 @@ Syed Balkhi
 == Changelog ==
 
 **Most Recent Changes:**
+= 4.1.4.1 =
+* Minor bug fixes and improvements.
 
 = 4.1.4 =
 * Added a feature that gives the option to use AI-based text generation for notification title and message.

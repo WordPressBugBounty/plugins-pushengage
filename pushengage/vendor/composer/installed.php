@@ -3,7 +3,7 @@
         'name' => 'awesomemotive/pushengage',
         'pretty_version' => 'dev-master',
         'version' => 'dev-master',
-        'reference' => '896678c71452aeda0a8290da4ad9d9c9d84a7dc8',
+        'reference' => 'da4fcbe9d153ad2fec45f12550c3eeb54883be1a',
         'type' => 'wordpress-plugin',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -13,7 +13,7 @@
         'awesomemotive/pushengage' => array(
             'pretty_version' => 'dev-master',
             'version' => 'dev-master',
-            'reference' => '896678c71452aeda0a8290da4ad9d9c9d84a7dc8',
+            'reference' => 'da4fcbe9d153ad2fec45f12550c3eeb54883be1a',
             'type' => 'wordpress-plugin',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
