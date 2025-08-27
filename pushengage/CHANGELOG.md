@@ -2,7 +2,15 @@
 
 All notable changes to the PushEngage plugin will be documented in this file.
 
+### 4.1.5
+
+* Added WooCommerce Automation page, new UI for consistency in managing WooCommerce Integrations.
+* Added a new tags filter for push broadcast notifications list.
+* Added a Separator in the PushEngage admin menu to categorize admin screens and settings.
+* Minor bug fixes and performance improvements.
+
 ### 4.1.4.1
+
 * Minor bug fixes and improvements.
 
 ### 4.1.4

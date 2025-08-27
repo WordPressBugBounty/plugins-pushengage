@@ -105,17 +105,6 @@ class NavMenu {
 			);
 		}
 
-		$woo_push_notifications_page = Helpers::is_woocommerce_integrated() ? 'pushengage#/campaigns/triggers' : 'pushengage#/settings/integrations';
-
-		add_submenu_page(
-			'woocommerce',
-			esc_html__( 'Push Notifications', 'pushengage' ),
-			esc_html__( 'Push Notifications', 'pushengage' ),
-			'manage_options',
-			$woo_push_notifications_page,
-			array( $this, 'render_admin_menu_view' )
-		);
-
 		global $submenu;
 
 		// Show 'Upgrade To Pro sub menu at sub menu array position '9' if user in on free plan

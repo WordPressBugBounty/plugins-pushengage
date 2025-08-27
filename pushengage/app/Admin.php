@@ -25,6 +25,8 @@ class Admin {
 			add_action( 'admin_notices', array( $this, 'pushengage_display_admin_notices' ) );
 			add_action( 'admin_notices', array( $this, 'maybe_display_woo_integration_admin_notice' ) );
 
+			add_action( 'admin_enqueue_scripts', array( $this, 'add_admin_menu_css' ) );
+
 			// WooCommerce integration hooks.
 			Woo::init_hooks();
 
@@ -72,6 +74,17 @@ class Admin {
 		if ( 'toplevel_page_pushengage' === $screen->base ) {
 			echo '<style>.update-nag, .updated, .error, .notice, .is-dismissible { display: none !important; }</style>';
 		}
+	}
+
+	/**
+	 * Add Admin Menu CSS
+	 *
+	 * @since 4.1.5
+	 *
+	 * @return void
+	 */
+	public function add_admin_menu_css() {
+		wp_enqueue_style( 'pushengage-admin-menu', PUSHENGAGE_PLUGIN_URL . 'assets/css/admin-menu.css', array(), PUSHENGAGE_VERSION );
 	}
 
 	/**

@@ -11,6 +11,8 @@ use Pushengage\Utils\PublicPostTypes;
 use Pushengage\Utils\RecommendedPlugins;
 use Pushengage\Includes\Api\HttpAPI;
 use Pushengage\Logger;
+use Pushengage\Integrations\WooCommerce\NotificationSettings;
+use Pushengage\Integrations\WooCommerce\NotificationTemplates;
 
 // Exit if accessed directly.
 if ( ! defined( 'ABSPATH' ) ) {
@@ -86,6 +88,9 @@ class Ajax {
 
 		'get_whatsapp_click_to_chat_settings',
 		'update_whatsapp_click_to_chat_settings',
+
+		'get_push_automation_campaigns',
+		'update_push_automation_campaign',
 
 		'initialize_debug_log',
 		'delete_debug_log_file',
@@ -1191,6 +1196,276 @@ class Ajax {
 		$campaigns = Options::get_whatsapp_automation_campaigns();
 
 		wp_send_json_success( array_values( $campaigns ), 200 );
+	}
+
+	/**
+	 * Get Woo Push Automation Campaigns
+	 *
+	 * Returns the list of Woo push notification events along with
+	 * current settings stored in WP options. Mirrors data from the
+	 * WooCommerce Push Notifications tab for React UI consumption.
+	 *
+	 * @since 4.1.5
+	 *
+	 * @return void
+	 */
+	public function get_push_automation_campaigns() {
+		NonceChecker::check();
+		$this->check_capability( 'manage_options' );
+
+		$notifications = NotificationSettings::get_push_notification_events();
+		$roles         = NotificationSettings::get_admin_roles();
+		$row_settings  = get_option( 'pe_notifications_row_setting', array() );
+
+		$campaigns = array();
+
+		foreach ( $notifications as $event_id => $event_data ) {
+			$template_defaults = isset( NotificationTemplates::$templates[ $event_id ] )
+				? NotificationTemplates::$templates[ $event_id ]
+				: array();
+
+			$settings = get_option( 'pe_notification_' . $event_id, array() );
+
+			$enabled_row = isset( $row_settings[ 'enable_' . $event_id ] )
+				? ( 'yes' === $row_settings[ 'enable_' . $event_id ] )
+				: ( isset( $template_defaults['enable_row'] ) ? ( 'yes' === $template_defaults['enable_row'] ) : false );
+
+			$admin_enabled    = isset( $settings['enable_admin'] ) ? $settings['enable_admin'] : ( isset( $template_defaults['enable_admin'] ) ? $template_defaults['enable_admin'] : 'no' );
+			$customer_enabled = isset( $settings['enable_customer'] ) ? $settings['enable_customer'] : ( isset( $template_defaults['enable_customer'] ) ? $template_defaults['enable_customer'] : 'no' );
+
+			$campaign = array();
+			$campaign['id'] = $event_id;
+			$campaign['title'] = $event_data['title'];
+			$campaign['description'] = $event_data['description'];
+			$campaign['enabled'] = (bool) $enabled_row;
+
+			$campaign['adminConfig'] = array(
+				'enabled' => ( 'yes' === $admin_enabled ),
+				'roles'   => ( isset( $settings['admin_roles'] ) && is_array( $settings['admin_roles'] ) )
+					? array_values( $settings['admin_roles'] )
+					: array( 'administrator' ),
+				'title'   => isset( $settings['admin_notification_title'] )
+					? $settings['admin_notification_title']
+					: ( isset( $template_defaults['admin_notification_title'] )
+						? $template_defaults['admin_notification_title']
+						: '' ),
+				'message' => isset( $settings['admin_notification_message'] )
+					? $settings['admin_notification_message']
+					: ( isset( $template_defaults['admin_notification_message'] )
+						? $template_defaults['admin_notification_message']
+						: '' ),
+				'url'     => isset( $settings['admin_notification_url'] )
+					? $settings['admin_notification_url']
+					: ( isset( $template_defaults['admin_notification_url'] )
+						? $template_defaults['admin_notification_url']
+						: '' ),
+			);
+
+			$campaign['customerConfig'] = array(
+				'enabled' => ( 'yes' === $customer_enabled ),
+				'title'   => isset( $settings['notification_title'] )
+					? $settings['notification_title']
+					: ( isset( $template_defaults['notification_title'] )
+						? $template_defaults['notification_title']
+						: '' ),
+				'message' => isset( $settings['notification_message'] )
+					? $settings['notification_message']
+					: ( isset( $template_defaults['notification_message'] )
+						? $template_defaults['notification_message']
+						: '' ),
+				'url'     => isset( $settings['notification_url'] )
+					? $settings['notification_url']
+					: ( isset( $template_defaults['notification_url'] )
+						? $template_defaults['notification_url']
+						: '' ),
+			);
+
+			$campaigns[] = $campaign;
+		}
+
+		wp_send_json_success(
+			array(
+				'rolesOptions' => $roles,
+				'campaigns'    => $campaigns,
+			),
+			200
+		);
+	}
+
+	/**
+	 * Update a Woo Push Automation Campaign
+	 *
+	 * Accepts a JSON payload for a single event and updates the same WP options
+	 * used by the WooCommerce settings page.
+	 *
+	 * @since 4.1.5
+	 *
+	 * @return void
+	 */
+	public function update_push_automation_campaign() {
+		NonceChecker::check();
+		$this->check_capability( 'manage_options' );
+
+		if ( empty( $_POST['campaign'] ) ) {
+			wp_send_json_error( array( 'message' => __( 'Campaign data is required.', 'pushengage' ) ), 400 );
+		}
+
+		$campaign = json_decode( stripslashes_deep( $_POST['campaign'] ), true );
+
+		$event_id = isset( $campaign['id'] ) ? sanitize_text_field( $campaign['id'] ) : '';
+		if ( '' === $event_id ) {
+			wp_send_json_error( array( 'message' => __( 'Invalid campaign id.', 'pushengage' ) ), 400 );
+		}
+
+		// Validate event id exists
+		$events = NotificationSettings::get_push_notification_events();
+		if ( ! array_key_exists( $event_id, $events ) ) {
+			wp_send_json_error( array( 'message' => __( 'Unknown campaign id.', 'pushengage' ) ), 400 );
+		}
+
+		// Update row enable/disable
+		$row_settings = get_option( 'pe_notifications_row_setting', array() );
+		if ( isset( $campaign['enabled'] ) ) {
+			$row_settings[ 'enable_' . $event_id ] = filter_var( $campaign['enabled'], FILTER_VALIDATE_BOOLEAN ) ? 'yes' : 'no';
+			update_option( 'pe_notifications_row_setting', $row_settings );
+		}
+
+		// Sanitize text fields with limits.
+		$limit_title   = 170;
+		$limit_message = 256;
+		$limit_url     = 1600;
+
+		$settings = get_option( 'pe_notification_' . $event_id, array() );
+
+		if ( isset( $campaign['customerConfig'] ) && is_array( $campaign['customerConfig'] ) ) {
+			$settings = $this->merge_customer_settings(
+				$settings,
+				$campaign['customerConfig'],
+				$limit_title,
+				$limit_message,
+				$limit_url
+			);
+		}
+
+		if ( isset( $campaign['adminConfig'] ) && is_array( $campaign['adminConfig'] ) ) {
+			$settings = $this->merge_push_automations_admin_settings(
+				$settings,
+				$campaign['adminConfig'],
+				$limit_title,
+				$limit_message,
+				$limit_url
+			);
+		}
+
+		update_option( 'pe_notification_' . $event_id, $settings );
+
+		wp_send_json_success( $campaign, 200 );
+	}
+
+	/**
+	 * Sanitize and limit a text field safely with mbstring fallback.
+	 *
+	 * @since 4.1.5
+	 *
+	 * @param string $value Raw value.
+	 * @param int    $limit Max length.
+	 *
+	 * @return string Sanitized and truncated value.
+	 */
+	private function sanitize_limited_text( $value, $limit ) {
+		$value = sanitize_text_field( $value );
+		if ( function_exists( 'mb_strlen' ) && function_exists( 'mb_substr' ) ) {
+			if ( mb_strlen( $value ) > $limit ) {
+				$value = mb_substr( $value, 0, $limit );
+			}
+		} else {
+			if ( strlen( $value ) > $limit ) {
+				$value = substr( $value, 0, $limit );
+			}
+		}
+		return $value;
+	}
+
+	/**
+	 * Filter admin roles against allowed roles.
+	 *
+	 * @since 4.1.5
+	 *
+	 * @param array $roles Submitted roles.
+	 *
+	 * @return array Allowed roles only.
+	 */
+	private function filter_allowed_admin_roles( $roles ) {
+		$allowed_roles = NotificationSettings::get_admin_roles();
+		$valid_roles   = array();
+		foreach ( (array) $roles as $role ) {
+			$role = sanitize_text_field( $role );
+			if ( array_key_exists( $role, $allowed_roles ) ) {
+				$valid_roles[] = $role;
+			}
+		}
+		return $valid_roles;
+	}
+
+	/**
+	 * Merge customer configuration into settings.
+	 *
+	 * @since 4.1.5
+	 *
+	 * @param array $settings      Existing settings.
+	 * @param array $customer_cfg  Customer config payload.
+	 * @param int   $limit_title   Limit for title.
+	 * @param int   $limit_message Limit for message.
+	 * @param int   $limit_url     Limit for url.
+	 *
+	 * @return array Updated settings.
+	 */
+	private function merge_customer_settings( $settings, $customer_cfg, $limit_title, $limit_message, $limit_url ) {
+		if ( array_key_exists( 'enabled', $customer_cfg ) ) {
+			$settings['enable_customer'] = filter_var( $customer_cfg['enabled'], FILTER_VALIDATE_BOOLEAN ) ? 'yes' : 'no';
+		}
+		if ( isset( $customer_cfg['title'] ) ) {
+			$settings['notification_title'] = $this->sanitize_limited_text( $customer_cfg['title'], $limit_title );
+		}
+		if ( isset( $customer_cfg['message'] ) ) {
+			$settings['notification_message'] = $this->sanitize_limited_text( $customer_cfg['message'], $limit_message );
+		}
+		if ( isset( $customer_cfg['url'] ) ) {
+			$settings['notification_url'] = $this->sanitize_limited_text( $customer_cfg['url'], $limit_url );
+		}
+		return $settings;
+	}
+
+	/**
+	 * Merge admin configuration into settings.
+	 *
+	 * @since 4.1.5
+	 *
+	 * @param array $settings      Existing settings.
+	 * @param array $admin_cfg     Admin config payload.
+	 * @param int   $limit_title   Limit for title.
+	 * @param int   $limit_message Limit for message.
+	 * @param int   $limit_url     Limit for url.
+	 *
+	 * @return array Updated settings.
+	 */
+	private function merge_push_automations_admin_settings( $settings, $admin_cfg, $limit_title, $limit_message, $limit_url ) {
+		if ( array_key_exists( 'enabled', $admin_cfg ) ) {
+			$settings['enable_admin'] = filter_var( $admin_cfg['enabled'], FILTER_VALIDATE_BOOLEAN ) ? 'yes' : 'no';
+		}
+		if ( isset( $admin_cfg['roles'] ) && is_array( $admin_cfg['roles'] ) ) {
+			$settings['admin_roles'] = $this->filter_allowed_admin_roles( $admin_cfg['roles'] );
+		}
+		if ( isset( $admin_cfg['title'] ) ) {
+			$settings['admin_notification_title'] = $this->sanitize_limited_text( $admin_cfg['title'], $limit_title );
+		}
+		if ( isset( $admin_cfg['message'] ) ) {
+			$settings['admin_notification_message'] = $this->sanitize_limited_text( $admin_cfg['message'], $limit_message );
+		}
+		if ( isset( $admin_cfg['url'] ) ) {
+			$settings['admin_notification_url'] = $this->sanitize_limited_text( $admin_cfg['url'], $limit_url );
+		}
+		return $settings;
 	}
 
 	/**

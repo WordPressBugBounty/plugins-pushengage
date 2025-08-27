@@ -1,0 +1,16 @@
+/* PushEngage Admin Menu Styling */
+#toplevel_page_pushengage .wp-submenu li.wp-first-item::after,
+#toplevel_page_pushengage .wp-submenu li:nth-child(5)::after,
+#toplevel_page_pushengage .wp-submenu li:nth-child(9)::after,
+#toplevel_page_pushengage .wp-submenu li:nth-child(12)::after {
+  content: "";
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  display: block;
+  float: left;
+  margin: 8px 0;
+  width: 100%;
+}
+
+#toplevel_page_pushengage .wp-submenu li {
+  clear: both;
+}

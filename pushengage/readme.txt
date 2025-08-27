@@ -4,7 +4,7 @@ Tags: push notifications, web push notifications, cart abandonment, woocommerce 
 Requires at least: 4.5.0
 Tested up to: 6.8
 Requires PHP: 5.6
-Stable tag: 4.1.4.1
+Stable tag: 4.1.5
 License: GNU General Public License v2.0 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -400,6 +400,12 @@ Syed Balkhi
 == Changelog ==
 
 **Most Recent Changes:**
+= 4.1.5 =
+* Added WooCommerce Automation page, new UI for consistency in managing WooCommerce Integrations.
+* Added a new tags filter for push broadcast notifications list.
+* Added a Separator in the PushEngage admin menu to categorize admin screens and settings.
+* Minor bug fixes and performance improvements.
+
 = 4.1.4.1 =
 * Minor bug fixes and improvements.
 

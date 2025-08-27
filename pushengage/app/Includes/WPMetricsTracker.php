@@ -71,6 +71,19 @@ class WPMetricsTracker {
 	}
 
 	/**
+	 * Method to check if the site host is a local host.
+	 *
+	 * @param string $site_host Site host.
+	 * @return boolean
+	 */
+	private function is_local_host( $site_host ) {
+		if ( ! $site_host ) {
+			return false;
+		}
+		return in_array( $site_host, array( 'localhost', '127.0.0.1', '::1', '0:0:0:0:0:0:0:1' ) );
+	}
+
+	/**
 	 * Method to send wp metrics to API for tracking.
 	 *
 	 * @param array $payload Metrics payload array.
@@ -80,6 +93,12 @@ class WPMetricsTracker {
 
 		// Check if metrics tracking is enabled.
 		if ( ! $this->is_enabled ) {
+			return;
+		}
+
+		// Do not send from localhost / loopback hosts in development.
+		$site_host = ArrayHelper::get( $this->payload_base, 'host', null );
+		if ( $this->is_local_host( $site_host ) ) {
 			return;
 		}
 
