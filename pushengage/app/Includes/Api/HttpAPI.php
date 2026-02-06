@@ -275,7 +275,5 @@ class HttpAPI {
 		} catch ( \Exception $e ) {
 			return new WP_Error( 'api-error', $e->getMessage() );
 		}
-
 	}
-
 }

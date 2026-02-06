@@ -19,7 +19,7 @@ class DashboardWidget {
 	 * @return void
 	 */
 	public function __construct() {
-		 $this->dashboard_widget_hook();
+		$this->dashboard_widget_hook();
 	}
 
 	/**

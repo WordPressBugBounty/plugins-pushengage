@@ -6,6 +6,7 @@ use Pushengage\Integrations\WooCommerce\Whatsapp\WhatsappHelper;
 use Pushengage\Utils\Options;
 use Pushengage\Utils\ArrayHelper;
 use Pushengage\Logger;
+use Pushengage\Includes\Api\HttpAPI;
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
@@ -214,6 +215,105 @@ class WPMetricsCron {
 		$metrics['data']['click_to_chat'] = array(
 			'status' => $click_to_chat_settings['enabled'] ? 'enabled' : 'disabled',
 		);
+
+		/**
+		 * Chat Widget specific metrics.
+		 *
+		 * We fetch active chat widgets from PushEngage private API and compute:
+		 * - active_widgets
+		 * - no_of_active_channels
+		 * - no_of_agents
+		 * - widget_created_at_first (earliest created_at)
+		 *
+		 * @since 4.2.0
+		 */
+		try {
+			$site_settings = Options::get_site_settings();
+			$site_id       = ArrayHelper::get( $site_settings, 'site_id', 0 );
+			if ( 0 !== absint( $site_id ) ) {
+				$path     = 'sites/' . $site_id . '/chat-widgets?limit=100&page=1';
+				$response = HttpAPI::send_private_api_request( $path );
+				if ( ! is_wp_error( $response ) && ! empty( $response['data'] ) ) {
+					$list = is_array( $response['data'] ) ? $response['data'] : array();
+					$no_of_widgets         = isset( $response['meta']['total'] ) ? absint( $response['meta']['total'] ) : count( $list );
+					$active_widgets        = 0;
+					$no_of_active_channels = 0;
+					$no_of_agents          = 0;
+					$first_created_at      = '';
+					$channel_counts        = array();
+
+					foreach ( $list as $w ) {
+						$status = isset( $w['status'] ) ? $w['status'] : '';
+						if ( 'enabled' === $status ) {
+							$active_widgets++;
+							$conf = isset( $w['config'] ) && is_array( $w['config'] ) ? $w['config'] : $w;
+							$channels = isset( $conf['channels'] ) && is_array( $conf['channels'] ) ? $conf['channels'] : array();
+							foreach ( $channels as $ch ) {
+								$enabled = isset( $ch['enabled'] ) ? $ch['enabled'] : true;
+								if ( true === $enabled ) {
+									$no_of_active_channels++;
+									$type = '';
+									if ( ! empty( $ch['type'] ) && is_string( $ch['type'] ) ) {
+										$type = strtolower( $ch['type'] );
+									}
+									if ( ! empty( $type ) ) {
+										if ( ! isset( $channel_counts[ $type ] ) ) {
+											$channel_counts[ $type ] = 0;
+										}
+										$channel_counts[ $type ]++;
+									}
+									$agents = isset( $ch['agents'] ) && is_array( $ch['agents'] ) ? $ch['agents'] : array();
+									$no_of_agents += count( $agents );
+								}
+							}
+						}
+						if ( ! empty( $w['created_at'] ) ) {
+							$iso = gmdate( 'Y-m-d\TH:i:s\Z', strtotime( $w['created_at'] ) );
+							if ( empty( $first_created_at ) || strtotime( $iso ) < strtotime( $first_created_at ) ) {
+								$first_created_at = $iso;
+							}
+						}
+					}
+
+					$avg_channels_per_widget = 0;
+					if ( 0 !== $active_widgets ) {
+						$avg_channels_per_widget = round( $no_of_active_channels / $active_widgets, 2 );
+					}
+					$most_popular_channel  = '';
+					$least_popular_channel = '';
+					if ( ! empty( $channel_counts ) && is_array( $channel_counts ) ) {
+						$max = max( $channel_counts );
+						$min = min( $channel_counts );
+						foreach ( $channel_counts as $channel => $count ) {
+							if ( '' === $most_popular_channel && $count === $max ) {
+								$most_popular_channel = $channel;
+							}
+							if ( '' === $least_popular_channel && $count === $min ) {
+								$least_popular_channel = $channel;
+							}
+							if ( '' !== $most_popular_channel && '' !== $least_popular_channel ) {
+								break;
+							}
+						}
+					}
+
+					$metrics['data']['chat_widget'] = array(
+						'no_of_widgets'           => absint( $no_of_widgets ),
+						'active_widgets'          => absint( $active_widgets ),
+						'no_of_active_channels'   => absint( $no_of_active_channels ),
+						'no_of_agents'            => absint( $no_of_agents ),
+						'avg_channels_per_widget' => $avg_channels_per_widget,
+						'most_popular_channel'    => $most_popular_channel,
+						'least_popular_channel'   => $least_popular_channel,
+					);
+					if ( ! empty( $first_created_at ) ) {
+						$metrics['data']['chat_widget']['widget_created_at_first'] = $first_created_at;
+					}
+				}
+			}
+		} catch ( \Exception $e ) {
+			// Ignore metrics failure; continue with other metrics.
+		}
 
 		// Push notification automation specific metrics.
 		$metrics['data']['push_woo_active_automations'] = Options::get_push_notification_automation_settings();

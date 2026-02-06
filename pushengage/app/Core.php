@@ -223,9 +223,9 @@ class Core {
 		}
 
 		$pushengage_settings = Options::get_site_settings();
-		$subdomain = $pushengage_settings['site_subdomain'];
+		$subdomain = isset( $pushengage_settings['site_subdomain'] ) ? $pushengage_settings['site_subdomain'] : '';
 		// app id is same as site key
-		$app_id = $pushengage_settings['site_key'];
+		$app_id = isset( $pushengage_settings['site_key'] ) ? $pushengage_settings['site_key'] : '';
 
 		// Keeping optional filter for backward compatibility.
 		$sanitize_filter = defined( 'FILTER_SANITIZE_FULL_SPECIAL_CHARS' ) ? FILTER_SANITIZE_FULL_SPECIAL_CHARS : FILTER_SANITIZE_STRING;
@@ -586,7 +586,6 @@ class Core {
 		}
 
 		update_post_meta( $post->ID, 'pe_push_options', $push_options );
-
 	}
 
 	/**
@@ -1073,7 +1072,7 @@ class Core {
 			$groups_id = array_values(
 				array_filter(
 					$_POST['pe_wp_audience_group_ids'],
-					function( $val ) {
+					function ( $val ) {
 						$val = intval( $val );
 						return $val > 0;
 					}
@@ -1281,7 +1280,4 @@ class Core {
 			echo wp_kses( $pushengage_transient_error, $allowed_html );
 		}
 	}
-
 }
-
-

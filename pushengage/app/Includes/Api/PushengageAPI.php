@@ -438,6 +438,4 @@ class PushengageAPI {
 
 		return HttpAPI::send_rest_api_request( $path, $options );
 	}
-
 }
-

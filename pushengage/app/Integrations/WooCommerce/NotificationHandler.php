@@ -175,7 +175,7 @@ class NotificationHandler {
 		// Get replacements array
 		$replacements = array(
 			'{{customer_name}}'           => $order->get_billing_first_name(),
-			'{{order_id}}'                => $order_id,
+			'{{order_id}}'                => $order->get_order_number(),
 			'{{order_total}}'             => $order->get_total(),
 			'{{order_date}}'              => $order->get_date_created()->format( 'Y-m-d H:i:s' ),
 			'{{order_billing_name}}'      => $order->get_billing_first_name(),
@@ -187,6 +187,9 @@ class NotificationHandler {
 			'{{order_url}}'               => $order->get_view_order_url(),
 			'{{order_admin_url}}'         => $order->get_edit_order_url(),
 		);
+
+		// Allow developers to filter the replacements array and add custom replacements.
+		$replacements = apply_filters( 'pushengage_order_notification_replacements', $replacements, $order );
 
 		// Add additional data to replacements
 		$replacements = array_merge( $replacements, $additional_data );
@@ -439,5 +442,4 @@ class NotificationHandler {
 			wp_schedule_single_event( $timestamp, $hook, $args );
 		}
 	}
-
 }

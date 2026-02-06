@@ -1,9 +1,9 @@
 <?php
-namespace Pushengage\Utils;
-
 /**
  * Plugin Upgrader Screen
  */
+namespace Pushengage\Utils;
+
 // Exit if accessed directly.
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;

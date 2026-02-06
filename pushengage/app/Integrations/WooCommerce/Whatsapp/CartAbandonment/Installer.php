@@ -103,6 +103,5 @@ class Installer {
 
 		require_once ABSPATH . 'wp-admin/includes/upgrade.php';
 		dbDelta( $sql );
-
 	}
 }

@@ -231,7 +231,6 @@ class NotificationTemplates {
 				),
 			),
 		);
-
 	}
 
 	/**
@@ -331,6 +330,5 @@ class NotificationTemplates {
 		}
 
 		return $notification_data;
-
 	}
 }

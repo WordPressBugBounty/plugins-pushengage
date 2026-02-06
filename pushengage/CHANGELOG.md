@@ -2,6 +2,24 @@
 
 All notable changes to the PushEngage plugin will be documented in this file.
 
+### 4.2.1
+
+* Added a new Chat Widget Analytics feature for tracking widget and Channel Interactions.
+* Enhancements in PushEngage WP Admin screens for better visibility and usability.
+* Minor bug fixes and performance improvements.
+
+### 4.2.0
+
+* Added a multichannel Chat widget enabling users to start conversations across multiple platforms.
+* Added filter for WooCommerce Order Push Notification dynamic replacement variables.
+* Minor bug fixes and performance improvements.
+
+### 4.1.6
+
+* Added new attributes and subscriber fields UI.
+* Added support for using shortcodes in WhatsApp templates.
+* Minor bug fixes and improvements.
+
 ### 4.1.5
 
 * Added WooCommerce Automation page, new UI for consistency in managing WooCommerce Integrations.

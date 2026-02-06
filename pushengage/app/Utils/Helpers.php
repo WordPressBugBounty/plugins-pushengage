@@ -279,7 +279,6 @@ class Helpers {
 			! empty( $integration_settings['browse_abandonment']['enable'] ) &&
 			! empty( $integration_settings['browse_abandonment']['name'] )
 		);
-
 	}
 
 	/**
@@ -300,5 +299,49 @@ class Helpers {
 			}
 		}
 		return $result;
+	}
+
+	/**
+	 * Get the site's timezone string with backward compatibility for older WordPress versions.
+	 *
+	 * In WordPress 5.3.0 and later, wp_timezone_string() returns a valid
+	 * timezone identifier (e.g., "Asia/Kathmandu") based on the site's settings.
+	 *
+	 * For older versions of WordPress ( < 5.3 ), this helper replicates the same behavior:
+	 *   1. If the "timezone_string" option is set, it is returned as-is.
+	 *   2. If only "gmt_offset" is set, it is converted into a valid timezone
+	 *      string in the format "UTC+05:45" or "UTC-03:00".
+	 *   3. If no timezone or offset is set, it defaults to "UTC".
+	 *
+	 * This ensures consistent timezone handling across all supported WordPress versions.
+	 *
+	 * @since 4.2.0
+	 *
+	 * @return string Timezone string compatible with PHP DateTimeZone.
+	 */
+	public static function get_wp_timezone_string() {
+		if ( function_exists( 'wp_timezone_string' ) ) {
+			return wp_timezone_string();
+		}
+
+		$timezone_string = get_option( 'timezone_string' );
+		if ( ! empty( $timezone_string ) ) {
+			return $timezone_string;
+		}
+
+		$offset = (float) get_option( 'gmt_offset' );
+
+		if ( empty( $offset ) && '0' !== $offset ) {
+			return 'UTC';
+		}
+
+		$hours   = (int) $offset;
+		$minutes = ( $offset - $hours ) * 60;
+
+		$sign        = ( 0 > $offset ) ? '-' : '+';
+		$abs_hours   = abs( $hours );
+		$abs_minutes = abs( (int) $minutes );
+
+		return sprintf( '%s%02d:%02d', $sign, $abs_hours, $abs_minutes );
 	}
 }

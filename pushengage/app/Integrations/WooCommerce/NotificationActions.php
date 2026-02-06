@@ -177,7 +177,6 @@ class NotificationActions {
 		}
 		echo '<a class="pe-order-edit-template" href="' . esc_url( admin_url( 'admin.php?page=wc-settings&tab=pe_notifications' ) ) . '" hover-tooltip="' . esc_html__( 'Edit Notification Template', 'pushengage' ) . '" tooltip-position="top"><span class="dashicons dashicons-edit"></span></a>';
 		echo '</div>';
-
 	}
 
 	/**
@@ -410,5 +409,4 @@ class NotificationActions {
 	public static function handle_order_action_pe_send_retry_purchase( $order ) {
 		NotificationHandler::send_order_push_notification( $order->get_id(), 'retry_purchase' );
 	}
-
 }

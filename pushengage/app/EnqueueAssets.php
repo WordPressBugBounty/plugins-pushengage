@@ -73,6 +73,15 @@ class EnqueueAssets {
 			PUSHENGAGE_VERSION
 		);
 
+		// Enqueue Font Awesome CSS for icon previews in admin React UI.
+		// Using CDN ensures the latest icon set without bundling locally.
+		wp_enqueue_style(
+			'pushengage-font-awesome',
+			'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css',
+			array(),
+			'6.5.2'
+		);
+
 		$assets_base_url = PUSHENGAGE_PLUGIN_URL . 'dist/';
 		if ( defined( 'PUSHENGAGE_SCRIPT_URL' ) ) {
 			$assets_base_url = PUSHENGAGE_SCRIPT_URL;
@@ -113,7 +122,7 @@ class EnqueueAssets {
 		}
 
 		if ( $is_version_more_than_five ) {
-			wp_set_script_translations( 'pushengage-main', 'pushengage', plugin_dir_path( dirname( __FILE__ ) ) . 'languages' );
+			wp_set_script_translations( 'pushengage-main', 'pushengage', plugin_dir_path( __DIR__ ) . 'languages' );
 		}
 	}
 
@@ -158,6 +167,8 @@ class EnqueueAssets {
 		$current_user                = wp_get_current_user();
 		$pushengage_settings         = Options::get_site_settings();
 
+		$whatsapp_click_to_chat_settings = get_option( 'pushengage_whatsapp_click_to_chat', array() );
+
 		$pushengage          = array(
 			'nonce'     => NonceChecker::create_nonce(),
 			'adminAjax' => admin_url( 'admin-ajax.php' ),
@@ -166,6 +177,8 @@ class EnqueueAssets {
 			'peVersion' => PUSHENGAGE_VERSION,
 			'siteUrl'   => site_url(),
 			'siteHost'  => wp_parse_url( get_site_url(), PHP_URL_HOST ),
+			'wpDateFormat' => get_option( 'date_format' ),
+			'wpTimeFormat' => get_option( 'time_format' ),
 			'siteId'    => isset( $pushengage_settings['site_id'] ) ? $pushengage_settings['site_id'] : null,
 			'ownerId'   => isset( $pushengage_settings['owner_id'] ) ? $pushengage_settings['owner_id'] : null,
 			'apiKey'    => isset( $pushengage_settings['api_key'] ) ? $pushengage_settings['api_key'] : null,
@@ -179,8 +192,10 @@ class EnqueueAssets {
 			'assetsUrl' => PUSHENGAGE_PLUGIN_URL . 'assets/',
 			'pluginUrl' => PUSHENGAGE_PLUGIN_URL,
 			'pluginDashboardUrl' => esc_url( 'admin.php?page=pushengage#/' ),
+			'wpAdminUrl'         => admin_url( '/' ),
 			'apiBaseUrl'         => PUSHENGAGE_API_URL,
 			'appDashboardUrl'    => PUSHENGAGE_APP_DASHBOARD_URL,
+			'isWhatsappClickToChatConfigured' => ! empty( $whatsapp_click_to_chat_settings ),
 		);
 
 		if ( $post_id ) {
@@ -229,7 +244,7 @@ class EnqueueAssets {
 	 */
 	public static function replace_footer_text() {
 		$link_text = esc_html__( 'Give us a 5-star rating!', 'pushengage' );
-		$href      = 'https://wordpress.org/support/plugin/pushengage/reviews/?filter=5#new-post';
+		$href      = 'https://wordpress.org/support/plugin/pushengage/reviews/#new-post';
 		$link1     = sprintf(
 			'<a href="%1$s" target="_blank" title="%2$s">&#9733;&#9733;&#9733;&#9733;&#9733;</a>',
 			$href,

@@ -188,7 +188,7 @@ class WhatsappHelper {
 		// filter out empty phone numbers
 		$phones = array_filter(
 			$phones,
-			function( $phone_number ) {
+			function ( $phone_number ) {
 				return ! empty( $phone_number );
 			}
 		);
@@ -238,7 +238,7 @@ class WhatsappHelper {
 		// remove empty parts
 		$parts = array_filter(
 			$parts,
-			function( $part ) {
+			function ( $part ) {
 				return ! empty( $part );
 			}
 		);
@@ -345,8 +345,10 @@ class WhatsappHelper {
 			);
 		}
 
-		// Merge the arrays with order and cart variables taking precedence
-		return array_merge( $replacements, $order_variables, $cart_variables );
+		// Merge the arrays with order and cart variables taking precedence.
+		$merged_replacements_variables = array_merge( $replacements, $order_variables, $cart_variables );
+
+		return apply_filters( 'pushengage_whatsapp_get_replacement_variables', $merged_replacements_variables, $order, $cart );
 	}
 
 	/**
@@ -364,7 +366,7 @@ class WhatsappHelper {
 
 		$value = preg_replace_callback(
 			$pattern,
-			function( $matches ) use ( $replacements ) {
+			function ( $matches ) use ( $replacements ) {
 				$placeholder = trim( $matches[1] );
 
 				// Check if the placeholder exists in replacements
@@ -389,6 +391,15 @@ class WhatsappHelper {
 		// and return an error
 		if ( '' === $value ) {
 			$value = ' ';
+		}
+
+		// check if the value is a shortcode.
+		$shortcode_regex = get_shortcode_regex();
+		if ( preg_match( '/' . $shortcode_regex . '/s', $value, $matches ) ) {
+			$value = do_shortcode( $value );
+
+			// Strip HTML and tabs / new lines from the value.
+			$value = sanitize_text_field( $value );
 		}
 
 		return $value;
@@ -521,5 +532,4 @@ class WhatsappHelper {
 
 		return $automation_settings;
 	}
-
 }

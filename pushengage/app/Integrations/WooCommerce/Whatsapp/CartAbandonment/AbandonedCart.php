@@ -567,7 +567,7 @@ class AbandonedCart {
 		// filter out empty phone numbers
 		$phone_numbers = array_filter(
 			$phone_numbers,
-			function( $phone_number ) {
+			function ( $phone_number ) {
 				return ! empty( $phone_number );
 			}
 		);

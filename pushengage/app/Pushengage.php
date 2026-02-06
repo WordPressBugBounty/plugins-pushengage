@@ -7,6 +7,7 @@ use Pushengage\NavMenu;
 use Pushengage\EnqueueAssets;
 use Pushengage\Integrations\Ajax as IntegrationsAjax;
 use Pushengage\Includes\SubscriberSync;
+use Pushengage\Includes\AttributesMetaSync;
 use Pushengage\Includes\WPMetricsCron;
 use Pushengage\Utils\Options;
 use Pushengage\Integrations\WooCommerce\Whatsapp\WhatsappNotification;
@@ -241,6 +242,7 @@ final class Pushengage {
 		// Load the frontend components
 		if ( is_user_logged_in() && Options::has_credentials() ) {
 			new SubscriberSync();
+			new AttributesMetaSync();
 		}
 
 		// Initialize WP Metrics Cron for weekly tracking

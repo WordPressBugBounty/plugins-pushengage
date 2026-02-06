@@ -52,7 +52,7 @@ class PostMetaFormatter {
 			$groups_id = array_values(
 				array_filter(
 					$_POST['pe_wp_audience_group_ids'],
-					function( $val ) {
+					function ( $val ) {
 						$val = intval( $val );
 						return $val > 0;
 					}
@@ -85,8 +85,4 @@ class PostMetaFormatter {
 
 		return $push_options;
 	}
-
-
-
-
 }

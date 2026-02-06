@@ -9,7 +9,7 @@
 		?>
 	</p>
 	<p>
-		<a href="https://wordpress.org/support/plugin/pushengage/reviews/?filter=5#new-post" class="button-primary pe-notice-dismiss pe-review-out" id="pe-review-in-org-link" target="_blank" rel="noopener noreferrer" style="margin-right:8px">
+		<a href="https://wordpress.org/support/plugin/pushengage/reviews/#new-post" class="button-primary pe-notice-dismiss pe-review-out" id="pe-review-in-org-link" target="_blank" rel="noopener noreferrer" style="margin-right:8px">
 			<?php esc_html_e( 'Ok, you deserve it', 'pushengage' ); ?>
 		</a>
 		<a href="#" class="pe-notice-dismiss" id="pe-display-notice-later-link" target="_blank" rel="noopener noreferrer" style="margin-right:8px">

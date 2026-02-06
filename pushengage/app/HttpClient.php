@@ -55,7 +55,6 @@ class HttpClient {
 			$logger->error( 'Failed to send request to endpoint ' . $request_url, $e );
 			return array( 'error' => array( 'message' => $e->getMessage() ) );
 		}
-
 	}
 
 	/**

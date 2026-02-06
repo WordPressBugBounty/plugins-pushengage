@@ -221,7 +221,7 @@ class WhatsappNotification {
 		}
 		// format phone numbers
 		$recipients = array_map(
-			function( $recipient ) {
+			function ( $recipient ) {
 				return WhatsappHelper::format_phone_number( $recipient );
 			},
 			$recipients
@@ -230,7 +230,7 @@ class WhatsappNotification {
 		// filter out empty phone numbers
 		$recipients = array_filter(
 			$recipients,
-			function( $recipient ) {
+			function ( $recipient ) {
 				return ! empty( $recipient );
 			}
 		);
@@ -574,5 +574,4 @@ class WhatsappNotification {
 			$this->logger->fatal( 'Error sending abandoned cart notification ', $e );
 		}
 	}
-
 }

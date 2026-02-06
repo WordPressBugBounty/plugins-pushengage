@@ -177,7 +177,27 @@ jQuery(document).ready(function ($) {
   $('body').on(
     'added_to_cart',
     function (event, fragments, cart_hash, $button) {
-      var productId = $button.data('product_id');
+      var productId = null;
+      try {
+        productId = $button && $button.data
+          ? $button.data('product_id')
+          : null;
+      } catch (e) {}
+
+      if (!productId) {
+        try {
+          var $form = $button && $button.closest
+            ? $button.closest('form')
+            : jQuery('form.cart').first();
+          if ($form && $form.length) {
+            productId =
+              $form.find('input[name="product_id"]').val() ||
+              $form.find('input[name="add-to-cart"]').val() ||
+              null;
+          }
+        } catch (e) {}
+      }
+
       if (!productId) {
         return;
       }

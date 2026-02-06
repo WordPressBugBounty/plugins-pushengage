@@ -65,6 +65,11 @@ class Ajax {
 		'map_segment_with_categories',
 		'get_category_segmentations',
 
+		// Attribute ↔ WP User Meta mapping
+		'get_all_user_meta_keys',
+		'map_attribute_with_user_meta',
+		'get_attribute_user_meta_mappings',
+
 		'get_post_metadata',
 
 		'get_misc_settings',
@@ -222,7 +227,6 @@ class Ajax {
 			wp_send_json_error( $error, 400 );
 
 		}
-
 	}
 
 	/**
@@ -326,7 +330,6 @@ class Ajax {
 
 		Options::update_site_settings( $pushengage_settings );
 		wp_send_json_success();
-
 	}
 
 	/**
@@ -430,7 +433,7 @@ class Ajax {
 			$auto_push['allowed_post_types'] = json_decode( $auto_push['allowed_post_types'] );
 		} else {
 			$auto_push['allowed_post_types'] = array_map(
-				function( $item ) {
+				function ( $item ) {
 					return $item['value'];
 				},
 				$public_post_types
@@ -525,6 +528,133 @@ class Ajax {
 		}
 
 		wp_send_json_success( $cats );
+	}
+
+	/**
+	 * Get distinct WordPress user meta keys.
+	 *
+	 * @since 4.1.6
+	 *
+	 * @return void
+	 */
+	public function get_all_user_meta_keys() {
+		NonceChecker::check();
+		$this->check_capability( 'manage_options' );
+
+		global $wpdb;
+		$keys = array();
+
+		// phpcs:ignore WordPress.DB.DirectDatabaseQuery.DirectQuery
+		$results = $wpdb->get_col(
+			"SELECT DISTINCT meta_key FROM {$wpdb->usermeta} WHERE meta_key NOT LIKE '_transient_%' AND meta_key NOT LIKE '_wp_session_%' AND meta_key NOT LIKE '" . $wpdb->esc_like( '_' ) . "%'"
+		);
+
+		if ( is_array( $results ) ) {
+			foreach ( $results as $key ) {
+				$key = sanitize_text_field( $key );
+				if ( '' !== $key ) {
+					$keys[] = $key;
+				}
+			}
+		}
+
+		sort( $keys );
+		wp_send_json_success( $keys );
+	}
+
+	/**
+	 * Map a Subscriber Attribute key to a WP user meta key.
+	 *
+	 * @since 4.1.6
+	 *
+	 * @return void
+	 */
+	public function map_attribute_with_user_meta() {
+		NonceChecker::check();
+		$this->check_capability( 'manage_options' );
+
+		$attribute_key = isset( $_POST['attributeKey'] ) ? sanitize_text_field( $_POST['attributeKey'] ) : '';
+		$user_meta_key = isset( $_POST['userMetaKey'] ) ? sanitize_text_field( $_POST['userMetaKey'] ) : '';
+
+		if ( '' === $attribute_key ) {
+			wp_send_json_error( __( 'Invalid attribute key.', 'pushengage' ), 400 );
+		}
+
+		$settings = Options::get_site_settings();
+		$mapping  = isset( $settings['attribute_user_meta_mapping'] ) && is_array( $settings['attribute_user_meta_mapping'] )
+			? $settings['attribute_user_meta_mapping']
+			: array();
+
+		if ( '' === $user_meta_key ) {
+			// Remove mapping if empty user meta key provided.
+			if ( isset( $mapping[ $attribute_key ] ) ) {
+				unset( $mapping[ $attribute_key ] );
+			}
+		} else {
+			$mapping[ $attribute_key ] = $user_meta_key;
+		}
+
+		$settings['attribute_user_meta_mapping'] = $mapping;
+		Options::update_site_settings( $settings );
+
+		wp_send_json_success( array( 'mapping' => $mapping ) );
+	}
+
+	/**
+	 * Get Attribute ↔ WP user meta mapping.
+	 *
+	 * @since 4.1.6
+	 *
+	 * @return void
+	 */
+	public function get_attribute_user_meta_mappings() {
+		NonceChecker::check();
+		$this->check_capability( 'manage_options' );
+
+		$settings = Options::get_site_settings();
+		$mapping  = isset( $settings['attribute_user_meta_mapping'] ) && is_array( $settings['attribute_user_meta_mapping'] )
+			? $settings['attribute_user_meta_mapping']
+			: array();
+
+		// Optionally prune mappings for attributes that no longer exist.
+		$current_keys = array();
+		if ( isset( $_POST['currentKeys'] ) ) {
+			$raw = $_POST['currentKeys'];
+			if ( is_string( $raw ) ) {
+				$decoded = json_decode( wp_unslash( $raw ), true );
+				if ( is_array( $decoded ) ) {
+					$raw = $decoded;
+				}
+			}
+			if ( is_array( $raw ) ) {
+				foreach ( $raw as $k ) {
+					$k = trim( sanitize_text_field( (string) $k ) );
+					if ( '' !== $k ) {
+						$current_keys[] = $k;
+					}
+				}
+			}
+		}
+
+		// If currentKeys was provided, prune mappings accordingly. Allow pruning
+		// even when the provided list is empty (meaning no attributes exist).
+		if ( isset( $_POST['currentKeys'] ) && is_array( $current_keys ) ) {
+			$allowed = array_fill_keys( $current_keys, true );
+			$changed = false;
+			foreach ( $mapping as $attr_key => $_ ) {
+				$attr_key_sanitized = trim( sanitize_text_field( (string) $attr_key ) );
+				if ( ! isset( $allowed[ $attr_key_sanitized ] ) ) {
+					unset( $mapping[ $attr_key ] );
+					$changed = true;
+				}
+			}
+			if ( true === $changed ) {
+				$settings['attribute_user_meta_mapping'] = $mapping;
+				Options::update_site_settings( $settings );
+			}
+		}
+
+		wp_send_json_success( $mapping );
 	}
 
 	/**
@@ -1178,7 +1308,6 @@ class Ajax {
 		// Save settings
 		Options::update_whatsapp_settings( $data );
 		wp_send_json_success( $data, 200 );
-
 	}
 
 	/**
@@ -1637,6 +1766,13 @@ class Ajax {
 		NonceChecker::check();
 		$this->check_capability( 'manage_options' );
 
+		// If delete flag is passed, delete the option and return early.
+		$should_delete = isset( $_POST['delete'] ) ? filter_var( $_POST['delete'], FILTER_VALIDATE_BOOLEAN ) : false;
+		if ( $should_delete ) {
+			delete_option( 'pushengage_whatsapp_click_to_chat' );
+			wp_send_json_success( new \stdClass(), 200 );
+		}
+
 		$data = array();
 
 		// Ensure we sanitize all inputs properly
@@ -1810,7 +1946,7 @@ class Ajax {
 				'debug_display'    => defined( 'WP_DEBUG_DISPLAY' ) ? WP_DEBUG_DISPLAY : false,
 				'script_debug'     => defined( 'SCRIPT_DEBUG' ) ? SCRIPT_DEBUG : false,
 				'locale'           => get_locale(),
-				'timezone'         => wp_timezone_string(),
+				'timezone'         => Helpers::get_wp_timezone_string(),
 				'home_url'         => home_url(),
 				'site_url'         => site_url(),
 			),

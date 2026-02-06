@@ -199,7 +199,7 @@ class ReviewNotice {
 					'Hey, I noticed you have been using PushEngage for some time - that’s awesome! Could you please do me a BIG favor and give it a 5-star rating on WordPress to help us spread the word and boost our motivation?',
 					'pushengage'
 				),
-				'url'         => 'https://wordpress.org/support/plugin/pushengage/reviews/?filter=5#new-post',
+				'url'         => 'https://wordpress.org/support/plugin/pushengage/reviews/#new-post',
 				'type'        => 'success',
 				'status'      => 1,
 				'state'       => 'review',

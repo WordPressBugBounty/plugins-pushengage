@@ -82,7 +82,6 @@ class NotificationSettings {
 			</p>
 		</div>
 		<?php
-
 	}
 
 	/**
@@ -145,7 +144,6 @@ class NotificationSettings {
 				);
 			}
 		}
-
 	}
 
 	/**
@@ -324,5 +322,4 @@ class NotificationSettings {
 		wp_redirect( admin_url( 'admin.php?page=pushengage#/woocommerce/automation' ) );
 		exit;
 	}
-
 }

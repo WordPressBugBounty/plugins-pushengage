@@ -120,5 +120,4 @@ class WhatsNew {
 		Options::update_site_settings( $pushengage_settings );
 		wp_send_json_success();
 	}
-
 }

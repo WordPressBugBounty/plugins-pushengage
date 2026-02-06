@@ -1,9 +1,9 @@
 <?php
+/**
+ * Plugin Upgrader Silent
+ */
 namespace Pushengage\Utils;
 
-/**
- * PluginUpgraderSilentAjax
- */
 // Exit if accessed directly.
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;

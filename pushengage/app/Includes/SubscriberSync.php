@@ -56,6 +56,7 @@ class SubscriberSync {
 
 		$localized_data = array(
 			'ajaxUrl'               => admin_url( 'admin-ajax.php' ),
+			'siteTimezone'          => Helpers::get_wp_timezone_string(),
 			'nonce'                 => wp_create_nonce( 'pushengage_subscriber_sync_nonce' ),
 			'subscriber_ids'        => $subscriber_ids,
 			'enabled_leads_segment' => $enabled_leads_segment,
@@ -119,6 +120,5 @@ class SubscriberSync {
 				'subscriber_ids' => $subscriber_ids,
 			)
 		);
-
 	}
 }

@@ -547,7 +547,7 @@ class Logger {
 		// Sort files by modification time (oldest first)
 		usort(
 			$backup_files,
-			function( $a, $b ) {
+			function ( $a, $b ) {
 				return filemtime( $a ) - filemtime( $b );
 			}
 		);
@@ -664,7 +664,7 @@ class Logger {
 		// Sort files by creation time (newest first)
 		usort(
 			$files,
-			function( $a, $b ) {
+			function ( $a, $b ) {
 				return $b['created'] - $a['created'];
 			}
 		);

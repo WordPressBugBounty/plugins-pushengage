@@ -157,7 +157,8 @@ class NavMenu {
 	 *
 	 * @return void
 	 */
-	public function add_upgrade_to_pro_custom_script() {        ?>
+	public function add_upgrade_to_pro_custom_script() {
+		?>
 		<style type='text/css'>
 			a.pe-upgrade-to-pro-submenu {
 				background-color: #00a32a !important;
