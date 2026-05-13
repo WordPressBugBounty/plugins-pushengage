@@ -3,6 +3,7 @@
 namespace Pushengage\Includes;
 
 use Pushengage\Utils\Options;
+use Pushengage\Utils\StringUtils;
 
 // Exit if accessed directly.
 if ( ! defined( 'ABSPATH' ) ) {
@@ -143,11 +144,7 @@ class AttributesMetaSync {
 			}
 
 			// Enforce maximum value length (256 chars).
-			if ( function_exists( 'mb_substr' ) ) {
-				$value = mb_substr( $value, 0, 256, 'UTF-8' );
-			} else {
-				$value = substr( $value, 0, 256 );
-			}
+			$value = StringUtils::substr( $value, 0, 256 );
 
 			$attributes[ $attribute_key ] = $value;
 		}

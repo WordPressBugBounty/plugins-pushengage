@@ -106,14 +106,30 @@ class Options {
 	public static function get_allowed_post_types_for_auto_push() {
 		$pushengage_settings = self::get_site_settings();
 		if ( isset( $pushengage_settings['allowed_post_types'] ) ) {
-			return json_decode( $pushengage_settings['allowed_post_types'], true );
+			$decoded = json_decode( $pushengage_settings['allowed_post_types'], true );
+
+			// Legacy/staging data may contain a mixed array of strings and
+			// {label, value} objects. Project everything to a flat list of
+			// post-type slugs and drop anything we can't make sense of.
+			$slugs = array();
+			if ( is_array( $decoded ) ) {
+				foreach ( $decoded as $item ) {
+					if ( is_string( $item ) ) {
+						$slugs[] = $item;
+					} elseif ( is_array( $item ) && isset( $item['value'] ) && is_string( $item['value'] ) ) {
+						$slugs[] = $item['value'];
+					}
+				}
+			}
+
+			return $slugs;
 		}
 
 		$args = array(
 			'public' => true,
 		);
 
-		return get_post_types( $args );
+		return array_values( get_post_types( $args ) );
 	}
 
 	/**
@@ -337,11 +353,12 @@ class Options {
 			);
 		}
 
-		// Add cart abandonment campaign settings.
-		$push_notification_settings['cart_abandonment'] = $site_settings['woo_integration']['cart_abandonment']['enable'] ? 1 : 0;
-
-		// Add browse abandonment campaign settings.
-		$push_notification_settings['browse_abandonment'] = $site_settings['woo_integration']['browse_abandonment']['enable'] ? 1 : 0;
+		// Add cart/browse abandonment campaign settings. Use empty() to safely
+		// traverse — `woo_integration` only exists once the user has configured
+		// WooCommerce automations via the admin UI; on fresh installs or
+		// non-WooCommerce sites the key is absent.
+		$push_notification_settings['cart_abandonment']    = ! empty( $site_settings['woo_integration']['cart_abandonment']['enable'] ) ? 1 : 0;
+		$push_notification_settings['browse_abandonment']  = ! empty( $site_settings['woo_integration']['browse_abandonment']['enable'] ) ? 1 : 0;
 
 		return $push_notification_settings;
 	}

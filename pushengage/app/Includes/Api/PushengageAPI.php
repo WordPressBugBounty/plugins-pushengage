@@ -177,7 +177,16 @@ class PushengageAPI {
 
 		$settings = Options::get_site_settings();
 		$action   = 'draft' === $params['status'] ? 'draft' : 'sent';
-		$path     = 'sites/' . $settings['site_id'] . '/notifications?action=' . $action;
+
+		// Upstream's body validator only accepts status in [sent, scheduled].
+		// The URL `action` query param is what signals draft intent — keeping
+		// `status: draft` in the body causes upstream to reject the request
+		// with "Invalid request data". Drop it for drafts.
+		if ( 'draft' === $action ) {
+			unset( $params['status'] );
+		}
+
+		$path = 'sites/' . $settings['site_id'] . '/notifications?action=' . $action;
 
 		$options = array(
 			'method' => 'POST',
@@ -437,5 +446,59 @@ class PushengageAPI {
 		);
 
 		return HttpAPI::send_rest_api_request( $path, $options );
+	}
+
+	/**
+	 * Get notification result analytics summary.
+	 *
+	 * @since 4.2.2
+	 * @param array $params Optional query parameters (date_from, date_to, notification_type, etc.).
+	 * @return array|WP_Error Returns notification result summary or WP_Error.
+	 */
+	public function get_notification_analytics( $params = array() ) {
+		$settings = Options::get_site_settings();
+		$path     = 'sites/' . $settings['site_id'] . '/analytics/notification-result/summary';
+
+		if ( ! empty( $params ) ) {
+			$path .= '?' . http_build_query( $params );
+		}
+
+		return HttpAPI::send_private_api_request( $path );
+	}
+
+	/**
+	 * Get site analytics summary (subscribers, impressions, clicks).
+	 *
+	 * @since 4.2.2
+	 * @param array $params Optional query parameters (date_from, date_to, etc.).
+	 * @return array|WP_Error Returns site analytics summary or WP_Error.
+	 */
+	public function get_analytics_overview( $params = array() ) {
+		$settings = Options::get_site_settings();
+		$path     = 'sites/' . $settings['site_id'] . '/analytics/summary';
+
+		if ( ! empty( $params ) ) {
+			$path .= '?' . http_build_query( $params );
+		}
+
+		return HttpAPI::send_private_api_request( $path );
+	}
+
+	/**
+	 * Get subscriber analytics for the site.
+	 *
+	 * @since 4.2.2
+	 * @param array $params Optional query parameters (date_from, date_to, etc.).
+	 * @return array|WP_Error Returns subscriber analytics or WP_Error.
+	 */
+	public function get_subscriber_analytics( $params = array() ) {
+		$settings = Options::get_site_settings();
+		$path     = 'sites/' . $settings['site_id'] . '/dashboard/subscriber-analytics';
+
+		if ( ! empty( $params ) ) {
+			$path .= '?' . http_build_query( $params );
+		}
+
+		return HttpAPI::send_private_api_request( $path );
 	}
 }

@@ -2,6 +2,15 @@
 
 All notable changes to the PushEngage plugin will be documented in this file.
 
+### 4.2.2
+
+* NEW: WordPress Abilities API support — PushEngage now registers 25 abilities for AI assistants and MCP servers, covering plugin info, push notifications, segments, audience groups, analytics, auto-push settings, WooCommerce push automation campaigns, WhatsApp status, and debug logs.
+* NEW: Verified compatibility with WordPress 7.0 and the new abilities framework.
+* Improved: iOS web push notification reliability for subscribers on Safari 16.4+ and iPadOS 16.4+.
+* Improved: Browser notification delivery optimization across Chrome, Firefox, Safari, and Edge.
+* Improved: Click-to-chat button targeting in the multichannel chat widget — show or hide on specific pages, posts, or device types.
+* Improved: Cart abandonment recovery reliability for high-volume WooCommerce stores.
+
 ### 4.2.1
 
 * Added a new Chat Widget Analytics feature for tracking widget and Channel Interactions.

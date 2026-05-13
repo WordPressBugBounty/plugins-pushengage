@@ -255,7 +255,7 @@ class NotificationTemplates {
 			}
 
 			// Trim the data to the maximum length.
-			if ( mb_strlen( $notification_data[ $key ] ) > $max_length ) {
+			if ( StringUtils::strlen( $notification_data[ $key ] ) > $max_length ) {
 				$notification_data[ $key ] = StringUtils::substr( $notification_data[ $key ], 0, $max_length );
 			}
 		}

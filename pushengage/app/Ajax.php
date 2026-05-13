@@ -5,6 +5,7 @@ use Pushengage\HttpClient;
 use Pushengage\ReviewNotice;
 use Pushengage\Utils\Helpers;
 use Pushengage\Utils\Options;
+use Pushengage\Utils\StringUtils;
 use Pushengage\Utils\ArrayHelper;
 use Pushengage\Utils\NonceChecker;
 use Pushengage\Utils\PublicPostTypes;
@@ -1503,14 +1504,8 @@ class Ajax {
 	 */
 	private function sanitize_limited_text( $value, $limit ) {
 		$value = sanitize_text_field( $value );
-		if ( function_exists( 'mb_strlen' ) && function_exists( 'mb_substr' ) ) {
-			if ( mb_strlen( $value ) > $limit ) {
-				$value = mb_substr( $value, 0, $limit );
-			}
-		} else {
-			if ( strlen( $value ) > $limit ) {
-				$value = substr( $value, 0, $limit );
-			}
+		if ( StringUtils::strlen( $value ) > $limit ) {
+			$value = StringUtils::substr( $value, 0, $limit );
 		}
 		return $value;
 	}

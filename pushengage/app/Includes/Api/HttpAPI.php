@@ -41,6 +41,41 @@ class HttpAPI {
 	}
 
 	/**
+	 * Build a human-readable error message from an upstream error envelope.
+	 *
+	 * Upstream's validation errors include a `details` array — e.g.
+	 * `[{"message":"\"status\" must be one of [sent, scheduled]","path":["status"]}]`
+	 * — that explains which field is wrong. Without it, callers only see the
+	 * top-level `Invalid request data.` and can't tell what to fix. Append
+	 * each detail message to the top-level message so it surfaces to the
+	 * caller (and ultimately the MCP response).
+	 *
+	 * @since 4.2.2
+	 * @param array $error Upstream `error` envelope (with `message`, optional `details`).
+	 * @return string
+	 */
+	private static function format_upstream_error_message( $error ) {
+		$message = isset( $error['message'] ) ? (string) $error['message'] : __( 'Upstream API error.', 'pushengage' );
+
+		if ( empty( $error['details'] ) || ! is_array( $error['details'] ) ) {
+			return $message;
+		}
+
+		$extras = array();
+		foreach ( $error['details'] as $detail ) {
+			if ( is_array( $detail ) && isset( $detail['message'] ) ) {
+				$extras[] = (string) $detail['message'];
+			}
+		}
+
+		if ( empty( $extras ) ) {
+			return $message;
+		}
+
+		return $message . ' (' . implode( '; ', $extras ) . ')';
+	}
+
+	/**
 	 * Return the user agent string
 	 *
 	 * @return string
@@ -116,7 +151,7 @@ class HttpAPI {
 			}
 
 			if ( ! empty( $data['error'] ) ) {
-				return new WP_Error( 'api-error', $data['error']['message'], $data );
+				return new WP_Error( 'api-error', self::format_upstream_error_message( $data['error'] ), $data );
 			}
 
 			return $data;
@@ -268,7 +303,7 @@ class HttpAPI {
 			}
 
 			if ( ! empty( $data['error'] ) ) {
-				return new WP_Error( 'api-error', $data['error']['message'], $data );
+				return new WP_Error( 'api-error', self::format_upstream_error_message( $data['error'] ), $data );
 			}
 
 			return $data;

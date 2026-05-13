@@ -12,6 +12,7 @@ use Pushengage\Includes\WPMetricsCron;
 use Pushengage\Utils\Options;
 use Pushengage\Integrations\WooCommerce\Whatsapp\WhatsappNotification;
 use Pushengage\Integrations\WooCommerce\Whatsapp\WhatsappClickToChat;
+use Pushengage\Integrations\Abilities;
 
 // Exit if accessed directly.
 if ( ! defined( 'ABSPATH' ) ) {
@@ -135,6 +136,14 @@ final class Pushengage {
 	public $click_to_chat;
 
 	/**
+	 * WordPress Abilities API integration. Set when WP 6.9+ is detected.
+	 *
+	 * @since 4.2.2
+	 * @var Abilities|null
+	 */
+	public $abilities;
+
+	/**
 	 * Initializes the Pushengage class
 	 *
 	 * @since 4.0.0
@@ -247,6 +256,11 @@ final class Pushengage {
 
 		// Initialize WP Metrics Cron for weekly tracking
 		WPMetricsCron::get_instance();
+
+		// Load Abilities API integration when WP supports it (6.9+).
+		if ( function_exists( 'wp_register_ability' ) ) {
+			$this->abilities = new Abilities();
+		}
 	}
 
 	/**
