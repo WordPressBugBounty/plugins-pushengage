@@ -190,6 +190,10 @@ class ReviewNotice {
 	public function get_review_notice() {
 		NonceChecker::check();
 
+		if ( ! current_user_can( 'publish_posts' ) ) {
+			wp_send_json_error( __( 'Permission denied. Please make sure you have required permission to perform this action.', 'pushengage' ), 403 );
+		}
+
 		$data = null;
 		if ( ReviewNotice::should_render_review_notice() ) {
 			$data = array(
@@ -219,6 +223,10 @@ class ReviewNotice {
 	 */
 	public function dismiss_review_notice() {
 		NonceChecker::check();
+
+		if ( ! current_user_can( 'publish_posts' ) ) {
+			wp_send_json_error( __( 'Permission denied. Please make sure you have required permission to perform this action.', 'pushengage' ), 403 );
+		}
 
 		if ( ! empty( $_POST['clicked_review_action'] ) ) {
 			$data = array();

@@ -178,7 +178,14 @@ class AnalyticsAbilities extends AbstractRegistrar {
 					'include_meta' => 'array',
 				)
 			);
-			return pushengage()->get_notification_analytics( $clean );
+
+			$response = pushengage()->get_notification_analytics( $clean );
+
+			if ( is_wp_error( $response ) ) {
+				return self::sanitize_error( $response );
+			}
+
+			return self::unwrap_envelope( $response );
 		} catch ( \Exception $e ) {
 			return new \WP_Error( 'ability-error', $e->getMessage() );
 		}
@@ -212,24 +219,10 @@ class AnalyticsAbilities extends AbstractRegistrar {
 			$response = pushengage()->get_analytics_overview( $clean );
 
 			if ( is_wp_error( $response ) ) {
-				return $response;
+				return self::sanitize_error( $response );
 			}
 
-			// Schema declares the top-level output as a list. Upstream returns the
-			// { status, data, user, ... } envelope, so unwrap `data`. Only accept a
-			// genuine JSON list — an assoc-keyed `data` (e.g. when there are no
-			// rows) collapses to an empty list rather than scalars.
-			$raw_data = ( isset( $response['data'] ) && is_array( $response['data'] ) ) ? $response['data'] : array();
-			$rows     = wp_is_numeric_array( $raw_data ) ? array_values( $raw_data ) : array();
-
-			return array_values(
-				array_filter(
-					$rows,
-					static function ( $row ) {
-						return is_array( $row );
-					}
-				)
-			);
+			return self::unwrap_envelope( $response, 'rows' );
 		} catch ( \Exception $e ) {
 			return new \WP_Error( 'ability-error', $e->getMessage() );
 		}
@@ -243,7 +236,13 @@ class AnalyticsAbilities extends AbstractRegistrar {
 	 */
 	public function execute_get_subscriber_analytics() {
 		try {
-			return pushengage()->get_subscriber_analytics();
+			$response = pushengage()->get_subscriber_analytics();
+
+			if ( is_wp_error( $response ) ) {
+				return self::sanitize_error( $response );
+			}
+
+			return self::unwrap_envelope( $response );
 		} catch ( \Exception $e ) {
 			return new \WP_Error( 'ability-error', $e->getMessage() );
 		}

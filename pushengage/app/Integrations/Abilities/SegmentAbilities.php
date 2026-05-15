@@ -216,8 +216,7 @@ class SegmentAbilities extends AbstractRegistrar {
 				'output_schema'    => array(
 					'type'       => 'object',
 					'properties' => array(
-						'status' => array( 'type' => array( 'string', 'integer' ) ),
-						'data'   => array( 'type' => 'object' ),
+						'data' => array( 'type' => 'object' ),
 					),
 				),
 			)
@@ -265,7 +264,14 @@ class SegmentAbilities extends AbstractRegistrar {
 					'expand'            => 'string',
 				)
 			);
-			return pushengage()->get_segments( $clean );
+
+			$response = pushengage()->get_segments( $clean );
+
+			if ( is_wp_error( $response ) ) {
+				return self::sanitize_error( $response );
+			}
+
+			return array( 'data' => self::unwrap_envelope( $response, 'rows' ) );
 		} catch ( \Exception $e ) {
 			return new \WP_Error( 'ability-error', $e->getMessage() );
 		}
@@ -288,7 +294,14 @@ class SegmentAbilities extends AbstractRegistrar {
 					'name_like' => 'string',
 				)
 			);
-			return pushengage()->get_audience_groups( $clean );
+
+			$response = pushengage()->get_audience_groups( $clean );
+
+			if ( is_wp_error( $response ) ) {
+				return self::sanitize_error( $response );
+			}
+
+			return array( 'data' => self::unwrap_envelope( $response, 'rows' ) );
 		} catch ( \Exception $e ) {
 			return new \WP_Error( 'ability-error', $e->getMessage() );
 		}
@@ -311,7 +324,14 @@ class SegmentAbilities extends AbstractRegistrar {
 					'segment_criteria'         => 'object',
 				)
 			);
-			return pushengage()->create_segment( $clean );
+
+			$response = pushengage()->create_segment( $clean );
+
+			if ( is_wp_error( $response ) ) {
+				return self::sanitize_error( $response );
+			}
+
+			return self::unwrap_envelope( $response );
 		} catch ( \Exception $e ) {
 			return new \WP_Error( 'ability-error', $e->getMessage() );
 		}
@@ -342,10 +362,16 @@ class SegmentAbilities extends AbstractRegistrar {
 				return new \WP_Error( 'missing-param', __( 'A non-empty subscribers_id array is required.', 'pushengage' ) );
 			}
 
-			return pushengage()->add_subscribers_to_segment(
+			$response = pushengage()->add_subscribers_to_segment(
 				$clean['subscribers_id'],
 				$clean['segment_id']
 			);
+
+			if ( is_wp_error( $response ) ) {
+				return self::sanitize_error( $response );
+			}
+
+			return array( 'data' => self::unwrap_envelope( $response ) );
 		} catch ( \Exception $e ) {
 			return new \WP_Error( 'ability-error', $e->getMessage() );
 		}

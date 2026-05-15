@@ -122,7 +122,9 @@ class Options {
 				}
 			}
 
-			return $slugs;
+			// Mixed string + {value: …} entries for the same slug otherwise
+			// produce duplicates (e.g. ['post', {value: 'post'}] → ['post', 'post']).
+			return array_values( array_unique( $slugs ) );
 		}
 
 		$args = array(

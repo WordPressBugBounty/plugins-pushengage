@@ -544,6 +544,10 @@ class Woo {
 	public static function get_woo_notice() {
 		NonceChecker::check();
 
+		if ( ! current_user_can( 'manage_options' ) ) {
+			wp_send_json_error( __( 'Permission denied. Please make sure you have required permission to perform this action.', 'pushengage' ), 403 );
+		}
+
 		$notice_data = array(
 			'should_render' => self::should_render_woo_notice(),
 		);
@@ -582,6 +586,10 @@ class Woo {
 	 */
 	public static function dismiss_woo_notice() {
 		NonceChecker::check();
+
+		if ( ! current_user_can( 'manage_options' ) ) {
+			wp_send_json_error( __( 'Permission denied. Please make sure you have required permission to perform this action.', 'pushengage' ), 403 );
+		}
 
 		if ( ! empty( $_POST['clicked_action'] ) ) {
 			$data = array();

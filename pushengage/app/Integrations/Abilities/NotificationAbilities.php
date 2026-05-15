@@ -98,8 +98,7 @@ class NotificationAbilities extends AbstractRegistrar {
 				'output_schema'    => array(
 					'type'       => 'object',
 					'properties' => array(
-						'status' => array( 'type' => array( 'string', 'integer' ) ),
-						'data'   => array(
+						'data' => array(
 							'type'       => 'object',
 							'properties' => array(
 								'notification_id'      => array( 'type' => 'string' ),
@@ -138,8 +137,7 @@ class NotificationAbilities extends AbstractRegistrar {
 				'output_schema'    => array(
 					'type'       => 'object',
 					'properties' => array(
-						'status' => array( 'type' => array( 'string', 'integer' ) ),
-						'data'   => array(
+						'data' => array(
 							'type'       => 'object',
 							'properties' => array(
 								'notification_id'      => array( 'type' => 'string' ),
@@ -288,17 +286,16 @@ class NotificationAbilities extends AbstractRegistrar {
 			$response = pushengage()->send_notification( $params );
 
 			if ( is_wp_error( $response ) ) {
-				return $response;
+				return self::sanitize_error( $response );
 			}
 
 			// Upstream `data` is a single notification record. notification_id
 			// comes back as integer but the schema declares string — project to
 			// schema fields with explicit casts.
-			$data = ( isset( $response['data'] ) && is_array( $response['data'] ) ) ? $response['data'] : array();
+			$data = self::unwrap_envelope( $response );
 
 			return array(
-				'status' => isset( $response['status'] ) ? $response['status'] : 200,
-				'data'   => array(
+				'data' => array(
 					'notification_id'      => isset( $data['notification_id'] ) ? (string) $data['notification_id'] : '',
 					'notification_title'   => isset( $data['notification_title'] ) ? (string) $data['notification_title'] : '',
 					'notification_message' => isset( $data['notification_message'] ) ? (string) $data['notification_message'] : '',
@@ -330,16 +327,15 @@ class NotificationAbilities extends AbstractRegistrar {
 			$response = pushengage()->get_notification( $clean['notification_id'] );
 
 			if ( is_wp_error( $response ) ) {
-				return $response;
+				return self::sanitize_error( $response );
 			}
 
 			// Same projection as send-notification, plus the extra fields the
 			// get-notification schema declares (image, source, counts, sent_at).
-			$data = ( isset( $response['data'] ) && is_array( $response['data'] ) ) ? $response['data'] : array();
+			$data = self::unwrap_envelope( $response );
 
 			return array(
-				'status' => isset( $response['status'] ) ? $response['status'] : 200,
-				'data'   => array(
+				'data' => array(
 					'notification_id'      => isset( $data['notification_id'] ) ? (string) $data['notification_id'] : '',
 					'notification_title'   => isset( $data['notification_title'] ) ? (string) $data['notification_title'] : '',
 					'notification_message' => isset( $data['notification_message'] ) ? (string) $data['notification_message'] : '',
@@ -380,7 +376,7 @@ class NotificationAbilities extends AbstractRegistrar {
 			$response = pushengage()->get_notifications( $clean );
 
 			if ( is_wp_error( $response ) ) {
-				return $response;
+				return self::sanitize_error( $response );
 			}
 
 			// Upstream shape (confirmed against the live API):
@@ -388,8 +384,9 @@ class NotificationAbilities extends AbstractRegistrar {
 			//     meta: { sent, draft, scheduled }, user }
 			// Pagination metadata lives inside `data` (page/perPage/total); the
 			// top-level `meta` is unrelated status counts and is not what our
-			// schema describes.
-			$paginator = ( isset( $response['data'] ) && is_array( $response['data'] ) ) ? $response['data'] : array();
+			// schema describes. unwrap_envelope handles the outer step; the
+			// inner row drill stays custom because rows are nested an extra level.
+			$paginator = self::unwrap_envelope( $response );
 			$raw_rows  = ( isset( $paginator['data'] ) && is_array( $paginator['data'] ) ) ? $paginator['data'] : array();
 			$rows      = wp_is_numeric_array( $raw_rows ) ? array_values( $raw_rows ) : array();
 

@@ -2,6 +2,13 @@
 
 All notable changes to the PushEngage plugin will be documented in this file.
 
+### 4.2.3
+
+* Fix: Optimized the Abilities API integration so AI assistant and MCP responses follows the output schema.
+* Fix: Auto-push allowed post types duplicate results in response.
+* Improved: Strengthened overall plugin security and reliability.
+* Tested up to WordPress 7.0.
+
 ### 4.2.2
 
 * NEW: WordPress Abilities API support — PushEngage now registers 25 abilities for AI assistants and MCP servers, covering plugin info, push notifications, segments, audience groups, analytics, auto-push settings, WooCommerce push automation campaigns, WhatsApp status, and debug logs.

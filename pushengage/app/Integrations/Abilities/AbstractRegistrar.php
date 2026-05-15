@@ -94,6 +94,78 @@ abstract class AbstractRegistrar {
 	}
 
 	/**
+	 * Unwrap the PushEngage REST envelope to a documented ability shape.
+	 *
+	 * Upstream private-API responses are wrapped as `{ status, data, user, ... }`
+	 * where `user` carries account-level session context (owner email, plan
+	 * pricing, Stripe IDs, site list). That envelope must never reach an
+	 * ability consumer — abilities are flagged `meta.mcp.public = true`, so a
+	 * bridge would otherwise log the operator's billing details on every call.
+	 *
+	 * @since 4.2.3
+	 * @param mixed  $response Raw upstream response (caller must have already
+	 *                         handled `is_wp_error`).
+	 * @param string $shape    'object' (default) returns the inner `data`
+	 *                         payload verbatim. 'rows' coerces `data` to a
+	 *                         numeric list of row arrays, dropping anything
+	 *                         that isn't an array (e.g. assoc-keyed empties).
+	 * @return array
+	 */
+	protected static function unwrap_envelope( $response, $shape = 'object' ) {
+		$data = ( is_array( $response ) && isset( $response['data'] ) && is_array( $response['data'] ) )
+			? $response['data']
+			: array();
+
+		if ( 'rows' !== $shape ) {
+			return $data;
+		}
+
+		if ( ! wp_is_numeric_array( $data ) ) {
+			return array();
+		}
+
+		return array_values(
+			array_filter(
+				$data,
+				static function ( $row ) {
+					return is_array( $row );
+				}
+			)
+		);
+	}
+
+	/**
+	 * Sanitize a WP_Error before returning it from an ability.
+	 *
+	 * Upstream HTTP errors from `HttpAPI::send_private_api_request` carry the
+	 * full REST envelope as `WP_Error` data, including the `user` field with
+	 * account-level session context (owner email, plan pricing, Stripe IDs,
+	 * site list). MCP bridges that serialize `WP_Error::get_error_data()`
+	 * would otherwise leak that envelope through the error channel even after
+	 * the success path is locked down by `unwrap_envelope()`.
+	 *
+	 * The upstream error message is already folded into the WP_Error message
+	 * by `HttpAPI::format_upstream_error_message()`, so dropping data is
+	 * lossless for the consumer. Non-WP_Error inputs pass through unchanged
+	 * so callers can pipe arbitrary returns through this helper.
+	 *
+	 * Scoped to the ability boundary on purpose — `HttpAPI` is also consumed
+	 * by Ajax handlers and cron, which may rely on the current error-data
+	 * shape; this helper avoids changing that contract.
+	 *
+	 * @since 4.2.3
+	 * @param mixed $error Possibly a WP_Error instance.
+	 * @return mixed Sanitized WP_Error, or the original value untouched.
+	 */
+	protected static function sanitize_error( $error ) {
+		if ( ! is_wp_error( $error ) ) {
+			return $error;
+		}
+
+		return new \WP_Error( $error->get_error_code(), $error->get_error_message() );
+	}
+
+	/**
 	 * Register a PushEngage ability with shared defaults applied.
 	 *
 	 * Defaults filled in: category=pushengage, permission_callback=manage_options,

@@ -32,6 +32,38 @@ $generated_i18n_strings = array(
 	// Reference: src/components/FlyoutButton.tsx:186
 	__( 'See Quick Links', 'pushengage' ),
 
+	// Reference: src/components/InstantUpgradeModal.tsx:168
+	__( '45% off', 'pushengage' ),
+
+	// Reference: src/components/InstantUpgradeModal.tsx:171
+	__( 'Upgrade before time runs out', 'pushengage' ),
+
+	// Reference: src/components/InstantUpgradeModal.tsx:177
+	__( '40% off', 'pushengage' ),
+
+	// Reference: src/components/InstantUpgradeModal.tsx:180
+	__( 'Grab The Special Discount', 'pushengage' ),
+
+	// Reference: src/components/InstantUpgradeModal.tsx:211
+	__( 'starting at', 'pushengage' ),
+
+	// Reference: src/components/InstantUpgradeModal.tsx:225
+	__( '$%1$s Savings*', 'pushengage' ),
+
+	// Reference: src/components/InstantUpgradeModal.tsx:230
+	__( 'Get Access to', 'pushengage' ),
+
+	// Reference: src/components/InstantUpgradeModal.tsx:237
+	__( 'Reach a wider audience (up to %1$s subscribers)', 'pushengage' ),
+
+	// Reference: src/components/InstantUpgradeModal.tsx:265
+	// Reference: src/components/common/UpgradeBanner.tsx:111
+	// Reference: src/components/headers/siteAlert/InstantUpgradeAlert.tsx:158
+	__( 'Upgrade Now', 'pushengage' ),
+
+	// Reference: src/components/InstantUpgradeModal.tsx:269
+	__( 'Offer will be applied automatically', 'pushengage' ),
+
 	// Reference: src/components/ServerErrorModal.tsx:67
 	// Reference: src/components/campaign/pushBroadcast/PushTableSorter.tsx:34
 	__( 'Okay', 'pushengage' ),
@@ -101,11 +133,11 @@ $generated_i18n_strings = array(
 	// Reference: src/components/audience/TagCategoryForm.tsx:136
 	// Reference: src/components/common/DateRangeDropdownButton.tsx:152
 	// Reference: src/components/whatsapp/WhatsappCampaignModal.tsx:575
-	// Reference: src/components/woocommerce/WooPushCampaignModal.tsx:428
+	// Reference: src/components/woocommerce/WooPushCampaignModal.tsx:430
 	// Reference: src/components/woocommerce/WooTriggerSettingsModal.tsx:261
 	// Reference: src/pages/audience/AudienceGroups.tsx:124
 	// Reference: src/pages/audience/Segments.tsx:173
-	// Reference: src/pages/chatWidget/ChannelSettingsDrawer.tsx:309
+	// Reference: src/pages/chatWidget/ChannelSettingsDrawer.tsx:514
 	// Reference: src/pages/chatWidget/components/WidgetCard.tsx:302
 	// Reference: src/pages/drip/List.tsx:221
 	// Reference: src/pages/pushBroadcast/List.tsx:256
@@ -266,11 +298,11 @@ $generated_i18n_strings = array(
 	__( 'Clicks', 'pushengage' ),
 
 	// Reference: src/components/analytics/OptinAnalyticsStackedBarGraph.tsx:165
-	// Reference: src/pages/chatWidget/components/BusyTimesChart.tsx:282
+	// Reference: src/pages/chatWidget/components/BusyTimesChart.tsx:328
 	__( 'No Data Found', 'pushengage' ),
 
 	// Reference: src/components/analytics/OptinAnalyticsStackedBarGraph.tsx:166
-	// Reference: src/pages/chatWidget/components/BusyTimesChart.tsx:283
+	// Reference: src/pages/chatWidget/components/BusyTimesChart.tsx:329
 	__( 'Try adjusting date range', 'pushengage' ),
 
 	// Reference: src/components/analytics/OptinAnalyticsStackedBarGraph.tsx:56
@@ -407,7 +439,7 @@ $generated_i18n_strings = array(
 	// Reference: src/components/campaign/trigger/TriggerTable.tsx:238
 	// Reference: src/components/common/NotificationActionDropdownMenu.tsx:42
 	// Reference: src/components/onboarding/setup/AddCampaigns.tsx:541
-	// Reference: src/pages/chatWidget/ClickToChatV2Form.tsx:288
+	// Reference: src/pages/chatWidget/ClickToChatV2Form.tsx:355
 	// Reference: src/pages/chatWidget/components/WidgetCard.tsx:271
 	// Reference: src/pages/settings/Billing/index.tsx:151
 	// Reference: src/pages/whatsapp/WhatsappTemplates.tsx:273
@@ -430,7 +462,7 @@ $generated_i18n_strings = array(
 	__( 'Are you sure you want to delete this attribute?', 'pushengage' ),
 
 	// Reference: src/components/audience/AttributesTable.tsx:119
-	// Reference: src/pages/chatWidget/components/DisplayRules.tsx:67
+	// Reference: src/pages/chatWidget/components/DisplayRules.tsx:129
 	// Reference: src/pages/debug/DebugLogs.tsx:199
 	// Reference: src/pages/debug/SystemInfo.tsx:51
 	// Reference: src/pages/pushBroadcast/List.tsx:341
@@ -438,33 +470,25 @@ $generated_i18n_strings = array(
 
 	// Reference: src/components/audience/AttributesTable.tsx:120
 	// Reference: src/constants/confirmationModal.ts:70
-	// Reference: src/pages/chatWidget/components/DisplayRules.tsx:68
+	// Reference: src/pages/chatWidget/components/DisplayRules.tsx:130
 	// Reference: src/pages/debug/DebugLogs.tsx:200
 	// Reference: src/pages/debug/SystemInfo.tsx:53
 	// Reference: src/pages/pushBroadcast/List.tsx:342
 	__( 'No', 'pushengage' ),
 
-	// Reference: src/components/audience/AttributesTable.tsx:151
-	// Reference: src/constants/emptyStateMessages.tsx:245
-	__( 'Power Personalization with Attributes', 'pushengage' ),
-
-	// Reference: src/components/audience/AttributesTable.tsx:152
-	// Reference: src/constants/emptyStateMessages.tsx:246
-	__( 'Define and manage user attributes to personalize messages and target users with precision across web and mobile.', 'pushengage' ),
-
-	// Reference: src/components/audience/AttributesTable.tsx:158
+	// Reference: src/components/audience/AttributesTable.tsx:154
 	__( 'Create Attribute', 'pushengage' ),
 
-	// Reference: src/components/audience/AttributesTable.tsx:162
+	// Reference: src/components/audience/AttributesTable.tsx:159
 	// Reference: src/pages/audience/AudienceGroups.tsx:229
 	// Reference: src/pages/audience/Subscribers.tsx:173
 	// Reference: src/pages/pushBroadcast/List.tsx:455
 	__( 'Need some help? Check out this tutorial on', 'pushengage' ),
 
-	// Reference: src/components/audience/AttributesTable.tsx:171
+	// Reference: src/components/audience/AttributesTable.tsx:168
 	__( 'how to create attributes', 'pushengage' ),
 
-	// Reference: src/components/audience/AttributesTable.tsx:184
+	// Reference: src/components/audience/AttributesTable.tsx:181
 	__( 'No attributes were found.', 'pushengage' ),
 
 	// Reference: src/components/audience/AttributesTable.tsx:40
@@ -628,7 +652,6 @@ $generated_i18n_strings = array(
 
 	// Reference: src/components/audience/CreateOrEditAudienceGroupForm.tsx:154
 	// Reference: src/components/campaign/PushBroadcastAudienceDetailsForm.tsx:48
-	// Reference: src/pages/chatWidget/ClickToChatReview.tsx:94
 	// Reference: src/pages/debug/SystemInfo.tsx:180
 	__( 'Name', 'pushengage' ),
 
@@ -701,13 +724,11 @@ $generated_i18n_strings = array(
 	__( 'Name of the category segments', 'pushengage' ),
 
 	// Reference: src/components/audience/CreateOrEditSegmentForm.tsx:37
-	// Reference: src/pages/chatWidget/ClickToChatReview.tsx:226
 	// Reference: src/pages/chatWidget/components/WidgetCard.tsx:120
 	__( 'Starts With', 'pushengage' ),
 
 	// Reference: src/components/audience/CreateOrEditSegmentForm.tsx:41
-	// Reference: src/pages/chatWidget/ClickToChatReview.tsx:227
-	// Reference: src/pages/chatWidget/components/DisplayRules.tsx:273
+	// Reference: src/pages/chatWidget/components/DisplayRules.tsx:271
 	// Reference: src/pages/chatWidget/components/WidgetCard.tsx:121
 	__( 'Contains', 'pushengage' ),
 
@@ -769,8 +790,8 @@ $generated_i18n_strings = array(
 
 	// Reference: src/components/audience/SubscriberFieldsTable.tsx:22
 	// Reference: src/pages/chatWidget/components/WidgetCard.tsx:41
-	// Reference: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:510
-	// Reference: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:308
+	// Reference: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:393
+	// Reference: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:340
 	__( 'Email', 'pushengage' ),
 
 	// Reference: src/components/audience/SubscriberFieldsTable.tsx:227
@@ -827,7 +848,7 @@ $generated_i18n_strings = array(
 
 	// Reference: src/components/audience/TagCategoryForm.tsx:126
 	// Reference: src/components/whatsapp/WhatsappCampaignModal.tsx:578
-	// Reference: src/components/woocommerce/WooPushCampaignModal.tsx:436
+	// Reference: src/components/woocommerce/WooPushCampaignModal.tsx:438
 	// Reference: src/components/woocommerce/WooTriggerSettingsModal.tsx:276
 	__( 'Save', 'pushengage' ),
 
@@ -950,17 +971,20 @@ $generated_i18n_strings = array(
 	// Reference: src/components/audience/audienceHelper.ts:209
 	// Reference: src/components/design/PopUpModalCard.tsx:128
 	// Reference: src/components/onboarding/setup/EditSubscriptionDialog.tsx:266
-	// Reference: src/pages/chatWidget/ClickToChatReview.tsx:52
+	// Reference: src/pages/chatWidget/ReviewTab.tsx:302
+	// Reference: src/pages/chatWidget/components/TargetDeviceSelector.tsx:57
 	__( 'Mobile', 'pushengage' ),
 
 	// Reference: src/components/audience/audienceHelper.ts:210
-	// Reference: src/pages/chatWidget/ClickToChatReview.tsx:48
+	// Reference: src/pages/chatWidget/ReviewTab.tsx:295
+	// Reference: src/pages/chatWidget/components/TargetDeviceSelector.tsx:45
 	__( 'Tablet', 'pushengage' ),
 
 	// Reference: src/components/audience/audienceHelper.ts:211
 	// Reference: src/components/design/PopUpModalCard.tsx:114
 	// Reference: src/components/onboarding/setup/EditSubscriptionDialog.tsx:247
-	// Reference: src/pages/chatWidget/ClickToChatReview.tsx:44
+	// Reference: src/pages/chatWidget/ReviewTab.tsx:288
+	// Reference: src/pages/chatWidget/components/TargetDeviceSelector.tsx:33
 	__( 'Desktop', 'pushengage' ),
 
 	// Reference: src/components/audience/audienceHelper.ts:212
@@ -1093,7 +1117,7 @@ $generated_i18n_strings = array(
 
 	// Reference: src/components/campaign/BreadcrumbNavbar.tsx:46
 	// Reference: src/components/campaign/pushBroadcast/PageBreadcrumb.tsx:36
-	// Reference: src/pages/chatWidget/Editor.tsx:370
+	// Reference: src/pages/chatWidget/Editor.tsx:646
 	__( 'Content', 'pushengage' ),
 
 	// Reference: src/components/campaign/BreadcrumbNavbar.tsx:58
@@ -1246,20 +1270,20 @@ $generated_i18n_strings = array(
 	// Reference: src/components/campaign/PushNotification.tsx:46
 	// Reference: src/components/onboarding/setup/EditWelcomeNotification.tsx:48
 	// Reference: src/components/postEditor/PostEditorMetabox.tsx:708
-	// Reference: src/components/woocommerce/WooPushCampaignModal.tsx:360
+	// Reference: src/components/woocommerce/WooPushCampaignModal.tsx:362
 	// Reference: src/pages/settings/defaultSettings/index.tsx:420
 	__( 'Notification Title', 'pushengage' ),
 
 	// Reference: src/components/campaign/PushNotification.tsx:63
 	// Reference: src/components/onboarding/setup/EditWelcomeNotification.tsx:59
 	// Reference: src/components/postEditor/PostEditorMetabox.tsx:733
-	// Reference: src/components/woocommerce/WooPushCampaignModal.tsx:382
+	// Reference: src/components/woocommerce/WooPushCampaignModal.tsx:384
 	// Reference: src/pages/settings/defaultSettings/index.tsx:435
 	__( 'Notification Message', 'pushengage' ),
 
 	// Reference: src/components/campaign/PushNotification.tsx:81
 	// Reference: src/components/onboarding/setup/EditWelcomeNotification.tsx:72
-	// Reference: src/components/woocommerce/WooPushCampaignModal.tsx:405
+	// Reference: src/components/woocommerce/WooPushCampaignModal.tsx:407
 	// Reference: src/pages/settings/defaultSettings/index.tsx:450
 	__( 'Notification URL', 'pushengage' ),
 
@@ -1362,7 +1386,7 @@ $generated_i18n_strings = array(
 	__( 'Generate text using AI', 'pushengage' ),
 
 	// Reference: src/components/campaign/automation/AutomationAnalytics.tsx:103
-	// Reference: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:194
+	// Reference: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:197
 	__( 'Revenue', 'pushengage' ),
 
 	// Reference: src/components/campaign/automation/AutomationAnalytics.tsx:57
@@ -1490,7 +1514,7 @@ $generated_i18n_strings = array(
 	__( 'No Limit Set', 'pushengage' ),
 
 	// Reference: src/components/campaign/automation/AutomationDetails.tsx:374
-	// Reference: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:367
+	// Reference: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:370
 	// Reference: src/pages/whatsapp/WhatsappTemplates.tsx:250
 	__( 'Analytics', 'pushengage' ),
 
@@ -1521,8 +1545,8 @@ $generated_i18n_strings = array(
 
 	// Reference: src/components/campaign/automation/AutomationDetails.tsx:490
 	// Reference: src/components/campaign/details/NotificationDetailSections.tsx:179
-	// Reference: src/pages/chatWidget/components/DisplayRules.tsx:164
-	// Reference: src/pages/chatWidget/helpers.ts:59
+	// Reference: src/pages/chatWidget/components/DisplayRules.tsx:205
+	// Reference: src/pages/chatWidget/helpers.ts:61
 	__( 'URL', 'pushengage' ),
 
 	// Reference: src/components/campaign/automation/AutomationDetails.tsx:533
@@ -1707,11 +1731,11 @@ $generated_i18n_strings = array(
 	// Reference: src/components/campaign/drip/DripStatus.tsx:10
 	// Reference: src/components/campaign/trigger/TriggerStatus.tsx:10
 	// Reference: src/components/whatsapp/WhatsappCampaignCard.tsx:126
-	// Reference: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:225
+	// Reference: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:42
 	// Reference: src/pages/debug/SystemInfo.tsx:153
 	// Reference: src/pages/drip/helper.ts:48
 	// Reference: src/pages/triggeredCampaign/helper.ts:67
-	// Reference: src/pages/woocommerce/WooAutomations.tsx:704
+	// Reference: src/pages/woocommerce/WooAutomations.tsx:733
 	__( 'Active', 'pushengage' ),
 
 	// Reference: src/components/campaign/drip/DripStatus.tsx:12
@@ -1741,7 +1765,7 @@ $generated_i18n_strings = array(
 	// Reference: src/components/design/PopUpModalCard.tsx:142
 	// Reference: src/components/onboarding/setup/AddCampaigns.tsx:551
 	// Reference: src/components/onboarding/setup/PreviewSubscriptionDialog.tsx:24
-	// Reference: src/components/woocommerce/WooPushCampaignModal.tsx:442
+	// Reference: src/components/woocommerce/WooPushCampaignModal.tsx:444
 	// Reference: src/components/woocommerce/WooTriggerSettingsModal.tsx:344
 	// Reference: src/pages/chatWidget/WidgetPreview.tsx:272
 	// Reference: src/pages/whatsapp/WhatsappTemplates.tsx:265
@@ -1773,16 +1797,14 @@ $generated_i18n_strings = array(
 
 	// Reference: src/components/campaign/drip/NotificationGenerator.tsx:209
 	// Reference: src/components/campaign/trigger/NotificationGenerator.tsx:192
-	// Reference: src/pages/chatWidget/ClickToChatReview.tsx:83
 	__( 'Immediately', 'pushengage' ),
 
 	// Reference: src/components/campaign/drip/NotificationGenerator.tsx:213
 	// Reference: src/components/campaign/trigger/NotificationGenerator.tsx:196
-	// Reference: src/pages/chatWidget/ClickToChatReview.tsx:67
 	__( 'After', 'pushengage' ),
 
 	// Reference: src/components/campaign/drip/NotificationGenerator.tsx:214
-	// Reference: src/pages/chatWidget/Editor.tsx:487
+	// Reference: src/pages/chatWidget/Editor.tsx:747
 	__( 'Next', 'pushengage' ),
 
 	// Reference: src/components/campaign/drip/NotificationGenerator.tsx:259
@@ -2041,7 +2063,7 @@ $generated_i18n_strings = array(
 	__( 'Use Blank Template', 'pushengage' ),
 
 	// Reference: src/components/campaign/templates/PageAndModelContent.tsx:262
-	// Reference: src/pages/chatWidget/List.tsx:409
+	// Reference: src/pages/chatWidget/List.tsx:427
 	__( 'Please check the spelling or try searching for something else', 'pushengage' ),
 
 	// Reference: src/components/campaign/templates/PageAndModelContent.tsx:275
@@ -2052,7 +2074,7 @@ $generated_i18n_strings = array(
 	__( 'Your Favorite Templates', 'pushengage' ),
 
 	// Reference: src/components/campaign/templates/PageAndModelContent.tsx:341
-	// Reference: src/pages/chatWidget/List.tsx:406
+	// Reference: src/pages/chatWidget/List.tsx:424
 	__( 'Sorry, no results found!', 'pushengage' ),
 
 	// Reference: src/components/campaign/templates/TemplateList.tsx:65
@@ -2115,8 +2137,8 @@ $generated_i18n_strings = array(
 	__( 'Change image', 'pushengage' ),
 
 	// Reference: src/components/common/ImageUploader.tsx:57
-	// Reference: src/pages/chatWidget/components/AgentCard.tsx:133
-	// Reference: src/pages/chatWidget/components/ChannelGeneralSettings.tsx:233
+	// Reference: src/pages/chatWidget/components/AgentAvatarUploader.tsx:33
+	// Reference: src/pages/chatWidget/components/ChannelGeneralSettings.tsx:258
 	__( 'Use this image', 'pushengage' ),
 
 	// Reference: src/components/common/NotConnectedTooltip.tsx:21
@@ -2152,9 +2174,6 @@ $generated_i18n_strings = array(
 	// Reference: src/components/common/UpgradeBanner.tsx:107
 	__( 'Upgrade to access advanced Web Push tools, WhatsApp automation, predefined campaigns, auto-push from your editor, A/B testing, and multi-agent chat.', 'pushengage' ),
 
-	// Reference: src/components/common/UpgradeBanner.tsx:111
-	__( 'Upgrade Now', 'pushengage' ),
-
 	// Reference: src/components/common/UpgradeBanner.tsx:112
 	__( 'View All Features', 'pushengage' ),
 
@@ -2172,74 +2191,43 @@ $generated_i18n_strings = array(
 	// Reference: src/components/common/UpgradeBanner.tsx:73
 	// Reference: src/components/dashboardWidget/DashboardWidget.tsx:771
 	// Reference: src/components/dashboardWidget/OnboardingPrompt.tsx:33
-	// Reference: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:564
-	// Reference: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:325
+	// Reference: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:381
+	// Reference: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:328
 	__( 'WhatsApp', 'pushengage' ),
 
 	// Reference: src/components/common/UpgradeBanner.tsx:77
 	__( 'Multi Chat', 'pushengage' ),
 
 	// Reference: src/components/common/UpgradeBanner.tsx:81
-	// Reference: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:437
+	// Reference: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:440
 	__( 'Cart Recovery', 'pushengage' ),
 
 	// Reference: src/components/common/UpgradeBanner.tsx:90
 	__( 'Intro Offer', 'pushengage' ),
 
 	// Reference: src/components/common/UpgradeBanner.tsx:92
+	// Reference: src/constants/planFeatures.ts:434
 	__( 'Automated Push + WhatsApp', 'pushengage' ),
 
 	// Reference: src/components/common/UpgradeBanner.tsx:93
+	// Reference: src/constants/planFeatures.ts:435
 	__( 'Multi-Channel Chat (Multi-Agent)', 'pushengage' ),
 
 	// Reference: src/components/common/UpgradeBanner.tsx:94
+	// Reference: src/constants/planFeatures.ts:436
 	__( 'AI Copy Generator', 'pushengage' ),
 
 	// Reference: src/components/common/UpgradeBanner.tsx:95
+	// Reference: src/constants/planFeatures.ts:437
 	__( 'Advanced Segmentation', 'pushengage' ),
 
 	// Reference: src/components/common/UpgradeBanner.tsx:96
+	// Reference: src/constants/planFeatures.ts:438
 	__( 'A/B Testing', 'pushengage' ),
 
 	// Reference: src/components/common/UpgradeBanner.tsx:97
+	// Reference: src/constants/planFeatures.ts:439
 	__( 'Priority Support', 'pushengage' ),
-
-	// Reference: src/components/common/WeeklySchedule.tsx:29
-	__( 'Site Timezone', 'pushengage' ),
-
-	// Reference: src/components/common/WeeklySchedule.tsx:61
-	__( 'Timezone', 'pushengage' ),
-
-	// Reference: src/components/common/WeeklySchedule.tsx:69
-	__( 'Select timezone', 'pushengage' ),
-
-	// Reference: src/components/common/scheduleUtils.ts:17
-	// Reference: src/pages/chatWidget/helpers.ts:33
-	__( 'Mon', 'pushengage' ),
-
-	// Reference: src/components/common/scheduleUtils.ts:18
-	// Reference: src/pages/chatWidget/helpers.ts:34
-	__( 'Tue', 'pushengage' ),
-
-	// Reference: src/components/common/scheduleUtils.ts:19
-	// Reference: src/pages/chatWidget/helpers.ts:35
-	__( 'Wed', 'pushengage' ),
-
-	// Reference: src/components/common/scheduleUtils.ts:20
-	// Reference: src/pages/chatWidget/helpers.ts:36
-	__( 'Thu', 'pushengage' ),
-
-	// Reference: src/components/common/scheduleUtils.ts:21
-	// Reference: src/pages/chatWidget/helpers.ts:37
-	__( 'Fri', 'pushengage' ),
-
-	// Reference: src/components/common/scheduleUtils.ts:22
-	// Reference: src/pages/chatWidget/helpers.ts:38
-	__( 'Sat', 'pushengage' ),
-
-	// Reference: src/components/common/scheduleUtils.ts:23
-	// Reference: src/pages/chatWidget/helpers.ts:39
-	__( 'Sun', 'pushengage' ),
 
 	// Reference: src/components/common/tables/DataTable.tsx:34
 	__( 'No item found', 'pushengage' ),
@@ -2300,7 +2288,7 @@ $generated_i18n_strings = array(
 
 	// Reference: src/components/dashboardWidget/DashboardWidget.tsx:746
 	// Reference: src/components/dashboardWidget/OnboardingPrompt.tsx:43
-	// Reference: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:457
+	// Reference: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:460
 	__( 'Chat Widget', 'pushengage' ),
 
 	// Reference: src/components/dashboardWidget/DashboardWidget.tsx:749
@@ -2375,6 +2363,15 @@ $generated_i18n_strings = array(
 	// Reference: src/components/onboarding/setup/SetupFinal.tsx:93
 	__( 'Please verify your email address.', 'pushengage' ),
 
+	// Reference: src/components/headers/siteAlert/InstantUpgradeAlert.tsx:115
+	__( 'You\'re using the Free version of PushEngage. ', 'pushengage' ),
+
+	// Reference: src/components/headers/siteAlert/InstantUpgradeAlert.tsx:119
+	__( 'Upgrade Your Plan + Avail %1$s Off now ', 'pushengage' ),
+
+	// Reference: src/components/headers/siteAlert/InstantUpgradeAlert.tsx:124
+	__( 'to experience multichannel retention campaigns, multi-agent chat widgets, WhatsApp Business automation, and more!', 'pushengage' ),
+
 	// Reference: src/components/headers/siteAlert/NotificationLimitExceededAlert.tsx:51
 	/* translators: 1 - The campaign limit count. - 2 - Upgrade plan CTA */
 	__( 'Attention: You’ve hit the %1$d-campaign lifetime limit and your account is blocked. %2$s for unlimited campaigns and resume sending.', 'pushengage' ),
@@ -2385,9 +2382,6 @@ $generated_i18n_strings = array(
 
 	// Reference: src/components/headers/siteAlert/NotificationLimitExceededAlert.tsx:80
 	__( 'Upgrade now', 'pushengage' ),
-
-	// Reference: src/components/headers/siteAlert/OnFreePlanAlert.tsx:52
-	__( 'You’re using the free version of PushEngage. <a>Upgrade</a> now for unlimited campaigns, rich push broadcasts, personalized campaigns, and analytics.', 'pushengage' ),
 
 	// Reference: src/components/headers/siteAlert/OnTrialAlert.tsx:61
 	/* translators: 1 - The plan name. - 2 - Upgrade plan CTA link tag */
@@ -2494,7 +2488,7 @@ $generated_i18n_strings = array(
 	__( 'PushEngage Dashboard', 'pushengage' ),
 
 	// Reference: src/components/onboarding/FinalStep.tsx:250
-	// Reference: src/components/onboarding/setup/ChannelSelection.tsx:278
+	// Reference: src/components/onboarding/setup/ChannelSelection.tsx:275
 	// Reference: src/components/onboarding/setup/StepPagination.tsx:212
 	__( 'Skip to Dashboard', 'pushengage' ),
 
@@ -2516,47 +2510,17 @@ $generated_i18n_strings = array(
 	// Reference: src/components/onboarding/SetupAnimation.tsx:91
 	__( 'Setup completed successfully!', 'pushengage' ),
 
-	// Reference: src/components/onboarding/UpgradeAccount.tsx:102
-	__( 'Upgrade Now & Save 50%', 'pushengage' ),
-
-	// Reference: src/components/onboarding/UpgradeAccount.tsx:108
-	__( 'Skip this Step and Continue with PushEngage', 'pushengage' ),
-
-	// Reference: src/components/onboarding/UpgradeAccount.tsx:119
-	__( 'Go back', 'pushengage' ),
-
-	// Reference: src/components/onboarding/UpgradeAccount.tsx:126
-	__( 'Close and Exit Wizard without Saving', 'pushengage' ),
-
-	// Reference: src/components/onboarding/UpgradeAccount.tsx:15
-	__( 'Unlimited Campaigns', 'pushengage' ),
-
-	// Reference: src/components/onboarding/UpgradeAccount.tsx:16
-	__( 'Track your marketing goals', 'pushengage' ),
-
-	// Reference: src/components/onboarding/UpgradeAccount.tsx:17
-	__( 'Schedule all your campaigns', 'pushengage' ),
-
-	// Reference: src/components/onboarding/UpgradeAccount.tsx:18
-	__( 'Automate your campaigns easily', 'pushengage' ),
-
-	// Reference: src/components/onboarding/UpgradeAccount.tsx:19
-	__( 'Send super targeted campaigns', 'pushengage' ),
-
-	// Reference: src/components/onboarding/UpgradeAccount.tsx:48
+	// Reference: src/components/onboarding/UpgradeAccount.tsx:37
 	__( 'PushEngage helps you grow your business much faster. Unlock unlimited campaigns, the best converting templates, and a host of advanced features for just $41 per year. Start growing and automating your campaigns more quickly by upgrading to the Business Plan', 'pushengage' ),
 
-	// Reference: src/components/onboarding/UpgradeAccount.tsx:55
-	__( 'PushEngage has a free forever plan for WordPress users', 'pushengage' ),
+	// Reference: src/components/onboarding/UpgradeAccount.tsx:51
+	__( 'Skip this Step and Continue with PushEngage', 'pushengage' ),
 
-	// Reference: src/components/onboarding/UpgradeAccount.tsx:58
-	__( 'PushEngage customers with a paid plan typically grow their business 80% faster.', 'pushengage' ),
+	// Reference: src/components/onboarding/UpgradeAccount.tsx:62
+	__( 'Go back', 'pushengage' ),
 
-	// Reference: src/components/onboarding/UpgradeAccount.tsx:80
-	__( 'Upgrade to a paid plan right now and get upto %1$s (automatically applied to your cart).', 'pushengage' ),
-
-	// Reference: src/components/onboarding/UpgradeAccount.tsx:84
-	__( '45% discount', 'pushengage' ),
+	// Reference: src/components/onboarding/UpgradeAccount.tsx:69
+	__( 'Close and Exit Wizard without Saving', 'pushengage' ),
 
 	// Reference: src/components/onboarding/Welcome.tsx:184
 	// Reference: src/components/onboarding/setup/AddCampaigns.tsx:110
@@ -2644,21 +2608,21 @@ $generated_i18n_strings = array(
 	__( 'Step %s: Add Campaigns', 'pushengage' ),
 
 	// Reference: src/components/onboarding/setup/AddCampaigns.tsx:583
-	// Reference: src/components/woocommerce/WooPushCampaignModal.tsx:446
+	// Reference: src/components/woocommerce/WooPushCampaignModal.tsx:448
 	__( 'Admin', 'pushengage' ),
 
 	// Reference: src/components/onboarding/setup/AddCampaigns.tsx:593
-	// Reference: src/components/woocommerce/WooPushCampaignModal.tsx:443
+	// Reference: src/components/woocommerce/WooPushCampaignModal.tsx:445
 	__( 'Customer', 'pushengage' ),
 
 	// Reference: src/components/onboarding/setup/AddCampaigns.tsx:637
-	// Reference: src/pages/chatWidget/ChannelSettingsDrawer.tsx:307
+	// Reference: src/pages/chatWidget/ChannelSettingsDrawer.tsx:512
 	// Reference: src/pages/design/TargetingRule.tsx:482
 	// Reference: src/pages/settings/advancedSettings/index.tsx:437
 	// Reference: src/pages/settings/autoPush/index.tsx:323
 	// Reference: src/pages/settings/defaultSettings/index.tsx:610
 	// Reference: src/pages/settings/misc/index.tsx:394
-	// Reference: src/pages/settings/siteDetails/index.tsx:609
+	// Reference: src/pages/settings/siteDetails/index.tsx:620
 	// Reference: src/pages/whatsapp/WhatsappSettings.tsx:231
 	__( 'Save Changes', 'pushengage' ),
 
@@ -2688,10 +2652,10 @@ $generated_i18n_strings = array(
 	// Reference: src/components/onboarding/setup/ChannelSelection.tsx:174
 	__( 'Select All Channels', 'pushengage' ),
 
-	// Reference: src/components/onboarding/setup/ChannelSelection.tsx:265
+	// Reference: src/components/onboarding/setup/ChannelSelection.tsx:262
 	__( 'Please select at least one service', 'pushengage' ),
 
-	// Reference: src/components/onboarding/setup/ChannelSelection.tsx:267
+	// Reference: src/components/onboarding/setup/ChannelSelection.tsx:264
 	_n_noop( 'Continue with %1$s service', 'Continue with %1$s services', 'pushengage' ),
 
 	// Reference: src/components/onboarding/setup/ConnectWhatsApp.tsx:70
@@ -2702,7 +2666,7 @@ $generated_i18n_strings = array(
 	// Reference: src/pages/whatsapp/WhatsappAutomation.tsx:136
 	// Reference: src/pages/whatsapp/WhatsappSettings.tsx:167
 	// Reference: src/pages/whatsapp/WhatsappTemplates.tsx:110
-	// Reference: src/pages/woocommerce/WooAutomations.tsx:228
+	// Reference: src/pages/woocommerce/WooAutomations.tsx:232
 	// Reference: src/pages/woocommerce/WooWhatsappAutomation.tsx:126
 	__( 'Error', 'pushengage' ),
 
@@ -2820,18 +2784,15 @@ $generated_i18n_strings = array(
 	// Reference: src/components/onboarding/setup/RecoverSales.tsx:52
 	__( 'Turn browsers into buyers with targeted messaging', 'pushengage' ),
 
-	// Reference: src/components/onboarding/setup/SetupChatWidget.tsx:174
-	// Reference: src/pages/chatWidget/Editor.tsx:275
+	// Reference: src/components/onboarding/setup/SetupChatWidget.tsx:216
+	// Reference: src/pages/chatWidget/ClickToChatV2Form.tsx:60
+	// Reference: src/pages/chatWidget/Editor.tsx:324
 	__( 'Please fix the highlighted errors and try again.', 'pushengage' ),
 
-	// Reference: src/components/onboarding/setup/SetupChatWidget.tsx:189
-	// Reference: src/pages/chatWidget/Editor.tsx:304
-	// Reference: src/pages/chatWidget/List.tsx:315
+	// Reference: src/components/onboarding/setup/SetupChatWidget.tsx:231
+	// Reference: src/pages/chatWidget/Editor.tsx:353
+	// Reference: src/pages/chatWidget/List.tsx:336
 	__( 'Widget created successfully', 'pushengage' ),
-
-	// Reference: src/components/onboarding/setup/SetupChatWidget.tsx:98
-	// Reference: src/helper/validateChatWidget.ts:14
-	__( 'Please enter a widget name.', 'pushengage' ),
 
 	// Reference: src/components/onboarding/setup/SetupFinal.tsx:108
 	__( '🎉 You’re All Set!', 'pushengage' ),
@@ -2906,9 +2867,9 @@ $generated_i18n_strings = array(
 	__( 'Failed to load WhatsApp automation campaigns', 'pushengage' ),
 
 	// Reference: src/components/onboarding/setup/SetupWhatsappAutomation.tsx:146
-	// Reference: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:367
+	// Reference: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:184
 	// Reference: src/pages/whatsapp/WhatsappAutomation.tsx:168
-	// Reference: src/pages/woocommerce/WooAutomations.tsx:671
+	// Reference: src/pages/woocommerce/WooAutomations.tsx:694
 	// Reference: src/pages/woocommerce/WooWhatsappAutomation.tsx:158
 	__( 'Automation', 'pushengage' ),
 
@@ -3059,7 +3020,7 @@ $generated_i18n_strings = array(
 	__( 'Please update the access token in PushEngage settings to continue sending WhatsApp notifications.', 'pushengage' ),
 
 	// Reference: src/components/whatsapp/WhatsappCampaignCard.tsx:128
-	// Reference: src/pages/woocommerce/WooAutomations.tsx:708
+	// Reference: src/pages/woocommerce/WooAutomations.tsx:737
 	__( 'Inactive', 'pushengage' ),
 
 	// Reference: src/components/whatsapp/WhatsappCampaignCard.tsx:63
@@ -3128,7 +3089,7 @@ $generated_i18n_strings = array(
 	__( '(Not Supported)', 'pushengage' ),
 
 	// Reference: src/components/whatsapp/WhatsappCampaignModal.tsx:596
-	// Reference: src/components/woocommerce/WooPushCampaignModal.tsx:269
+	// Reference: src/components/woocommerce/WooPushCampaignModal.tsx:271
 	__( 'Customer Notification', 'pushengage' ),
 
 	// Reference: src/components/whatsapp/WhatsappCampaignModal.tsx:602
@@ -3167,7 +3128,7 @@ $generated_i18n_strings = array(
 	__( 'Customer Template Preview', 'pushengage' ),
 
 	// Reference: src/components/whatsapp/WhatsappCampaignModal.tsx:754
-	// Reference: src/components/woocommerce/WooPushCampaignModal.tsx:343
+	// Reference: src/components/woocommerce/WooPushCampaignModal.tsx:345
 	__( 'Admin Notification', 'pushengage' ),
 
 	// Reference: src/components/whatsapp/WhatsappCampaignModal.tsx:760
@@ -3201,7 +3162,7 @@ $generated_i18n_strings = array(
 	__( 'Set up WhatsApp Click to Chat and turn confused web browsing into engaged conversations.', 'pushengage' ),
 
 	// Reference: src/components/whatsapp/WhatsappClickToChatForm.tsx:243
-	// Reference: src/components/woocommerce/WooPushCampaignModal.tsx:345
+	// Reference: src/components/woocommerce/WooPushCampaignModal.tsx:347
 	__( 'Enable', 'pushengage' ),
 
 	// Reference: src/components/whatsapp/WhatsappClickToChatForm.tsx:244
@@ -3244,11 +3205,11 @@ $generated_i18n_strings = array(
 	__( 'Choose where the button appears on your website.', 'pushengage' ),
 
 	// Reference: src/components/whatsapp/WhatsappClickToChatForm.tsx:358
-	// Reference: src/pages/chatWidget/AppearanceSettings.tsx:325
+	// Reference: src/pages/chatWidget/AppearanceSettings.tsx:332
 	__( 'Bottom Right', 'pushengage' ),
 
 	// Reference: src/components/whatsapp/WhatsappClickToChatForm.tsx:359
-	// Reference: src/pages/chatWidget/AppearanceSettings.tsx:324
+	// Reference: src/pages/chatWidget/AppearanceSettings.tsx:331
 	__( 'Bottom Left', 'pushengage' ),
 
 	// Reference: src/components/whatsapp/WhatsappClickToChatForm.tsx:360
@@ -3318,7 +3279,7 @@ $generated_i18n_strings = array(
 	__( 'Create a Meta Developer Account', 'pushengage' ),
 
 	// Reference: src/components/whatsapp/WhatsappCloudApiForm.tsx:224
-	__( 'Sign for facebook developer account and agree to the terms to become a Meta developer.', 'pushengage' ),
+	__( 'Sign up for a Facebook developer account and agree to the terms to become a Meta developer.', 'pushengage' ),
 
 	// Reference: src/components/whatsapp/WhatsappCloudApiForm.tsx:230
 	__( 'Set up a WhatsApp Business Account', 'pushengage' ),
@@ -3655,7 +3616,7 @@ $generated_i18n_strings = array(
 
 	// Reference: src/components/whatsapp/whatsappHelper.ts:343
 	// Reference: src/pages/triggeredCampaign/Selection.tsx:188
-	// Reference: src/pages/woocommerce/WooAutomations.tsx:396
+	// Reference: src/pages/woocommerce/WooAutomations.tsx:400
 	__( 'Cart Abandonment', 'pushengage' ),
 
 	// Reference: src/components/whatsapp/whatsappHelper.ts:344
@@ -3719,46 +3680,64 @@ $generated_i18n_strings = array(
 	// Reference: src/components/whatsnew/banner/index.tsx:38
 	__( 'Close banner', 'pushengage' ),
 
-	// Reference: src/components/whatsnew/helper.ts:42
-	__( '✨ New in PushEngage: Multichannel Chat Widgets', 'pushengage' ),
-
-	// Reference: src/components/whatsnew/helper.ts:43
-	__( 'Turn your website into a real-time communication center. With the updated PushEngage Chat Widget, you can connect visitors to your business instantly — using <strong>the channels they already love.</strong><br />', 'pushengage' ),
-
-	// Reference: src/components/whatsnew/helper.ts:50
-	__( 'Capabilities That Convert More Visitors', 'pushengage' ),
-
-	// Reference: src/components/whatsnew/helper.ts:51
-	__( '<ul><li><strong>Multi-Agent Support</strong> - Route conversations to the right team members — sales, support, operations &amp; more.</li><li><strong>Targeting &amp; Personalization</strong> - Show specific channels based on location, device type, or visitor behavior.</li><li><strong>Scheduled Availability</strong> - Display support availability based on working hours or agent status.</li><li><strong>Saved Replies &amp; FAQs</strong> - Respond faster with pre-built response templates.</li><li><strong>Analytics &amp; Conversation Tracking</strong> - Understand which channels are driving engagement and ROI.</li><li><strong>Fully Customizable UI</strong> - Match widget design to your brand identity in minutes.</li></ul>', 'pushengage' ),
-
-	// Reference: src/components/whatsnew/helper.ts:60
+	// Reference: src/components/whatsnew/helper.ts:105
 	__( 'Enable the widget, pick your channels, customize the UI — and go live. No coding required.', 'pushengage' ),
 
-	// Reference: src/components/whatsnew/helper.ts:68
+	// Reference: src/components/whatsnew/helper.ts:113
 	__( 'Try the new Multichannel Chat Widget now', 'pushengage' ),
 
-	// Reference: src/components/woocommerce/WooPushCampaignModal.tsx:150
+	// Reference: src/components/whatsnew/helper.ts:47
+	__( '✨ New in PushEngage: WordPress Abilities API Support', 'pushengage' ),
+
+	// Reference: src/components/whatsnew/helper.ts:48
+	__( 'PushEngage version 4.2.3 registers 20+ abilities under the new WordPress Abilities API, making your push notifications, segments, analytics, and WooCommerce automations callable by AI assistants and MCP servers. Verified compatible with WordPress 7.0 and the new abilities framework.<br />', 'pushengage' ),
+
+	// Reference: src/components/whatsnew/helper.ts:55
+	__( 'What\'s new in version 4.2.3', 'pushengage' ),
+
+	// Reference: src/components/whatsnew/helper.ts:56
+	__( '<ul><li><strong>WordPress Abilities API support</strong> - PushEngage now registers 20+ abilities for AI assistants and MCP servers, covering plugin info, push notifications, segments, audience groups, analytics, auto-push settings, WooCommerce push automation campaigns, WhatsApp status, and debug logs.</li><li><strong>Verified for WordPress 7.0</strong> - Tested against WordPress 7.0 and the new abilities framework, alongside the current stable release. Pair with the official <a href="https://github.com/WordPress/mcp-adapter" target="_blank" rel="noopener">WordPress MCP Adapter</a> to expose PushEngage to any MCP-compatible client.</li><li><strong>Searchable timezone dropdown</strong> - The timezone selector on the Site Details page now supports type-to-filter, so you can find your zone without scrolling.</li></ul>', 'pushengage' ),
+
+	// Reference: src/components/whatsnew/helper.ts:65
+	__( 'PushEngage abilities are registered under the pushengage category with admin (manage_options) capability and public MCP exposure.', 'pushengage' ),
+
+	// Reference: src/components/whatsnew/helper.ts:76
+	__( 'Learn about WordPress Abilities support', 'pushengage' ),
+
+	// Reference: src/components/whatsnew/helper.ts:87
+	__( '✨ New in PushEngage: Multichannel Chat Widgets', 'pushengage' ),
+
+	// Reference: src/components/whatsnew/helper.ts:88
+	__( 'Turn your website into a real-time communication center. With the updated PushEngage Chat Widget, you can connect visitors to your business instantly — using <strong>the channels they already love.</strong><br />', 'pushengage' ),
+
+	// Reference: src/components/whatsnew/helper.ts:95
+	__( 'Capabilities That Convert More Visitors', 'pushengage' ),
+
+	// Reference: src/components/whatsnew/helper.ts:96
+	__( '<ul><li><strong>Multi-Agent Support</strong> - Route conversations to the right team members — sales, support, operations &amp; more.</li><li><strong>Targeting &amp; Personalization</strong> - Show specific channels based on location, device type, or visitor behavior.</li><li><strong>Scheduled Availability</strong> - Display support availability based on working hours or agent status.</li><li><strong>Saved Replies &amp; FAQs</strong> - Respond faster with pre-built response templates.</li><li><strong>Analytics &amp; Conversation Tracking</strong> - Understand which channels are driving engagement and ROI.</li><li><strong>Fully Customizable UI</strong> - Match widget design to your brand identity in minutes.</li></ul>', 'pushengage' ),
+
+	// Reference: src/components/woocommerce/WooPushCampaignModal.tsx:152
 	__( 'Configure Automation', 'pushengage' ),
 
-	// Reference: src/components/woocommerce/WooPushCampaignModal.tsx:240
+	// Reference: src/components/woocommerce/WooPushCampaignModal.tsx:242
 	__( 'Insert dynamic tag into the focused field', 'pushengage' ),
 
-	// Reference: src/components/woocommerce/WooPushCampaignModal.tsx:246
+	// Reference: src/components/woocommerce/WooPushCampaignModal.tsx:248
 	__( 'Available dynamic tags', 'pushengage' ),
 
-	// Reference: src/components/woocommerce/WooPushCampaignModal.tsx:249
+	// Reference: src/components/woocommerce/WooPushCampaignModal.tsx:251
 	__( 'Select a tag', 'pushengage' ),
 
-	// Reference: src/components/woocommerce/WooPushCampaignModal.tsx:347
+	// Reference: src/components/woocommerce/WooPushCampaignModal.tsx:349
 	__( 'Admin Roles', 'pushengage' ),
 
-	// Reference: src/components/woocommerce/WooPushCampaignModal.tsx:358
+	// Reference: src/components/woocommerce/WooPushCampaignModal.tsx:360
 	__( 'Admin Notification Title', 'pushengage' ),
 
-	// Reference: src/components/woocommerce/WooPushCampaignModal.tsx:380
+	// Reference: src/components/woocommerce/WooPushCampaignModal.tsx:382
 	__( 'Admin Notification Message', 'pushengage' ),
 
-	// Reference: src/components/woocommerce/WooPushCampaignModal.tsx:403
+	// Reference: src/components/woocommerce/WooPushCampaignModal.tsx:405
 	__( 'Admin Notification URL', 'pushengage' ),
 
 	// Reference: src/components/woocommerce/WooTriggerSettingsModal.tsx:247
@@ -3895,6 +3874,12 @@ $generated_i18n_strings = array(
 
 	// Reference: src/constants/emptyStateMessages.tsx:235
 	__( 'Enable automation with a single toggle and customize message content', 'pushengage' ),
+
+	// Reference: src/constants/emptyStateMessages.tsx:245
+	__( 'Power Personalization with Attributes', 'pushengage' ),
+
+	// Reference: src/constants/emptyStateMessages.tsx:246
+	__( 'Define and manage user attributes to personalize messages and target users with precision across web and mobile.', 'pushengage' ),
 
 	// Reference: src/constants/emptyStateMessages.tsx:253
 	__( 'Create and manage system and custom attributes in one place', 'pushengage' ),
@@ -4233,10 +4218,10 @@ $generated_i18n_strings = array(
 	__( 'No caps—enjoy unlimited sending and subscribers.', 'pushengage' ),
 
 	// Reference: src/constants/planFeatures.ts:422
-	__( 'Unlock More Ways to Connect with Your Customers', 'pushengage' ),
+	__( 'Upgrade to Get More Conversions with Chat Widget', 'pushengage' ),
 
 	// Reference: src/constants/planFeatures.ts:423
-	__( 'Upgrade to deliver faster, smarter, and more personalized support.', 'pushengage' ),
+	__( 'Get multiple chat widget features like multi-agent support, targeting & personalization, scheduled availability, analytics & conversation tracking, and fully customizable UI.', 'pushengage' ),
 
 	// Reference: src/constants/planFeatures.ts:45
 	__( 'Capitalize on timely opportunities such as cart abandonment or price drops to re-engage customers and boost sales.', 'pushengage' ),
@@ -4353,87 +4338,91 @@ $generated_i18n_strings = array(
 	__( 'Total Active Subscribers', 'pushengage' ),
 
 	// Reference: src/helper/validateChatWidget.ts:15
-	__( 'Please enable at least one channel.', 'pushengage' ),
+	// Reference: src/pages/chatWidget/ClickToChatV2Form.tsx:143
+	__( 'Please enter a widget name.', 'pushengage' ),
 
 	// Reference: src/helper/validateChatWidget.ts:16
-	__( 'Please select at least one device to show on.', 'pushengage' ),
+	__( 'Please enable at least one channel.', 'pushengage' ),
 
 	// Reference: src/helper/validateChatWidget.ts:17
+	__( 'Please select at least one device to show on.', 'pushengage' ),
+
+	// Reference: src/helper/validateChatWidget.ts:18
 	__( 'Please select at least one device for this channel.', 'pushengage' ),
 
-	// Reference: src/helper/validateChatWidget.ts:20
+	// Reference: src/helper/validateChatWidget.ts:21
 	__( 'Please enter a value for the channel.', 'pushengage' ),
 
-	// Reference: src/helper/validateChatWidget.ts:21
+	// Reference: src/helper/validateChatWidget.ts:22
 	__( 'Please enter a valid value for the channel.', 'pushengage' ),
 
-	// Reference: src/helper/validateChatWidget.ts:22
+	// Reference: src/helper/validateChatWidget.ts:23
 	__( 'Please enter a name for the custom channel.', 'pushengage' ),
 
-	// Reference: src/helper/validateChatWidget.ts:23
+	// Reference: src/helper/validateChatWidget.ts:28
 	__( 'One or more channel settings are invalid.', 'pushengage' ),
 
-	// Reference: src/helper/validateChatWidget.ts:24
+	// Reference: src/helper/validateChatWidget.ts:29
 	__( 'Please enter a valid value for the agent.', 'pushengage' ),
 
-	// Reference: src/helper/validateChatWidget.ts:25
+	// Reference: src/helper/validateChatWidget.ts:30
 	__( 'Enable at least one day in this channel schedule.', 'pushengage' ),
 
-	// Reference: src/helper/validateChatWidget.ts:26
+	// Reference: src/helper/validateChatWidget.ts:31
 	__( 'For enabled days, start time must be before end time in channel schedule.', 'pushengage' ),
 
-	// Reference: src/helper/validateChatWidget.ts:30
+	// Reference: src/helper/validateChatWidget.ts:35
 	__( 'Enable at least one day in this agent schedule.', 'pushengage' ),
 
-	// Reference: src/helper/validateChatWidget.ts:31
+	// Reference: src/helper/validateChatWidget.ts:36
 	__( 'For enabled days, start time must be before end time in agent schedule.', 'pushengage' ),
 
-	// Reference: src/helper/validateChatWidget.ts:35
+	// Reference: src/helper/validateChatWidget.ts:40
 	__( 'For enabled days, please enter both start and end time in agent schedule.', 'pushengage' ),
 
-	// Reference: src/helper/validateChatWidget.ts:39
+	// Reference: src/helper/validateChatWidget.ts:44
 	__( 'Please select a custom icon for the channel.', 'pushengage' ),
 
-	// Reference: src/helper/validateChatWidget.ts:40
+	// Reference: src/helper/validateChatWidget.ts:45
 	__( 'Please select a custom image for the channel.', 'pushengage' ),
 
-	// Reference: src/helper/validateChatWidget.ts:43
+	// Reference: src/helper/validateChatWidget.ts:48
 	__( 'Invalid Custom CSS.', 'pushengage' ),
 
-	// Reference: src/helper/validateChatWidget.ts:44
+	// Reference: src/helper/validateChatWidget.ts:49
 	__( 'Please select a custom image for the widget icon.', 'pushengage' ),
 
-	// Reference: src/helper/validateChatWidget.ts:45
+	// Reference: src/helper/validateChatWidget.ts:50
 	__( 'Please select a custom icon for the widget icon.', 'pushengage' ),
 
-	// Reference: src/helper/validateChatWidget.ts:46
+	// Reference: src/helper/validateChatWidget.ts:51
 	__( 'Please enter a custom size in pixels.', 'pushengage' ),
 
-	// Reference: src/helper/validateChatWidget.ts:49
+	// Reference: src/helper/validateChatWidget.ts:54
 	__( 'Display after seconds must be 0 or more.', 'pushengage' ),
 
-	// Reference: src/helper/validateChatWidget.ts:50
+	// Reference: src/helper/validateChatWidget.ts:55
 	__( 'Scroll percent must be between 0 and 100.', 'pushengage' ),
 
-	// Reference: src/helper/validateChatWidget.ts:51
+	// Reference: src/helper/validateChatWidget.ts:56
 	__( 'Display after seconds must be 86400 or less.', 'pushengage' ),
 
-	// Reference: src/helper/validateChatWidget.ts:54
+	// Reference: src/helper/validateChatWidget.ts:59
 	__( 'Please select both From and To date/time.', 'pushengage' ),
 
-	// Reference: src/helper/validateChatWidget.ts:55
+	// Reference: src/helper/validateChatWidget.ts:60
 	__( 'From date/time must be before To date/time.', 'pushengage' ),
 
-	// Reference: src/helper/validateChatWidget.ts:56
+	// Reference: src/helper/validateChatWidget.ts:61
 	__( 'Each rule group must contain at least one rule.', 'pushengage' ),
 
-	// Reference: src/helper/validateChatWidget.ts:57
+	// Reference: src/helper/validateChatWidget.ts:62
 	__( 'One or more display rules are incomplete or invalid.', 'pushengage' ),
 
-	// Reference: src/helper/validateChatWidget.ts:60
+	// Reference: src/helper/validateChatWidget.ts:65
 	__( 'Enable at least one day in business hours.', 'pushengage' ),
 
-	// Reference: src/helper/validateChatWidget.ts:61
+	// Reference: src/helper/validateChatWidget.ts:66
 	__( 'Start time must be before end time for enabled business hour days.', 'pushengage' ),
 
 	// Reference: src/helper/validateNotification.ts:112
@@ -4627,109 +4616,127 @@ $generated_i18n_strings = array(
 	// Reference: src/pages/aboutUs/AboutUs.tsx:97
 	__( 'Push notifications can be an amazing marketing tool to grow your site\'s repeat traffic, engagement, and sales. But when we started, most services were built only for large businesses with a development team. Not to mention how costly they were.', 'pushengage' ),
 
-	// Reference: src/pages/aboutUs/GettingStarted.tsx:111
-	__( 'Boost Repeat Traffic & Engage Customers Across Channels', 'pushengage' ),
+	// Reference: src/pages/aboutUs/GettingStarted.tsx:102
+	__( 'Multichannel Engagement: Reach users using Web Push, App Push, WhatsApp automation, and an inbox-free chat widget that routes conversations to the channels users already prefer.', 'pushengage' ),
+
+	// Reference: src/pages/aboutUs/GettingStarted.tsx:106
+	__( 'Behavior-Based Automation: Trigger messages based on user activity, inactivity, and commerce events — in real time or with smart delays.', 'pushengage' ),
+
+	// Reference: src/pages/aboutUs/GettingStarted.tsx:110
+	__( 'Advanced Targeting & Personalization: Use attributes, dynamic audience groups, and segmentation to send relevant messages at scale.', 'pushengage' ),
 
 	// Reference: src/pages/aboutUs/GettingStarted.tsx:114
+	__( 'WooCommerce Automation: Automate cart recovery, order updates, price drops, and inventory alerts with a single toggle — no custom workflows required.', 'pushengage' ),
+
+	// Reference: src/pages/aboutUs/GettingStarted.tsx:118
+	__( 'Inbox-Free Conversations: Enable sales, support, and lead generation without per-agent inbox costs or complex chat systems.', 'pushengage' ),
+
+	// Reference: src/pages/aboutUs/GettingStarted.tsx:122
+	__( 'Actionable Insights: Understand what\'s working with high-level analytics across campaigns, channels, and conversations.', 'pushengage' ),
+
+	// Reference: src/pages/aboutUs/GettingStarted.tsx:161
+	__( 'Boost Repeat Traffic & Engage Customers Across Channels', 'pushengage' ),
+
+	// Reference: src/pages/aboutUs/GettingStarted.tsx:164
 	__( 'PushEngage is a multichannel customer engagement platform built to help businesses stay connected with users beyond their first visit.', 'pushengage' ),
 
-	// Reference: src/pages/aboutUs/GettingStarted.tsx:120
+	// Reference: src/pages/aboutUs/GettingStarted.tsx:170
 	__( 'When email gets ignored and paid acquisition keeps getting more expensive, PushEngage gives you direct, high-intent channels to reach users where they actually respond — on the web, mobile devices, WhatsApp, and messaging apps.', 'pushengage' ),
 
-	// Reference: src/pages/aboutUs/GettingStarted.tsx:126
+	// Reference: src/pages/aboutUs/GettingStarted.tsx:176
 	__( 'From real-time notifications to automated follow-ups and inbox-free chat, PushEngage helps you drive repeat traffic, recover lost revenue, and create meaningful customer interactions — without adding engineering overhead.:', 'pushengage' ),
 
-	// Reference: src/pages/aboutUs/GettingStarted.tsx:132
+	// Reference: src/pages/aboutUs/GettingStarted.tsx:182
 	__( 'Get Started in Minutes', 'pushengage' ),
 
-	// Reference: src/pages/aboutUs/GettingStarted.tsx:135
+	// Reference: src/pages/aboutUs/GettingStarted.tsx:185
 	__( 'PushEngage is designed so you can see results quickly — without complex setup or engineering work.', 'pushengage' ),
 
-	// Reference: src/pages/aboutUs/GettingStarted.tsx:141
+	// Reference: src/pages/aboutUs/GettingStarted.tsx:191
 	__( 'Step 1: Add a Chat Widget to Your Site', 'pushengage' ),
 
-	// Reference: src/pages/aboutUs/GettingStarted.tsx:144
-	__( 'Start by adding an inbox-free, multi-channel chat widget to your site. Let visitors reach you instantly on WhatsApp, Messenger, email, and 20+ other channels — without managing conversations inside another inbox.You can customize the widget’s design, placement, triggers, and targeting in minutes, and start capturing leads or inquiries right away.', 'pushengage' ),
+	// Reference: src/pages/aboutUs/GettingStarted.tsx:194
+	__( 'Start by adding an inbox-free, multi-channel chat widget to your site. Let visitors reach you instantly on WhatsApp, Messenger, email, and 20+ other channels — without managing conversations inside another inbox. You can customize the widget’s design, placement, triggers, and targeting in minutes, and start capturing leads or inquiries right away.', 'pushengage' ),
 
-	// Reference: src/pages/aboutUs/GettingStarted.tsx:150
+	// Reference: src/pages/aboutUs/GettingStarted.tsx:200
 	__( 'Step 2: Turn Visitors into Subscribers', 'pushengage' ),
 
-	// Reference: src/pages/aboutUs/GettingStarted.tsx:153
+	// Reference: src/pages/aboutUs/GettingStarted.tsx:203
 	__( 'Next, capture users who prefer notifications using smart opt-ins for web and mobile push. Grow a permission-based audience you can reach instantly — even after visitors leave your site.', 'pushengage' ),
 
-	// Reference: src/pages/aboutUs/GettingStarted.tsx:159
+	// Reference: src/pages/aboutUs/GettingStarted.tsx:209
 	__( 'Step 3: Automate Engagement Across Channels', 'pushengage' ),
 
-	// Reference: src/pages/aboutUs/GettingStarted.tsx:162
+	// Reference: src/pages/aboutUs/GettingStarted.tsx:212
 	__( 'Once users are connected, automate follow-ups using behavior-based campaigns. Send updates, reminders, transactional messages, and re-engagement campaigns across push and WhatsApp — without manual effort. Start simple, then layer in automation as your engagement strategy grows.', 'pushengage' ),
 
-	// Reference: src/pages/aboutUs/GettingStarted.tsx:179
+	// Reference: src/pages/aboutUs/GettingStarted.tsx:229
 	__( 'Quick Start Video Guide', 'pushengage' ),
 
-	// Reference: src/pages/aboutUs/GettingStarted.tsx:187
+	// Reference: src/pages/aboutUs/GettingStarted.tsx:237
 	__( 'Add Multi-agent Chat Widgets to Your Site', 'pushengage' ),
 
-	// Reference: src/pages/aboutUs/GettingStarted.tsx:195
+	// Reference: src/pages/aboutUs/GettingStarted.tsx:245
 	__( 'Set Up WhatsApp Business Automation', 'pushengage' ),
 
-	// Reference: src/pages/aboutUs/GettingStarted.tsx:203
+	// Reference: src/pages/aboutUs/GettingStarted.tsx:253
 	__( 'Collect Push Subscribers', 'pushengage' ),
 
-	// Reference: src/pages/aboutUs/GettingStarted.tsx:211
+	// Reference: src/pages/aboutUs/GettingStarted.tsx:261
 	__( 'Send a Push Broadcast', 'pushengage' ),
 
-	// Reference: src/pages/aboutUs/GettingStarted.tsx:219
+	// Reference: src/pages/aboutUs/GettingStarted.tsx:269
 	__( 'Turn WordPress Categories Into Segments', 'pushengage' ),
 
-	// Reference: src/pages/aboutUs/GettingStarted.tsx:227
-	__( 'Send Push Notifications from Post Editor', 'pushengage' ),
-
-	// Reference: src/pages/aboutUs/GettingStarted.tsx:236
-	__( 'Why Teams Use PushEngage', 'pushengage' ),
-
-	// Reference: src/pages/aboutUs/GettingStarted.tsx:240
-	__( 'PushEngage brings multiple engagement channels into a single platform — so teams can focus on outcomes, not tools.', 'pushengage' ),
-
-	// Reference: src/pages/aboutUs/GettingStarted.tsx:252
-	__( 'Built to Grow With Your Business', 'pushengage' ),
-
-	// Reference: src/pages/aboutUs/GettingStarted.tsx:256
-	__( 'PushEngage adapts to how your business engages customers today — and how it will tomorrow.', 'pushengage' ),
-
-	// Reference: src/pages/aboutUs/GettingStarted.tsx:262
-	__( 'As you upgrade, you unlock:', 'pushengage' ),
-
-	// Reference: src/pages/aboutUs/GettingStarted.tsx:269
-	__( 'Advanced automation and targeting', 'pushengage' ),
-
 	// Reference: src/pages/aboutUs/GettingStarted.tsx:277
-	__( 'Cross-channel engagement workflows', 'pushengage' ),
+	__( 'Send Push Notifications from Post Editor', 'pushengage' ),
 
 	// Reference: src/pages/aboutUs/GettingStarted.tsx:28
 	__( 'How to Set Up a Multi-Agent Multichannel Chat Widget', 'pushengage' ),
 
-	// Reference: src/pages/aboutUs/GettingStarted.tsx:285
-	__( 'Deeper personalization and analytics', 'pushengage' ),
+	// Reference: src/pages/aboutUs/GettingStarted.tsx:286
+	__( 'Why Teams Use PushEngage', 'pushengage' ),
 
 	// Reference: src/pages/aboutUs/GettingStarted.tsx:29
 	__( 'Before you can offer sales and customer support on your site, you need to add and configure your chat widgets.', 'pushengage' ),
 
-	// Reference: src/pages/aboutUs/GettingStarted.tsx:293
-	__( 'Native integrations with WooCommerce and other tools', 'pushengage' ),
+	// Reference: src/pages/aboutUs/GettingStarted.tsx:290
+	__( 'PushEngage brings multiple engagement channels into a single platform — so teams can focus on outcomes, not tools.', 'pushengage' ),
 
-	// Reference: src/pages/aboutUs/GettingStarted.tsx:299
-	__( 'Upgrade when you\'re ready, and turn PushEngage into a central engagement layer for your website and customers.', 'pushengage' ),
+	// Reference: src/pages/aboutUs/GettingStarted.tsx:302
+	__( 'Built to Grow With Your Business', 'pushengage' ),
 
-	// Reference: src/pages/aboutUs/GettingStarted.tsx:316
-	__( 'Get PushEngage Today and Unlock all the Powerful Features', 'pushengage' ),
+	// Reference: src/pages/aboutUs/GettingStarted.tsx:306
+	__( 'PushEngage adapts to how your business engages customers today — and how it will tomorrow.', 'pushengage' ),
+
+	// Reference: src/pages/aboutUs/GettingStarted.tsx:312
+	__( 'As you upgrade, you unlock:', 'pushengage' ),
 
 	// Reference: src/pages/aboutUs/GettingStarted.tsx:319
+	__( 'Advanced automation and targeting', 'pushengage' ),
+
+	// Reference: src/pages/aboutUs/GettingStarted.tsx:327
+	__( 'Cross-channel engagement workflows', 'pushengage' ),
+
+	// Reference: src/pages/aboutUs/GettingStarted.tsx:335
+	__( 'Deeper personalization and analytics', 'pushengage' ),
+
+	// Reference: src/pages/aboutUs/GettingStarted.tsx:343
+	__( 'Native integrations with WooCommerce and other tools', 'pushengage' ),
+
+	// Reference: src/pages/aboutUs/GettingStarted.tsx:349
+	__( 'Upgrade when you\'re ready, and turn PushEngage into a central engagement layer for your website and customers.', 'pushengage' ),
+
+	// Reference: src/pages/aboutUs/GettingStarted.tsx:366
+	__( 'Get PushEngage Today and Unlock all the Powerful Features', 'pushengage' ),
+
+	// Reference: src/pages/aboutUs/GettingStarted.tsx:369
 	__( 'Bonus: PushEngage free users get', 'pushengage' ),
 
-	// Reference: src/pages/aboutUs/GettingStarted.tsx:331
+	// Reference: src/pages/aboutUs/GettingStarted.tsx:381
 	__( '50% off regular price', 'pushengage' ),
 
-	// Reference: src/pages/aboutUs/GettingStarted.tsx:333
+	// Reference: src/pages/aboutUs/GettingStarted.tsx:383
 	__( ', automatically applied at checkout.', 'pushengage' ),
 
 	// Reference: src/pages/aboutUs/GettingStarted.tsx:39
@@ -4738,26 +4745,32 @@ $generated_i18n_strings = array(
 	// Reference: src/pages/aboutUs/GettingStarted.tsx:40
 	__( 'Get your own Meta WhatsApp Business API Key, connect it to your PushEngage account, and enable automated campaigns.', 'pushengage' ),
 
-	// Reference: src/pages/aboutUs/GettingStarted.tsx:45
+	// Reference: src/pages/aboutUs/GettingStarted.tsx:50
+	__( 'How to Start Collecting Web Push Subscribers in WordPress?', 'pushengage' ),
+
+	// Reference: src/pages/aboutUs/GettingStarted.tsx:51
+	__( 'Before you can send campaigns, you need to start collecting subscribers using a popup modal. Check out how you can get started in 10 minutes or less.', 'pushengage' ),
+
+	// Reference: src/pages/aboutUs/GettingStarted.tsx:61
+	__( 'How to Send Automated Push Broadcasts Whenever You Publish a WordPress Post?', 'pushengage' ),
+
+	// Reference: src/pages/aboutUs/GettingStarted.tsx:65
+	__( 'Creating content is a challenge in itself. Let’s get you set up with automated push campaigns that promote your posts whenever you publish a new one.', 'pushengage' ),
+
+	// Reference: src/pages/aboutUs/GettingStarted.tsx:75
+	__( 'How to Create an Automated Drip Campaign That Makes Money While You Sleep?', 'pushengage' ),
+
+	// Reference: src/pages/aboutUs/GettingStarted.tsx:79
+	__( 'The same automated campaigns can keep making you more money as your subscriber list grows. Here’s how you can set up an automated campaign quickly.', 'pushengage' ),
+
+	// Reference: src/pages/aboutUs/GettingStarted.tsx:89
+	__( 'How to Create Custom Retargeting Campaigns (No Code)?', 'pushengage' ),
+
+	// Reference: src/pages/aboutUs/GettingStarted.tsx:90
+	__( 'You can create simple, powerful campaigns that grow your traffic and engagement. It’s not even difficult to create retargeting campaigns. Get started now!', 'pushengage' ),
+
+	// Reference: src/pages/aboutUs/GettingStarted.tsx:95
 	__( 'Read Documentation', 'pushengage' ),
-
-	// Reference: src/pages/aboutUs/GettingStarted.tsx:52
-	__( 'Multichannel Engagement: Reach users using Web Push, App Push, WhatsApp automation, and an inbox-free chat widget that routes conversations to the channels users already prefer.', 'pushengage' ),
-
-	// Reference: src/pages/aboutUs/GettingStarted.tsx:56
-	__( 'Behavior-Based Automation: Trigger messages based on user activity, inactivity, and commerce events — in real time or with smart delays.', 'pushengage' ),
-
-	// Reference: src/pages/aboutUs/GettingStarted.tsx:60
-	__( 'Advanced Targeting & Personalization: Use attributes, dynamic audience groups, and segmentation to send relevant messages at scale.', 'pushengage' ),
-
-	// Reference: src/pages/aboutUs/GettingStarted.tsx:64
-	__( 'WooCommerce Automation: Automate cart recovery, order updates, price drops, and inventory alerts with a single toggle — no custom workflows required.', 'pushengage' ),
-
-	// Reference: src/pages/aboutUs/GettingStarted.tsx:68
-	__( 'Inbox-Free Conversations: Enable sales, support, and lead generation without per-agent inbox costs or complex chat systems.', 'pushengage' ),
-
-	// Reference: src/pages/aboutUs/GettingStarted.tsx:72
-	__( 'Actionable Insights: Understand what\'s working with high-level analytics across campaigns, channels, and conversations.', 'pushengage' ),
 
 	// Reference: src/pages/analytics/GoalTracking.tsx:140
 	__( 'Goal tracking setting saved.', 'pushengage' ),
@@ -4805,7 +4818,7 @@ $generated_i18n_strings = array(
 	__( 'Optin Analytics', 'pushengage' ),
 
 	// Reference: src/pages/analytics/OptinAnalytics.tsx:288
-	// Reference: src/pages/chatWidget/ChannelSettingsDrawer.tsx:118
+	// Reference: src/pages/chatWidget/ChannelSettingsDrawer.tsx:175
 	__( 'Settings', 'pushengage' ),
 
 	// Reference: src/pages/analytics/OptinAnalytics.tsx:365
@@ -4853,7 +4866,7 @@ $generated_i18n_strings = array(
 	// Reference: src/pages/audience/Attributes.tsx:221
 	// Reference: src/pages/audience/AudienceGroups.tsx:179
 	// Reference: src/pages/audience/Subscribers.tsx:162
-	// Reference: src/pages/chatWidget/List.tsx:355
+	// Reference: src/pages/chatWidget/List.tsx:376
 	// Reference: src/pages/chatWidget/components/OverviewTab.tsx:90
 	// Reference: src/pages/drip/List.tsx:323
 	// Reference: src/pages/triggeredCampaign/List.tsx:310
@@ -5005,334 +5018,275 @@ $generated_i18n_strings = array(
 	__( 'Type', 'pushengage' ),
 
 	// Reference: src/pages/chatWidget/AppearanceSettings.tsx:227
-	// Reference: src/pages/chatWidget/components/ChannelAppearanceSettings.tsx:79
+	// Reference: src/pages/chatWidget/components/ChannelAppearanceSettings.tsx:124
 	__( 'Image', 'pushengage' ),
 
 	// Reference: src/pages/chatWidget/AppearanceSettings.tsx:228
-	// Reference: src/pages/chatWidget/components/ChannelAppearanceSettings.tsx:80
+	// Reference: src/pages/chatWidget/components/ChannelAppearanceSettings.tsx:125
 	__( 'Icon', 'pushengage' ),
 
 	// Reference: src/pages/chatWidget/AppearanceSettings.tsx:237
 	__( 'Custom Image', 'pushengage' ),
 
 	// Reference: src/pages/chatWidget/AppearanceSettings.tsx:253
-	// Reference: src/pages/chatWidget/components/ChannelAppearanceSettings.tsx:112
+	// Reference: src/pages/chatWidget/components/ChannelAppearanceSettings.tsx:165
 	__( 'Select Custom Image', 'pushengage' ),
 
 	// Reference: src/pages/chatWidget/AppearanceSettings.tsx:254
-	// Reference: src/pages/chatWidget/components/ChannelAppearanceSettings.tsx:113
-	// Reference: src/pages/chatWidget/components/ChannelGeneralSettings.tsx:232
+	// Reference: src/pages/chatWidget/components/ChannelAppearanceSettings.tsx:166
+	// Reference: src/pages/chatWidget/components/ChannelGeneralSettings.tsx:257
 	__( 'Select Image', 'pushengage' ),
 
 	// Reference: src/pages/chatWidget/AppearanceSettings.tsx:278
 	__( 'Custom Icon', 'pushengage' ),
 
-	// Reference: src/pages/chatWidget/AppearanceSettings.tsx:288
-	// Reference: src/pages/chatWidget/components/ChannelAppearanceSettings.tsx:186
+	// Reference: src/pages/chatWidget/AppearanceSettings.tsx:294
+	// Reference: src/pages/chatWidget/components/ChannelAppearanceSettings.tsx:244
 	__( 'Search icons', 'pushengage' ),
 
-	// Reference: src/pages/chatWidget/AppearanceSettings.tsx:295
-	// Reference: src/pages/chatWidget/components/ChannelAppearanceSettings.tsx:195
+	// Reference: src/pages/chatWidget/AppearanceSettings.tsx:302
+	// Reference: src/pages/chatWidget/components/ChannelAppearanceSettings.tsx:252
 	__( 'Browse all', 'pushengage' ),
 
-	// Reference: src/pages/chatWidget/AppearanceSettings.tsx:305
-	// Reference: src/pages/chatWidget/components/ChannelAppearanceSettings.tsx:205
+	// Reference: src/pages/chatWidget/AppearanceSettings.tsx:312
+	// Reference: src/pages/chatWidget/components/ChannelAppearanceSettings.tsx:262
 	__( 'Choose an icon', 'pushengage' ),
 
-	// Reference: src/pages/chatWidget/AppearanceSettings.tsx:317
+	// Reference: src/pages/chatWidget/AppearanceSettings.tsx:324
 	__( 'Position', 'pushengage' ),
 
-	// Reference: src/pages/chatWidget/AppearanceSettings.tsx:349
+	// Reference: src/pages/chatWidget/AppearanceSettings.tsx:356
 	__( 'This feature requires Business plan or higher', 'pushengage' ),
 
 	// Reference: src/pages/chatWidget/AppearanceSettings.tsx:36
 	__( 'System Stack', 'pushengage' ),
 
-	// Reference: src/pages/chatWidget/AppearanceSettings.tsx:376
+	// Reference: src/pages/chatWidget/AppearanceSettings.tsx:383
 	__( 'Side', 'pushengage' ),
 
-	// Reference: src/pages/chatWidget/AppearanceSettings.tsx:383
+	// Reference: src/pages/chatWidget/AppearanceSettings.tsx:390
 	__( 'Left', 'pushengage' ),
 
-	// Reference: src/pages/chatWidget/AppearanceSettings.tsx:384
+	// Reference: src/pages/chatWidget/AppearanceSettings.tsx:391
 	__( 'Right', 'pushengage' ),
 
-	// Reference: src/pages/chatWidget/AppearanceSettings.tsx:393
+	// Reference: src/pages/chatWidget/AppearanceSettings.tsx:400
 	__( 'Offset X (px)', 'pushengage' ),
 
-	// Reference: src/pages/chatWidget/AppearanceSettings.tsx:401
+	// Reference: src/pages/chatWidget/AppearanceSettings.tsx:408
 	__( 'Offset Y (px)', 'pushengage' ),
 
-	// Reference: src/pages/chatWidget/AppearanceSettings.tsx:414
+	// Reference: src/pages/chatWidget/AppearanceSettings.tsx:421
 	__( 'Default State', 'pushengage' ),
 
-	// Reference: src/pages/chatWidget/AppearanceSettings.tsx:417
+	// Reference: src/pages/chatWidget/AppearanceSettings.tsx:424
 	__( 'Click to open', 'pushengage' ),
 
-	// Reference: src/pages/chatWidget/AppearanceSettings.tsx:439
+	// Reference: src/pages/chatWidget/AppearanceSettings.tsx:446
 	__( 'Hover to open', 'pushengage' ),
 
-	// Reference: src/pages/chatWidget/AppearanceSettings.tsx:468
+	// Reference: src/pages/chatWidget/AppearanceSettings.tsx:475
 	__( 'Opened by default', 'pushengage' ),
 
-	// Reference: src/pages/chatWidget/AppearanceSettings.tsx:482
+	// Reference: src/pages/chatWidget/AppearanceSettings.tsx:489
 	__( 'Widget Background Color', 'pushengage' ),
 
-	// Reference: src/pages/chatWidget/AppearanceSettings.tsx:489
+	// Reference: src/pages/chatWidget/AppearanceSettings.tsx:496
 	__( 'Widget Size', 'pushengage' ),
 
-	// Reference: src/pages/chatWidget/AppearanceSettings.tsx:499
+	// Reference: src/pages/chatWidget/AppearanceSettings.tsx:506
 	// Reference: src/pages/chatWidget/components/WidgetCard.tsx:67
 	__( 'Custom', 'pushengage' ),
 
-	// Reference: src/pages/chatWidget/AppearanceSettings.tsx:514
+	// Reference: src/pages/chatWidget/AppearanceSettings.tsx:521
 	__( 'Custom Size (px)', 'pushengage' ),
 
-	// Reference: src/pages/chatWidget/AppearanceSettings.tsx:525
+	// Reference: src/pages/chatWidget/AppearanceSettings.tsx:532
 	__( 'CTA Text', 'pushengage' ),
 
-	// Reference: src/pages/chatWidget/AppearanceSettings.tsx:527
+	// Reference: src/pages/chatWidget/AppearanceSettings.tsx:534
 	__( 'The text of the call to action button. This text will be displayed beside the chat bubble. Leave it blank to hide the call to action button.', 'pushengage' ),
 
-	// Reference: src/pages/chatWidget/AppearanceSettings.tsx:535
+	// Reference: src/pages/chatWidget/AppearanceSettings.tsx:542
 	__( 'CTA Behavior', 'pushengage' ),
 
-	// Reference: src/pages/chatWidget/AppearanceSettings.tsx:543
-	// Reference: src/pages/chatWidget/ClickToChatReview.tsx:173
+	// Reference: src/pages/chatWidget/AppearanceSettings.tsx:550
 	__( 'Hide after first click', 'pushengage' ),
 
-	// Reference: src/pages/chatWidget/AppearanceSettings.tsx:546
-	// Reference: src/pages/chatWidget/ClickToChatReview.tsx:174
+	// Reference: src/pages/chatWidget/AppearanceSettings.tsx:553
 	__( 'Show all the time', 'pushengage' ),
 
-	// Reference: src/pages/chatWidget/AppearanceSettings.tsx:555
+	// Reference: src/pages/chatWidget/AppearanceSettings.tsx:562
 	__( 'CTA Color', 'pushengage' ),
 
-	// Reference: src/pages/chatWidget/AppearanceSettings.tsx:563
+	// Reference: src/pages/chatWidget/AppearanceSettings.tsx:570
 	__( 'CTA Background', 'pushengage' ),
 
-	// Reference: src/pages/chatWidget/AppearanceSettings.tsx:572
+	// Reference: src/pages/chatWidget/AppearanceSettings.tsx:579
 	__( 'Icons Layout', 'pushengage' ),
 
-	// Reference: src/pages/chatWidget/AppearanceSettings.tsx:577
+	// Reference: src/pages/chatWidget/AppearanceSettings.tsx:584
 	__( 'Vertical', 'pushengage' ),
 
-	// Reference: src/pages/chatWidget/AppearanceSettings.tsx:578
-	__( 'Horizontal', 'pushengage' ),
-
 	// Reference: src/pages/chatWidget/AppearanceSettings.tsx:585
-	__( 'Attention Effect', 'pushengage' ),
-
-	// Reference: src/pages/chatWidget/AppearanceSettings.tsx:587
-	__( 'Grab your visitor\'s attention with an attention effect to the chat bubble.', 'pushengage' ),
+	__( 'Horizontal', 'pushengage' ),
 
 	// Reference: src/pages/chatWidget/AppearanceSettings.tsx:59
 	__( 'Widget Design and Behavior', 'pushengage' ),
 
+	// Reference: src/pages/chatWidget/AppearanceSettings.tsx:592
+	__( 'Attention Effect', 'pushengage' ),
+
 	// Reference: src/pages/chatWidget/AppearanceSettings.tsx:594
+	__( 'Grab your visitor\'s attention with an attention effect to the chat bubble.', 'pushengage' ),
+
+	// Reference: src/pages/chatWidget/AppearanceSettings.tsx:601
 	// Reference: src/pages/debug/SystemInfo.tsx:61
 	// Reference: src/pages/design/TargetingRule.tsx:391
 	__( 'None', 'pushengage' ),
 
-	// Reference: src/pages/chatWidget/AppearanceSettings.tsx:595
+	// Reference: src/pages/chatWidget/AppearanceSettings.tsx:602
 	__( 'Bounce', 'pushengage' ),
 
-	// Reference: src/pages/chatWidget/AppearanceSettings.tsx:596
+	// Reference: src/pages/chatWidget/AppearanceSettings.tsx:603
 	__( 'Waggle', 'pushengage' ),
 
-	// Reference: src/pages/chatWidget/AppearanceSettings.tsx:597
+	// Reference: src/pages/chatWidget/AppearanceSettings.tsx:604
 	__( 'Floating', 'pushengage' ),
 
-	// Reference: src/pages/chatWidget/AppearanceSettings.tsx:598
+	// Reference: src/pages/chatWidget/AppearanceSettings.tsx:605
 	__( 'Sheen', 'pushengage' ),
 
-	// Reference: src/pages/chatWidget/AppearanceSettings.tsx:599
+	// Reference: src/pages/chatWidget/AppearanceSettings.tsx:606
 	__( 'Spin', 'pushengage' ),
 
-	// Reference: src/pages/chatWidget/AppearanceSettings.tsx:600
+	// Reference: src/pages/chatWidget/AppearanceSettings.tsx:607
 	__( 'Fade', 'pushengage' ),
 
-	// Reference: src/pages/chatWidget/AppearanceSettings.tsx:601
+	// Reference: src/pages/chatWidget/AppearanceSettings.tsx:608
 	__( 'Shockwave', 'pushengage' ),
 
-	// Reference: src/pages/chatWidget/AppearanceSettings.tsx:602
+	// Reference: src/pages/chatWidget/AppearanceSettings.tsx:609
 	__( 'Blink', 'pushengage' ),
 
-	// Reference: src/pages/chatWidget/AppearanceSettings.tsx:603
+	// Reference: src/pages/chatWidget/AppearanceSettings.tsx:610
 	__( 'Pulse', 'pushengage' ),
 
-	// Reference: src/pages/chatWidget/AppearanceSettings.tsx:610
+	// Reference: src/pages/chatWidget/AppearanceSettings.tsx:617
 	__( 'Background Blur Effect', 'pushengage' ),
 
-	// Reference: src/pages/chatWidget/AppearanceSettings.tsx:611
+	// Reference: src/pages/chatWidget/AppearanceSettings.tsx:618
 	__( 'Blur your webpage to highlight the chat widget when it’s open. This helps draw attention to the widget and creates a focused, distraction-free experience for visitors.', 'pushengage' ),
 
-	// Reference: src/pages/chatWidget/AppearanceSettings.tsx:639
+	// Reference: src/pages/chatWidget/AppearanceSettings.tsx:646
 	__( 'Color Theme', 'pushengage' ),
 
-	// Reference: src/pages/chatWidget/AppearanceSettings.tsx:641
+	// Reference: src/pages/chatWidget/AppearanceSettings.tsx:648
 	__( 'Set the color theme of the widget.', 'pushengage' ),
 
-	// Reference: src/pages/chatWidget/AppearanceSettings.tsx:645
+	// Reference: src/pages/chatWidget/AppearanceSettings.tsx:652
 	__( 'Light', 'pushengage' ),
 
-	// Reference: src/pages/chatWidget/AppearanceSettings.tsx:648
+	// Reference: src/pages/chatWidget/AppearanceSettings.tsx:655
 	__( 'Dark', 'pushengage' ),
 
-	// Reference: src/pages/chatWidget/AppearanceSettings.tsx:651
+	// Reference: src/pages/chatWidget/AppearanceSettings.tsx:658
 	__( 'System', 'pushengage' ),
 
-	// Reference: src/pages/chatWidget/AppearanceSettings.tsx:658
+	// Reference: src/pages/chatWidget/AppearanceSettings.tsx:665
 	__( 'Change Page Title', 'pushengage' ),
 
-	// Reference: src/pages/chatWidget/AppearanceSettings.tsx:659
+	// Reference: src/pages/chatWidget/AppearanceSettings.tsx:666
 	__( 'Change the page title to grab user\'s attention', 'pushengage' ),
 
 	// Reference: src/pages/chatWidget/AppearanceSettings.tsx:68
 	__( 'Standard view', 'pushengage' ),
 
-	// Reference: src/pages/chatWidget/AppearanceSettings.tsx:693
+	// Reference: src/pages/chatWidget/AppearanceSettings.tsx:700
 	__( 'Page Title', 'pushengage' ),
 
-	// Reference: src/pages/chatWidget/AppearanceSettings.tsx:707
+	// Reference: src/pages/chatWidget/AppearanceSettings.tsx:714
 	__( 'Google Analytics', 'pushengage' ),
 
-	// Reference: src/pages/chatWidget/AppearanceSettings.tsx:708
+	// Reference: src/pages/chatWidget/AppearanceSettings.tsx:715
 	__( 'Track user interactions on this widget. Please make sure to add the Google Analytics code to your website to enable the tracking.', 'pushengage' ),
 
-	// Reference: src/pages/chatWidget/AppearanceSettings.tsx:737
+	// Reference: src/pages/chatWidget/AppearanceSettings.tsx:744
 	__( 'Font Family', 'pushengage' ),
 
-	// Reference: src/pages/chatWidget/AppearanceSettings.tsx:739
+	// Reference: src/pages/chatWidget/AppearanceSettings.tsx:746
 	__( 'Select the font family for the widget.', 'pushengage' ),
 
 	// Reference: src/pages/chatWidget/AppearanceSettings.tsx:89
 	__( 'Advanced view', 'pushengage' ),
 
-	// Reference: src/pages/chatWidget/ChannelSettingsDrawer.tsx:122
+	// Reference: src/pages/chatWidget/ChannelSettingsDrawer.tsx:179
 	__( 'Channel Settings', 'pushengage' ),
 
-	// Reference: src/pages/chatWidget/ChannelSettingsDrawer.tsx:221
-	// Reference: src/pages/chatWidget/components/AgentCard.tsx:160
+	// Reference: src/pages/chatWidget/ChannelSettingsDrawer.tsx:323
 	// Reference: src/pages/chatWidget/components/WidgetAnalyticsDrawer.tsx:208
 	__( 'Agent Name', 'pushengage' ),
 
-	// Reference: src/pages/chatWidget/ClickToChatReview.tsx:104
-	// Reference: src/pages/chatWidget/ClickToChatV2Form.tsx:108
+	// Reference: src/pages/chatWidget/ClickToChatV2Form.tsx:146
+	__( 'Give your widget an unique name to easily identify it in the list of widgets.', 'pushengage' ),
+
+	// Reference: src/pages/chatWidget/ClickToChatV2Form.tsx:151
+	// Reference: src/pages/chatWidget/ReviewTab.tsx:187
+	__( 'Widget Name', 'pushengage' ),
+
+	// Reference: src/pages/chatWidget/ClickToChatV2Form.tsx:157
 	// Reference: src/pages/chatWidget/components/WidgetCard.tsx:179
 	__( 'Channels', 'pushengage' ),
 
-	// Reference: src/pages/chatWidget/ClickToChatReview.tsx:109
-	// Reference: src/pages/chatWidget/components/ChannelGeneralSettings.tsx:251
-	__( 'Enabled', 'pushengage' ),
+	// Reference: src/pages/chatWidget/ClickToChatV2Form.tsx:287
+	__( 'Maximum custom channels limit reached', 'pushengage' ),
 
-	// Reference: src/pages/chatWidget/ClickToChatReview.tsx:116
-	__( 'Primary Channel', 'pushengage' ),
-
-	// Reference: src/pages/chatWidget/ClickToChatReview.tsx:133
-	__( 'Shown on', 'pushengage' ),
-
-	// Reference: src/pages/chatWidget/ClickToChatReview.tsx:143
-	__( 'Trigger', 'pushengage' ),
-
-	// Reference: src/pages/chatWidget/ClickToChatReview.tsx:153
-	__( 'Layout', 'pushengage' ),
-
-	// Reference: src/pages/chatWidget/ClickToChatReview.tsx:165
-	__( 'CTA', 'pushengage' ),
-
-	// Reference: src/pages/chatWidget/ClickToChatReview.tsx:228
-	// Reference: src/pages/chatWidget/components/WidgetCard.tsx:122
-	__( 'Ends With', 'pushengage' ),
-
-	// Reference: src/pages/chatWidget/ClickToChatReview.tsx:229
-	// Reference: src/pages/chatWidget/components/WidgetCard.tsx:123
-	__( 'Equals', 'pushengage' ),
-
-	// Reference: src/pages/chatWidget/ClickToChatReview.tsx:239
-	__( 'WordPress Page', 'pushengage' ),
-
-	// Reference: src/pages/chatWidget/ClickToChatReview.tsx:268
-	// Reference: src/pages/chatWidget/components/DisplayRules.tsx:25
-	__( 'Display Rules', 'pushengage' ),
-
-	// Reference: src/pages/chatWidget/ClickToChatReview.tsx:275
-	// Reference: src/pages/chatWidget/components/WidgetCard.tsx:233
-	__( 'Pages/URLs', 'pushengage' ),
-
-	// Reference: src/pages/chatWidget/ClickToChatReview.tsx:296
-	__( 'Country rules', 'pushengage' ),
-
-	// Reference: src/pages/chatWidget/ClickToChatReview.tsx:303
-	// Reference: src/pages/chatWidget/components/DisplayRules.tsx:234
-	__( 'Include', 'pushengage' ),
-
-	// Reference: src/pages/chatWidget/ClickToChatReview.tsx:303
-	// Reference: src/pages/chatWidget/components/DisplayRules.tsx:238
-	__( 'Exclude', 'pushengage' ),
-
-	// Reference: src/pages/chatWidget/ClickToChatReview.tsx:326
-	// Reference: src/pages/chatWidget/components/DateScheduling.tsx:22
-	__( 'Date scheduling', 'pushengage' ),
-
-	// Reference: src/pages/chatWidget/ClickToChatReview.tsx:75
-	__( 'On scroll', 'pushengage' ),
-
-	// Reference: src/pages/chatWidget/ClickToChatReview.tsx:81
-	__( 'On exit intent', 'pushengage' ),
-
-	// Reference: src/pages/chatWidget/ClickToChatReview.tsx:88
-	__( 'Widget Summary', 'pushengage' ),
-
-	// Reference: src/pages/chatWidget/ClickToChatV2Form.tsx:102
-	__( 'Widget Name', 'pushengage' ),
-
-	// Reference: src/pages/chatWidget/ClickToChatV2Form.tsx:249
+	// Reference: src/pages/chatWidget/ClickToChatV2Form.tsx:316
 	__( 'Add Custom Channel', 'pushengage' ),
 
-	// Reference: src/pages/chatWidget/ClickToChatV2Form.tsx:255
+	// Reference: src/pages/chatWidget/ClickToChatV2Form.tsx:322
 	__( 'Enabled Channels (drag to sort)', 'pushengage' ),
 
-	// Reference: src/pages/chatWidget/ClickToChatV2Form.tsx:310
-	// Reference: src/pages/chatWidget/components/DateScheduling.tsx:140
-	// Reference: src/pages/chatWidget/components/DisplayRules.tsx:306
+	// Reference: src/pages/chatWidget/ClickToChatV2Form.tsx:377
+	// Reference: src/pages/chatWidget/components/ChannelAgents.tsx:134
+	// Reference: src/pages/chatWidget/components/DisplayRules.tsx:138
 	__( 'Remove', 'pushengage' ),
 
-	// Reference: src/pages/chatWidget/ClickToChatV2Form.tsx:97
-	__( 'Give your widget an unique name to easily identify it in the list of widgets.', 'pushengage' ),
-
-	// Reference: src/pages/chatWidget/Editor.tsx:291
+	// Reference: src/pages/chatWidget/Editor.tsx:340
 	__( 'Widget updated successfully', 'pushengage' ),
 
-	// Reference: src/pages/chatWidget/Editor.tsx:314
+	// Reference: src/pages/chatWidget/Editor.tsx:363
 	__( 'Failed to create widget', 'pushengage' ),
 
-	// Reference: src/pages/chatWidget/Editor.tsx:345
+	// Reference: src/pages/chatWidget/Editor.tsx:568
+	__( 'Please fix the errors in this tab before continuing.', 'pushengage' ),
+
+	// Reference: src/pages/chatWidget/Editor.tsx:621
 	__( 'Edit Chat Widget', 'pushengage' ),
 
-	// Reference: src/pages/chatWidget/Editor.tsx:345
-	// Reference: src/pages/chatWidget/List.tsx:443
+	// Reference: src/pages/chatWidget/Editor.tsx:621
+	// Reference: src/pages/chatWidget/List.tsx:461
 	__( 'Create Chat Widget', 'pushengage' ),
 
-	// Reference: src/pages/chatWidget/Editor.tsx:349
+	// Reference: src/pages/chatWidget/Editor.tsx:625
 	__( 'Update Widget', 'pushengage' ),
 
-	// Reference: src/pages/chatWidget/Editor.tsx:349
+	// Reference: src/pages/chatWidget/Editor.tsx:625
 	__( 'Save Widget', 'pushengage' ),
 
-	// Reference: src/pages/chatWidget/Editor.tsx:375
+	// Reference: src/pages/chatWidget/Editor.tsx:651
 	__( 'Appearance', 'pushengage' ),
 
-	// Reference: src/pages/chatWidget/Editor.tsx:380
+	// Reference: src/pages/chatWidget/Editor.tsx:656
 	__( 'Triggers', 'pushengage' ),
 
-	// Reference: src/pages/chatWidget/Editor.tsx:385
+	// Reference: src/pages/chatWidget/Editor.tsx:661
 	__( 'Review', 'pushengage' ),
 
-	// Reference: src/pages/chatWidget/Editor.tsx:468
+	// Reference: src/pages/chatWidget/Editor.tsx:732
 	__( 'Back', 'pushengage' ),
 
-	// Reference: src/pages/chatWidget/Editor.tsx:475
+	// Reference: src/pages/chatWidget/Editor.tsx:739
 	__( 'Save Settings', 'pushengage' ),
 
 	// Reference: src/pages/chatWidget/LegacySupport.tsx:114
@@ -5362,59 +5316,154 @@ $generated_i18n_strings = array(
 	// Reference: src/pages/chatWidget/LegacySupport.tsx:96
 	__( 'Enjoy a modern UI, lightning performance & future-ready updates', 'pushengage' ),
 
-	// Reference: src/pages/chatWidget/List.tsx:157
+	// Reference: src/pages/chatWidget/List.tsx:164
 	__( 'Status updated', 'pushengage' ),
 
-	// Reference: src/pages/chatWidget/List.tsx:167
+	// Reference: src/pages/chatWidget/List.tsx:174
 	__( 'Failed to update status', 'pushengage' ),
 
-	// Reference: src/pages/chatWidget/List.tsx:201
+	// Reference: src/pages/chatWidget/List.tsx:225
 	__( 'Widget deleted', 'pushengage' ),
 
-	// Reference: src/pages/chatWidget/List.tsx:211
+	// Reference: src/pages/chatWidget/List.tsx:235
 	__( 'Failed to delete widget', 'pushengage' ),
 
-	// Reference: src/pages/chatWidget/List.tsx:272
+	// Reference: src/pages/chatWidget/List.tsx:293
 	__( 'WhatsApp Chat Widget (Migrated)', 'pushengage' ),
 
-	// Reference: src/pages/chatWidget/List.tsx:329
+	// Reference: src/pages/chatWidget/List.tsx:350
 	__( 'Failed to migrate WhatsApp widget', 'pushengage' ),
 
-	// Reference: src/pages/chatWidget/List.tsx:383
+	// Reference: src/pages/chatWidget/List.tsx:404
 	__( 'Create Widget', 'pushengage' ),
 
-	// Reference: src/pages/chatWidget/List.tsx:420
+	// Reference: src/pages/chatWidget/List.tsx:438
 	__( 'Are You OK with Losing Customers?', 'pushengage' ),
 
-	// Reference: src/pages/chatWidget/List.tsx:421
+	// Reference: src/pages/chatWidget/List.tsx:439
 	__( '👋 You\'re open for business. But nobody can find the door. Add a chat widget that acts like a front desk for your entire brand: WhatsApp, SMS, IG, phone, email - whatever they prefer. You show up instantly. They stay longer. You convert more.', 'pushengage' ),
 
-	// Reference: src/pages/chatWidget/List.tsx:428
+	// Reference: src/pages/chatWidget/List.tsx:446
 	__( 'Instant support across channels', 'pushengage' ),
 
-	// Reference: src/pages/chatWidget/List.tsx:432
+	// Reference: src/pages/chatWidget/List.tsx:450
 	__( 'Boost conversions and sales', 'pushengage' ),
 
-	// Reference: src/pages/chatWidget/List.tsx:436
+	// Reference: src/pages/chatWidget/List.tsx:454
 	__( 'Target the right visitors automatically', 'pushengage' ),
 
-	// Reference: src/pages/chatWidget/List.tsx:440
+	// Reference: src/pages/chatWidget/List.tsx:458
 	__( 'No-code setup, works everywhere', 'pushengage' ),
 
-	// Reference: src/pages/chatWidget/List.tsx:456
+	// Reference: src/pages/chatWidget/List.tsx:471
 	__( 'Need help? Check our', 'pushengage' ),
 
-	// Reference: src/pages/chatWidget/List.tsx:466
+	// Reference: src/pages/chatWidget/List.tsx:481
 	__( 'chat widget documentation', 'pushengage' ),
 
-	// Reference: src/pages/chatWidget/List.tsx:562
+	// Reference: src/pages/chatWidget/List.tsx:574
 	__( 'Please connect your site to start creating chat widgets.', 'pushengage' ),
 
-	// Reference: src/pages/chatWidget/ReviewTab.tsx:35
+	// Reference: src/pages/chatWidget/List.tsx:593
+	__( 'Widget limit reached', 'pushengage' ),
+
+	// Reference: src/pages/chatWidget/List.tsx:594
+	__( 'Ok', 'pushengage' ),
+
+	// Reference: src/pages/chatWidget/ReviewTab.tsx:163
 	__( 'Enable Widget', 'pushengage' ),
 
-	// Reference: src/pages/chatWidget/ReviewTab.tsx:55
-	__( 'Review Widget Settings', 'pushengage' ),
+	// Reference: src/pages/chatWidget/ReviewTab.tsx:210
+	// Reference: src/pages/chatWidget/components/ChannelGeneralSettings.tsx:42
+	__( 'Configuration', 'pushengage' ),
+
+	// Reference: src/pages/chatWidget/ReviewTab.tsx:217
+	__( 'Primary Communication Channel', 'pushengage' ),
+
+	// Reference: src/pages/chatWidget/ReviewTab.tsx:227
+	__( 'Not Configured', 'pushengage' ),
+
+	// Reference: src/pages/chatWidget/ReviewTab.tsx:231
+	__( 'No active channels', 'pushengage' ),
+
+	// Reference: src/pages/chatWidget/ReviewTab.tsx:239
+	__( 'Activation', 'pushengage' ),
+
+	// Reference: src/pages/chatWidget/ReviewTab.tsx:244
+	__( 'Trigger', 'pushengage' ),
+
+	// Reference: src/pages/chatWidget/ReviewTab.tsx:256
+	__( 'Layout', 'pushengage' ),
+
+	// Reference: src/pages/chatWidget/ReviewTab.tsx:261
+	__( 'Layout Style', 'pushengage' ),
+
+	// Reference: src/pages/chatWidget/ReviewTab.tsx:277
+	__( 'Visibility', 'pushengage' ),
+
+	// Reference: src/pages/chatWidget/ReviewTab.tsx:282
+	__( 'Visible Devices', 'pushengage' ),
+
+	// Reference: src/pages/chatWidget/ReviewTab.tsx:308
+	__( 'All Devices', 'pushengage' ),
+
+	// Reference: src/pages/chatWidget/ReviewTab.tsx:319
+	__( 'Call to Action', 'pushengage' ),
+
+	// Reference: src/pages/chatWidget/ReviewTab.tsx:341
+	__( 'Targeting Rules', 'pushengage' ),
+
+	// Reference: src/pages/chatWidget/ReviewTab.tsx:350
+	__( 'Targeting Logic', 'pushengage' ),
+
+	// Reference: src/pages/chatWidget/ReviewTab.tsx:364
+	__( 'Scheduling', 'pushengage' ),
+
+	// Reference: src/pages/chatWidget/ReviewTab.tsx:374
+	// Reference: src/pages/chatWidget/components/DateScheduling.tsx:35
+	__( 'Start Date', 'pushengage' ),
+
+	// Reference: src/pages/chatWidget/ReviewTab.tsx:386
+	// Reference: src/pages/chatWidget/components/DateScheduling.tsx:82
+	__( 'End Date', 'pushengage' ),
+
+	// Reference: src/pages/chatWidget/ReviewTab.tsx:400
+	__( 'Always active', 'pushengage' ),
+
+	// Reference: src/pages/chatWidget/ReviewTab.tsx:409
+	// Reference: src/pages/chatWidget/components/BusinessHours.tsx:19
+	__( 'Business Hours', 'pushengage' ),
+
+	// Reference: src/pages/chatWidget/ReviewTab.tsx:417
+	// Reference: src/pages/chatWidget/components/ChannelAgents.tsx:234
+	__( 'Timezone', 'pushengage' ),
+
+	// Reference: src/pages/chatWidget/ReviewTab.tsx:430
+	__( 'Schedule', 'pushengage' ),
+
+	// Reference: src/pages/chatWidget/ReviewTab.tsx:453
+	__( 'No days enabled', 'pushengage' ),
+
+	// Reference: src/pages/chatWidget/ReviewTab.tsx:461
+	__( 'Business hours not configured', 'pushengage' ),
+
+	// Reference: src/pages/chatWidget/TriggerSettings.tsx:35
+	__( 'Display Triggers', 'pushengage' ),
+
+	// Reference: src/pages/chatWidget/TriggerSettings.tsx:37
+	__( 'Control when and where your chat widget appears to maximize visitor engagement.', 'pushengage' ),
+
+	// Reference: src/pages/chatWidget/TriggerSettings.tsx:49
+	__( 'Display Rules', 'pushengage' ),
+
+	// Reference: src/pages/chatWidget/TriggerSettings.tsx:51
+	__( 'Add multiple rule groups and rules to determine when the chat widget will be displayed. You can add rules for WP pages, URL patterns, and countries.', 'pushengage' ),
+
+	// Reference: src/pages/chatWidget/TriggerSettings.tsx:66
+	__( 'Date Scheduling', 'pushengage' ),
+
+	// Reference: src/pages/chatWidget/TriggerSettings.tsx:71
+	__( 'Schedule the chat widget display by selecting a date and time range. You can add multiple schedules to display the chat widget at different times.', 'pushengage' ),
 
 	// Reference: src/pages/chatWidget/WidgetPreview.tsx:776
 	__( 'agent available', 'pushengage' ),
@@ -5450,7 +5499,7 @@ $generated_i18n_strings = array(
 	__( 'Maps link', 'pushengage' ),
 
 	// Reference: src/pages/chatWidget/channelsConfig.ts:174
-	// Reference: src/pages/chatWidget/helpers.ts:51
+	// Reference: src/pages/chatWidget/helpers.ts:53
 	__( 'Phone Number', 'pushengage' ),
 
 	// Reference: src/pages/chatWidget/channelsConfig.ts:185
@@ -5481,7 +5530,7 @@ $generated_i18n_strings = array(
 	__( 'Enter a waze link', 'pushengage' ),
 
 	// Reference: src/pages/chatWidget/channelsConfig.ts:233
-	// Reference: src/pages/chatWidget/helpers.ts:56
+	// Reference: src/pages/chatWidget/helpers.ts:58
 	__( 'Place or URL', 'pushengage' ),
 
 	// Reference: src/pages/chatWidget/channelsConfig.ts:240
@@ -5509,10 +5558,13 @@ $generated_i18n_strings = array(
 	__( 'Microsoft Teams URL', 'pushengage' ),
 
 	// Reference: src/pages/chatWidget/channelsConfig.ts:289
-	__( 'Link', 'pushengage' ),
+	__( 'Enter channel link or URL', 'pushengage' ),
 
 	// Reference: src/pages/chatWidget/channelsConfig.ts:291
 	__( 'Channel Link/URL', 'pushengage' ),
+
+	// Reference: src/pages/chatWidget/channelsConfig.ts:72
+	__( 'Enter phone number e.g. +19876543210', 'pushengage' ),
 
 	// Reference: src/pages/chatWidget/channelsConfig.ts:80
 	__( 'Prefill Message', 'pushengage' ),
@@ -5526,180 +5578,174 @@ $generated_i18n_strings = array(
 	// Reference: src/pages/chatWidget/components/AddWidgetCard.tsx:58
 	__( 'Add new Widget', 'pushengage' ),
 
-	// Reference: src/pages/chatWidget/components/AgentCard.tsx:122
-	// Reference: src/pages/chatWidget/components/ChannelGeneralSettings.tsx:190
+	// Reference: src/pages/chatWidget/components/AgentAvatarUploader.tsx:26
 	__( 'No image', 'pushengage' ),
 
-	// Reference: src/pages/chatWidget/components/AgentCard.tsx:132
+	// Reference: src/pages/chatWidget/components/AgentAvatarUploader.tsx:32
 	__( 'Select Agent Avatar', 'pushengage' ),
 
-	// Reference: src/pages/chatWidget/components/AgentCard.tsx:149
-	__( 'Display name shown to visitors.', 'pushengage' ),
+	// Reference: src/pages/chatWidget/components/AgentAvatarUploader.tsx:36
+	__( 'Use a square image (128x128px PNG/JPG) for best results.', 'pushengage' ),
 
-	// Reference: src/pages/chatWidget/components/AgentCard.tsx:179
-	// Reference: src/pages/chatWidget/components/ChannelGeneralSettings.tsx:61
-	__( 'Username/Page', 'pushengage' ),
-
-	// Reference: src/pages/chatWidget/components/AgentCard.tsx:181
-	__( 'Enter agent contact for this channel (e.g., WhatsApp in international format).', 'pushengage' ),
-
-	// Reference: src/pages/chatWidget/components/AgentCard.tsx:217
-	__( 'Designation', 'pushengage' ),
-
-	// Reference: src/pages/chatWidget/components/AgentCard.tsx:218
-	__( 'Role or title shown below the name.', 'pushengage' ),
-
-	// Reference: src/pages/chatWidget/components/AgentCard.tsx:226
-	__( 'e.g. Sales Manager', 'pushengage' ),
-
-	// Reference: src/pages/chatWidget/components/AgentCard.tsx:244
-	__( 'Languages', 'pushengage' ),
-
-	// Reference: src/pages/chatWidget/components/AgentCard.tsx:246
-	__( 'Languages the agent can handle; used to guide visitor conversations.', 'pushengage' ),
-
-	// Reference: src/pages/chatWidget/components/AgentCard.tsx:261
-	__( 'languages selected', 'pushengage' ),
-
-	// Reference: src/pages/chatWidget/components/AgentCard.tsx:264
-	__( 'Select languages', 'pushengage' ),
-
-	// Reference: src/pages/chatWidget/components/AgentCard.tsx:289
-	__( 'Tags', 'pushengage' ),
-
-	// Reference: src/pages/chatWidget/components/AgentCard.tsx:290
-	__( 'Internal tags for filtering and organization.', 'pushengage' ),
-
-	// Reference: src/pages/chatWidget/components/AgentCard.tsx:299
-	__( 'Customer Support', 'pushengage' ),
-
-	// Reference: src/pages/chatWidget/components/AgentCard.tsx:300
-	__( 'Sales', 'pushengage' ),
-
-	// Reference: src/pages/chatWidget/components/AgentCard.tsx:301
-	__( 'Marketing', 'pushengage' ),
-
-	// Reference: src/pages/chatWidget/components/AgentCard.tsx:302
-	__( 'Technical Support', 'pushengage' ),
-
-	// Reference: src/pages/chatWidget/components/AgentCard.tsx:303
-	__( 'Other', 'pushengage' ),
-
-	// Reference: src/pages/chatWidget/components/AgentCard.tsx:307
-	__( 'tags selected', 'pushengage' ),
-
-	// Reference: src/pages/chatWidget/components/AgentCard.tsx:312
-	__( 'Add tags and press Enter', 'pushengage' ),
-
-	// Reference: src/pages/chatWidget/components/AgentCard.tsx:327
-	__( 'Agent schedule', 'pushengage' ),
-
-	// Reference: src/pages/chatWidget/components/AgentCard.tsx:351
-	__( 'Set weekly availability for this agent.', 'pushengage' ),
-
-	// Reference: src/pages/chatWidget/components/AgentCard.tsx:36
-	__( 'Agent Name is required.', 'pushengage' ),
-
-	// Reference: src/pages/chatWidget/components/AgentCard.tsx:71
-	__( 'Remove agent', 'pushengage' ),
-
-	// Reference: src/pages/chatWidget/components/AgentCard.tsx:72
-	__( 'Remove agent?', 'pushengage' ),
-
-	// Reference: src/pages/chatWidget/components/AgentCard.tsx:88
-	__( 'Avatar', 'pushengage' ),
-
-	// Reference: src/pages/chatWidget/components/AgentCard.tsx:89
-	__( 'Agent picture shown in the widget.', 'pushengage' ),
-
-	// Reference: src/pages/chatWidget/components/AgentsSection.tsx:56
+	// Reference: src/pages/chatWidget/components/AgentsSection.tsx:25
 	__( 'Agents', 'pushengage' ),
 
-	// Reference: src/pages/chatWidget/components/AgentsSection.tsx:59
-	__( 'Add agents to this channel. Agents are the people who will be available to chat with your customers.', 'pushengage' ),
-
-	// Reference: src/pages/chatWidget/components/AgentsSection.tsx:79
-	__( 'Add Agent', 'pushengage' ),
-
-	// Reference: src/pages/chatWidget/components/AgentsSection.tsx:81
-	// Reference: src/pages/chatWidget/components/ChannelAppearanceSettings.tsx:87
-	// Reference: src/pages/chatWidget/components/DateScheduling.tsx:168
-	// Reference: src/pages/chatWidget/components/DisplayRules.tsx:368
-	__( 'Requires business plan or higher', 'pushengage' ),
+	// Reference: src/pages/chatWidget/components/AgentsSection.tsx:29
+	__( 'Add agents to this channel. Agents appear inside the widget for visitors to contact.', 'pushengage' ),
 
 	// Reference: src/pages/chatWidget/components/AnalyticsHeader.tsx:39
 	__( 'A complete overview of your chat widget interactions and conversations.', 'pushengage' ),
 
-	// Reference: src/pages/chatWidget/components/BusinessHours.tsx:20
-	// Reference: src/pages/chatWidget/components/WidgetCard.tsx:230
-	__( 'Business hours', 'pushengage' ),
-
-	// Reference: src/pages/chatWidget/components/BusinessHours.tsx:39
+	// Reference: src/pages/chatWidget/components/BusinessHours.tsx:38
 	__( 'Set the chat widget display hours by selecting a time range. You can add weekly schedule to display the chat widget at different times.', 'pushengage' ),
 
-	// Reference: src/pages/chatWidget/components/BusyTimesChart.tsx:180
+	// Reference: src/pages/chatWidget/components/BusyTimesChart.tsx:135
+	__( 'Interactions:', 'pushengage' ),
+
+	// Reference: src/pages/chatWidget/components/BusyTimesChart.tsx:136
+	__( 'Chat Initiated:', 'pushengage' ),
+
+	// Reference: src/pages/chatWidget/components/BusyTimesChart.tsx:149
+	__( 'Time:', 'pushengage' ),
+
+	// Reference: src/pages/chatWidget/components/BusyTimesChart.tsx:230
 	__( 'Most Busy Times', 'pushengage' ),
 
-	// Reference: src/pages/chatWidget/components/BusyTimesChart.tsx:193
+	// Reference: src/pages/chatWidget/components/BusyTimesChart.tsx:243
 	__( 'Interactions', 'pushengage' ),
 
-	// Reference: src/pages/chatWidget/components/BusyTimesChart.tsx:194
+	// Reference: src/pages/chatWidget/components/BusyTimesChart.tsx:244
 	// Reference: src/pages/chatWidget/components/WidgetAnalyticsDrawer.tsx:234
 	__( 'Chats Initiated', 'pushengage' ),
 
-	// Reference: src/pages/chatWidget/components/BusyTimesChart.tsx:211
+	// Reference: src/pages/chatWidget/components/BusyTimesChart.tsx:261
 	__( 'Users interacted with Chat Assistant the most during this period.', 'pushengage' ),
 
-	// Reference: src/pages/chatWidget/components/BusyTimesChart.tsx:219
+	// Reference: src/pages/chatWidget/components/BusyTimesChart.tsx:269
 	// Reference: src/pages/chatWidget/components/PopularChannelsList.tsx:90
 	// Reference: src/pages/chatWidget/components/TopAgentsList.tsx:51
 	// Reference: src/pages/chatWidget/components/WidgetAnalyticsDrawer.tsx:302
 	__( 'No data available', 'pushengage' ),
 
-	// Reference: src/pages/chatWidget/components/BusyTimesChart.tsx:257
+	// Reference: src/pages/chatWidget/components/BusyTimesChart.tsx:303
 	__( 'Period:', 'pushengage' ),
 
-	// Reference: src/pages/chatWidget/components/BusyTimesChart.tsx:260
+	// Reference: src/pages/chatWidget/components/BusyTimesChart.tsx:306
 	__( 'Timezone: UTC', 'pushengage' ),
 
-	// Reference: src/pages/chatWidget/components/ChannelAppearanceSettings.tsx:132
-	// Reference: src/pages/chatWidget/components/ChannelGeneralSettings.tsx:195
-	__( 'Remove image', 'pushengage' ),
+	// Reference: src/pages/chatWidget/components/ChannelAgents.tsx:107
+	__( 'Add Agent', 'pushengage' ),
 
-	// Reference: src/pages/chatWidget/components/ChannelAppearanceSettings.tsx:29
-	__( 'Color', 'pushengage' ),
+	// Reference: src/pages/chatWidget/components/ChannelAgents.tsx:141
+	__( 'Avatar', 'pushengage' ),
 
-	// Reference: src/pages/chatWidget/components/ChannelAppearanceSettings.tsx:60
+	// Reference: src/pages/chatWidget/components/ChannelAgents.tsx:156
+	__( 'Please enter an agent name.', 'pushengage' ),
+
+	// Reference: src/pages/chatWidget/components/ChannelAgents.tsx:160
+	__( 'Agent name cannot exceed 64 characters.', 'pushengage' ),
+
+	// Reference: src/pages/chatWidget/components/ChannelAgents.tsx:164
+	__( 'Agent name', 'pushengage' ),
+
+	// Reference: src/pages/chatWidget/components/ChannelAgents.tsx:170
+	__( 'Designation', 'pushengage' ),
+
+	// Reference: src/pages/chatWidget/components/ChannelAgents.tsx:178
+	__( 'e.g. Sales Manager', 'pushengage' ),
+
+	// Reference: src/pages/chatWidget/components/ChannelAgents.tsx:182
+	__( 'Languages', 'pushengage' ),
+
+	// Reference: src/pages/chatWidget/components/ChannelAgents.tsx:187
+	__( 'Select languages', 'pushengage' ),
+
+	// Reference: src/pages/chatWidget/components/ChannelAgents.tsx:192
+	__( 'Tags', 'pushengage' ),
+
+	// Reference: src/pages/chatWidget/components/ChannelAgents.tsx:195
+	__( 'Add tags', 'pushengage' ),
+
+	// Reference: src/pages/chatWidget/components/ChannelAgents.tsx:205
+	__( 'Agent schedule', 'pushengage' ),
+
+	// Reference: src/pages/chatWidget/components/ChannelAgents.tsx:207
+	__( 'Set weekly availability for this agent.', 'pushengage' ),
+
+	// Reference: src/pages/chatWidget/components/ChannelAgents.tsx:240
+	__( 'Please select a timezone for the agent schedule.', 'pushengage' ),
+
+	// Reference: src/pages/chatWidget/components/ChannelAgents.tsx:250
+	__( 'Weekly hours', 'pushengage' ),
+
+	// Reference: src/pages/chatWidget/components/ChannelAgents.tsx:273
+	__( 'Add Another Agent', 'pushengage' ),
+
+	// Reference: src/pages/chatWidget/components/ChannelAgents.tsx:58
+	__( 'Contact', 'pushengage' ),
+
+	// Reference: src/pages/chatWidget/components/ChannelAgents.tsx:61
+	__( 'Please enter %s for the agent.', 'pushengage' ),
+
+	// Reference: src/pages/chatWidget/components/ChannelAppearanceSettings.tsx:100
 	__( 'Custom Icon/Image', 'pushengage' ),
 
-	// Reference: src/pages/chatWidget/components/ChannelAppearanceSettings.tsx:78
+	// Reference: src/pages/chatWidget/components/ChannelAppearanceSettings.tsx:123
 	__( 'Disabled', 'pushengage' ),
 
-	// Reference: src/pages/chatWidget/components/ChannelAppearanceSettings.tsx:86
+	// Reference: src/pages/chatWidget/components/ChannelAppearanceSettings.tsx:132
 	__( 'Select custom appearance', 'pushengage' ),
 
-	// Reference: src/pages/chatWidget/components/ChannelGeneralSettings.tsx:139
-	__( 'Upgrade to Pro', 'pushengage' ),
+	// Reference: src/pages/chatWidget/components/ChannelAppearanceSettings.tsx:133
+	__( 'Requires business plan or higher', 'pushengage' ),
 
-	// Reference: src/pages/chatWidget/components/ChannelGeneralSettings.tsx:261
-	// Reference: src/pages/chatWidget/components/TriggerTypeSection.tsx:11
-	__( 'Show On', 'pushengage' ),
+	// Reference: src/pages/chatWidget/components/ChannelAppearanceSettings.tsx:185
+	// Reference: src/pages/chatWidget/components/ChannelGeneralSettings.tsx:217
+	__( 'Remove image', 'pushengage' ),
 
-	// Reference: src/pages/chatWidget/components/ChannelGeneralSettings.tsx:43
-	__( 'Channel Name', 'pushengage' ),
+	// Reference: src/pages/chatWidget/components/ChannelAppearanceSettings.tsx:36
+	__( 'Design & Appearance', 'pushengage' ),
 
-	// Reference: src/pages/chatWidget/components/ChannelGeneralSettings.tsx:49
-	__( 'Name your custom channel', 'pushengage' ),
+	// Reference: src/pages/chatWidget/components/ChannelAppearanceSettings.tsx:38
+	__( 'Customize how the widget looks on your website.', 'pushengage' ),
 
-	// Reference: src/pages/chatWidget/components/ChannelGeneralSettings.tsx:97
-	// Reference: src/pages/chatWidget/helpers.ts:82
+	// Reference: src/pages/chatWidget/components/ChannelAppearanceSettings.tsx:50
+	__( 'Brand Color', 'pushengage' ),
+
+	// Reference: src/pages/chatWidget/components/ChannelAppearanceSettings.tsx:68
+	// Reference: src/pages/chatWidget/components/TriggerTypeSection.tsx:18
+	__( 'Target Devices', 'pushengage' ),
+
+	// Reference: src/pages/chatWidget/components/ChannelGeneralSettings.tsx:120
+	// Reference: src/pages/chatWidget/helpers.ts:84
 	__( 'Invalid value.', 'pushengage' ),
 
-	// Reference: src/pages/chatWidget/components/ChannelScheduleSection.tsx:49
-	__( 'Channel schedule', 'pushengage' ),
+	// Reference: src/pages/chatWidget/components/ChannelGeneralSettings.tsx:162
+	__( 'Upgrade to Pro', 'pushengage' ),
 
-	// Reference: src/pages/chatWidget/components/ChannelScheduleSection.tsx:73
-	__( 'Set weekly availability for this channel. Choose timezone, days and time windows.', 'pushengage' ),
+	// Reference: src/pages/chatWidget/components/ChannelGeneralSettings.tsx:212
+	__( 'No image selected', 'pushengage' ),
+
+	// Reference: src/pages/chatWidget/components/ChannelGeneralSettings.tsx:44
+	__( 'Provide the necessary details to configure this channel.', 'pushengage' ),
+
+	// Reference: src/pages/chatWidget/components/ChannelGeneralSettings.tsx:54
+	__( 'Enabled', 'pushengage' ),
+
+	// Reference: src/pages/chatWidget/components/ChannelGeneralSettings.tsx:66
+	__( 'Channel Name', 'pushengage' ),
+
+	// Reference: src/pages/chatWidget/components/ChannelGeneralSettings.tsx:72
+	__( 'Enter channel name', 'pushengage' ),
+
+	// Reference: src/pages/chatWidget/components/ChannelGeneralSettings.tsx:84
+	__( 'Username/Page', 'pushengage' ),
+
+	// Reference: src/pages/chatWidget/components/ChannelScheduleSection.tsx:23
+	__( 'Availability Schedule', 'pushengage' ),
+
+	// Reference: src/pages/chatWidget/components/ChannelScheduleSection.tsx:27
+	__( 'Configure when this channel should be visible to visitors.', 'pushengage' ),
 
 	// Reference: src/pages/chatWidget/components/CountryMultiSelect.tsx:49
 	__( 'countries selected', 'pushengage' ),
@@ -5713,66 +5759,84 @@ $generated_i18n_strings = array(
 	// Reference: src/pages/chatWidget/components/CustomCss.tsx:24
 	__( 'Custom CSS', 'pushengage' ),
 
-	// Reference: src/pages/chatWidget/components/DateScheduling.tsx:104
-	__( 'To', 'pushengage' ),
-
-	// Reference: src/pages/chatWidget/components/DateScheduling.tsx:166
+	// Reference: src/pages/chatWidget/components/DateScheduling.tsx:169
 	__( 'Add Schedule', 'pushengage' ),
 
-	// Reference: src/pages/chatWidget/components/DateScheduling.tsx:32
-	__( 'Schedule the chat widget display by selecting a date and time range. You can add multiple schedules to display the chat widget at different times.', 'pushengage' ),
+	// Reference: src/pages/chatWidget/components/DateScheduling.tsx:37
+	__( 'Start date is required', 'pushengage' ),
 
-	// Reference: src/pages/chatWidget/components/DateScheduling.tsx:59
-	__( 'From', 'pushengage' ),
+	// Reference: src/pages/chatWidget/components/DateScheduling.tsx:88
+	__( 'End date is required', 'pushengage' ),
 
-	// Reference: src/pages/chatWidget/components/DisplayRules.tsx:161
+	// Reference: src/pages/chatWidget/components/DateScheduling.tsx:98
+	__( 'End date must be after start date', 'pushengage' ),
+
+	// Reference: src/pages/chatWidget/components/DisplayRules.tsx:109
+	__( 'Rule Group', 'pushengage' ),
+
+	// Reference: src/pages/chatWidget/components/DisplayRules.tsx:124
+	__( 'Are you sure you want to remove this rule group?', 'pushengage' ),
+
+	// Reference: src/pages/chatWidget/components/DisplayRules.tsx:191
+	__( 'Select a field', 'pushengage' ),
+
+	// Reference: src/pages/chatWidget/components/DisplayRules.tsx:201
 	// Reference: src/pages/chatWidget/components/WidgetCard.tsx:135
 	__( 'WP Page', 'pushengage' ),
 
-	// Reference: src/pages/chatWidget/components/DisplayRules.tsx:168
+	// Reference: src/pages/chatWidget/components/DisplayRules.tsx:209
 	__( 'Countries', 'pushengage' ),
 
-	// Reference: src/pages/chatWidget/components/DisplayRules.tsx:198
+	// Reference: src/pages/chatWidget/components/DisplayRules.tsx:228
+	__( 'Select operator', 'pushengage' ),
+
+	// Reference: src/pages/chatWidget/components/DisplayRules.tsx:239
 	__( 'Is', 'pushengage' ),
 
-	// Reference: src/pages/chatWidget/components/DisplayRules.tsx:201
+	// Reference: src/pages/chatWidget/components/DisplayRules.tsx:243
 	__( 'Is not', 'pushengage' ),
 
-	// Reference: src/pages/chatWidget/components/DisplayRules.tsx:269
+	// Reference: src/pages/chatWidget/components/DisplayRules.tsx:253
+	__( 'Include', 'pushengage' ),
+
+	// Reference: src/pages/chatWidget/components/DisplayRules.tsx:257
+	__( 'Exclude', 'pushengage' ),
+
+	// Reference: src/pages/chatWidget/components/DisplayRules.tsx:267
 	__( 'Starts with', 'pushengage' ),
 
-	// Reference: src/pages/chatWidget/components/DisplayRules.tsx:277
+	// Reference: src/pages/chatWidget/components/DisplayRules.tsx:275
 	__( 'Ends with', 'pushengage' ),
 
-	// Reference: src/pages/chatWidget/components/DisplayRules.tsx:281
+	// Reference: src/pages/chatWidget/components/DisplayRules.tsx:279
 	__( 'Exact match', 'pushengage' ),
 
-	// Reference: src/pages/chatWidget/components/DisplayRules.tsx:330
+	// Reference: src/pages/chatWidget/components/DisplayRules.tsx:301
+	__( 'Please select a WordPress page.', 'pushengage' ),
+
+	// Reference: src/pages/chatWidget/components/DisplayRules.tsx:316
+	__( 'Select at least one country', 'pushengage' ),
+
+	// Reference: src/pages/chatWidget/components/DisplayRules.tsx:324
+	__( 'You can select up to 80 countries', 'pushengage' ),
+
+	// Reference: src/pages/chatWidget/components/DisplayRules.tsx:333
+	__( 'Enter a value', 'pushengage' ),
+
+	// Reference: src/pages/chatWidget/components/DisplayRules.tsx:340
+	__( 'Value cannot exceed 512 characters', 'pushengage' ),
+
+	// Reference: src/pages/chatWidget/components/DisplayRules.tsx:354
+	__( '/blog or ?ref=ad', 'pushengage' ),
+
+	// Reference: src/pages/chatWidget/components/DisplayRules.tsx:389
 	__( 'Add Rule', 'pushengage' ),
 
-	// Reference: src/pages/chatWidget/components/DisplayRules.tsx:35
-	__( 'Add multiple rule groups and rules to determine when the chat widget will be displayed. You can add rules for WP pages, URL patterns, and countries.', 'pushengage' ),
+	// Reference: src/pages/chatWidget/components/DisplayRules.tsx:428
+	__( 'Add New Rule Group', 'pushengage' ),
 
-	// Reference: src/pages/chatWidget/components/DisplayRules.tsx:366
-	__( 'Add Rule Group', 'pushengage' ),
-
-	// Reference: src/pages/chatWidget/components/DisplayRules.tsx:43
-	__( 'Group logic', 'pushengage' ),
-
-	// Reference: src/pages/chatWidget/components/DisplayRules.tsx:63
-	__( 'Remove group', 'pushengage' ),
-
-	// Reference: src/pages/chatWidget/components/DisplayRules.tsx:65
-	__( 'Sure to remove this rule group?', 'pushengage' ),
-
-	// Reference: src/pages/chatWidget/components/DisplayRules.tsx:77
-	__( 'Rule logic', 'pushengage' ),
-
-	// Reference: src/pages/chatWidget/components/DisplayRules.tsx:83
-	__( 'Match any (OR)', 'pushengage' ),
-
-	// Reference: src/pages/chatWidget/components/DisplayRules.tsx:84
-	__( 'Match all (AND)', 'pushengage' ),
+	// Reference: src/pages/chatWidget/components/DisplayRules.tsx:87
+	__( 'Group Logic:', 'pushengage' ),
 
 	// Reference: src/pages/chatWidget/components/OverviewStatsCards.tsx:30
 	__( 'Widget Interactions', 'pushengage' ),
@@ -5801,6 +5865,30 @@ $generated_i18n_strings = array(
 	// Reference: src/pages/chatWidget/components/SearchHeader.tsx:29
 	__( 'Search by widget name', 'pushengage' ),
 
+	// Reference: src/pages/chatWidget/components/TargetingLogicReview.tsx:119
+	__( 'Widget appears on all pages for all visitors.', 'pushengage' ),
+
+	// Reference: src/pages/chatWidget/components/TargetingLogicReview.tsx:129
+	__( 'Widget appears when', 'pushengage' ),
+
+	// Reference: src/pages/chatWidget/components/TargetingLogicReview.tsx:131
+	__( 'ALL groups', 'pushengage' ),
+
+	// Reference: src/pages/chatWidget/components/TargetingLogicReview.tsx:131
+	__( 'ANY group', 'pushengage' ),
+
+	// Reference: src/pages/chatWidget/components/TargetingLogicReview.tsx:133
+	__( 'evaluate to true.', 'pushengage' ),
+
+	// Reference: src/pages/chatWidget/components/TargetingLogicReview.tsx:144
+	__( 'Match ALL rules below', 'pushengage' ),
+
+	// Reference: src/pages/chatWidget/components/TargetingLogicReview.tsx:145
+	__( 'Match ANY rule below', 'pushengage' ),
+
+	// Reference: src/pages/chatWidget/components/TargetingLogicReview.tsx:154
+	__( 'No rules configured in this group.', 'pushengage' ),
+
 	// Reference: src/pages/chatWidget/components/TopAgentsList.tsx:19
 	__( 'Top Agents', 'pushengage' ),
 
@@ -5810,23 +5898,14 @@ $generated_i18n_strings = array(
 	// Reference: src/pages/chatWidget/components/TopAgentsList.tsx:42
 	__( 'chats', 'pushengage' ),
 
-	// Reference: src/pages/chatWidget/components/TriggerTypeSection.tsx:19
+	// Reference: src/pages/chatWidget/components/TriggerTypeSection.tsx:26
 	__( 'Trigger Type', 'pushengage' ),
 
-	// Reference: src/pages/chatWidget/components/TriggerTypeSection.tsx:21
-	__( 'The trigger type determines when the chat widget will be displayed by selecting an option above.', 'pushengage' ),
-
 	// Reference: src/pages/chatWidget/components/TriggerTypeSection.tsx:28
-	__( 'Always display', 'pushengage' ),
-
-	// Reference: src/pages/chatWidget/components/TriggerTypeSection.tsx:31
-	__( 'Display on exit intent', 'pushengage' ),
+	__( 'The trigger type determines when the chat widget will be displayed by selecting an option above.', 'pushengage' ),
 
 	// Reference: src/pages/chatWidget/components/TriggerTypeSection.tsx:44
 	__( 'Display after seconds', 'pushengage' ),
-
-	// Reference: src/pages/chatWidget/components/TriggerTypeSection.tsx:54
-	__( 'Display after scroll %', 'pushengage' ),
 
 	// Reference: src/pages/chatWidget/components/WidgetAnalyticsDrawer.tsx:126
 	__( 'Agent', 'pushengage' ),
@@ -5839,6 +5918,12 @@ $generated_i18n_strings = array(
 
 	// Reference: src/pages/chatWidget/components/WidgetCard.tsx:114
 	__( 'All except', 'pushengage' ),
+
+	// Reference: src/pages/chatWidget/components/WidgetCard.tsx:122
+	__( 'Ends With', 'pushengage' ),
+
+	// Reference: src/pages/chatWidget/components/WidgetCard.tsx:123
+	__( 'Equals', 'pushengage' ),
 
 	// Reference: src/pages/chatWidget/components/WidgetCard.tsx:143
 	__( 'All pages', 'pushengage' ),
@@ -5854,6 +5939,12 @@ $generated_i18n_strings = array(
 
 	// Reference: src/pages/chatWidget/components/WidgetCard.tsx:226
 	__( 'Display rules', 'pushengage' ),
+
+	// Reference: src/pages/chatWidget/components/WidgetCard.tsx:230
+	__( 'Business hours', 'pushengage' ),
+
+	// Reference: src/pages/chatWidget/components/WidgetCard.tsx:233
+	__( 'Pages/URLs', 'pushengage' ),
 
 	// Reference: src/pages/chatWidget/components/WidgetCard.tsx:252
 	__( 'Country targeting', 'pushengage' ),
@@ -5874,31 +5965,52 @@ $generated_i18n_strings = array(
 	// Reference: src/pages/chatWidget/components/WpPageSelect.tsx:102
 	__( 'Search pages…', 'pushengage' ),
 
-	// Reference: src/pages/chatWidget/helpers.ts:134
+	// Reference: src/pages/chatWidget/helpers.ts:136
 	__( 'This field is required.', 'pushengage' ),
 
-	// Reference: src/pages/chatWidget/helpers.ts:138
+	// Reference: src/pages/chatWidget/helpers.ts:140
 	__( 'Enter a valid email address.', 'pushengage' ),
 
-	// Reference: src/pages/chatWidget/helpers.ts:143
+	// Reference: src/pages/chatWidget/helpers.ts:145
 	__( 'Enter phone with country code. Eg: +1415555', 'pushengage' ),
 
-	// Reference: src/pages/chatWidget/helpers.ts:156
+	// Reference: src/pages/chatWidget/helpers.ts:158
 	__( 'Enter a valid URL.', 'pushengage' ),
 
-	// Reference: src/pages/chatWidget/helpers.ts:218
+	// Reference: src/pages/chatWidget/helpers.ts:220
 	__( '👋 Welcome!', 'pushengage' ),
 
-	// Reference: src/pages/chatWidget/helpers.ts:219
+	// Reference: src/pages/chatWidget/helpers.ts:221
 	__( 'Choose your preferred channel to start chatting', 'pushengage' ),
 
-	// Reference: src/pages/chatWidget/helpers.ts:53
+	// Reference: src/pages/chatWidget/helpers.ts:35
+	__( 'Mon', 'pushengage' ),
+
+	// Reference: src/pages/chatWidget/helpers.ts:36
+	__( 'Tue', 'pushengage' ),
+
+	// Reference: src/pages/chatWidget/helpers.ts:37
+	__( 'Wed', 'pushengage' ),
+
+	// Reference: src/pages/chatWidget/helpers.ts:38
+	__( 'Thu', 'pushengage' ),
+
+	// Reference: src/pages/chatWidget/helpers.ts:39
+	__( 'Fri', 'pushengage' ),
+
+	// Reference: src/pages/chatWidget/helpers.ts:40
+	__( 'Sat', 'pushengage' ),
+
+	// Reference: src/pages/chatWidget/helpers.ts:41
+	__( 'Sun', 'pushengage' ),
+
+	// Reference: src/pages/chatWidget/helpers.ts:55
 	__( 'Phone (+CCC...)', 'pushengage' ),
 
-	// Reference: src/pages/chatWidget/helpers.ts:61
+	// Reference: src/pages/chatWidget/helpers.ts:63
 	__( 'Page/User', 'pushengage' ),
 
-	// Reference: src/pages/chatWidget/helpers.ts:708
+	// Reference: src/pages/chatWidget/helpers.ts:718
 	__( 'Invalid CSS syntax.', 'pushengage' ),
 
 	// Reference: src/pages/chatWidget/hooks/useChatWidgetAnalytics.ts:45
@@ -6003,707 +6115,684 @@ $generated_i18n_strings = array(
 	// Reference: src/pages/dashboard/WelcomePanel.tsx:68
 	__( 'Read the Getting Started Guide', 'pushengage' ),
 
-	// Reference: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:162
-	__( 'Weekly Digest', 'pushengage' ),
-
-	// Reference: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:165
-	__( 'Just now', 'pushengage' ),
-
-	// Reference: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:208
-	__( 'Read 5 more stories', 'pushengage' ),
-
-	// Reference: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:222
-	__( 'New Post Published', 'pushengage' ),
-
-	// Reference: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:223
-	__( 'Sending to 5,230 subscribers...', 'pushengage' ),
-
-	// Reference: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:233
-	__( 'Subscriber Growth', 'pushengage' ),
-
-	// Reference: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:234
-	__( 'Top source: Mobile', 'pushengage' ),
-
-	// Reference: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:283
-	// Reference: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:107
+	// Reference: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:100
+	// Reference: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:110
 	__( 'Multi-Channel Chat', 'pushengage' ),
 
-	// Reference: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:284
-	// Reference: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:108
+	// Reference: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:101
+	// Reference: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:111
 	__( 'Support via Any App', 'pushengage' ),
 
-	// Reference: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:305
+	// Reference: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:122
 	__( 'A Better Way to Bring Visitors Back to Your', 'pushengage' ),
 
-	// Reference: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:306
+	// Reference: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:123
 	__( 'WordPress Site', 'pushengage' ),
 
-	// Reference: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:307
+	// Reference: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:124
 	__( 'Stay connected with your audience using instant Web Push notifications, a powerful Multi-Channel Chat Widget, and advanced engagement tools built to help your site grow.', 'pushengage' ),
 
-	// Reference: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:315
-	// Reference: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:137
+	// Reference: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:132
+	// Reference: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:140
 	__( 'Takes less than 2 minutes.', 'pushengage' ),
 
-	// Reference: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:320
+	// Reference: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:137
 	__( 'Ready to grow your WordPress audience?', 'pushengage' ),
 
-	// Reference: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:328
+	// Reference: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:145
 	__( 'Why PushEngage Helps WordPress Sites Grow', 'pushengage' ),
 
-	// Reference: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:329
+	// Reference: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:146
 	__( 'Visitors often read once and never return. PushEngage helps you reach them instantly with updates that matter.', 'pushengage' ),
 
-	// Reference: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:336
+	// Reference: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:153
 	__( 'Send automatic push notifications for new content', 'pushengage' ),
 
-	// Reference: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:340
+	// Reference: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:157
 	__( 'Bring readers back with relevant and timely updates', 'pushengage' ),
 
-	// Reference: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:344
+	// Reference: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:161
 	__( 'Create audience groups based on behavior', 'pushengage' ),
 
-	// Reference: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:348
+	// Reference: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:165
 	__( 'Offer a fast multi-channel chat experience', 'pushengage' ),
 
-	// Reference: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:352
+	// Reference: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:169
 	__( 'Send newsletter-style push messages', 'pushengage' ),
 
-	// Reference: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:356
+	// Reference: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:173
 	__( 'Unlock WhatsApp automation when WooCommerce is active', 'pushengage' ),
 
-	// Reference: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:359
+	// Reference: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:176
 	__( 'Complete Setup to Get Started', 'pushengage' ),
 
-	// Reference: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:363
+	// Reference: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:180
 	__( 'You only need to connect your site once.', 'pushengage' ),
 
-	// Reference: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:370
+	// Reference: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:187
 	__( 'Make sure your readers never miss new content.', 'pushengage' ),
 
-	// Reference: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:371
+	// Reference: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:188
 	__( 'Two automation modes:', 'pushengage' ),
 
-	// Reference: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:374
+	// Reference: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:191
 	__( 'From the WordPress Editor', 'pushengage' ),
 
-	// Reference: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:375
+	// Reference: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:192
 	__( 'Send a push notification when you publish or update a post.', 'pushengage' ),
 
-	// Reference: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:384
+	// Reference: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:201
 	__( 'From your RSS Feed', 'pushengage' ),
 
-	// Reference: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:385
+	// Reference: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:202
 	__( 'Ideal for sites with frequent publishing schedules.', 'pushengage' ),
 
-	// Reference: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:391
+	// Reference: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:208
 	__( 'No email list required. No manual steps.', 'pushengage' ),
 
-	// Reference: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:392
+	// Reference: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:209
 	__( 'Enable Automatic Blog Updates', 'pushengage' ),
 
-	// Reference: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:396
+	// Reference: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:213
 	__( 'Automation keeps your audience engaged effortlessly.', 'pushengage' ),
 
-	// Reference: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:398
+	// Reference: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:215
 	__( 'Automated Blog Post Updates (Editor & RSS)', 'pushengage' ),
 
-	// Reference: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:403
+	// Reference: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:220
 	__( 'Engagement', 'pushengage' ),
 
-	// Reference: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:406
+	// Reference: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:223
 	__( 'Send notifications when your audience is most likely to engage.', 'pushengage' ),
 
-	// Reference: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:410
-	// Reference: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:407
+	// Reference: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:227
+	// Reference: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:410
 	__( 'You can:', 'pushengage' ),
 
-	// Reference: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:412
+	// Reference: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:229
 	__( 'Schedule posts ahead of time', 'pushengage' ),
 
-	// Reference: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:413
+	// Reference: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:230
 	__( 'Deliver messages in each subscriber\'s local time zone', 'pushengage' ),
 
-	// Reference: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:414
+	// Reference: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:231
 	__( 'Avoid low-engagement hours', 'pushengage' ),
 
-	// Reference: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:415
+	// Reference: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:232
 	__( 'Reach global audiences effectively', 'pushengage' ),
 
-	// Reference: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:417
+	// Reference: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:234
 	__( 'Better timing improves clicks and return visits.', 'pushengage' ),
 
-	// Reference: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:418
+	// Reference: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:235
 	__( 'Send Notifications at the Right Time', 'pushengage' ),
 
-	// Reference: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:422
+	// Reference: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:239
 	__( 'Engagement improves when timing is right.', 'pushengage' ),
 
-	// Reference: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:424
+	// Reference: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:241
 	__( 'Smart Timing With Scheduling and Time-Zone Targeting', 'pushengage' ),
 
-	// Reference: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:430
+	// Reference: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:247
 	__( 'Smart Segmentation for Better Engagement', 'pushengage' ),
 
-	// Reference: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:431
+	// Reference: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:248
 	__( 'Not every subscriber wants the same updates. PushEngage helps you tailor notifications to user behavior.', 'pushengage' ),
 
-	// Reference: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:435
+	// Reference: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:252
 	__( 'Segment your audience by:', 'pushengage' ),
 
-	// Reference: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:438
+	// Reference: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:255
 	__( 'Pages visited', 'pushengage' ),
 
-	// Reference: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:443
+	// Reference: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:260
 	__( 'Geography', 'pushengage' ),
 
-	// Reference: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:447
+	// Reference: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:264
 	__( 'Device type', 'pushengage' ),
 
-	// Reference: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:448
+	// Reference: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:265
 	__( 'Actions taken', 'pushengage' ),
 
-	// Reference: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:450
+	// Reference: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:267
 	__( 'Content interest', 'pushengage' ),
 
-	// Reference: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:455
+	// Reference: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:272
 	__( 'Relevant messages create loyal readers.', 'pushengage' ),
 
-	// Reference: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:456
+	// Reference: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:273
 	__( 'Create Audience Segments', 'pushengage' ),
 
-	// Reference: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:460
+	// Reference: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:277
 	__( 'Targeted messages perform better.', 'pushengage' ),
 
-	// Reference: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:465
+	// Reference: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:282
 	__( 'Direct Reach', 'pushengage' ),
 
-	// Reference: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:468
+	// Reference: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:285
 	__( 'Keep your audience updated without relying on email inboxes.', 'pushengage' ),
 
-	// Reference: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:472
+	// Reference: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:289
 	__( 'Perfect for:', 'pushengage' ),
 
-	// Reference: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:474
+	// Reference: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:291
 	__( 'Weekly article collections', 'pushengage' ),
 
-	// Reference: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:475
+	// Reference: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:292
 	__( 'Featured content', 'pushengage' ),
 
-	// Reference: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:476
+	// Reference: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:293
 	__( 'Educational updates', 'pushengage' ),
 
-	// Reference: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:477
+	// Reference: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:294
 	__( 'Announcements and reminders', 'pushengage' ),
 
-	// Reference: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:479
+	// Reference: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:296
 	__( 'Push newsletters get higher open rates and reach readers instantly.', 'pushengage' ),
 
-	// Reference: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:483
+	// Reference: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:300
 	__( 'Send Your First Push Newsletter', 'pushengage' ),
 
-	// Reference: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:487
+	// Reference: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:304
 	__( 'A faster alternative to email.', 'pushengage' ),
 
-	// Reference: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:489
+	// Reference: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:306
 	__( 'Push-Based Newsletters (No Email Required)', 'pushengage' ),
 
-	// Reference: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:495
+	// Reference: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:312
 	__( 'Support & Sales', 'pushengage' ),
 
-	// Reference: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:497
+	// Reference: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:314
 	__( 'Multi-Channel Chat Widget to Engage Visitors and Capture High-Intent Leads', 'pushengage' ),
 
-	// Reference: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:501
+	// Reference: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:318
 	__( 'Give visitors a fast, convenient way to reach you. The Chat Widget also helps you guide, qualify, and convert your traffic.', 'pushengage' ),
 
-	// Reference: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:505
+	// Reference: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:322
 	__( 'Visitors can instantly contact you through:', 'pushengage' ),
 
-	// Reference: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:514
-	__( 'Service Qualification', 'pushengage' ),
-
-	// Reference: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:515
-	__( 'Ask 2–3 simple questions, then route serious leads to your calendar.', 'pushengage' ),
-
-	// Reference: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:521
-	__( 'Mini Intake Form', 'pushengage' ),
-
-	// Reference: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:522
-	__( 'Turn the widget into a small quiz that guides visitors to the right service.', 'pushengage' ),
-
-	// Reference: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:528
-	__( 'Turn Blog Traffic Into Sales', 'pushengage' ),
-
-	// Reference: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:529
-	__( 'Promote digital products, templates, courses, or e-books inside the widget.', 'pushengage' ),
-
-	// Reference: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:535
-	__( 'Appointment Booking', 'pushengage' ),
-
-	// Reference: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:536
-	__( 'Trigger booking prompts on Services, Pricing, or Case Study pages.', 'pushengage' ),
-
-	// Reference: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:542
-	__( 'Content Discovery', 'pushengage' ),
-
-	// Reference: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:543
-	__( 'AI assistant recommends content like \'What should I read next?\'.', 'pushengage' ),
-
-	// Reference: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:549
-	// Reference: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:311
-	__( 'Customization Options:', 'pushengage' ),
-
-	// Reference: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:550
-	__( 'Desktop and mobile layouts • Placement and targeting • Styling to match your brand', 'pushengage' ),
-
-	// Reference: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:554
-	// Reference: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:316
-	__( 'Add the Multi-Channel Chat Widget', 'pushengage' ),
-
-	// Reference: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:558
-	__( 'Improve engagement with smarter conversations.', 'pushengage' ),
-
-	// Reference: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:570
-	// Reference: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:331
-	__( 'Messenger', 'pushengage' ),
-
-	// Reference: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:576
-	// Reference: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:337
+	// Reference: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:326
+	// Reference: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:310
 	__( 'Telegram', 'pushengage' ),
 
-	// Reference: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:583
+	// Reference: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:331
+	__( 'Service Qualification', 'pushengage' ),
+
+	// Reference: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:332
+	__( 'Ask 2–3 simple questions, then route serious leads to your calendar.', 'pushengage' ),
+
+	// Reference: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:338
+	__( 'Mini Intake Form', 'pushengage' ),
+
+	// Reference: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:339
+	__( 'Turn the widget into a small quiz that guides visitors to the right service.', 'pushengage' ),
+
+	// Reference: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:345
+	__( 'Turn Blog Traffic Into Sales', 'pushengage' ),
+
+	// Reference: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:346
+	__( 'Promote digital products, templates, courses, or e-books inside the widget.', 'pushengage' ),
+
+	// Reference: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:352
+	__( 'Appointment Booking', 'pushengage' ),
+
+	// Reference: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:353
+	__( 'Trigger booking prompts on Services, Pricing, or Case Study pages.', 'pushengage' ),
+
+	// Reference: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:359
+	__( 'Content Discovery', 'pushengage' ),
+
+	// Reference: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:360
+	__( 'AI assistant recommends content like \'What should I read next?\'.', 'pushengage' ),
+
+	// Reference: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:366
+	// Reference: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:314
+	__( 'Customization Options:', 'pushengage' ),
+
+	// Reference: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:367
+	__( 'Desktop and mobile layouts • Placement and targeting • Styling to match your brand', 'pushengage' ),
+
+	// Reference: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:371
+	// Reference: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:319
+	__( 'Add the Multi-Channel Chat Widget', 'pushengage' ),
+
+	// Reference: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:375
+	__( 'Improve engagement with smarter conversations.', 'pushengage' ),
+
+	// Reference: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:384
+	// Reference: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:331
+	__( 'Facebook Messenger', 'pushengage' ),
+
+	// Reference: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:387
+	// Reference: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:334
+	__( 'Messenger', 'pushengage' ),
+
+	// Reference: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:39
+	__( 'New Post Published', 'pushengage' ),
+
+	// Reference: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:40
+	__( 'Sending to 5,230 subscribers...', 'pushengage' ),
+
+	// Reference: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:400
 	__( 'WhatsApp Automation for Ecommerce (WooCommerce Only)', 'pushengage' ),
 
-	// Reference: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:584
+	// Reference: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:401
 	__( 'WhatsApp is a powerful way to communicate with shoppers. PushEngage supports official WhatsApp template messages only for ecommerce workflows.', 'pushengage' ),
 
-	// Reference: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:589
+	// Reference: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:406
 	__( 'Order status updates', 'pushengage' ),
 
-	// Reference: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:590
+	// Reference: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:407
 	__( 'Delivery and fulfillment alerts', 'pushengage' ),
 
-	// Reference: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:591
+	// Reference: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:408
 	__( 'Cart abandonment reminders', 'pushengage' ),
 
-	// Reference: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:592
+	// Reference: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:409
 	__( 'Customer communication templates', 'pushengage' ),
 
-	// Reference: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:593
+	// Reference: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:410
 	__( 'Post-purchase messages', 'pushengage' ),
 
-	// Reference: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:595
+	// Reference: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:412
 	__( 'Enable WhatsApp for Your WooCommerce Store', 'pushengage' ),
 
-	// Reference: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:599
-	// Reference: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:360
+	// Reference: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:416
+	// Reference: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:363
 	__( 'Turn WhatsApp into a trusted notification channel for your customers.', 'pushengage' ),
 
-	// Reference: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:606
+	// Reference: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:423
 	__( 'Writing effective notifications is easier with AI.', 'pushengage' ),
 
-	// Reference: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:607
+	// Reference: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:424
 	__( 'Use AI to:', 'pushengage' ),
 
-	// Reference: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:609
+	// Reference: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:426
 	__( 'Rewrite titles and descriptions', 'pushengage' ),
 
-	// Reference: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:610
+	// Reference: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:427
 	__( 'Improve clarity and engagement', 'pushengage' ),
 
-	// Reference: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:611
+	// Reference: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:428
 	__( 'Generate A/B test variations', 'pushengage' ),
 
-	// Reference: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:612
+	// Reference: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:429
 	__( 'Create new messaging ideas', 'pushengage' ),
 
-	// Reference: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:614
-	// Reference: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:414
+	// Reference: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:431
+	// Reference: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:417
 	__( 'AI credits start at $10 for 5000 credits.', 'pushengage' ),
 
-	// Reference: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:615
-	// Reference: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:415
+	// Reference: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:432
+	// Reference: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:418
 	__( 'Try the AI Copy Assistant', 'pushengage' ),
 
-	// Reference: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:619
-	// Reference: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:419
+	// Reference: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:436
+	// Reference: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:422
 	__( 'Better messages lead to better clicks.', 'pushengage' ),
 
-	// Reference: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:620
+	// Reference: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:437
 	__( 'Original Draft', 'pushengage' ),
 
-	// Reference: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:621
+	// Reference: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:438
 	__( 'New post up. Read it now.', 'pushengage' ),
 
-	// Reference: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:622
+	// Reference: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:439
 	__( 'AI Improved', 'pushengage' ),
 
-	// Reference: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:623
+	// Reference: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:440
 	__( '🔥 Hot off the press! Discover 5 secrets to boost your productivity today. Read more 👇', 'pushengage' ),
 
-	// Reference: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:628
+	// Reference: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:445
 	__( 'AI Copy Assistant to Improve Your Messaging', 'pushengage' ),
 
-	// Reference: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:63
-	__( 'New York', 'pushengage' ),
-
-	// Reference: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:631
+	// Reference: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:448
 	__( 'Optional Upgrade Highlights', 'pushengage' ),
 
-	// Reference: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:632
+	// Reference: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:449
 	__( 'PushEngage Pro unlocks advanced features for deeper engagement.', 'pushengage' ),
 
-	// Reference: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:637
+	// Reference: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:454
 	__( 'Advanced segmentation', 'pushengage' ),
 
-	// Reference: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:638
+	// Reference: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:455
 	__( 'A/B testing', 'pushengage' ),
 
-	// Reference: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:639
+	// Reference: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:456
 	__( 'Automated drip sequences', 'pushengage' ),
 
-	// Reference: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:64
-	__( '9:00 AM EST', 'pushengage' ),
-
-	// Reference: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:640
+	// Reference: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:457
 	__( 'Audience analytics', 'pushengage' ),
 
-	// Reference: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:641
+	// Reference: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:458
 	__( 'Higher subscriber limits', 'pushengage' ),
 
-	// Reference: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:642
+	// Reference: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:459
 	__( 'Goal tracking', 'pushengage' ),
 
-	// Reference: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:644
+	// Reference: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:461
 	__( 'Pro starts at $49/year after discount and includes a 14-day free cancellation window.', 'pushengage' ),
 
-	// Reference: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:648
-	// Reference: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:477
+	// Reference: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:465
+	// Reference: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:480
 	__( 'See What You Unlock With Pro', 'pushengage' ),
 
-	// Reference: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:659
+	// Reference: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:476
 	__( 'Upgrade when you want more control.', 'pushengage' ),
 
-	// Reference: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:663
+	// Reference: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:480
 	__( 'Your audience is waiting to hear from you.', 'pushengage' ),
 
-	// Reference: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:664
+	// Reference: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:481
 	__( 'Finish your setup, send your first notification, and start bringing visitors back to your WordPress site more consistently.', 'pushengage' ),
 
-	// Reference: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:668
+	// Reference: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:485
 	__( 'Finish Setup and Start Engaging Visitors', 'pushengage' ),
 
-	// Reference: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:672
+	// Reference: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:489
 	__( 'You can always explore Pro later.', 'pushengage' ),
 
-	// Reference: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:68
-	__( 'London', 'pushengage' ),
+	// Reference: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:50
+	__( 'Subscriber Growth', 'pushengage' ),
 
-	// Reference: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:69
-	__( '9:00 AM GMT', 'pushengage' ),
+	// Reference: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:51
+	__( 'Top source: Mobile', 'pushengage' ),
 
-	// Reference: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:74
-	__( 'Tokyo', 'pushengage' ),
-
-	// Reference: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:75
-	__( '9:00 AM JST', 'pushengage' ),
-
-	// Reference: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:127
+	// Reference: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:130
 	__( 'A Better Way to Communicate With Your', 'pushengage' ),
 
-	// Reference: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:128
+	// Reference: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:131
 	__( 'WooCommerce Customers', 'pushengage' ),
 
-	// Reference: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:129
+	// Reference: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:132
 	__( 'Send the right message at the right moment through Web Push, WhatsApp Templates, and Multi-Channel Chat Widget. Improve customer experience and reduce support effort with one lightweight platform designed to help your store stay connected with shoppers from cart to delivery.', 'pushengage' ),
 
-	// Reference: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:142
+	// Reference: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:145
 	__( 'Ready to engage your customers?', 'pushengage' ),
 
-	// Reference: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:150
+	// Reference: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:153
 	__( 'Why PushEngage Matters for WooCommerce Stores', 'pushengage' ),
 
-	// Reference: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:152
+	// Reference: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:155
 	__( 'Running a WooCommerce store means juggling many things at once. Customers leave items in their carts, ask about order updates, check back for new arrivals, and sometimes leave before you get the chance to help.', 'pushengage' ),
 
-	// Reference: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:156
+	// Reference: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:159
 	__( 'PushEngage helps you stay one step ahead with fast, friendly communication across multiple channels.', 'pushengage' ),
 
-	// Reference: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:164
+	// Reference: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:167
 	__( 'Remind shoppers about abandoned carts', 'pushengage' ),
 
-	// Reference: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:168
+	// Reference: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:171
 	__( 'Send order status updates instantly', 'pushengage' ),
 
-	// Reference: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:172
+	// Reference: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:175
 	__( 'Share new product arrivals', 'pushengage' ),
 
-	// Reference: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:176
+	// Reference: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:179
 	__( 'Chat with customers in real time', 'pushengage' ),
 
-	// Reference: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:180
+	// Reference: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:183
 	__( 'Reduce "Where is my order" tickets', 'pushengage' ),
 
-	// Reference: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:184
+	// Reference: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:187
 	__( 'Bring customers back without needing their email', 'pushengage' ),
 
-	// Reference: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:187
+	// Reference: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:190
 	__( 'Complete Setup to Get These Features Activated', 'pushengage' ),
 
-	// Reference: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:197
+	// Reference: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:200
 	__( 'Cart abandonment happens every day. Many shoppers plan to return but forget. Automated push notifications give them a gentle nudge at the right time.', 'pushengage' ),
 
-	// Reference: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:201
+	// Reference: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:204
 	__( 'What you can send:', 'pushengage' ),
 
-	// Reference: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:203
+	// Reference: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:206
 	__( '"You left something behind" reminders', 'pushengage' ),
 
-	// Reference: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:204
+	// Reference: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:207
 	__( 'Limited-time offers', 'pushengage' ),
 
-	// Reference: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:205
+	// Reference: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:208
 	__( 'Stock running low alerts', 'pushengage' ),
 
-	// Reference: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:206
+	// Reference: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:209
 	__( 'Price drop notifications', 'pushengage' ),
 
-	// Reference: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:208
+	// Reference: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:211
 	__( 'These reminders help bring shoppers back to complete their orders.', 'pushengage' ),
 
-	// Reference: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:217
+	// Reference: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:220
 	__( 'Recover More Sales With Automated Cart Reminders', 'pushengage' ),
 
-	// Reference: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:224
+	// Reference: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:227
 	__( 'Updates', 'pushengage' ),
 
-	// Reference: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:227
+	// Reference: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:230
 	__( 'Your customers love clarity. When they place an order, they want updates quickly and reliably.', 'pushengage' ),
 
-	// Reference: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:231
+	// Reference: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:234
 	__( 'Event triggers include:', 'pushengage' ),
 
-	// Reference: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:233
+	// Reference: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:236
 	__( 'New order received', 'pushengage' ),
 
-	// Reference: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:234
+	// Reference: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:237
 	__( 'Order processing', 'pushengage' ),
 
-	// Reference: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:235
+	// Reference: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:238
 	__( 'Order completed', 'pushengage' ),
 
-	// Reference: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:236
+	// Reference: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:239
 	__( 'Order refunded', 'pushengage' ),
 
-	// Reference: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:237
+	// Reference: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:240
 	__( 'Payment failed', 'pushengage' ),
 
-	// Reference: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:238
+	// Reference: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:241
 	__( 'Order on-hold', 'pushengage' ),
 
-	// Reference: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:239
+	// Reference: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:242
 	__( 'Shipment updates', 'pushengage' ),
 
-	// Reference: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:241
+	// Reference: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:244
 	__( 'Pro Feature: Upgrade to unlock advanced event notifications and more precise tagging. Pro starts at $49/year with a 14-day free cancellation window.', 'pushengage' ),
 
-	// Reference: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:245
+	// Reference: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:248
 	__( 'Send Real-Time Order Updates', 'pushengage' ),
 
-	// Reference: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:249
+	// Reference: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:252
 	__( 'Keep Customers Updated With Real-Time Order Notifications', 'pushengage' ),
 
-	// Reference: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:256
+	// Reference: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:259
 	__( 'Retention', 'pushengage' ),
 
-	// Reference: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:258
+	// Reference: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:261
 	__( 'Bring Shoppers Back With Product Alerts', 'pushengage' ),
 
-	// Reference: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:259
+	// Reference: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:262
 	__( 'Shoppers often intend to buy later. Product alerts help them stay in the loop.', 'pushengage' ),
 
-	// Reference: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:265
+	// Reference: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:268
 	__( 'Back-in-stock alerts', 'pushengage' ),
 
-	// Reference: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:270
+	// Reference: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:273
 	__( 'Price drops', 'pushengage' ),
 
-	// Reference: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:275
+	// Reference: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:278
 	__( 'New arrivals', 'pushengage' ),
 
-	// Reference: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:280
+	// Reference: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:283
 	__( 'Personalized recs', 'pushengage' ),
 
-	// Reference: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:285
+	// Reference: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:288
 	__( 'These notifications bring customers back when timing is right.', 'pushengage' ),
 
-	// Reference: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:289
+	// Reference: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:292
 	__( 'Start Recovering More Revenue', 'pushengage' ),
 
-	// Reference: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:296
+	// Reference: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:299
 	__( 'Support', 'pushengage' ),
 
-	// Reference: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:298
+	// Reference: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:301
 	__( 'Multi-Channel Chat Widget to Help Customers Instantly', 'pushengage' ),
 
-	// Reference: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:299
+	// Reference: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:302
 	__( 'Some shoppers need quick answers before they buy. With the Multi-Channel Chat Widget, your store can offer support through the channels your customers already use.', 'pushengage' ),
 
-	// Reference: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:303
+	// Reference: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:306
 	__( 'Customers can reach you through:', 'pushengage' ),
 
-	// Reference: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:309
+	// Reference: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:312
 	__( 'And more', 'pushengage' ),
 
-	// Reference: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:312
+	// Reference: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:315
 	__( 'You can customize the widget for desktop and mobile separately and show different channels based on device or page. This reduces friction, improves trust, and boosts conversions.', 'pushengage' ),
 
-	// Reference: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:344
+	// Reference: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:347
 	__( 'WhatsApp Automation for Fast Customer Updates', 'pushengage' ),
 
-	// Reference: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:345
+	// Reference: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:348
 	__( 'Keep your customers informed instantly with automated WhatsApp messages. Use approved templates to send important updates without manual effort.', 'pushengage' ),
 
-	// Reference: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:35
-	__( 'Web Push Active', 'pushengage' ),
-
-	// Reference: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:350
+	// Reference: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:353
 	__( 'Automated order status updates', 'pushengage' ),
 
-	// Reference: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:351
+	// Reference: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:354
 	__( 'Cart recovery nudges', 'pushengage' ),
 
-	// Reference: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:352
+	// Reference: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:355
 	__( 'Blog or content update notifications', 'pushengage' ),
 
-	// Reference: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:353
+	// Reference: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:356
 	__( 'Flash sale or limited time alerts', 'pushengage' ),
 
-	// Reference: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:354
+	// Reference: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:357
 	__( 'New product announcements', 'pushengage' ),
 
-	// Reference: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:356
+	// Reference: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:359
 	__( 'Enable WhatsApp Automation', 'pushengage' ),
 
-	// Reference: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:36
-	__( 'Sending cart reminders...', 'pushengage' ),
-
-	// Reference: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:370
+	// Reference: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:373
 	__( 'PushEngage shows you exactly how much revenue your push campaigns generate. See which messages bring shoppers back, which increase conversions, and which campaigns drive the most sales.', 'pushengage' ),
 
-	// Reference: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:374
+	// Reference: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:377
 	__( 'Track:', 'pushengage' ),
 
-	// Reference: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:376
+	// Reference: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:379
 	__( 'Revenue per campaign', 'pushengage' ),
 
-	// Reference: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:377
+	// Reference: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:38
+	__( 'Web Push Active', 'pushengage' ),
+
+	// Reference: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:380
 	__( 'Revenue per automation', 'pushengage' ),
 
-	// Reference: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:378
+	// Reference: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:381
 	__( 'Conversions', 'pushengage' ),
 
-	// Reference: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:379
+	// Reference: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:382
 	__( 'Clicks and purchases', 'pushengage' ),
 
-	// Reference: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:381
+	// Reference: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:384
 	__( 'Available on Pro plans starting at $49/year, with a 14-day free cancellation.', 'pushengage' ),
 
-	// Reference: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:385
+	// Reference: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:388
 	__( 'Upgrade to Pro and Track Revenue Automatically', 'pushengage' ),
 
 	// Reference: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:39
-	__( '+12% Rev', 'pushengage' ),
+	__( 'Sending cart reminders...', 'pushengage' ),
 
-	// Reference: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:396
+	// Reference: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:399
 	__( 'Know Exactly What Works With Revenue Tracking (Pro Feature)', 'pushengage' ),
 
-	// Reference: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:402
+	// Reference: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:405
 	__( 'Write Better Messages With AI Copy Assistant', 'pushengage' ),
 
-	// Reference: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:403
+	// Reference: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:406
 	__( 'Not sure what to write? The AI Copy Assistant helps you create engaging, high-converting messages for push, WhatsApp, and customer updates.', 'pushengage' ),
 
-	// Reference: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:409
+	// Reference: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:412
 	__( 'Rewrite notification text', 'pushengage' ),
 
-	// Reference: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:410
+	// Reference: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:413
 	__( 'Generate titles', 'pushengage' ),
 
-	// Reference: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:411
+	// Reference: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:414
 	__( 'Improve CTAs', 'pushengage' ),
 
-	// Reference: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:412
+	// Reference: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:415
 	__( 'Create variants for A/B testing', 'pushengage' ),
 
-	// Reference: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:420
-	__( 'Original', 'pushengage' ),
-
-	// Reference: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:421
-	__( 'Buy now. Sale ending.', 'pushengage' ),
-
-	// Reference: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:422
-	__( 'AI Optimized', 'pushengage' ),
+	// Reference: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:42
+	__( '+12% Rev', 'pushengage' ),
 
 	// Reference: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:423
+	__( 'Original', 'pushengage' ),
+
+	// Reference: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:424
+	__( 'Buy now. Sale ending.', 'pushengage' ),
+
+	// Reference: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:425
+	__( 'AI Optimized', 'pushengage' ),
+
+	// Reference: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:426
 	__( '⏳ Last Chance! Grab 20% off before midnight. Don\'t miss out! 🛍️', 'pushengage' ),
 
-	// Reference: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:429
+	// Reference: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:432
 	__( 'Light Comparison — Free vs Pro', 'pushengage' ),
 
-	// Reference: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:432
+	// Reference: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:435
 	__( 'Basic Web Push', 'pushengage' ),
 
-	// Reference: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:442
+	// Reference: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:445
 	__( 'Order Event Notifications', 'pushengage' ),
 
-	// Reference: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:444
+	// Reference: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:447
 	__( 'Enhanced', 'pushengage' ),
 
-	// Reference: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:447
+	// Reference: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:450
 	__( 'Segmentation', 'pushengage' ),
 
-	// Reference: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:452
+	// Reference: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:455
 	__( 'Revenue Tracking', 'pushengage' ),
 
-	// Reference: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:459
+	// Reference: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:462
 	__( 'Advanced', 'pushengage' ),
 
-	// Reference: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:462
+	// Reference: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:465
 	__( 'WhatsApp Templates', 'pushengage' ),
 
-	// Reference: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:467
+	// Reference: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:470
 	__( 'AI Copy Assistant', 'pushengage' ),
 
-	// Reference: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:472
+	// Reference: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:475
 	__( 'AI Credits', 'pushengage' ),
 
-	// Reference: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:474
+	// Reference: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:477
 	__( 'Add-on', 'pushengage' ),
 
-	// Reference: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:48
-	__( 'WhatsApp Automated', 'pushengage' ),
-
-	// Reference: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:49
-	__( 'Order #10234 shipped!', 'pushengage' ),
-
-	// Reference: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:491
+	// Reference: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:494
 	__( 'You are just a few minutes away from better customer communication.', 'pushengage' ),
 
-	// Reference: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:495
+	// Reference: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:498
 	__( 'Complete setup, choose your channels, and start sending helpful updates that bring customers back, support orders, and improve satisfaction.', 'pushengage' ),
 
-	// Reference: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:499
+	// Reference: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:502
 	__( 'Finish Setup and Start Engaging Customers', 'pushengage' ),
 
-	// Reference: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:504
+	// Reference: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:507
 	__( 'Pro plan starts at $49/year after discount.', 'pushengage' ),
 
-	// Reference: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:505
+	// Reference: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:508
 	__( 'All plans include a 14-day free cancellation window.', 'pushengage' ),
 
-	// Reference: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:58
+	// Reference: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:51
+	__( 'WhatsApp Automated', 'pushengage' ),
+
+	// Reference: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:52
+	__( 'Order #10234 shipped!', 'pushengage' ),
+
+	// Reference: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:61
 	__( 'Real-time attribution', 'pushengage' ),
 
 	// Reference: src/pages/dashboard/siteNotConnected/components/AICopyAssistantSection.tsx:51
@@ -6751,7 +6840,7 @@ $generated_i18n_strings = array(
 	// Reference: src/pages/dashboard/siteNotConnected/components/HeroSection.tsx:37
 	__( 'Reviews', 'pushengage' ),
 
-	// Reference: src/pages/dashboard/siteNotConnected/components/HeroSection.tsx:400
+	// Reference: src/pages/dashboard/siteNotConnected/components/HeroSection.tsx:397
 	__( 'Hi! Need help?', 'pushengage' ),
 
 	// Reference: src/pages/dashboard/siteNotConnected/components/HeroSection.tsx:61
@@ -7131,10 +7220,10 @@ $generated_i18n_strings = array(
 	// Reference: src/pages/drip/helper.ts:482
 	__( 'Notification delay should be less than 1826 days', 'pushengage' ),
 
-	// Reference: src/pages/onboarding/OnboardingSetup.tsx:404
+	// Reference: src/pages/onboarding/OnboardingSetup.tsx:407
 	__( 'Setup', 'pushengage' ),
 
-	// Reference: src/pages/onboarding/OnboardingSetup.tsx:407
+	// Reference: src/pages/onboarding/OnboardingSetup.tsx:410
 	// Reference: src/pages/onboarding/channelConfig.ts:174
 	__( 'Complete', 'pushengage' ),
 
@@ -7585,6 +7674,7 @@ $generated_i18n_strings = array(
 	__( 'Not connected', 'pushengage' ),
 
 	// Reference: src/pages/settings/integrations/index.tsx:191
+	// Reference: src/pages/woocommerce/WooAutomations.tsx:680
 	__( 'Install WooCommerce', 'pushengage' ),
 
 	// Reference: src/pages/settings/integrations/index.tsx:199
@@ -7731,22 +7821,22 @@ $generated_i18n_strings = array(
 	// Reference: src/pages/settings/siteDetails/index.tsx:525
 	__( 'Website Time Zone', 'pushengage' ),
 
-	// Reference: src/pages/settings/siteDetails/index.tsx:534
+	// Reference: src/pages/settings/siteDetails/index.tsx:545
 	__( 'Geolocation', 'pushengage' ),
 
-	// Reference: src/pages/settings/siteDetails/index.tsx:540
+	// Reference: src/pages/settings/siteDetails/index.tsx:551
 	__( 'This helps you personalize your website notifications based on user’s location & timezones.', 'pushengage' ),
 
-	// Reference: src/pages/settings/siteDetails/index.tsx:546
+	// Reference: src/pages/settings/siteDetails/index.tsx:557
 	__( 'PushEngage branding', 'pushengage' ),
 
-	// Reference: src/pages/settings/siteDetails/index.tsx:560
+	// Reference: src/pages/settings/siteDetails/index.tsx:571
 	__( 'Remove "Powered By PushEngage"', 'pushengage' ),
 
-	// Reference: src/pages/settings/siteDetails/index.tsx:566
+	// Reference: src/pages/settings/siteDetails/index.tsx:577
 	__( 'Toggle the switch to enable/disable the "Powered by PushEngage" label. The changes may take up to 2 minutes to reflect on your site.', 'pushengage' ),
 
-	// Reference: src/pages/settings/siteDetails/index.tsx:592
+	// Reference: src/pages/settings/siteDetails/index.tsx:603
 	__( 'The "Powered by PushEngage" label cannot be removed on the free plan. <a>Upgrade to PushEngage Pro</a> to remove it.', 'pushengage' ),
 
 	// Reference: src/pages/settings/validateSettings.ts:10
@@ -7891,7 +7981,7 @@ $generated_i18n_strings = array(
                     person at the right time', 'pushengage' ),
 
 	// Reference: src/pages/triggeredCampaign/Selection.tsx:155
-	// Reference: src/pages/woocommerce/WooAutomations.tsx:397
+	// Reference: src/pages/woocommerce/WooAutomations.tsx:401
 	__( 'Browse Abandonment', 'pushengage' ),
 
 	// Reference: src/pages/triggeredCampaign/Selection.tsx:158
@@ -7997,37 +8087,43 @@ $generated_i18n_strings = array(
 	// Reference: src/pages/whatsapp/WhatsappTemplates.tsx:88
 	__( 'Error fetching WhatsApp templates', 'pushengage' ),
 
-	// Reference: src/pages/woocommerce/WooAutomations.tsx:205
+	// Reference: src/pages/woocommerce/WooAutomations.tsx:209
 	__( 'WooCommerce PushEngage Integration', 'pushengage' ),
 
-	// Reference: src/pages/woocommerce/WooAutomations.tsx:206
+	// Reference: src/pages/woocommerce/WooAutomations.tsx:210
 	__( 'Integrate WooCommerce with PushEngage to send automatic push notifications for browse and cart abandonment and more. You will need to install and activate the WooCommerce plugin to connect with PushEngage. Click below to get more details on the plugin.', 'pushengage' ),
 
-	// Reference: src/pages/woocommerce/WooAutomations.tsx:229
+	// Reference: src/pages/woocommerce/WooAutomations.tsx:233
 	__( 'Failed to load Woo automations', 'pushengage' ),
 
-	// Reference: src/pages/woocommerce/WooAutomations.tsx:265
+	// Reference: src/pages/woocommerce/WooAutomations.tsx:269
 	__( 'Send notifications when customers abandon their cart', 'pushengage' ),
 
-	// Reference: src/pages/woocommerce/WooAutomations.tsx:274
+	// Reference: src/pages/woocommerce/WooAutomations.tsx:278
 	__( 'Send notifications when customers browse but don\'t purchase', 'pushengage' ),
 
-	// Reference: src/pages/woocommerce/WooAutomations.tsx:635
+	// Reference: src/pages/woocommerce/WooAutomations.tsx:639
 	__( 'Saved', 'pushengage' ),
 
-	// Reference: src/pages/woocommerce/WooAutomations.tsx:638
+	// Reference: src/pages/woocommerce/WooAutomations.tsx:642
 	__( 'Failed to save changes', 'pushengage' ),
 
-	// Reference: src/pages/woocommerce/WooAutomations.tsx:673
+	// Reference: src/pages/woocommerce/WooAutomations.tsx:674
+	__( 'WooCommerce Not Active', 'pushengage' ),
+
+	// Reference: src/pages/woocommerce/WooAutomations.tsx:675
+	__( 'Install and activate the WooCommerce plugin to connect with PushEngage.', 'pushengage' ),
+
+	// Reference: src/pages/woocommerce/WooAutomations.tsx:696
 	__( 'Enable automated transactional notifications for WooCommerce events.', 'pushengage' ),
 
-	// Reference: src/pages/woocommerce/WooAutomations.tsx:91
+	// Reference: src/pages/woocommerce/WooAutomations.tsx:92
 	__( 'Enable at least one notification', 'pushengage' ),
 
-	// Reference: src/pages/woocommerce/WooAutomations.tsx:92
+	// Reference: src/pages/woocommerce/WooAutomations.tsx:93
 	__( 'Turn on either Admin or Customer notification to enable this automation.', 'pushengage' ),
 
-	// Reference: src/utils/index.ts:84
+	// Reference: src/utils/index.ts:87
 	__( 'Copied to Clipboard!', 'pushengage' ),
 
 	// Reference: node_modules/@wordpress/i18n/build-module/create-i18n.js:428

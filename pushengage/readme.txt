@@ -1,22 +1,22 @@
-=== PushEngage – Web Push Notifications, eCommerce Automation & Chat Widget ===
+=== PushEngage – Web Push Notifications, WooCommerce Automation & Chat Widget ===
 Contributors: PushEngage, smub
 Tags: push notifications, web push notifications, woocommerce, cart abandonment, chat widget
 Requires at least: 4.5.0
 Tested up to: 7.0
 Requires PHP: 5.6
-Stable tag: 4.2.2
+Stable tag: 4.2.3
 License: GNU General Public License v2.0 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Web push notifications, WhatsApp automation & multi-channel chat widget. Recover abandoned WooCommerce carts and engage visitors — one plugin.
+Web push notifications, WooCommerce automation & multi-channel chat widget. WhatsApp cart recovery, browser alerts — one plugin.
 
 == Description ==
 
-= WordPress Push Notifications, WhatsApp Automation & Chat Widget Made Easy =
+= WordPress Push Notifications, WooCommerce Automation & Chat Widget Made Easy =
 
 [youtube https://www.youtube.com/watch?v=dN_CTv9jd8Y]
 
-[PushEngage](https://www.pushengage.com/?utm_source=wprepo&utm_medium=link&utm_campaign=wporg "PushEngage – Web Push Notifications") is the most powerful and beginner-friendly push notification, WhatsApp automation, and chat widget plugin for WordPress and WooCommerce. Send browser notifications to re-engage visitors, recover abandoned carts with WhatsApp automation on autopilot, and connect with customers through a multichannel click to chat widget — all from one plugin.
+[PushEngage](https://www.pushengage.com/?utm_source=wprepo&utm_medium=link&utm_campaign=wporg "PushEngage - Web Push Notifications") is the most powerful and beginner-friendly push notification, WooCommerce automation, and chat widget plugin for WordPress. Send browser notifications to re-engage visitors, recover abandoned WooCommerce carts with push notifications and WhatsApp automation on autopilot, and connect with customers through a multichannel click to chat widget — all from one plugin.
 
 PushEngage delivers push notifications directly to your subscribers' browsers — often called browser notifications — appearing as alerts even when they've left your site. No email. No app. No spam folder.
 
@@ -26,7 +26,6 @@ Over **25,000+ marketers** trust PushEngage to send millions of targeted push no
 > <strong>WordPress Abilities API support — PushEngage is now AI-ready.</strong> We register 25 abilities under the official WordPress Abilities API so AI assistants and MCP-compatible tools can plan and execute multi-step push notification workflows on your behalf — sending broadcasts, creating segments, configuring auto-push, pulling analytics, and managing WooCommerce push automations. Every action is permission-checked and schema-validated.<br />
 > <strong>WordPress 7.0 ready.</strong> Full compatibility with WordPress 7.0 and the new abilities framework.<br />
 > <strong>Browser notification & chat widget upgrades.</strong> Improved iOS web push reliability on Safari 16.4+ and iPadOS 16.4+, faster browser notification delivery across Chrome, Firefox, Safari, and Edge, and granular click-to-chat targeting in the multichannel chat widget — show or hide on specific pages, posts, or device types.<br />
-<em>Read the full details in the AI-Ready WordPress Plugin via Abilities API section below.</em>
 
 > <strong>PushEngage Growth & Premium Plans</strong><br />
 > PushEngage is free to get started with push broadcasts, subscription popups, and basic segmentation. Unlock cart abandonment recovery, browse abandonment, price drop alerts, back-in-stock notifications, advanced segmentation, A/B testing, drip campaigns, and more by upgrading your plan directly from the plugin dashboard. <a href="https://www.pushengage.com/pricing/?utm_source=wprepo&utm_medium=link&utm_campaign=wporg" title="PushEngage Pricing">See all plans and pricing!</a>
@@ -42,6 +41,20 @@ Unlike email that gets buried in inboxes or social media posts that get lost in 
 * **No email address needed** — lower friction means higher opt-in rates
 * **Cross-device reach** — one subscriber, browser notifications on every browser they use
 * **Smart delivery optimization** — send browser notifications at each subscriber's optimal engagement time
+
+= WooCommerce Automation & Cart Abandonment Recovery =
+
+[youtube https://www.youtube.com/watch?v=zJwh_yeTr14]
+
+PushEngage is one of the most-installed WooCommerce automation plugins on WordPress.org and the **#1 push notification plugin for WooCommerce**. The full WooCommerce automation suite covers every step of the shopper journey — from first product view through cart abandonment recovery to post-purchase order updates. Five WooCommerce push notifications workflows ship pre-built:
+
+* **Cart Abandonment Recovery** — 3-step WooCommerce automation sequence (45 min / 4 hr / 24 hr) that recovers up to 14% of abandoned WooCommerce carts
+* **Browse Abandonment** — WooCommerce automation for visitors who viewed products but didn't add to cart
+* **Price Drop Alerts** — WooCommerce automation that notifies subscribers when products they browsed drop in price
+* **Back-in-Stock Alerts** — WooCommerce automation that fires when inventory is replenished
+* **Order Update Notifications** — WooCommerce automation for order confirmation, shipping updates, payment retry, and COD confirmation
+
+Pair WooCommerce push notifications with WhatsApp automation for a two-channel cart abandonment recovery sequence — both channels fire automatically from the same WooCommerce automation event. Every WooCommerce automation runs through native WooCommerce hooks and supports dynamic product placeholders (name, price, image, URL) auto-populated from your WooCommerce catalog. Setup takes under 2 minutes — connect your PushEngage account, enable WooCommerce automation from the Triggers menu, and PushEngage starts recovering revenue automatically.
 
 = AI-Ready WordPress Plugin via Abilities API (NEW in 4.2.2) =
 
@@ -83,26 +96,6 @@ Don't start from scratch. PushEngage includes ready-to-use notification template
 * Re-engagement campaigns
 
 Just pick a template, customize the message, and hit send.
-
-= WooCommerce Automation =
-
-[youtube https://www.youtube.com/watch?v=zJwh_yeTr14]
-
-PushEngage is the **#1 push notification plugin for WooCommerce**. Recover lost revenue and boost sales with powerful eCommerce automation:
-
-* **Cart Abandonment Recovery** — PushEngage's WooCommerce integration recovers abandoned carts automatically. When a subscriber adds items to their cart and leaves without checking out, PushEngage sends a timed push notification sequence to bring them back. Recover up to 14% of abandoned carts (vs. 8% industry average).
-* **Browse Abandonment** — Re-engage visitors who viewed products but didn't add to cart with targeted follow-ups.
-* **Price Drop Alerts** — Notify subscribers instantly when products they browsed drop in price. Set custom thresholds (e.g., 5% or more).
-* **Back-in-Stock Alerts** — Automatically alert interested shoppers when out-of-stock items are replenished.
-* **Inventory Alerts** — Send urgency-driven notifications when stock levels run low on popular products.
-
-Each automation includes multi-step drip sequences with optimized timing:
-
-* Message 1: 45 minutes after trigger
-* Message 2: 4 hours after trigger
-* Message 3: 24 hours after trigger
-
-All messages support **dynamic product placeholders** — product name, price, image, and URL are auto-populated from your WooCommerce catalog. Pair cart abandonment push notifications with WhatsApp cart abandonment messages for a two-channel recovery sequence that works even when subscribers miss the browser notification.
 
 = Smart Audience Segmentation =
 
@@ -320,7 +313,7 @@ Yes! PushEngage includes a free multichannel chat widget that connects your visi
 
 = How do I add a click to chat button on my WordPress site? =
 
-PushEngage makes it easy to add a click to chat button to your WordPress site. After activating the plugin, go to PushEngage <span aria-hidden="true" class="wp-exclude-emoji">→</span> Chat Widget in your WordPress dashboard. Select the messaging channels you want — WhatsApp, Messenger, Telegram, and others — configure each channel's contact details, and customize the floating button style, position, and colors. The click to chat widget will appear on your site automatically — visitors simply click to open a conversation on their preferred messaging app. No coding required.
+PushEngage makes it easy to add a click to chat button to your WordPress site. After activating the plugin, go to PushEngage → Chat Widget in your WordPress dashboard. Select the messaging channels you want — WhatsApp, Messenger, Telegram, and others — configure each channel's contact details, and customize the floating button style, position, and colors. The click to chat widget will appear on your site automatically — visitors simply click to open a conversation on their preferred messaging app. No coding required.
 
 = How does PushEngage recover abandoned carts in WooCommerce? =
 
@@ -353,6 +346,10 @@ Absolutely. PushEngage lets you create segments based on page visits, product ca
 = Does PushEngage work with WooCommerce? =
 
 Yes — PushEngage is the #1 push notification plugin for WooCommerce. It includes pre-built automation for cart abandonment, browse abandonment, price drop alerts, back-in-stock notifications, order updates, and more. Dynamic product data (name, price, image, URL) is auto-populated in every notification.
+
+= Does PushEngage work with WooCommerce automation? =
+
+Yes — PushEngage is one of the most-installed WooCommerce automation plugins on WordPress.org. The WooCommerce automation suite covers cart abandonment recovery, browse abandonment, price drop alerts, back-in-stock notifications, order update notifications, payment retry, and COD confirmation. Every WooCommerce automation runs through native WooCommerce hooks, so PushEngage works with every WooCommerce theme, payment gateway, and shipping plugin. Pair WooCommerce push notifications with WhatsApp automation for a two-channel cart abandonment recovery sequence — both channels fire automatically from the same WooCommerce automation event. Setup takes under 2 minutes from the PushEngage Triggers menu.
 
 = Can I A/B test my notifications? =
 
@@ -405,6 +402,12 @@ All users can post questions on the [WordPress.org support forum](https://wordpr
 == Changelog ==
 
 **Most Recent Changes:**
+= 4.2.3 =
+* Fix: Optimized the Abilities API integration so AI assistant and MCP responses follows the output schema.
+* Fix: Auto-push allowed post types duplicate results in response.
+* Improved: Strengthened overall plugin security and reliability.
+* Tested up to WordPress 7.0.
+
 = 4.2.2 =
 * NEW: WordPress Abilities API support — PushEngage now registers 25 abilities for AI assistants and MCP servers, covering plugin info, push notifications, segments, audience groups, analytics, auto-push settings, WooCommerce push automation campaigns, WhatsApp status, and debug logs.
 * NEW: Verified compatibility with WordPress 7.0 and the new abilities framework.
@@ -549,6 +552,9 @@ All users can post questions on the [WordPress.org support forum](https://wordpr
 * Please refer to the [PushEngage changelog](https://plugins.svn.wordpress.org/pushengage/trunk/CHANGELOG.md) for the full version history.
 
 == Upgrade Notice ==
+
+= 4.2.3 =
+Improved AI assistant and MCP schema response handling, fixed duplicate auto-push post type results, and tested compatibility with WordPress 7.0.
 
 = 4.2.2 =
 AI-ready: WordPress Abilities API support with 25 registered abilities. WordPress 7.0 compatibility. Improved iOS web push reliability, browser notification delivery, and click-to-chat targeting. Cache plugin conflict fix for WP Rocket, LiteSpeed Cache, and Cloudflare.

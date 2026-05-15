@@ -545,9 +545,16 @@ class Ajax {
 		global $wpdb;
 		$keys = array();
 
+		$like_prefix = $wpdb->esc_like( '_' ) . '%';
+
 		// phpcs:ignore WordPress.DB.DirectDatabaseQuery.DirectQuery
 		$results = $wpdb->get_col(
-			"SELECT DISTINCT meta_key FROM {$wpdb->usermeta} WHERE meta_key NOT LIKE '_transient_%' AND meta_key NOT LIKE '_wp_session_%' AND meta_key NOT LIKE '" . $wpdb->esc_like( '_' ) . "%'"
+			$wpdb->prepare(
+				"SELECT DISTINCT meta_key FROM {$wpdb->usermeta} WHERE meta_key NOT LIKE %s AND meta_key NOT LIKE %s AND meta_key NOT LIKE %s",
+				'_transient_%',
+				'_wp_session_%',
+				$like_prefix
+			)
 		);
 
 		if ( is_array( $results ) ) {
@@ -2181,6 +2188,7 @@ class Ajax {
 	 */
 	public function deactivation_feedback() {
 		NonceChecker::check( 'pe_deactivation_feedback_nonce' );
+		$this->check_capability( 'manage_options' );
 
 		$cause  = isset( $_POST['cause'] ) ? sanitize_text_field( $_POST['cause'] ) : '';
 		$comment = isset( $_POST['comment'] ) ? sanitize_textarea_field( $_POST['comment'] ) : '';

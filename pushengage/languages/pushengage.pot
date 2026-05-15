@@ -1,15 +1,15 @@
-# Copyright (C) 2025 PushEngage
+# Copyright (C) 2026 PushEngage
 # This file is distributed under the GPLv2 or later..
 msgid ""
 msgstr ""
-"Project-Id-Version: PushEngage 4.2.1\n"
+"Project-Id-Version: PushEngage 4.2.3\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/pushengage-wordpress-plugin\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2025-12-26T05:25:45+00:00\n"
+"POT-Creation-Date: 2026-05-14T16:53:52+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.12.0\n"
 "X-Domain: pushengage\n"
@@ -53,6 +53,48 @@ msgstr ""
 
 #: src/components/FlyoutButton.tsx:186
 msgid "See Quick Links"
+msgstr ""
+
+#: src/components/InstantUpgradeModal.tsx:168
+msgid "45% off"
+msgstr ""
+
+#: src/components/InstantUpgradeModal.tsx:171
+msgid "Upgrade before time runs out"
+msgstr ""
+
+#: src/components/InstantUpgradeModal.tsx:177
+msgid "40% off"
+msgstr ""
+
+#: src/components/InstantUpgradeModal.tsx:180
+msgid "Grab The Special Discount"
+msgstr ""
+
+#: src/components/InstantUpgradeModal.tsx:211
+msgid "starting at"
+msgstr ""
+
+#: src/components/InstantUpgradeModal.tsx:225
+msgid "$%1$s Savings*"
+msgstr ""
+
+#: src/components/InstantUpgradeModal.tsx:230
+msgid "Get Access to"
+msgstr ""
+
+#: src/components/InstantUpgradeModal.tsx:237
+msgid "Reach a wider audience (up to %1$s subscribers)"
+msgstr ""
+
+#: src/components/InstantUpgradeModal.tsx:265
+#: src/components/common/UpgradeBanner.tsx:111
+#: src/components/headers/siteAlert/InstantUpgradeAlert.tsx:158
+msgid "Upgrade Now"
+msgstr ""
+
+#: src/components/InstantUpgradeModal.tsx:269
+msgid "Offer will be applied automatically"
 msgstr ""
 
 #: src/components/ServerErrorModal.tsx:67
@@ -144,11 +186,11 @@ msgstr ""
 #: src/components/audience/TagCategoryForm.tsx:136
 #: src/components/common/DateRangeDropdownButton.tsx:152
 #: src/components/whatsapp/WhatsappCampaignModal.tsx:575
-#: src/components/woocommerce/WooPushCampaignModal.tsx:428
+#: src/components/woocommerce/WooPushCampaignModal.tsx:430
 #: src/components/woocommerce/WooTriggerSettingsModal.tsx:261
 #: src/pages/audience/AudienceGroups.tsx:124
 #: src/pages/audience/Segments.tsx:173
-#: src/pages/chatWidget/ChannelSettingsDrawer.tsx:309
+#: src/pages/chatWidget/ChannelSettingsDrawer.tsx:514
 #: src/pages/chatWidget/components/WidgetCard.tsx:302
 #: src/pages/drip/List.tsx:221
 #: src/pages/pushBroadcast/List.tsx:256
@@ -344,12 +386,12 @@ msgid "Clicks"
 msgstr ""
 
 #: src/components/analytics/OptinAnalyticsStackedBarGraph.tsx:165
-#: src/pages/chatWidget/components/BusyTimesChart.tsx:282
+#: src/pages/chatWidget/components/BusyTimesChart.tsx:328
 msgid "No Data Found"
 msgstr ""
 
 #: src/components/analytics/OptinAnalyticsStackedBarGraph.tsx:166
-#: src/pages/chatWidget/components/BusyTimesChart.tsx:283
+#: src/pages/chatWidget/components/BusyTimesChart.tsx:329
 msgid "Try adjusting date range"
 msgstr ""
 
@@ -524,7 +566,7 @@ msgstr ""
 #: src/components/campaign/trigger/TriggerTable.tsx:238
 #: src/components/common/NotificationActionDropdownMenu.tsx:42
 #: src/components/onboarding/setup/AddCampaigns.tsx:541
-#: src/pages/chatWidget/ClickToChatV2Form.tsx:288
+#: src/pages/chatWidget/ClickToChatV2Form.tsx:355
 #: src/pages/chatWidget/components/WidgetCard.tsx:271
 #: src/pages/settings/Billing/index.tsx:151
 #: src/pages/whatsapp/WhatsappTemplates.tsx:273
@@ -550,7 +592,7 @@ msgid "Are you sure you want to delete this attribute?"
 msgstr ""
 
 #: src/components/audience/AttributesTable.tsx:119
-#: src/pages/chatWidget/components/DisplayRules.tsx:67
+#: src/pages/chatWidget/components/DisplayRules.tsx:129
 #: src/pages/debug/DebugLogs.tsx:199
 #: src/pages/debug/SystemInfo.tsx:51
 #: src/pages/pushBroadcast/List.tsx:341
@@ -559,39 +601,29 @@ msgstr ""
 
 #: src/components/audience/AttributesTable.tsx:120
 #: src/constants/confirmationModal.ts:70
-#: src/pages/chatWidget/components/DisplayRules.tsx:68
+#: src/pages/chatWidget/components/DisplayRules.tsx:130
 #: src/pages/debug/DebugLogs.tsx:200
 #: src/pages/debug/SystemInfo.tsx:53
 #: src/pages/pushBroadcast/List.tsx:342
 msgid "No"
 msgstr ""
 
-#: src/components/audience/AttributesTable.tsx:151
-#: src/constants/emptyStateMessages.tsx:245
-msgid "Power Personalization with Attributes"
-msgstr ""
-
-#: src/components/audience/AttributesTable.tsx:152
-#: src/constants/emptyStateMessages.tsx:246
-msgid "Define and manage user attributes to personalize messages and target users with precision across web and mobile."
-msgstr ""
-
-#: src/components/audience/AttributesTable.tsx:158
+#: src/components/audience/AttributesTable.tsx:154
 msgid "Create Attribute"
 msgstr ""
 
-#: src/components/audience/AttributesTable.tsx:162
+#: src/components/audience/AttributesTable.tsx:159
 #: src/pages/audience/AudienceGroups.tsx:229
 #: src/pages/audience/Subscribers.tsx:173
 #: src/pages/pushBroadcast/List.tsx:455
 msgid "Need some help? Check out this tutorial on"
 msgstr ""
 
-#: src/components/audience/AttributesTable.tsx:171
+#: src/components/audience/AttributesTable.tsx:168
 msgid "how to create attributes"
 msgstr ""
 
-#: src/components/audience/AttributesTable.tsx:184
+#: src/components/audience/AttributesTable.tsx:181
 msgid "No attributes were found."
 msgstr ""
 
@@ -801,7 +833,6 @@ msgstr ""
 
 #: src/components/audience/CreateOrEditAudienceGroupForm.tsx:154
 #: src/components/campaign/PushBroadcastAudienceDetailsForm.tsx:48
-#: src/pages/chatWidget/ClickToChatReview.tsx:94
 #: src/pages/debug/SystemInfo.tsx:180
 msgid "Name"
 msgstr ""
@@ -895,14 +926,12 @@ msgid "Name of the category segments"
 msgstr ""
 
 #: src/components/audience/CreateOrEditSegmentForm.tsx:37
-#: src/pages/chatWidget/ClickToChatReview.tsx:226
 #: src/pages/chatWidget/components/WidgetCard.tsx:120
 msgid "Starts With"
 msgstr ""
 
 #: src/components/audience/CreateOrEditSegmentForm.tsx:41
-#: src/pages/chatWidget/ClickToChatReview.tsx:227
-#: src/pages/chatWidget/components/DisplayRules.tsx:273
+#: src/pages/chatWidget/components/DisplayRules.tsx:271
 #: src/pages/chatWidget/components/WidgetCard.tsx:121
 msgid "Contains"
 msgstr ""
@@ -983,8 +1012,8 @@ msgstr ""
 
 #: src/components/audience/SubscriberFieldsTable.tsx:22
 #: src/pages/chatWidget/components/WidgetCard.tsx:41
-#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:510
-#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:308
+#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:393
+#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:340
 msgid "Email"
 msgstr ""
 
@@ -1057,7 +1086,7 @@ msgstr ""
 
 #: src/components/audience/TagCategoryForm.tsx:126
 #: src/components/whatsapp/WhatsappCampaignModal.tsx:578
-#: src/components/woocommerce/WooPushCampaignModal.tsx:436
+#: src/components/woocommerce/WooPushCampaignModal.tsx:438
 #: src/components/woocommerce/WooTriggerSettingsModal.tsx:276
 msgid "Save"
 msgstr ""
@@ -1219,19 +1248,22 @@ msgstr ""
 #: src/components/audience/audienceHelper.ts:209
 #: src/components/design/PopUpModalCard.tsx:128
 #: src/components/onboarding/setup/EditSubscriptionDialog.tsx:266
-#: src/pages/chatWidget/ClickToChatReview.tsx:52
+#: src/pages/chatWidget/ReviewTab.tsx:302
+#: src/pages/chatWidget/components/TargetDeviceSelector.tsx:57
 msgid "Mobile"
 msgstr ""
 
 #: src/components/audience/audienceHelper.ts:210
-#: src/pages/chatWidget/ClickToChatReview.tsx:48
+#: src/pages/chatWidget/ReviewTab.tsx:295
+#: src/pages/chatWidget/components/TargetDeviceSelector.tsx:45
 msgid "Tablet"
 msgstr ""
 
 #: src/components/audience/audienceHelper.ts:211
 #: src/components/design/PopUpModalCard.tsx:114
 #: src/components/onboarding/setup/EditSubscriptionDialog.tsx:247
-#: src/pages/chatWidget/ClickToChatReview.tsx:44
+#: src/pages/chatWidget/ReviewTab.tsx:288
+#: src/pages/chatWidget/components/TargetDeviceSelector.tsx:33
 msgid "Desktop"
 msgstr ""
 
@@ -1398,7 +1430,7 @@ msgstr ""
 
 #: src/components/campaign/BreadcrumbNavbar.tsx:46
 #: src/components/campaign/pushBroadcast/PageBreadcrumb.tsx:36
-#: src/pages/chatWidget/Editor.tsx:370
+#: src/pages/chatWidget/Editor.tsx:646
 msgid "Content"
 msgstr ""
 
@@ -1588,7 +1620,7 @@ msgstr ""
 #: src/components/campaign/PushNotification.tsx:46
 #: src/components/onboarding/setup/EditWelcomeNotification.tsx:48
 #: src/components/postEditor/PostEditorMetabox.tsx:708
-#: src/components/woocommerce/WooPushCampaignModal.tsx:360
+#: src/components/woocommerce/WooPushCampaignModal.tsx:362
 #: src/pages/settings/defaultSettings/index.tsx:420
 #: app/Integrations/WooCommerce/NotificationSettings.php:176
 msgid "Notification Title"
@@ -1597,7 +1629,7 @@ msgstr ""
 #: src/components/campaign/PushNotification.tsx:63
 #: src/components/onboarding/setup/EditWelcomeNotification.tsx:59
 #: src/components/postEditor/PostEditorMetabox.tsx:733
-#: src/components/woocommerce/WooPushCampaignModal.tsx:382
+#: src/components/woocommerce/WooPushCampaignModal.tsx:384
 #: src/pages/settings/defaultSettings/index.tsx:435
 #: app/Integrations/WooCommerce/NotificationSettings.php:185
 msgid "Notification Message"
@@ -1605,7 +1637,7 @@ msgstr ""
 
 #: src/components/campaign/PushNotification.tsx:81
 #: src/components/onboarding/setup/EditWelcomeNotification.tsx:72
-#: src/components/woocommerce/WooPushCampaignModal.tsx:405
+#: src/components/woocommerce/WooPushCampaignModal.tsx:407
 #: src/pages/settings/defaultSettings/index.tsx:450
 #: app/Integrations/WooCommerce/NotificationSettings.php:193
 msgid "Notification URL"
@@ -1739,7 +1771,7 @@ msgid "Generate text using AI"
 msgstr ""
 
 #: src/components/campaign/automation/AutomationAnalytics.tsx:103
-#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:194
+#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:197
 msgid "Revenue"
 msgstr ""
 
@@ -1907,7 +1939,7 @@ msgid "No Limit Set"
 msgstr ""
 
 #: src/components/campaign/automation/AutomationDetails.tsx:374
-#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:367
+#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:370
 #: src/pages/whatsapp/WhatsappTemplates.tsx:250
 #: app/Utils/AdminNavMenuItems.php:67
 msgid "Analytics"
@@ -1945,8 +1977,8 @@ msgstr ""
 
 #: src/components/campaign/automation/AutomationDetails.tsx:490
 #: src/components/campaign/details/NotificationDetailSections.tsx:179
-#: src/pages/chatWidget/components/DisplayRules.tsx:164
-#: src/pages/chatWidget/helpers.ts:59
+#: src/pages/chatWidget/components/DisplayRules.tsx:205
+#: src/pages/chatWidget/helpers.ts:61
 msgid "URL"
 msgstr ""
 
@@ -2181,11 +2213,11 @@ msgstr ""
 #: src/components/campaign/drip/DripStatus.tsx:10
 #: src/components/campaign/trigger/TriggerStatus.tsx:10
 #: src/components/whatsapp/WhatsappCampaignCard.tsx:126
-#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:225
+#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:42
 #: src/pages/debug/SystemInfo.tsx:153
 #: src/pages/drip/helper.ts:48
 #: src/pages/triggeredCampaign/helper.ts:67
-#: src/pages/woocommerce/WooAutomations.tsx:704
+#: src/pages/woocommerce/WooAutomations.tsx:733
 msgid "Active"
 msgstr ""
 
@@ -2219,7 +2251,7 @@ msgstr ""
 #: src/components/design/PopUpModalCard.tsx:142
 #: src/components/onboarding/setup/AddCampaigns.tsx:551
 #: src/components/onboarding/setup/PreviewSubscriptionDialog.tsx:24
-#: src/components/woocommerce/WooPushCampaignModal.tsx:442
+#: src/components/woocommerce/WooPushCampaignModal.tsx:444
 #: src/components/woocommerce/WooTriggerSettingsModal.tsx:344
 #: src/pages/chatWidget/WidgetPreview.tsx:272
 #: src/pages/whatsapp/WhatsappTemplates.tsx:265
@@ -2258,18 +2290,16 @@ msgstr ""
 
 #: src/components/campaign/drip/NotificationGenerator.tsx:209
 #: src/components/campaign/trigger/NotificationGenerator.tsx:192
-#: src/pages/chatWidget/ClickToChatReview.tsx:83
 msgid "Immediately"
 msgstr ""
 
 #: src/components/campaign/drip/NotificationGenerator.tsx:213
 #: src/components/campaign/trigger/NotificationGenerator.tsx:196
-#: src/pages/chatWidget/ClickToChatReview.tsx:67
 msgid "After"
 msgstr ""
 
 #: src/components/campaign/drip/NotificationGenerator.tsx:214
-#: src/pages/chatWidget/Editor.tsx:487
+#: src/pages/chatWidget/Editor.tsx:747
 msgid "Next"
 msgstr ""
 
@@ -2605,7 +2635,7 @@ msgid "Use Blank Template"
 msgstr ""
 
 #: src/components/campaign/templates/PageAndModelContent.tsx:262
-#: src/pages/chatWidget/List.tsx:409
+#: src/pages/chatWidget/List.tsx:427
 msgid "Please check the spelling or try searching for something else"
 msgstr ""
 
@@ -2619,7 +2649,7 @@ msgid "Your Favorite Templates"
 msgstr ""
 
 #: src/components/campaign/templates/PageAndModelContent.tsx:341
-#: src/pages/chatWidget/List.tsx:406
+#: src/pages/chatWidget/List.tsx:424
 msgid "Sorry, no results found!"
 msgstr ""
 
@@ -2702,8 +2732,8 @@ msgid "Change image"
 msgstr ""
 
 #: src/components/common/ImageUploader.tsx:57
-#: src/pages/chatWidget/components/AgentCard.tsx:133
-#: src/pages/chatWidget/components/ChannelGeneralSettings.tsx:233
+#: src/pages/chatWidget/components/AgentAvatarUploader.tsx:33
+#: src/pages/chatWidget/components/ChannelGeneralSettings.tsx:258
 msgid "Use this image"
 msgstr ""
 
@@ -2755,10 +2785,6 @@ msgstr ""
 msgid "Upgrade to access advanced Web Push tools, WhatsApp automation, predefined campaigns, auto-push from your editor, A/B testing, and multi-agent chat."
 msgstr ""
 
-#: src/components/common/UpgradeBanner.tsx:111
-msgid "Upgrade Now"
-msgstr ""
-
 #: src/components/common/UpgradeBanner.tsx:112
 msgid "View All Features"
 msgstr ""
@@ -2780,8 +2806,8 @@ msgstr ""
 #: src/components/common/UpgradeBanner.tsx:73
 #: src/components/dashboardWidget/DashboardWidget.tsx:771
 #: src/components/dashboardWidget/OnboardingPrompt.tsx:33
-#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:564
-#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:325
+#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:381
+#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:328
 #: app/Utils/AdminNavMenuItems.php:86
 msgid "WhatsApp"
 msgstr ""
@@ -2791,7 +2817,7 @@ msgid "Multi Chat"
 msgstr ""
 
 #: src/components/common/UpgradeBanner.tsx:81
-#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:437
+#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:440
 msgid "Cart Recovery"
 msgstr ""
 
@@ -2800,74 +2826,33 @@ msgid "Intro Offer"
 msgstr ""
 
 #: src/components/common/UpgradeBanner.tsx:92
+#: src/constants/planFeatures.ts:434
 msgid "Automated Push + WhatsApp"
 msgstr ""
 
 #: src/components/common/UpgradeBanner.tsx:93
+#: src/constants/planFeatures.ts:435
 msgid "Multi-Channel Chat (Multi-Agent)"
 msgstr ""
 
 #: src/components/common/UpgradeBanner.tsx:94
+#: src/constants/planFeatures.ts:436
 msgid "AI Copy Generator"
 msgstr ""
 
 #: src/components/common/UpgradeBanner.tsx:95
+#: src/constants/planFeatures.ts:437
 msgid "Advanced Segmentation"
 msgstr ""
 
 #: src/components/common/UpgradeBanner.tsx:96
+#: src/constants/planFeatures.ts:438
 msgid "A/B Testing"
 msgstr ""
 
 #: src/components/common/UpgradeBanner.tsx:97
+#: src/constants/planFeatures.ts:439
 msgid "Priority Support"
-msgstr ""
-
-#: src/components/common/WeeklySchedule.tsx:29
-msgid "Site Timezone"
-msgstr ""
-
-#: src/components/common/WeeklySchedule.tsx:61
-msgid "Timezone"
-msgstr ""
-
-#: src/components/common/WeeklySchedule.tsx:69
-msgid "Select timezone"
-msgstr ""
-
-#: src/components/common/scheduleUtils.ts:17
-#: src/pages/chatWidget/helpers.ts:33
-msgid "Mon"
-msgstr ""
-
-#: src/components/common/scheduleUtils.ts:18
-#: src/pages/chatWidget/helpers.ts:34
-msgid "Tue"
-msgstr ""
-
-#: src/components/common/scheduleUtils.ts:19
-#: src/pages/chatWidget/helpers.ts:35
-msgid "Wed"
-msgstr ""
-
-#: src/components/common/scheduleUtils.ts:20
-#: src/pages/chatWidget/helpers.ts:36
-msgid "Thu"
-msgstr ""
-
-#: src/components/common/scheduleUtils.ts:21
-#: src/pages/chatWidget/helpers.ts:37
-msgid "Fri"
-msgstr ""
-
-#: src/components/common/scheduleUtils.ts:22
-#: src/pages/chatWidget/helpers.ts:38
-msgid "Sat"
-msgstr ""
-
-#: src/components/common/scheduleUtils.ts:23
-#: src/pages/chatWidget/helpers.ts:39
-msgid "Sun"
 msgstr ""
 
 #: src/components/common/tables/DataTable.tsx:34
@@ -2942,13 +2927,14 @@ msgstr ""
 
 #: src/components/dashboardWidget/DashboardWidget.tsx:734
 #: src/components/postEditor/PostEditorMetabox.tsx:606
+#: app/Integrations/Abilities/NotificationAbilities.php:59
 #: app/Integrations/WooCommerce/NotificationSettings.php:205
 msgid "Send Notification"
 msgstr ""
 
 #: src/components/dashboardWidget/DashboardWidget.tsx:746
 #: src/components/dashboardWidget/OnboardingPrompt.tsx:43
-#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:457
+#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:460
 msgid "Chat Widget"
 msgstr ""
 
@@ -3003,6 +2989,7 @@ msgstr ""
 #: main.php
 #: app/AdminBarMenu.php:55
 #: app/DashboardWidget.php:53
+#: app/Integrations/Abilities.php:65
 #: app/NavMenu.php:81
 #: app/NavMenu.php:88
 msgid "PushEngage"
@@ -3054,6 +3041,18 @@ msgstr ""
 msgid "Please verify your email address."
 msgstr ""
 
+#: src/components/headers/siteAlert/InstantUpgradeAlert.tsx:115
+msgid "You're using the Free version of PushEngage. "
+msgstr ""
+
+#: src/components/headers/siteAlert/InstantUpgradeAlert.tsx:119
+msgid "Upgrade Your Plan + Avail %1$s Off now "
+msgstr ""
+
+#: src/components/headers/siteAlert/InstantUpgradeAlert.tsx:124
+msgid "to experience multichannel retention campaigns, multi-agent chat widgets, WhatsApp Business automation, and more!"
+msgstr ""
+
 #. 1 - The campaign limit count. - 2 - Upgrade plan CTA
 #: src/components/headers/siteAlert/NotificationLimitExceededAlert.tsx:51
 msgid "Attention: You’ve hit the %1$d-campaign lifetime limit and your account is blocked. %2$s for unlimited campaigns and resume sending."
@@ -3066,10 +3065,6 @@ msgstr ""
 
 #: src/components/headers/siteAlert/NotificationLimitExceededAlert.tsx:80
 msgid "Upgrade now"
-msgstr ""
-
-#: src/components/headers/siteAlert/OnFreePlanAlert.tsx:52
-msgid "You’re using the free version of PushEngage. <a>Upgrade</a> now for unlimited campaigns, rich push broadcasts, personalized campaigns, and analytics."
 msgstr ""
 
 #. 1 - The plan name. - 2 - Upgrade plan CTA link tag
@@ -3210,7 +3205,7 @@ msgid "PushEngage Dashboard"
 msgstr ""
 
 #: src/components/onboarding/FinalStep.tsx:250
-#: src/components/onboarding/setup/ChannelSelection.tsx:278
+#: src/components/onboarding/setup/ChannelSelection.tsx:275
 #: src/components/onboarding/setup/StepPagination.tsx:212
 msgid "Skip to Dashboard"
 msgstr ""
@@ -3239,60 +3234,20 @@ msgstr ""
 msgid "Setup completed successfully!"
 msgstr ""
 
-#: src/components/onboarding/UpgradeAccount.tsx:102
-msgid "Upgrade Now & Save 50%"
-msgstr ""
-
-#: src/components/onboarding/UpgradeAccount.tsx:108
-msgid "Skip this Step and Continue with PushEngage"
-msgstr ""
-
-#: src/components/onboarding/UpgradeAccount.tsx:119
-msgid "Go back"
-msgstr ""
-
-#: src/components/onboarding/UpgradeAccount.tsx:126
-msgid "Close and Exit Wizard without Saving"
-msgstr ""
-
-#: src/components/onboarding/UpgradeAccount.tsx:15
-msgid "Unlimited Campaigns"
-msgstr ""
-
-#: src/components/onboarding/UpgradeAccount.tsx:16
-msgid "Track your marketing goals"
-msgstr ""
-
-#: src/components/onboarding/UpgradeAccount.tsx:17
-msgid "Schedule all your campaigns"
-msgstr ""
-
-#: src/components/onboarding/UpgradeAccount.tsx:18
-msgid "Automate your campaigns easily"
-msgstr ""
-
-#: src/components/onboarding/UpgradeAccount.tsx:19
-msgid "Send super targeted campaigns"
-msgstr ""
-
-#: src/components/onboarding/UpgradeAccount.tsx:48
+#: src/components/onboarding/UpgradeAccount.tsx:37
 msgid "PushEngage helps you grow your business much faster. Unlock unlimited campaigns, the best converting templates, and a host of advanced features for just $41 per year. Start growing and automating your campaigns more quickly by upgrading to the Business Plan"
 msgstr ""
 
-#: src/components/onboarding/UpgradeAccount.tsx:55
-msgid "PushEngage has a free forever plan for WordPress users"
+#: src/components/onboarding/UpgradeAccount.tsx:51
+msgid "Skip this Step and Continue with PushEngage"
 msgstr ""
 
-#: src/components/onboarding/UpgradeAccount.tsx:58
-msgid "PushEngage customers with a paid plan typically grow their business 80% faster."
+#: src/components/onboarding/UpgradeAccount.tsx:62
+msgid "Go back"
 msgstr ""
 
-#: src/components/onboarding/UpgradeAccount.tsx:80
-msgid "Upgrade to a paid plan right now and get upto %1$s (automatically applied to your cart)."
-msgstr ""
-
-#: src/components/onboarding/UpgradeAccount.tsx:84
-msgid "45% discount"
+#: src/components/onboarding/UpgradeAccount.tsx:69
+msgid "Close and Exit Wizard without Saving"
 msgstr ""
 
 #. 1 - The error code
@@ -3421,23 +3376,23 @@ msgid "Step %s: Add Campaigns"
 msgstr ""
 
 #: src/components/onboarding/setup/AddCampaigns.tsx:583
-#: src/components/woocommerce/WooPushCampaignModal.tsx:446
+#: src/components/woocommerce/WooPushCampaignModal.tsx:448
 msgid "Admin"
 msgstr ""
 
 #: src/components/onboarding/setup/AddCampaigns.tsx:593
-#: src/components/woocommerce/WooPushCampaignModal.tsx:443
+#: src/components/woocommerce/WooPushCampaignModal.tsx:445
 msgid "Customer"
 msgstr ""
 
 #: src/components/onboarding/setup/AddCampaigns.tsx:637
-#: src/pages/chatWidget/ChannelSettingsDrawer.tsx:307
+#: src/pages/chatWidget/ChannelSettingsDrawer.tsx:512
 #: src/pages/design/TargetingRule.tsx:482
 #: src/pages/settings/advancedSettings/index.tsx:437
 #: src/pages/settings/autoPush/index.tsx:323
 #: src/pages/settings/defaultSettings/index.tsx:610
 #: src/pages/settings/misc/index.tsx:394
-#: src/pages/settings/siteDetails/index.tsx:609
+#: src/pages/settings/siteDetails/index.tsx:620
 #: src/pages/whatsapp/WhatsappSettings.tsx:231
 msgid "Save Changes"
 msgstr ""
@@ -3476,11 +3431,11 @@ msgstr ""
 msgid "Select All Channels"
 msgstr ""
 
-#: src/components/onboarding/setup/ChannelSelection.tsx:265
+#: src/components/onboarding/setup/ChannelSelection.tsx:262
 msgid "Please select at least one service"
 msgstr ""
 
-#: src/components/onboarding/setup/ChannelSelection.tsx:267
+#: src/components/onboarding/setup/ChannelSelection.tsx:264
 msgid "Continue with %1$s service"
 msgid_plural "Continue with %1$s services"
 msgstr[0] ""
@@ -3494,7 +3449,7 @@ msgstr[1] ""
 #: src/pages/whatsapp/WhatsappAutomation.tsx:136
 #: src/pages/whatsapp/WhatsappSettings.tsx:167
 #: src/pages/whatsapp/WhatsappTemplates.tsx:110
-#: src/pages/woocommerce/WooAutomations.tsx:228
+#: src/pages/woocommerce/WooAutomations.tsx:232
 #: src/pages/woocommerce/WooWhatsappAutomation.tsx:126
 msgid "Error"
 msgstr ""
@@ -3649,20 +3604,16 @@ msgstr ""
 msgid "Turn browsers into buyers with targeted messaging"
 msgstr ""
 
-#: src/components/onboarding/setup/SetupChatWidget.tsx:174
-#: src/pages/chatWidget/Editor.tsx:275
+#: src/components/onboarding/setup/SetupChatWidget.tsx:216
+#: src/pages/chatWidget/ClickToChatV2Form.tsx:60
+#: src/pages/chatWidget/Editor.tsx:324
 msgid "Please fix the highlighted errors and try again."
 msgstr ""
 
-#: src/components/onboarding/setup/SetupChatWidget.tsx:189
-#: src/pages/chatWidget/Editor.tsx:304
-#: src/pages/chatWidget/List.tsx:315
+#: src/components/onboarding/setup/SetupChatWidget.tsx:231
+#: src/pages/chatWidget/Editor.tsx:353
+#: src/pages/chatWidget/List.tsx:336
 msgid "Widget created successfully"
-msgstr ""
-
-#: src/components/onboarding/setup/SetupChatWidget.tsx:98
-#: src/helper/validateChatWidget.ts:14
-msgid "Please enter a widget name."
 msgstr ""
 
 #: src/components/onboarding/setup/SetupFinal.tsx:108
@@ -3761,9 +3712,9 @@ msgid "Failed to load WhatsApp automation campaigns"
 msgstr ""
 
 #: src/components/onboarding/setup/SetupWhatsappAutomation.tsx:146
-#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:367
+#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:184
 #: src/pages/whatsapp/WhatsappAutomation.tsx:168
-#: src/pages/woocommerce/WooAutomations.tsx:671
+#: src/pages/woocommerce/WooAutomations.tsx:694
 #: src/pages/woocommerce/WooWhatsappAutomation.tsx:158
 msgid "Automation"
 msgstr ""
@@ -3963,7 +3914,7 @@ msgid "Please update the access token in PushEngage settings to continue sending
 msgstr ""
 
 #: src/components/whatsapp/WhatsappCampaignCard.tsx:128
-#: src/pages/woocommerce/WooAutomations.tsx:708
+#: src/pages/woocommerce/WooAutomations.tsx:737
 msgid "Inactive"
 msgstr ""
 
@@ -4052,7 +4003,7 @@ msgid "(Not Supported)"
 msgstr ""
 
 #: src/components/whatsapp/WhatsappCampaignModal.tsx:596
-#: src/components/woocommerce/WooPushCampaignModal.tsx:269
+#: src/components/woocommerce/WooPushCampaignModal.tsx:271
 msgid "Customer Notification"
 msgstr ""
 
@@ -4103,7 +4054,7 @@ msgid "Customer Template Preview"
 msgstr ""
 
 #: src/components/whatsapp/WhatsappCampaignModal.tsx:754
-#: src/components/woocommerce/WooPushCampaignModal.tsx:343
+#: src/components/woocommerce/WooPushCampaignModal.tsx:345
 msgid "Admin Notification"
 msgstr ""
 
@@ -4148,7 +4099,7 @@ msgid "Set up WhatsApp Click to Chat and turn confused web browsing into engaged
 msgstr ""
 
 #: src/components/whatsapp/WhatsappClickToChatForm.tsx:243
-#: src/components/woocommerce/WooPushCampaignModal.tsx:345
+#: src/components/woocommerce/WooPushCampaignModal.tsx:347
 msgid "Enable"
 msgstr ""
 
@@ -4205,12 +4156,12 @@ msgid "Choose where the button appears on your website."
 msgstr ""
 
 #: src/components/whatsapp/WhatsappClickToChatForm.tsx:358
-#: src/pages/chatWidget/AppearanceSettings.tsx:325
+#: src/pages/chatWidget/AppearanceSettings.tsx:332
 msgid "Bottom Right"
 msgstr ""
 
 #: src/components/whatsapp/WhatsappClickToChatForm.tsx:359
-#: src/pages/chatWidget/AppearanceSettings.tsx:324
+#: src/pages/chatWidget/AppearanceSettings.tsx:331
 msgid "Bottom Left"
 msgstr ""
 
@@ -4255,7 +4206,7 @@ msgid "Configure your WhatsApp Cloud API settings to enable WhatsApp messaging f
 msgstr ""
 
 #: src/components/whatsapp/WhatsappCloudApiForm.tsx:130
-#: app/Ajax.php:1286
+#: app/Ajax.php:1287
 msgid "WhatsApp Business ID"
 msgstr ""
 
@@ -4264,7 +4215,7 @@ msgid "The unique identifier for your WhatsApp Business account"
 msgstr ""
 
 #: src/components/whatsapp/WhatsappCloudApiForm.tsx:142
-#: app/Ajax.php:1287
+#: app/Ajax.php:1288
 msgid "Phone Number ID"
 msgstr ""
 
@@ -4273,7 +4224,7 @@ msgid "The ID of the phone number associated with your WhatsApp Business account
 msgstr ""
 
 #: src/components/whatsapp/WhatsappCloudApiForm.tsx:156
-#: app/Ajax.php:1289
+#: app/Ajax.php:1290
 msgid "WhatsApp Phone Number"
 msgstr ""
 
@@ -4290,7 +4241,7 @@ msgid "The phone number associated with your WhatsApp Business account in intern
 msgstr ""
 
 #: src/components/whatsapp/WhatsappCloudApiForm.tsx:190
-#: app/Ajax.php:1288
+#: app/Ajax.php:1289
 msgid "Access Token"
 msgstr ""
 
@@ -4307,7 +4258,7 @@ msgid "Create a Meta Developer Account"
 msgstr ""
 
 #: src/components/whatsapp/WhatsappCloudApiForm.tsx:224
-msgid "Sign for facebook developer account and agree to the terms to become a Meta developer."
+msgid "Sign up for a Facebook developer account and agree to the terms to become a Meta developer."
 msgstr ""
 
 #: src/components/whatsapp/WhatsappCloudApiForm.tsx:230
@@ -4754,7 +4705,7 @@ msgstr ""
 
 #: src/components/whatsapp/whatsappHelper.ts:343
 #: src/pages/triggeredCampaign/Selection.tsx:188
-#: src/pages/woocommerce/WooAutomations.tsx:396
+#: src/pages/woocommerce/WooAutomations.tsx:400
 msgid "Cart Abandonment"
 msgstr ""
 
@@ -4838,59 +4789,83 @@ msgstr ""
 msgid "Close banner"
 msgstr ""
 
-#: src/components/whatsnew/helper.ts:42
-msgid "✨ New in PushEngage: Multichannel Chat Widgets"
-msgstr ""
-
-#: src/components/whatsnew/helper.ts:43
-msgid "Turn your website into a real-time communication center. With the updated PushEngage Chat Widget, you can connect visitors to your business instantly — using <strong>the channels they already love.</strong><br />"
-msgstr ""
-
-#: src/components/whatsnew/helper.ts:50
-msgid "Capabilities That Convert More Visitors"
-msgstr ""
-
-#: src/components/whatsnew/helper.ts:51
-msgid "<ul><li><strong>Multi-Agent Support</strong> - Route conversations to the right team members — sales, support, operations &amp; more.</li><li><strong>Targeting &amp; Personalization</strong> - Show specific channels based on location, device type, or visitor behavior.</li><li><strong>Scheduled Availability</strong> - Display support availability based on working hours or agent status.</li><li><strong>Saved Replies &amp; FAQs</strong> - Respond faster with pre-built response templates.</li><li><strong>Analytics &amp; Conversation Tracking</strong> - Understand which channels are driving engagement and ROI.</li><li><strong>Fully Customizable UI</strong> - Match widget design to your brand identity in minutes.</li></ul>"
-msgstr ""
-
-#: src/components/whatsnew/helper.ts:60
+#: src/components/whatsnew/helper.ts:105
 msgid "Enable the widget, pick your channels, customize the UI — and go live. No coding required."
 msgstr ""
 
-#: src/components/whatsnew/helper.ts:68
+#: src/components/whatsnew/helper.ts:113
 msgid "Try the new Multichannel Chat Widget now"
 msgstr ""
 
-#: src/components/woocommerce/WooPushCampaignModal.tsx:150
+#: src/components/whatsnew/helper.ts:47
+msgid "✨ New in PushEngage: WordPress Abilities API Support"
+msgstr ""
+
+#: src/components/whatsnew/helper.ts:48
+msgid "PushEngage version 4.2.3 registers 20+ abilities under the new WordPress Abilities API, making your push notifications, segments, analytics, and WooCommerce automations callable by AI assistants and MCP servers. Verified compatible with WordPress 7.0 and the new abilities framework.<br />"
+msgstr ""
+
+#: src/components/whatsnew/helper.ts:55
+msgid "What's new in version 4.2.3"
+msgstr ""
+
+#: src/components/whatsnew/helper.ts:56
+msgid "<ul><li><strong>WordPress Abilities API support</strong> - PushEngage now registers 20+ abilities for AI assistants and MCP servers, covering plugin info, push notifications, segments, audience groups, analytics, auto-push settings, WooCommerce push automation campaigns, WhatsApp status, and debug logs.</li><li><strong>Verified for WordPress 7.0</strong> - Tested against WordPress 7.0 and the new abilities framework, alongside the current stable release. Pair with the official <a href=\"https://github.com/WordPress/mcp-adapter\" target=\"_blank\" rel=\"noopener\">WordPress MCP Adapter</a> to expose PushEngage to any MCP-compatible client.</li><li><strong>Searchable timezone dropdown</strong> - The timezone selector on the Site Details page now supports type-to-filter, so you can find your zone without scrolling.</li></ul>"
+msgstr ""
+
+#: src/components/whatsnew/helper.ts:65
+msgid "PushEngage abilities are registered under the pushengage category with admin (manage_options) capability and public MCP exposure."
+msgstr ""
+
+#: src/components/whatsnew/helper.ts:76
+msgid "Learn about WordPress Abilities support"
+msgstr ""
+
+#: src/components/whatsnew/helper.ts:87
+msgid "✨ New in PushEngage: Multichannel Chat Widgets"
+msgstr ""
+
+#: src/components/whatsnew/helper.ts:88
+msgid "Turn your website into a real-time communication center. With the updated PushEngage Chat Widget, you can connect visitors to your business instantly — using <strong>the channels they already love.</strong><br />"
+msgstr ""
+
+#: src/components/whatsnew/helper.ts:95
+msgid "Capabilities That Convert More Visitors"
+msgstr ""
+
+#: src/components/whatsnew/helper.ts:96
+msgid "<ul><li><strong>Multi-Agent Support</strong> - Route conversations to the right team members — sales, support, operations &amp; more.</li><li><strong>Targeting &amp; Personalization</strong> - Show specific channels based on location, device type, or visitor behavior.</li><li><strong>Scheduled Availability</strong> - Display support availability based on working hours or agent status.</li><li><strong>Saved Replies &amp; FAQs</strong> - Respond faster with pre-built response templates.</li><li><strong>Analytics &amp; Conversation Tracking</strong> - Understand which channels are driving engagement and ROI.</li><li><strong>Fully Customizable UI</strong> - Match widget design to your brand identity in minutes.</li></ul>"
+msgstr ""
+
+#: src/components/woocommerce/WooPushCampaignModal.tsx:152
 msgid "Configure Automation"
 msgstr ""
 
-#: src/components/woocommerce/WooPushCampaignModal.tsx:240
+#: src/components/woocommerce/WooPushCampaignModal.tsx:242
 msgid "Insert dynamic tag into the focused field"
 msgstr ""
 
-#: src/components/woocommerce/WooPushCampaignModal.tsx:246
+#: src/components/woocommerce/WooPushCampaignModal.tsx:248
 msgid "Available dynamic tags"
 msgstr ""
 
-#: src/components/woocommerce/WooPushCampaignModal.tsx:249
+#: src/components/woocommerce/WooPushCampaignModal.tsx:251
 msgid "Select a tag"
 msgstr ""
 
-#: src/components/woocommerce/WooPushCampaignModal.tsx:347
+#: src/components/woocommerce/WooPushCampaignModal.tsx:349
 msgid "Admin Roles"
 msgstr ""
 
-#: src/components/woocommerce/WooPushCampaignModal.tsx:358
+#: src/components/woocommerce/WooPushCampaignModal.tsx:360
 msgid "Admin Notification Title"
 msgstr ""
 
-#: src/components/woocommerce/WooPushCampaignModal.tsx:380
+#: src/components/woocommerce/WooPushCampaignModal.tsx:382
 msgid "Admin Notification Message"
 msgstr ""
 
-#: src/components/woocommerce/WooPushCampaignModal.tsx:403
+#: src/components/woocommerce/WooPushCampaignModal.tsx:405
 msgid "Admin Notification URL"
 msgstr ""
 
@@ -5072,6 +5047,14 @@ msgstr ""
 
 #: src/constants/emptyStateMessages.tsx:235
 msgid "Enable automation with a single toggle and customize message content"
+msgstr ""
+
+#: src/constants/emptyStateMessages.tsx:245
+msgid "Power Personalization with Attributes"
+msgstr ""
+
+#: src/constants/emptyStateMessages.tsx:246
+msgid "Define and manage user attributes to personalize messages and target users with precision across web and mobile."
 msgstr ""
 
 #: src/constants/emptyStateMessages.tsx:253
@@ -5523,11 +5506,11 @@ msgid "No caps—enjoy unlimited sending and subscribers."
 msgstr ""
 
 #: src/constants/planFeatures.ts:422
-msgid "Unlock More Ways to Connect with Your Customers"
+msgid "Upgrade to Get More Conversions with Chat Widget"
 msgstr ""
 
 #: src/constants/planFeatures.ts:423
-msgid "Upgrade to deliver faster, smarter, and more personalized support."
+msgid "Get multiple chat widget features like multi-agent support, targeting & personalization, scheduled availability, analytics & conversation tracking, and fully customizable UI."
 msgstr ""
 
 #: src/constants/planFeatures.ts:45
@@ -5683,114 +5666,119 @@ msgid "Total Active Subscribers"
 msgstr ""
 
 #: src/helper/validateChatWidget.ts:15
-msgid "Please enable at least one channel."
+#: src/pages/chatWidget/ClickToChatV2Form.tsx:143
+msgid "Please enter a widget name."
 msgstr ""
 
 #: src/helper/validateChatWidget.ts:16
-msgid "Please select at least one device to show on."
+msgid "Please enable at least one channel."
 msgstr ""
 
 #: src/helper/validateChatWidget.ts:17
+msgid "Please select at least one device to show on."
+msgstr ""
+
+#: src/helper/validateChatWidget.ts:18
 msgid "Please select at least one device for this channel."
 msgstr ""
 
-#: src/helper/validateChatWidget.ts:20
+#: src/helper/validateChatWidget.ts:21
 msgid "Please enter a value for the channel."
 msgstr ""
 
-#: src/helper/validateChatWidget.ts:21
+#: src/helper/validateChatWidget.ts:22
 msgid "Please enter a valid value for the channel."
 msgstr ""
 
-#: src/helper/validateChatWidget.ts:22
+#: src/helper/validateChatWidget.ts:23
 msgid "Please enter a name for the custom channel."
 msgstr ""
 
-#: src/helper/validateChatWidget.ts:23
+#: src/helper/validateChatWidget.ts:28
 msgid "One or more channel settings are invalid."
 msgstr ""
 
-#: src/helper/validateChatWidget.ts:24
+#: src/helper/validateChatWidget.ts:29
 msgid "Please enter a valid value for the agent."
 msgstr ""
 
-#: src/helper/validateChatWidget.ts:25
+#: src/helper/validateChatWidget.ts:30
 msgid "Enable at least one day in this channel schedule."
 msgstr ""
 
-#: src/helper/validateChatWidget.ts:26
+#: src/helper/validateChatWidget.ts:31
 msgid "For enabled days, start time must be before end time in channel schedule."
 msgstr ""
 
-#: src/helper/validateChatWidget.ts:30
+#: src/helper/validateChatWidget.ts:35
 msgid "Enable at least one day in this agent schedule."
 msgstr ""
 
-#: src/helper/validateChatWidget.ts:31
+#: src/helper/validateChatWidget.ts:36
 msgid "For enabled days, start time must be before end time in agent schedule."
 msgstr ""
 
-#: src/helper/validateChatWidget.ts:35
+#: src/helper/validateChatWidget.ts:40
 msgid "For enabled days, please enter both start and end time in agent schedule."
 msgstr ""
 
-#: src/helper/validateChatWidget.ts:39
+#: src/helper/validateChatWidget.ts:44
 msgid "Please select a custom icon for the channel."
 msgstr ""
 
-#: src/helper/validateChatWidget.ts:40
+#: src/helper/validateChatWidget.ts:45
 msgid "Please select a custom image for the channel."
 msgstr ""
 
-#: src/helper/validateChatWidget.ts:43
+#: src/helper/validateChatWidget.ts:48
 msgid "Invalid Custom CSS."
 msgstr ""
 
-#: src/helper/validateChatWidget.ts:44
+#: src/helper/validateChatWidget.ts:49
 msgid "Please select a custom image for the widget icon."
 msgstr ""
 
-#: src/helper/validateChatWidget.ts:45
+#: src/helper/validateChatWidget.ts:50
 msgid "Please select a custom icon for the widget icon."
 msgstr ""
 
-#: src/helper/validateChatWidget.ts:46
+#: src/helper/validateChatWidget.ts:51
 msgid "Please enter a custom size in pixels."
 msgstr ""
 
-#: src/helper/validateChatWidget.ts:49
+#: src/helper/validateChatWidget.ts:54
 msgid "Display after seconds must be 0 or more."
 msgstr ""
 
-#: src/helper/validateChatWidget.ts:50
+#: src/helper/validateChatWidget.ts:55
 msgid "Scroll percent must be between 0 and 100."
 msgstr ""
 
-#: src/helper/validateChatWidget.ts:51
+#: src/helper/validateChatWidget.ts:56
 msgid "Display after seconds must be 86400 or less."
 msgstr ""
 
-#: src/helper/validateChatWidget.ts:54
+#: src/helper/validateChatWidget.ts:59
 msgid "Please select both From and To date/time."
 msgstr ""
 
-#: src/helper/validateChatWidget.ts:55
+#: src/helper/validateChatWidget.ts:60
 msgid "From date/time must be before To date/time."
 msgstr ""
 
-#: src/helper/validateChatWidget.ts:56
+#: src/helper/validateChatWidget.ts:61
 msgid "Each rule group must contain at least one rule."
 msgstr ""
 
-#: src/helper/validateChatWidget.ts:57
+#: src/helper/validateChatWidget.ts:62
 msgid "One or more display rules are incomplete or invalid."
 msgstr ""
 
-#: src/helper/validateChatWidget.ts:60
+#: src/helper/validateChatWidget.ts:65
 msgid "Enable at least one day in business hours."
 msgstr ""
 
-#: src/helper/validateChatWidget.ts:61
+#: src/helper/validateChatWidget.ts:66
 msgid "Start time must be before end time for enabled business hour days."
 msgstr ""
 
@@ -6046,143 +6034,167 @@ msgstr ""
 msgid "Push notifications can be an amazing marketing tool to grow your site's repeat traffic, engagement, and sales. But when we started, most services were built only for large businesses with a development team. Not to mention how costly they were."
 msgstr ""
 
-#: src/pages/aboutUs/GettingStarted.tsx:111
-msgid "Boost Repeat Traffic & Engage Customers Across Channels"
+#: src/pages/aboutUs/GettingStarted.tsx:102
+msgid "Multichannel Engagement: Reach users using Web Push, App Push, WhatsApp automation, and an inbox-free chat widget that routes conversations to the channels users already prefer."
+msgstr ""
+
+#: src/pages/aboutUs/GettingStarted.tsx:106
+msgid "Behavior-Based Automation: Trigger messages based on user activity, inactivity, and commerce events — in real time or with smart delays."
+msgstr ""
+
+#: src/pages/aboutUs/GettingStarted.tsx:110
+msgid "Advanced Targeting & Personalization: Use attributes, dynamic audience groups, and segmentation to send relevant messages at scale."
 msgstr ""
 
 #: src/pages/aboutUs/GettingStarted.tsx:114
+msgid "WooCommerce Automation: Automate cart recovery, order updates, price drops, and inventory alerts with a single toggle — no custom workflows required."
+msgstr ""
+
+#: src/pages/aboutUs/GettingStarted.tsx:118
+msgid "Inbox-Free Conversations: Enable sales, support, and lead generation without per-agent inbox costs or complex chat systems."
+msgstr ""
+
+#: src/pages/aboutUs/GettingStarted.tsx:122
+msgid "Actionable Insights: Understand what's working with high-level analytics across campaigns, channels, and conversations."
+msgstr ""
+
+#: src/pages/aboutUs/GettingStarted.tsx:161
+msgid "Boost Repeat Traffic & Engage Customers Across Channels"
+msgstr ""
+
+#: src/pages/aboutUs/GettingStarted.tsx:164
 msgid "PushEngage is a multichannel customer engagement platform built to help businesses stay connected with users beyond their first visit."
 msgstr ""
 
-#: src/pages/aboutUs/GettingStarted.tsx:120
+#: src/pages/aboutUs/GettingStarted.tsx:170
 msgid "When email gets ignored and paid acquisition keeps getting more expensive, PushEngage gives you direct, high-intent channels to reach users where they actually respond — on the web, mobile devices, WhatsApp, and messaging apps."
 msgstr ""
 
-#: src/pages/aboutUs/GettingStarted.tsx:126
+#: src/pages/aboutUs/GettingStarted.tsx:176
 msgid "From real-time notifications to automated follow-ups and inbox-free chat, PushEngage helps you drive repeat traffic, recover lost revenue, and create meaningful customer interactions — without adding engineering overhead.:"
 msgstr ""
 
-#: src/pages/aboutUs/GettingStarted.tsx:132
+#: src/pages/aboutUs/GettingStarted.tsx:182
 msgid "Get Started in Minutes"
 msgstr ""
 
-#: src/pages/aboutUs/GettingStarted.tsx:135
+#: src/pages/aboutUs/GettingStarted.tsx:185
 msgid "PushEngage is designed so you can see results quickly — without complex setup or engineering work."
 msgstr ""
 
-#: src/pages/aboutUs/GettingStarted.tsx:141
+#: src/pages/aboutUs/GettingStarted.tsx:191
 msgid "Step 1: Add a Chat Widget to Your Site"
 msgstr ""
 
-#: src/pages/aboutUs/GettingStarted.tsx:144
-msgid "Start by adding an inbox-free, multi-channel chat widget to your site. Let visitors reach you instantly on WhatsApp, Messenger, email, and 20+ other channels — without managing conversations inside another inbox.You can customize the widget’s design, placement, triggers, and targeting in minutes, and start capturing leads or inquiries right away."
+#: src/pages/aboutUs/GettingStarted.tsx:194
+msgid "Start by adding an inbox-free, multi-channel chat widget to your site. Let visitors reach you instantly on WhatsApp, Messenger, email, and 20+ other channels — without managing conversations inside another inbox. You can customize the widget’s design, placement, triggers, and targeting in minutes, and start capturing leads or inquiries right away."
 msgstr ""
 
-#: src/pages/aboutUs/GettingStarted.tsx:150
+#: src/pages/aboutUs/GettingStarted.tsx:200
 msgid "Step 2: Turn Visitors into Subscribers"
 msgstr ""
 
-#: src/pages/aboutUs/GettingStarted.tsx:153
+#: src/pages/aboutUs/GettingStarted.tsx:203
 msgid "Next, capture users who prefer notifications using smart opt-ins for web and mobile push. Grow a permission-based audience you can reach instantly — even after visitors leave your site."
 msgstr ""
 
-#: src/pages/aboutUs/GettingStarted.tsx:159
+#: src/pages/aboutUs/GettingStarted.tsx:209
 msgid "Step 3: Automate Engagement Across Channels"
 msgstr ""
 
-#: src/pages/aboutUs/GettingStarted.tsx:162
+#: src/pages/aboutUs/GettingStarted.tsx:212
 msgid "Once users are connected, automate follow-ups using behavior-based campaigns. Send updates, reminders, transactional messages, and re-engagement campaigns across push and WhatsApp — without manual effort. Start simple, then layer in automation as your engagement strategy grows."
 msgstr ""
 
-#: src/pages/aboutUs/GettingStarted.tsx:179
+#: src/pages/aboutUs/GettingStarted.tsx:229
 msgid "Quick Start Video Guide"
 msgstr ""
 
-#: src/pages/aboutUs/GettingStarted.tsx:187
+#: src/pages/aboutUs/GettingStarted.tsx:237
 msgid "Add Multi-agent Chat Widgets to Your Site"
 msgstr ""
 
-#: src/pages/aboutUs/GettingStarted.tsx:195
+#: src/pages/aboutUs/GettingStarted.tsx:245
 msgid "Set Up WhatsApp Business Automation"
 msgstr ""
 
-#: src/pages/aboutUs/GettingStarted.tsx:203
+#: src/pages/aboutUs/GettingStarted.tsx:253
 msgid "Collect Push Subscribers"
 msgstr ""
 
-#: src/pages/aboutUs/GettingStarted.tsx:211
+#: src/pages/aboutUs/GettingStarted.tsx:261
 msgid "Send a Push Broadcast"
 msgstr ""
 
-#: src/pages/aboutUs/GettingStarted.tsx:219
+#: src/pages/aboutUs/GettingStarted.tsx:269
 msgid "Turn WordPress Categories Into Segments"
 msgstr ""
 
-#: src/pages/aboutUs/GettingStarted.tsx:227
-msgid "Send Push Notifications from Post Editor"
-msgstr ""
-
-#: src/pages/aboutUs/GettingStarted.tsx:236
-msgid "Why Teams Use PushEngage"
-msgstr ""
-
-#: src/pages/aboutUs/GettingStarted.tsx:240
-msgid "PushEngage brings multiple engagement channels into a single platform — so teams can focus on outcomes, not tools."
-msgstr ""
-
-#: src/pages/aboutUs/GettingStarted.tsx:252
-msgid "Built to Grow With Your Business"
-msgstr ""
-
-#: src/pages/aboutUs/GettingStarted.tsx:256
-msgid "PushEngage adapts to how your business engages customers today — and how it will tomorrow."
-msgstr ""
-
-#: src/pages/aboutUs/GettingStarted.tsx:262
-msgid "As you upgrade, you unlock:"
-msgstr ""
-
-#: src/pages/aboutUs/GettingStarted.tsx:269
-msgid "Advanced automation and targeting"
-msgstr ""
-
 #: src/pages/aboutUs/GettingStarted.tsx:277
-msgid "Cross-channel engagement workflows"
+msgid "Send Push Notifications from Post Editor"
 msgstr ""
 
 #: src/pages/aboutUs/GettingStarted.tsx:28
 msgid "How to Set Up a Multi-Agent Multichannel Chat Widget"
 msgstr ""
 
-#: src/pages/aboutUs/GettingStarted.tsx:285
-msgid "Deeper personalization and analytics"
+#: src/pages/aboutUs/GettingStarted.tsx:286
+msgid "Why Teams Use PushEngage"
 msgstr ""
 
 #: src/pages/aboutUs/GettingStarted.tsx:29
 msgid "Before you can offer sales and customer support on your site, you need to add and configure your chat widgets."
 msgstr ""
 
-#: src/pages/aboutUs/GettingStarted.tsx:293
-msgid "Native integrations with WooCommerce and other tools"
+#: src/pages/aboutUs/GettingStarted.tsx:290
+msgid "PushEngage brings multiple engagement channels into a single platform — so teams can focus on outcomes, not tools."
 msgstr ""
 
-#: src/pages/aboutUs/GettingStarted.tsx:299
-msgid "Upgrade when you're ready, and turn PushEngage into a central engagement layer for your website and customers."
+#: src/pages/aboutUs/GettingStarted.tsx:302
+msgid "Built to Grow With Your Business"
 msgstr ""
 
-#: src/pages/aboutUs/GettingStarted.tsx:316
-msgid "Get PushEngage Today and Unlock all the Powerful Features"
+#: src/pages/aboutUs/GettingStarted.tsx:306
+msgid "PushEngage adapts to how your business engages customers today — and how it will tomorrow."
+msgstr ""
+
+#: src/pages/aboutUs/GettingStarted.tsx:312
+msgid "As you upgrade, you unlock:"
 msgstr ""
 
 #: src/pages/aboutUs/GettingStarted.tsx:319
+msgid "Advanced automation and targeting"
+msgstr ""
+
+#: src/pages/aboutUs/GettingStarted.tsx:327
+msgid "Cross-channel engagement workflows"
+msgstr ""
+
+#: src/pages/aboutUs/GettingStarted.tsx:335
+msgid "Deeper personalization and analytics"
+msgstr ""
+
+#: src/pages/aboutUs/GettingStarted.tsx:343
+msgid "Native integrations with WooCommerce and other tools"
+msgstr ""
+
+#: src/pages/aboutUs/GettingStarted.tsx:349
+msgid "Upgrade when you're ready, and turn PushEngage into a central engagement layer for your website and customers."
+msgstr ""
+
+#: src/pages/aboutUs/GettingStarted.tsx:366
+msgid "Get PushEngage Today and Unlock all the Powerful Features"
+msgstr ""
+
+#: src/pages/aboutUs/GettingStarted.tsx:369
 msgid "Bonus: PushEngage free users get"
 msgstr ""
 
-#: src/pages/aboutUs/GettingStarted.tsx:331
+#: src/pages/aboutUs/GettingStarted.tsx:381
 msgid "50% off regular price"
 msgstr ""
 
-#: src/pages/aboutUs/GettingStarted.tsx:333
+#: src/pages/aboutUs/GettingStarted.tsx:383
 msgid ", automatically applied at checkout."
 msgstr ""
 
@@ -6194,32 +6206,40 @@ msgstr ""
 msgid "Get your own Meta WhatsApp Business API Key, connect it to your PushEngage account, and enable automated campaigns."
 msgstr ""
 
-#: src/pages/aboutUs/GettingStarted.tsx:45
+#: src/pages/aboutUs/GettingStarted.tsx:50
+msgid "How to Start Collecting Web Push Subscribers in WordPress?"
+msgstr ""
+
+#: src/pages/aboutUs/GettingStarted.tsx:51
+msgid "Before you can send campaigns, you need to start collecting subscribers using a popup modal. Check out how you can get started in 10 minutes or less."
+msgstr ""
+
+#: src/pages/aboutUs/GettingStarted.tsx:61
+msgid "How to Send Automated Push Broadcasts Whenever You Publish a WordPress Post?"
+msgstr ""
+
+#: src/pages/aboutUs/GettingStarted.tsx:65
+msgid "Creating content is a challenge in itself. Let’s get you set up with automated push campaigns that promote your posts whenever you publish a new one."
+msgstr ""
+
+#: src/pages/aboutUs/GettingStarted.tsx:75
+msgid "How to Create an Automated Drip Campaign That Makes Money While You Sleep?"
+msgstr ""
+
+#: src/pages/aboutUs/GettingStarted.tsx:79
+msgid "The same automated campaigns can keep making you more money as your subscriber list grows. Here’s how you can set up an automated campaign quickly."
+msgstr ""
+
+#: src/pages/aboutUs/GettingStarted.tsx:89
+msgid "How to Create Custom Retargeting Campaigns (No Code)?"
+msgstr ""
+
+#: src/pages/aboutUs/GettingStarted.tsx:90
+msgid "You can create simple, powerful campaigns that grow your traffic and engagement. It’s not even difficult to create retargeting campaigns. Get started now!"
+msgstr ""
+
+#: src/pages/aboutUs/GettingStarted.tsx:95
 msgid "Read Documentation"
-msgstr ""
-
-#: src/pages/aboutUs/GettingStarted.tsx:52
-msgid "Multichannel Engagement: Reach users using Web Push, App Push, WhatsApp automation, and an inbox-free chat widget that routes conversations to the channels users already prefer."
-msgstr ""
-
-#: src/pages/aboutUs/GettingStarted.tsx:56
-msgid "Behavior-Based Automation: Trigger messages based on user activity, inactivity, and commerce events — in real time or with smart delays."
-msgstr ""
-
-#: src/pages/aboutUs/GettingStarted.tsx:60
-msgid "Advanced Targeting & Personalization: Use attributes, dynamic audience groups, and segmentation to send relevant messages at scale."
-msgstr ""
-
-#: src/pages/aboutUs/GettingStarted.tsx:64
-msgid "WooCommerce Automation: Automate cart recovery, order updates, price drops, and inventory alerts with a single toggle — no custom workflows required."
-msgstr ""
-
-#: src/pages/aboutUs/GettingStarted.tsx:68
-msgid "Inbox-Free Conversations: Enable sales, support, and lead generation without per-agent inbox costs or complex chat systems."
-msgstr ""
-
-#: src/pages/aboutUs/GettingStarted.tsx:72
-msgid "Actionable Insights: Understand what's working with high-level analytics across campaigns, channels, and conversations."
 msgstr ""
 
 #: src/pages/analytics/GoalTracking.tsx:140
@@ -6282,7 +6302,7 @@ msgid "Optin Analytics"
 msgstr ""
 
 #: src/pages/analytics/OptinAnalytics.tsx:288
-#: src/pages/chatWidget/ChannelSettingsDrawer.tsx:118
+#: src/pages/chatWidget/ChannelSettingsDrawer.tsx:175
 #: app/Utils/AdminNavMenuItems.php:72
 msgid "Settings"
 msgstr ""
@@ -6345,7 +6365,7 @@ msgstr ""
 #: src/pages/audience/Attributes.tsx:221
 #: src/pages/audience/AudienceGroups.tsx:179
 #: src/pages/audience/Subscribers.tsx:162
-#: src/pages/chatWidget/List.tsx:355
+#: src/pages/chatWidget/List.tsx:376
 #: src/pages/chatWidget/components/OverviewTab.tsx:90
 #: src/pages/drip/List.tsx:323
 #: src/pages/triggeredCampaign/List.tsx:310
@@ -6544,12 +6564,12 @@ msgid "Type"
 msgstr ""
 
 #: src/pages/chatWidget/AppearanceSettings.tsx:227
-#: src/pages/chatWidget/components/ChannelAppearanceSettings.tsx:79
+#: src/pages/chatWidget/components/ChannelAppearanceSettings.tsx:124
 msgid "Image"
 msgstr ""
 
 #: src/pages/chatWidget/AppearanceSettings.tsx:228
-#: src/pages/chatWidget/components/ChannelAppearanceSettings.tsx:80
+#: src/pages/chatWidget/components/ChannelAppearanceSettings.tsx:125
 msgid "Icon"
 msgstr ""
 
@@ -6558,13 +6578,13 @@ msgid "Custom Image"
 msgstr ""
 
 #: src/pages/chatWidget/AppearanceSettings.tsx:253
-#: src/pages/chatWidget/components/ChannelAppearanceSettings.tsx:112
+#: src/pages/chatWidget/components/ChannelAppearanceSettings.tsx:165
 msgid "Select Custom Image"
 msgstr ""
 
 #: src/pages/chatWidget/AppearanceSettings.tsx:254
-#: src/pages/chatWidget/components/ChannelAppearanceSettings.tsx:113
-#: src/pages/chatWidget/components/ChannelGeneralSettings.tsx:232
+#: src/pages/chatWidget/components/ChannelAppearanceSettings.tsx:166
+#: src/pages/chatWidget/components/ChannelGeneralSettings.tsx:257
 msgid "Select Image"
 msgstr ""
 
@@ -6572,26 +6592,26 @@ msgstr ""
 msgid "Custom Icon"
 msgstr ""
 
-#: src/pages/chatWidget/AppearanceSettings.tsx:288
-#: src/pages/chatWidget/components/ChannelAppearanceSettings.tsx:186
+#: src/pages/chatWidget/AppearanceSettings.tsx:294
+#: src/pages/chatWidget/components/ChannelAppearanceSettings.tsx:244
 msgid "Search icons"
 msgstr ""
 
-#: src/pages/chatWidget/AppearanceSettings.tsx:295
-#: src/pages/chatWidget/components/ChannelAppearanceSettings.tsx:195
+#: src/pages/chatWidget/AppearanceSettings.tsx:302
+#: src/pages/chatWidget/components/ChannelAppearanceSettings.tsx:252
 msgid "Browse all"
 msgstr ""
 
-#: src/pages/chatWidget/AppearanceSettings.tsx:305
-#: src/pages/chatWidget/components/ChannelAppearanceSettings.tsx:205
+#: src/pages/chatWidget/AppearanceSettings.tsx:312
+#: src/pages/chatWidget/components/ChannelAppearanceSettings.tsx:262
 msgid "Choose an icon"
 msgstr ""
 
-#: src/pages/chatWidget/AppearanceSettings.tsx:317
+#: src/pages/chatWidget/AppearanceSettings.tsx:324
 msgid "Position"
 msgstr ""
 
-#: src/pages/chatWidget/AppearanceSettings.tsx:349
+#: src/pages/chatWidget/AppearanceSettings.tsx:356
 msgid "This feature requires Business plan or higher"
 msgstr ""
 
@@ -6599,188 +6619,186 @@ msgstr ""
 msgid "System Stack"
 msgstr ""
 
-#: src/pages/chatWidget/AppearanceSettings.tsx:376
+#: src/pages/chatWidget/AppearanceSettings.tsx:383
 msgid "Side"
 msgstr ""
 
-#: src/pages/chatWidget/AppearanceSettings.tsx:383
+#: src/pages/chatWidget/AppearanceSettings.tsx:390
 msgid "Left"
 msgstr ""
 
-#: src/pages/chatWidget/AppearanceSettings.tsx:384
+#: src/pages/chatWidget/AppearanceSettings.tsx:391
 msgid "Right"
 msgstr ""
 
-#: src/pages/chatWidget/AppearanceSettings.tsx:393
+#: src/pages/chatWidget/AppearanceSettings.tsx:400
 msgid "Offset X (px)"
 msgstr ""
 
-#: src/pages/chatWidget/AppearanceSettings.tsx:401
+#: src/pages/chatWidget/AppearanceSettings.tsx:408
 msgid "Offset Y (px)"
 msgstr ""
 
-#: src/pages/chatWidget/AppearanceSettings.tsx:414
+#: src/pages/chatWidget/AppearanceSettings.tsx:421
 msgid "Default State"
 msgstr ""
 
-#: src/pages/chatWidget/AppearanceSettings.tsx:417
+#: src/pages/chatWidget/AppearanceSettings.tsx:424
 msgid "Click to open"
 msgstr ""
 
-#: src/pages/chatWidget/AppearanceSettings.tsx:439
+#: src/pages/chatWidget/AppearanceSettings.tsx:446
 msgid "Hover to open"
 msgstr ""
 
-#: src/pages/chatWidget/AppearanceSettings.tsx:468
+#: src/pages/chatWidget/AppearanceSettings.tsx:475
 msgid "Opened by default"
 msgstr ""
 
-#: src/pages/chatWidget/AppearanceSettings.tsx:482
+#: src/pages/chatWidget/AppearanceSettings.tsx:489
 msgid "Widget Background Color"
 msgstr ""
 
-#: src/pages/chatWidget/AppearanceSettings.tsx:489
+#: src/pages/chatWidget/AppearanceSettings.tsx:496
 msgid "Widget Size"
 msgstr ""
 
-#: src/pages/chatWidget/AppearanceSettings.tsx:499
+#: src/pages/chatWidget/AppearanceSettings.tsx:506
 #: src/pages/chatWidget/components/WidgetCard.tsx:67
 msgid "Custom"
 msgstr ""
 
-#: src/pages/chatWidget/AppearanceSettings.tsx:514
+#: src/pages/chatWidget/AppearanceSettings.tsx:521
 msgid "Custom Size (px)"
 msgstr ""
 
-#: src/pages/chatWidget/AppearanceSettings.tsx:525
+#: src/pages/chatWidget/AppearanceSettings.tsx:532
 msgid "CTA Text"
 msgstr ""
 
-#: src/pages/chatWidget/AppearanceSettings.tsx:527
+#: src/pages/chatWidget/AppearanceSettings.tsx:534
 msgid "The text of the call to action button. This text will be displayed beside the chat bubble. Leave it blank to hide the call to action button."
 msgstr ""
 
-#: src/pages/chatWidget/AppearanceSettings.tsx:535
+#: src/pages/chatWidget/AppearanceSettings.tsx:542
 msgid "CTA Behavior"
 msgstr ""
 
-#: src/pages/chatWidget/AppearanceSettings.tsx:543
-#: src/pages/chatWidget/ClickToChatReview.tsx:173
+#: src/pages/chatWidget/AppearanceSettings.tsx:550
 msgid "Hide after first click"
 msgstr ""
 
-#: src/pages/chatWidget/AppearanceSettings.tsx:546
-#: src/pages/chatWidget/ClickToChatReview.tsx:174
+#: src/pages/chatWidget/AppearanceSettings.tsx:553
 msgid "Show all the time"
 msgstr ""
 
-#: src/pages/chatWidget/AppearanceSettings.tsx:555
+#: src/pages/chatWidget/AppearanceSettings.tsx:562
 msgid "CTA Color"
 msgstr ""
 
-#: src/pages/chatWidget/AppearanceSettings.tsx:563
+#: src/pages/chatWidget/AppearanceSettings.tsx:570
 msgid "CTA Background"
 msgstr ""
 
-#: src/pages/chatWidget/AppearanceSettings.tsx:572
+#: src/pages/chatWidget/AppearanceSettings.tsx:579
 msgid "Icons Layout"
 msgstr ""
 
-#: src/pages/chatWidget/AppearanceSettings.tsx:577
+#: src/pages/chatWidget/AppearanceSettings.tsx:584
 msgid "Vertical"
 msgstr ""
 
-#: src/pages/chatWidget/AppearanceSettings.tsx:578
-msgid "Horizontal"
-msgstr ""
-
 #: src/pages/chatWidget/AppearanceSettings.tsx:585
-msgid "Attention Effect"
-msgstr ""
-
-#: src/pages/chatWidget/AppearanceSettings.tsx:587
-msgid "Grab your visitor's attention with an attention effect to the chat bubble."
+msgid "Horizontal"
 msgstr ""
 
 #: src/pages/chatWidget/AppearanceSettings.tsx:59
 msgid "Widget Design and Behavior"
 msgstr ""
 
+#: src/pages/chatWidget/AppearanceSettings.tsx:592
+msgid "Attention Effect"
+msgstr ""
+
 #: src/pages/chatWidget/AppearanceSettings.tsx:594
+msgid "Grab your visitor's attention with an attention effect to the chat bubble."
+msgstr ""
+
+#: src/pages/chatWidget/AppearanceSettings.tsx:601
 #: src/pages/debug/SystemInfo.tsx:61
 #: src/pages/design/TargetingRule.tsx:391
 msgid "None"
 msgstr ""
 
-#: src/pages/chatWidget/AppearanceSettings.tsx:595
+#: src/pages/chatWidget/AppearanceSettings.tsx:602
 msgid "Bounce"
 msgstr ""
 
-#: src/pages/chatWidget/AppearanceSettings.tsx:596
+#: src/pages/chatWidget/AppearanceSettings.tsx:603
 msgid "Waggle"
 msgstr ""
 
-#: src/pages/chatWidget/AppearanceSettings.tsx:597
+#: src/pages/chatWidget/AppearanceSettings.tsx:604
 msgid "Floating"
 msgstr ""
 
-#: src/pages/chatWidget/AppearanceSettings.tsx:598
+#: src/pages/chatWidget/AppearanceSettings.tsx:605
 msgid "Sheen"
 msgstr ""
 
-#: src/pages/chatWidget/AppearanceSettings.tsx:599
+#: src/pages/chatWidget/AppearanceSettings.tsx:606
 msgid "Spin"
 msgstr ""
 
-#: src/pages/chatWidget/AppearanceSettings.tsx:600
+#: src/pages/chatWidget/AppearanceSettings.tsx:607
 msgid "Fade"
 msgstr ""
 
-#: src/pages/chatWidget/AppearanceSettings.tsx:601
+#: src/pages/chatWidget/AppearanceSettings.tsx:608
 msgid "Shockwave"
 msgstr ""
 
-#: src/pages/chatWidget/AppearanceSettings.tsx:602
+#: src/pages/chatWidget/AppearanceSettings.tsx:609
 msgid "Blink"
 msgstr ""
 
-#: src/pages/chatWidget/AppearanceSettings.tsx:603
+#: src/pages/chatWidget/AppearanceSettings.tsx:610
 msgid "Pulse"
 msgstr ""
 
-#: src/pages/chatWidget/AppearanceSettings.tsx:610
+#: src/pages/chatWidget/AppearanceSettings.tsx:617
 msgid "Background Blur Effect"
 msgstr ""
 
-#: src/pages/chatWidget/AppearanceSettings.tsx:611
+#: src/pages/chatWidget/AppearanceSettings.tsx:618
 msgid "Blur your webpage to highlight the chat widget when it’s open. This helps draw attention to the widget and creates a focused, distraction-free experience for visitors."
 msgstr ""
 
-#: src/pages/chatWidget/AppearanceSettings.tsx:639
+#: src/pages/chatWidget/AppearanceSettings.tsx:646
 msgid "Color Theme"
 msgstr ""
 
-#: src/pages/chatWidget/AppearanceSettings.tsx:641
+#: src/pages/chatWidget/AppearanceSettings.tsx:648
 msgid "Set the color theme of the widget."
 msgstr ""
 
-#: src/pages/chatWidget/AppearanceSettings.tsx:645
+#: src/pages/chatWidget/AppearanceSettings.tsx:652
 msgid "Light"
 msgstr ""
 
-#: src/pages/chatWidget/AppearanceSettings.tsx:648
+#: src/pages/chatWidget/AppearanceSettings.tsx:655
 msgid "Dark"
 msgstr ""
 
-#: src/pages/chatWidget/AppearanceSettings.tsx:651
+#: src/pages/chatWidget/AppearanceSettings.tsx:658
 msgid "System"
 msgstr ""
 
-#: src/pages/chatWidget/AppearanceSettings.tsx:658
+#: src/pages/chatWidget/AppearanceSettings.tsx:665
 msgid "Change Page Title"
 msgstr ""
 
-#: src/pages/chatWidget/AppearanceSettings.tsx:659
+#: src/pages/chatWidget/AppearanceSettings.tsx:666
 msgid "Change the page title to grab user's attention"
 msgstr ""
 
@@ -6788,23 +6806,23 @@ msgstr ""
 msgid "Standard view"
 msgstr ""
 
-#: src/pages/chatWidget/AppearanceSettings.tsx:693
+#: src/pages/chatWidget/AppearanceSettings.tsx:700
 msgid "Page Title"
 msgstr ""
 
-#: src/pages/chatWidget/AppearanceSettings.tsx:707
+#: src/pages/chatWidget/AppearanceSettings.tsx:714
 msgid "Google Analytics"
 msgstr ""
 
-#: src/pages/chatWidget/AppearanceSettings.tsx:708
+#: src/pages/chatWidget/AppearanceSettings.tsx:715
 msgid "Track user interactions on this widget. Please make sure to add the Google Analytics code to your website to enable the tracking."
 msgstr ""
 
-#: src/pages/chatWidget/AppearanceSettings.tsx:737
+#: src/pages/chatWidget/AppearanceSettings.tsx:744
 msgid "Font Family"
 msgstr ""
 
-#: src/pages/chatWidget/AppearanceSettings.tsx:739
+#: src/pages/chatWidget/AppearanceSettings.tsx:746
 msgid "Select the font family for the widget."
 msgstr ""
 
@@ -6812,167 +6830,94 @@ msgstr ""
 msgid "Advanced view"
 msgstr ""
 
-#: src/pages/chatWidget/ChannelSettingsDrawer.tsx:122
+#: src/pages/chatWidget/ChannelSettingsDrawer.tsx:179
 msgid "Channel Settings"
 msgstr ""
 
-#: src/pages/chatWidget/ChannelSettingsDrawer.tsx:221
-#: src/pages/chatWidget/components/AgentCard.tsx:160
+#: src/pages/chatWidget/ChannelSettingsDrawer.tsx:323
 #: src/pages/chatWidget/components/WidgetAnalyticsDrawer.tsx:208
 msgid "Agent Name"
 msgstr ""
 
-#: src/pages/chatWidget/ClickToChatReview.tsx:104
-#: src/pages/chatWidget/ClickToChatV2Form.tsx:108
+#: src/pages/chatWidget/ClickToChatV2Form.tsx:146
+msgid "Give your widget an unique name to easily identify it in the list of widgets."
+msgstr ""
+
+#: src/pages/chatWidget/ClickToChatV2Form.tsx:151
+#: src/pages/chatWidget/ReviewTab.tsx:187
+msgid "Widget Name"
+msgstr ""
+
+#: src/pages/chatWidget/ClickToChatV2Form.tsx:157
 #: src/pages/chatWidget/components/WidgetCard.tsx:179
 msgid "Channels"
 msgstr ""
 
-#: src/pages/chatWidget/ClickToChatReview.tsx:109
-#: src/pages/chatWidget/components/ChannelGeneralSettings.tsx:251
-msgid "Enabled"
+#: src/pages/chatWidget/ClickToChatV2Form.tsx:287
+msgid "Maximum custom channels limit reached"
 msgstr ""
 
-#: src/pages/chatWidget/ClickToChatReview.tsx:116
-msgid "Primary Channel"
-msgstr ""
-
-#: src/pages/chatWidget/ClickToChatReview.tsx:133
-msgid "Shown on"
-msgstr ""
-
-#: src/pages/chatWidget/ClickToChatReview.tsx:143
-msgid "Trigger"
-msgstr ""
-
-#: src/pages/chatWidget/ClickToChatReview.tsx:153
-msgid "Layout"
-msgstr ""
-
-#: src/pages/chatWidget/ClickToChatReview.tsx:165
-msgid "CTA"
-msgstr ""
-
-#: src/pages/chatWidget/ClickToChatReview.tsx:228
-#: src/pages/chatWidget/components/WidgetCard.tsx:122
-msgid "Ends With"
-msgstr ""
-
-#: src/pages/chatWidget/ClickToChatReview.tsx:229
-#: src/pages/chatWidget/components/WidgetCard.tsx:123
-msgid "Equals"
-msgstr ""
-
-#: src/pages/chatWidget/ClickToChatReview.tsx:239
-msgid "WordPress Page"
-msgstr ""
-
-#: src/pages/chatWidget/ClickToChatReview.tsx:268
-#: src/pages/chatWidget/components/DisplayRules.tsx:25
-msgid "Display Rules"
-msgstr ""
-
-#: src/pages/chatWidget/ClickToChatReview.tsx:275
-#: src/pages/chatWidget/components/WidgetCard.tsx:233
-msgid "Pages/URLs"
-msgstr ""
-
-#: src/pages/chatWidget/ClickToChatReview.tsx:296
-msgid "Country rules"
-msgstr ""
-
-#: src/pages/chatWidget/ClickToChatReview.tsx:303
-#: src/pages/chatWidget/components/DisplayRules.tsx:234
-msgid "Include"
-msgstr ""
-
-#: src/pages/chatWidget/ClickToChatReview.tsx:303
-#: src/pages/chatWidget/components/DisplayRules.tsx:238
-msgid "Exclude"
-msgstr ""
-
-#: src/pages/chatWidget/ClickToChatReview.tsx:326
-#: src/pages/chatWidget/components/DateScheduling.tsx:22
-msgid "Date scheduling"
-msgstr ""
-
-#: src/pages/chatWidget/ClickToChatReview.tsx:75
-msgid "On scroll"
-msgstr ""
-
-#: src/pages/chatWidget/ClickToChatReview.tsx:81
-msgid "On exit intent"
-msgstr ""
-
-#: src/pages/chatWidget/ClickToChatReview.tsx:88
-msgid "Widget Summary"
-msgstr ""
-
-#: src/pages/chatWidget/ClickToChatV2Form.tsx:102
-msgid "Widget Name"
-msgstr ""
-
-#: src/pages/chatWidget/ClickToChatV2Form.tsx:249
+#: src/pages/chatWidget/ClickToChatV2Form.tsx:316
 msgid "Add Custom Channel"
 msgstr ""
 
-#: src/pages/chatWidget/ClickToChatV2Form.tsx:255
+#: src/pages/chatWidget/ClickToChatV2Form.tsx:322
 msgid "Enabled Channels (drag to sort)"
 msgstr ""
 
-#: src/pages/chatWidget/ClickToChatV2Form.tsx:310
-#: src/pages/chatWidget/components/DateScheduling.tsx:140
-#: src/pages/chatWidget/components/DisplayRules.tsx:306
+#: src/pages/chatWidget/ClickToChatV2Form.tsx:377
+#: src/pages/chatWidget/components/ChannelAgents.tsx:134
+#: src/pages/chatWidget/components/DisplayRules.tsx:138
 msgid "Remove"
 msgstr ""
 
-#: src/pages/chatWidget/ClickToChatV2Form.tsx:97
-msgid "Give your widget an unique name to easily identify it in the list of widgets."
-msgstr ""
-
-#: src/pages/chatWidget/Editor.tsx:291
+#: src/pages/chatWidget/Editor.tsx:340
 msgid "Widget updated successfully"
 msgstr ""
 
-#: src/pages/chatWidget/Editor.tsx:314
+#: src/pages/chatWidget/Editor.tsx:363
 msgid "Failed to create widget"
 msgstr ""
 
-#: src/pages/chatWidget/Editor.tsx:345
+#: src/pages/chatWidget/Editor.tsx:568
+msgid "Please fix the errors in this tab before continuing."
+msgstr ""
+
+#: src/pages/chatWidget/Editor.tsx:621
 msgid "Edit Chat Widget"
 msgstr ""
 
-#: src/pages/chatWidget/Editor.tsx:345
-#: src/pages/chatWidget/List.tsx:443
+#: src/pages/chatWidget/Editor.tsx:621
+#: src/pages/chatWidget/List.tsx:461
 msgid "Create Chat Widget"
 msgstr ""
 
-#: src/pages/chatWidget/Editor.tsx:349
+#: src/pages/chatWidget/Editor.tsx:625
 msgid "Update Widget"
 msgstr ""
 
-#: src/pages/chatWidget/Editor.tsx:349
+#: src/pages/chatWidget/Editor.tsx:625
 msgid "Save Widget"
 msgstr ""
 
-#: src/pages/chatWidget/Editor.tsx:375
+#: src/pages/chatWidget/Editor.tsx:651
 msgid "Appearance"
 msgstr ""
 
-#: src/pages/chatWidget/Editor.tsx:380
+#: src/pages/chatWidget/Editor.tsx:656
 #: app/Utils/AdminNavMenuItems.php:45
 msgid "Triggers"
 msgstr ""
 
-#: src/pages/chatWidget/Editor.tsx:385
+#: src/pages/chatWidget/Editor.tsx:661
 msgid "Review"
 msgstr ""
 
-#: src/pages/chatWidget/Editor.tsx:468
+#: src/pages/chatWidget/Editor.tsx:732
 msgid "Back"
 msgstr ""
 
-#: src/pages/chatWidget/Editor.tsx:475
+#: src/pages/chatWidget/Editor.tsx:739
 msgid "Save Settings"
 msgstr ""
 
@@ -7012,76 +6957,201 @@ msgstr ""
 msgid "Enjoy a modern UI, lightning performance & future-ready updates"
 msgstr ""
 
-#: src/pages/chatWidget/List.tsx:157
+#: src/pages/chatWidget/List.tsx:164
 msgid "Status updated"
 msgstr ""
 
-#: src/pages/chatWidget/List.tsx:167
+#: src/pages/chatWidget/List.tsx:174
 msgid "Failed to update status"
 msgstr ""
 
-#: src/pages/chatWidget/List.tsx:201
+#: src/pages/chatWidget/List.tsx:225
 msgid "Widget deleted"
 msgstr ""
 
-#: src/pages/chatWidget/List.tsx:211
+#: src/pages/chatWidget/List.tsx:235
 msgid "Failed to delete widget"
 msgstr ""
 
-#: src/pages/chatWidget/List.tsx:272
+#: src/pages/chatWidget/List.tsx:293
 msgid "WhatsApp Chat Widget (Migrated)"
 msgstr ""
 
-#: src/pages/chatWidget/List.tsx:329
+#: src/pages/chatWidget/List.tsx:350
 msgid "Failed to migrate WhatsApp widget"
 msgstr ""
 
-#: src/pages/chatWidget/List.tsx:383
+#: src/pages/chatWidget/List.tsx:404
 msgid "Create Widget"
 msgstr ""
 
-#: src/pages/chatWidget/List.tsx:420
+#: src/pages/chatWidget/List.tsx:438
 msgid "Are You OK with Losing Customers?"
 msgstr ""
 
-#: src/pages/chatWidget/List.tsx:421
+#: src/pages/chatWidget/List.tsx:439
 msgid "👋 You're open for business. But nobody can find the door. Add a chat widget that acts like a front desk for your entire brand: WhatsApp, SMS, IG, phone, email - whatever they prefer. You show up instantly. They stay longer. You convert more."
 msgstr ""
 
-#: src/pages/chatWidget/List.tsx:428
+#: src/pages/chatWidget/List.tsx:446
 msgid "Instant support across channels"
 msgstr ""
 
-#: src/pages/chatWidget/List.tsx:432
+#: src/pages/chatWidget/List.tsx:450
 msgid "Boost conversions and sales"
 msgstr ""
 
-#: src/pages/chatWidget/List.tsx:436
+#: src/pages/chatWidget/List.tsx:454
 msgid "Target the right visitors automatically"
 msgstr ""
 
-#: src/pages/chatWidget/List.tsx:440
+#: src/pages/chatWidget/List.tsx:458
 msgid "No-code setup, works everywhere"
 msgstr ""
 
-#: src/pages/chatWidget/List.tsx:456
+#: src/pages/chatWidget/List.tsx:471
 msgid "Need help? Check our"
 msgstr ""
 
-#: src/pages/chatWidget/List.tsx:466
+#: src/pages/chatWidget/List.tsx:481
 msgid "chat widget documentation"
 msgstr ""
 
-#: src/pages/chatWidget/List.tsx:562
+#: src/pages/chatWidget/List.tsx:574
 msgid "Please connect your site to start creating chat widgets."
 msgstr ""
 
-#: src/pages/chatWidget/ReviewTab.tsx:35
+#: src/pages/chatWidget/List.tsx:593
+msgid "Widget limit reached"
+msgstr ""
+
+#: src/pages/chatWidget/List.tsx:594
+msgid "Ok"
+msgstr ""
+
+#: src/pages/chatWidget/ReviewTab.tsx:163
 msgid "Enable Widget"
 msgstr ""
 
-#: src/pages/chatWidget/ReviewTab.tsx:55
-msgid "Review Widget Settings"
+#: src/pages/chatWidget/ReviewTab.tsx:210
+#: src/pages/chatWidget/components/ChannelGeneralSettings.tsx:42
+msgid "Configuration"
+msgstr ""
+
+#: src/pages/chatWidget/ReviewTab.tsx:217
+msgid "Primary Communication Channel"
+msgstr ""
+
+#: src/pages/chatWidget/ReviewTab.tsx:227
+msgid "Not Configured"
+msgstr ""
+
+#: src/pages/chatWidget/ReviewTab.tsx:231
+msgid "No active channels"
+msgstr ""
+
+#: src/pages/chatWidget/ReviewTab.tsx:239
+msgid "Activation"
+msgstr ""
+
+#: src/pages/chatWidget/ReviewTab.tsx:244
+msgid "Trigger"
+msgstr ""
+
+#: src/pages/chatWidget/ReviewTab.tsx:256
+msgid "Layout"
+msgstr ""
+
+#: src/pages/chatWidget/ReviewTab.tsx:261
+msgid "Layout Style"
+msgstr ""
+
+#: src/pages/chatWidget/ReviewTab.tsx:277
+msgid "Visibility"
+msgstr ""
+
+#: src/pages/chatWidget/ReviewTab.tsx:282
+msgid "Visible Devices"
+msgstr ""
+
+#: src/pages/chatWidget/ReviewTab.tsx:308
+msgid "All Devices"
+msgstr ""
+
+#: src/pages/chatWidget/ReviewTab.tsx:319
+msgid "Call to Action"
+msgstr ""
+
+#: src/pages/chatWidget/ReviewTab.tsx:341
+msgid "Targeting Rules"
+msgstr ""
+
+#: src/pages/chatWidget/ReviewTab.tsx:350
+msgid "Targeting Logic"
+msgstr ""
+
+#: src/pages/chatWidget/ReviewTab.tsx:364
+msgid "Scheduling"
+msgstr ""
+
+#: src/pages/chatWidget/ReviewTab.tsx:374
+#: src/pages/chatWidget/components/DateScheduling.tsx:35
+msgid "Start Date"
+msgstr ""
+
+#: src/pages/chatWidget/ReviewTab.tsx:386
+#: src/pages/chatWidget/components/DateScheduling.tsx:82
+msgid "End Date"
+msgstr ""
+
+#: src/pages/chatWidget/ReviewTab.tsx:400
+msgid "Always active"
+msgstr ""
+
+#: src/pages/chatWidget/ReviewTab.tsx:409
+#: src/pages/chatWidget/components/BusinessHours.tsx:19
+msgid "Business Hours"
+msgstr ""
+
+#: src/pages/chatWidget/ReviewTab.tsx:417
+#: src/pages/chatWidget/components/ChannelAgents.tsx:234
+msgid "Timezone"
+msgstr ""
+
+#: src/pages/chatWidget/ReviewTab.tsx:430
+msgid "Schedule"
+msgstr ""
+
+#: src/pages/chatWidget/ReviewTab.tsx:453
+msgid "No days enabled"
+msgstr ""
+
+#: src/pages/chatWidget/ReviewTab.tsx:461
+msgid "Business hours not configured"
+msgstr ""
+
+#: src/pages/chatWidget/TriggerSettings.tsx:35
+msgid "Display Triggers"
+msgstr ""
+
+#: src/pages/chatWidget/TriggerSettings.tsx:37
+msgid "Control when and where your chat widget appears to maximize visitor engagement."
+msgstr ""
+
+#: src/pages/chatWidget/TriggerSettings.tsx:49
+msgid "Display Rules"
+msgstr ""
+
+#: src/pages/chatWidget/TriggerSettings.tsx:51
+msgid "Add multiple rule groups and rules to determine when the chat widget will be displayed. You can add rules for WP pages, URL patterns, and countries."
+msgstr ""
+
+#: src/pages/chatWidget/TriggerSettings.tsx:66
+msgid "Date Scheduling"
+msgstr ""
+
+#: src/pages/chatWidget/TriggerSettings.tsx:71
+msgid "Schedule the chat widget display by selecting a date and time range. You can add multiple schedules to display the chat widget at different times."
 msgstr ""
 
 #: src/pages/chatWidget/WidgetPreview.tsx:776
@@ -7129,7 +7199,7 @@ msgid "Maps link"
 msgstr ""
 
 #: src/pages/chatWidget/channelsConfig.ts:174
-#: src/pages/chatWidget/helpers.ts:51
+#: src/pages/chatWidget/helpers.ts:53
 msgid "Phone Number"
 msgstr ""
 
@@ -7170,7 +7240,7 @@ msgid "Enter a waze link"
 msgstr ""
 
 #: src/pages/chatWidget/channelsConfig.ts:233
-#: src/pages/chatWidget/helpers.ts:56
+#: src/pages/chatWidget/helpers.ts:58
 msgid "Place or URL"
 msgstr ""
 
@@ -7207,11 +7277,15 @@ msgid "Microsoft Teams URL"
 msgstr ""
 
 #: src/pages/chatWidget/channelsConfig.ts:289
-msgid "Link"
+msgid "Enter channel link or URL"
 msgstr ""
 
 #: src/pages/chatWidget/channelsConfig.ts:291
 msgid "Channel Link/URL"
+msgstr ""
+
+#: src/pages/chatWidget/channelsConfig.ts:72
+msgid "Enter phone number e.g. +19876543210"
 msgstr ""
 
 #: src/pages/chatWidget/channelsConfig.ts:80
@@ -7230,236 +7304,230 @@ msgstr ""
 msgid "Add new Widget"
 msgstr ""
 
-#: src/pages/chatWidget/components/AgentCard.tsx:122
-#: src/pages/chatWidget/components/ChannelGeneralSettings.tsx:190
+#: src/pages/chatWidget/components/AgentAvatarUploader.tsx:26
 msgid "No image"
 msgstr ""
 
-#: src/pages/chatWidget/components/AgentCard.tsx:132
+#: src/pages/chatWidget/components/AgentAvatarUploader.tsx:32
 msgid "Select Agent Avatar"
 msgstr ""
 
-#: src/pages/chatWidget/components/AgentCard.tsx:149
-msgid "Display name shown to visitors."
+#: src/pages/chatWidget/components/AgentAvatarUploader.tsx:36
+msgid "Use a square image (128x128px PNG/JPG) for best results."
 msgstr ""
 
-#: src/pages/chatWidget/components/AgentCard.tsx:179
-#: src/pages/chatWidget/components/ChannelGeneralSettings.tsx:61
-msgid "Username/Page"
-msgstr ""
-
-#: src/pages/chatWidget/components/AgentCard.tsx:181
-msgid "Enter agent contact for this channel (e.g., WhatsApp in international format)."
-msgstr ""
-
-#: src/pages/chatWidget/components/AgentCard.tsx:217
-msgid "Designation"
-msgstr ""
-
-#: src/pages/chatWidget/components/AgentCard.tsx:218
-msgid "Role or title shown below the name."
-msgstr ""
-
-#: src/pages/chatWidget/components/AgentCard.tsx:226
-msgid "e.g. Sales Manager"
-msgstr ""
-
-#: src/pages/chatWidget/components/AgentCard.tsx:244
-msgid "Languages"
-msgstr ""
-
-#: src/pages/chatWidget/components/AgentCard.tsx:246
-msgid "Languages the agent can handle; used to guide visitor conversations."
-msgstr ""
-
-#: src/pages/chatWidget/components/AgentCard.tsx:261
-msgid "languages selected"
-msgstr ""
-
-#: src/pages/chatWidget/components/AgentCard.tsx:264
-msgid "Select languages"
-msgstr ""
-
-#: src/pages/chatWidget/components/AgentCard.tsx:289
-msgid "Tags"
-msgstr ""
-
-#: src/pages/chatWidget/components/AgentCard.tsx:290
-msgid "Internal tags for filtering and organization."
-msgstr ""
-
-#: src/pages/chatWidget/components/AgentCard.tsx:299
-msgid "Customer Support"
-msgstr ""
-
-#: src/pages/chatWidget/components/AgentCard.tsx:300
-msgid "Sales"
-msgstr ""
-
-#: src/pages/chatWidget/components/AgentCard.tsx:301
-msgid "Marketing"
-msgstr ""
-
-#: src/pages/chatWidget/components/AgentCard.tsx:302
-msgid "Technical Support"
-msgstr ""
-
-#: src/pages/chatWidget/components/AgentCard.tsx:303
-msgid "Other"
-msgstr ""
-
-#: src/pages/chatWidget/components/AgentCard.tsx:307
-msgid "tags selected"
-msgstr ""
-
-#: src/pages/chatWidget/components/AgentCard.tsx:312
-msgid "Add tags and press Enter"
-msgstr ""
-
-#: src/pages/chatWidget/components/AgentCard.tsx:327
-msgid "Agent schedule"
-msgstr ""
-
-#: src/pages/chatWidget/components/AgentCard.tsx:351
-msgid "Set weekly availability for this agent."
-msgstr ""
-
-#: src/pages/chatWidget/components/AgentCard.tsx:36
-msgid "Agent Name is required."
-msgstr ""
-
-#: src/pages/chatWidget/components/AgentCard.tsx:71
-msgid "Remove agent"
-msgstr ""
-
-#: src/pages/chatWidget/components/AgentCard.tsx:72
-msgid "Remove agent?"
-msgstr ""
-
-#: src/pages/chatWidget/components/AgentCard.tsx:88
-msgid "Avatar"
-msgstr ""
-
-#: src/pages/chatWidget/components/AgentCard.tsx:89
-msgid "Agent picture shown in the widget."
-msgstr ""
-
-#: src/pages/chatWidget/components/AgentsSection.tsx:56
+#: src/pages/chatWidget/components/AgentsSection.tsx:25
 msgid "Agents"
 msgstr ""
 
-#: src/pages/chatWidget/components/AgentsSection.tsx:59
-msgid "Add agents to this channel. Agents are the people who will be available to chat with your customers."
-msgstr ""
-
-#: src/pages/chatWidget/components/AgentsSection.tsx:79
-msgid "Add Agent"
-msgstr ""
-
-#: src/pages/chatWidget/components/AgentsSection.tsx:81
-#: src/pages/chatWidget/components/ChannelAppearanceSettings.tsx:87
-#: src/pages/chatWidget/components/DateScheduling.tsx:168
-#: src/pages/chatWidget/components/DisplayRules.tsx:368
-msgid "Requires business plan or higher"
+#: src/pages/chatWidget/components/AgentsSection.tsx:29
+msgid "Add agents to this channel. Agents appear inside the widget for visitors to contact."
 msgstr ""
 
 #: src/pages/chatWidget/components/AnalyticsHeader.tsx:39
 msgid "A complete overview of your chat widget interactions and conversations."
 msgstr ""
 
-#: src/pages/chatWidget/components/BusinessHours.tsx:20
-#: src/pages/chatWidget/components/WidgetCard.tsx:230
-msgid "Business hours"
-msgstr ""
-
-#: src/pages/chatWidget/components/BusinessHours.tsx:39
+#: src/pages/chatWidget/components/BusinessHours.tsx:38
 msgid "Set the chat widget display hours by selecting a time range. You can add weekly schedule to display the chat widget at different times."
 msgstr ""
 
-#: src/pages/chatWidget/components/BusyTimesChart.tsx:180
+#: src/pages/chatWidget/components/BusyTimesChart.tsx:135
+msgid "Interactions:"
+msgstr ""
+
+#: src/pages/chatWidget/components/BusyTimesChart.tsx:136
+msgid "Chat Initiated:"
+msgstr ""
+
+#: src/pages/chatWidget/components/BusyTimesChart.tsx:149
+msgid "Time:"
+msgstr ""
+
+#: src/pages/chatWidget/components/BusyTimesChart.tsx:230
 msgid "Most Busy Times"
 msgstr ""
 
-#: src/pages/chatWidget/components/BusyTimesChart.tsx:193
+#: src/pages/chatWidget/components/BusyTimesChart.tsx:243
 msgid "Interactions"
 msgstr ""
 
-#: src/pages/chatWidget/components/BusyTimesChart.tsx:194
+#: src/pages/chatWidget/components/BusyTimesChart.tsx:244
 #: src/pages/chatWidget/components/WidgetAnalyticsDrawer.tsx:234
 msgid "Chats Initiated"
 msgstr ""
 
-#: src/pages/chatWidget/components/BusyTimesChart.tsx:211
+#: src/pages/chatWidget/components/BusyTimesChart.tsx:261
 msgid "Users interacted with Chat Assistant the most during this period."
 msgstr ""
 
-#: src/pages/chatWidget/components/BusyTimesChart.tsx:219
+#: src/pages/chatWidget/components/BusyTimesChart.tsx:269
 #: src/pages/chatWidget/components/PopularChannelsList.tsx:90
 #: src/pages/chatWidget/components/TopAgentsList.tsx:51
 #: src/pages/chatWidget/components/WidgetAnalyticsDrawer.tsx:302
 msgid "No data available"
 msgstr ""
 
-#: src/pages/chatWidget/components/BusyTimesChart.tsx:257
+#: src/pages/chatWidget/components/BusyTimesChart.tsx:303
 msgid "Period:"
 msgstr ""
 
-#: src/pages/chatWidget/components/BusyTimesChart.tsx:260
+#: src/pages/chatWidget/components/BusyTimesChart.tsx:306
 msgid "Timezone: UTC"
 msgstr ""
 
-#: src/pages/chatWidget/components/ChannelAppearanceSettings.tsx:132
-#: src/pages/chatWidget/components/ChannelGeneralSettings.tsx:195
-msgid "Remove image"
+#: src/pages/chatWidget/components/ChannelAgents.tsx:107
+msgid "Add Agent"
 msgstr ""
 
-#: src/pages/chatWidget/components/ChannelAppearanceSettings.tsx:29
-msgid "Color"
+#: src/pages/chatWidget/components/ChannelAgents.tsx:141
+msgid "Avatar"
 msgstr ""
 
-#: src/pages/chatWidget/components/ChannelAppearanceSettings.tsx:60
+#: src/pages/chatWidget/components/ChannelAgents.tsx:156
+msgid "Please enter an agent name."
+msgstr ""
+
+#: src/pages/chatWidget/components/ChannelAgents.tsx:160
+msgid "Agent name cannot exceed 64 characters."
+msgstr ""
+
+#: src/pages/chatWidget/components/ChannelAgents.tsx:164
+msgid "Agent name"
+msgstr ""
+
+#: src/pages/chatWidget/components/ChannelAgents.tsx:170
+msgid "Designation"
+msgstr ""
+
+#: src/pages/chatWidget/components/ChannelAgents.tsx:178
+msgid "e.g. Sales Manager"
+msgstr ""
+
+#: src/pages/chatWidget/components/ChannelAgents.tsx:182
+msgid "Languages"
+msgstr ""
+
+#: src/pages/chatWidget/components/ChannelAgents.tsx:187
+msgid "Select languages"
+msgstr ""
+
+#: src/pages/chatWidget/components/ChannelAgents.tsx:192
+msgid "Tags"
+msgstr ""
+
+#: src/pages/chatWidget/components/ChannelAgents.tsx:195
+msgid "Add tags"
+msgstr ""
+
+#: src/pages/chatWidget/components/ChannelAgents.tsx:205
+msgid "Agent schedule"
+msgstr ""
+
+#: src/pages/chatWidget/components/ChannelAgents.tsx:207
+msgid "Set weekly availability for this agent."
+msgstr ""
+
+#: src/pages/chatWidget/components/ChannelAgents.tsx:240
+msgid "Please select a timezone for the agent schedule."
+msgstr ""
+
+#: src/pages/chatWidget/components/ChannelAgents.tsx:250
+msgid "Weekly hours"
+msgstr ""
+
+#: src/pages/chatWidget/components/ChannelAgents.tsx:273
+msgid "Add Another Agent"
+msgstr ""
+
+#: src/pages/chatWidget/components/ChannelAgents.tsx:58
+msgid "Contact"
+msgstr ""
+
+#: src/pages/chatWidget/components/ChannelAgents.tsx:61
+msgid "Please enter %s for the agent."
+msgstr ""
+
+#: src/pages/chatWidget/components/ChannelAppearanceSettings.tsx:100
 msgid "Custom Icon/Image"
 msgstr ""
 
-#: src/pages/chatWidget/components/ChannelAppearanceSettings.tsx:78
+#: src/pages/chatWidget/components/ChannelAppearanceSettings.tsx:123
 msgid "Disabled"
 msgstr ""
 
-#: src/pages/chatWidget/components/ChannelAppearanceSettings.tsx:86
+#: src/pages/chatWidget/components/ChannelAppearanceSettings.tsx:132
 msgid "Select custom appearance"
 msgstr ""
 
-#: src/pages/chatWidget/components/ChannelGeneralSettings.tsx:139
+#: src/pages/chatWidget/components/ChannelAppearanceSettings.tsx:133
+msgid "Requires business plan or higher"
+msgstr ""
+
+#: src/pages/chatWidget/components/ChannelAppearanceSettings.tsx:185
+#: src/pages/chatWidget/components/ChannelGeneralSettings.tsx:217
+msgid "Remove image"
+msgstr ""
+
+#: src/pages/chatWidget/components/ChannelAppearanceSettings.tsx:36
+msgid "Design & Appearance"
+msgstr ""
+
+#: src/pages/chatWidget/components/ChannelAppearanceSettings.tsx:38
+msgid "Customize how the widget looks on your website."
+msgstr ""
+
+#: src/pages/chatWidget/components/ChannelAppearanceSettings.tsx:50
+msgid "Brand Color"
+msgstr ""
+
+#: src/pages/chatWidget/components/ChannelAppearanceSettings.tsx:68
+#: src/pages/chatWidget/components/TriggerTypeSection.tsx:18
+msgid "Target Devices"
+msgstr ""
+
+#: src/pages/chatWidget/components/ChannelGeneralSettings.tsx:120
+#: src/pages/chatWidget/helpers.ts:84
+msgid "Invalid value."
+msgstr ""
+
+#: src/pages/chatWidget/components/ChannelGeneralSettings.tsx:162
 #: app/AdminBarMenu.php:88
 #: app/NavMenu.php:117
 #: app/NavMenu.php:118
 msgid "Upgrade to Pro"
 msgstr ""
 
-#: src/pages/chatWidget/components/ChannelGeneralSettings.tsx:261
-#: src/pages/chatWidget/components/TriggerTypeSection.tsx:11
-msgid "Show On"
+#: src/pages/chatWidget/components/ChannelGeneralSettings.tsx:212
+msgid "No image selected"
 msgstr ""
 
-#: src/pages/chatWidget/components/ChannelGeneralSettings.tsx:43
+#: src/pages/chatWidget/components/ChannelGeneralSettings.tsx:44
+msgid "Provide the necessary details to configure this channel."
+msgstr ""
+
+#: src/pages/chatWidget/components/ChannelGeneralSettings.tsx:54
+msgid "Enabled"
+msgstr ""
+
+#: src/pages/chatWidget/components/ChannelGeneralSettings.tsx:66
 msgid "Channel Name"
 msgstr ""
 
-#: src/pages/chatWidget/components/ChannelGeneralSettings.tsx:49
-msgid "Name your custom channel"
+#: src/pages/chatWidget/components/ChannelGeneralSettings.tsx:72
+msgid "Enter channel name"
 msgstr ""
 
-#: src/pages/chatWidget/components/ChannelGeneralSettings.tsx:97
-#: src/pages/chatWidget/helpers.ts:82
-msgid "Invalid value."
+#: src/pages/chatWidget/components/ChannelGeneralSettings.tsx:84
+msgid "Username/Page"
 msgstr ""
 
-#: src/pages/chatWidget/components/ChannelScheduleSection.tsx:49
-msgid "Channel schedule"
+#: src/pages/chatWidget/components/ChannelScheduleSection.tsx:23
+msgid "Availability Schedule"
 msgstr ""
 
-#: src/pages/chatWidget/components/ChannelScheduleSection.tsx:73
-msgid "Set weekly availability for this channel. Choose timezone, days and time windows."
+#: src/pages/chatWidget/components/ChannelScheduleSection.tsx:27
+msgid "Configure when this channel should be visible to visitors."
 msgstr ""
 
 #: src/pages/chatWidget/components/CountryMultiSelect.tsx:49
@@ -7478,85 +7546,109 @@ msgstr ""
 msgid "Custom CSS"
 msgstr ""
 
-#: src/pages/chatWidget/components/DateScheduling.tsx:104
-msgid "To"
-msgstr ""
-
-#: src/pages/chatWidget/components/DateScheduling.tsx:166
+#: src/pages/chatWidget/components/DateScheduling.tsx:169
 msgid "Add Schedule"
 msgstr ""
 
-#: src/pages/chatWidget/components/DateScheduling.tsx:32
-msgid "Schedule the chat widget display by selecting a date and time range. You can add multiple schedules to display the chat widget at different times."
+#: src/pages/chatWidget/components/DateScheduling.tsx:37
+msgid "Start date is required"
 msgstr ""
 
-#: src/pages/chatWidget/components/DateScheduling.tsx:59
-msgid "From"
+#: src/pages/chatWidget/components/DateScheduling.tsx:88
+msgid "End date is required"
 msgstr ""
 
-#: src/pages/chatWidget/components/DisplayRules.tsx:161
+#: src/pages/chatWidget/components/DateScheduling.tsx:98
+msgid "End date must be after start date"
+msgstr ""
+
+#: src/pages/chatWidget/components/DisplayRules.tsx:109
+msgid "Rule Group"
+msgstr ""
+
+#: src/pages/chatWidget/components/DisplayRules.tsx:124
+msgid "Are you sure you want to remove this rule group?"
+msgstr ""
+
+#: src/pages/chatWidget/components/DisplayRules.tsx:191
+msgid "Select a field"
+msgstr ""
+
+#: src/pages/chatWidget/components/DisplayRules.tsx:201
 #: src/pages/chatWidget/components/WidgetCard.tsx:135
 msgid "WP Page"
 msgstr ""
 
-#: src/pages/chatWidget/components/DisplayRules.tsx:168
+#: src/pages/chatWidget/components/DisplayRules.tsx:209
 msgid "Countries"
 msgstr ""
 
-#: src/pages/chatWidget/components/DisplayRules.tsx:198
+#: src/pages/chatWidget/components/DisplayRules.tsx:228
+msgid "Select operator"
+msgstr ""
+
+#: src/pages/chatWidget/components/DisplayRules.tsx:239
 msgid "Is"
 msgstr ""
 
-#: src/pages/chatWidget/components/DisplayRules.tsx:201
+#: src/pages/chatWidget/components/DisplayRules.tsx:243
 msgid "Is not"
 msgstr ""
 
-#: src/pages/chatWidget/components/DisplayRules.tsx:269
+#: src/pages/chatWidget/components/DisplayRules.tsx:253
+msgid "Include"
+msgstr ""
+
+#: src/pages/chatWidget/components/DisplayRules.tsx:257
+msgid "Exclude"
+msgstr ""
+
+#: src/pages/chatWidget/components/DisplayRules.tsx:267
 msgid "Starts with"
 msgstr ""
 
-#: src/pages/chatWidget/components/DisplayRules.tsx:277
+#: src/pages/chatWidget/components/DisplayRules.tsx:275
 msgid "Ends with"
 msgstr ""
 
-#: src/pages/chatWidget/components/DisplayRules.tsx:281
+#: src/pages/chatWidget/components/DisplayRules.tsx:279
 msgid "Exact match"
 msgstr ""
 
-#: src/pages/chatWidget/components/DisplayRules.tsx:330
+#: src/pages/chatWidget/components/DisplayRules.tsx:301
+msgid "Please select a WordPress page."
+msgstr ""
+
+#: src/pages/chatWidget/components/DisplayRules.tsx:316
+msgid "Select at least one country"
+msgstr ""
+
+#: src/pages/chatWidget/components/DisplayRules.tsx:324
+msgid "You can select up to 80 countries"
+msgstr ""
+
+#: src/pages/chatWidget/components/DisplayRules.tsx:333
+msgid "Enter a value"
+msgstr ""
+
+#: src/pages/chatWidget/components/DisplayRules.tsx:340
+msgid "Value cannot exceed 512 characters"
+msgstr ""
+
+#: src/pages/chatWidget/components/DisplayRules.tsx:354
+msgid "/blog or ?ref=ad"
+msgstr ""
+
+#: src/pages/chatWidget/components/DisplayRules.tsx:389
 msgid "Add Rule"
 msgstr ""
 
-#: src/pages/chatWidget/components/DisplayRules.tsx:35
-msgid "Add multiple rule groups and rules to determine when the chat widget will be displayed. You can add rules for WP pages, URL patterns, and countries."
+#: src/pages/chatWidget/components/DisplayRules.tsx:428
+msgid "Add New Rule Group"
 msgstr ""
 
-#: src/pages/chatWidget/components/DisplayRules.tsx:366
-msgid "Add Rule Group"
-msgstr ""
-
-#: src/pages/chatWidget/components/DisplayRules.tsx:43
-msgid "Group logic"
-msgstr ""
-
-#: src/pages/chatWidget/components/DisplayRules.tsx:63
-msgid "Remove group"
-msgstr ""
-
-#: src/pages/chatWidget/components/DisplayRules.tsx:65
-msgid "Sure to remove this rule group?"
-msgstr ""
-
-#: src/pages/chatWidget/components/DisplayRules.tsx:77
-msgid "Rule logic"
-msgstr ""
-
-#: src/pages/chatWidget/components/DisplayRules.tsx:83
-msgid "Match any (OR)"
-msgstr ""
-
-#: src/pages/chatWidget/components/DisplayRules.tsx:84
-msgid "Match all (AND)"
+#: src/pages/chatWidget/components/DisplayRules.tsx:87
+msgid "Group Logic:"
 msgstr ""
 
 #: src/pages/chatWidget/components/OverviewStatsCards.tsx:30
@@ -7595,6 +7687,38 @@ msgstr ""
 msgid "Search by widget name"
 msgstr ""
 
+#: src/pages/chatWidget/components/TargetingLogicReview.tsx:119
+msgid "Widget appears on all pages for all visitors."
+msgstr ""
+
+#: src/pages/chatWidget/components/TargetingLogicReview.tsx:129
+msgid "Widget appears when"
+msgstr ""
+
+#: src/pages/chatWidget/components/TargetingLogicReview.tsx:131
+msgid "ALL groups"
+msgstr ""
+
+#: src/pages/chatWidget/components/TargetingLogicReview.tsx:131
+msgid "ANY group"
+msgstr ""
+
+#: src/pages/chatWidget/components/TargetingLogicReview.tsx:133
+msgid "evaluate to true."
+msgstr ""
+
+#: src/pages/chatWidget/components/TargetingLogicReview.tsx:144
+msgid "Match ALL rules below"
+msgstr ""
+
+#: src/pages/chatWidget/components/TargetingLogicReview.tsx:145
+msgid "Match ANY rule below"
+msgstr ""
+
+#: src/pages/chatWidget/components/TargetingLogicReview.tsx:154
+msgid "No rules configured in this group."
+msgstr ""
+
 #: src/pages/chatWidget/components/TopAgentsList.tsx:19
 msgid "Top Agents"
 msgstr ""
@@ -7607,28 +7731,16 @@ msgstr ""
 msgid "chats"
 msgstr ""
 
-#: src/pages/chatWidget/components/TriggerTypeSection.tsx:19
+#: src/pages/chatWidget/components/TriggerTypeSection.tsx:26
 msgid "Trigger Type"
 msgstr ""
 
-#: src/pages/chatWidget/components/TriggerTypeSection.tsx:21
-msgid "The trigger type determines when the chat widget will be displayed by selecting an option above."
-msgstr ""
-
 #: src/pages/chatWidget/components/TriggerTypeSection.tsx:28
-msgid "Always display"
-msgstr ""
-
-#: src/pages/chatWidget/components/TriggerTypeSection.tsx:31
-msgid "Display on exit intent"
+msgid "The trigger type determines when the chat widget will be displayed by selecting an option above."
 msgstr ""
 
 #: src/pages/chatWidget/components/TriggerTypeSection.tsx:44
 msgid "Display after seconds"
-msgstr ""
-
-#: src/pages/chatWidget/components/TriggerTypeSection.tsx:54
-msgid "Display after scroll %"
 msgstr ""
 
 #: src/pages/chatWidget/components/WidgetAnalyticsDrawer.tsx:126
@@ -7645,6 +7757,14 @@ msgstr ""
 
 #: src/pages/chatWidget/components/WidgetCard.tsx:114
 msgid "All except"
+msgstr ""
+
+#: src/pages/chatWidget/components/WidgetCard.tsx:122
+msgid "Ends With"
+msgstr ""
+
+#: src/pages/chatWidget/components/WidgetCard.tsx:123
+msgid "Equals"
 msgstr ""
 
 #: src/pages/chatWidget/components/WidgetCard.tsx:143
@@ -7665,6 +7785,14 @@ msgstr ""
 
 #: src/pages/chatWidget/components/WidgetCard.tsx:226
 msgid "Display rules"
+msgstr ""
+
+#: src/pages/chatWidget/components/WidgetCard.tsx:230
+msgid "Business hours"
+msgstr ""
+
+#: src/pages/chatWidget/components/WidgetCard.tsx:233
+msgid "Pages/URLs"
 msgstr ""
 
 #: src/pages/chatWidget/components/WidgetCard.tsx:252
@@ -7692,39 +7820,67 @@ msgstr ""
 msgid "Search pages…"
 msgstr ""
 
-#: src/pages/chatWidget/helpers.ts:134
+#: src/pages/chatWidget/helpers.ts:136
 msgid "This field is required."
 msgstr ""
 
-#: src/pages/chatWidget/helpers.ts:138
+#: src/pages/chatWidget/helpers.ts:140
 msgid "Enter a valid email address."
 msgstr ""
 
-#: src/pages/chatWidget/helpers.ts:143
+#: src/pages/chatWidget/helpers.ts:145
 msgid "Enter phone with country code. Eg: +1415555"
 msgstr ""
 
-#: src/pages/chatWidget/helpers.ts:156
+#: src/pages/chatWidget/helpers.ts:158
 msgid "Enter a valid URL."
 msgstr ""
 
-#: src/pages/chatWidget/helpers.ts:218
+#: src/pages/chatWidget/helpers.ts:220
 msgid "👋 Welcome!"
 msgstr ""
 
-#: src/pages/chatWidget/helpers.ts:219
+#: src/pages/chatWidget/helpers.ts:221
 msgid "Choose your preferred channel to start chatting"
 msgstr ""
 
-#: src/pages/chatWidget/helpers.ts:53
+#: src/pages/chatWidget/helpers.ts:35
+msgid "Mon"
+msgstr ""
+
+#: src/pages/chatWidget/helpers.ts:36
+msgid "Tue"
+msgstr ""
+
+#: src/pages/chatWidget/helpers.ts:37
+msgid "Wed"
+msgstr ""
+
+#: src/pages/chatWidget/helpers.ts:38
+msgid "Thu"
+msgstr ""
+
+#: src/pages/chatWidget/helpers.ts:39
+msgid "Fri"
+msgstr ""
+
+#: src/pages/chatWidget/helpers.ts:40
+msgid "Sat"
+msgstr ""
+
+#: src/pages/chatWidget/helpers.ts:41
+msgid "Sun"
+msgstr ""
+
+#: src/pages/chatWidget/helpers.ts:55
 msgid "Phone (+CCC...)"
 msgstr ""
 
-#: src/pages/chatWidget/helpers.ts:61
+#: src/pages/chatWidget/helpers.ts:63
 msgid "Page/User"
 msgstr ""
 
-#: src/pages/chatWidget/helpers.ts:708
+#: src/pages/chatWidget/helpers.ts:718
 msgid "Invalid CSS syntax."
 msgstr ""
 
@@ -7864,936 +8020,905 @@ msgstr ""
 msgid "Read the Getting Started Guide"
 msgstr ""
 
-#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:162
-msgid "Weekly Digest"
-msgstr ""
-
-#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:165
-msgid "Just now"
-msgstr ""
-
-#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:208
-msgid "Read 5 more stories"
-msgstr ""
-
-#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:222
-msgid "New Post Published"
-msgstr ""
-
-#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:223
-msgid "Sending to 5,230 subscribers..."
-msgstr ""
-
-#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:233
-msgid "Subscriber Growth"
-msgstr ""
-
-#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:234
-msgid "Top source: Mobile"
-msgstr ""
-
-#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:283
-#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:107
+#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:100
+#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:110
 msgid "Multi-Channel Chat"
 msgstr ""
 
-#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:284
-#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:108
+#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:101
+#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:111
 msgid "Support via Any App"
 msgstr ""
 
-#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:305
+#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:122
 msgid "A Better Way to Bring Visitors Back to Your"
 msgstr ""
 
-#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:306
+#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:123
 msgid "WordPress Site"
 msgstr ""
 
-#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:307
+#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:124
 msgid "Stay connected with your audience using instant Web Push notifications, a powerful Multi-Channel Chat Widget, and advanced engagement tools built to help your site grow."
 msgstr ""
 
-#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:315
-#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:137
+#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:132
+#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:140
 msgid "Takes less than 2 minutes."
 msgstr ""
 
-#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:320
+#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:137
 msgid "Ready to grow your WordPress audience?"
 msgstr ""
 
-#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:328
+#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:145
 msgid "Why PushEngage Helps WordPress Sites Grow"
 msgstr ""
 
-#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:329
+#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:146
 msgid "Visitors often read once and never return. PushEngage helps you reach them instantly with updates that matter."
 msgstr ""
 
-#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:336
+#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:153
 msgid "Send automatic push notifications for new content"
 msgstr ""
 
-#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:340
+#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:157
 msgid "Bring readers back with relevant and timely updates"
 msgstr ""
 
-#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:344
+#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:161
 msgid "Create audience groups based on behavior"
 msgstr ""
 
-#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:348
+#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:165
 msgid "Offer a fast multi-channel chat experience"
 msgstr ""
 
-#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:352
+#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:169
 msgid "Send newsletter-style push messages"
 msgstr ""
 
-#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:356
+#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:173
 msgid "Unlock WhatsApp automation when WooCommerce is active"
 msgstr ""
 
-#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:359
+#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:176
 msgid "Complete Setup to Get Started"
 msgstr ""
 
-#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:363
+#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:180
 msgid "You only need to connect your site once."
 msgstr ""
 
-#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:370
+#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:187
 msgid "Make sure your readers never miss new content."
 msgstr ""
 
-#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:371
+#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:188
 msgid "Two automation modes:"
 msgstr ""
 
-#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:374
+#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:191
 msgid "From the WordPress Editor"
 msgstr ""
 
-#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:375
+#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:192
 msgid "Send a push notification when you publish or update a post."
 msgstr ""
 
-#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:384
+#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:201
 msgid "From your RSS Feed"
 msgstr ""
 
-#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:385
+#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:202
 msgid "Ideal for sites with frequent publishing schedules."
 msgstr ""
 
-#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:391
+#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:208
 msgid "No email list required. No manual steps."
 msgstr ""
 
-#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:392
+#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:209
 msgid "Enable Automatic Blog Updates"
 msgstr ""
 
-#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:396
+#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:213
 msgid "Automation keeps your audience engaged effortlessly."
 msgstr ""
 
-#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:398
+#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:215
 msgid "Automated Blog Post Updates (Editor & RSS)"
 msgstr ""
 
-#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:403
+#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:220
 msgid "Engagement"
 msgstr ""
 
-#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:406
+#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:223
 msgid "Send notifications when your audience is most likely to engage."
 msgstr ""
 
-#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:410
-#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:407
+#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:227
+#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:410
 msgid "You can:"
 msgstr ""
 
-#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:412
+#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:229
 msgid "Schedule posts ahead of time"
 msgstr ""
 
-#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:413
+#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:230
 msgid "Deliver messages in each subscriber's local time zone"
 msgstr ""
 
-#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:414
+#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:231
 msgid "Avoid low-engagement hours"
 msgstr ""
 
-#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:415
+#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:232
 msgid "Reach global audiences effectively"
 msgstr ""
 
-#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:417
+#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:234
 msgid "Better timing improves clicks and return visits."
 msgstr ""
 
-#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:418
+#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:235
 msgid "Send Notifications at the Right Time"
 msgstr ""
 
-#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:422
+#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:239
 msgid "Engagement improves when timing is right."
 msgstr ""
 
-#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:424
+#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:241
 msgid "Smart Timing With Scheduling and Time-Zone Targeting"
 msgstr ""
 
-#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:430
+#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:247
 msgid "Smart Segmentation for Better Engagement"
 msgstr ""
 
-#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:431
+#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:248
 msgid "Not every subscriber wants the same updates. PushEngage helps you tailor notifications to user behavior."
 msgstr ""
 
-#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:435
+#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:252
 msgid "Segment your audience by:"
 msgstr ""
 
-#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:438
+#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:255
 msgid "Pages visited"
 msgstr ""
 
-#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:443
+#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:260
 msgid "Geography"
 msgstr ""
 
-#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:447
+#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:264
 msgid "Device type"
 msgstr ""
 
-#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:448
+#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:265
 msgid "Actions taken"
 msgstr ""
 
-#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:450
+#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:267
 msgid "Content interest"
 msgstr ""
 
-#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:455
+#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:272
 msgid "Relevant messages create loyal readers."
 msgstr ""
 
-#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:456
+#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:273
 msgid "Create Audience Segments"
 msgstr ""
 
-#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:460
+#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:277
 msgid "Targeted messages perform better."
 msgstr ""
 
-#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:465
+#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:282
 msgid "Direct Reach"
 msgstr ""
 
-#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:468
+#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:285
 msgid "Keep your audience updated without relying on email inboxes."
 msgstr ""
 
-#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:472
+#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:289
 msgid "Perfect for:"
 msgstr ""
 
-#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:474
+#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:291
 msgid "Weekly article collections"
 msgstr ""
 
-#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:475
+#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:292
 msgid "Featured content"
 msgstr ""
 
-#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:476
+#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:293
 msgid "Educational updates"
 msgstr ""
 
-#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:477
+#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:294
 msgid "Announcements and reminders"
 msgstr ""
 
-#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:479
+#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:296
 msgid "Push newsletters get higher open rates and reach readers instantly."
 msgstr ""
 
-#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:483
+#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:300
 msgid "Send Your First Push Newsletter"
 msgstr ""
 
-#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:487
+#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:304
 msgid "A faster alternative to email."
 msgstr ""
 
-#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:489
+#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:306
 msgid "Push-Based Newsletters (No Email Required)"
 msgstr ""
 
-#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:495
+#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:312
 msgid "Support & Sales"
 msgstr ""
 
-#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:497
+#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:314
 msgid "Multi-Channel Chat Widget to Engage Visitors and Capture High-Intent Leads"
 msgstr ""
 
-#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:501
+#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:318
 msgid "Give visitors a fast, convenient way to reach you. The Chat Widget also helps you guide, qualify, and convert your traffic."
 msgstr ""
 
-#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:505
+#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:322
 msgid "Visitors can instantly contact you through:"
 msgstr ""
 
-#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:514
-msgid "Service Qualification"
-msgstr ""
-
-#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:515
-msgid "Ask 2–3 simple questions, then route serious leads to your calendar."
-msgstr ""
-
-#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:521
-msgid "Mini Intake Form"
-msgstr ""
-
-#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:522
-msgid "Turn the widget into a small quiz that guides visitors to the right service."
-msgstr ""
-
-#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:528
-msgid "Turn Blog Traffic Into Sales"
-msgstr ""
-
-#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:529
-msgid "Promote digital products, templates, courses, or e-books inside the widget."
-msgstr ""
-
-#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:535
-msgid "Appointment Booking"
-msgstr ""
-
-#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:536
-msgid "Trigger booking prompts on Services, Pricing, or Case Study pages."
-msgstr ""
-
-#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:542
-msgid "Content Discovery"
-msgstr ""
-
-#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:543
-msgid "AI assistant recommends content like 'What should I read next?'."
-msgstr ""
-
-#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:549
-#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:311
-msgid "Customization Options:"
-msgstr ""
-
-#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:550
-msgid "Desktop and mobile layouts • Placement and targeting • Styling to match your brand"
-msgstr ""
-
-#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:554
-#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:316
-msgid "Add the Multi-Channel Chat Widget"
-msgstr ""
-
-#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:558
-msgid "Improve engagement with smarter conversations."
-msgstr ""
-
-#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:570
-#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:331
-msgid "Messenger"
-msgstr ""
-
-#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:576
-#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:337
+#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:326
+#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:310
 msgid "Telegram"
 msgstr ""
 
-#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:583
+#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:331
+msgid "Service Qualification"
+msgstr ""
+
+#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:332
+msgid "Ask 2–3 simple questions, then route serious leads to your calendar."
+msgstr ""
+
+#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:338
+msgid "Mini Intake Form"
+msgstr ""
+
+#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:339
+msgid "Turn the widget into a small quiz that guides visitors to the right service."
+msgstr ""
+
+#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:345
+msgid "Turn Blog Traffic Into Sales"
+msgstr ""
+
+#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:346
+msgid "Promote digital products, templates, courses, or e-books inside the widget."
+msgstr ""
+
+#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:352
+msgid "Appointment Booking"
+msgstr ""
+
+#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:353
+msgid "Trigger booking prompts on Services, Pricing, or Case Study pages."
+msgstr ""
+
+#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:359
+msgid "Content Discovery"
+msgstr ""
+
+#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:360
+msgid "AI assistant recommends content like 'What should I read next?'."
+msgstr ""
+
+#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:366
+#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:314
+msgid "Customization Options:"
+msgstr ""
+
+#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:367
+msgid "Desktop and mobile layouts • Placement and targeting • Styling to match your brand"
+msgstr ""
+
+#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:371
+#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:319
+msgid "Add the Multi-Channel Chat Widget"
+msgstr ""
+
+#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:375
+msgid "Improve engagement with smarter conversations."
+msgstr ""
+
+#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:384
+#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:331
+msgid "Facebook Messenger"
+msgstr ""
+
+#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:387
+#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:334
+msgid "Messenger"
+msgstr ""
+
+#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:39
+msgid "New Post Published"
+msgstr ""
+
+#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:40
+msgid "Sending to 5,230 subscribers..."
+msgstr ""
+
+#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:400
 msgid "WhatsApp Automation for Ecommerce (WooCommerce Only)"
 msgstr ""
 
-#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:584
+#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:401
 msgid "WhatsApp is a powerful way to communicate with shoppers. PushEngage supports official WhatsApp template messages only for ecommerce workflows."
 msgstr ""
 
-#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:589
+#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:406
 msgid "Order status updates"
 msgstr ""
 
-#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:590
+#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:407
 msgid "Delivery and fulfillment alerts"
 msgstr ""
 
-#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:591
+#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:408
 msgid "Cart abandonment reminders"
 msgstr ""
 
-#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:592
+#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:409
 msgid "Customer communication templates"
 msgstr ""
 
-#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:593
+#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:410
 msgid "Post-purchase messages"
 msgstr ""
 
-#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:595
+#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:412
 msgid "Enable WhatsApp for Your WooCommerce Store"
 msgstr ""
 
-#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:599
-#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:360
+#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:416
+#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:363
 msgid "Turn WhatsApp into a trusted notification channel for your customers."
 msgstr ""
 
-#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:606
+#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:423
 msgid "Writing effective notifications is easier with AI."
 msgstr ""
 
-#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:607
+#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:424
 msgid "Use AI to:"
 msgstr ""
 
-#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:609
+#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:426
 msgid "Rewrite titles and descriptions"
 msgstr ""
 
-#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:610
+#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:427
 msgid "Improve clarity and engagement"
 msgstr ""
 
-#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:611
+#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:428
 msgid "Generate A/B test variations"
 msgstr ""
 
-#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:612
+#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:429
 msgid "Create new messaging ideas"
 msgstr ""
 
-#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:614
-#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:414
+#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:431
+#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:417
 msgid "AI credits start at $10 for 5000 credits."
 msgstr ""
 
-#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:615
-#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:415
+#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:432
+#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:418
 msgid "Try the AI Copy Assistant"
 msgstr ""
 
-#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:619
-#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:419
+#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:436
+#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:422
 msgid "Better messages lead to better clicks."
 msgstr ""
 
-#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:620
+#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:437
 msgid "Original Draft"
 msgstr ""
 
-#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:621
+#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:438
 msgid "New post up. Read it now."
 msgstr ""
 
-#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:622
+#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:439
 msgid "AI Improved"
 msgstr ""
 
-#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:623
+#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:440
 msgid "🔥 Hot off the press! Discover 5 secrets to boost your productivity today. Read more 👇"
 msgstr ""
 
-#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:628
+#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:445
 msgid "AI Copy Assistant to Improve Your Messaging"
 msgstr ""
 
-#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:63
-msgid "New York"
-msgstr ""
-
-#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:631
+#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:448
 msgid "Optional Upgrade Highlights"
 msgstr ""
 
-#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:632
+#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:449
 msgid "PushEngage Pro unlocks advanced features for deeper engagement."
 msgstr ""
 
-#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:637
+#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:454
 msgid "Advanced segmentation"
 msgstr ""
 
-#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:638
+#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:455
 msgid "A/B testing"
 msgstr ""
 
-#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:639
+#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:456
 msgid "Automated drip sequences"
 msgstr ""
 
-#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:64
-msgid "9:00 AM EST"
-msgstr ""
-
-#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:640
+#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:457
 msgid "Audience analytics"
 msgstr ""
 
-#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:641
+#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:458
 msgid "Higher subscriber limits"
 msgstr ""
 
-#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:642
+#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:459
 msgid "Goal tracking"
 msgstr ""
 
-#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:644
+#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:461
 msgid "Pro starts at $49/year after discount and includes a 14-day free cancellation window."
 msgstr ""
 
-#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:648
-#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:477
+#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:465
+#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:480
 msgid "See What You Unlock With Pro"
 msgstr ""
 
-#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:659
+#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:476
 msgid "Upgrade when you want more control."
 msgstr ""
 
-#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:663
+#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:480
 msgid "Your audience is waiting to hear from you."
 msgstr ""
 
-#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:664
+#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:481
 msgid "Finish your setup, send your first notification, and start bringing visitors back to your WordPress site more consistently."
 msgstr ""
 
-#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:668
+#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:485
 msgid "Finish Setup and Start Engaging Visitors"
 msgstr ""
 
-#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:672
+#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:489
 msgid "You can always explore Pro later."
 msgstr ""
 
-#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:68
-msgid "London"
+#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:50
+msgid "Subscriber Growth"
 msgstr ""
 
-#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:69
-msgid "9:00 AM GMT"
+#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:51
+msgid "Top source: Mobile"
 msgstr ""
 
-#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:74
-msgid "Tokyo"
-msgstr ""
-
-#: src/pages/dashboard/siteNotConnected/DefaultDashboard.tsx:75
-msgid "9:00 AM JST"
-msgstr ""
-
-#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:127
+#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:130
 msgid "A Better Way to Communicate With Your"
 msgstr ""
 
-#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:128
+#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:131
 msgid "WooCommerce Customers"
 msgstr ""
 
-#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:129
+#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:132
 msgid "Send the right message at the right moment through Web Push, WhatsApp Templates, and Multi-Channel Chat Widget. Improve customer experience and reduce support effort with one lightweight platform designed to help your store stay connected with shoppers from cart to delivery."
 msgstr ""
 
-#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:142
+#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:145
 msgid "Ready to engage your customers?"
 msgstr ""
 
-#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:150
+#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:153
 msgid "Why PushEngage Matters for WooCommerce Stores"
 msgstr ""
 
-#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:152
+#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:155
 msgid "Running a WooCommerce store means juggling many things at once. Customers leave items in their carts, ask about order updates, check back for new arrivals, and sometimes leave before you get the chance to help."
 msgstr ""
 
-#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:156
+#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:159
 msgid "PushEngage helps you stay one step ahead with fast, friendly communication across multiple channels."
 msgstr ""
 
-#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:164
+#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:167
 msgid "Remind shoppers about abandoned carts"
 msgstr ""
 
-#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:168
+#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:171
 msgid "Send order status updates instantly"
 msgstr ""
 
-#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:172
+#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:175
 msgid "Share new product arrivals"
 msgstr ""
 
-#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:176
+#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:179
 msgid "Chat with customers in real time"
 msgstr ""
 
-#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:180
+#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:183
 msgid "Reduce \"Where is my order\" tickets"
 msgstr ""
 
-#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:184
+#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:187
 msgid "Bring customers back without needing their email"
 msgstr ""
 
-#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:187
+#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:190
 msgid "Complete Setup to Get These Features Activated"
 msgstr ""
 
-#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:197
+#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:200
 msgid "Cart abandonment happens every day. Many shoppers plan to return but forget. Automated push notifications give them a gentle nudge at the right time."
 msgstr ""
 
-#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:201
+#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:204
 msgid "What you can send:"
 msgstr ""
 
-#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:203
+#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:206
 msgid "\"You left something behind\" reminders"
 msgstr ""
 
-#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:204
+#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:207
 msgid "Limited-time offers"
 msgstr ""
 
-#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:205
+#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:208
 msgid "Stock running low alerts"
 msgstr ""
 
-#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:206
+#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:209
 msgid "Price drop notifications"
 msgstr ""
 
-#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:208
+#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:211
 msgid "These reminders help bring shoppers back to complete their orders."
 msgstr ""
 
-#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:217
+#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:220
 msgid "Recover More Sales With Automated Cart Reminders"
 msgstr ""
 
-#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:224
+#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:227
 msgid "Updates"
 msgstr ""
 
-#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:227
+#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:230
 msgid "Your customers love clarity. When they place an order, they want updates quickly and reliably."
 msgstr ""
 
-#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:231
+#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:234
 msgid "Event triggers include:"
 msgstr ""
 
-#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:233
+#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:236
 msgid "New order received"
 msgstr ""
 
-#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:234
+#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:237
 msgid "Order processing"
 msgstr ""
 
-#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:235
+#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:238
 msgid "Order completed"
 msgstr ""
 
-#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:236
+#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:239
 msgid "Order refunded"
 msgstr ""
 
-#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:237
+#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:240
 msgid "Payment failed"
 msgstr ""
 
-#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:238
+#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:241
 msgid "Order on-hold"
 msgstr ""
 
-#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:239
+#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:242
 msgid "Shipment updates"
 msgstr ""
 
-#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:241
+#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:244
 msgid "Pro Feature: Upgrade to unlock advanced event notifications and more precise tagging. Pro starts at $49/year with a 14-day free cancellation window."
 msgstr ""
 
-#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:245
+#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:248
 msgid "Send Real-Time Order Updates"
 msgstr ""
 
-#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:249
+#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:252
 msgid "Keep Customers Updated With Real-Time Order Notifications"
 msgstr ""
 
-#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:256
+#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:259
 msgid "Retention"
 msgstr ""
 
-#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:258
+#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:261
 msgid "Bring Shoppers Back With Product Alerts"
 msgstr ""
 
-#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:259
+#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:262
 msgid "Shoppers often intend to buy later. Product alerts help them stay in the loop."
 msgstr ""
 
-#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:265
+#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:268
 msgid "Back-in-stock alerts"
 msgstr ""
 
-#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:270
+#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:273
 msgid "Price drops"
 msgstr ""
 
-#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:275
+#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:278
 msgid "New arrivals"
 msgstr ""
 
-#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:280
+#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:283
 msgid "Personalized recs"
 msgstr ""
 
-#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:285
+#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:288
 msgid "These notifications bring customers back when timing is right."
 msgstr ""
 
-#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:289
+#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:292
 msgid "Start Recovering More Revenue"
 msgstr ""
 
-#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:296
+#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:299
 msgid "Support"
 msgstr ""
 
-#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:298
+#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:301
 msgid "Multi-Channel Chat Widget to Help Customers Instantly"
 msgstr ""
 
-#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:299
+#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:302
 msgid "Some shoppers need quick answers before they buy. With the Multi-Channel Chat Widget, your store can offer support through the channels your customers already use."
 msgstr ""
 
-#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:303
+#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:306
 msgid "Customers can reach you through:"
 msgstr ""
 
-#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:309
+#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:312
 msgid "And more"
 msgstr ""
 
-#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:312
+#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:315
 msgid "You can customize the widget for desktop and mobile separately and show different channels based on device or page. This reduces friction, improves trust, and boosts conversions."
 msgstr ""
 
-#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:344
+#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:347
 msgid "WhatsApp Automation for Fast Customer Updates"
 msgstr ""
 
-#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:345
+#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:348
 msgid "Keep your customers informed instantly with automated WhatsApp messages. Use approved templates to send important updates without manual effort."
 msgstr ""
 
-#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:35
-msgid "Web Push Active"
-msgstr ""
-
-#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:350
+#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:353
 msgid "Automated order status updates"
 msgstr ""
 
-#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:351
+#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:354
 msgid "Cart recovery nudges"
 msgstr ""
 
-#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:352
+#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:355
 msgid "Blog or content update notifications"
 msgstr ""
 
-#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:353
+#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:356
 msgid "Flash sale or limited time alerts"
 msgstr ""
 
-#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:354
+#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:357
 msgid "New product announcements"
 msgstr ""
 
-#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:356
+#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:359
 msgid "Enable WhatsApp Automation"
 msgstr ""
 
-#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:36
-msgid "Sending cart reminders..."
-msgstr ""
-
-#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:370
+#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:373
 msgid "PushEngage shows you exactly how much revenue your push campaigns generate. See which messages bring shoppers back, which increase conversions, and which campaigns drive the most sales."
 msgstr ""
 
-#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:374
+#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:377
 msgid "Track:"
 msgstr ""
 
-#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:376
+#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:379
 msgid "Revenue per campaign"
 msgstr ""
 
-#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:377
+#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:38
+msgid "Web Push Active"
+msgstr ""
+
+#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:380
 msgid "Revenue per automation"
 msgstr ""
 
-#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:378
+#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:381
 msgid "Conversions"
 msgstr ""
 
-#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:379
+#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:382
 msgid "Clicks and purchases"
 msgstr ""
 
-#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:381
+#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:384
 msgid "Available on Pro plans starting at $49/year, with a 14-day free cancellation."
 msgstr ""
 
-#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:385
+#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:388
 msgid "Upgrade to Pro and Track Revenue Automatically"
 msgstr ""
 
 #: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:39
-msgid "+12% Rev"
+msgid "Sending cart reminders..."
 msgstr ""
 
-#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:396
+#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:399
 msgid "Know Exactly What Works With Revenue Tracking (Pro Feature)"
 msgstr ""
 
-#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:402
+#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:405
 msgid "Write Better Messages With AI Copy Assistant"
 msgstr ""
 
-#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:403
+#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:406
 msgid "Not sure what to write? The AI Copy Assistant helps you create engaging, high-converting messages for push, WhatsApp, and customer updates."
 msgstr ""
 
-#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:409
+#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:412
 msgid "Rewrite notification text"
 msgstr ""
 
-#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:410
+#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:413
 msgid "Generate titles"
 msgstr ""
 
-#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:411
+#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:414
 msgid "Improve CTAs"
 msgstr ""
 
-#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:412
+#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:415
 msgid "Create variants for A/B testing"
 msgstr ""
 
-#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:420
-msgid "Original"
-msgstr ""
-
-#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:421
-msgid "Buy now. Sale ending."
-msgstr ""
-
-#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:422
-msgid "AI Optimized"
+#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:42
+msgid "+12% Rev"
 msgstr ""
 
 #: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:423
+msgid "Original"
+msgstr ""
+
+#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:424
+msgid "Buy now. Sale ending."
+msgstr ""
+
+#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:425
+msgid "AI Optimized"
+msgstr ""
+
+#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:426
 msgid "⏳ Last Chance! Grab 20% off before midnight. Don't miss out! 🛍️"
 msgstr ""
 
-#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:429
+#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:432
 msgid "Light Comparison — Free vs Pro"
 msgstr ""
 
-#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:432
+#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:435
 msgid "Basic Web Push"
 msgstr ""
 
-#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:442
+#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:445
 msgid "Order Event Notifications"
 msgstr ""
 
-#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:444
+#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:447
 msgid "Enhanced"
 msgstr ""
 
-#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:447
+#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:450
 msgid "Segmentation"
 msgstr ""
 
-#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:452
+#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:455
 msgid "Revenue Tracking"
 msgstr ""
 
-#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:459
+#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:462
 msgid "Advanced"
 msgstr ""
 
-#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:462
+#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:465
 msgid "WhatsApp Templates"
 msgstr ""
 
-#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:467
+#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:470
 msgid "AI Copy Assistant"
 msgstr ""
 
-#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:472
+#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:475
 msgid "AI Credits"
 msgstr ""
 
-#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:474
+#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:477
 msgid "Add-on"
 msgstr ""
 
-#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:48
-msgid "WhatsApp Automated"
-msgstr ""
-
-#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:49
-msgid "Order #10234 shipped!"
-msgstr ""
-
-#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:491
+#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:494
 msgid "You are just a few minutes away from better customer communication."
 msgstr ""
 
-#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:495
+#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:498
 msgid "Complete setup, choose your channels, and start sending helpful updates that bring customers back, support orders, and improve satisfaction."
 msgstr ""
 
-#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:499
+#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:502
 msgid "Finish Setup and Start Engaging Customers"
 msgstr ""
 
-#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:504
+#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:507
 msgid "Pro plan starts at $49/year after discount."
 msgstr ""
 
-#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:505
+#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:508
 msgid "All plans include a 14-day free cancellation window."
 msgstr ""
 
-#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:58
+#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:51
+msgid "WhatsApp Automated"
+msgstr ""
+
+#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:52
+msgid "Order #10234 shipped!"
+msgstr ""
+
+#: src/pages/dashboard/siteNotConnected/WooCommerceDashboard.tsx:61
 msgid "Real-time attribution"
 msgstr ""
 
@@ -8857,7 +8982,7 @@ msgstr ""
 msgid "Reviews"
 msgstr ""
 
-#: src/pages/dashboard/siteNotConnected/components/HeroSection.tsx:400
+#: src/pages/dashboard/siteNotConnected/components/HeroSection.tsx:397
 msgid "Hi! Need help?"
 msgstr ""
 
@@ -9361,11 +9486,11 @@ msgstr ""
 msgid "Notification delay should be less than 1826 days"
 msgstr ""
 
-#: src/pages/onboarding/OnboardingSetup.tsx:404
+#: src/pages/onboarding/OnboardingSetup.tsx:407
 msgid "Setup"
 msgstr ""
 
-#: src/pages/onboarding/OnboardingSetup.tsx:407
+#: src/pages/onboarding/OnboardingSetup.tsx:410
 #: src/pages/onboarding/channelConfig.ts:174
 msgid "Complete"
 msgstr ""
@@ -9965,6 +10090,7 @@ msgid "Not connected"
 msgstr ""
 
 #: src/pages/settings/integrations/index.tsx:191
+#: src/pages/woocommerce/WooAutomations.tsx:680
 msgid "Install WooCommerce"
 msgstr ""
 
@@ -10162,27 +10288,27 @@ msgstr ""
 msgid "Website Time Zone"
 msgstr ""
 
-#: src/pages/settings/siteDetails/index.tsx:534
+#: src/pages/settings/siteDetails/index.tsx:545
 msgid "Geolocation"
 msgstr ""
 
-#: src/pages/settings/siteDetails/index.tsx:540
+#: src/pages/settings/siteDetails/index.tsx:551
 msgid "This helps you personalize your website notifications based on user’s location & timezones."
 msgstr ""
 
-#: src/pages/settings/siteDetails/index.tsx:546
+#: src/pages/settings/siteDetails/index.tsx:557
 msgid "PushEngage branding"
 msgstr ""
 
-#: src/pages/settings/siteDetails/index.tsx:560
+#: src/pages/settings/siteDetails/index.tsx:571
 msgid "Remove \"Powered By PushEngage\""
 msgstr ""
 
-#: src/pages/settings/siteDetails/index.tsx:566
+#: src/pages/settings/siteDetails/index.tsx:577
 msgid "Toggle the switch to enable/disable the \"Powered by PushEngage\" label. The changes may take up to 2 minutes to reflect on your site."
 msgstr ""
 
-#: src/pages/settings/siteDetails/index.tsx:592
+#: src/pages/settings/siteDetails/index.tsx:603
 msgid "The \"Powered by PushEngage\" label cannot be removed on the free plan. <a>Upgrade to PushEngage Pro</a> to remove it."
 msgstr ""
 
@@ -10375,7 +10501,7 @@ msgid ""
 msgstr ""
 
 #: src/pages/triggeredCampaign/Selection.tsx:155
-#: src/pages/woocommerce/WooAutomations.tsx:397
+#: src/pages/woocommerce/WooAutomations.tsx:401
 msgid "Browse Abandonment"
 msgstr ""
 
@@ -10516,47 +10642,55 @@ msgstr ""
 msgid "Error fetching WhatsApp templates"
 msgstr ""
 
-#: src/pages/woocommerce/WooAutomations.tsx:205
+#: src/pages/woocommerce/WooAutomations.tsx:209
 msgid "WooCommerce PushEngage Integration"
 msgstr ""
 
-#: src/pages/woocommerce/WooAutomations.tsx:206
+#: src/pages/woocommerce/WooAutomations.tsx:210
 msgid "Integrate WooCommerce with PushEngage to send automatic push notifications for browse and cart abandonment and more. You will need to install and activate the WooCommerce plugin to connect with PushEngage. Click below to get more details on the plugin."
 msgstr ""
 
-#: src/pages/woocommerce/WooAutomations.tsx:229
+#: src/pages/woocommerce/WooAutomations.tsx:233
 msgid "Failed to load Woo automations"
 msgstr ""
 
-#: src/pages/woocommerce/WooAutomations.tsx:265
+#: src/pages/woocommerce/WooAutomations.tsx:269
 msgid "Send notifications when customers abandon their cart"
 msgstr ""
 
-#: src/pages/woocommerce/WooAutomations.tsx:274
+#: src/pages/woocommerce/WooAutomations.tsx:278
 msgid "Send notifications when customers browse but don't purchase"
 msgstr ""
 
-#: src/pages/woocommerce/WooAutomations.tsx:635
+#: src/pages/woocommerce/WooAutomations.tsx:639
 msgid "Saved"
 msgstr ""
 
-#: src/pages/woocommerce/WooAutomations.tsx:638
+#: src/pages/woocommerce/WooAutomations.tsx:642
 msgid "Failed to save changes"
 msgstr ""
 
-#: src/pages/woocommerce/WooAutomations.tsx:673
+#: src/pages/woocommerce/WooAutomations.tsx:674
+msgid "WooCommerce Not Active"
+msgstr ""
+
+#: src/pages/woocommerce/WooAutomations.tsx:675
+msgid "Install and activate the WooCommerce plugin to connect with PushEngage."
+msgstr ""
+
+#: src/pages/woocommerce/WooAutomations.tsx:696
 msgid "Enable automated transactional notifications for WooCommerce events."
 msgstr ""
 
-#: src/pages/woocommerce/WooAutomations.tsx:91
+#: src/pages/woocommerce/WooAutomations.tsx:92
 msgid "Enable at least one notification"
 msgstr ""
 
-#: src/pages/woocommerce/WooAutomations.tsx:92
+#: src/pages/woocommerce/WooAutomations.tsx:93
 msgid "Turn on either Admin or Customer notification to enable this automation."
 msgstr ""
 
-#: src/utils/index.ts:84
+#: src/utils/index.ts:87
 msgid "Copied to Clipboard!"
 msgstr ""
 
@@ -10580,79 +10714,79 @@ msgstr ""
 msgid "https://www.pushengage.com/?utm_source=WordPress&utm_campaign=Plugin&utm_medium=pluginHeader&utm_content=author-uri-link"
 msgstr ""
 
-#: app/Ajax.php:142
+#: app/Ajax.php:143
 #: app/Integrations/WooCommerce/NotificationActions.php:191
 #: app/Integrations/WooCommerce/NotificationActions.php:249
 #: app/WhatsNew.php:111
 msgid "Permission denied. Please make sure you have required permission to perform this action."
 msgstr ""
 
-#: app/Ajax.php:200
+#: app/Ajax.php:201
 msgid "An error was encountered while connecting your account, please try again"
 msgstr ""
 
-#: app/Ajax.php:580
+#: app/Ajax.php:581
 msgid "Invalid attribute key."
 msgstr ""
 
-#: app/Ajax.php:984
+#: app/Ajax.php:985
 msgid "Invalid request. Campaign Settings data missing."
 msgstr ""
 
-#: app/Ajax.php:1093
+#: app/Ajax.php:1094
 msgid "Invalid request. Retargeting Settings data missing."
 msgstr ""
 
-#: app/Ajax.php:1172
+#: app/Ajax.php:1173
 msgid "Invalid request. Recover Sales Settings data missing."
 msgstr ""
 
-#: app/Ajax.php:1264
-#: app/Ajax.php:1812
+#: app/Ajax.php:1265
+#: app/Ajax.php:1807
 msgid "Please enter the WhatsApp phone number in international format with country code without + sign (e.g. 919876543210)"
 msgstr ""
 
-#: app/Ajax.php:1276
-#: app/Ajax.php:1824
+#: app/Ajax.php:1277
+#: app/Ajax.php:1819
 msgid "WhatsApp phone number should be between 10 and 15 digits including country code."
 msgstr ""
 
 #. translators: %s: field label
-#: app/Ajax.php:1298
+#: app/Ajax.php:1299
 #, php-format
 msgid "%s is required."
 msgstr ""
 
-#: app/Ajax.php:1439
-#: app/Ajax.php:1615
+#: app/Ajax.php:1440
+#: app/Ajax.php:1610
 msgid "Campaign data is required."
 msgstr ""
 
-#: app/Ajax.php:1446
+#: app/Ajax.php:1447
 msgid "Invalid campaign id."
 msgstr ""
 
-#: app/Ajax.php:1452
+#: app/Ajax.php:1453
 msgid "Unknown campaign id."
 msgstr ""
 
-#: app/Ajax.php:1629
+#: app/Ajax.php:1624
 msgid "Campaign ID is required."
 msgstr ""
 
-#: app/Ajax.php:1842
+#: app/Ajax.php:1837
 msgid "Horizontal offset must be between 0 and 200 pixels."
 msgstr ""
 
-#: app/Ajax.php:1852
+#: app/Ajax.php:1847
 msgid "Vertical offset must be between 0 and 200 pixels."
 msgstr ""
 
-#: app/Ajax.php:1863
+#: app/Ajax.php:1858
 msgid "Z-Index must be between 1 and 999999."
 msgstr ""
 
-#: app/Ajax.php:1874
+#: app/Ajax.php:1869
 msgid "WhatsApp phone number is required when the feature is enabled."
 msgstr ""
 
@@ -10679,30 +10813,34 @@ msgstr ""
 msgid "PushEngage Push Notification Settings"
 msgstr ""
 
-#: app/EnqueueAssets.php:245
+#: app/EnqueueAssets.php:246
 msgid "Give us a 5-star rating!"
 msgstr ""
 
 #. Translators: 1 - The plugin name ("PushEngage"), - 2 - This placeholder will be replaced with star icons, - 3 - "WordPress.org" - 4 - The plugin name ("PushEngage").
-#: app/EnqueueAssets.php:260
+#: app/EnqueueAssets.php:261
 #, php-format
 msgid "Please rate %1$s %2$s on %3$s to help us spread the word. Thank you from the PushEngage team!"
 msgstr ""
 
 #. Translators: 1 - WordPress Version, - 2 - The plugin version
-#: app/EnqueueAssets.php:275
+#: app/EnqueueAssets.php:276
 #, php-format
 msgid "WordPress %1$s | PushEngage %2$s"
 msgstr ""
 
-#: app/Includes/Api/HttpAPI.php:72
-#: app/Includes/Api/HttpAPI.php:146
+#: app/Includes/Api/HttpAPI.php:58
+msgid "Upstream API error."
+msgstr ""
+
+#: app/Includes/Api/HttpAPI.php:107
+#: app/Includes/Api/HttpAPI.php:181
 msgid "Site not connected. Please make sure to connect your site first."
 msgstr ""
 
-#: app/Includes/Api/HttpAPI.php:115
-#: app/Includes/Api/HttpAPI.php:189
-#: app/Includes/Api/HttpAPI.php:267
+#: app/Includes/Api/HttpAPI.php:150
+#: app/Includes/Api/HttpAPI.php:224
+#: app/Includes/Api/HttpAPI.php:302
 msgid "Invalid response from server"
 msgstr ""
 
@@ -10722,19 +10860,19 @@ msgstr ""
 msgid "Notification URL is required."
 msgstr ""
 
-#: app/Includes/Api/PushengageAPI.php:208
+#: app/Includes/Api/PushengageAPI.php:217
 msgid "Notification ID is missing."
 msgstr ""
 
-#: app/Includes/Api/PushengageAPI.php:384
+#: app/Includes/Api/PushengageAPI.php:393
 msgid "Segment name is required."
 msgstr ""
 
-#: app/Includes/Api/PushengageAPI.php:419
+#: app/Includes/Api/PushengageAPI.php:428
 msgid "Subscribers ID is required and must be a non-empty array."
 msgstr ""
 
-#: app/Includes/Api/PushengageAPI.php:423
+#: app/Includes/Api/PushengageAPI.php:432
 msgid "Segment ID is required."
 msgstr ""
 
@@ -10792,6 +10930,363 @@ msgstr ""
 
 #: app/Includes/WPMetricsCron.php:84
 msgid "Weekly"
+msgstr ""
+
+#: app/Integrations/Abilities.php:66
+msgid "Send and manage push notifications, segments, and WooCommerce / WhatsApp automations."
+msgstr ""
+
+#: app/Integrations/Abilities/AnalyticsAbilities.php:32
+msgid "Get Notifications Summary"
+msgstr ""
+
+#: app/Integrations/Abilities/AnalyticsAbilities.php:33
+msgid "Returns aggregated send, view, and click counts across all notifications."
+msgstr ""
+
+#: app/Integrations/Abilities/AnalyticsAbilities.php:48
+msgid "Include additional metadata (prev, curr, total)."
+msgstr ""
+
+#: app/Integrations/Abilities/AnalyticsAbilities.php:67
+msgid "Get Analytics Overview"
+msgstr ""
+
+#: app/Integrations/Abilities/AnalyticsAbilities.php:68
+msgid "Returns subscribers, impressions, and clicks over a date range, grouped by day, week, or month."
+msgstr ""
+
+#: app/Integrations/Abilities/AnalyticsAbilities.php:80
+msgid "Start date (YYYY-MM-DD)."
+msgstr ""
+
+#: app/Integrations/Abilities/AnalyticsAbilities.php:85
+msgid "End date (YYYY-MM-DD). Must be within one year of the start date."
+msgstr ""
+
+#: app/Integrations/Abilities/AnalyticsAbilities.php:90
+msgid "Group results by time period (default: day)."
+msgstr ""
+
+#: app/Integrations/Abilities/AnalyticsAbilities.php:121
+msgid "Get Subscriber Analytics"
+msgstr ""
+
+#: app/Integrations/Abilities/AnalyticsAbilities.php:122
+msgid "Returns weekly active and total active subscribers."
+msgstr ""
+
+#: app/Integrations/Abilities/AnalyticsAbilities.php:138
+msgid "Active subscribers in the current week."
+msgstr ""
+
+#: app/Integrations/Abilities/AnalyticsAbilities.php:142
+msgid "Total active subscribers."
+msgstr ""
+
+#: app/Integrations/Abilities/AnalyticsAbilities.php:215
+msgid "start_created_at and end_created_at must be valid dates in YYYY-MM-DD format."
+msgstr ""
+
+#: app/Integrations/Abilities/AutomationAbilities.php:44
+msgid "List Push Automation Campaigns"
+msgstr ""
+
+#: app/Integrations/Abilities/AutomationAbilities.php:45
+msgid "Lists WooCommerce push automation campaigns with admin and customer configs."
+msgstr ""
+
+#: app/Integrations/Abilities/AutomationAbilities.php:61
+msgid "Map of WordPress role keys to their display labels."
+msgstr ""
+
+#: app/Integrations/Abilities/AutomationAbilities.php:106
+msgid "Update Push Automation Campaign"
+msgstr ""
+
+#: app/Integrations/Abilities/AutomationAbilities.php:107
+msgid "Enables, disables, or configures a WooCommerce push automation campaign."
+msgstr ""
+
+#: app/Integrations/Abilities/AutomationAbilities.php:118
+msgid "Campaign event ID (e.g. new_order, cancelled_order)."
+msgstr ""
+
+#: app/Integrations/Abilities/AutomationAbilities.php:122
+msgid "Enable or disable the campaign."
+msgstr ""
+
+#: app/Integrations/Abilities/AutomationAbilities.php:179
+msgid "List WhatsApp Automation Campaigns"
+msgstr ""
+
+#: app/Integrations/Abilities/AutomationAbilities.php:180
+msgid "Lists WhatsApp automation campaigns configured for WooCommerce events."
+msgstr ""
+
+#: app/Integrations/Abilities/AutomationAbilities.php:240
+msgid "Cart abandonment cutoff in minutes (only for cart_abandoned campaigns)."
+msgstr ""
+
+#: app/Integrations/Abilities/AutomationAbilities.php:338
+msgid "Unknown campaign ID."
+msgstr ""
+
+#: app/Integrations/Abilities/DebugAbilities.php:34
+msgid "Get Debug Log"
+msgstr ""
+
+#: app/Integrations/Abilities/DebugAbilities.php:35
+msgid "Lists debug log files; reads a specific file when file_name is given. Admin-only — log contents may include URLs and request payloads."
+msgstr ""
+
+#: app/Integrations/Abilities/DebugAbilities.php:46
+msgid "Specific log file name to read. If omitted, lists all available log files."
+msgstr ""
+
+#: app/Integrations/Abilities/DebugAbilities.php:99
+msgid "Log file not found or not readable."
+msgstr ""
+
+#: app/Integrations/Abilities/NotificationAbilities.php:34
+msgid "Get Connection Status"
+msgstr ""
+
+#: app/Integrations/Abilities/NotificationAbilities.php:35
+msgid "Returns whether this site is connected to a PushEngage account."
+msgstr ""
+
+#: app/Integrations/Abilities/NotificationAbilities.php:60
+msgid "Send a push notification to subscribers."
+msgstr ""
+
+#: app/Integrations/Abilities/NotificationAbilities.php:72
+msgid "Notification title (max 85 characters)."
+msgstr ""
+
+#: app/Integrations/Abilities/NotificationAbilities.php:77
+msgid "Notification message body (max 135 characters)."
+msgstr ""
+
+#: app/Integrations/Abilities/NotificationAbilities.php:82
+msgid "URL to open when notification is clicked."
+msgstr ""
+
+#: app/Integrations/Abilities/NotificationAbilities.php:88
+msgid "Optional HTTPS image URL for the notification."
+msgstr ""
+
+#: app/Integrations/Abilities/NotificationAbilities.php:92
+msgid "Notification status: sent or draft."
+msgstr ""
+
+#: app/Integrations/Abilities/NotificationAbilities.php:120
+msgid "Get Notification"
+msgstr ""
+
+#: app/Integrations/Abilities/NotificationAbilities.php:121
+msgid "Returns details for a single notification."
+msgstr ""
+
+#: app/Integrations/Abilities/NotificationAbilities.php:132
+msgid "The notification ID."
+msgstr ""
+
+#: app/Integrations/Abilities/NotificationAbilities.php:165
+msgid "List Notifications"
+msgstr ""
+
+#: app/Integrations/Abilities/NotificationAbilities.php:166
+msgid "Lists push notifications, with optional status filter and pagination."
+msgstr ""
+
+#: app/Integrations/Abilities/NotificationAbilities.php:178
+msgid "Filter by notification status."
+msgstr ""
+
+#: app/Integrations/Abilities/NotificationAbilities.php:184
+msgid "Number of notifications to return (1-100, default 10)."
+msgstr ""
+
+#: app/Integrations/Abilities/NotificationAbilities.php:189
+msgid "Page number for pagination (default 1)."
+msgstr ""
+
+#: app/Integrations/Abilities/NotificationAbilities.php:324
+msgid "A valid notification_id is required."
+msgstr ""
+
+#: app/Integrations/Abilities/PluginInfoAbilities.php:34
+msgid "Get Plugin Info"
+msgstr ""
+
+#: app/Integrations/Abilities/PluginInfoAbilities.php:35
+msgid "Returns plugin version, connection state, and key configuration. Use this when you need full plugin details; for a lightweight connection check, use Get Connection Status."
+msgstr ""
+
+#: app/Integrations/Abilities/PluginInfoAbilities.php:68
+msgid "Get Site Environment"
+msgstr ""
+
+#: app/Integrations/Abilities/PluginInfoAbilities.php:69
+msgid "Returns WordPress, PHP, and server details for diagnostics."
+msgstr ""
+
+#: app/Integrations/Abilities/SegmentAbilities.php:32
+msgid "List Segments"
+msgstr ""
+
+#: app/Integrations/Abilities/SegmentAbilities.php:33
+msgid "List subscriber segments."
+msgstr ""
+
+#: app/Integrations/Abilities/SegmentAbilities.php:46
+msgid "Number of segments to return (1-100)."
+msgstr ""
+
+#: app/Integrations/Abilities/SegmentAbilities.php:51
+#: app/Integrations/Abilities/SegmentAbilities.php:108
+msgid "Page number for pagination."
+msgstr ""
+
+#: app/Integrations/Abilities/SegmentAbilities.php:55
+msgid "Search segments by name."
+msgstr ""
+
+#: app/Integrations/Abilities/SegmentAbilities.php:60
+msgid "Expand additional data."
+msgstr ""
+
+#: app/Integrations/Abilities/SegmentAbilities.php:89
+msgid "List Audience Groups"
+msgstr ""
+
+#: app/Integrations/Abilities/SegmentAbilities.php:90
+msgid "Lists audience groups available for targeting."
+msgstr ""
+
+#: app/Integrations/Abilities/SegmentAbilities.php:103
+msgid "Number of groups to return (1-100)."
+msgstr ""
+
+#: app/Integrations/Abilities/SegmentAbilities.php:112
+msgid "Search groups by name."
+msgstr ""
+
+#: app/Integrations/Abilities/SegmentAbilities.php:140
+msgid "Create Segment"
+msgstr ""
+
+#: app/Integrations/Abilities/SegmentAbilities.php:141
+msgid "Create a new subscriber segment."
+msgstr ""
+
+#: app/Integrations/Abilities/SegmentAbilities.php:153
+msgid "Name of the new segment (max 150 characters)."
+msgstr ""
+
+#: app/Integrations/Abilities/SegmentAbilities.php:158
+msgid "Whether to add segment on page load (0 or 1, default 0)."
+msgstr ""
+
+#: app/Integrations/Abilities/SegmentAbilities.php:162
+msgid "Criteria for segment membership with include/exclude rules."
+msgstr ""
+
+#: app/Integrations/Abilities/SegmentAbilities.php:193
+msgid "Add Subscribers to Segment"
+msgstr ""
+
+#: app/Integrations/Abilities/SegmentAbilities.php:194
+msgid "Add subscribers to an existing segment."
+msgstr ""
+
+#: app/Integrations/Abilities/SegmentAbilities.php:206
+msgid "Array of subscriber IDs to add."
+msgstr ""
+
+#: app/Integrations/Abilities/SegmentAbilities.php:211
+msgid "Target segment ID."
+msgstr ""
+
+#: app/Integrations/Abilities/SegmentAbilities.php:358
+msgid "A valid segment_id is required."
+msgstr ""
+
+#: app/Integrations/Abilities/SegmentAbilities.php:362
+msgid "A non-empty subscribers_id array is required."
+msgstr ""
+
+#: app/Integrations/Abilities/SettingsAbilities.php:35
+msgid "Get Auto Push Settings"
+msgstr ""
+
+#: app/Integrations/Abilities/SettingsAbilities.php:36
+msgid "Returns auto-push configuration: enabled post types, icon type, and feature flags."
+msgstr ""
+
+#: app/Integrations/Abilities/SettingsAbilities.php:76
+msgid "Update Auto Push Settings"
+msgstr ""
+
+#: app/Integrations/Abilities/SettingsAbilities.php:77
+msgid "Updates auto-push: toggle, post types, icon, and feature flags."
+msgstr ""
+
+#: app/Integrations/Abilities/SettingsAbilities.php:88
+msgid "Enable or disable auto-push for new posts."
+msgstr ""
+
+#: app/Integrations/Abilities/SettingsAbilities.php:92
+msgid "Use featured image as large notification image."
+msgstr ""
+
+#: app/Integrations/Abilities/SettingsAbilities.php:96
+msgid "Enable multi-action buttons on notifications."
+msgstr ""
+
+#: app/Integrations/Abilities/SettingsAbilities.php:101
+msgid "Notification icon type."
+msgstr ""
+
+#: app/Integrations/Abilities/SettingsAbilities.php:106
+msgid "Post types that trigger auto-push."
+msgstr ""
+
+#: app/Integrations/Abilities/SettingsAbilities.php:122
+msgid "List Categories"
+msgstr ""
+
+#: app/Integrations/Abilities/SettingsAbilities.php:123
+msgid "Lists WordPress post categories, plus WooCommerce product categories when WooCommerce is active."
+msgstr ""
+
+#: app/Integrations/Abilities/SettingsAbilities.php:153
+msgid "List Category Segment Mappings"
+msgstr ""
+
+#: app/Integrations/Abilities/SettingsAbilities.php:154
+msgid "Lists the mapping of WordPress categories to PushEngage segments."
+msgstr ""
+
+#: app/Integrations/Abilities/SettingsAbilities.php:189
+msgid "Get Attribute Mappings"
+msgstr ""
+
+#: app/Integrations/Abilities/SettingsAbilities.php:190
+msgid "Returns the mapping of PushEngage subscriber attributes to WordPress user meta keys."
+msgstr ""
+
+#: app/Integrations/Abilities/SettingsAbilities.php:203
+msgid "Key-value pairs mapping PushEngage attribute keys to WordPress user meta keys."
+msgstr ""
+
+#: app/Integrations/Abilities/WhatsappAbilities.php:45
+msgid "Get WhatsApp Status"
+msgstr ""
+
+#: app/Integrations/Abilities/WhatsappAbilities.php:46
+msgid "Returns whether WhatsApp integration credentials are valid."
 msgstr ""
 
 #: app/Integrations/WooCommerce/NotificationActions.php:149
