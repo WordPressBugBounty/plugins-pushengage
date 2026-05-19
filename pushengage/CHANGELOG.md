@@ -2,6 +2,11 @@
 
 All notable changes to the PushEngage plugin will be documented in this file.
 
+### 4.2.4
+
+* Fix: Optimized response structure for paginated results in Abilities API endpoints.
+* Improved: Strengthened overall plugin security and reliability.
+
 ### 4.2.3
 
 * Fix: Optimized the Abilities API integration so AI assistant and MCP responses follows the output schema.

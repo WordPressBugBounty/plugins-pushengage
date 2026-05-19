@@ -41,6 +41,9 @@ class DashboardWidget {
 	 * @return void
 	 */
 	public function dashboard_widget() {
+		if ( ! current_user_can( 'manage_options' ) ) {
+			return;
+		}
 		// Get options from settings
 		$pushengage_settings = Options::get_site_settings();
 		$hide_widget = $pushengage_settings['misc']['hideDashboardWidget'];

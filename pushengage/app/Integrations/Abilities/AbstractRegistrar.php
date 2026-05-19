@@ -108,7 +108,10 @@ abstract class AbstractRegistrar {
 	 * @param string $shape    'object' (default) returns the inner `data`
 	 *                         payload verbatim. 'rows' coerces `data` to a
 	 *                         numeric list of row arrays, dropping anything
-	 *                         that isn't an array (e.g. assoc-keyed empties).
+	 *                         that isn't an array. Handles both flat
+	 *                         (`data: [...rows]`) and paginated
+	 *                         (`data: { ..., data: [...rows] }`) upstream
+	 *                         shapes.
 	 * @return array
 	 */
 	protected static function unwrap_envelope( $response, $shape = 'object' ) {
@@ -118,6 +121,17 @@ abstract class AbstractRegistrar {
 
 		if ( 'rows' !== $shape ) {
 			return $data;
+		}
+
+		// Paginated upstream responses wrap rows inside a metadata envelope
+		// (`{ total, perPage, page, lastPage, data: [...] }`). When the outer
+		// `data` is that envelope rather than a flat numeric list, drill one
+		// more level to reach the actual rows.
+		if ( ! wp_is_numeric_array( $data )
+			&& isset( $data['data'] )
+			&& is_array( $data['data'] )
+			&& wp_is_numeric_array( $data['data'] ) ) {
+			$data = $data['data'];
 		}
 
 		if ( ! wp_is_numeric_array( $data ) ) {

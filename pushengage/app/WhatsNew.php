@@ -52,7 +52,7 @@ class WhatsNew {
 		$pushengage_settings = Options::get_site_settings();
 		$disabled  = ArrayHelper::get( $pushengage_settings, 'dismissed_whats_new_notice', false );
 
-		return 'plugins.php' === $pagenow && ! $disabled;
+		return current_user_can( 'manage_options' ) && 'plugins.php' === $pagenow && ! $disabled;
 	}
 
 	/**

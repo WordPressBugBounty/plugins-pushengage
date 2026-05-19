@@ -4,7 +4,7 @@ Tags: push notifications, web push notifications, woocommerce, cart abandonment,
 Requires at least: 4.5.0
 Tested up to: 7.0
 Requires PHP: 5.6
-Stable tag: 4.2.3
+Stable tag: 4.2.4
 License: GNU General Public License v2.0 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -402,6 +402,10 @@ All users can post questions on the [WordPress.org support forum](https://wordpr
 == Changelog ==
 
 **Most Recent Changes:**
+= 4.2.4 =
+* Fix: Optimized response structure for paginated results in Abilities API endpoints.
+* Improved: Strengthened overall plugin security and reliability.
+
 = 4.2.3 =
 * Fix: Optimized the Abilities API integration so AI assistant and MCP responses follows the output schema.
 * Fix: Auto-push allowed post types duplicate results in response.

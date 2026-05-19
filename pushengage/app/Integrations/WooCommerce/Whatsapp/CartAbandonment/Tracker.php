@@ -138,8 +138,8 @@ class Tracker {
 	 * @since 4.1.2
 	 */
 	public function save_cart_abandonment_data() {
+		check_ajax_referer( 'pushengage_save_cart_abandonment_data', 'nonce' );
 		try {
-			check_ajax_referer( 'pushengage_save_cart_abandonment_data', 'nonce' );
 			$this->track_cart_update();
 			wp_send_json_success();
 		} catch ( \Exception $e ) {

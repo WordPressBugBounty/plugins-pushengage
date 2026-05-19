@@ -266,13 +266,12 @@ class Core {
 	* @return void
 	*/
 	public function init_admin_options() {
+		if ( ! current_user_can( 'manage_options' ) || false === $this->is_pushengage_active() ) {
+			return;
+		}
 
 		// Add Meta box when PushEngage site is not connected.
 		add_action( 'add_meta_boxes', array( $this, 'add_pushengage_site_not_connected_metabox' ) );
-
-		if ( ! is_user_logged_in() || false === $this->is_pushengage_active() ) {
-			return;
-		}
 
 		add_action( 'add_meta_boxes', array( $this, 'add_pushengage_settings_metabox' ) );
 
@@ -747,6 +746,9 @@ class Core {
 	 * @return void
 	 */
 	public function load_block_editor_scripts() {
+		if ( ! current_user_can( 'manage_options' ) ) {
+			return;
+		}
 		$screen = get_current_screen();
 		if ( ! $screen || ! in_array( $screen->post_type, Options::get_allowed_post_types_for_auto_push(), true ) ) {
 			return;

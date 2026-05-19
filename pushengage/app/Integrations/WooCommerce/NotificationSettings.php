@@ -319,7 +319,7 @@ class NotificationSettings {
 	 */
 	public static function push_notifications_settings() {
 		// Redirect to new PushEngage WooCommerce Automation page.
-		wp_redirect( admin_url( 'admin.php?page=pushengage#/woocommerce/automation' ) );
+		wp_safe_redirect( admin_url( 'admin.php?page=pushengage#/woocommerce/automation' ) );
 		exit;
 	}
 }
