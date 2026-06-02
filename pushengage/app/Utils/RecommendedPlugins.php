@@ -210,7 +210,7 @@ class RecommendedPlugins {
 			'icon'      => PUSHENGAGE_PLUGIN_URL . '/assets/img/plugin-funnelkit.svg',
 			'title'     => $is_funnelkit_automation_pro_installed ? __( 'FunnelKit Automations Pro', 'pushengage' ) : __( 'FunnelKit Automations', 'pushengage' ),
 			'excerpt'   => __(
-				'Elevate your WooCommerce store with FunnelKit Automations.This versatile WordPress plugin enables automated customer journeys, from abandoned cart recovery to targeted email sequences.',
+				'Elevate your WooCommerce store with FunnelKit Automations. This versatile WordPress plugin enables automated customer journeys, from abandoned cart recovery to targeted email sequences.',
 				'pushengage'
 			),
 			'installed' => $is_funnelkit_automation_pro_installed ? true : array_key_exists( self::FUNNELKIT_AUTOMATION_URL, $installed_plugins ),

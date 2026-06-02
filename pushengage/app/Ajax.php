@@ -329,6 +329,24 @@ class Ajax {
 
 		$pushengage_settings['allowed_post_types'] = wp_json_encode( $post_types );
 
+		if ( isset( $_POST['allowedRoles'] ) ) {
+			if ( is_string( $_POST['allowedRoles'] ) ) {
+				$raw = json_decode( stripslashes_deep( $_POST['allowedRoles'] ), true );
+			} else {
+				// Form-encoded array fallback (defensive — current client always
+				// sends a JSON string, but PHP 7+ throws a TypeError if a future
+				// client posts allowedRoles[]=... and we hand that to json_decode).
+				$raw = stripslashes_deep( $_POST['allowedRoles'] );
+			}
+			if ( ! is_array( $raw ) ) {
+				$raw = array();
+			}
+			$available = array_keys( wp_roles()->roles );
+			$clean     = array_values( array_intersect( array_map( 'sanitize_key', $raw ), $available ) );
+			$clean     = array_values( array_diff( $clean, array( 'administrator' ) ) );
+			$pushengage_settings['auto_push_allowed_roles'] = $clean;
+		}
+
 		Options::update_site_settings( $pushengage_settings );
 		wp_send_json_success();
 	}
@@ -441,10 +459,24 @@ class Ajax {
 			);
 		}
 
+		$auto_push['allowed_roles'] = Options::get_auto_push_allowed_roles();
+
+		$available_roles = array();
+		foreach ( wp_roles()->roles as $slug => $role ) {
+			if ( 'administrator' === $slug ) {
+				continue;
+			}
+			$available_roles[] = array(
+				'slug' => $slug,
+				'name' => translate_user_role( $role['name'] ),
+			);
+		}
+
 		wp_send_json_success(
 			array(
 				'autoPush'        => $auto_push,
 				'publicPostTypes' => $public_post_types,
+				'availableRoles'  => $available_roles,
 			),
 			200
 		);

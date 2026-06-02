@@ -83,6 +83,14 @@ class PostMetaFormatter {
 			}
 		}
 
+		// Notification expiry (in seconds), capped at 28 days
+		if ( isset( $data['pe_wp_expiry'] ) ) {
+			$expiry = absint( $data['pe_wp_expiry'] );
+			if ( $expiry > 0 ) {
+				$push_options['pe_wp_expiry'] = min( $expiry, 28 * DAY_IN_SECONDS );
+			}
+		}
+
 		return $push_options;
 	}
 }

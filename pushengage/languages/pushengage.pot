@@ -2,14 +2,14 @@
 # This file is distributed under the GPLv2 or later..
 msgid ""
 msgstr ""
-"Project-Id-Version: PushEngage 4.2.3\n"
+"Project-Id-Version: PushEngage 4.2.5\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/pushengage-wordpress-plugin\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-05-14T16:53:52+00:00\n"
+"POT-Creation-Date: 2026-05-29T01:36:07+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.12.0\n"
 "X-Domain: pushengage\n"
@@ -132,7 +132,7 @@ msgid "Month"
 msgstr ""
 
 #: src/components/ai/AiCreditSummary.tsx:74
-msgid "You can only view ai summary of maximum 12 months at a time."
+msgid "You can only view AI summary of maximum 12 months at a time."
 msgstr ""
 
 #: src/components/ai/AiFeedback.tsx:19
@@ -167,19 +167,23 @@ msgstr ""
 msgid "Back to initial text"
 msgstr ""
 
-#: src/components/ai/AiTextGenerator.tsx:102
-msgid "Enter notification title"
+#: src/components/ai/AiTextGenerator.tsx:101
+msgid "Describe your text"
 msgstr ""
 
 #: src/components/ai/AiTextGenerator.tsx:104
+msgid "Enter notification title"
+msgstr ""
+
+#: src/components/ai/AiTextGenerator.tsx:106
 msgid "Enter notification message"
 msgstr ""
 
-#: src/components/ai/AiTextGenerator.tsx:275
+#: src/components/ai/AiTextGenerator.tsx:277
 msgid "Insert"
 msgstr ""
 
-#: src/components/ai/AiTextGenerator.tsx:288
+#: src/components/ai/AiTextGenerator.tsx:290
 #: src/components/audience/CleanupSubscriberList.tsx:527
 #: src/components/audience/CreateOrEditAttributeForm.tsx:184
 #: src/components/audience/CreateOrEditSegmentForm.tsx:377
@@ -198,57 +202,53 @@ msgstr ""
 msgid "Cancel"
 msgstr ""
 
-#: src/components/ai/AiTextGenerator.tsx:302
-msgid "Give us a bit context for better text generation"
+#: src/components/ai/AiTextGenerator.tsx:304
+msgid "Give us a bit of context for better text generation"
 msgstr ""
 
-#: src/components/ai/AiTextGenerator.tsx:415
-#: src/components/campaign/appPush/LimitInput.tsx:205
+#: src/components/ai/AiTextGenerator.tsx:417
+#: src/components/campaign/appPush/LimitInput.tsx:206
 msgid "Generate Text"
 msgstr ""
 
-#: src/components/ai/AiTextGenerator.tsx:426
+#: src/components/ai/AiTextGenerator.tsx:428
 msgid "Your PushEngage account's AI credits are currently unavailable, either fully utilized or not yet purchased. Buy more credits to continue using AI features. Click the chart icon to view your usage details."
 msgstr ""
 
-#: src/components/ai/AiTextGenerator.tsx:438
-msgid "You don't have permission to modify billing data. Please contact to your admin."
+#: src/components/ai/AiTextGenerator.tsx:440
+msgid "You don't have permission to modify billing data. Please contact your admin."
 msgstr ""
 
-#: src/components/ai/AiTextGenerator.tsx:451
+#: src/components/ai/AiTextGenerator.tsx:453
 msgid "Buy Now"
 msgstr ""
 
-#: src/components/ai/AiTextGenerator.tsx:455
+#: src/components/ai/AiTextGenerator.tsx:457
 msgid "View your usage details"
 msgstr ""
 
-#: src/components/ai/AiTextGenerator.tsx:69
+#: src/components/ai/AiTextGenerator.tsx:71
 msgid "Description cannot be longer than 200 characters"
 msgstr ""
 
-#: src/components/ai/AiTextGenerator.tsx:74
+#: src/components/ai/AiTextGenerator.tsx:76
 msgid "Notification Title cannot be more than 85 characters"
 msgstr ""
 
-#: src/components/ai/AiTextGenerator.tsx:77
+#: src/components/ai/AiTextGenerator.tsx:79
 msgid "Notification Message cannot be more than 135 characters"
 msgstr ""
 
-#: src/components/ai/AiTextGenerator.tsx:87
+#: src/components/ai/AiTextGenerator.tsx:89
 msgid "Description cannot be empty"
 msgstr ""
 
-#: src/components/ai/AiTextGenerator.tsx:90
+#: src/components/ai/AiTextGenerator.tsx:92
 msgid "Notification Title cannot be empty"
 msgstr ""
 
-#: src/components/ai/AiTextGenerator.tsx:92
+#: src/components/ai/AiTextGenerator.tsx:94
 msgid "Notification Message cannot be empty"
-msgstr ""
-
-#: src/components/ai/AiTextGenerator.tsx:99
-msgid "Describe your text"
 msgstr ""
 
 #: src/components/analytics/AnalyticsReportCard.tsx:133
@@ -438,80 +438,76 @@ msgid "Close"
 msgstr ""
 
 #: src/components/analytics/OptinSettings.tsx:78
-msgid "You don't have permission to update optin analytics. Please contact to your admin."
+msgid "You don't have permission to update optin analytics. Please contact your admin."
 msgstr ""
 
 #: src/components/analytics/analyticsHelper.tsx:10
 msgid "Get Notification Widget"
 msgstr ""
 
-#: src/components/audience/AdvanceAudienceFilterForm.tsx:198
+#: src/components/audience/AdvanceAudienceFilterForm.tsx:200
 msgid "UTC"
 msgstr ""
 
-#: src/components/audience/AdvanceAudienceFilterForm.tsx:217
+#: src/components/audience/AdvanceAudienceFilterForm.tsx:219
 msgid "Refer to the date and time that is before the current time minus the selected duration."
 msgstr ""
 
-#: src/components/audience/AdvanceAudienceFilterForm.tsx:222
-#: src/components/campaign/details/CustomAudienceDetails.tsx:99
+#: src/components/audience/AdvanceAudienceFilterForm.tsx:224
+#: src/components/campaign/details/CustomAudienceDetails.tsx:107
 msgid "ago"
 msgstr ""
 
-#: src/components/audience/AdvanceAudienceFilterForm.tsx:227
+#: src/components/audience/AdvanceAudienceFilterForm.tsx:229
 msgid "Refer to the date and time that is after the current time minus the selected duration."
 msgstr ""
 
-#: src/components/audience/AdvanceAudienceFilterForm.tsx:268
+#: src/components/audience/AdvanceAudienceFilterForm.tsx:270
 msgid "Value is required"
 msgstr ""
 
-#: src/components/audience/AdvanceAudienceFilterForm.tsx:272
+#: src/components/audience/AdvanceAudienceFilterForm.tsx:274
 msgid "Please select date"
 msgstr ""
 
-#: src/components/audience/AdvanceAudienceFilterForm.tsx:354
+#: src/components/audience/AdvanceAudienceFilterForm.tsx:367
 #: src/components/campaign/CampaignGoalStats.tsx:31
 #: src/components/campaign/details/NotificationDetailSections.tsx:287
 msgid "Value"
 msgstr ""
 
-#: src/components/audience/AdvanceAudienceFilterForm.tsx:357
+#: src/components/audience/AdvanceAudienceFilterForm.tsx:370
 msgid "Enter multiple values separated by commas"
 msgstr ""
 
-#: src/components/audience/AdvanceAudienceFilterForm.tsx:451
+#: src/components/audience/AdvanceAudienceFilterForm.tsx:491
 msgid "Or"
 msgstr ""
 
-#: src/components/audience/AdvanceAudienceFilterForm.tsx:469
+#: src/components/audience/AdvanceAudienceFilterForm.tsx:509
 #: src/components/audience/CreateOrEditAttributeForm.tsx:126
 msgid "Attribute name is required"
 msgstr ""
 
-#: src/components/audience/AdvanceAudienceFilterForm.tsx:473
+#: src/components/audience/AdvanceAudienceFilterForm.tsx:513
 msgid "cannot be longer than 255 characters"
 msgstr ""
 
-#: src/components/audience/AdvanceAudienceFilterForm.tsx:477
+#: src/components/audience/AdvanceAudienceFilterForm.tsx:517
 msgid "only alphabets, numbers,(-) and (_) allowed"
 msgstr ""
 
-#: src/components/audience/AdvanceAudienceFilterForm.tsx:481
+#: src/components/audience/AdvanceAudienceFilterForm.tsx:521
 msgid "attribute name"
 msgstr ""
 
-#: src/components/audience/AdvanceAudienceFilterForm.tsx:522
+#: src/components/audience/AdvanceAudienceFilterForm.tsx:562
 msgid "Remove this group rule"
 msgstr ""
 
-#: src/components/audience/AdvanceAudienceFilterForm.tsx:535
+#: src/components/audience/AdvanceAudienceFilterForm.tsx:575
 #: src/components/campaign/drip/CustomSegmentSelection.tsx:150
 msgid "all"
-msgstr ""
-
-#: src/components/audience/AdvanceAudienceFilterForm.tsx:619
-msgid "Condition is required"
 msgstr ""
 
 #: src/components/audience/AdvanceAudienceFilterForm.tsx:63
@@ -522,20 +518,24 @@ msgstr ""
 msgid "of the following rule"
 msgstr ""
 
-#: src/components/audience/AdvanceAudienceFilterForm.tsx:674
+#: src/components/audience/AdvanceAudienceFilterForm.tsx:659
+msgid "Condition is required"
+msgstr ""
+
+#: src/components/audience/AdvanceAudienceFilterForm.tsx:714
 msgid "Click here to add a new 'AND' rule in the current group"
-msgstr ""
-
-#: src/components/audience/AdvanceAudienceFilterForm.tsx:692
-msgid "Add filter rule"
-msgstr ""
-
-#: src/components/audience/AdvanceAudienceFilterForm.tsx:715
-msgid "Add group rule"
 msgstr ""
 
 #: src/components/audience/AdvanceAudienceFilterForm.tsx:72
 msgid "Remove this filter rule"
+msgstr ""
+
+#: src/components/audience/AdvanceAudienceFilterForm.tsx:732
+msgid "Add filter rule"
+msgstr ""
+
+#: src/components/audience/AdvanceAudienceFilterForm.tsx:755
+msgid "Add group rule"
 msgstr ""
 
 #: src/components/audience/AdvancedAudienceTimeElapsed.tsx:57
@@ -741,7 +741,7 @@ msgid "Selected Subscribers"
 msgstr ""
 
 #: src/components/audience/CleanupSubscriberList.tsx:398
-msgid "View your inactive subscriber count to see who hasn't engaged with your campaigns. Our expert-recommended timeframe is reflected here, but feel free to experiment with other options and performs cleanup as needed."
+msgid "View your inactive subscriber count to see who hasn't engaged with your campaigns. Our expert-recommended timeframe is reflected here, but feel free to experiment with other options and perform cleanup as needed."
 msgstr ""
 
 #: src/components/audience/CleanupSubscriberList.tsx:40
@@ -1061,18 +1061,18 @@ msgid "Profile ID"
 msgstr ""
 
 #: src/components/audience/SubscriberFieldsTable.tsx:46
-#: src/components/audience/audienceHelper.ts:127
+#: src/components/audience/audienceHelper.ts:129
 #: src/pages/design/TargetingRule.tsx:328
 msgid "Country"
 msgstr ""
 
 #: src/components/audience/SubscriberFieldsTable.tsx:50
-#: src/components/audience/audienceHelper.ts:137
+#: src/components/audience/audienceHelper.ts:139
 msgid "City"
 msgstr ""
 
 #: src/components/audience/SubscriberFieldsTable.tsx:54
-#: src/components/audience/audienceHelper.ts:132
+#: src/components/audience/audienceHelper.ts:134
 msgid "State"
 msgstr ""
 
@@ -1099,153 +1099,153 @@ msgstr ""
 msgid "Failed to tag category with segment"
 msgstr ""
 
-#: src/components/audience/audienceHelper.ts:103
+#: src/components/audience/audienceHelper.ts:105
 msgid "Attribute"
 msgstr ""
 
-#: src/components/audience/audienceHelper.ts:105
+#: src/components/audience/audienceHelper.ts:107
 msgid "Select the audience based on the attributes you have added to a user."
 msgstr ""
 
-#: src/components/audience/audienceHelper.ts:111
+#: src/components/audience/audienceHelper.ts:113
 msgid "Segment"
 msgstr ""
 
-#: src/components/audience/audienceHelper.ts:113
+#: src/components/audience/audienceHelper.ts:115
 msgid "Select the audience based on the segment the user belongs to."
 msgstr ""
 
-#: src/components/audience/audienceHelper.ts:116
+#: src/components/audience/audienceHelper.ts:118
 #: src/components/campaign/DeviceSelectionWidget.tsx:81
 msgid "Browser"
 msgstr ""
 
-#: src/components/audience/audienceHelper.ts:118
+#: src/components/audience/audienceHelper.ts:120
 msgid "Select the audience based on the user's browser/platform."
 msgstr ""
 
-#: src/components/audience/audienceHelper.ts:121
+#: src/components/audience/audienceHelper.ts:123
 #: src/components/campaign/DeviceSelectionWidget.tsx:55
 msgid "Device"
 msgstr ""
 
-#: src/components/audience/audienceHelper.ts:123
+#: src/components/audience/audienceHelper.ts:125
 msgid "Select the audience based on the user's device type."
 msgstr ""
 
-#: src/components/audience/audienceHelper.ts:129
+#: src/components/audience/audienceHelper.ts:131
 msgid "Select the audience based on the user's country"
 msgstr ""
 
-#: src/components/audience/audienceHelper.ts:139
+#: src/components/audience/audienceHelper.ts:141
 msgid "Select the audience based on the user's city."
 msgstr ""
 
-#: src/components/audience/audienceHelper.ts:143
+#: src/components/audience/audienceHelper.ts:145
 msgid "Subscription date"
 msgstr ""
 
-#: src/components/audience/audienceHelper.ts:145
+#: src/components/audience/audienceHelper.ts:147
 msgid "Select the audience based on their subscription date/time."
 msgstr ""
 
-#: src/components/audience/audienceHelper.ts:148
+#: src/components/audience/audienceHelper.ts:150
 msgid "Last sent date"
 msgstr ""
 
-#: src/components/audience/audienceHelper.ts:150
+#: src/components/audience/audienceHelper.ts:152
 msgid "Most recent date/time a notification was sent to the user."
 msgstr ""
 
-#: src/components/audience/audienceHelper.ts:153
+#: src/components/audience/audienceHelper.ts:155
 msgid "Last click date"
 msgstr ""
 
-#: src/components/audience/audienceHelper.ts:155
+#: src/components/audience/audienceHelper.ts:157
 msgid "Most recent date/time the user clicked on a notification."
 msgstr ""
 
-#: src/components/audience/audienceHelper.ts:158
+#: src/components/audience/audienceHelper.ts:160
 msgid "Last view date"
 msgstr ""
 
-#: src/components/audience/audienceHelper.ts:160
+#: src/components/audience/audienceHelper.ts:162
 msgid "Most recent date/time the user viewed a notification."
 msgstr ""
 
-#: src/components/audience/audienceHelper.ts:164
+#: src/components/audience/audienceHelper.ts:166
 msgid "Total sent count"
 msgstr ""
 
-#: src/components/audience/audienceHelper.ts:166
+#: src/components/audience/audienceHelper.ts:168
 msgid "Total number of notifications sent to a user."
 msgstr ""
 
-#: src/components/audience/audienceHelper.ts:169
+#: src/components/audience/audienceHelper.ts:171
 msgid "Total view count"
 msgstr ""
 
-#: src/components/audience/audienceHelper.ts:171
+#: src/components/audience/audienceHelper.ts:173
 msgid "Total number of notifications viewed by a user."
 msgstr ""
 
-#: src/components/audience/audienceHelper.ts:174
+#: src/components/audience/audienceHelper.ts:176
 msgid "Total click count"
 msgstr ""
 
-#: src/components/audience/audienceHelper.ts:176
+#: src/components/audience/audienceHelper.ts:178
 msgid "Total number of times a user has clicked on notifications."
 msgstr ""
 
-#: src/components/audience/audienceHelper.ts:179
+#: src/components/audience/audienceHelper.ts:181
 msgid "Profile Id"
 msgstr ""
 
-#: src/components/audience/audienceHelper.ts:181
+#: src/components/audience/audienceHelper.ts:183
 msgid "Select the audience based on the profile id or user id you have assigned to a user."
 msgstr ""
 
-#: src/components/audience/audienceHelper.ts:187
+#: src/components/audience/audienceHelper.ts:189
 msgid "Subscriber Hash"
 msgstr ""
 
-#: src/components/audience/audienceHelper.ts:189
+#: src/components/audience/audienceHelper.ts:191
 msgid "Select the audience based on user id (subscriber hash or device token hash) assigned by PushEngage to a user."
 msgstr ""
 
-#: src/components/audience/audienceHelper.ts:197
+#: src/components/audience/audienceHelper.ts:199
 msgid "Chrome"
 msgstr ""
 
-#: src/components/audience/audienceHelper.ts:198
+#: src/components/audience/audienceHelper.ts:200
 msgid "Opera"
 msgstr ""
 
-#: src/components/audience/audienceHelper.ts:199
+#: src/components/audience/audienceHelper.ts:201
 msgid "Firefox"
 msgstr ""
 
-#: src/components/audience/audienceHelper.ts:200
+#: src/components/audience/audienceHelper.ts:202
 msgid "Safari"
 msgstr ""
 
-#: src/components/audience/audienceHelper.ts:201
+#: src/components/audience/audienceHelper.ts:203
 msgid "Edge"
 msgstr ""
 
-#: src/components/audience/audienceHelper.ts:202
+#: src/components/audience/audienceHelper.ts:204
 msgid "UC Browser"
 msgstr ""
 
-#: src/components/audience/audienceHelper.ts:203
-msgid "Native android app"
+#: src/components/audience/audienceHelper.ts:205
+msgid "Native Android app"
 msgstr ""
 
-#: src/components/audience/audienceHelper.ts:204
+#: src/components/audience/audienceHelper.ts:206
 msgid "Native iOS app"
 msgstr ""
 
-#: src/components/audience/audienceHelper.ts:209
+#: src/components/audience/audienceHelper.ts:211
 #: src/components/design/PopUpModalCard.tsx:128
 #: src/components/onboarding/setup/EditSubscriptionDialog.tsx:266
 #: src/pages/chatWidget/ReviewTab.tsx:302
@@ -1253,13 +1253,13 @@ msgstr ""
 msgid "Mobile"
 msgstr ""
 
-#: src/components/audience/audienceHelper.ts:210
+#: src/components/audience/audienceHelper.ts:212
 #: src/pages/chatWidget/ReviewTab.tsx:295
 #: src/pages/chatWidget/components/TargetDeviceSelector.tsx:45
 msgid "Tablet"
 msgstr ""
 
-#: src/components/audience/audienceHelper.ts:211
+#: src/components/audience/audienceHelper.ts:213
 #: src/components/design/PopUpModalCard.tsx:114
 #: src/components/onboarding/setup/EditSubscriptionDialog.tsx:247
 #: src/pages/chatWidget/ReviewTab.tsx:288
@@ -1267,66 +1267,86 @@ msgstr ""
 msgid "Desktop"
 msgstr ""
 
-#: src/components/audience/audienceHelper.ts:212
+#: src/components/audience/audienceHelper.ts:214
 #: src/components/dashboardWidget/DashboardWidget.tsx:532
 #: src/pages/chatWidget/components/PopularChannelsList.tsx:19
 #: src/pages/debug/SystemInfo.tsx:55
 msgid "Unknown"
 msgstr ""
 
-#: src/components/audience/audienceHelper.ts:268
+#: src/components/audience/audienceHelper.ts:272
 msgid "is all of the following"
 msgstr ""
 
-#: src/components/audience/audienceHelper.ts:297
+#: src/components/audience/audienceHelper.ts:301
 msgid "before"
 msgstr ""
 
-#: src/components/audience/audienceHelper.ts:298
+#: src/components/audience/audienceHelper.ts:302
 msgid "after"
 msgstr ""
 
-#: src/components/audience/audienceHelper.ts:300
+#: src/components/audience/audienceHelper.ts:304
 msgid "in the last"
 msgstr ""
 
-#: src/components/audience/audienceHelper.ts:318
-msgid "equal to"
-msgstr ""
-
-#: src/components/audience/audienceHelper.ts:319
-msgid "not equal to"
-msgstr ""
-
-#: src/components/audience/audienceHelper.ts:320
-msgid "greater than"
+#: src/components/audience/audienceHelper.ts:308
+msgid "older than"
 msgstr ""
 
 #: src/components/audience/audienceHelper.ts:322
+msgid "equal to"
+msgstr ""
+
+#: src/components/audience/audienceHelper.ts:323
+msgid "not equal to"
+msgstr ""
+
+#: src/components/audience/audienceHelper.ts:324
+msgid "greater than"
+msgstr ""
+
+#: src/components/audience/audienceHelper.ts:326
 msgid "greater than or equal to"
 msgstr ""
 
-#: src/components/audience/audienceHelper.ts:325
+#: src/components/audience/audienceHelper.ts:329
 msgid "less than"
 msgstr ""
 
-#: src/components/audience/audienceHelper.ts:327
+#: src/components/audience/audienceHelper.ts:331
 msgid "less than or equal to"
 msgstr ""
 
-#: src/components/audience/audienceHelper.ts:331
+#: src/components/audience/audienceHelper.ts:335
 msgid "is any of the following"
 msgstr ""
 
-#: src/components/audience/audienceHelper.ts:335
+#: src/components/audience/audienceHelper.ts:339
 msgid "is none of the following"
 msgstr ""
 
-#: src/components/audience/audienceHelper.ts:338
+#: src/components/audience/audienceHelper.ts:343
+msgid "date is before"
+msgstr ""
+
+#: src/components/audience/audienceHelper.ts:347
+msgid "date is after"
+msgstr ""
+
+#: src/components/audience/audienceHelper.ts:351
+msgid "date is in the last"
+msgstr ""
+
+#: src/components/audience/audienceHelper.ts:355
+msgid "date is older than"
+msgstr ""
+
+#: src/components/audience/audienceHelper.ts:358
 msgid "is set"
 msgstr ""
 
-#: src/components/audience/audienceHelper.ts:339
+#: src/components/audience/audienceHelper.ts:359
 msgid "is not set"
 msgstr ""
 
@@ -1386,14 +1406,14 @@ msgstr ""
 #: src/components/campaign/AutomationUtmParams.tsx:30
 #: src/components/campaign/NotificationContent.tsx:192
 #: src/components/campaign/details/SentNotificationDetails.tsx:136
-#: src/components/postEditor/PostEditorMetabox.tsx:975
+#: src/components/postEditor/PostEditorMetabox.tsx:1024
 #: src/pages/settings/defaultSettings/index.tsx:270
 msgid "UTM Parameters"
 msgstr ""
 
 #: src/components/campaign/AutomationUtmParams.tsx:42
 #: src/components/campaign/NotificationContent.tsx:203
-#: src/components/postEditor/PostEditorMetabox.tsx:994
+#: src/components/postEditor/PostEditorMetabox.tsx:1043
 msgid "Improve your analytics with custom link attribution."
 msgstr ""
 
@@ -1480,7 +1500,7 @@ msgid "Geo Location"
 msgstr ""
 
 #: src/components/campaign/GeoLocationWidget.tsx:61
-msgid "Send targeted campaigns by selecting subscribers based on their geo location while subscription."
+msgid "Send targeted campaigns by selecting subscribers based on the geo location captured when they subscribed."
 msgstr ""
 
 #: src/components/campaign/GeoLocationWidget.tsx:69
@@ -1493,13 +1513,13 @@ msgstr ""
 
 #: src/components/campaign/NotificationContent.tsx:113
 #: src/components/campaign/notification/MultiAction.tsx:87
-#: src/components/postEditor/PostEditorMetabox.tsx:805
+#: src/components/postEditor/PostEditorMetabox.tsx:854
 msgid "Multi Action Notification"
 msgstr ""
 
 #: src/components/campaign/NotificationContent.tsx:127
 #: src/components/campaign/notification/MultiAction.tsx:101
-#: src/components/postEditor/PostEditorMetabox.tsx:822
+#: src/components/postEditor/PostEditorMetabox.tsx:871
 msgid "Get more clicks with multiple call-to-action buttons."
 msgstr ""
 
@@ -1512,7 +1532,7 @@ msgstr ""
 #: src/components/campaign/NotificationContent.tsx:162
 #: src/components/campaign/drip/NotificationGenerator.tsx:592
 #: src/components/campaign/trigger/NotificationGenerator.tsx:546
-msgid "Maximize your reach with custom notification durations (this feature is available for chrome 47 and above versions only)."
+msgid "Maximize your reach with custom notification durations (this feature is available for Chrome 47 and above versions only)."
 msgstr ""
 
 #: src/components/campaign/NotificationContent.tsx:52
@@ -1531,36 +1551,36 @@ msgid "Show Large Image"
 msgstr ""
 
 #: src/components/campaign/NotificationContent.tsx:96
-#: src/components/postEditor/PostEditorMetabox.tsx:784
+#: src/components/postEditor/PostEditorMetabox.tsx:833
 msgid "Make your notifications stand out with larger images."
 msgstr ""
 
 #: src/components/campaign/PushAudience.tsx:122
-#: src/components/campaign/details/CustomAudienceDetails.tsx:196
+#: src/components/campaign/details/CustomAudienceDetails.tsx:204
 #: src/components/campaign/details/NotificationDetailSections.tsx:300
 #: src/components/campaign/drip/DripAudience.tsx:229
-#: src/components/postEditor/PostEditorMetabox.tsx:876
+#: src/components/postEditor/PostEditorMetabox.tsx:925
 msgid "Send to All Subscribers"
 msgstr ""
 
 #: src/components/campaign/PushAudience.tsx:125
-#: src/components/postEditor/PostEditorMetabox.tsx:879
+#: src/components/postEditor/PostEditorMetabox.tsx:928
 msgid "This broadcast message will go to all subscribers."
 msgstr ""
 
 #: src/components/campaign/PushAudience.tsx:155
-#: src/components/campaign/details/CustomAudienceDetails.tsx:178
-#: src/components/postEditor/PostEditorMetabox.tsx:916
+#: src/components/campaign/details/CustomAudienceDetails.tsx:186
+#: src/components/postEditor/PostEditorMetabox.tsx:965
 msgid "Send to Audience Group"
 msgstr ""
 
 #: src/components/campaign/PushAudience.tsx:161
-#: src/components/postEditor/PostEditorMetabox.tsx:919
+#: src/components/postEditor/PostEditorMetabox.tsx:968
 msgid "Personalize your notification based on predefined audience group."
 msgstr ""
 
 #: src/components/campaign/PushAudience.tsx:203
-#: src/components/campaign/details/CustomAudienceDetails.tsx:140
+#: src/components/campaign/details/CustomAudienceDetails.tsx:148
 #: src/components/campaign/drip/DripAudience.tsx:257
 msgid "Send to Custom Audience"
 msgstr ""
@@ -1569,22 +1589,22 @@ msgstr ""
 msgid "Personalize your notification based on segments, user's geolocation, device, and more."
 msgstr ""
 
-#: src/components/campaign/PushMultiAction.tsx:118
+#: src/components/campaign/PushMultiAction.tsx:116
 #: src/components/campaign/notification/MultiAction.tsx:155
 msgid "Show Second Button"
 msgstr ""
 
-#: src/components/campaign/PushMultiAction.tsx:123
+#: src/components/campaign/PushMultiAction.tsx:121
 #: src/components/campaign/notification/MultiAction.tsx:163
 msgid "Second Button Title"
 msgstr ""
 
-#: src/components/campaign/PushMultiAction.tsx:148
+#: src/components/campaign/PushMultiAction.tsx:146
 #: src/components/campaign/notification/MultiAction.tsx:172
 msgid "Second Button URL"
 msgstr ""
 
-#: src/components/campaign/PushMultiAction.tsx:162
+#: src/components/campaign/PushMultiAction.tsx:160
 #: src/components/campaign/PushNotification.tsx:85
 #: src/components/campaign/notification/MultiAction.tsx:176
 #: src/components/onboarding/setup/EditWelcomeNotification.tsx:76
@@ -1592,24 +1612,14 @@ msgstr ""
 msgid "Example Notification URL : https://www.pushengage.com"
 msgstr ""
 
-#: src/components/campaign/PushMultiAction.tsx:178
-#: src/components/campaign/notification/MultiAction.tsx:182
-msgid "Second Button Image"
-msgstr ""
-
-#: src/components/campaign/PushMultiAction.tsx:44
+#: src/components/campaign/PushMultiAction.tsx:42
 #: src/components/campaign/notification/MultiAction.tsx:110
 msgid "First Button Title"
 msgstr ""
 
-#: src/components/campaign/PushMultiAction.tsx:69
+#: src/components/campaign/PushMultiAction.tsx:67
 #: src/components/campaign/notification/MultiAction.tsx:119
 msgid "First Button URL"
-msgstr ""
-
-#: src/components/campaign/PushMultiAction.tsx:95
-#: src/components/campaign/notification/MultiAction.tsx:128
-msgid "First Button Image"
 msgstr ""
 
 #: src/components/campaign/PushNotification.tsx:106
@@ -1619,7 +1629,7 @@ msgstr ""
 
 #: src/components/campaign/PushNotification.tsx:46
 #: src/components/onboarding/setup/EditWelcomeNotification.tsx:48
-#: src/components/postEditor/PostEditorMetabox.tsx:708
+#: src/components/postEditor/PostEditorMetabox.tsx:739
 #: src/components/woocommerce/WooPushCampaignModal.tsx:362
 #: src/pages/settings/defaultSettings/index.tsx:420
 #: app/Integrations/WooCommerce/NotificationSettings.php:176
@@ -1628,7 +1638,7 @@ msgstr ""
 
 #: src/components/campaign/PushNotification.tsx:63
 #: src/components/onboarding/setup/EditWelcomeNotification.tsx:59
-#: src/components/postEditor/PostEditorMetabox.tsx:733
+#: src/components/postEditor/PostEditorMetabox.tsx:764
 #: src/components/woocommerce/WooPushCampaignModal.tsx:384
 #: src/pages/settings/defaultSettings/index.tsx:435
 #: app/Integrations/WooCommerce/NotificationSettings.php:185
@@ -1657,8 +1667,8 @@ msgid "Expires in"
 msgstr ""
 
 #: src/components/campaign/PushNotificationDuration.tsx:52
-#: src/pages/settings/defaultSettings/index.tsx:527
-msgid "This is the expiry time for a notification. If a user is not available online with browser running, then the notification will be retried until expiration time. The maximum value is 28 days."
+#: src/components/postEditor/PostEditorMetabox.tsx:791
+msgid "How long to keep retrying delivery if the subscriber's browser is offline. After this window, the notification is dropped. Maximum: 28 days."
 msgstr ""
 
 #: src/components/campaign/PushNotificationPreview.tsx:82
@@ -1759,7 +1769,7 @@ msgid "Send your AB notification to a percentage of your selected audience (mini
 msgstr ""
 
 #: src/components/campaign/PushSend.tsx:589
-msgid "The delay is the amount of time to wait before deciding the winner notification and sending it to remaining subscribers. Should be between 30 minute and 7 days."
+msgid "The delay is the amount of time to wait before deciding the winner notification and sending it to remaining subscribers. Should be between 30 minutes and 7 days."
 msgstr ""
 
 #: src/components/campaign/PushSend.tsx:94
@@ -1767,7 +1777,7 @@ msgid "Your current plan doesn't support the Subscribers Timezone feature."
 msgstr ""
 
 #: src/components/campaign/appPush/LimitInput.tsx:198
-msgid "Generate text using AI"
+msgid "Generate using AI"
 msgstr ""
 
 #: src/components/campaign/automation/AutomationAnalytics.tsx:103
@@ -1826,7 +1836,7 @@ msgstr ""
 #: src/components/campaign/automation/AutomationDetails.tsx:184
 #: src/components/campaign/details/SentNotificationDetails.tsx:102
 #: src/components/campaign/pushBroadcast/PageBreadcrumb.tsx:37
-#: src/components/postEditor/PostEditorMetabox.tsx:861
+#: src/components/postEditor/PostEditorMetabox.tsx:910
 #: app/Utils/AdminNavMenuItems.php:62
 msgid "Audience"
 msgstr ""
@@ -1998,12 +2008,12 @@ msgstr ""
 msgid "You can only export analytics of maximum 3 months at a time."
 msgstr ""
 
-#: src/components/campaign/details/CustomAudienceDetails.tsx:128
+#: src/components/campaign/details/CustomAudienceDetails.tsx:136
 #: src/pages/design/TargetingRule.tsx:373
 msgid "AND"
 msgstr ""
 
-#: src/components/campaign/details/CustomAudienceDetails.tsx:153
+#: src/components/campaign/details/CustomAudienceDetails.tsx:161
 msgid "OR"
 msgstr ""
 
@@ -2194,11 +2204,11 @@ msgid "Send targeted campaigns by selecting your audience based on their behavio
 msgstr ""
 
 #: src/components/campaign/drip/DripAudience.tsx:232
-msgid "This drip autoresponder messages will go to all subscribers."
+msgid "These drip autoresponder messages will go to all subscribers."
 msgstr ""
 
 #: src/components/campaign/drip/DripAudience.tsx:263
-msgid "Personalize your notification based on custom segments, user’s geolocation, device, and more.."
+msgid "Personalize your notification based on custom segments, user’s geolocation, device, and more."
 msgstr ""
 
 #: src/components/campaign/drip/DripAudience.tsx:329
@@ -2389,6 +2399,14 @@ msgstr ""
 
 #: src/components/campaign/notification/LargeImage.tsx:51
 msgid "Chrome 56+ supports displaying a large image in your campaign. The recommended size of the image is 360*180px. The appearance may vary based on the user’s browser and device."
+msgstr ""
+
+#: src/components/campaign/notification/MultiAction.tsx:128
+msgid "First Button Image"
+msgstr ""
+
+#: src/components/campaign/notification/MultiAction.tsx:182
+msgid "Second Button Image"
 msgstr ""
 
 #: src/components/campaign/notification/MultiAction.tsx:55
@@ -2594,7 +2612,7 @@ msgstr ""
 
 #. 1 - The applied sort order. - 2 - The maximum limit for sorting
 #: src/components/campaign/pushBroadcast/PushTableSorter.tsx:94
-msgid "The sorting for %1$s option is limited upto %2$d entries. Please use the date range filter to reduce the number of entries."
+msgid "The sorting for %1$s option is limited up to %2$d entries. Please use the date range filter to reduce the number of entries."
 msgstr ""
 
 #: src/components/campaign/templates/Card.tsx:208
@@ -2615,7 +2633,7 @@ msgid "Push Broadcast Templates"
 msgstr ""
 
 #: src/components/campaign/templates/Modal.tsx:33
-msgid "Get started with our expertly crafted push broadcast templates. These pre designed message formats offer popular styles carefully curated by our experts. With custom UTM parameters for each style, you can track the performance and effectiveness of your push broadcasts. Effortlessly engage your audience and gain valuable insights into your communication strategy. It's never been easier to create impactful messages and measure their impact!"
+msgid "Get started with our expertly crafted push broadcast templates. These pre-designed message formats offer popular styles carefully curated by our experts. With custom UTM parameters for each style, you can track the performance and effectiveness of your push broadcasts. Effortlessly engage your audience and gain valuable insights into your communication strategy. It's never been easier to create impactful messages and measure their impact!"
 msgstr ""
 
 #: src/components/campaign/templates/PageAndModelContent.tsx:155
@@ -2926,7 +2944,7 @@ msgid "Performance across your channels"
 msgstr ""
 
 #: src/components/dashboardWidget/DashboardWidget.tsx:734
-#: src/components/postEditor/PostEditorMetabox.tsx:606
+#: src/components/postEditor/PostEditorMetabox.tsx:637
 #: app/Integrations/Abilities/NotificationAbilities.php:59
 #: app/Integrations/WooCommerce/NotificationSettings.php:205
 msgid "Send Notification"
@@ -2988,7 +3006,7 @@ msgstr ""
 #: src/components/dashboardWidget/OnboardingPrompt.tsx:74
 #: main.php
 #: app/AdminBarMenu.php:55
-#: app/DashboardWidget.php:53
+#: app/DashboardWidget.php:56
 #: app/Integrations/Abilities.php:65
 #: app/NavMenu.php:81
 #: app/NavMenu.php:88
@@ -3196,7 +3214,7 @@ msgid "Create a Campaign"
 msgstr ""
 
 #: src/components/onboarding/FinalStep.tsx:229
-#: src/pages/settings/autoPush/index.tsx:198
+#: src/pages/settings/autoPush/index.tsx:202
 msgid "Auto Push Settings"
 msgstr ""
 
@@ -3389,7 +3407,7 @@ msgstr ""
 #: src/pages/chatWidget/ChannelSettingsDrawer.tsx:512
 #: src/pages/design/TargetingRule.tsx:482
 #: src/pages/settings/advancedSettings/index.tsx:437
-#: src/pages/settings/autoPush/index.tsx:323
+#: src/pages/settings/autoPush/index.tsx:353
 #: src/pages/settings/defaultSettings/index.tsx:610
 #: src/pages/settings/misc/index.tsx:394
 #: src/pages/settings/siteDetails/index.tsx:620
@@ -3402,7 +3420,7 @@ msgid "Edit Welcome Drip Campaign - First Notification"
 msgstr ""
 
 #: src/components/onboarding/setup/BuildSubscribersList.tsx:228
-msgid "You don't have permission to update design settings. Please contact to your admin."
+msgid "You don't have permission to update design settings. Please contact your admin."
 msgstr ""
 
 #: src/components/onboarding/setup/BuildSubscribersList.tsx:237
@@ -3565,7 +3583,7 @@ msgid "WooCommerce Cart Abandonment-%1$s"
 msgstr ""
 
 #: src/components/onboarding/setup/RecoverSales.tsx:243
-msgid "An error was encountered while while saving the recover sales settings, please try again."
+msgid "An error was encountered while saving the recover sales settings, please try again."
 msgstr ""
 
 #: src/components/onboarding/setup/RecoverSales.tsx:277
@@ -3665,7 +3683,7 @@ msgid "Connect with potential customers showing interest"
 msgstr ""
 
 #: src/components/onboarding/setup/SetupRetargeting.tsx:221
-msgid "An error was encountered while while saving the retargeting settings, please try again."
+msgid "An error was encountered while saving the retargeting settings, please try again."
 msgstr ""
 
 #: src/components/onboarding/setup/SetupRetargeting.tsx:265
@@ -3727,8 +3745,9 @@ msgstr ""
 
 #: src/components/onboarding/setup/SetupWhatsappAutomation.tsx:64
 #: src/pages/whatsapp/WhatsappAutomation.tsx:68
+#: src/pages/whatsapp/WhatsappTemplates.tsx:88
 #: src/pages/woocommerce/WooWhatsappAutomation.tsx:65
-msgid "Error fetching whatsapp templates"
+msgid "Error fetching WhatsApp templates"
 msgstr ""
 
 #: src/components/onboarding/setup/SetupWhatsappAutomation.tsx:93
@@ -3833,75 +3852,79 @@ msgstr ""
 msgid "In progress"
 msgstr ""
 
-#: src/components/postEditor/PostEditorMetabox.tsx:335
+#: src/components/postEditor/PostEditorMetabox.tsx:1009
+msgid "Upgrade to Business Plan"
+msgstr ""
+
+#: src/components/postEditor/PostEditorMetabox.tsx:366
 msgid "Your account does not contain any audience groups."
 msgstr ""
 
-#: src/components/postEditor/PostEditorMetabox.tsx:340
+#: src/components/postEditor/PostEditorMetabox.tsx:371
 msgid "Audience group is a pro feature, not available on the Free Plan."
 msgstr ""
 
-#: src/components/postEditor/PostEditorMetabox.tsx:438
+#: src/components/postEditor/PostEditorMetabox.tsx:469
 msgid "Send Push Notification on Update"
 msgstr ""
 
-#: src/components/postEditor/PostEditorMetabox.tsx:439
+#: src/components/postEditor/PostEditorMetabox.tsx:470
 #: app/Integrations/WooCommerce/NotificationSettings.php:165
 msgid "Send Push Notification"
 msgstr ""
 
-#: src/components/postEditor/PostEditorMetabox.tsx:553
+#: src/components/postEditor/PostEditorMetabox.tsx:584
 msgid "Your account's notification sending feature is currently disabled. To enable it, please upgrade your plan"
 msgstr ""
 
-#: src/components/postEditor/PostEditorMetabox.tsx:569
+#: src/components/postEditor/PostEditorMetabox.tsx:600
 #: src/pages/settings/Billing/index.tsx:193
 msgid "Update Plan"
 msgstr ""
 
-#: src/components/postEditor/PostEditorMetabox.tsx:595
+#: src/components/postEditor/PostEditorMetabox.tsx:626
 msgid "Please verify your email address to begin sending push notifications. Please click the link in the verification email we have sent you."
 msgstr ""
 
-#: src/components/postEditor/PostEditorMetabox.tsx:634
-msgid "You have active RSS auto push campaign for this site. Please ensure that you really want to send this post in Push Notification."
+#: src/components/postEditor/PostEditorMetabox.tsx:665
+msgid "You have an active RSS auto push campaign for this site. Please ensure that you really want to send this post in Push Notification."
 msgstr ""
 
-#: src/components/postEditor/PostEditorMetabox.tsx:649
-msgid "Note: You have 0 active subscriber."
+#: src/components/postEditor/PostEditorMetabox.tsx:680
+msgid "Note: You have 0 active subscribers."
 msgstr ""
 
-#: src/components/postEditor/PostEditorMetabox.tsx:655
+#: src/components/postEditor/PostEditorMetabox.tsx:686
 msgid "Need help"
 msgstr ""
 
-#: src/components/postEditor/PostEditorMetabox.tsx:668
+#: src/components/postEditor/PostEditorMetabox.tsx:699
 #: src/pages/settings/defaultSettings/index.tsx:378
 msgid "Notification Preview"
 msgstr ""
 
-#: src/components/postEditor/PostEditorMetabox.tsx:723
+#: src/components/postEditor/PostEditorMetabox.tsx:754
 msgid "By default, the post title is used as the notification title. However, you have the option to provide a custom notification title in this field."
 msgstr ""
 
-#: src/components/postEditor/PostEditorMetabox.tsx:749
+#: src/components/postEditor/PostEditorMetabox.tsx:780
 msgid "By default, the post excerpt/content is used as the notification message. However, you have the option to provide a custom notification message in this field."
 msgstr ""
 
-#: src/components/postEditor/PostEditorMetabox.tsx:762
+#: src/components/postEditor/PostEditorMetabox.tsx:789
+msgid "Notification Expiry"
+msgstr ""
+
+#: src/components/postEditor/PostEditorMetabox.tsx:811
 msgid "Large Image"
 msgstr ""
 
-#: src/components/postEditor/PostEditorMetabox.tsx:780
+#: src/components/postEditor/PostEditorMetabox.tsx:829
 msgid "The featured image will be used as the large image, but if you have a better image available, you can update it here and use it in the campaign."
 msgstr ""
 
-#: src/components/postEditor/PostEditorMetabox.tsx:833
+#: src/components/postEditor/PostEditorMetabox.tsx:882
 msgid "The notification button URL ensures that subscribers land on the designated page. By default, it will be set to the post URL. If you prefer to redirect them to a custom landing page, please update this field."
-msgstr ""
-
-#: src/components/postEditor/PostEditorMetabox.tsx:960
-msgid "Upgrade to Business Plan"
 msgstr ""
 
 #: src/components/whatsapp/AccessTokenMismatchAlert.tsx:18
@@ -3948,7 +3971,7 @@ msgstr ""
 
 #. %s is a list of variables
 #: src/components/whatsapp/WhatsappCampaignModal.tsx:192
-msgid "Customer header variables %s is required."
+msgid "Customer header variables %s are required."
 msgstr ""
 
 #. %s is a variable key
@@ -3958,7 +3981,7 @@ msgstr ""
 
 #. %s is a list of variables
 #: src/components/whatsapp/WhatsappCampaignModal.tsx:229
-msgid "Customer body variables %s  required."
+msgid "Customer body variables %s are required."
 msgstr ""
 
 #. %s is a variable key
@@ -3967,7 +3990,7 @@ msgid "Customer body variable {{%s}} value cannot have new-line/tab characters o
 msgstr ""
 
 #: src/components/whatsapp/WhatsappCampaignModal.tsx:256
-msgid "Admin phone numbers is required."
+msgid "Admin phone numbers are required."
 msgstr ""
 
 #: src/components/whatsapp/WhatsappCampaignModal.tsx:268
@@ -3980,7 +4003,7 @@ msgstr ""
 
 #. %s is a list of variables
 #: src/components/whatsapp/WhatsappCampaignModal.tsx:294
-msgid "Admin header variables %s is required."
+msgid "Admin header variables %s are required."
 msgstr ""
 
 #. %s is a variable key
@@ -3990,7 +4013,7 @@ msgstr ""
 
 #. %s is a list of variables
 #: src/components/whatsapp/WhatsappCampaignModal.tsx:327
-msgid "Admin body variables %s required."
+msgid "Admin body variables %s are required."
 msgstr ""
 
 #. %s is a variable key
@@ -4206,7 +4229,7 @@ msgid "Configure your WhatsApp Cloud API settings to enable WhatsApp messaging f
 msgstr ""
 
 #: src/components/whatsapp/WhatsappCloudApiForm.tsx:130
-#: app/Ajax.php:1287
+#: app/Ajax.php:1326
 msgid "WhatsApp Business ID"
 msgstr ""
 
@@ -4215,7 +4238,7 @@ msgid "The unique identifier for your WhatsApp Business account"
 msgstr ""
 
 #: src/components/whatsapp/WhatsappCloudApiForm.tsx:142
-#: app/Ajax.php:1288
+#: app/Ajax.php:1327
 msgid "Phone Number ID"
 msgstr ""
 
@@ -4224,7 +4247,7 @@ msgid "The ID of the phone number associated with your WhatsApp Business account
 msgstr ""
 
 #: src/components/whatsapp/WhatsappCloudApiForm.tsx:156
-#: app/Ajax.php:1290
+#: app/Ajax.php:1329
 msgid "WhatsApp Phone Number"
 msgstr ""
 
@@ -4241,7 +4264,7 @@ msgid "The phone number associated with your WhatsApp Business account in intern
 msgstr ""
 
 #: src/components/whatsapp/WhatsappCloudApiForm.tsx:190
-#: app/Ajax.php:1289
+#: app/Ajax.php:1328
 msgid "Access Token"
 msgstr ""
 
@@ -5314,7 +5337,7 @@ msgid "Engage, retain, and convert your store customers"
 msgstr ""
 
 #: src/constants/planFeatures.ts:248
-msgid "Launch an automated welcome campaign that boost sales"
+msgid "Launch an automated welcome campaign that boosts sales"
 msgstr ""
 
 #: src/constants/planFeatures.ts:249
@@ -5782,65 +5805,65 @@ msgstr ""
 msgid "Start time must be before end time for enabled business hour days."
 msgstr ""
 
-#: src/helper/validateNotification.ts:112
+#: src/helper/validateNotification.ts:115
 msgid "UTM Source cannot be blank"
 msgstr ""
 
-#: src/helper/validateNotification.ts:113
+#: src/helper/validateNotification.ts:116
 msgid "UTM Medium cannot be blank"
 msgstr ""
 
-#: src/helper/validateNotification.ts:114
+#: src/helper/validateNotification.ts:117
 msgid "UTM Campaign cannot be blank"
 msgstr ""
 
-#: src/helper/validateNotification.ts:115
+#: src/helper/validateNotification.ts:118
 msgid "UTM Term cannot be blank"
 msgstr ""
 
-#: src/helper/validateNotification.ts:116
+#: src/helper/validateNotification.ts:119
 msgid "UTM Content cannot be blank"
 msgstr ""
 
-#: src/helper/validateNotification.ts:117
+#: src/helper/validateNotification.ts:120
 msgid "UTM Source cannot be longer than 80 characters"
 msgstr ""
 
-#: src/helper/validateNotification.ts:118
+#: src/helper/validateNotification.ts:121
 msgid "UTM Medium cannot be longer than 80 characters"
 msgstr ""
 
-#: src/helper/validateNotification.ts:119
+#: src/helper/validateNotification.ts:122
 msgid "UTM Campaign cannot be longer than 80 characters"
 msgstr ""
 
-#: src/helper/validateNotification.ts:120
+#: src/helper/validateNotification.ts:123
 msgid "UTM Term cannot be longer than 80 characters"
 msgstr ""
 
-#: src/helper/validateNotification.ts:121
+#: src/helper/validateNotification.ts:124
 msgid "UTM Content cannot be longer than 120 characters"
 msgstr ""
 
-#: src/helper/validateNotification.ts:124
+#: src/helper/validateNotification.ts:127
 #: src/pages/settings/validateSettings.ts:41
 msgid "Expiry can be maximum of 28 days"
 msgstr ""
 
-#: src/helper/validateNotification.ts:125
-msgid "Expiry must be minimum of 1 minute"
-msgstr ""
-
 #: src/helper/validateNotification.ts:128
-msgid "Goal name must be a minimum of 1 and maximum of 64 characters"
-msgstr ""
-
-#: src/helper/validateNotification.ts:129
-msgid "Result name can contain only alphabets, numbers, hyphen(-) and underscore(_)"
+msgid "Expiry must be minimum of 1 minute"
 msgstr ""
 
 #: src/helper/validateNotification.ts:13
 msgid "Add a catchy broadcast title. Let’s get your broadcast noticed."
+msgstr ""
+
+#: src/helper/validateNotification.ts:131
+msgid "Goal name must be a minimum of 1 and maximum of 64 characters"
+msgstr ""
+
+#: src/helper/validateNotification.ts:132
+msgid "Result name can contain only letters, numbers, hyphen(-) and underscore(_)"
 msgstr ""
 
 #: src/helper/validateNotification.ts:17
@@ -5869,132 +5892,132 @@ msgstr ""
 msgid "Notification large image cannot be blank if enabled"
 msgstr ""
 
-#: src/helper/validateNotification.ts:379
+#: src/helper/validateNotification.ts:382
 msgid "Choose schedule start & end date for repeat schedule"
 msgstr ""
 
 #: src/helper/validateNotification.ts:39
-msgid "Choose At least one day in week to repeat schedule"
+msgid "Choose at least one day in the week to repeat schedule"
 msgstr ""
 
-#: src/helper/validateNotification.ts:393
+#: src/helper/validateNotification.ts:396
 msgid "Scheduled start & end date can not be less than current date."
 msgstr ""
 
-#: src/helper/validateNotification.ts:406
+#: src/helper/validateNotification.ts:409
 msgid "Repeat schedule start date must be less or equal to end date"
 msgstr ""
 
-#: src/helper/validateNotification.ts:418
+#: src/helper/validateNotification.ts:421
 msgid "Scheduled date and time can not be less than current date and time"
 msgstr ""
 
-#: src/helper/validateNotification.ts:42
-#: src/pages/settings/validateSettings.ts:23
-msgid "Notification title cannot be blank"
-msgstr ""
-
-#: src/helper/validateNotification.ts:427
+#: src/helper/validateNotification.ts:430
 msgid "Cannot create a notification for 0 subscribers"
 msgstr ""
 
-#: src/helper/validateNotification.ts:43
-#: src/pages/settings/validateSettings.ts:28
-msgid "Notification message cannot be blank"
-msgstr ""
-
 #. 1 - The duration in minutes
-#: src/helper/validateNotification.ts:439
+#: src/helper/validateNotification.ts:442
 msgid "Minimum delay must be %1d minutes or above."
 msgstr ""
 
-#: src/helper/validateNotification.ts:44
-msgid "Notification URL cannot be blank"
-msgstr ""
-
-#: src/helper/validateNotification.ts:445
+#: src/helper/validateNotification.ts:448
 msgid "Maximum delay can be of 7 days."
 msgstr ""
 
 #: src/helper/validateNotification.ts:45
-msgid "Notification title cannot be longer than 200 characters"
+#: src/pages/settings/validateSettings.ts:23
+msgid "Notification title cannot be blank"
 msgstr ""
 
 #. 1 - The minimum sample size, 2 - The actual sample size
-#: src/helper/validateNotification.ts:455
+#: src/helper/validateNotification.ts:458
 msgid "Cannot create Intelligent AB Test notification for a sample size less than %1$d subscribers. Only %2$d subscribers matched."
 msgstr ""
 
 #: src/helper/validateNotification.ts:46
-msgid "Notification message cannot be longer than 200 characters"
+#: src/pages/settings/validateSettings.ts:28
+msgid "Notification message cannot be blank"
 msgstr ""
 
-#: src/helper/validateNotification.ts:470
+#: src/helper/validateNotification.ts:47
+msgid "Notification URL cannot be blank"
+msgstr ""
+
+#: src/helper/validateNotification.ts:473
 msgid "Recipient count should be greater than 0"
 msgstr ""
 
 #. 1 - The selected subscriber count
-#: src/helper/validateNotification.ts:475
+#: src/helper/validateNotification.ts:478
 msgid "Recipient count should be less than selected subscribers count %1d"
 msgstr ""
 
-#: src/helper/validateNotification.ts:50
-msgid "Notification URL cannot be longer than 300 characters"
+#: src/helper/validateNotification.ts:48
+msgid "Notification title cannot be longer than 200 characters"
 msgstr ""
 
-#: src/helper/validateNotification.ts:51
-msgid "Invalid notification URL"
-msgstr ""
-
-#: src/helper/validateNotification.ts:52
-msgid "Notification image cannot be longer than 300 characters"
+#: src/helper/validateNotification.ts:49
+msgid "Notification message cannot be longer than 200 characters"
 msgstr ""
 
 #: src/helper/validateNotification.ts:53
+msgid "Notification URL cannot be longer than 300 characters"
+msgstr ""
+
+#: src/helper/validateNotification.ts:54
+msgid "Invalid notification URL"
+msgstr ""
+
+#: src/helper/validateNotification.ts:55
+msgid "Notification image cannot be longer than 300 characters"
+msgstr ""
+
+#: src/helper/validateNotification.ts:56
 msgid "Notification big image cannot be longer than 300 characters"
 msgstr ""
 
-#: src/helper/validateNotification.ts:57
+#: src/helper/validateNotification.ts:60
 msgid "Event name can not be empty"
 msgstr ""
 
-#: src/helper/validateNotification.ts:58
+#: src/helper/validateNotification.ts:61
 msgid "Campaign name can not be empty"
 msgstr ""
 
-#: src/helper/validateNotification.ts:63
+#: src/helper/validateNotification.ts:66
 msgid "Action label cannot be longer than 200 characters"
 msgstr ""
 
-#: src/helper/validateNotification.ts:64
+#: src/helper/validateNotification.ts:67
 msgid "Action URL cannot be longer than 300 characters"
 msgstr ""
 
-#: src/helper/validateNotification.ts:67
-msgid "Campaign name can not be Empty"
+#: src/helper/validateNotification.ts:70
+msgid "Campaign name cannot be empty"
 msgstr ""
 
-#: src/helper/validateNotification.ts:68
+#: src/helper/validateNotification.ts:71
 msgid "Campaign name length can not be greater than 150 characters"
 msgstr ""
 
-#: src/helper/validateNotification.ts:74
+#: src/helper/validateNotification.ts:77
 msgid "Action label cannot be blank"
 msgstr ""
 
-#: src/helper/validateNotification.ts:75
+#: src/helper/validateNotification.ts:78
 msgid "Action URL cannot be blank"
 msgstr ""
 
-#: src/helper/validateNotification.ts:76
+#: src/helper/validateNotification.ts:79
 msgid "Action label cannot be longer than 12 characters"
 msgstr ""
 
-#: src/helper/validateNotification.ts:77
+#: src/helper/validateNotification.ts:80
 msgid "Action URL cannot be longer than 256 characters"
 msgstr ""
 
-#: src/helper/validateNotification.ts:78
+#: src/helper/validateNotification.ts:81
 msgid "Invalid action URL"
 msgstr ""
 
@@ -6071,7 +6094,7 @@ msgid "When email gets ignored and paid acquisition keeps getting more expensive
 msgstr ""
 
 #: src/pages/aboutUs/GettingStarted.tsx:176
-msgid "From real-time notifications to automated follow-ups and inbox-free chat, PushEngage helps you drive repeat traffic, recover lost revenue, and create meaningful customer interactions — without adding engineering overhead.:"
+msgid "From real-time notifications to automated follow-ups and inbox-free chat, PushEngage helps you drive repeat traffic, recover lost revenue, and create meaningful customer interactions — without adding engineering overhead."
 msgstr ""
 
 #: src/pages/aboutUs/GettingStarted.tsx:182
@@ -6247,7 +6270,7 @@ msgid "Goal tracking setting saved."
 msgstr ""
 
 #: src/pages/analytics/GoalTracking.tsx:158
-msgid "You don't have permission to update goal analytics. Please contact to your admin."
+msgid "You don't have permission to update goal analytics. Please contact your admin."
 msgstr ""
 
 #: src/pages/analytics/GoalTracking.tsx:182
@@ -6290,7 +6313,7 @@ msgid "You can only view analytics of maximum 12 months at a time."
 msgstr ""
 
 #: src/pages/analytics/OptinAnalytics.tsx:192
-msgid "You do not permission to update the setting"
+msgid "You do not have permission to update the setting"
 msgstr ""
 
 #: src/pages/analytics/OptinAnalytics.tsx:233
@@ -6438,7 +6461,7 @@ msgstr ""
 
 #: src/pages/audience/AudienceGroups.tsx:185
 #: src/pages/audience/Segments.tsx:309
-msgid "You don't have permission to create/modify segment. Please contact to your admin."
+msgid "You don't have permission to create/modify segment. Please contact your admin."
 msgstr ""
 
 #: src/pages/audience/AudienceGroups.tsx:201
@@ -6515,7 +6538,7 @@ msgid "create segments"
 msgstr ""
 
 #: src/pages/audience/Segments.tsx:300
-msgid "You have reached the maximum number of segment allowed for your account. Please upgrade your plan to add more segment."
+msgid "You have reached the maximum number of segments allowed for your account. Please upgrade your plan to add more segments."
 msgstr ""
 
 #: src/pages/audience/Segments.tsx:336
@@ -6840,7 +6863,7 @@ msgid "Agent Name"
 msgstr ""
 
 #: src/pages/chatWidget/ClickToChatV2Form.tsx:146
-msgid "Give your widget an unique name to easily identify it in the list of widgets."
+msgid "Give your widget a unique name to easily identify it in the list of widgets."
 msgstr ""
 
 #: src/pages/chatWidget/ClickToChatV2Form.tsx:151
@@ -7925,7 +7948,7 @@ msgid "View the changelog"
 msgstr ""
 
 #: src/pages/dashboard/Dashboard.tsx:310
-msgid "Getting started? Read the beginners guide"
+msgid "Getting started? Read the beginner's guide"
 msgstr ""
 
 #: src/pages/dashboard/RecentNotifications.tsx:100
@@ -9167,7 +9190,7 @@ msgid "Push Single Step opt-in can not be enabled for HTTP site"
 msgstr ""
 
 #: src/pages/design/PopUpModals.tsx:189
-msgid "Push Single Step opt-in can not be enabled. Because, service worker file is not accessible."
+msgid "Push Single Step opt-in cannot be enabled because the service worker file is not accessible."
 msgstr ""
 
 #: src/pages/design/PopUpModals.tsx:282
@@ -9179,7 +9202,7 @@ msgid "Subscription dialogbox setting update failed"
 msgstr ""
 
 #: src/pages/design/PopUpModals.tsx:300
-msgid "You don't have permission to create/modify subscription dialogbox. Please contact to your admin."
+msgid "You don't have permission to create/modify subscription dialogbox. Please contact your admin."
 msgstr ""
 
 #: src/pages/design/PopUpModals.tsx:317
@@ -9199,7 +9222,7 @@ msgid "Targeting rule setting updated"
 msgstr ""
 
 #: src/pages/design/TargetingRule.tsx:244
-msgid "You don't have permission to create/modify subscription rules. Please contact to your admin."
+msgid "You don't have permission to create/modify subscription rules. Please contact your admin."
 msgstr ""
 
 #: src/pages/design/TargetingRule.tsx:257
@@ -9207,7 +9230,7 @@ msgid "Enable Opt-in Subscription Rules"
 msgstr ""
 
 #: src/pages/design/TargetingRule.tsx:261
-msgid "By default, the subscription opt-in will be shown across all pages. Setup the global targeting rule for your opt-ins here. The global targeting rules will have a higher preference over the individual opt-in subscription rule."
+msgid "By default, the subscription opt-in will be shown across all pages. Set up the global targeting rule for your opt-ins here. The global targeting rules will have a higher preference over the individual opt-in subscription rule."
 msgstr ""
 
 #: src/pages/design/TargetingRule.tsx:269
@@ -9227,7 +9250,7 @@ msgid "Any"
 msgstr ""
 
 #: src/pages/design/TargetingRule.tsx:424
-msgid "Site URL start with"
+msgid "Site URL starts with"
 msgstr ""
 
 #: src/pages/design/TargetingRule.tsx:427
@@ -9287,7 +9310,7 @@ msgid "Subscription management setting update failed"
 msgstr ""
 
 #: src/pages/design/Widgets.tsx:294
-msgid "You don't have permission to create/modify widgets. Please contact to your admin."
+msgid "You don't have permission to create/modify widgets. Please contact your admin."
 msgstr ""
 
 #: src/pages/design/Widgets.tsx:306
@@ -9406,13 +9429,14 @@ msgid "Site not connected!"
 msgstr ""
 
 #: src/pages/drip/CreateOrEdit.tsx:163
-msgid "Please connect your site first to create a drip autoresponders"
+#: src/pages/drip/List.tsx:130
+msgid "Please connect your site first to create a drip autoresponder"
 msgstr ""
 
 #: src/pages/drip/CreateOrEdit.tsx:234
 #: src/pages/settings/integrations/woocommerce/EditTrigger.tsx:75
 #: src/pages/triggeredCampaign/CreateOrEdit.tsx:226
-msgid "Notification %d has following errors."
+msgid "Notification %d has the following errors."
 msgstr ""
 
 #: src/pages/drip/CreateOrEdit.tsx:290
@@ -9430,10 +9454,6 @@ msgstr ""
 
 #: src/pages/drip/CreateOrEdit.tsx:368
 msgid "Edit series name"
-msgstr ""
-
-#: src/pages/drip/List.tsx:130
-msgid "Please connect your site first to create a drip autoresponder"
 msgstr ""
 
 #: src/pages/drip/List.tsx:205
@@ -9475,14 +9495,14 @@ msgid "Personalize messages using attributes, segments, and audience groups"
 msgstr ""
 
 #: src/pages/drip/List.tsx:337
-msgid "You don't have permission to create/modify drip autoresponder. Please contact to your admin."
+msgid "You don't have permission to create/modify drip autoresponders. Please contact your admin."
 msgstr ""
 
 #: src/pages/drip/helper.ts:470
-msgid "Notification delay should be greater than to 0"
+msgid "Notification delay should be greater than 0"
 msgstr ""
 
-#: src/pages/drip/helper.ts:482
+#: src/pages/drip/helper.ts:479
 msgid "Notification delay should be less than 1826 days"
 msgstr ""
 
@@ -9628,7 +9648,7 @@ msgid "Create New Push Broadcast"
 msgstr ""
 
 #: src/pages/pushBroadcast/CreateOrEdit.tsx:1078
-msgid "You don't have write permission to perform this action. Please contact to your admin."
+msgid "You don't have write permission to perform this action. Please contact your admin."
 msgstr ""
 
 #: src/pages/pushBroadcast/CreateOrEdit.tsx:1091
@@ -9676,7 +9696,7 @@ msgid "Selected Audience group used in this campaign no longer exists. Please ve
 msgstr ""
 
 #: src/pages/pushBroadcast/CreateOrEdit.tsx:389
-msgid "Custom audience filter in this campaign has been updated because used segments no longer exists. Please verify the selected audience before sending the campaign."
+msgid "Custom audience filter in this campaign has been updated because used segments no longer exist. Please verify the selected audience before sending the campaign."
 msgstr ""
 
 #: src/pages/pushBroadcast/CreateOrEdit.tsx:457
@@ -9697,11 +9717,11 @@ msgid "Please fix the following issues:"
 msgstr ""
 
 #: src/pages/pushBroadcast/CreateOrEdit.tsx:622
-msgid "Notification A has following errors."
+msgid "Notification A has the following errors."
 msgstr ""
 
 #: src/pages/pushBroadcast/CreateOrEdit.tsx:628
-msgid "Notification B has following errors."
+msgid "Notification B has the following errors."
 msgstr ""
 
 #: src/pages/pushBroadcast/CreateOrEdit.tsx:709
@@ -9757,7 +9777,7 @@ msgid "Choose From Templates"
 msgstr ""
 
 #: src/pages/pushBroadcast/List.tsx:416
-msgid "You don't have permission to create/modify notifications. Please contact to your admin."
+msgid "You don't have permission to create/modify notifications. Please contact your admin."
 msgstr ""
 
 #: src/pages/pushBroadcast/List.tsx:427
@@ -9893,7 +9913,7 @@ msgid "Advanced settings updated successfully"
 msgstr ""
 
 #: src/pages/settings/advancedSettings/index.tsx:243
-msgid "You don't have permission to create/modify advanced settings. Please contact to your admin."
+msgid "You don't have permission to create/modify advanced settings. Please contact your admin."
 msgstr ""
 
 #: src/pages/settings/advancedSettings/index.tsx:265
@@ -9901,7 +9921,7 @@ msgid "Service Worker Settings"
 msgstr ""
 
 #: src/pages/settings/advancedSettings/index.tsx:271
-msgid "The service worker is a key file in sending and collecting subscriptions. If you have a service-worker already you can disable our service-worker registration. If you do not have access to the root folder of the website so you can specify the path to sub-folder as well."
+msgid "The service worker is a key file in sending and collecting subscriptions. If you have a service-worker already you can disable our service-worker registration. If you do not have access to the root folder of the website, you can specify the path to a sub-folder instead."
 msgstr ""
 
 #: src/pages/settings/advancedSettings/index.tsx:279
@@ -9929,11 +9949,11 @@ msgid "Custom Sub Domain"
 msgstr ""
 
 #: src/pages/settings/advancedSettings/index.tsx:338
-msgid "This should be a HTTPS URL. If you decide to host your own sub-domain with HTTPS version on your website, or want us to collect subscribers for your website through a custom URL, you can mention it here. This will be where your subscription will happen and this will be visible URL in each of the push notification."
+msgid "This should be a HTTPS URL. If you decide to host your own sub-domain with HTTPS version on your website, or want us to collect subscribers for your website through a custom URL, you can mention it here. This will be where your subscription will happen and this will be the visible URL in each push notification."
 msgstr ""
 
 #: src/pages/settings/advancedSettings/index.tsx:344
-msgid "This setting is often needed if you have most of your site in HTTP, and a sub-domain in HTTPS for push notifications. When the user clicks on the Accept button in subscription popup, they are redirected to this URL for push subscription."
+msgid "This setting is often needed if you have most of your site in HTTP, and a sub-domain in HTTPS for push notifications. When the user clicks on the Accept button in the subscription popup, they are redirected to this URL for push subscription."
 msgstr ""
 
 #: src/pages/settings/advancedSettings/index.tsx:350
@@ -9956,68 +9976,80 @@ msgstr ""
 msgid "The Webpage should be opened in"
 msgstr ""
 
-#: src/pages/settings/autoPush/index.tsx:145
+#: src/pages/settings/autoPush/index.tsx:149
 msgid "Auto push settings updated successfully"
 msgstr ""
 
-#: src/pages/settings/autoPush/index.tsx:151
+#: src/pages/settings/autoPush/index.tsx:155
 msgid "Failed to update auto push settings."
 msgstr ""
 
-#: src/pages/settings/autoPush/index.tsx:177
-msgid "You don't have permission to create/modify auto push settings. Please contact to your admin."
+#: src/pages/settings/autoPush/index.tsx:181
+msgid "You don't have permission to create/modify auto push settings. Please contact your admin."
 msgstr ""
 
-#: src/pages/settings/autoPush/index.tsx:203
+#: src/pages/settings/autoPush/index.tsx:207
 msgid "Auto Push is a convenient feature designed to streamline your workflow by automatically sending push notifications whenever you publish or edit a post. With Auto Push, you can ensure that your audience is promptly notified of any updates or new content you create."
 msgstr ""
 
-#: src/pages/settings/autoPush/index.tsx:214
+#: src/pages/settings/autoPush/index.tsx:218
 #: src/pages/settings/integrations/components/IntegrationModal.tsx:49
 msgid "Watch How to Get Started"
 msgstr ""
 
-#: src/pages/settings/autoPush/index.tsx:221
-msgid "You have active RSS auto push campaign for this site. Please ensure that you really want to send your posts in Push Notification."
+#: src/pages/settings/autoPush/index.tsx:225
+msgid "You have an active RSS auto push campaign for this site. Please ensure that you really want to send your posts in Push Notification."
 msgstr ""
 
-#: src/pages/settings/autoPush/index.tsx:231
+#: src/pages/settings/autoPush/index.tsx:235
 msgid "Auto Push"
 msgstr ""
 
-#: src/pages/settings/autoPush/index.tsx:236
+#: src/pages/settings/autoPush/index.tsx:240
 msgid "Automatically send a push notification to your subscribers every time you publish a new post."
 msgstr ""
 
-#: src/pages/settings/autoPush/index.tsx:255
+#: src/pages/settings/autoPush/index.tsx:259
 msgid "Use featured image from post as notification large image"
 msgstr ""
 
-#: src/pages/settings/autoPush/index.tsx:272
+#: src/pages/settings/autoPush/index.tsx:276
 msgid "Enable Multi-action buttons"
 msgstr ""
 
-#: src/pages/settings/autoPush/index.tsx:277
+#: src/pages/settings/autoPush/index.tsx:281
 msgid "Post Types"
 msgstr ""
 
-#: src/pages/settings/autoPush/index.tsx:284
+#: src/pages/settings/autoPush/index.tsx:288
 msgid "Select Post Types"
 msgstr ""
 
-#: src/pages/settings/autoPush/index.tsx:291
+#: src/pages/settings/autoPush/index.tsx:295
 msgid "Choose post types for automatic push notifications. Whenever a post is published with one of the selected post types, a push notification will be sent to the specified users."
 msgstr ""
 
-#: src/pages/settings/autoPush/index.tsx:300
+#: src/pages/settings/autoPush/index.tsx:304
+msgid "Roles allowed"
+msgstr ""
+
+#: src/pages/settings/autoPush/index.tsx:314
+msgid "Select roles…"
+msgstr ""
+
+#: src/pages/settings/autoPush/index.tsx:321
+msgid "Users with these roles can see PushEngage settings in the post editor (e.g. the auto-push checkbox and pre-publish checklist). Administrators always have access."
+msgstr ""
+
+#: src/pages/settings/autoPush/index.tsx:330
 msgid "Notification Icon Image "
 msgstr ""
 
-#: src/pages/settings/autoPush/index.tsx:304
+#: src/pages/settings/autoPush/index.tsx:334
 msgid "Use featured image from post"
 msgstr ""
 
-#: src/pages/settings/autoPush/index.tsx:308
+#: src/pages/settings/autoPush/index.tsx:338
 msgid "Use site icon"
 msgstr ""
 
@@ -10026,7 +10058,7 @@ msgid "Default settings updated successfully"
 msgstr ""
 
 #: src/pages/settings/defaultSettings/index.tsx:249
-msgid "You don't have permission to create/modify default settings. Please contact to your admin."
+msgid "You don't have permission to create/modify default settings. Please contact your admin."
 msgstr ""
 
 #: src/pages/settings/defaultSettings/index.tsx:276
@@ -10067,6 +10099,10 @@ msgstr ""
 
 #: src/pages/settings/defaultSettings/index.tsx:521
 msgid "Default Expiry for notifications"
+msgstr ""
+
+#: src/pages/settings/defaultSettings/index.tsx:527
+msgid "This is the expiry time for a notification. If a user is not available online with browser running, then the notification will be retried until expiration time. The maximum value is 28 days."
 msgstr ""
 
 #: src/pages/settings/integrations/components/IntegrationModal.tsx:40
@@ -10156,7 +10192,7 @@ msgid "Failed to fetch misc data"
 msgstr ""
 
 #: src/pages/settings/misc/index.tsx:275
-msgid "You don't have permission to create/modify misc settings. Please contact to your admin."
+msgid "You don't have permission to create/modify misc settings. Please contact your admin."
 msgstr ""
 
 #: src/pages/settings/misc/index.tsx:293
@@ -10241,7 +10277,7 @@ msgid "Api key generated successfully"
 msgstr ""
 
 #: src/pages/settings/siteDetails/index.tsx:347
-msgid "You don't have permission to create/modify settings. Please contact to your admin."
+msgid "You don't have permission to create/modify settings. Please contact your admin."
 msgstr ""
 
 #: src/pages/settings/siteDetails/index.tsx:369
@@ -10434,11 +10470,11 @@ msgstr ""
 
 #: src/pages/triggeredCampaign/CreateOrEdit.tsx:175
 #: src/pages/triggeredCampaign/List.tsx:76
-msgid "Please connect your site first to create a triggered campaigns"
+msgid "Please connect your site first to create a triggered campaign"
 msgstr ""
 
 #: src/pages/triggeredCampaign/CreateOrEdit.tsx:268
-msgid "There is an validation error."
+msgid "There is a validation error."
 msgstr ""
 
 #: src/pages/triggeredCampaign/CreateOrEdit.tsx:278
@@ -10450,7 +10486,7 @@ msgid "New triggered campaign created."
 msgstr ""
 
 #: src/pages/triggeredCampaign/CreateOrEdit.tsx:296
-msgid "Campaign name already exist in your campaign list."
+msgid "Campaign name already exists in your campaign list."
 msgstr ""
 
 #: src/pages/triggeredCampaign/DynamicCode.tsx:363
@@ -10487,7 +10523,7 @@ msgstr ""
 
 #: src/pages/triggeredCampaign/List.tsx:316
 #: src/pages/triggeredCampaign/Selection.tsx:86
-msgid "You don't have permission to create/modify triggered campaigns. Please contact to your admin."
+msgid "You don't have permission to create/modify triggered campaigns. Please contact your admin."
 msgstr ""
 
 #: src/pages/triggeredCampaign/Selection.tsx:121
@@ -10587,7 +10623,7 @@ msgid "Message Templates"
 msgstr ""
 
 #: src/pages/whatsapp/WhatsappTemplates.tsx:302
-msgid "Manage your WhatsApp message templates for sending transactional and promotional campaigns. Please note that these templates can be created only in your Meta account, and it must be approved before you use."
+msgid "Manage your WhatsApp message templates for sending transactional and promotional campaigns. Please note that these templates can only be created in your Meta account, and they must be approved before you can use them."
 msgstr ""
 
 #: src/pages/whatsapp/WhatsappTemplates.tsx:319
@@ -10636,10 +10672,6 @@ msgstr ""
 
 #: src/pages/whatsapp/WhatsappTemplates.tsx:429
 msgid "Template Preview"
-msgstr ""
-
-#: src/pages/whatsapp/WhatsappTemplates.tsx:88
-msgid "Error fetching WhatsApp templates"
 msgstr ""
 
 #: src/pages/woocommerce/WooAutomations.tsx:209
@@ -10717,6 +10749,10 @@ msgstr ""
 #: app/Ajax.php:143
 #: app/Integrations/WooCommerce/NotificationActions.php:191
 #: app/Integrations/WooCommerce/NotificationActions.php:249
+#: app/Integrations/WooCommerce/Woo.php:548
+#: app/Integrations/WooCommerce/Woo.php:591
+#: app/ReviewNotice.php:194
+#: app/ReviewNotice.php:228
 #: app/WhatsNew.php:111
 msgid "Permission denied. Please make sure you have required permission to perform this action."
 msgstr ""
@@ -10725,106 +10761,106 @@ msgstr ""
 msgid "An error was encountered while connecting your account, please try again"
 msgstr ""
 
-#: app/Ajax.php:581
+#: app/Ajax.php:620
 msgid "Invalid attribute key."
 msgstr ""
 
-#: app/Ajax.php:985
+#: app/Ajax.php:1024
 msgid "Invalid request. Campaign Settings data missing."
 msgstr ""
 
-#: app/Ajax.php:1094
+#: app/Ajax.php:1133
 msgid "Invalid request. Retargeting Settings data missing."
 msgstr ""
 
-#: app/Ajax.php:1173
+#: app/Ajax.php:1212
 msgid "Invalid request. Recover Sales Settings data missing."
 msgstr ""
 
-#: app/Ajax.php:1265
-#: app/Ajax.php:1807
+#: app/Ajax.php:1304
+#: app/Ajax.php:1846
 msgid "Please enter the WhatsApp phone number in international format with country code without + sign (e.g. 919876543210)"
 msgstr ""
 
-#: app/Ajax.php:1277
-#: app/Ajax.php:1819
+#: app/Ajax.php:1316
+#: app/Ajax.php:1858
 msgid "WhatsApp phone number should be between 10 and 15 digits including country code."
 msgstr ""
 
 #. translators: %s: field label
-#: app/Ajax.php:1299
+#: app/Ajax.php:1338
 #, php-format
 msgid "%s is required."
 msgstr ""
 
-#: app/Ajax.php:1440
-#: app/Ajax.php:1610
+#: app/Ajax.php:1479
+#: app/Ajax.php:1649
 msgid "Campaign data is required."
 msgstr ""
 
-#: app/Ajax.php:1447
+#: app/Ajax.php:1486
 msgid "Invalid campaign id."
 msgstr ""
 
-#: app/Ajax.php:1453
+#: app/Ajax.php:1492
 msgid "Unknown campaign id."
 msgstr ""
 
-#: app/Ajax.php:1624
+#: app/Ajax.php:1663
 msgid "Campaign ID is required."
 msgstr ""
 
-#: app/Ajax.php:1837
+#: app/Ajax.php:1876
 msgid "Horizontal offset must be between 0 and 200 pixels."
 msgstr ""
 
-#: app/Ajax.php:1847
+#: app/Ajax.php:1886
 msgid "Vertical offset must be between 0 and 200 pixels."
 msgstr ""
 
-#: app/Ajax.php:1858
+#: app/Ajax.php:1897
 msgid "Z-Index must be between 1 and 999999."
 msgstr ""
 
-#: app/Ajax.php:1869
+#: app/Ajax.php:1908
 msgid "WhatsApp phone number is required when the feature is enabled."
 msgstr ""
 
 #. Translators: 1 - Post Type. - 2 - Post Title
-#: app/Core.php:482
+#: app/Core.php:481
 #, php-format
-msgid "A notification already sent within 5 minutes for the %1$s %2$s"
+msgid "A notification was already sent within the last 5 minutes for the %1$s %2$s."
 msgstr ""
 
 #. Translators: 1 - Post Type. - 2 - Post Title
-#: app/Core.php:510
+#: app/Core.php:509
 #, php-format
 msgid "There was a problem sending your notification for %1$s %2$s"
 msgstr ""
 
 #. Translators: 1 - Post Type. - 2 - Post Title.
-#: app/Core.php:546
+#: app/Core.php:545
 #, php-format
-msgid "There was a an error sending your notification for %1$s %2$s"
+msgid "There was an error sending your notification for %1$s %2$s"
 msgstr ""
 
-#: app/Core.php:675
-#: app/Core.php:709
+#: app/Core.php:674
+#: app/Core.php:708
 msgid "PushEngage Push Notification Settings"
 msgstr ""
 
-#: app/EnqueueAssets.php:246
+#: app/EnqueueAssets.php:284
 msgid "Give us a 5-star rating!"
 msgstr ""
 
 #. Translators: 1 - The plugin name ("PushEngage"), - 2 - This placeholder will be replaced with star icons, - 3 - "WordPress.org" - 4 - The plugin name ("PushEngage").
-#: app/EnqueueAssets.php:261
+#: app/EnqueueAssets.php:299
 #, php-format
 msgid "Please rate %1$s %2$s on %3$s to help us spread the word. Thank you from the PushEngage team!"
 msgstr ""
 
 #. Translators: 1 - WordPress Version, - 2 - The plugin version
-#: app/EnqueueAssets.php:276
+#: app/EnqueueAssets.php:314
 #, php-format
 msgid "WordPress %1$s | PushEngage %2$s"
 msgstr ""
@@ -10842,6 +10878,14 @@ msgstr ""
 #: app/Includes/Api/HttpAPI.php:224
 #: app/Includes/Api/HttpAPI.php:302
 msgid "Invalid response from server"
+msgstr ""
+
+#: app/Includes/Api/ProxyController.php:90
+msgid "You don't have permission to access this PushEngage resource."
+msgstr ""
+
+#: app/Includes/Api/ProxyController.php:200
+msgid "Upstream returned a non-JSON response."
 msgstr ""
 
 #: app/Includes/Api/PushengageAPI.php:144
@@ -11674,7 +11718,7 @@ msgid "Every 10 Minutes"
 msgstr ""
 
 #: app/Integrations/WooCommerce/Whatsapp/WhatsappCloudApi.php:79
-msgid "WhatsApp credentials is missing or invalid"
+msgid "WhatsApp credentials are missing or invalid"
 msgstr ""
 
 #: app/Integrations/WooCommerce/Woo.php:52
@@ -11693,11 +11737,11 @@ msgstr ""
 msgid "Debug log initialization failed. Please check if the log directory is writable. %s"
 msgstr ""
 
-#: app/ReviewNotice.php:197
+#: app/ReviewNotice.php:201
 msgid "Are you enjoying PushEngage?"
 msgstr ""
 
-#: app/ReviewNotice.php:198
+#: app/ReviewNotice.php:202
 msgid "Hey, I noticed you have been using PushEngage for some time - that’s awesome! Could you please do me a BIG favor and give it a 5-star rating on WordPress to help us spread the word and boost our motivation?"
 msgstr ""
 
@@ -11735,7 +11779,7 @@ msgid "FunnelKit Automations"
 msgstr ""
 
 #: app/Utils/RecommendedPlugins.php:212
-msgid "Elevate your WooCommerce store with FunnelKit Automations.This versatile WordPress plugin enables automated customer journeys, from abandoned cart recovery to targeted email sequences."
+msgid "Elevate your WooCommerce store with FunnelKit Automations. This versatile WordPress plugin enables automated customer journeys, from abandoned cart recovery to targeted email sequences."
 msgstr ""
 
 #: app/Utils/RecommendedPlugins.php:234

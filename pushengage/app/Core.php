@@ -266,7 +266,7 @@ class Core {
 	* @return void
 	*/
 	public function init_admin_options() {
-		if ( ! current_user_can( 'manage_options' ) || false === $this->is_pushengage_active() ) {
+		if ( ! Helpers::user_can_access_post_editor_metabox() || false === $this->is_pushengage_active() ) {
 			return;
 		}
 
@@ -478,7 +478,7 @@ class Core {
                 	<p><strong>Pushengage: </strong>' .
 					sprintf(
 						// Translators: 1 - Post Type. - 2 - Post Title
-						esc_html__( 'A notification already sent within 5 minutes for the %1$s %2$s', 'pushengage' ),
+						esc_html__( 'A notification was already sent within the last 5 minutes for the %1$s %2$s.', 'pushengage' ),
 						$post->post_type,
 						'<em>' . $post->post_title . '</em>'
 					) .
@@ -542,7 +542,7 @@ class Core {
                 	<p><strong>Pushengage:</strong>' .
 					sprintf(
 						// Translators: 1 - Post Type. - 2 - Post Title.
-						esc_html__( 'There was a an error sending your notification for %1$s %2$s', 'pushengage' ),
+						esc_html__( 'There was an error sending your notification for %1$s %2$s', 'pushengage' ),
 						$post->post_type,
 						'<em>' . $post->post_title . '</em>'
 					) .
@@ -734,7 +734,7 @@ class Core {
 	public function render_post_editor_metabox( $post ) {
 		wp_enqueue_media();
 		EnqueueAssets::enqueue_pushengage_scripts();
-		EnqueueAssets::localize_script( $post->ID, true );
+		EnqueueAssets::localize_script_for_post_editor( $post->ID );
 		Pushengage::output_view( 'post-editor-metabox.php' );
 	}
 
@@ -746,7 +746,7 @@ class Core {
 	 * @return void
 	 */
 	public function load_block_editor_scripts() {
-		if ( ! current_user_can( 'manage_options' ) ) {
+		if ( ! Helpers::user_can_access_post_editor_metabox() ) {
 			return;
 		}
 		$screen = get_current_screen();
@@ -1092,6 +1092,12 @@ class Core {
 			$data['utm_params'] = $utm_params;
 		}
 
+		// Per-post expiry overrides the global default when set, capped at 28 days
+		$per_post_expiry = isset( $_POST['pe_wp_expiry'] ) ? absint( $_POST['pe_wp_expiry'] ) : 0;
+		if ( $per_post_expiry > 0 ) {
+			$data['expiry'] = min( $per_post_expiry, 28 * DAY_IN_SECONDS );
+		}
+
         //phpcs:ignore
 		$data['source'] = 'wordpress';
 		$data['status'] = 'sent';
@@ -1184,6 +1190,13 @@ class Core {
 		if ( ! empty( $utm_params ) ) {
 			$data['utm_params'] = $utm_params;
 		}
+
+		// Per-post expiry overrides the global default when set, capped at 28 days
+		$per_post_expiry = isset( $push_options['pe_wp_expiry'] ) ? absint( $push_options['pe_wp_expiry'] ) : 0;
+		if ( $per_post_expiry > 0 ) {
+			$data['expiry'] = min( $per_post_expiry, 28 * DAY_IN_SECONDS );
+		}
+
         // phpcs:ignore
 		$data['source'] = 'wordpress';
 		$data['status'] = 'sent';

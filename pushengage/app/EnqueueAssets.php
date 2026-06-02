@@ -154,85 +154,123 @@ class EnqueueAssets {
 	}
 
 	/**
-	 * Localize pushengage variable to browser & window object
+	 * Build the payload fields shared by localize_script() and
+	 * localize_script_for_post_editor(). Excludes credentials, the `settings`
+	 * blob, and any context-specific keys — those are layered on by the caller.
 	 *
-	 * @param [number] $post_id (Optional) ID of the post
-	 * @param boolean  $is_create_edit_post_page (Optional) Check if on create or edit post page
-	 * @param boolean  $is_on_dashboard_page (Optional) Check if on WordPress dashboard page
-	 * @param boolean  $check_autosave_option (Optional) Check if autosave is enabled
+	 * @since 4.2.5
 	 *
-	 * @return void
+	 * @return array
 	 */
-	public static function localize_script( $post_id = null, $is_create_edit_post_page = false ) {
-		$current_user                = wp_get_current_user();
-		$pushengage_settings         = Options::get_site_settings();
+	private static function build_base_payload() {
+		$current_user        = wp_get_current_user();
+		$pushengage_settings = Options::get_site_settings();
 
-		$whatsapp_click_to_chat_settings = get_option( 'pushengage_whatsapp_click_to_chat', array() );
-
-		$pushengage          = array(
-			'nonce'     => NonceChecker::create_nonce(),
-			'adminAjax' => admin_url( 'admin-ajax.php' ),
-			'siteName'  => get_bloginfo( 'name' ),
-			'wpVersion' => get_bloginfo( 'version' ),
-			'peVersion' => PUSHENGAGE_VERSION,
-			'siteUrl'   => site_url(),
-			'siteHost'  => wp_parse_url( get_site_url(), PHP_URL_HOST ),
-			'wpDateFormat' => get_option( 'date_format' ),
-			'wpTimeFormat' => get_option( 'time_format' ),
-			'siteId'    => isset( $pushengage_settings['site_id'] ) ? $pushengage_settings['site_id'] : null,
-			'ownerId'   => isset( $pushengage_settings['owner_id'] ) ? $pushengage_settings['owner_id'] : null,
-			'apiKey'    => isset( $pushengage_settings['api_key'] ) ? $pushengage_settings['api_key'] : null,
-			'siteKey'   => isset( $pushengage_settings['site_key'] ) ? $pushengage_settings['site_key'] : null,
-			'authUser'  => array(
+		$payload = array(
+			'nonce'              => NonceChecker::create_nonce(),
+			'adminAjax'          => admin_url( 'admin-ajax.php' ),
+			'siteName'           => get_bloginfo( 'name' ),
+			'wpVersion'          => get_bloginfo( 'version' ),
+			'peVersion'          => PUSHENGAGE_VERSION,
+			'siteUrl'            => site_url(),
+			'siteHost'           => wp_parse_url( get_site_url(), PHP_URL_HOST ),
+			'wpDateFormat'       => get_option( 'date_format' ),
+			'wpTimeFormat'       => get_option( 'time_format' ),
+			'siteId'             => isset( $pushengage_settings['site_id'] ) ? $pushengage_settings['site_id'] : null,
+			'ownerId'            => isset( $pushengage_settings['owner_id'] ) ? $pushengage_settings['owner_id'] : null,
+			'authUser'           => array(
 				'first_name' => $current_user->user_firstname,
 				'last_name'  => $current_user->user_lastname,
 				'email'      => $current_user->user_email,
 			),
-			'settings'  => $pushengage_settings,
-			'assetsUrl' => PUSHENGAGE_PLUGIN_URL . 'assets/',
-			'pluginUrl' => PUSHENGAGE_PLUGIN_URL,
+			'assetsUrl'          => PUSHENGAGE_PLUGIN_URL . 'assets/',
+			'pluginUrl'          => PUSHENGAGE_PLUGIN_URL,
 			'pluginDashboardUrl' => esc_url( 'admin.php?page=pushengage#/' ),
 			'wpAdminUrl'         => admin_url( '/' ),
 			'apiBaseUrl'         => PUSHENGAGE_API_URL,
 			'appDashboardUrl'    => PUSHENGAGE_APP_DASHBOARD_URL,
-			'isWhatsappClickToChatConfigured' => ! empty( $whatsapp_click_to_chat_settings ),
 		);
 
-		if ( $post_id ) {
-			$pushengage['postId'] = $post_id;
-		}
+		$whatsapp_click_to_chat_settings = get_option( 'pushengage_whatsapp_click_to_chat', array() );
+		$payload['isWhatsappClickToChatConfigured'] = ! empty( $whatsapp_click_to_chat_settings );
 
-		if ( $is_create_edit_post_page ) {
-			$pushengage['isCreateEditPostPage'] = $is_create_edit_post_page;
-
-			$is_block_editor = Helpers::is_block_editor();
-			if ( null !== $is_block_editor ) {
-				$pushengage['isBlockEditor'] = $is_block_editor;
-			}
-		}
-
-		// Check for integrations.
 		$is_woo_active = is_plugin_active( 'woocommerce/woocommerce.php' ) && class_exists( 'woocommerce' );
 		if ( $is_woo_active ) {
-			$pushengage['wooCommerceActive'] = $is_woo_active;
-			$pushengage['wooCommerceCurrency'] = get_woocommerce_currency();
+			$payload['wooCommerceActive']   = $is_woo_active;
+			$payload['wooCommerceCurrency'] = get_woocommerce_currency();
 		}
-		$is_woocommerce_integrated = Helpers::is_woocommerce_integrated();
-		if ( $is_woocommerce_integrated ) {
-			$pushengage['isPEWooCommerceConnected'] = $is_woocommerce_integrated;
+		if ( Helpers::is_woocommerce_integrated() ) {
+			$payload['isPEWooCommerceConnected'] = true;
+		}
+
+		return $payload;
+	}
+
+	/**
+	 * Localize the pushengage variable for the dashboard (credentialed context).
+	 *
+	 * @since 4.0.0
+	 *
+	 * @return void
+	 */
+	public static function localize_script() {
+		$pushengage_settings = Options::get_site_settings();
+		$pushengage          = self::build_base_payload();
+
+		$pushengage['apiKey']   = isset( $pushengage_settings['api_key'] ) ? $pushengage_settings['api_key'] : null;
+		$pushengage['siteKey']  = isset( $pushengage_settings['site_key'] ) ? $pushengage_settings['site_key'] : null;
+		$pushengage['settings'] = $pushengage_settings;
+
+		wp_localize_script( 'pushengage-main', 'pushengage', $pushengage );
+
+		wp_localize_script(
+			'pushengage-main',
+			'pushengageTranslations',
+			array(
+				'translations' => Helpers::get_jed_locale_data( 'pushengage' ),
+			)
+		);
+	}
+
+	/**
+	 * Localize the pushengage variable for post-editor screens.
+	 *
+	 * Differs from localize_script() in three ways:
+	 *   - apiKey and siteKey are NOT included.
+	 *   - settings is a sanitized copy (no credential-bearing keys).
+	 *   - proxyBaseUrl and restNonce are added so axios can route through the
+	 *     WP REST proxy when apiKey is absent.
+	 *
+	 * @since 4.2.5
+	 *
+	 * @param int $post_id Post being edited.
+	 * @return void
+	 */
+	public static function localize_script_for_post_editor( $post_id ) {
+		$pushengage = self::build_base_payload();
+
+		// apiKey intentionally omitted — proxy injects it server-side.
+		// siteKey intentionally omitted — only needed for SDK init on dashboard.
+		$pushengage['restNonce']            = wp_create_nonce( 'wp_rest' );
+		$pushengage['proxyBaseUrl']         = esc_url_raw( rest_url( 'pushengage/v1/proxy/' ) );
+		$pushengage['settings']             = Options::get_safe_site_settings();
+		$pushengage['postId']               = $post_id;
+		$pushengage['isCreateEditPostPage'] = true;
+
+		$is_block_editor = Helpers::is_block_editor();
+		if ( null !== $is_block_editor ) {
+			$pushengage['isBlockEditor'] = $is_block_editor;
 		}
 
 		wp_localize_script( 'pushengage-main', 'pushengage', $pushengage );
 
-		if ( ! $is_create_edit_post_page ) {
-			wp_localize_script(
-				'pushengage-main',
-				'pushengageTranslations',
-				array(
-					'translations' => Helpers::get_jed_locale_data( 'pushengage' ),
-				)
-			);
-		}
+		wp_localize_script(
+			'pushengage-main',
+			'pushengageTranslations',
+			array(
+				'translations' => Helpers::get_jed_locale_data( 'pushengage' ),
+			)
+		);
 	}
 
 	/**

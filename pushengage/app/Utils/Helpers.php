@@ -344,4 +344,39 @@ class Helpers {
 
 		return sprintf( '%s%02d:%02d', $sign, $abs_hours, $abs_minutes );
 	}
+
+	/**
+	 * Check whether the given user (or current user) is allowed to see the
+	 * PushEngage post-editor metabox and pre-publish checklist.
+	 *
+	 * Admins (`manage_options`) always pass. Other users must:
+	 *   - have `edit_posts`, AND
+	 *   - have at least one role listed in `auto_push_allowed_roles`.
+	 *
+	 * Send-time enforcement remains `publish_posts` (see Core::is_sending_instant_post).
+	 *
+	 * @since 4.2.5
+	 *
+	 * @param int|null $user_id Optional user ID. Defaults to current user.
+	 * @return bool
+	 */
+	public static function user_can_access_post_editor_metabox( $user_id = null ) {
+		$user_id = $user_id ? (int) $user_id : get_current_user_id();
+		if ( ! $user_id ) {
+			return false;
+		}
+		if ( user_can( $user_id, 'manage_options' ) ) {
+			return true;
+		}
+		if ( ! user_can( $user_id, 'edit_posts' ) ) {
+			return false;
+		}
+		$allowed = Options::get_auto_push_allowed_roles();
+		if ( empty( $allowed ) ) {
+			return false;
+		}
+		$user  = get_userdata( $user_id );
+		$roles = $user ? (array) $user->roles : array();
+		return (bool) array_intersect( $roles, $allowed );
+	}
 }

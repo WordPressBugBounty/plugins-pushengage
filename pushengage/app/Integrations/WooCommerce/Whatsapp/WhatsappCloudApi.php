@@ -76,7 +76,7 @@ class WhatsappCloudApi {
 			return array(
 				'success' => false,
 				'error'   => array(
-					'message' => __( 'WhatsApp credentials is missing or invalid', 'pushengage' ),
+					'message' => __( 'WhatsApp credentials are missing or invalid', 'pushengage' ),
 				),
 			);
 		}

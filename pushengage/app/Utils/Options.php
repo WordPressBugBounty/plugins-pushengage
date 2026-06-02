@@ -33,7 +33,7 @@ class Options {
 	 *
 	 * @since 4.0.5
 	 *
-	 * @return $array
+	 * @return array
 	 */
 	public static function get_site_settings() {
 		if ( empty( self::$site_settings ) ) {
@@ -363,5 +363,50 @@ class Options {
 		$push_notification_settings['browse_abandonment']  = ! empty( $site_settings['woo_integration']['browse_abandonment']['enable'] ) ? 1 : 0;
 
 		return $push_notification_settings;
+	}
+
+	/**
+	 * Get the role slugs allowed to access the post-editor Auto Push UI.
+	 *
+	 * @since 4.2.5
+	 *
+	 * @return string[]
+	 */
+	public static function get_auto_push_allowed_roles() {
+		$settings = self::get_site_settings();
+		$roles    = isset( $settings['auto_push_allowed_roles'] ) ? $settings['auto_push_allowed_roles'] : array();
+		if ( ! is_array( $roles ) ) {
+			return array();
+		}
+		// Filter to currently-existing roles; drops removed/renamed custom roles.
+		$existing = array_keys( wp_roles()->roles );
+		return array_values( array_intersect( $roles, $existing ) );
+	}
+
+	/**
+	 * Return a copy of site settings with credential-bearing keys stripped.
+	 * Used when localizing settings to non-credentialed contexts (post editor).
+	 *
+	 * @since 4.2.5
+	 *
+	 * @return array
+	 */
+	public static function get_safe_site_settings() {
+		$settings = self::get_site_settings();
+		if ( ! is_array( $settings ) ) {
+			return array();
+		}
+		$sensitive_exact = array( 'api_key', 'site_key', 'license_key', 'secret_key', 'secret' );
+		$clean = array();
+		foreach ( $settings as $key => $value ) {
+			if ( in_array( $key, $sensitive_exact, true ) ) {
+				continue;
+			}
+			if ( preg_match( '/_(secret|token|key)$/i', $key ) ) {
+				continue;
+			}
+			$clean[ $key ] = $value;
+		}
+		return $clean;
 	}
 }

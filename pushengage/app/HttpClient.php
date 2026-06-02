@@ -100,7 +100,7 @@ class HttpClient {
 	 *
 	 * @since 4.0.5
 	 *
-	 * @param array $name The array containing the name of the settings
+	 * @param array $names The array containing the names of the settings
 	 *
 	 * @return array
 	 */
@@ -114,6 +114,43 @@ class HttpClient {
 
 		$res = self::request( $request_data );
 		return isset( $res['data'] ) ? $res['data'] : array();
+	}
+
+	/**
+	 * Get the user-configured default notification expiry (in seconds)
+	 * from the PushEngage server, cached locally in a transient to avoid an
+	 * extra API round-trip on every auto-push send.
+	 *
+	 * Successful positive values are cached for one hour; the empty/failure
+	 * case (returned as 0) is cached for only five minutes so dashboard
+	 * recovery is fast after a transient API failure or after the user first
+	 * configures a value.
+	 *
+	 * Callers should treat 0 as "do not send an expiry field" (the upstream
+	 * server will fall back to its own default).
+	 *
+	 * @since 4.2.5
+	 *
+	 * @return int Expiry in seconds, or 0 when unset/unavailable.
+	 */
+	public static function get_default_notification_expiry() {
+		$cache_key = 'pushengage_default_notification_expiry';
+		$cached    = get_transient( $cache_key );
+		if ( false !== $cached ) {
+			return (int) $cached;
+		}
+
+		$settings = self::get_site_settings( array( 'default_notification_expiry' ) );
+		$value    = isset( $settings['default_notification_expiry']['value'] )
+			? (int) $settings['default_notification_expiry']['value']
+			: 0;
+		if ( $value < 0 ) {
+			$value = 0;
+		}
+
+		$ttl = ( $value > 0 ) ? HOUR_IN_SECONDS : 5 * MINUTE_IN_SECONDS;
+		set_transient( $cache_key, $value, $ttl );
+		return $value;
 	}
 
 	/**

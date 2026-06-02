@@ -4,7 +4,7 @@ Tags: push notifications, web push notifications, woocommerce, cart abandonment,
 Requires at least: 4.5.0
 Tested up to: 7.0
 Requires PHP: 5.6
-Stable tag: 4.2.4
+Stable tag: 4.2.5
 License: GNU General Public License v2.0 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -402,6 +402,13 @@ All users can post questions on the [WordPress.org support forum](https://wordpr
 == Changelog ==
 
 **Most Recent Changes:**
+= 4.2.5 =
+* NEW: Role-based post-editor access — non-admin users in selected roles can now use the PushEngage metabox.
+* NEW: Audience filter — date-based operators for attribute predicates for parity with App Dashboard.
+* Fix: Auto-push notifications now respect the dashboard's "Default Expiry for Notifications" setting.
+* Improved: Typo and grammar fixes across plugin source strings.
+* Improved: Hardened overall plugin security and reliability.
+
 = 4.2.4 =
 * Fix: Optimized response structure for paginated results in Abilities API endpoints.
 * Improved: Strengthened overall plugin security and reliability.

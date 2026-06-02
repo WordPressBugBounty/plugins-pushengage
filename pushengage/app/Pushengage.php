@@ -12,6 +12,7 @@ use Pushengage\Includes\WPMetricsCron;
 use Pushengage\Utils\Options;
 use Pushengage\Integrations\WooCommerce\Whatsapp\WhatsappNotification;
 use Pushengage\Integrations\WooCommerce\Whatsapp\WhatsappClickToChat;
+use Pushengage\Includes\Api\ProxyController;
 use Pushengage\Integrations\Abilities;
 
 // Exit if accessed directly.
@@ -144,6 +145,13 @@ final class Pushengage {
 	public $abilities;
 
 	/**
+	 * REST API proxy controller.
+	 *
+	 * @var ProxyController
+	 */
+	public $proxy_controller;
+
+	/**
 	 * Initializes the Pushengage class
 	 *
 	 * @since 4.0.0
@@ -234,6 +242,7 @@ final class Pushengage {
 	public function init_core_classes() {
 		$this->admin            = new Admin();
 		$this->enqueue_assets   = new EnqueueAssets();
+		$this->proxy_controller = new ProxyController();
 		$this->nav_menu         = new NavMenu();
 		$this->admin_bar_menu   = new AdminBarMenu();
 		$this->core             = new Core();

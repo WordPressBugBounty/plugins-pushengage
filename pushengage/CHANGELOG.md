@@ -2,6 +2,14 @@
 
 All notable changes to the PushEngage plugin will be documented in this file.
 
+### 4.2.5
+
+* NEW: Role-based post-editor access — non-admin users in selected roles can now use the PushEngage metabox.
+* NEW: Audience filter — date-based operators for attribute predicates for parity with App Dashboard.
+* Fix: Auto-push notifications now respect the dashboard's "Default Expiry for Notifications" setting.
+* Improved: Typo and grammar fixes across plugin source strings.
+* Improved: Hardened overall plugin security and reliability.
+
 ### 4.2.4
 
 * Fix: Optimized response structure for paginated results in Abilities API endpoints.
