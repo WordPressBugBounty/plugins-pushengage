@@ -30,6 +30,7 @@ class Uninstaller {
 				'pe_will_display_review_notice',
 				'pe_review_notice_options',
 				'pushengage_whatsapp_settings',
+				'pushengage_whatsapp_access_token_invalid',
 				'pushengage_whatsapp_click_to_chat',
 				'pushengage_wa_automation_campaigns',
 				'pushengage_encryption_key',

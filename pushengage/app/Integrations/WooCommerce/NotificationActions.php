@@ -216,6 +216,13 @@ class NotificationActions {
 		}
 
 		if ( 'status_update' === $notification_action ) {
+			// Allowlist the incoming order status against the static
+			// mapping before indexing — otherwise an arbitrary
+			// admin-supplied string raises a PHP notice / undefined
+			// index and leaks the array shape through error reporting.
+			if ( ! isset( self::$notification_actions[ $order_status ] ) ) {
+				wp_send_json_error( array( 'message' => __( 'Unsupported order status.', 'pushengage' ) ) );
+			}
 			NotificationHandler::send_order_push_notification( $order_id, self::$notification_actions[ $order_status ] );
 			wp_send_json_success( array( 'message' => __( 'Status Update Notification sent successfully.', 'pushengage' ) ) );
 		}
@@ -253,11 +260,25 @@ class NotificationActions {
 			wp_send_json_error( array( 'message' => __( 'Invalid Request. Nonce verification failed.', 'pushengage' ) ) );
 		}
 
-		if ( ! isset( $_POST['data'] ) ) {
-			wp_send_json_error( array( 'message' => __( 'Data is missing from the request.', 'pushengage' ) ) );
+		if ( ! isset( $_POST['data'] ) || ! is_array( $_POST['data'] ) ) {
+			wp_send_json_error( array( 'message' => __( 'Data is missing or malformed in the request.', 'pushengage' ) ) );
 		}
 
-		$notification_data = NotificationTemplates::format_notification_data( wp_unslash( $_POST['data'] ) );
+		// phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized -- sanitized per-field below.
+		$raw_data = wp_unslash( $_POST['data'] );
+
+		// Per-field sanitization at the boundary. The payload is forwarded
+		// to the PushEngage backend and ultimately delivered as a push
+		// notification — `notification_url` must run through esc_url_raw
+		// so an admin (or anyone who reaches this handler) cannot push a
+		// `javascript:` / `data:` URL to subscribers.
+		$sanitized_data = array(
+			'notification_title'   => isset( $raw_data['notification_title'] ) ? sanitize_text_field( $raw_data['notification_title'] ) : '',
+			'notification_message' => isset( $raw_data['notification_message'] ) ? sanitize_text_field( $raw_data['notification_message'] ) : '',
+			'notification_url'     => isset( $raw_data['notification_url'] ) ? esc_url_raw( $raw_data['notification_url'] ) : '',
+		);
+
+		$notification_data = NotificationTemplates::format_notification_data( $sanitized_data );
 
 		$send_notification = pushengage()->send_notification( $notification_data );
 

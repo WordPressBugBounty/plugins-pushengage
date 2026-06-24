@@ -167,14 +167,24 @@ class Core {
 
 		if ( ! empty( $api_key ) && ! empty( $site_key ) ) {
 			$web_sdk_url = PUSHENGAGE_CLIENT_JS_URL . 'sdks/pushengage-web-sdk.js';
+
+			// `wp_json_encode` produces a JS string literal with the
+			// surrounding quotes and proper escaping; this prevents a
+			// hostile `site_key` value (PushEngage SaaS compromise, or
+			// future change in how the value is sourced) from breaking
+			// out of the single-quoted JS string and injecting code into
+			// the inline script.
+			$site_key_js    = wp_json_encode( $site_key );
+			$web_sdk_url_js = wp_json_encode( esc_url_raw( $web_sdk_url ) );
+
 			$script = "(function(w, d) {
 				w.PushEngage = w.PushEngage || [];
 				w._peq = w._peq || [];
 				PushEngage.push(['init', {
-					appId: '" . $site_key . "'
+					appId: " . $site_key_js . "
 				}]);
 				var e = d.createElement('script');
-				e.src = '" . $web_sdk_url . "';
+				e.src = " . $web_sdk_url_js . ";
 				e.async = true;
 				e.type = 'text/javascript';
 				d.head.appendChild(e);
@@ -244,14 +254,14 @@ class Core {
 
 		// If app id is present then use the app id to generate the service
 		// worker file else use the subdomain
-		if ( ! empty( $app_id ) && preg_match( '/^[a-zA-Z0-9-_]+$/', $subdomain ) ) {
+		if ( ! empty( $app_id ) && preg_match( '/^[a-zA-Z0-9-_]+$/', $app_id ) ) {
 			$pushengage_sw_url = PUSHENGAGE_CLIENT_JS_URL . 'sdks/service-worker.js';
 			echo "var PUSHENGAGE_APP_ID = '" . esc_html( $app_id ) . "';";
 			echo "importScripts('" . esc_url( $pushengage_sw_url ) . "');";
 		} elseif ( ! empty( $subdomain ) && preg_match( '/^[a-zA-Z0-9-]+$/', $subdomain ) ) {
 			echo "importScripts('https://" . esc_html( $subdomain ) . ".pushengage.com/service-worker.js');";
 		} else {
-			echo "console.error('You haven't finished setting up your site with PushEngage. Please connect your account!!')";
+			echo 'console.error("You haven\'t finished setting up your site with PushEngage. Please connect your account!!")';
 		}
 
 		die();

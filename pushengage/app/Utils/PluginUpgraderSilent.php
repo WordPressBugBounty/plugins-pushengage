@@ -440,7 +440,10 @@ class PluginUpgraderSilent extends \Plugin_Upgrader {
 
 		set_time_limit( 300 );
 
-		$this->check_source_and_destination_error( $source, $destination );
+		$source_destination_error = $this->check_source_and_destination_error( $source, $destination );
+		if ( is_wp_error( $source_destination_error ) ) {
+			return $source_destination_error;
+		}
 
 		/**
 		 * Filter the install response before the installation has started.
@@ -527,7 +530,10 @@ class PluginUpgraderSilent extends \Plugin_Upgrader {
 			}
 		}
 
-		$this->delete_remote_source( $wp_filesystem, $args, $remote_source, $remote_destination );
+		$delete_remote_source_error = $this->delete_remote_source( $wp_filesystem, $args, $remote_source, $remote_destination );
+		if ( is_wp_error( $delete_remote_source_error ) ) {
+			return $delete_remote_source_error;
+		}
 
 		// Create destination if needed
 		if ( ! $wp_filesystem->exists( $remote_destination ) ) {
@@ -588,7 +594,11 @@ class PluginUpgraderSilent extends \Plugin_Upgrader {
 		) {
 			return trailingslashit( $args['source'] ) . trailingslashit( $source_files[0] );
 		} elseif ( count( $source_files ) === 0 ) {
-			throw new WP_Error(
+			// Return (not throw) a WP_Error: WP_Error does not implement
+			// Throwable, so `throw new WP_Error(...)` raises a fatal
+			// TypeError. The caller (install_package) already inspects this
+			// return value with is_wp_error().
+			return new WP_Error(
 				'incompatible_archive_empty',
 				esc_html( $this->strings['incompatible_archive'] ),
 				esc_html( $this->strings['no_files'] )
@@ -600,16 +610,20 @@ class PluginUpgraderSilent extends \Plugin_Upgrader {
 
 	/**
 	 * Check for source & destination error
-	 * If found throw wp error
+	 * If found return a WP_Error for the caller to short-circuit on.
 	 *
 	 * @param mixed $source
 	 * @param mixed $destination
-	 * @return void
+	 * @return WP_Error|null WP_Error when either argument is empty, null otherwise.
 	 */
 	public function check_source_and_destination_error( $source, $destination ) {
 		if ( empty( $source ) || empty( $destination ) ) {
-			throw new WP_Error( 'bad_request', esc_html( $this->strings['bad_request'] ) );
+			// Return (not throw): WP_Error is not Throwable, so throwing it
+			// raises a fatal TypeError. The caller checks is_wp_error().
+			return new WP_Error( 'bad_request', esc_html( $this->strings['bad_request'] ) );
 		}
+
+		return null;
 	}
 
 	/**
@@ -652,7 +666,7 @@ class PluginUpgraderSilent extends \Plugin_Upgrader {
 	 * @param array $args
 	 * @param array $remote_source
 	 * @param array $remote_destination
-	 * @return void
+	 * @return WP_Error|null WP_Error when the destination already exists, null otherwise.
 	 */
 	public function delete_remote_source( $wp_filesystem, $args, $remote_source, $remote_destination ) {
 		if ( $args['abort_if_destination_exists'] && $wp_filesystem->exists( $remote_destination ) ) {
@@ -660,9 +674,13 @@ class PluginUpgraderSilent extends \Plugin_Upgrader {
 			if ( ! empty( $_files ) ) {
 				$wp_filesystem->delete( $remote_source, true );
 
-				throw new WP_Error( 'folder_exists', esc_html( $this->strings['folder_exists'] ), esc_html( $remote_destination ) );
+				// Return (not throw): WP_Error is not Throwable, so throwing
+				// it raises a fatal TypeError. The caller checks is_wp_error().
+				return new WP_Error( 'folder_exists', esc_html( $this->strings['folder_exists'] ), esc_html( $remote_destination ) );
 			}
 		}
+
+		return null;
 	}
 
 	/**

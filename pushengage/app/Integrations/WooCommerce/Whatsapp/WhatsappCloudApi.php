@@ -130,15 +130,17 @@ class WhatsappCloudApi {
 		if ( isset( $data['error'] ) ) {
 			$data['success'] = false;
 
-			// if meta api returns status code 401, then check if the error is due to invalid access token
-			// and update the store accessTokenHash in the credentials so that we can display the
-			// access token mismatch notice to admin
+			// If Meta's API returns a 401, the stored access token is no longer
+			// valid (revoked/expired). Flag it out-of-band so the admin sees the
+			// "credentials invalid" notice and further sends are guarded.
 			//
-			// this is done because the access token is not valid anymore and we need to display the
-			// access token mismatch notice to admin
+			// We must NOT write $this->credentials back here: it came from
+			// Options::get_whatsapp_settings() with accessToken already decrypted,
+			// so a raw update_option() would persist the token in plaintext and
+			// corrupt accessTokenHash. set_whatsapp_access_token_invalid() records
+			// the state without touching the encrypted settings struct.
 			if ( 401 === $status_code ) {
-				$this->credentials['accessTokenHash'] = $data['error']['message'];
-				update_option( 'pushengage_whatsapp_settings', $this->credentials );
+				Options::set_whatsapp_access_token_invalid();
 			}
 		} elseif ( ! isset( $data['messages'][0]['id'] ) ) {
 			// Check for the message ID if there was no error

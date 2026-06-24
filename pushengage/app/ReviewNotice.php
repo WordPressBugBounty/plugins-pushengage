@@ -229,9 +229,14 @@ class ReviewNotice {
 		}
 
 		if ( ! empty( $_POST['clicked_review_action'] ) ) {
-			$data = array();
-			$data['clicked_review_action'] = sanitize_text_field( $_POST['clicked_review_action'] );
-			self::update_review_notice_info( $data );
+			$clicked_review_action = sanitize_text_field( wp_unslash( $_POST['clicked_review_action'] ) );
+
+			// Allowlist the action: only the two values the UI ever sends are
+			// stored. Anything else is ignored so the user-meta can't be
+			// seeded with arbitrary strings via a crafted request.
+			if ( in_array( $clicked_review_action, array( 'dismissed', 'later' ), true ) ) {
+				self::update_review_notice_info( array( 'clicked_review_action' => $clicked_review_action ) );
+			}
 		}
 
 		wp_send_json_success();

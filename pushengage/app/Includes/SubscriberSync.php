@@ -79,17 +79,28 @@ class SubscriberSync {
 	 * @return void
 	 */
 	public function sync_subscriber_data() {
-		if ( ! isset( $_POST['nonce'] ) || ! wp_verify_nonce( $_POST['nonce'], 'pushengage_subscriber_sync_nonce' ) ) {
+		$nonce = isset( $_POST['nonce'] ) ? sanitize_text_field( wp_unslash( $_POST['nonce'] ) ) : '';
+		if ( empty( $nonce ) || ! wp_verify_nonce( $nonce, 'pushengage_subscriber_sync_nonce' ) ) {
 			wp_send_json_error( __( 'Nonce verification failed.', 'pushengage' ), 403 );
-		};
+			return;
+		}
 
 		$user_id = get_current_user_id();
 		if ( empty( $user_id ) ) {
 			wp_send_json_error( __( 'User not logged in.', 'pushengage' ), 403 );
+			return;
 		}
 
-		$new_subscriber_id      = isset( $_POST['add_id'] ) ? sanitize_text_field( wp_unslash( $_POST['add_id'] ) ) : '';
-		$remove_subscriber_id   = isset( $_POST['remove_id'] ) ? sanitize_text_field( wp_unslash( $_POST['remove_id'] ) ) : '';
+		// PushEngage subscriber ids are short opaque strings (UUIDs/hashes).
+		// Cap to 64 chars so a hostile or buggy client cannot bloat the
+		// pushengage_subscriber_ids user-meta row to arbitrary size.
+		$max_subscriber_id_len = 64;
+		$new_subscriber_id     = isset( $_POST['add_id'] )
+			? substr( sanitize_text_field( wp_unslash( $_POST['add_id'] ) ), 0, $max_subscriber_id_len )
+			: '';
+		$remove_subscriber_id  = isset( $_POST['remove_id'] )
+			? substr( sanitize_text_field( wp_unslash( $_POST['remove_id'] ) ), 0, $max_subscriber_id_len )
+			: '';
 
 		$subscriber_ids = get_user_meta( $user_id, 'pushengage_subscriber_ids', true );
 		if ( empty( $subscriber_ids ) ) {

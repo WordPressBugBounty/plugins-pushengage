@@ -387,19 +387,55 @@ class Logger {
 	}
 
 	/**
-	 * Create empty index.html file in directory to prevent directory listing
+	 * Drop the standard deny-files (index.html + .htaccess + web.config)
+	 * into a directory so the log files are not web-readable on Apache /
+	 * IIS hosts and the dir doesn't list on hosts without an index
+	 * directive. index.html-only (the prior behavior) doesn't block direct
+	 * access to a known log filename — the .htaccess / web.config do.
 	 *
 	 * @since 4.1.2
-	 * @param string $directory The directory path where to create index.html.
-	 * @return bool True if file was created or already exists, false on failure.
+	 * @param string $directory The directory path where to drop deny-files.
+	 * @return bool True if all deny-files are in place, false if any write
+	 *              failed (e.g. read-only filesystem / permissions).
 	 */
 	private function create_index_html( $directory ) {
+		$ok = true;
+
 		$index_file = $directory . '/index.html';
 		if ( ! file_exists( $index_file ) ) {
 			$created = file_put_contents( $index_file, '' );
-			return false !== $created;
+			$ok      = $ok && ( false !== $created );
 		}
-		return true;
+
+		$htaccess_file = $directory . '/.htaccess';
+		if ( ! file_exists( $htaccess_file ) ) {
+			$htaccess_body = "# PushEngage: deny direct access to log files.\n"
+				. "<IfModule mod_authz_core.c>\n"
+				. "    Require all denied\n"
+				. "</IfModule>\n"
+				. "<IfModule !mod_authz_core.c>\n"
+				. "    Order deny,allow\n"
+				. "    Deny from all\n"
+				. "</IfModule>\n";
+			$created = file_put_contents( $htaccess_file, $htaccess_body );
+			$ok      = $ok && ( false !== $created );
+		}
+
+		$webconfig_file = $directory . '/web.config';
+		if ( ! file_exists( $webconfig_file ) ) {
+			$webconfig_body = "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n"
+				. "<configuration>\n"
+				. "    <system.webServer>\n"
+				. "        <authorization>\n"
+				. "            <deny users=\"*\" />\n"
+				. "        </authorization>\n"
+				. "    </system.webServer>\n"
+				. "</configuration>\n";
+			$created = file_put_contents( $webconfig_file, $webconfig_body );
+			$ok      = $ok && ( false !== $created );
+		}
+
+		return $ok;
 	}
 
 	/**
@@ -418,7 +454,16 @@ class Logger {
 				$this->can_write_custom_log = false;
 				return false;
 			}
-			$this->create_index_html( $log_dir );
+		}
+
+		// Drop the deny-files on every init (idempotent — each file is only
+		// written when missing) so existing log directories created by older
+		// versions with index.html only get the .htaccess / web.config too.
+		// Fail closed: if the deny-files can't be ensured, don't write logs
+		// into a potentially web-readable directory.
+		if ( ! $this->create_index_html( $log_dir ) ) {
+			$this->can_write_custom_log = false;
+			return false;
 		}
 
 		$log_file = $this->get_log_file_path();

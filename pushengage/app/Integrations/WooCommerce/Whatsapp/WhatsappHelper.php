@@ -371,7 +371,19 @@ class WhatsappHelper {
 
 				// Check if the placeholder exists in replacements
 				if ( isset( $replacements[ $placeholder ] ) ) {
-					return $replacements[ $placeholder ];
+					// Replacement values may come from customer-controlled
+					// sources (billing/shipping fields, cart contents).
+					// `do_shortcode()` runs on the substituted template
+					// below to expand admin-supplied shortcodes such as
+					// `[woo_order_number]`; if customer-supplied data is
+					// passed through, an unauthenticated checkout visitor
+					// can inject arbitrary shortcodes by putting them in
+					// e.g. their billing first name. Strip shortcode
+					// brackets out of the replacement *before* substitution
+					// so customer-injected shortcodes never reach
+					// `do_shortcode()`, while admin-authored shortcodes in
+					// the surrounding template still work.
+					return strip_shortcodes( (string) $replacements[ $placeholder ] );
 				}
 
 				// Return a single space if no replacement found
@@ -393,9 +405,12 @@ class WhatsappHelper {
 			$value = ' ';
 		}
 
-		// check if the value is a shortcode.
+		// Expand admin-authored shortcodes (e.g. `[woo_order_number]`) in
+		// the template. Customer-controlled replacement values were
+		// stripped of shortcode brackets above, so anything `do_shortcode`
+		// processes here originated in the admin's template.
 		$shortcode_regex = get_shortcode_regex();
-		if ( preg_match( '/' . $shortcode_regex . '/s', $value, $matches ) ) {
+		if ( preg_match( '/' . $shortcode_regex . '/s', $value ) ) {
 			$value = do_shortcode( $value );
 
 			// Strip HTML and tabs / new lines from the value.

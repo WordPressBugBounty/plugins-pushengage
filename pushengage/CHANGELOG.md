@@ -2,6 +2,16 @@
 
 All notable changes to the PushEngage plugin will be documented in this file.
 
+### 4.2.6
+
+* Improved: Strict origin validation on the onboarding account-connection handler.
+* Improved: Customer-supplied WhatsApp checkout fields are no longer shortcode-evaluated.
+* Improved: Hardened SSL detection and outbound URL validation against spoofed headers and malformed URLs.
+* Improved: Stored WhatsApp access tokens now use authenticated AES-256-GCM encryption; existing tokens migrate automatically on the next save.
+* Improved: WhatsApp Cloud API credentials are sent via the Authorization header instead of the request URL.
+* Improved: Added capability checks, input allowlists, and tabnabbing protections across admin screens.
+* Changed: Minimum required PHP version is now 7.4.
+
 ### 4.2.5
 
 * NEW: Role-based post-editor access — non-admin users in selected roles can now use the PushEngage metabox.

@@ -557,6 +557,15 @@ class RecommendedPlugins {
 			return false;
 		}
 
+		// This method also activates the plugin (`activate_plugin()` below),
+		// so require the activation capability explicitly. Default WP grants
+		// `install_plugins` and `activate_plugins` together, but a custom-cap
+		// setup could grant install without activate — gate activation on its
+		// own capability rather than relying on the bundled defaults.
+		if ( ! current_user_can( 'activate_plugins' ) ) {
+			return false;
+		}
+
 		require_once ABSPATH . 'wp-admin/includes/file.php';
 		require_once ABSPATH . 'wp-admin/includes/template.php';
 		require_once ABSPATH . 'wp-admin/includes/class-wp-screen.php';

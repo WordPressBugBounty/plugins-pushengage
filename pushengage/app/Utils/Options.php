@@ -153,8 +153,24 @@ class Options {
 					$settings['accessToken'] = $decrypted_access_token;
 				}
 				$access_token_hash = hash( 'sha256', $settings['accessToken'] );
-				// add a valid flag to the settings if the decrypted access token hash is valid or not
-				$settings['isDecryptedAccessTokenValid'] = isset( $settings['accessTokenHash'] ) && $access_token_hash === $settings['accessTokenHash'];
+				// Timing-safe comparison; the value isn't network-attacker
+				// reachable here, but using hash_equals matches the rest of
+				// the codebase's hardening posture and avoids accidental
+				// timing leaks if this helper is ever moved closer to a
+				// request boundary.
+				$settings['isDecryptedAccessTokenValid'] = isset( $settings['accessTokenHash'] )
+					&& is_string( $settings['accessTokenHash'] )
+					&& hash_equals( $settings['accessTokenHash'], $access_token_hash );
+
+				// A prior Meta Cloud API 401 (token revoked/expired) flags the
+				// stored token as invalid out-of-band. Honor that here so the
+				// existing "credentials invalid" notice and the send guard react
+				// without WhatsappCloudApi ever having to rewrite the encrypted
+				// settings struct (which previously leaked the decrypted token
+				// to wp_options in plaintext and corrupted accessTokenHash).
+				if ( get_option( 'pushengage_whatsapp_access_token_invalid', false ) ) {
+					$settings['isDecryptedAccessTokenValid'] = false;
+				}
 			}
 
 			self::$whatsapp_settings = $settings;
@@ -174,17 +190,77 @@ class Options {
 	public static function update_whatsapp_settings( $data ) {
 		// clear the internal cache for whatsapp settings
 		self::$whatsapp_settings = array();
+
+		// Defense-in-depth schema allowlist. The Ajax handler already
+		// sanitizes per-field, but a future caller hitting this static
+		// directly should not be able to seed unrelated keys into the
+		// option (and accidentally shadow other settings or surface as
+		// attributes in our own getters).
+		$allowed_keys = array(
+			'whatsappBusinessId'  => true,
+			'whatsappPhoneNumber' => true,
+			'phoneNumberId'       => true,
+			'accessToken'         => true,
+			'accessTokenHash'     => true,
+		);
+		$data = is_array( $data ) ? array_intersect_key( $data, $allowed_keys ) : array();
+
 		if ( isset( $data['accessToken'] ) && ! empty( $data['accessToken'] ) ) {
 			$data['accessTokenHash'] = hash( 'sha256', $data['accessToken'] );
 			$encryption = new Encryption();
 			$encrypted_access_token = $encryption->encrypt( $data['accessToken'] );
-			// if  encrypted access token is empty that means either access token is empty or encryption failed
-			// in that store the original access token.
-			if ( ! empty( $encrypted_access_token ) ) {
-				$data['accessToken'] = $encrypted_access_token;
+
+			// Fail closed: a falsy return from encrypt() means OpenSSL /
+			// AES-256-GCM is unavailable on this PHP build, the key was
+			// missing, or the cipher call itself failed. The pre-4.2.6
+			// behavior here was to silently store the access token in
+			// plaintext, which leaks WhatsApp Cloud API credentials to
+			// anyone with DB read (other plugin, backup snapshot, SQLi).
+			// Refuse the save instead so the admin sees an error and the
+			// token never lands on disk unencrypted.
+			if ( empty( $encrypted_access_token ) ) {
+				return false;
 			}
+
+			$data['accessToken'] = $encrypted_access_token;
 		}
-		return update_option( 'pushengage_whatsapp_settings', $data );
+
+		$result = update_option( 'pushengage_whatsapp_settings', $data );
+
+		// A successful save means the admin re-entered credentials, so clear any
+		// prior Meta 401 "token invalid" flag. This resets both the admin notice
+		// and the send guard that read it via get_whatsapp_settings().
+		if ( $result ) {
+			delete_option( 'pushengage_whatsapp_access_token_invalid' );
+		}
+
+		return $result;
+	}
+
+	/**
+	 * Flag the stored WhatsApp access token as invalid.
+	 *
+	 * Used when Meta's Cloud API rejects the token (e.g. a 401 from a revoked or
+	 * expired token). The flag lives in its own option so callers that hold the
+	 * decrypted token never have to rewrite the encrypted settings struct just to
+	 * record an invalid state. get_whatsapp_settings() reads it to drive the
+	 * "credentials invalid" admin notice and the send guard.
+	 *
+	 * @since 4.2.6
+	 *
+	 * @param bool $invalid Whether the token is invalid. Defaults to true.
+	 * @return void
+	 */
+	public static function set_whatsapp_access_token_invalid( $invalid = true ) {
+		// Clear the internal cache so the next get_whatsapp_settings() call
+		// reflects the new state.
+		self::$whatsapp_settings = array();
+
+		if ( $invalid ) {
+			update_option( 'pushengage_whatsapp_access_token_invalid', true );
+		} else {
+			delete_option( 'pushengage_whatsapp_access_token_invalid' );
+		}
 	}
 
 	/**
@@ -295,6 +371,22 @@ class Options {
 	 * @return bool
 	 */
 	public static function update_whatsapp_click_to_chat_settings( $data ) {
+		// Defense-in-depth schema allowlist; the Ajax handler also
+		// constructs a fixed-key $data array, but enforce it at the
+		// storage boundary too.
+		$allowed_keys = array(
+			'enabled'          => true,
+			'phoneNumber'      => true,
+			'greetingMessage'  => true,
+			'buttonStyle'      => true,
+			'buttonSize'       => true,
+			'buttonPosition'   => true,
+			'horizontalOffset' => true,
+			'verticalOffset'   => true,
+			'zIndex'           => true,
+		);
+		$data = is_array( $data ) ? array_intersect_key( $data, $allowed_keys ) : array();
+
 		return update_option( 'pushengage_whatsapp_click_to_chat', $data );
 	}
 

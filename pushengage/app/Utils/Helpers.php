@@ -54,7 +54,7 @@ class Helpers {
 	 */
 	public static function is_plugin_active( $basename ) {
 		$active_plugins = apply_filters( 'active_plugins', get_option( 'active_plugins' ) );
-		return in_array( $basename, $active_plugins );
+		return in_array( $basename, (array) $active_plugins, true );
 	}
 
 	/**
@@ -113,27 +113,42 @@ class Helpers {
 	}
 
 	/**
-	 * Checks if the website is using SSl or not.
+	 * Checks if the website is using SSL or not.
+	 *
+	 * Defers to WordPress core `is_ssl()` which inspects `HTTPS` /
+	 * `SERVER_PORT` set by the actual web-server / SAPI. Proxy headers
+	 * (`HTTP_CF_VISITOR`, `HTTP_X_FORWARDED_PROTO`) are deliberately NOT
+	 * trusted here: they are attacker-spoofable on any deployment without
+	 * a reverse proxy that strips them, and trusting them would let a
+	 * client convince downstream code that an insecure request is secure.
+	 *
+	 * Site owners who run behind a reverse proxy that terminates TLS
+	 * should either:
+	 *  - Configure WordPress to honor `X-Forwarded-Proto` in `wp-config.php`
+	 *    (set `$_SERVER['HTTPS']='on'` when the trusted proxy header is
+	 *    present — the canonical approach), or
+	 *  - Use the `pushengage_is_ssl` filter below to override the result
+	 *    based on their own (trusted-proxy-aware) detection logic.
 	 *
 	 * @since 4.0.4.1
 	 *
 	 * @return boolean
 	 */
 	public static function is_ssl() {
-		// cloudflare
-		if ( ! empty( $_SERVER['HTTP_CF_VISITOR'] ) ) {
-			$cfo = json_decode( $_SERVER['HTTP_CF_VISITOR'] );
-			if ( isset( $cfo->scheme ) && 'https' === $cfo->scheme ) {
-				return true;
-			}
-		}
+		$is_ssl = function_exists( 'is_ssl' ) ? is_ssl() : false;
 
-		// other proxy
-		if ( ! empty( $_SERVER['HTTP_X_FORWARDED_PROTO'] ) && 'https' === $_SERVER['HTTP_X_FORWARDED_PROTO'] ) {
-			return true;
-		}
-
-		return function_exists( 'is_ssl' ) ? is_ssl() : false;
+		/**
+		 * Filter the PushEngage SSL-detection result.
+		 *
+		 * Use this to override the default detection when running behind
+		 * a reverse proxy / CDN that terminates TLS, after asserting the
+		 * request actually came through the trusted proxy.
+		 *
+		 * @since 4.2.6
+		 *
+		 * @param bool $is_ssl Whether the current request is over HTTPS.
+		 */
+		return (bool) apply_filters( 'pushengage_is_ssl', $is_ssl );
 	}
 
 	/**
@@ -164,18 +179,44 @@ class Helpers {
 	 * @return bool false on failure.
 	 */
 	public static function is_http_or_https_url( $url, $max_len = 0 ) {
-		if ( empty( $url ) ) {
+		if ( empty( $url ) || ! is_string( $url ) ) {
 			return false;
 		}
 
-		if ( 'http' === substr( $url, 0, 4 ) || 'https' === substr( $url, 0, 5 ) ) {
-			if ( $max_len && strlen( $url ) > $max_len ) {
-				return false;
-			}
-			return true;
+		if ( $max_len && strlen( $url ) > $max_len ) {
+			return false;
 		}
 
-		return false;
+		// Reject any value containing control characters / whitespace
+		// (including CR/LF) that could enable header or payload smuggling
+		// when the URL is later forwarded to outbound HTTP / push payloads.
+		if ( preg_match( '/[\s\x00-\x1F\x7F]/', $url ) ) {
+			return false;
+		}
+
+		// Use wp_parse_url + explicit scheme/host check rather than
+		// `filter_var(..., FILTER_VALIDATE_URL)` so we don't reject valid
+		// internationalized URLs (Unicode paths, IDN-decoded hosts) that
+		// the older loose prefix check accepted. We still close the
+		// original vulnerability — non-URL strings like "httpsfoo" or
+		// "https.evil.com" lack a `scheme://host` structure and so are
+		// rejected by the parse below.
+		$parsed = wp_parse_url( $url );
+		if ( ! is_array( $parsed ) || empty( $parsed['scheme'] ) || empty( $parsed['host'] ) ) {
+			return false;
+		}
+
+		// Reject URLs with embedded credentials (`user:pass@host`). The
+		// rendered host in some clients displays the user component as
+		// the apparent destination, which is a well-known phishing
+		// primitive when subscribers click through push-notification
+		// URLs.
+		if ( ! empty( $parsed['user'] ) || isset( $parsed['pass'] ) ) {
+			return false;
+		}
+
+		$scheme = strtolower( $parsed['scheme'] );
+		return 'http' === $scheme || 'https' === $scheme;
 	}
 
 
