@@ -2,6 +2,10 @@
 
 All notable changes to the PushEngage plugin will be documented in this file.
 
+### 4.2.7
+
+* Improved: Web SDK script URL now includes the plugin version as a query parameter for reliable cache-busting after updates.
+
 ### 4.2.6
 
 * Improved: Strict origin validation on the onboarding account-connection handler.

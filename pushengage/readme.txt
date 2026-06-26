@@ -4,7 +4,7 @@ Tags: push notifications, web push notifications, woocommerce, cart abandonment,
 Requires at least: 5.8
 Tested up to: 7.0
 Requires PHP: 7.4
-Stable tag: 4.2.6
+Stable tag: 4.2.7
 License: GNU General Public License v2.0 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -22,7 +22,7 @@ PushEngage delivers push notifications directly to your subscribers' browsers �
 
 Over **25,000+ marketers** trust PushEngage to send millions of targeted push notifications every month — driving repeat traffic, recovering abandoned carts, and boosting revenue on autopilot. PushEngage comes with **pre-built campaign templates**, **smart automation workflows**, and **AI-powered setup** so you can start sending high-converting notifications in under 5 minutes — without writing a single line of code.
 
-> <strong>What's New in PushEngage 4.2.6</strong><br />
+> <strong>What's New in PushEngage</strong><br />
 > <strong>Smarter value typing for Audience Filters.</strong> Audience group attribute filters now preserve the correct value type (number, date, boolean, or text), fixing a class of silent mismatches where values were sent to the backend with the wrong type — so your segments match exactly as configured.<br />
 > <strong>WordPress Abilities API support — PushEngage is now AI-ready.</strong> We register 25 abilities under the official WordPress Abilities API so AI assistants and MCP-compatible tools can plan and execute multi-step push notification workflows on your behalf — sending broadcasts, creating segments, configuring auto-push, pulling analytics, and managing WooCommerce push automations. Every action is permission-checked and schema-validated.<br />
 > <strong>WordPress 7.0 ready.</strong> Full compatibility with WordPress 7.0 and the new abilities framework.<br />
@@ -403,6 +403,9 @@ All users can post questions on the [WordPress.org support forum](https://wordpr
 == Changelog ==
 
 **Most Recent Changes:**
+= 4.2.7 =
+* Improved: Web SDK script URL now includes the plugin version as a query parameter for reliable cache-busting after updates.
+
 = 4.2.6 =
 * Improved: Strengthened plugin security across onboarding, WhatsApp, and credential handling.
 * Improved: Upgraded stored WhatsApp access tokens to authenticated AES-256-GCM encryption.

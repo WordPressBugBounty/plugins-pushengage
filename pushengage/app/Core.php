@@ -166,7 +166,7 @@ class Core {
 		$site_key = ! empty( $pushengage_settings['site_key'] ) ? $pushengage_settings['site_key'] : null;
 
 		if ( ! empty( $api_key ) && ! empty( $site_key ) ) {
-			$web_sdk_url = PUSHENGAGE_CLIENT_JS_URL . 'sdks/pushengage-web-sdk.js';
+			$web_sdk_url = PUSHENGAGE_CLIENT_JS_URL . 'sdks/pushengage-web-sdk.js?v=' . PUSHENGAGE_VERSION;
 
 			// `wp_json_encode` produces a JS string literal with the
 			// surrounding quotes and proper escaping; this prevents a
