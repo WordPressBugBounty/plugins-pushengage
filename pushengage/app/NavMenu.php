@@ -107,7 +107,7 @@ class NavMenu {
 
 		global $submenu;
 
-		// Show 'Upgrade To Pro sub menu at sub menu array position '9' if user in on free plan
+		// Show 'Upgrade To Pro' sub menu if user is on free plan.
 		if ( AdminNavMenuItems::should_display_upgrade_submenu( $api_key ) ) {
 			$upgrade_url = 'https://app.pushengage.com/account/billing?drawer=true' .
 				'&utm_campaign=Plugin&utm_medium=AdminMenu&utm_source=WordPress&utm_content=UpgradeToPro&planType=business';
@@ -120,20 +120,27 @@ class NavMenu {
 				$upgrade_url
 			);
 
-			// Add a custom class and css to the 'Upgrade To Pro' menu
-			if ( isset( $submenu['pushengage'][13] ) ) {
-				$submenu['pushengage'][13][4] = 'pe-upgrade-to-pro-submenu';
+		}
+
+		// Assign custom CSS classes to submenu items by their slug. Matching on the slug
+		// (instead of a hard-coded numeric position) keeps these correct when the menu
+		// order changes.
+		if ( ! empty( $submenu['pushengage'] ) && is_array( $submenu['pushengage'] ) ) {
+			foreach ( $submenu['pushengage'] as $index => $item ) {
+				if ( empty( $item[2] ) ) {
+					continue;
+				}
+				$slug = $item[2];
+				if ( false !== strpos( $slug, 'campaigns/triggers' ) ) {
+					$submenu['pushengage'][ $index ][4] = 'pe-menu-triggers';
+				} elseif ( false !== strpos( $slug, 'campaigns/workflows' ) ) {
+					$submenu['pushengage'][ $index ][4] = 'pe-menu-workflows';
+				} elseif ( false !== strpos( $slug, 'settings/integrations' ) ) {
+					$submenu['pushengage'][ $index ][4] = 'pe-menu-integrations';
+				} elseif ( false !== strpos( $slug, 'account/billing' ) ) {
+					$submenu['pushengage'][ $index ][4] = 'pe-upgrade-to-pro-submenu';
+				}
 			}
-		}
-
-		// Add custom class to integrations submenu.
-		if ( isset( $submenu['pushengage'][5] ) ) {
-			$submenu['pushengage'][5][4] = 'pe-menu-integrations';
-		}
-
-		// Add custom class for triggers submenu.
-		if ( isset( $submenu['pushengage'][9] ) ) {
-			$submenu['pushengage'][4][4] = 'pe-menu-triggers';
 		}
 
 		remove_submenu_page( 'pushengage', 'pushengage' );

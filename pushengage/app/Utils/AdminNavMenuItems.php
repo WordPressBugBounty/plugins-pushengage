@@ -18,64 +18,67 @@ class AdminNavMenuItems {
 	 * @return array
 	 */
 	public static function get_menu_items( $menu_pos = 'adminmenu' ) {
+		$is_admin_menu = ( 'adminmenu' === $menu_pos );
+
+		// "NEW!" badge markup, shown next to Workflows.
+		$new_badge = '<span style="padding-left: 2px;color: #f18200; vertical-align: super; font-size: 9px;"> NEW!</span>';
+
+		// Group 1: Dashboard.
 		$menu_items = array(
 			array(
 				'id'    => 'dashboard',
 				'label' => esc_html__( 'Dashboard', 'pushengage' ),
 				'url'   => '',
 			),
-			array(
-				'id'    => 'campaigns',
-				'label' => esc_html__( 'Push Broadcasts', 'pushengage' ),
-				'url'   => 'campaigns/notifications',
-			),
 		);
 
-		if ( 'adminmenu' === $menu_pos ) {
-			$menu_items = array_merge(
-				$menu_items,
-				array(
-					array(
-						'id'    => 'drip',
-						'label' => esc_html__( 'Drip', 'pushengage' ),
-						'url'   => 'automation/drip',
-					),
-					array(
-						'id'    => 'triggered_campaign',
-						'label' => esc_html__( 'Triggers', 'pushengage' ),
-						'url'   => 'campaigns/triggers',
-					),
-					array(
-						'id'    => 'design',
-						'label' => esc_html__( 'Design', 'pushengage' ),
-						'url'   => 'design',
-					),
-				)
+		// Group 2: Push Broadcasts, Drip, Triggers, Workflows.
+		$menu_items[] = array(
+			'id'    => 'campaigns',
+			'label' => esc_html__( 'Push Broadcasts', 'pushengage' ),
+			'url'   => 'campaigns/notifications',
+		);
+
+		if ( $is_admin_menu ) {
+			$menu_items[] = array(
+				'id'    => 'drip',
+				'label' => esc_html__( 'Drip', 'pushengage' ),
+				'url'   => 'automation/drip',
+			);
+			$menu_items[] = array(
+				'id'    => 'triggered_campaign',
+				'label' => esc_html__( 'Triggers', 'pushengage' ),
+				'url'   => 'campaigns/triggers',
+			);
+			$menu_items[] = array(
+				'id'    => 'workflows',
+				'label' => esc_html__( 'Workflows', 'pushengage' ) . $new_badge,
+				'url'   => 'campaigns/workflows',
 			);
 		}
 
-		$menu_items = array_merge(
-			$menu_items,
-			array(
-				array(
-					'id'    => 'audience',
-					'label' => esc_html__( 'Audience', 'pushengage' ),
-					'url'   => 'audience/subscribers',
-				),
-				array(
-					'id'    => 'analytics',
-					'label' => esc_html__( 'Analytics', 'pushengage' ),
-					'url'   => 'analytics',
-				),
-				array(
-					'id'    => 'settings',
-					'label' => esc_html__( 'Settings', 'pushengage' ),
-					'url'   => 'settings/site-details',
-				),
-			)
+		// Group 3: Design, Audience, Analytics.
+		if ( $is_admin_menu ) {
+			$menu_items[] = array(
+				'id'    => 'design',
+				'label' => esc_html__( 'Design', 'pushengage' ),
+				'url'   => 'design',
+			);
+		}
+
+		$menu_items[] = array(
+			'id'    => 'audience',
+			'label' => esc_html__( 'Audience', 'pushengage' ),
+			'url'   => 'audience/subscribers',
+		);
+		$menu_items[] = array(
+			'id'    => 'analytics',
+			'label' => esc_html__( 'Analytics', 'pushengage' ),
+			'url'   => 'analytics',
 		);
 
-		if ( 'adminmenu' === $menu_pos ) {
+		// Group 4: WooCommerce, WhatsApp, Chat Widgets.
+		if ( $is_admin_menu ) {
 			$menu_items[] = array(
 				'id'    => 'woocommerce',
 				'label' => esc_html__( 'WooCommerce', 'pushengage' ),
@@ -88,9 +91,19 @@ class AdminNavMenuItems {
 			);
 			$menu_items[] = array(
 				'id'    => 'chat-widgets',
-				'label' => esc_html__( 'Chat Widgets', 'pushengage' ) . '<span style="padding-left: 2px;color: #f18200; vertical-align: super; font-size: 9px;"> NEW!</span>',
+				'label' => esc_html__( 'Chat Widgets', 'pushengage' ),
 				'url'   => 'chat-widgets',
 			);
+		}
+
+		// Group 5: Settings, About Us ( + Upgrade to Pro is appended later when on free plan ).
+		$menu_items[] = array(
+			'id'    => 'settings',
+			'label' => esc_html__( 'Settings', 'pushengage' ),
+			'url'   => 'settings/site-details',
+		);
+
+		if ( $is_admin_menu ) {
 			$menu_items[] = array(
 				'id'    => 'about-us',
 				'label' => esc_html__( 'About Us', 'pushengage' ),
@@ -98,7 +111,7 @@ class AdminNavMenuItems {
 			);
 		}
 
-		if ( 'adminmenu' !== $menu_pos ) {
+		if ( ! $is_admin_menu ) {
 			$menu_items[] = array(
 				'id'    => 'pe-debug',
 				'label' => esc_html__( 'Debug', 'pushengage' ),

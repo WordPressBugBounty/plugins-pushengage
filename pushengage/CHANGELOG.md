@@ -2,6 +2,10 @@
 
 All notable changes to the PushEngage plugin will be documented in this file.
 
+### 4.2.8
+* NEW: Workflows — Manage your automation workflows directly in WordPress with powerful analytics, revenue tracking, and one-click campaign management.
+* Improved: Reorganized the PushEngage admin menu for faster navigation across Push Broadcasts, Drip, Triggers, and the new Workflows screen.
+
 ### 4.2.7
 
 * Improved: Web SDK script URL now includes the plugin version as a query parameter for reliable cache-busting after updates.

@@ -4,7 +4,7 @@ Tags: push notifications, web push notifications, woocommerce, cart abandonment,
 Requires at least: 5.8
 Tested up to: 7.0
 Requires PHP: 7.4
-Stable tag: 4.2.7
+Stable tag: 4.2.8
 License: GNU General Public License v2.0 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -23,10 +23,8 @@ PushEngage delivers push notifications directly to your subscribers' browsers �
 Over **25,000+ marketers** trust PushEngage to send millions of targeted push notifications every month — driving repeat traffic, recovering abandoned carts, and boosting revenue on autopilot. PushEngage comes with **pre-built campaign templates**, **smart automation workflows**, and **AI-powered setup** so you can start sending high-converting notifications in under 5 minutes — without writing a single line of code.
 
 > <strong>What's New in PushEngage</strong><br />
+> <strong>Workflows come to WordPress.</strong> List your workflows — view every workflow with Entered, Active, Completed, and Failed stats, explore date-range analytics with conversion goals and revenue tracking, and activate, duplicate, or export campaigns in a click.<br />
 > <strong>Smarter value typing for Audience Filters.</strong> Audience group attribute filters now preserve the correct value type (number, date, boolean, or text), fixing a class of silent mismatches where values were sent to the backend with the wrong type — so your segments match exactly as configured.<br />
-> <strong>WordPress Abilities API support — PushEngage is now AI-ready.</strong> We register 25 abilities under the official WordPress Abilities API so AI assistants and MCP-compatible tools can plan and execute multi-step push notification workflows on your behalf — sending broadcasts, creating segments, configuring auto-push, pulling analytics, and managing WooCommerce push automations. Every action is permission-checked and schema-validated.<br />
-> <strong>WordPress 7.0 ready.</strong> Full compatibility with WordPress 7.0 and the new abilities framework.<br />
-> <strong>Browser notification & chat widget upgrades.</strong> Improved iOS web push reliability on Safari 16.4+ and iPadOS 16.4+, faster browser notification delivery across Chrome, Firefox, Safari, and Edge, and granular click-to-chat targeting in the multichannel chat widget — show or hide on specific pages, posts, or device types.<br />
 
 > <strong>PushEngage Growth & Premium Plans</strong><br />
 > PushEngage is free to get started with push broadcasts, subscription popups, and basic segmentation. Unlock cart abandonment recovery, browse abandonment, price drop alerts, back-in-stock notifications, advanced segmentation, A/B testing, drip campaigns, and more by upgrading your plan directly from the plugin dashboard. <a href="https://www.pushengage.com/pricing/?utm_source=wprepo&utm_medium=link&utm_campaign=wporg" title="PushEngage Pricing">See all plans and pricing!</a>
@@ -403,6 +401,10 @@ All users can post questions on the [WordPress.org support forum](https://wordpr
 == Changelog ==
 
 **Most Recent Changes:**
+= 4.2.8 =
+* NEW: Workflows — Manage your automation workflows directly in WordPress with powerful analytics, revenue tracking, and one-click campaign management.
+* Improved: Reorganized the PushEngage admin menu for faster navigation across Push Broadcasts, Drip, Triggers, and the new Workflows screen.
+
 = 4.2.7 =
 * Improved: Web SDK script URL now includes the plugin version as a query parameter for reliable cache-busting after updates.
 
@@ -573,6 +575,9 @@ All users can post questions on the [WordPress.org support forum](https://wordpr
 * Please refer to the [PushEngage changelog](https://plugins.svn.wordpress.org/pushengage/trunk/CHANGELOG.md) for the full version history.
 
 == Upgrade Notice ==
+
+= 4.2.8 =
+NEW: Workflows in WordPress — manage automation workflows, track date-range analytics with conversion goals and revenue, and activate, duplicate, or export campaigns from your dashboard. Plus a reorganized admin menu for faster navigation.
 
 = 4.2.3 =
 Improved AI assistant and MCP schema response handling, fixed duplicate auto-push post type results, and tested compatibility with WordPress 7.0.
