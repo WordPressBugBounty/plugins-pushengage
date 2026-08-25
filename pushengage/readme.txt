@@ -2,9 +2,9 @@
 Contributors: PushEngage, smub
 Tags: push notifications, web push notifications, woocommerce, cart abandonment, chat widget
 Requires at least: 5.8
-Tested up to: 7.0
+Tested up to: 7.1
 Requires PHP: 7.4
-Stable tag: 4.2.8
+Stable tag: 4.2.9
 License: GNU General Public License v2.0 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -20,7 +20,7 @@ Web push notifications, WooCommerce automation & multi-channel chat widget. What
 
 PushEngage delivers push notifications directly to your subscribers' browsers — often called browser notifications — appearing as alerts even when they've left your site. No email. No app. No spam folder.
 
-Over **25,000+ marketers** trust PushEngage to send millions of targeted push notifications every month — driving repeat traffic, recovering abandoned carts, and boosting revenue on autopilot. PushEngage comes with **pre-built campaign templates**, **smart automation workflows**, and **AI-powered setup** so you can start sending high-converting notifications in under 5 minutes — without writing a single line of code.
+Over **75,000+ marketers** trust PushEngage to send millions of targeted push notifications every month — driving repeat traffic, recovering abandoned carts, and boosting revenue on autopilot. PushEngage comes with **pre-built campaign templates**, **smart automation workflows**, and **AI-powered setup** so you can start sending high-converting notifications in under 5 minutes — without writing a single line of code.
 
 > <strong>What's New in PushEngage</strong><br />
 > <strong>Workflows come to WordPress.</strong> List your workflows — view every workflow with Entered, Active, Completed, and Failed stats, explore date-range analytics with conversion goals and revenue tracking, and activate, duplicate, or export campaigns in a click.<br />
@@ -143,7 +143,7 @@ Make data-driven decisions with detailed campaign analytics:
 
 [youtube https://www.youtube.com/watch?v=w64VWzwFj40]
 
-Add a floating click to chat widget to your WordPress site and connect with visitors through 20+ messaging channels from a single button. The PushEngage chat widget makes it easy for visitors to reach you on their preferred platform:
+Add a floating click to chat widget to your WordPress site and connect with visitors through 22+ messaging channels from a single button. The PushEngage chat widget makes it easy for visitors to reach you on their preferred platform:
 
 * WhatsApp
 * Facebook Messenger
@@ -401,6 +401,12 @@ All users can post questions on the [WordPress.org support forum](https://wordpr
 == Changelog ==
 
 **Most Recent Changes:**
+= 4.2.9 =
+* NEW: Tools page — explore PushEngage's AI toolkit (WordPress Abilities, MCP, Skills, and the Chrome extension) with live status detection for the Abilities API and MCP Adapter plugin.
+* NEW: Dashboard Strategies card now highlights your site's AI readiness — set up the MCP Adapter in a click, or open live usage details once agents are connected.
+* Improved: PushEngage abilities now declare the unified `public` exposure flag introduced in WordPress 7.1 and are grouped by domain for AI clients.
+* Improved: Tested up to WordPress 7.1.
+
 = 4.2.8 =
 * NEW: Workflows — Manage your automation workflows directly in WordPress with powerful analytics, revenue tracking, and one-click campaign management.
 * Improved: Reorganized the PushEngage admin menu for faster navigation across Push Broadcasts, Drip, Triggers, and the new Workflows screen.
@@ -575,6 +581,9 @@ All users can post questions on the [WordPress.org support forum](https://wordpr
 * Please refer to the [PushEngage changelog](https://plugins.svn.wordpress.org/pushengage/trunk/CHANGELOG.md) for the full version history.
 
 == Upgrade Notice ==
+
+= 4.2.9 =
+New Tools page for PushEngage's AI toolkit — WordPress Abilities, MCP, Skills, and the Chrome extension — with live setup status. Tested with WordPress 7.1.
 
 = 4.2.8 =
 NEW: Workflows in WordPress — manage automation workflows, track date-range analytics with conversion goals and revenue, and activate, duplicate, or export campaigns from your dashboard. Plus a reorganized admin menu for faster navigation.

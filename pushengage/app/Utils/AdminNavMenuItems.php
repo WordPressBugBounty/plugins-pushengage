@@ -96,7 +96,7 @@ class AdminNavMenuItems {
 			);
 		}
 
-		// Group 5: Settings, About Us ( + Upgrade to Pro is appended later when on free plan ).
+		// Group 5: Settings, Tools, About Us ( + Upgrade to Pro is appended later when on free plan ).
 		$menu_items[] = array(
 			'id'    => 'settings',
 			'label' => esc_html__( 'Settings', 'pushengage' ),
@@ -104,6 +104,11 @@ class AdminNavMenuItems {
 		);
 
 		if ( $is_admin_menu ) {
+			$menu_items[] = array(
+				'id'    => 'tools',
+				'label' => esc_html__( 'Tools', 'pushengage' ),
+				'url'   => 'tools',
+			);
 			$menu_items[] = array(
 				'id'    => 'about-us',
 				'label' => esc_html__( 'About Us', 'pushengage' ),

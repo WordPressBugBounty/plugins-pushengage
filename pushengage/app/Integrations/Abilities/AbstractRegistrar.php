@@ -24,13 +24,25 @@ if ( ! defined( 'ABSPATH' ) ) {
 abstract class AbstractRegistrar {
 
 	/**
+	 * Capability every PushEngage ability requires.
+	 *
+	 * Exposed as a constant so surfaces that describe these abilities to an
+	 * operator or an agent (see Pushengage\Utils\ToolsStatus) report the
+	 * capability actually enforced rather than a duplicated literal.
+	 *
+	 * @since 4.2.9
+	 * @var string
+	 */
+	const REQUIRED_CAPABILITY = 'manage_options';
+
+	/**
 	 * Permission callback shared across all PushEngage abilities.
 	 *
 	 * @since 4.2.2
 	 * @return bool
 	 */
 	public static function permission_callback() {
-		return current_user_can( 'manage_options' );
+		return current_user_can( self::REQUIRED_CAPABILITY );
 	}
 
 	/**
@@ -183,8 +195,14 @@ abstract class AbstractRegistrar {
 	 * Register a PushEngage ability with shared defaults applied.
 	 *
 	 * Defaults filled in: category=pushengage, permission_callback=manage_options,
-	 * meta.mcp.public=true, meta.show_in_rest=true. Any default can be overridden
-	 * by passing the key in $args.
+	 * meta.public=true, meta.mcp.public=true, meta.show_in_rest=true,
+	 * meta.group=<registrar slug>. Any default can be overridden by passing the
+	 * key in $args.
+	 *
+	 * `meta.public` is the unified exposure flag introduced in WP 7.1 that new
+	 * client channels default to; `mcp.public` and `show_in_rest` are kept
+	 * explicit so existing channels (current MCP adapter, REST) aren't affected
+	 * by that default.
 	 *
 	 * Accepts a top-level `annotations` key for convenience and relocates it to
 	 * `meta.annotations`, which is where WP_Ability (WP 6.9+) expects it.
@@ -196,8 +214,10 @@ abstract class AbstractRegistrar {
 	 */
 	protected function register_ability( $slug, array $args ) {
 		$meta = array(
+			'public'       => true,
 			'mcp'          => array( 'public' => true ),
 			'show_in_rest' => true,
+			'group'        => static::get_group_slug(),
 		);
 
 		if ( isset( $args['annotations'] ) ) {
@@ -217,6 +237,31 @@ abstract class AbstractRegistrar {
 		);
 
 		wp_register_ability( $slug, array_merge( $defaults, $args ) );
+	}
+
+	/**
+	 * Domain slug for the concrete registrar, derived from its class name.
+	 *
+	 * Stored on every ability as `meta.group` so consumers (the Tools screen,
+	 * MCP clients) can group abilities by domain without maintaining a separate
+	 * ability => domain map that silently drifts as abilities are added.
+	 *
+	 * `NotificationAbilities` => `notification`, `PluginInfoAbilities` =>
+	 * `plugin-info`. Subclasses can override by passing `meta.group` to
+	 * `register_ability()`.
+	 *
+	 * @since 4.2.9
+	 * @return string
+	 */
+	protected static function get_group_slug() {
+		$parts     = explode( '\\', static::class );
+		$base_name = (string) end( $parts );
+
+		// Drop the shared `Abilities` suffix, then convert StudlyCase to kebab-case.
+		$base_name = preg_replace( '/Abilities$/', '', $base_name );
+		$slug      = preg_replace( '/(?<!^)([A-Z])/', '-$1', $base_name );
+
+		return strtolower( $slug );
 	}
 
 	/**

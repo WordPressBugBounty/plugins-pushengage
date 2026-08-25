@@ -10,6 +10,7 @@ use Pushengage\Utils\ArrayHelper;
 use Pushengage\Utils\NonceChecker;
 use Pushengage\Utils\PublicPostTypes;
 use Pushengage\Utils\RecommendedPlugins;
+use Pushengage\Utils\ToolsStatus;
 use Pushengage\Includes\Api\HttpAPI;
 use Pushengage\Logger;
 use Pushengage\Integrations\WooCommerce\NotificationSettings;
@@ -97,6 +98,8 @@ class Ajax {
 
 		'get_push_automation_campaigns',
 		'update_push_automation_campaign',
+
+		'get_tools_status',
 
 		'initialize_debug_log',
 		'delete_debug_log_file',
@@ -1948,6 +1951,25 @@ class Ajax {
 		$logger = Logger::get_instance();
 		$logger->ajax_initialize_debug_log();
 		wp_send_json_success( array( 'message' => 'Debug log initialized' ) );
+	}
+
+	/**
+	 * AJAX handler for the Tools screen status payload.
+	 *
+	 * Not cached: both the Abilities registry and the MCP Adapter's active
+	 * state can change between page loads (a plugin activation, a new registrar
+	 * shipping in an update), and a stale card here would be worse than the
+	 * negligible cost of rebuilding it. The registry is already in memory by
+	 * the time this runs.
+	 *
+	 * @since 4.2.9
+	 * @return void
+	 */
+	public function get_tools_status() {
+		NonceChecker::check();
+		$this->check_capability( 'manage_options' );
+
+		wp_send_json_success( ToolsStatus::get_status() );
 	}
 
 	/**

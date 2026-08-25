@@ -2,6 +2,12 @@
 
 All notable changes to the PushEngage plugin will be documented in this file.
 
+### 4.2.9
+* NEW: Tools page — explore PushEngage's AI toolkit (WordPress Abilities, MCP, Skills, and the Chrome extension) with live status detection for the Abilities API and MCP Adapter plugin.
+* NEW: Dashboard Strategies card now highlights your site's AI readiness — set up the MCP Adapter in a click, or open live usage details once agents are connected.
+* Improved: PushEngage abilities now declare the unified `public` exposure flag introduced in WordPress 7.1 and are grouped by domain for AI clients.
+* Improved: Tested up to WordPress 7.1.
+
 ### 4.2.8
 * NEW: Workflows — Manage your automation workflows directly in WordPress with powerful analytics, revenue tracking, and one-click campaign management.
 * Improved: Reorganized the PushEngage admin menu for faster navigation across Push Broadcasts, Drip, Triggers, and the new Workflows screen.
