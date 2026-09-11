@@ -2,6 +2,11 @@
 
 All notable changes to the PushEngage plugin will be documented in this file.
 
+### 4.2.10
+* Fix: Tools page — the Abilities detail drawer no longer extends past the screen edge on mobile.
+* Improved: Documented the official PushEngage MCP server for Claude, Cursor, ChatGPT, and other MCP-compatible AI assistants.
+* Improved: Refreshed customer count copy on the dashboard onboarding prompt and the About page.
+
 ### 4.2.9
 * NEW: Tools page — explore PushEngage's AI toolkit (WordPress Abilities, MCP, Skills, and the Chrome extension) with live status detection for the Abilities API and MCP Adapter plugin.
 * NEW: Dashboard Strategies card now highlights your site's AI readiness — set up the MCP Adapter in a click, or open live usage details once agents are connected.

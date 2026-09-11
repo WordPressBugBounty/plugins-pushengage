@@ -4,7 +4,7 @@ Tags: push notifications, web push notifications, woocommerce, cart abandonment,
 Requires at least: 5.8
 Tested up to: 7.1
 Requires PHP: 7.4
-Stable tag: 4.2.9
+Stable tag: 4.2.10
 License: GNU General Public License v2.0 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -20,7 +20,7 @@ Web push notifications, WooCommerce automation & multi-channel chat widget. What
 
 PushEngage delivers push notifications directly to your subscribers' browsers — often called browser notifications — appearing as alerts even when they've left your site. No email. No app. No spam folder.
 
-Over **75,000+ marketers** trust PushEngage to send millions of targeted push notifications every month — driving repeat traffic, recovering abandoned carts, and boosting revenue on autopilot. PushEngage comes with **pre-built campaign templates**, **smart automation workflows**, and **AI-powered setup** so you can start sending high-converting notifications in under 5 minutes — without writing a single line of code.
+Over **75,000+ businesses** trust PushEngage to send millions of targeted push notifications every month — driving repeat traffic, recovering abandoned carts, and boosting revenue on autopilot. PushEngage comes with **pre-built campaign templates**, **smart automation workflows**, and **AI-powered setup** so you can start sending high-converting notifications in under 5 minutes — without writing a single line of code.
 
 > <strong>What's New in PushEngage</strong><br />
 > <strong>Workflows come to WordPress.</strong> List your workflows — view every workflow with Entered, Active, Completed, and Failed stats, explore date-range analytics with conversion goals and revenue tracking, and activate, duplicate, or export campaigns in a click.<br />
@@ -71,6 +71,10 @@ PushEngage registers 25 abilities under the `pushengage` category, grouped into 
 * **WhatsApp & debug** — Check WhatsApp integration status and pull debug logs for troubleshooting
 
 Every ability is admin-gated through the `manage_options` capability, follows safe `readonly` and `idempotent` annotations, and exposes a public MCP-compatible interface so your AI tooling can plan and execute multi-step push notification workflows without custom integration work.
+
+= Works with Claude, Cursor & AI assistants (MCP) =
+
+PushEngage also ships an official MCP server. Run `npx @pushengage/mcp` to let Claude, Cursor, ChatGPT and other MCP-compatible assistants build segments, create and analyze campaigns, and manage your site settings — it runs locally over stdio, so your API key stays in your environment. We also publish open-source Agent Skills that help AI coding agents integrate and debug the PushEngage SDKs. Details: https://www.pushengage.com/api/ai-agents/
 
 = Drag & Drop Popup Builder =
 
@@ -401,6 +405,11 @@ All users can post questions on the [WordPress.org support forum](https://wordpr
 == Changelog ==
 
 **Most Recent Changes:**
+= 4.2.10 =
+* Fix: Tools page — the Abilities detail drawer no longer extends past the screen edge on mobile.
+* Improved: Documented the official PushEngage MCP server for Claude, Cursor, ChatGPT, and other MCP-compatible AI assistants.
+* Improved: Refreshed customer count copy on the dashboard onboarding prompt and the About page.
+
 = 4.2.9 =
 * NEW: Tools page — explore PushEngage's AI toolkit (WordPress Abilities, MCP, Skills, and the Chrome extension) with live status detection for the Abilities API and MCP Adapter plugin.
 * NEW: Dashboard Strategies card now highlights your site's AI readiness — set up the MCP Adapter in a click, or open live usage details once agents are connected.
@@ -581,6 +590,9 @@ All users can post questions on the [WordPress.org support forum](https://wordpr
 * Please refer to the [PushEngage changelog](https://plugins.svn.wordpress.org/pushengage/trunk/CHANGELOG.md) for the full version history.
 
 == Upgrade Notice ==
+
+= 4.2.10 =
+Fixes the Abilities detail drawer overflowing the screen on mobile. Also documents the official PushEngage MCP server, which lets Claude, Cursor, and other AI assistants build segments, run campaigns, and pull analytics.
 
 = 4.2.9 =
 New Tools page for PushEngage's AI toolkit — WordPress Abilities, MCP, Skills, and the Chrome extension — with live setup status. Tested with WordPress 7.1.
