@@ -4,7 +4,7 @@ Tags: push notifications, web push notifications, woocommerce, cart abandonment,
 Requires at least: 5.8
 Tested up to: 7.1
 Requires PHP: 7.4
-Stable tag: 4.2.10
+Stable tag: 4.2.11
 License: GNU General Public License v2.0 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -62,7 +62,7 @@ PushEngage 4.2.2 ships with built-in support for the WordPress Abilities API —
 PushEngage registers 25 abilities under the `pushengage` category, grouped into eight domains:
 
 * **Plugin info** — Get plugin version, connection state, and key configuration; pull WordPress, PHP, and server diagnostics
-* **Notifications** — Send push notifications, fetch a single notification, and list notifications with status and pagination filters
+* **Notifications** — Send push notifications to everyone or to specific audience groups or segments, save drafts, fetch a single notification, and list notifications with status and pagination filters
 * **Segments & audience groups** — List, create, and add subscribers to segments; list audience groups for targeting
 * **Analytics** — Get notifications summary across send/view/click counts, run analytics overviews by date range, and pull subscriber analytics
 * **Auto-push settings** — Read and update auto-push configuration, including post types and feature flags
@@ -376,7 +376,7 @@ Yes. You can manage multiple WordPress sites from a single PushEngage account. E
 
 = Is PushEngage compatible with WordPress 7.0 and the Abilities API? =
 
-Yes! PushEngage is fully compatible with WordPress 7.0 and registers 25 abilities through the WordPress Abilities API. AI assistants and MCP-compatible tools can read PushEngage data — plugin status, segments, analytics, auto-push settings — and take actions like sending push notifications, creating segments, or updating WooCommerce push automation campaigns. Every ability runs through `manage_options` permission checks and uses safe `readonly` and `idempotent` annotations where appropriate. PushEngage is also backward compatible with WordPress 4.5 and above.
+Yes! PushEngage is fully compatible with WordPress 7.0 and registers 25 abilities through the WordPress Abilities API. AI assistants and MCP-compatible tools can read PushEngage data — plugin status, segments, analytics, auto-push settings — and take actions like sending push notifications, creating segments, or updating WooCommerce push automation campaigns. Every ability runs through `manage_options` permission checks and uses safe `readonly` and `idempotent` annotations where appropriate. PushEngage is also backward compatible with WordPress 5.8 and above.
 
 = How do I get support? =
 
@@ -405,6 +405,10 @@ All users can post questions on the [WordPress.org support forum](https://wordpr
 == Changelog ==
 
 **Most Recent Changes:**
+= 4.2.11 =
+* Improved: Abilities API fixes and improvements — AI assistants can now save notification drafts, target saved audience groups or segments when sending, and get clearer, more accurate error messages.
+* Improved: Minor bug fixes and enhancements.
+
 = 4.2.10 =
 * Fix: Tools page — the Abilities detail drawer no longer extends past the screen edge on mobile.
 * Improved: Documented the official PushEngage MCP server for Claude, Cursor, ChatGPT, and other MCP-compatible AI assistants.
@@ -590,6 +594,9 @@ All users can post questions on the [WordPress.org support forum](https://wordpr
 * Please refer to the [PushEngage changelog](https://plugins.svn.wordpress.org/pushengage/trunk/CHANGELOG.md) for the full version history.
 
 == Upgrade Notice ==
+
+= 4.2.11 =
+Fixes saving draft notifications through the Abilities API (AI assistants and MCP clients), and adds audience group and segment targeting to the send-notification ability.
 
 = 4.2.10 =
 Fixes the Abilities detail drawer overflowing the screen on mobile. Also documents the official PushEngage MCP server, which lets Claude, Cursor, and other AI assistants build segments, run campaigns, and pull analytics.

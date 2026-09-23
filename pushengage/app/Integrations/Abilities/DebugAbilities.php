@@ -96,7 +96,7 @@ class DebugAbilities extends AbstractRegistrar {
 				$content   = $logger->get_log_file_content( $file_name );
 
 				if ( false === $content ) {
-					return new \WP_Error( 'invalid-log-file', __( 'Log file not found or not readable.', 'pushengage' ) );
+					return self::invalid_param( 'invalid-log-file', __( 'Log file not found or not readable.', 'pushengage' ), 404 );
 				}
 
 				return array( 'content' => $content );

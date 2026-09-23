@@ -76,6 +76,66 @@ class HttpAPI {
 	}
 
 	/**
+	 * Ensure a decoded error body carries a `status` before it becomes WP_Error data.
+	 *
+	 * The private API envelope already includes `status`; the public REST API
+	 * body does not. Consumers such as the Abilities layer map that key to the
+	 * HTTP status they return, so fill it from the transport response code when
+	 * the body has none. Only error codes (>= 400) are copied: an error
+	 * envelope delivered on a 2xx transport is upstream rejecting the request,
+	 * so it is reported as 400 rather than inheriting the misleading 200.
+	 * Additive only: existing keys are never changed.
+	 *
+	 * @since 4.2.11
+	 * @param array $data Decoded response body.
+	 * @param array $res  Raw `wp_remote_request()` response.
+	 * @return array
+	 */
+	private static function with_http_status( $data, $res ) {
+		if ( ! isset( $data['status'] ) ) {
+			$code           = (int) wp_remote_retrieve_response_code( $res );
+			$data['status'] = $code >= 400 ? $code : 400;
+		}
+
+		return $data;
+	}
+
+	/**
+	 * WP_Error for a request attempted before the site is connected.
+	 *
+	 * Reported as 503 to match `ProxyController` (`site_not_connected`) and to
+	 * stay distinct from the 403 the REST layer uses for a WordPress capability
+	 * failure: the admin has permission, the plugin just has no credentials.
+	 *
+	 * @since 4.2.11
+	 * @return WP_Error
+	 */
+	private static function no_credentials_error() {
+		return new WP_Error(
+			'no-credentials',
+			__( 'Site not connected. Please make sure to connect your site first.', 'pushengage' ),
+			array( 'status' => 503 )
+		);
+	}
+
+	/**
+	 * WP_Error for an upstream body that could not be decoded as JSON.
+	 *
+	 * Typically an HTML error page from a proxy or CDN in front of the API.
+	 * Reported as 502 so it is distinguishable from a plugin crash.
+	 *
+	 * @since 4.2.11
+	 * @return WP_Error
+	 */
+	private static function invalid_response_error() {
+		return new WP_Error(
+			'invalid-response',
+			__( 'Invalid response from server', 'pushengage' ),
+			array( 'status' => 502 )
+		);
+	}
+
+	/**
 	 * Return the user agent string
 	 *
 	 * @return string
@@ -104,7 +164,7 @@ class HttpAPI {
 		// Return error if site ID and API keys are missing
 
 		if ( ! Options::has_credentials() ) {
-			return new WP_Error( 'no-credentials', __( 'Site not connected. Please make sure to connect your site first.', 'pushengage' ) );
+			return self::no_credentials_error();
 		}
 
 		// Ensure there is exactly one slash between the base URL and the path
@@ -147,11 +207,11 @@ class HttpAPI {
 
 			$data = Helpers::json_decode( $body );
 			if ( empty( $data ) ) {
-				return new WP_Error( 'invalid-response', __( 'Invalid response from server', 'pushengage' ) );
+				return self::invalid_response_error();
 			}
 
 			if ( ! empty( $data['error'] ) ) {
-				return new WP_Error( 'api-error', self::format_upstream_error_message( $data['error'] ), $data );
+				return new WP_Error( 'api-error', self::format_upstream_error_message( $data['error'] ), self::with_http_status( $data, $res ) );
 			}
 
 			return $data;
@@ -178,7 +238,7 @@ class HttpAPI {
 	 */
 	public static function send_rest_api_request( $path, $options = array() ) {
 		if ( ! Options::has_credentials() ) {
-			return new WP_Error( 'no-credentials', __( 'Site not connected. Please make sure to connect your site first.', 'pushengage' ) );
+			return self::no_credentials_error();
 		}
 
 		// Ensure there is exactly one slash between the base URL and the path
@@ -221,12 +281,12 @@ class HttpAPI {
 
 			$data = Helpers::json_decode( $body );
 			if ( empty( $data ) ) {
-				return new WP_Error( 'invalid-response', __( 'Invalid response from server', 'pushengage' ) );
+				return self::invalid_response_error();
 			}
 
 			// convert the response to WP_Error if the request was not successful
 			if ( false === $data['success'] ) {
-				return new WP_Error( 'api-error', $data['message'], $data );
+				return new WP_Error( 'api-error', $data['message'], self::with_http_status( $data, $res ) );
 			}
 
 			// convert the success response data from rest api to standard
@@ -299,11 +359,11 @@ class HttpAPI {
 
 			$data = Helpers::json_decode( $body );
 			if ( empty( $data ) ) {
-				return new WP_Error( 'invalid-response', __( 'Invalid response from server', 'pushengage' ) );
+				return self::invalid_response_error();
 			}
 
 			if ( ! empty( $data['error'] ) ) {
-				return new WP_Error( 'api-error', self::format_upstream_error_message( $data['error'] ), $data );
+				return new WP_Error( 'api-error', self::format_upstream_error_message( $data['error'] ), self::with_http_status( $data, $res ) );
 			}
 
 			return $data;

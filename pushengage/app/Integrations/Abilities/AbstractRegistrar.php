@@ -55,7 +55,8 @@ abstract class AbstractRegistrar {
 	 *
 	 * @since 4.2.2
 	 * @param array $input  Raw input from the ability.
-	 * @param array $schema Map of field key to type (string|date|url|integer|boolean|array|object).
+	 * @param array $schema Map of field key to type
+	 *                      (string|date|url|integer|boolean|array|integer_array|object).
 	 * @return array Sanitized input, containing only keys that were present in $input.
 	 */
 	protected static function sanitize_input( $input, $schema ) {
@@ -87,9 +88,17 @@ abstract class AbstractRegistrar {
 					break;
 
 				case 'array':
-					$sanitized[ $key ] = is_array( $input[ $key ] )
-						? array_map( 'sanitize_text_field', $input[ $key ] )
-						: array();
+					// Schema validation (`rest_is_array`) accepts a scalar list such
+					// as "a,b" and the MCP adapter does not coerce input before the
+					// callback, so normalise the same way `rest_sanitize_array()` does.
+					$sanitized[ $key ] = array_values( array_map( 'sanitize_text_field', wp_parse_list( $input[ $key ] ) ) );
+					break;
+
+				case 'integer_array':
+					// Same scalar-list normalisation, then absint + de-duplicate.
+					// Core's `uniqueItems` compares pre-coercion values, so `[3, "3"]`
+					// passes validation; `wp_parse_id_list()` collapses it to `[3]`.
+					$sanitized[ $key ] = array_values( wp_parse_id_list( $input[ $key ] ) );
 					break;
 
 				case 'object':
@@ -163,23 +172,25 @@ abstract class AbstractRegistrar {
 	/**
 	 * Sanitize a WP_Error before returning it from an ability.
 	 *
-	 * Upstream HTTP errors from `HttpAPI::send_private_api_request` carry the
-	 * full REST envelope as `WP_Error` data, including the `user` field with
-	 * account-level session context (owner email, plan pricing, Stripe IDs,
-	 * site list). MCP bridges that serialize `WP_Error::get_error_data()`
-	 * would otherwise leak that envelope through the error channel even after
-	 * the success path is locked down by `unwrap_envelope()`.
+	 * Upstream HTTP errors from `HttpAPI` carry the decoded response body as
+	 * `WP_Error` data. For the private API that envelope includes the `user`
+	 * field with account-level session context (owner email, plan pricing,
+	 * Stripe IDs, site list). MCP bridges that serialize
+	 * `WP_Error::get_error_data()` would otherwise leak that envelope through
+	 * the error channel even after the success path is locked down by
+	 * `unwrap_envelope()`.
 	 *
 	 * The upstream error message is already folded into the WP_Error message
-	 * by `HttpAPI::format_upstream_error_message()`, so dropping data is
-	 * lossless for the consumer. Non-WP_Error inputs pass through unchanged
-	 * so callers can pipe arbitrary returns through this helper.
+	 * by `HttpAPI::format_upstream_error_message()`, so the only piece of data
+	 * kept is the `status` key, which the REST run controller maps to the HTTP
+	 * status of the response. Non-WP_Error inputs pass through unchanged so
+	 * callers can pipe arbitrary returns through this helper.
 	 *
 	 * Scoped to the ability boundary on purpose — `HttpAPI` is also consumed
-	 * by Ajax handlers and cron, which may rely on the current error-data
-	 * shape; this helper avoids changing that contract.
+	 * by Ajax handlers and cron, which receive the full error data.
 	 *
 	 * @since 4.2.3
+	 * @since 4.2.11 Forwards `status`; remaps upstream 401/403 to 502.
 	 * @param mixed $error Possibly a WP_Error instance.
 	 * @return mixed Sanitized WP_Error, or the original value untouched.
 	 */
@@ -188,7 +199,41 @@ abstract class AbstractRegistrar {
 			return $error;
 		}
 
+		$data   = $error->get_error_data();
+		$status = is_array( $data ) && isset( $data['status'] ) ? (int) $data['status'] : 0;
+
+		// An upstream 401/403 means PushEngage rejected the site's API key, not
+		// that the WordPress user lacks permission. Forwarding it verbatim would
+		// read as a WordPress auth failure to a fully authorised admin (and
+		// collide with the run controller's own permission status), so report
+		// it as a bad gateway instead. The message still says what went wrong.
+		if ( 401 === $status || 403 === $status ) {
+			$status = 502;
+		}
+
+		if ( $status >= 400 && $status <= 599 ) {
+			return new \WP_Error( $error->get_error_code(), $error->get_error_message(), array( 'status' => $status ) );
+		}
+
 		return new \WP_Error( $error->get_error_code(), $error->get_error_message() );
+	}
+
+	/**
+	 * Build a client-error WP_Error that always carries an HTTP status.
+	 *
+	 * The REST run controller reports any WP_Error without `status` data as
+	 * 500, so every input check inside an execute callback must attach one.
+	 * Routing them through this helper makes that the default instead of
+	 * something each new check has to remember.
+	 *
+	 * @since 4.2.11
+	 * @param string $code    Error code.
+	 * @param string $message Human-readable message.
+	 * @param int    $status  HTTP status (4xx). Default 400.
+	 * @return \WP_Error
+	 */
+	protected static function invalid_param( $code, $message, $status = 400 ) {
+		return new \WP_Error( $code, $message, array( 'status' => (int) $status ) );
 	}
 
 	/**

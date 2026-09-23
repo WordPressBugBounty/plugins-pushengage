@@ -45,6 +45,8 @@ class AnalyticsAbilities extends AbstractRegistrar {
 								'type' => 'string',
 								'enum' => array( 'prev', 'curr', 'total' ),
 							),
+							'maxItems'    => 3,
+							'uniqueItems' => true,
 							'description' => __( 'Include additional metadata (prev, curr, total).', 'pushengage' ),
 						),
 					),
@@ -210,7 +212,7 @@ class AnalyticsAbilities extends AbstractRegistrar {
 			);
 
 			if ( empty( $clean['start_created_at'] ) || empty( $clean['end_created_at'] ) ) {
-				return new \WP_Error(
+				return self::invalid_param(
 					'invalid-date',
 					__( 'start_created_at and end_created_at must be valid dates in YYYY-MM-DD format.', 'pushengage' )
 				);

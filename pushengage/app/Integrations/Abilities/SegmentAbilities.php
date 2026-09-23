@@ -355,11 +355,11 @@ class SegmentAbilities extends AbstractRegistrar {
 			);
 
 			if ( empty( $clean['segment_id'] ) ) {
-				return new \WP_Error( 'missing-param', __( 'A valid segment_id is required.', 'pushengage' ) );
+				return self::invalid_param( 'missing-param', __( 'A valid segment_id is required.', 'pushengage' ) );
 			}
 
 			if ( empty( $clean['subscribers_id'] ) ) {
-				return new \WP_Error( 'missing-param', __( 'A non-empty subscribers_id array is required.', 'pushengage' ) );
+				return self::invalid_param( 'missing-param', __( 'A non-empty subscribers_id array is required.', 'pushengage' ) );
 			}
 
 			$response = pushengage()->add_subscribers_to_segment(

@@ -1176,19 +1176,7 @@ class Core {
 				$segments = explode( ' ', $segments_str );
 				if ( ! empty( $segments ) ) {
 					$segments                      = array_map( 'intval', $segments );
-					$data['notification_criteria'] = array(
-						'filter' => array(
-							'value' => array(
-								array(
-									array(
-										'field' => 'segments',
-										'op'    => 'in',
-										'value' => $segments,
-									),
-								),
-							),
-						),
-					);
+					$data['notification_criteria'] = Helpers::build_filter_criteria( 'segments', 'in', $segments );
 				}
 			}
 		}

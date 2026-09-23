@@ -2,14 +2,14 @@
 # This file is distributed under the GPLv2 or later..
 msgid ""
 msgstr ""
-"Project-Id-Version: PushEngage 4.2.10\n"
+"Project-Id-Version: PushEngage 4.2.11\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/pushengage-wordpress-plugin\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-09-11T16:18:14+00:00\n"
+"POT-Creation-Date: 2026-09-22T09:48:20+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.12.0\n"
 "X-Domain: pushengage\n"
@@ -3168,7 +3168,7 @@ msgstr ""
 
 #: src/components/dashboardWidget/DashboardWidget.tsx:745
 #: src/components/postEditor/PostEditorMetabox.tsx:652
-#: app/Integrations/Abilities/NotificationAbilities.php:59
+#: app/Integrations/Abilities/NotificationAbilities.php:70
 #: app/Integrations/WooCommerce/NotificationSettings.php:205
 msgid "Send Notification"
 msgstr ""
@@ -11698,14 +11698,14 @@ msgstr ""
 msgid "Upstream API error."
 msgstr ""
 
-#: app/Includes/Api/HttpAPI.php:107
-#: app/Includes/Api/HttpAPI.php:181
+#: app/Includes/Api/HttpAPI.php:131
+#: app/Includes/Api/HttpAPI.php:205
 msgid "Site not connected. Please make sure to connect your site first."
 msgstr ""
 
-#: app/Includes/Api/HttpAPI.php:150
-#: app/Includes/Api/HttpAPI.php:224
-#: app/Includes/Api/HttpAPI.php:302
+#: app/Includes/Api/HttpAPI.php:174
+#: app/Includes/Api/HttpAPI.php:248
+#: app/Includes/Api/HttpAPI.php:326
 msgid "Invalid response from server"
 msgstr ""
 
@@ -11733,19 +11733,19 @@ msgstr ""
 msgid "Notification URL is required."
 msgstr ""
 
-#: app/Includes/Api/PushengageAPI.php:217
+#: app/Includes/Api/PushengageAPI.php:219
 msgid "Notification ID is missing."
 msgstr ""
 
-#: app/Includes/Api/PushengageAPI.php:393
+#: app/Includes/Api/PushengageAPI.php:395
 msgid "Segment name is required."
 msgstr ""
 
-#: app/Includes/Api/PushengageAPI.php:428
+#: app/Includes/Api/PushengageAPI.php:430
 msgid "Subscribers ID is required and must be a non-empty array."
 msgstr ""
 
-#: app/Includes/Api/PushengageAPI.php:432
+#: app/Includes/Api/PushengageAPI.php:434
 msgid "Segment ID is required."
 msgstr ""
 
@@ -11817,47 +11817,47 @@ msgstr ""
 msgid "Returns aggregated send, view, and click counts across all notifications."
 msgstr ""
 
-#: app/Integrations/Abilities/AnalyticsAbilities.php:48
+#: app/Integrations/Abilities/AnalyticsAbilities.php:50
 msgid "Include additional metadata (prev, curr, total)."
 msgstr ""
 
-#: app/Integrations/Abilities/AnalyticsAbilities.php:67
+#: app/Integrations/Abilities/AnalyticsAbilities.php:69
 msgid "Get Analytics Overview"
 msgstr ""
 
-#: app/Integrations/Abilities/AnalyticsAbilities.php:68
+#: app/Integrations/Abilities/AnalyticsAbilities.php:70
 msgid "Returns subscribers, impressions, and clicks over a date range, grouped by day, week, or month."
 msgstr ""
 
-#: app/Integrations/Abilities/AnalyticsAbilities.php:80
+#: app/Integrations/Abilities/AnalyticsAbilities.php:82
 msgid "Start date (YYYY-MM-DD)."
 msgstr ""
 
-#: app/Integrations/Abilities/AnalyticsAbilities.php:85
+#: app/Integrations/Abilities/AnalyticsAbilities.php:87
 msgid "End date (YYYY-MM-DD). Must be within one year of the start date."
 msgstr ""
 
-#: app/Integrations/Abilities/AnalyticsAbilities.php:90
+#: app/Integrations/Abilities/AnalyticsAbilities.php:92
 msgid "Group results by time period (default: day)."
 msgstr ""
 
-#: app/Integrations/Abilities/AnalyticsAbilities.php:121
+#: app/Integrations/Abilities/AnalyticsAbilities.php:123
 msgid "Get Subscriber Analytics"
 msgstr ""
 
-#: app/Integrations/Abilities/AnalyticsAbilities.php:122
+#: app/Integrations/Abilities/AnalyticsAbilities.php:124
 msgid "Returns weekly active and total active subscribers."
 msgstr ""
 
-#: app/Integrations/Abilities/AnalyticsAbilities.php:138
+#: app/Integrations/Abilities/AnalyticsAbilities.php:140
 msgid "Active subscribers in the current week."
 msgstr ""
 
-#: app/Integrations/Abilities/AnalyticsAbilities.php:142
+#: app/Integrations/Abilities/AnalyticsAbilities.php:144
 msgid "Total active subscribers."
 msgstr ""
 
-#: app/Integrations/Abilities/AnalyticsAbilities.php:215
+#: app/Integrations/Abilities/AnalyticsAbilities.php:223
 msgid "start_created_at and end_created_at must be valid dates in YYYY-MM-DD format."
 msgstr ""
 
@@ -11921,71 +11921,93 @@ msgstr ""
 msgid "Log file not found or not readable."
 msgstr ""
 
-#: app/Integrations/Abilities/NotificationAbilities.php:34
+#: app/Integrations/Abilities/NotificationAbilities.php:45
 msgid "Get Connection Status"
 msgstr ""
 
-#: app/Integrations/Abilities/NotificationAbilities.php:35
+#: app/Integrations/Abilities/NotificationAbilities.php:46
 msgid "Returns whether this site is connected to a PushEngage account."
 msgstr ""
 
-#: app/Integrations/Abilities/NotificationAbilities.php:60
+#: app/Integrations/Abilities/NotificationAbilities.php:71
 msgid "Send a push notification to subscribers."
 msgstr ""
 
-#: app/Integrations/Abilities/NotificationAbilities.php:72
+#: app/Integrations/Abilities/NotificationAbilities.php:83
 msgid "Notification title (max 85 characters)."
 msgstr ""
 
-#: app/Integrations/Abilities/NotificationAbilities.php:77
+#: app/Integrations/Abilities/NotificationAbilities.php:88
 msgid "Notification message body (max 135 characters)."
 msgstr ""
 
-#: app/Integrations/Abilities/NotificationAbilities.php:82
+#: app/Integrations/Abilities/NotificationAbilities.php:93
 msgid "URL to open when notification is clicked."
 msgstr ""
 
-#: app/Integrations/Abilities/NotificationAbilities.php:88
+#: app/Integrations/Abilities/NotificationAbilities.php:99
 msgid "Optional HTTPS image URL for the notification."
 msgstr ""
 
-#: app/Integrations/Abilities/NotificationAbilities.php:92
+#: app/Integrations/Abilities/NotificationAbilities.php:103
 msgid "Notification status: sent or draft."
 msgstr ""
 
-#: app/Integrations/Abilities/NotificationAbilities.php:120
+#: app/Integrations/Abilities/NotificationAbilities.php:115
+msgid "Optional. Send only to these saved audience group IDs (1-20). Discover IDs with list-audience-groups. Omit to send to all subscribers. Cannot be combined with segment_ids."
+msgstr ""
+
+#: app/Integrations/Abilities/NotificationAbilities.php:126
+msgid "Optional. Send only to subscribers in these segment IDs (1-20). Discover IDs with list-segments. Omit to send to all subscribers. Cannot be combined with audience_groups."
+msgstr ""
+
+#: app/Integrations/Abilities/NotificationAbilities.php:153
 msgid "Get Notification"
 msgstr ""
 
-#: app/Integrations/Abilities/NotificationAbilities.php:121
+#: app/Integrations/Abilities/NotificationAbilities.php:154
 msgid "Returns details for a single notification."
 msgstr ""
 
-#: app/Integrations/Abilities/NotificationAbilities.php:132
+#: app/Integrations/Abilities/NotificationAbilities.php:165
 msgid "The notification ID."
 msgstr ""
 
-#: app/Integrations/Abilities/NotificationAbilities.php:165
+#: app/Integrations/Abilities/NotificationAbilities.php:198
 msgid "List Notifications"
 msgstr ""
 
-#: app/Integrations/Abilities/NotificationAbilities.php:166
+#: app/Integrations/Abilities/NotificationAbilities.php:199
 msgid "Lists push notifications, with optional status filter and pagination."
 msgstr ""
 
-#: app/Integrations/Abilities/NotificationAbilities.php:178
+#: app/Integrations/Abilities/NotificationAbilities.php:211
 msgid "Filter by notification status."
 msgstr ""
 
-#: app/Integrations/Abilities/NotificationAbilities.php:184
+#: app/Integrations/Abilities/NotificationAbilities.php:217
 msgid "Number of notifications to return (1-100, default 10)."
 msgstr ""
 
-#: app/Integrations/Abilities/NotificationAbilities.php:189
+#: app/Integrations/Abilities/NotificationAbilities.php:222
 msgid "Page number for pagination (default 1)."
 msgstr ""
 
-#: app/Integrations/Abilities/NotificationAbilities.php:324
+#: app/Integrations/Abilities/NotificationAbilities.php:379
+msgid "Pass either audience_groups or segment_ids, not both."
+msgstr ""
+
+#: app/Integrations/Abilities/NotificationAbilities.php
+msgid "title, message and notification_url must not be empty."
+msgstr ""
+
+#. translators: %s: input parameter name
+#: app/Integrations/Abilities/NotificationAbilities.php
+#, php-format
+msgid "%s must contain only positive integer IDs."
+msgstr ""
+
+#: app/Integrations/Abilities/NotificationAbilities.php:410
 msgid "A valid notification_id is required."
 msgstr ""
 
@@ -12267,25 +12289,25 @@ msgid "Send Retry Purchase Push Notification"
 msgstr ""
 
 #. translators: %s: Order Action Type.
-#: app/Integrations/WooCommerce/NotificationHandler.php:160
+#: app/Integrations/WooCommerce/NotificationHandler.php:146
 #, php-format
 msgid "Notification is disabled for order status - %s."
 msgstr ""
 
 #. translators: %s: Order Action Type.
-#: app/Integrations/WooCommerce/NotificationHandler.php:207
+#: app/Integrations/WooCommerce/NotificationHandler.php:193
 #, php-format
 msgid "Notification for order status ( %s ) is disabled for both admin and customers"
 msgstr ""
 
 #. translators: %s: Order Action Type.
-#: app/Integrations/WooCommerce/NotificationHandler.php:242
+#: app/Integrations/WooCommerce/NotificationHandler.php:228
 #, php-format
 msgid "Push Notification sent to customer for order status - %s."
 msgstr ""
 
 #. translators: %s: Order Action Type.
-#: app/Integrations/WooCommerce/NotificationHandler.php:282
+#: app/Integrations/WooCommerce/NotificationHandler.php:268
 #, php-format
 msgid "Push Notification sent to admin for order status - %s."
 msgstr ""

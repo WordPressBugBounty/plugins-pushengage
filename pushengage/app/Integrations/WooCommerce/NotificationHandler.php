@@ -108,22 +108,8 @@ class NotificationHandler {
 		$subscriber_hashes = Helpers::flatten_array( $subscriber_hashes );
 		// make array unique.
 		$subscriber_hashes = array_unique( $subscriber_hashes );
-		// Ensure array values are reindexed with numeric keys to ensure that it  is encoded as array and not as object.
-		$subscriber_hashes = array_values( $subscriber_hashes );
 
-		$notification_data['notification_criteria'] = array(
-			'filter' => array(
-				'value' => array(
-					array(
-						array(
-							'field' => 'device_token_hash',
-							'op'    => 'in',
-							'value' => $subscriber_hashes,
-						),
-					),
-				),
-			),
-		);
+		$notification_data['notification_criteria'] = Helpers::build_filter_criteria( 'device_token_hash', 'in', $subscriber_hashes );
 
 		return pushengage()->send_notification( $notification_data );
 	}

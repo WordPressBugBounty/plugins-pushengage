@@ -343,6 +343,39 @@ class Helpers {
 	}
 
 	/**
+	 * Build a single-predicate `notification_criteria` filter for the send API.
+	 *
+	 * Upstream expects `filter.value` as a list of rules, each rule a list of
+	 * predicates: `[[{field, op, value}]]`. The double nesting is easy to get
+	 * wrong, so single-predicate callers (Abilities segment targeting,
+	 * scheduled-post segment targeting in Core, WooCommerce device-hash
+	 * targeting) go through this one builder. `audience.groups` criteria is a
+	 * flat list and is still assigned directly at its call sites.
+	 *
+	 * @since 4.2.11
+	 *
+	 * @param string $field  Predicate field, e.g. `segments`, `device_token_hash`.
+	 * @param string $op     Predicate operator, e.g. `in`.
+	 * @param array  $values Predicate values; re-indexed so they JSON-encode as a list.
+	 * @return array Criteria array ready for `notification_criteria`.
+	 */
+	public static function build_filter_criteria( $field, $op, $values ) {
+		return array(
+			'filter' => array(
+				'value' => array(
+					array(
+						array(
+							'field' => $field,
+							'op'    => $op,
+							'value' => array_values( $values ),
+						),
+					),
+				),
+			),
+		);
+	}
+
+	/**
 	 * Get the site's timezone string with backward compatibility for older WordPress versions.
 	 *
 	 * In WordPress 5.3.0 and later, wp_timezone_string() returns a valid

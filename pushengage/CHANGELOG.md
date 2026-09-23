@@ -2,6 +2,10 @@
 
 All notable changes to the PushEngage plugin will be documented in this file.
 
+### 4.2.11
+* Improved: Abilities API fixes and improvements — AI assistants can now save notification drafts, target saved audience groups or segments when sending, and get clearer, more accurate error messages.
+* Improved: Minor bug fixes and enhancements.
+
 ### 4.2.10
 * Fix: Tools page — the Abilities detail drawer no longer extends past the screen edge on mobile.
 * Improved: Documented the official PushEngage MCP server for Claude, Cursor, ChatGPT, and other MCP-compatible AI assistants.

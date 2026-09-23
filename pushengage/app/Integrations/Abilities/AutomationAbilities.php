@@ -335,7 +335,7 @@ class AutomationAbilities extends AbstractRegistrar {
 			$events   = NotificationSettings::get_push_notification_events();
 
 			if ( ! array_key_exists( $event_id, $events ) ) {
-				return new \WP_Error( 'invalid-campaign', __( 'Unknown campaign ID.', 'pushengage' ) );
+				return self::invalid_param( 'invalid-campaign', __( 'Unknown campaign ID.', 'pushengage' ), 404 );
 			}
 
 			if ( isset( $input['enabled'] ) ) {

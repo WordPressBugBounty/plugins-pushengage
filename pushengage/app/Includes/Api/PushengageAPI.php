@@ -178,12 +178,14 @@ class PushengageAPI {
 		$settings = Options::get_site_settings();
 		$action   = 'draft' === $params['status'] ? 'draft' : 'sent';
 
-		// Upstream's body validator only accepts status in [sent, scheduled].
-		// The URL `action` query param is what signals draft intent — keeping
-		// `status: draft` in the body causes upstream to reject the request
-		// with "Invalid request data". Drop it for drafts.
+		// Upstream's body validator requires `status` and only accepts
+		// [sent, scheduled]; `draft` is signalled solely by the URL `action`
+		// query param. Sending `status: draft` is rejected with "must be one
+		// of [sent, scheduled]" and omitting it is rejected with "status is
+		// required", so for drafts normalise the body status to `sent` — the
+		// same shape the WP-admin campaign editor and @pushengage/mcp send.
 		if ( 'draft' === $action ) {
-			unset( $params['status'] );
+			$params['status'] = 'sent';
 		}
 
 		$path = 'sites/' . $settings['site_id'] . '/notifications?action=' . $action;
@@ -458,6 +460,12 @@ class PushengageAPI {
 	public function get_notification_analytics( $params = array() ) {
 		$settings = Options::get_site_settings();
 		$path     = 'sites/' . $settings['site_id'] . '/analytics/notification-result/summary';
+
+		// Upstream validates `include_meta` as a comma-separated string
+		// ("include meta must be a string"); an array query param is rejected.
+		if ( isset( $params['include_meta'] ) && is_array( $params['include_meta'] ) ) {
+			$params['include_meta'] = implode( ',', $params['include_meta'] );
+		}
 
 		if ( ! empty( $params ) ) {
 			$path .= '?' . http_build_query( $params );

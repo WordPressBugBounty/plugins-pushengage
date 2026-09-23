@@ -7,6 +7,7 @@
 
 namespace Pushengage\Integrations\Abilities;
 
+use Pushengage\Utils\Helpers;
 use Pushengage\Utils\Options;
 
 // Exit if accessed directly.
@@ -20,6 +21,16 @@ if ( ! defined( 'ABSPATH' ) ) {
  * @since 4.2.2
  */
 class NotificationAbilities extends AbstractRegistrar {
+
+	/**
+	 * Maximum number of audience group / segment IDs accepted per send.
+	 *
+	 * Mirrors the cap used by the official @pushengage/mcp server.
+	 *
+	 * @since 4.2.11
+	 * @var int
+	 */
+	const MAX_TARGET_IDS = 20;
 
 	/**
 	 * Register connection-status and notification abilities.
@@ -91,6 +102,12 @@ class NotificationAbilities extends AbstractRegistrar {
 							'type'        => 'string',
 							'description' => __( 'Notification status: sent or draft.', 'pushengage' ),
 							'enum'        => array( 'sent', 'draft' ),
+						),
+						'audience_groups'    => self::id_list_schema(
+							__( 'Optional. Send only to these saved audience group IDs (1-20). Discover IDs with list-audience-groups. Omit to send to all subscribers. Cannot be combined with segment_ids.', 'pushengage' )
+						),
+						'segment_ids'        => self::id_list_schema(
+							__( 'Optional. Send only to subscribers in these segment IDs (1-20). Discover IDs with list-segments. Omit to send to all subscribers. Cannot be combined with audience_groups.', 'pushengage' )
 						),
 					),
 					'required'   => array( 'title', 'message', 'notification_url' ),
@@ -225,6 +242,27 @@ class NotificationAbilities extends AbstractRegistrar {
 	}
 
 	/**
+	 * Schema fragment for a bounded list of positive integer IDs.
+	 *
+	 * @since 4.2.11
+	 * @param string $description Human-readable description for the field.
+	 * @return array
+	 */
+	private static function id_list_schema( $description ) {
+		return array(
+			'type'        => 'array',
+			'items'       => array(
+				'type'    => 'integer',
+				'minimum' => 1,
+			),
+			'minItems'    => 1,
+			'maxItems'    => self::MAX_TARGET_IDS,
+			'uniqueItems' => true,
+			'description' => $description,
+		);
+	}
+
+	/**
 	 * Execute get-connection-status ability.
 	 *
 	 * @since 4.2.2
@@ -266,8 +304,21 @@ class NotificationAbilities extends AbstractRegistrar {
 					'notification_url'   => 'url',
 					'notification_image' => 'url',
 					'status'             => 'string',
+					'audience_groups'    => 'integer_array',
+					'segment_ids'        => 'integer_array',
 				)
 			);
+
+			// The schema only bounds length, so a title of `<b></b>` or a
+			// `javascript:` URL passes validation and sanitizes to ''. Catch it
+			// here with a 400 rather than letting the API layer's status-less
+			// `missing-params` error surface as 500.
+			if ( empty( $clean['title'] ) || empty( $clean['message'] ) || empty( $clean['notification_url'] ) ) {
+				return self::invalid_param(
+					'missing-param',
+					__( 'title, message and notification_url must not be empty.', 'pushengage' )
+				);
+			}
 
 			$params = array(
 				'notification_title'   => $clean['title'],
@@ -281,6 +332,14 @@ class NotificationAbilities extends AbstractRegistrar {
 
 			if ( ! empty( $clean['status'] ) ) {
 				$params['status'] = $clean['status'];
+			}
+
+			$criteria = $this->build_notification_criteria( $clean );
+			if ( is_wp_error( $criteria ) ) {
+				return $criteria;
+			}
+			if ( ! empty( $criteria ) ) {
+				$params['notification_criteria'] = $criteria;
 			}
 
 			$response = pushengage()->send_notification( $params );
@@ -310,6 +369,84 @@ class NotificationAbilities extends AbstractRegistrar {
 	}
 
 	/**
+	 * Build upstream `notification_criteria` from the optional targeting inputs.
+	 *
+	 * Upstream treats `notification_criteria` as a discriminated shape: either
+	 * `audience.groups` (saved audience groups) or `filter.value` (predicate
+	 * rules). The two cannot be mixed in one request, so the ability accepts
+	 * exactly one of `audience_groups` / `segment_ids`. Returns an empty array
+	 * when neither is passed, which upstream reads as "all subscribers".
+	 *
+	 * Item type, bounds (1-20) and uniqueness are enforced by the input schema
+	 * before the callback runs, and `sanitize_input()` has already cast the
+	 * lists to de-duplicated `int[]`. Two things still need a runtime check:
+	 * the either/or rule, and an overflow literal such as `1e400`, which
+	 * decodes to INF, satisfies `minimum: 1`, and then casts to `0`.
+	 *
+	 * @since 4.2.11
+	 * @param array $clean Sanitized ability input.
+	 * @return array|\WP_Error Criteria array (possibly empty) or WP_Error.
+	 */
+	protected function build_notification_criteria( $clean ) {
+		$has_groups   = isset( $clean['audience_groups'] );
+		$has_segments = isset( $clean['segment_ids'] );
+
+		if ( $has_groups && $has_segments ) {
+			return self::invalid_param(
+				'invalid-param',
+				__( 'Pass either audience_groups or segment_ids, not both.', 'pushengage' )
+			);
+		}
+
+		if ( $has_groups ) {
+			$ids = self::require_positive_ids( $clean['audience_groups'], 'audience_groups' );
+			if ( is_wp_error( $ids ) ) {
+				return $ids;
+			}
+			return array(
+				'audience' => array(
+					'groups' => $ids,
+				),
+			);
+		}
+
+		if ( $has_segments ) {
+			$ids = self::require_positive_ids( $clean['segment_ids'], 'segment_ids' );
+			if ( is_wp_error( $ids ) ) {
+				return $ids;
+			}
+			return Helpers::build_filter_criteria( 'segments', 'in', $ids );
+		}
+
+		return array();
+	}
+
+	/**
+	 * Reject a sanitized ID list that is empty or contains a zero.
+	 *
+	 * After `wp_parse_id_list()` the only way a `0` can appear is a value the
+	 * schema accepted but `absint()` could not represent (INF from `1e400`).
+	 * Never forward ID 0 on a destructive send; upstream behaviour for it is
+	 * undefined.
+	 *
+	 * @since 4.2.11
+	 * @param int[]  $ids Sanitized IDs.
+	 * @param string $key Input key, used in the error message.
+	 * @return int[]|\WP_Error
+	 */
+	protected static function require_positive_ids( $ids, $key ) {
+		if ( empty( $ids ) || in_array( 0, $ids, true ) ) {
+			return self::invalid_param(
+				'invalid-param',
+				/* translators: %s: input parameter name */
+				sprintf( __( '%s must contain only positive integer IDs.', 'pushengage' ), $key )
+			);
+		}
+
+		return $ids;
+	}
+
+	/**
 	 * Execute get-notification ability.
 	 *
 	 * @since 4.2.2
@@ -321,7 +458,7 @@ class NotificationAbilities extends AbstractRegistrar {
 			$clean = self::sanitize_input( $input, array( 'notification_id' => 'integer' ) );
 
 			if ( empty( $clean['notification_id'] ) ) {
-				return new \WP_Error( 'missing-param', __( 'A valid notification_id is required.', 'pushengage' ) );
+				return self::invalid_param( 'missing-param', __( 'A valid notification_id is required.', 'pushengage' ) );
 			}
 
 			$response = pushengage()->get_notification( $clean['notification_id'] );
